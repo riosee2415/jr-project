@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Template-Mapper">
-	
+<mapper namespace="Common-Mapper">
+	<select id="selectCommonList" resultType="commonVO">
+		SELECT
+			*
+		FROM
+			COMMON
+	</select>
 </mapper>

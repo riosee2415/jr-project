@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 	
-	<context:property-placeholder location="classpath:/configuration/mysql/mysql-config.properties" />
+	<context:property-placeholder location="classpath:/configuration/oracle/oracle-config.properties" />
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 	 	p:driverClassName="${jdbc.driverClassName}"
@@ -47,7 +47,7 @@
 	</tx:advice>
 	
 	<aop:config>
-		<aop:pointcut expression="execution(public * com.innovation.template..*Service.*(..))" id="servicePublicMethod"/>
+		<aop:pointcut expression="execution(public * com.patis..*Service.*(..))" id="servicePublicMethod"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePublicMethod"/>
 	</aop:config>
 	

@@ -3,7 +3,6 @@
 
 <configuration>
 	<typeAliases>
-		
-		
+		<typeAlias type="com.patis.model.CommonVO" alias="commonVO"/>
 	</typeAliases>
 </configuration>
