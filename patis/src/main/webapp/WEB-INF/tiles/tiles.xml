@@ -18,6 +18,10 @@
            <put-attribute name="content" value="/WEB-INF/views/NM00/NM000000.jsp"/>
         </definition>
         
+        <definition name="policy" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/NM02/NM020361.jsp"/>
+        </definition>
+        
         
      
         

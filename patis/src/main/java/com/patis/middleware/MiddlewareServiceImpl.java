@@ -10,14 +10,23 @@ import org.springframework.stereotype.Service;
 import com.patis.model.CommonVO;
 
 @Service("middlewareService")
-public class MiddlewareServiceImpl implements I_MiddlewareDAO {
+public class MiddlewareServiceImpl implements I_MiddlewareService {
 
 	@Resource(name="middlewareDAO")
-	private MiddlewareDAOImpl middlewareDAO;
+	private I_MiddlewareDAO middlewareDAO;
 	
 	@Override
 	public List<CommonVO> selectCommonList() throws SQLException {
 		return middlewareDAO.selectCommonList();
 	}
+
+	@Override
+	public List<CommonVO> getMenu() throws SQLException {
+		
+		return middlewareDAO.getMenu();
+	}
+
+	
+	
 
 }

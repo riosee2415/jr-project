@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Common-Mapper">
+
 	<select id="selectCommonList" resultType="commonVO">
-		SELECT
-			*
-		FROM
-			COMMON
+		SELECT	*
+		  FROM	COMMON
 	</select>
+	
+	<select id="GET_MENU" resultType="commonVO">
+		SELECT  CODE,
+		        DETAIL_CODE,
+		        PARENT_CODE,
+		        VAL
+		  FROM  COMMON
+		 WHERE  CODE 	= 'NM_01'
+		   AND	USE_YN 	= 1 
+	</select>
+	
+	
 </mapper>

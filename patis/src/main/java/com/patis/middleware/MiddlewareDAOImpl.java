@@ -23,4 +23,9 @@ public class MiddlewareDAOImpl implements I_MiddlewareDAO {
 		return sqlSession.selectList(NAMESPACE + ".selectCommonList");
 	}
 
+	@Override
+	public List<CommonVO> getMenu() throws SQLException {
+		return sqlSession.selectList(NAMESPACE + ".GET_MENU");
+	}
+
 }
