@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+.main {
+  width: 100%;
+}
+.main-container {
+  width: 80%;
+  margin: 12px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slideimg-01 {
+  display: block;
+  width: 680px;
+  height: 400px;
+  background-image: url("/assets/images/image/main_slideimg.png");
+}
+.btn_box {
+  width: 680px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn.on {
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 15px;
+  border-radius: 20px;
+  background-color: #f18d00;
+}
+.btn {
+  border: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: #707070;
+}
+.btn.play {
+  width: 15px;
+  height: 15px;
+  background-image: url("/assets/images/icons/ico_pause.png");
+}
+.banner {
+  clear: both;
+  flex-direction: column;
+  justify-content: center;
+}
+.up,
+.down {
+  clear: both;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.banner a {
+  display: block;
+  width: 170px;
+  height: 198px;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+.banner a.banner1 {
+  background-image: url("/assets/images/icons/ico_main_banner1(color).png");
+}
+
+.banner a.banner1:hover {
+  transition: 0.5s;
+  background-image: url("/assets/images/icons/ico_main_banner1(black).png");
+}
+.banner a.banner2 {
+  background-image: url("/assets/images/icons/ico_main_banner2(color).png");
+}
+.banner a.banner2:hover {
+  transition: 0.5s;
+  background-image: url("/assets/images/icons/ico_main_banner2(black).png");
+}
+.banner a.banner3 {
+  background-image: url("/assets/images/icons/ico_main_banner3(color).png");
+}
+.banner a.banner3:hover {
+  transition: 0.5s;
+  background-image: url("/assets/images/icons/ico_main_banner3(black).png");
+}
+.banner a.banner4 {
+  background-image: url("/assets/images/icons/ico_main_banner4(color).png");
+}
+.banner a.banner4:hover {
+  transition: 0.5s;
+  background-image: url("/assets/images/icons/ico_main_banner4(black).png");
+}
+.banner a.banner5 {
+  background-image: url("/assets/images/icons/ico_main_banner5(color).png");
+}
+.banner a.banner5:hover {
+  transition: 0.5s;
+  background-image: url("/assets/images/icons/ico_main_banner5(black).png");
+}
+.banner .down a.banner6 {
+  background-image: url("/assets/images/icons/ico_main_banner6(color).png");
+}
+.banner a.banner6:hover {
+  transition: 0.5s;
+  background-image: url("/assets/images/icons/ico_main_banner6(black).png");
+}
+.main-container-image {
+  width: 411px;
+  background-image: url("/assets/images/image/main_bannerimg.png");
+}

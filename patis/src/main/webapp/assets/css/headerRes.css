@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@media screen and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+  .desk {
+    display: none;
+  }
+  #menu_call ~ .wrap {
+    margin: 0 auto;
+  }
+  .logo {
+    display: block;
+    margin-top: 1rem;
+    width: 250px;
+    height: 40px;
+    background-size: cover;
+    background-image: url("/assets/images/commons/hdlogo.png");
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .desk {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  #menu_call ~ .wrap {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .desk {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  #menu_call ~ .wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

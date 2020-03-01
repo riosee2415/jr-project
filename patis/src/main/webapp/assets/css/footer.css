@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+#footer {
+  clear: both;
+  background-color: #707070;
+}
+.container {
+  clear: both;
+}
+.footer_info {
+  padding: 2% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  line-height: 2;
+  font-size: 14px;
+}
+.footer_logo {
+  clear: both;
+  display: block;
+  width: 320px;
+  height: 60px;
+  background-size: cover;
+  background-image: url("/assets/images/commons/ftlogo.png");
+}
+.family {
+  margin-left: 20px;
+}
+#sel {
+  width: 120px;
+  height: 30px;
+  background-color: transparent;
+  color: #ffffff;
+}
