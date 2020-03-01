@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* Seoulnamsan */
+@font-face {
+	font-family: 'Seoulnamsan';
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_L.eot');
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_L.eot?#iefix') format(‘embedded-opentype’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_L.woff') format(‘woff’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_L.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Seoulnamsan';
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_M.eot');
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_M.eot?#iefix') format(‘embedded-opentype’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_M.woff') format(‘woff’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_M.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Seoulnamsan';
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_B.eot');
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_B.eot?#iefix') format(‘embedded-opentype’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_B.woff') format(‘woff’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_B.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Seoulnamsan';
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_EB.eot');
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_EB.eot?#iefix') format(‘embedded-opentype’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_EB.woff') format(‘woff’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_EB.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Seoulnamsan';
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_BL.eot');
+	src: url('../fonts/Seoulnamsan/Seoulnamsan_BL.eot?#iefix') format(‘embedded-opentype’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_BL.woff') format(‘woff’), 
+	     url('../fonts/Seoulnamsan/Seoulnamsan_BL.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
