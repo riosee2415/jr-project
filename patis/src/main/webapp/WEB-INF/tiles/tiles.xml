@@ -2,15 +2,15 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-   <definition name="mainLayout" template="/WEB-INF/views/template/main_layout.jsp">
-       <put-attribute name="html_header" value="/WEB-INF/views/template/components/html_header.jsp"/>
+   <definition name="mainLayout" template="/WEB-INF/views/template/layouts/main_layout.jsp">
+       <put-attribute name="html_header" value="/WEB-INF/views/template/components/common/html_header.jsp"/>
        <put-attribute name="header" value="/WEB-INF/views/template/components/header.jsp"/>
  	   <put-attribute name="footer" value="/WEB-INF/views/template/components/footer.jsp"/>
- 	   <put-attribute name="html_footer" value="/WEB-INF/views/template/components/footer.jsp"/>
+ 	   <put-attribute name="html_footer" value="/WEB-INF/views/template/components/common/html_footer.jsp"/>
        <put-attribute name="content" value=""/>
     </definition> 
     
-    <definition name="subLayout" template="/WEB-INF/views/template/sub_layout.jsp" extends="mainLayout">
+    <definition name="subLayout" template="/WEB-INF/views/template/layouts/sub_layout.jsp" extends="mainLayout">
        <put-attribute name="sub_banner" value="/WEB-INF/views/template/components/sub_banner.jsp"/>
        <put-attribute name="sub_top_menu" value="/WEB-INF/views/template/components/sub_top_menu.jsp"/>
     </definition> 
