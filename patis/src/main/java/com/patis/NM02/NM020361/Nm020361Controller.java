@@ -14,7 +14,7 @@ import com.patis.model.CommonVO;
 
 /**
  * @author : 4LEAF.YSH
- * @SCREEN : 중랑의 도시재생 -> 도시재생 정책 (policy)
+ * @SCREEN : 以묐옉�쓽 �룄�떆�옱�깮 -> �룄�떆�옱�깮 �젙梨� (policy)
  *
  */
 @Controller
@@ -26,8 +26,8 @@ public class Nm020361Controller {
 	@RequestMapping(value="/policy.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
+//		List<CommonVO> menuList = middlewareService.getMenu();
+//		model.addAttribute("menuList", menuList);
 		
 		return "policy";
 	}

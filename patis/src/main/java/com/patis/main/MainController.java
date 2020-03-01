@@ -26,8 +26,8 @@ public class MainController {
 		
 		
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
+//		List<CommonVO> menuList = middlewareService.getMenu();
+//		model.addAttribute("menuList", menuList);
 		
 		return "main";
 	}
