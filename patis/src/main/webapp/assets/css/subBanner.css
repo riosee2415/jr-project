@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.sub__banner {
+.sub-banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@
   background-image: url("/assets/images/image/sub_banner_01.png");
 }
 
-.sub__banner .sub__banner__overlay {
+.sub-banner .sub-banner-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@
   z-index: 1;
 }
 
-.sub__banner .sub__banner__title {
+.sub-banner .sub-banner-title {
 	font-size: 35px;
   font-weight: 400;
   color: #fff;
