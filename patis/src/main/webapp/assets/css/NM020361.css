@@ -134,15 +134,11 @@
 	color:#ffffff;
 	line-height:1.4;
 	text-align:center;
-}.propel-title:before{
-	content:"";
-	z-index:-1;
-	position:absolute;
-	left:555px;
-	width:490px;
+	margin:0 auto;
+		background-color: #373737;
+		width:490px;
 	height:54px;
 	border-radius:50px;
-	background-color: #373737;
 }
 .orange {
   color: #ffeba6;
