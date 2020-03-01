@@ -1,4 +1,4 @@
-package com.innovation.template.controller;
+package com.patis.main;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
