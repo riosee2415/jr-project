@@ -4,8 +4,8 @@
   width: 100%;
 }
 .sub1-container {
-  width: 80%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 50px auto;
 }
 .subHead {
   display: flex;
@@ -16,6 +16,7 @@
   padding-bottom: 10px;
 }
 .subTitle {
+	
   font-size: 36px;
   font-weight: bold;
 }
@@ -42,7 +43,7 @@
 .sub-illu-img {
   display: block;
   width: 94%;
-  height: 468px;
+  height: 448px;
   margin: 0 auto;
   background-image: url("/assets/images/image/sub-ill-banner.png");
 }
@@ -114,15 +115,55 @@
   text-align: center;
 }
 .sub-vision-content-desc {
-  font-size: 18px;
+  font-size: 16px;
   color: #707070;
   text-align: center;
   font-weight: normal;
 }
 .sub-main-handimg {
   display: block;
-  width: 227px;
-  height: 227px;
-  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  margin-top:200px;
+  background-size: cover;
   background-image: url("/assets/images/icons/ico_sub_01.png");
+}
+.propel-title{
+	font-size:36px;
+	color:#ffffff;
+	line-height:1.4;
+	text-align:center;
+}.propel-title:before{
+	content:"";
+	z-index:-1;
+	position:absolute;
+	left:555px;
+	width:490px;
+	height:54px;
+	border-radius:50px;
+	background-color: #373737;
+}
+.orange {
+  color: #ffeba6;
+}
+.sub-main-propel:after{
+	content:"";
+	z-index:-3;
+	display:block;
+	position:absolute;
+	top:2915px;
+	width:70%;
+	height:170px;
+	border:1px solid #dedede;
+	border-radius:50px;
+}
+.propel-content{
+	margin-top:50px;
+	text-align:center;
+	line-height: 1.6;
+	color:#585858;
+}
+.sub-main-propel{
+	margin-bottom:150px;
 }

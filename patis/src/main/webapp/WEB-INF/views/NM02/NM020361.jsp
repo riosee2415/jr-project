@@ -78,6 +78,16 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="sub-main-title">▪도시재생사업 추진방향</div>
       <div class="sub-main-handimg"></div>
+      <div class="sub-main-propel">
+        <div class="propel-title">
+          <span class="orange">협치</span>와 <span class="orange">상생</span>을
+          통한 도시재생
+        </div>
+        <div class="propel-content">
+          <p>-도시재생사업을 통한 주거환경개선 및 삶의 질 향상</p>
+          <p>-도시재생 주민역량강화 및 커버넌스 구축</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
