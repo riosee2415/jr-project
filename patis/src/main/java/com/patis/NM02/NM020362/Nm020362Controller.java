@@ -14,7 +14,7 @@ import com.patis.model.CommonVO;
 
 /**
  * @author : 4LEAF.YSH
- * @SCREEN : 중랑의 도시재생 -> 도시재생 지역현황 (policy.loc)
+ * @SCREEN : 以묐옉�쓽 �룄�떆�옱�깮 -> �룄�떆�옱�깮 吏��뿭�쁽�솴 (policy.loc)
  *
  */
 @Controller
@@ -26,10 +26,10 @@ public class Nm020362Controller {
 	@RequestMapping(value="/policy.loc.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
-		List<CommonVO> subMenuList = middlewareService.getSubMenu();
-		model.addAttribute("subMenuList", subMenuList);
+//		List<CommonVO> menuList = middlewareService.getMenu();
+//		model.addAttribute("menuList", menuList);
+//		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+//		model.addAttribute("subMenuList", subMenuList);
 		
 		return "policy.loc";
 	}

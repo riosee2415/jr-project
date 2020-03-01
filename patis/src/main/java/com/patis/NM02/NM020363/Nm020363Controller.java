@@ -14,7 +14,7 @@ import com.patis.model.CommonVO;
 
 /**
  * @author : 4LEAF.YSH
- * @SCREEN : 중랑의 도시재생 ->  조직 및 역할(group)
+ * @SCREEN : 以묐옉�쓽 �룄�떆�옱�깮 ->  議곗쭅 諛� �뿭�븷(group)
  *
  */
 @Controller
@@ -26,10 +26,10 @@ public class Nm020363Controller {
 	@RequestMapping(value="/group.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
-		List<CommonVO> subMenuList = middlewareService.getSubMenu();
-		model.addAttribute("subMenuList", subMenuList);
+//		List<CommonVO> menuList = middlewareService.getMenu();
+//		model.addAttribute("menuList", menuList);
+//		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+//		model.addAttribute("subMenuList", subMenuList);
 		
 		return "group";
 	}
