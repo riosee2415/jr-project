@@ -12,17 +12,19 @@
     </header>
     <header class="desk header">
       <div class="deskbox">
-        <a href="" class="logo"> </a>
+        <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
         <nav id="deskmenu">
           <ul class="menu resmenu">
             
             <c:forEach var="menu" items="${menuList }">
             	<li>
-	              <a class="resmenu__m" href=""><c:out value="${menu.VAL }${menu.DETAIL_CODE }"></c:out></a>
+	              <a class="resmenu__m" href="${menu.URL }"><c:out value="${menu.VAL }"></c:out></a>
 	              <ul class="sub">
-	                <li class="sub1"><a href="">sub1</a></li>
-	                <li><a href="">sub</a></li>
-	                <li><a href="">sub</a></li>
+	              <c:forEach var="subMenu" items="${subMenuList }">
+	              	<c:if test="${menu.DETAIL_CODE == subMenu.PARENT_CODE }">
+						<li><a href="${subMenu.URL }"><c:out value="${subMenu.VAL }"></c:out></a></li>
+					</c:if>
+					</c:forEach>
 	              </ul>
 	            </li>
             </c:forEach>

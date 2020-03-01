@@ -1,4 +1,4 @@
-package com.patis.NM02.NM020361;
+package com.patis.NM02.NM020362;
 
 import java.util.List;
 
@@ -14,23 +14,23 @@ import com.patis.model.CommonVO;
 
 /**
  * @author : 4LEAF.YSH
- * @SCREEN : 以묐옉�쓽 �룄�떆�옱�깮 -> �룄�떆�옱�깮 �젙梨� (policy)
+ * @SCREEN : 중랑의 도시재생 -> 도시재생 지역현황 (policy.loc)
  *
  */
 @Controller
-public class Nm020361Controller {
+public class Nm020362Controller {
 	
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
-	
-	@RequestMapping(value="/policy.do", method=RequestMethod.GET)
+
+	@RequestMapping(value="/policy.loc.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
 		List<CommonVO> subMenuList = middlewareService.getSubMenu();
 		model.addAttribute("subMenuList", subMenuList);
-
-		return "policy";
+		
+		return "policy.loc";
 	}
 }

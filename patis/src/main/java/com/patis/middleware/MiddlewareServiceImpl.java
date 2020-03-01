@@ -26,6 +26,12 @@ public class MiddlewareServiceImpl implements I_MiddlewareService {
 		return middlewareDAO.getMenu();
 	}
 
+	@Override
+	public List<CommonVO> getSubMenu() throws SQLException {
+		
+		return middlewareDAO.getSubMenu();
+	}
+
 	
 	
 

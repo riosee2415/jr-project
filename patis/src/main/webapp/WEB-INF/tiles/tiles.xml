@@ -22,4 +22,12 @@
     <definition name="policy" extends="subLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020361.jsp"/>
     </definition>
+    
+     <definition name="policy.loc" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020362.jsp"/>
+    </definition>
+    
+     <definition name="group" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020363.jsp"/>
+    </definition>
 </tiles-definitions>

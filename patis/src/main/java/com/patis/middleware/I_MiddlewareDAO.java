@@ -22,4 +22,12 @@ public interface I_MiddlewareDAO {
 	 * @DESC   : 화면 로드 시 COMMON에서 MENU를 가져온다.
 	 */
 	List<CommonVO> getMenu() throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 2, 2020
+	 * @RETURN : List<CommonVO>
+	 * @DESC   : 화면 로드 시 COMMON에서 MENU를 가져온다.
+	 */
+	List<CommonVO> getSubMenu() throws SQLException;
 }

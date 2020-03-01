@@ -8,8 +8,15 @@ public class CommonVO {
 	private String VAL;
 	private String INS_USER;
 	private String UP_USER;
+	private String URL;
 	
 	
+	public String getURL() {
+		return URL;
+	}
+	public void setURL(String uRL) {
+		URL = uRL;
+	}
 	public String getCODE() {
 		return CODE;
 	}
