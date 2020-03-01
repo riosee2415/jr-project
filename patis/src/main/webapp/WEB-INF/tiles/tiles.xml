@@ -30,4 +30,27 @@
      <definition name="group" extends="subLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020363.jsp"/>
     </definition>
+    
+    <definition name="intro" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020421.jsp"/>
+    </definition>
+    
+    <definition name="business" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020422.jsp"/>
+    </definition>
+    
+    <definition name="role" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020464.jsp"/>
+    </definition>
+    
+     <definition name="statute" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020465.jsp"/>
+    </definition>
+    
+     <definition name="collusion.apply" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021166.jsp"/>
+    </definition>
+    
+    
+    
 </tiles-definitions>
