@@ -16,6 +16,7 @@
 		  FROM  COMMON
 		 WHERE  CODE 	= 'NM_01'
 		   AND	USE_YN 	= 1 
+		 ORDER	BY DETAIL_CODE ASC
 	</select>
 	
 	<select id="GET_SUB_MENU" resultType="commonVO">
@@ -27,6 +28,7 @@
 		        USE_YN
 		  FROM  COMMON
 		 WHERE  CODE = 'NM_02'
+		 ORDER	BY DETAIL_CODE ASC
 	</select>
 	
 	
