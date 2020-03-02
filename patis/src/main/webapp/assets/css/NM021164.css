@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+.search {
+  outline: none;
+  border: none;
+  diplay: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 6px;
+  margin-left: -34px;
+  background-color: #ffffff;
+  background-size: cover;
+  background-image: url("/assets/images/icons/ico_search.png");
+}
+
+.nm66-seachBox {
+  width: 100%;
+  height: 100px;
+  margin: 20px 0px;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+select {
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+}
+input {
+  width: 220px;
+  height: 34px;
+  border: 1px 0px 1px 0px solid #707070;
+}
+.nm66-seachBox .nm66-seachBox__area {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.nm66-contentBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nm66-contentBox__table {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+thead {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #f8f8f8;
+}
+
+thead tr th,
+tbody tr td {
+  padding: 15px;
+  cursor: pointer;
+}
+tr {
+  padding: 15px;
+  border-bottom: 1px solid #dedede;
+}
+.table-title {
+  width: 400px;
+}
+.table-number {
+  width: 100%;
+  margin: 70px;
+  text-align: center;
+}
+tr td:nth-child(3) {
+  font-weight: bold;
+}
+tr td:nth-child(2) {
+  color: #707070;
+}
+.table-number button {
+  background-color: #dedede;
+  outline: none;
+  border: 1px solid #dedede;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.table-number .number:hover {
+  background-color: #444444;
+  color: #ffffff;
+}

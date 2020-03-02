@@ -1,4 +1,4 @@
-package com.patis.NM02.NM021166;
+package com.patis.NM02.NM021164;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import com.patis.model.CommonVO;
  *
  */
 @Controller
-public class Nm021166Controller {
+public class Nm021164Controller {
 	
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
@@ -26,10 +26,10 @@ public class Nm021166Controller {
 	@RequestMapping(value="/collusion.apply.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
-		List<CommonVO> subMenuList = middlewareService.getSubMenu();
-		model.addAttribute("subMenuList", subMenuList);
+//		List<CommonVO> menuList = middlewareService.getMenu();
+//		model.addAttribute("menuList", menuList);
+//		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+//		model.addAttribute("subMenuList", subMenuList);
 		
 		return "collusion.apply";
 	}

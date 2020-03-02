@@ -20,8 +20,8 @@
 				</select>
 
 				<input type="text" />
+				<button class="search"></button>
 									
-				<div>돋보기</div>
 			</div>
 		</div>
 		
@@ -71,6 +71,11 @@
 					</tr>
 				</tbody>
 			</table>
+			<div class="table-number">
+				<button class="before">«<button>
+				<button class="number">1</button>
+				<button class="after">»</button>
+			</div>
 		</div>
 	</div>
 </div>
