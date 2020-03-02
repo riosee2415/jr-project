@@ -22,7 +22,7 @@
 	              <ul class="sub">
 	              <c:forEach var="subMenu" items="${subMenuList }">
 	              	<c:if test="${menu.DETAIL_CODE == subMenu.PARENT_CODE }">
-						<li><a href="${subMenu.URL }"><c:out value="${subMenu.VAL }"></c:out></a></li>
+						<li><a href="${subMenu.URL }?code=${subMenu.DETAIL_CODE}"><c:out value="${subMenu.VAL }"></c:out></a></li>
 					</c:if>
 					</c:forEach>
 	              </ul>

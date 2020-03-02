@@ -30,6 +30,8 @@ public class Nm021164Controller {
 		model.addAttribute("menuList", menuList);
 		List<CommonVO> subMenuList = middlewareService.getSubMenu();
 		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
 		
 		return "collusion.apply";
 	}

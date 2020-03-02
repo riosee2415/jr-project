@@ -30,6 +30,8 @@ public class Nm020362Controller {
 		model.addAttribute("menuList", menuList);
 		List<CommonVO> subMenuList = middlewareService.getSubMenu();
 		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
 		
 		return "policy.loc";
 	}

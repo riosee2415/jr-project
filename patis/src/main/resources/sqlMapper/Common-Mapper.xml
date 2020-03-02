@@ -28,6 +28,20 @@
 		        USE_YN
 		  FROM  COMMON
 		 WHERE  CODE = 'NM_02'
+		   AND	USE_YN 	= 1 
+		 ORDER	BY DETAIL_CODE ASC
+	</select>
+	
+	<select id="GET_DETAIL_MENU" resultType="commonVO">
+		SELECT  CODE,
+		        DETAIL_CODE,
+		        PARENT_CODE,
+		        VAL,
+		        URL,
+		        USE_YN
+		  FROM  COMMON
+		 WHERE  CODE = 'NM_03'
+		   AND	USE_YN 	= 1 
 		 ORDER	BY DETAIL_CODE ASC
 	</select>
 	
