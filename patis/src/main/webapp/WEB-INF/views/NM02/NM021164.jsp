@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <div class="subpage">
-	<div class="sub1-container">
+	<div class="sub-container">
 		<div class="subHead">
 			<div class="subTitle">공모사업 신청</div>
 			<ul class="bread">
