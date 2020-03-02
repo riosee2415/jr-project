@@ -26,12 +26,12 @@ public class Nm021164Controller {
 	@RequestMapping(value="/collusion.apply.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
-		List<CommonVO> subMenuList = middlewareService.getSubMenu();
-		model.addAttribute("subMenuList", subMenuList);
-		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
-		model.addAttribute("DetailMenuList", DetailMenuList);
+//		List<CommonVO> menuList = middlewareService.getMenu();
+//		model.addAttribute("menuList", menuList);
+//		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+//		model.addAttribute("subMenuList", subMenuList);
+//		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+//		model.addAttribute("DetailMenuList", DetailMenuList);
 		
 		return "collusion.apply";
 	}

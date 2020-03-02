@@ -26,12 +26,12 @@ public class Nm020422Controller {
 	@RequestMapping(value="/business.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
-		List<CommonVO> subMenuList = middlewareService.getSubMenu();
-		model.addAttribute("subMenuList", subMenuList);
-		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
-		model.addAttribute("DetailMenuList", DetailMenuList);
+//		List<CommonVO> menuList = middlewareService.getMenu();
+//		model.addAttribute("menuList", menuList);
+//		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+//		model.addAttribute("subMenuList", subMenuList);
+//		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+//		model.addAttribute("DetailMenuList", DetailMenuList);
 		
 		return "business";
 	}

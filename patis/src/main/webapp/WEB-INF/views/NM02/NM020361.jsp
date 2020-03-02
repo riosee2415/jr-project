@@ -216,7 +216,7 @@ pageEncoding="UTF-8"%>
       <div class="sub-main-title">▪중랑구 도시재생사업 추진연혁</div>
 
       <div class="sub-history">
-      <div class="gray-line"></div>
+        <div class="gray-line"></div>
         <div class="sub-history__title">
           <div class="sub-history__year">2017</div>
           <div class="sub-history-line"></div>
@@ -272,7 +272,15 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
 
-      <div class="sub-main-title">▪중랑구 도시재생사업 추진 현황</div>
+      <div class="sub-main-title"><p>▪중랑구 도시재생사업 추진 현황<p><p class="sub-status-title">중랑구 도시재생 추진현황도 (8개소/220HA, 사업자4, 희망자4)</p></div>
+      
+      <div class="sub-status">
+      <img
+        class="sub-status-img"
+        src="/assets/images/image/sub-nm0261-01.png"
+        alt="도시재생 추진현황도"
+      />
+      </div>
     </div>
   </div>
 </div>
