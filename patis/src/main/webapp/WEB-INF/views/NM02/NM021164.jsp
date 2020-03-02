@@ -72,7 +72,7 @@
 				</tbody>
 			</table>
 			<div class="table-number">
-				<button class="before">«<button>
+				<button class="before">«</button>
 				<button class="number">1</button>
 				<button class="after">»</button>
 			</div>
