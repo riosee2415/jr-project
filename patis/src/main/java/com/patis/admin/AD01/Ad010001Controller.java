@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.patis.model.CommonVO;
+
 
 /**
  * @author : 4LEAF.YSH
@@ -16,12 +16,19 @@ import com.patis.model.CommonVO;
  */
 @Controller
 public class Ad010001Controller {
-	
-	@RequestMapping(value="/admin.do", method=RequestMethod.GET)
-	public String sendScreen(Model model) throws Exception{
-		
 
-		return "admin";
+	@RequestMapping(value = "/admin.do", method = RequestMethod.GET)
+	public String sendScreen(Model model) throws Exception {
+
+		boolean flag = false;
+
+		if (flag) {
+			return "admin";
+		} else {
+			return "/adminLogin";
+
+		}
+
 	}
 
 }
