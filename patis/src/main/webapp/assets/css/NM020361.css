@@ -55,6 +55,15 @@
   text-align: center;
   color: #707070;
 }
+.bluetext {
+  color: #3c7bb5;
+}
+.greentext {
+  color: #227c39;
+}
+.table-orangetext {
+  color: #ea8c07;
+}
 .goal {
   width: 100%;
   display: flex;
@@ -174,13 +183,16 @@
   width: 100%;
   margin: 0 auto;
 }
-.sub-plan-table thead {
+.sub-plan-table thead,
+.sub-status-table thead {
   border-top: 1px solid black;
 }
-.sub-plan-table thead tr th {
+.sub-plan-table thead tr th,
+.sub-status-table thead tr th {
   font-size: 20px;
 }
-.sub-plan-table tbody tr td {
+.sub-plan-table tbody tr td,
+.sub-status-table tbody tr td {
   font-size: 16px;
 }
 .sub-plan-table thead tr th,
@@ -189,9 +201,11 @@
   color: #363636;
   font-weight: normal;
   align-items: center;
+  vertical-align: middle;
   border-right: 1px solid #dedede;
 }
-.sub-plan-table thead tr th:first-child {
+.sub-plan-table thead tr th:first-child,
+.sub-status-table thead tr th:first-child {
   width: 10%;
 }
 .sub-plan-table thead tr th:nth-child(n + 2):nth-child(-n + 6) {
@@ -207,9 +221,6 @@
 .sub-plan-table thead tr th.last,
 .sub-plan-table tbody tr td.last {
   border-right: none;
-}
-.table-orangetext {
-  color: #ea8c07;
 }
 .table-sky {
   background-color: #eaf5f9;
@@ -293,13 +304,58 @@
   background-color: #227c39;
   margin-left: 110px;
 }
-.sub-status-title{
-	font-size: 22px;
-	color:#545454;
-	font-weight: normal;
-	text-indent: 20px;
-	line-height: 1.7;
+.sub-status-title {
+  font-size: 22px;
+  color: #545454;
+  font-weight: normal;
+  text-indent: 20px;
+  line-height: 1.7;
+}
+
+.sub-status {
+  width: 70%;
+  margin: 60px auto;
 }
 .sub-status-img {
   margin: 0 auto;
 }
+
+.sub-status-table {
+  width: 100%;
+  text-align: center;
+  margin-bottom:90px;
+}
+.sub-status-table thead tr th,
+.sub-status-table tbody tr td {
+  font-weight: normal;
+  vertical-align: middle;
+}
+.sub-status-table tbody tr p {
+  line-height: 1.5;
+}
+.sub-status-table thead tr th:nth-child(n + 2):nth-child(-n + 3) {
+  width: 19%;
+}
+.sub-status-table thead tr th:last-child,
+.sub-status-table tbody tr td:last-child {
+  border: none;
+}
+.sub-status-table thead tr,
+.sub-status-table tbody tr{
+	line-height: 45px
+}
+.sub-status-table thead tr th,
+.sub-status-table tbody tr td {
+  text-align: center;
+  font-weight: normal;
+  align-items: center;
+  border-right: 1px solid #dedede;
+}
+.sub-status-table tbody tr:last-child td {
+  font-weight: bold;
+}
+.sub-status-table tbody tr:last-child td:first-child {
+  background-color: #f18d00;
+  color: #ffffff;
+}
+
