@@ -15,7 +15,7 @@
       type="image/x-icon"
       href="/assets/images/commons/favicon.png"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css?ver=${ver}" />
+    <link rel="stylesheet" href="/assets/css/admin/adminStyles.css?ver=${ver}" />
   </head>
   <body>
   

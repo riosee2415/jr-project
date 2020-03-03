@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import '../reset.css';
+
+
+.admin-box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-box .admin-box__header {
+	width: 100%;
+	background-color: blue;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.admin-box .admin-box__main {
+	width: 100%;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.admin-box .admin-box__main .admin-box__main__left {
+	width: 150px;
+	margin-right: 70px;
+	background-color: yellow;
+}
+
+.admin-box .admin-box__main .admin-box__main__content {
+	width: 100%;
+	background-color: red;
+}
+
+.admin-box .admin-box__footer {
+	width: 100%;
+	margin-top: 100px;
+	background-color: green;
+}
