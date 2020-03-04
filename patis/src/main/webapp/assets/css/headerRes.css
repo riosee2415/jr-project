@@ -7,6 +7,9 @@
   .desk {
     display: none;
   }
+  #collap_menu{
+  display:block;
+  }
   #menu_call ~ .wrap {
     margin: 0 auto;
   }
@@ -26,6 +29,9 @@
   .mobile {
     display: none;
   }
+   #collap_menu{
+  display:none;
+  }
   #menu_call ~ .wrap {
     margin: 0 auto;
   }
@@ -36,6 +42,9 @@
   }
   .mobile {
     display: none;
+  }
+    #collap_menu{
+  display:none;
   }
   #menu_call ~ .wrap {
     width: 100%;
