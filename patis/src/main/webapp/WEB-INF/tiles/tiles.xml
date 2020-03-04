@@ -3,14 +3,20 @@
 
 <tiles-definitions>
 	
-<!--  --><!-- 	일반 홈페이지 레이아웃 -->
+<!-- 	일반 홈페이지 레이아웃 -->
    <definition name="mainLayout" template="/WEB-INF/views/template/layouts/main_layout.jsp">
        <put-attribute name="html_header" value="/WEB-INF/views/template/components/common/html_header.jsp"/>
        <put-attribute name="header" value="/WEB-INF/views/template/components/header.jsp"/>
  	   <put-attribute name="footer" value="/WEB-INF/views/template/components/footer.jsp"/>
  	   <put-attribute name="html_footer" value="/WEB-INF/views/template/components/common/html_footer.jsp"/>
        <put-attribute name="content" value=""/>
+    </definition>
+     
+    <definition name="subLayout" template="/WEB-INF/views/template/layouts/sub_layout.jsp" extends="mainLayout">
+       <put-attribute name="sub_banner" value="/WEB-INF/views/template/components/sub_banner.jsp"/>
+       <put-attribute name="sub_top_menu" value="/WEB-INF/views/template/components/sub_top_menu.jsp"/>
     </definition> 
+    
 <!-- 	관리자 페이지 레이아웃 -->
     <definition name="adminLayout" template="/WEB-INF/views/template/layouts/admin_layout.jsp">
        <put-attribute name="header" value="/WEB-INF/views/template/components/admin_header.jsp"/>
@@ -18,12 +24,6 @@
        <put-attribute name="footer" value="/WEB-INF/views/template/components/admin_footer.jsp"/>
        <put-attribute name="content" value=""/>
     </definition> 
-    
-    <definition name="subLayout" template="/WEB-INF/views/template/layouts/sub_layout.jsp" extends="mainLayout">
-       <put-attribute name="sub_banner" value="/WEB-INF/views/template/components/sub_banner.jsp"/>
-       <put-attribute name="sub_top_menu" value="/WEB-INF/views/template/components/sub_top_menu.jsp"/>
-    </definition> 
-    
 
     <definition name="main" extends="mainLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM00/NM000000.jsp"/>

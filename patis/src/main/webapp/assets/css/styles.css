@@ -1,4 +1,6 @@
 @import "./reset.css";
+@import "./fonts.css";
+@import "./common.css";
 @import "./header.css";
 @import "./main.css";
 @import "./footer.css";
@@ -9,5 +11,5 @@
 @import "./subTopMenu.css";
 @import "./subTopMenuRes.css";
 @import "./NM020361.css";
-@import './NM020362.css';
-@import './NM021164.css';
+@import "./NM020362.css";
+@import "./NM021164.css";

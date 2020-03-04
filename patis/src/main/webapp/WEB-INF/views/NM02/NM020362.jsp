@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 
 <div class="subpage">
-	<div class="sub-container">
-		<div class="nm62-page-wrap" style="display: block;">
+	<div class="sub-container" id="sub-container-js">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<!-- 묵2동 -->
 				<div class="subTitle">묵2동</div>
@@ -334,7 +334,7 @@
 		</div>
 
 		<!-- 중화2동 -->
-		<div class="nm62-page-wrap" style="display: block;">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<div class="subTitle">중화2동</div>
 				<ul class="bread">
@@ -346,7 +346,7 @@
 		</div>
 
 		<!-- 면목3.8동 -->
-		<div class="nm62-page-wrap" style="display: block;">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<div class="subTitle">면목3.8동</div>
 				<ul class="bread">
@@ -423,7 +423,7 @@
 		</div>
 
 		<!-- 망우본동 -->
-		<div class="nm62-page-wrap" style="display: block;">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<div class="subTitle">망우본동</div>
 				<ul class="bread">
@@ -529,7 +529,7 @@
 		</div>
 
 		<!-- 사가정시장 -->
-		<div class="nm62-page-wrap" style="display: block;">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<div class="subTitle">사가정시장(면목3.8동)</div>
 				<ul class="bread">
@@ -622,7 +622,7 @@
 		</div>
 
 		<!-- 중화2동(희망지) -->
-		<div class="nm62-page-wrap" style="display: block;">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<div class="subTitle">중화2동 (희망지사업)</div>
 				<ul class="bread">
@@ -666,7 +666,7 @@
 		</div>
 
 		<!-- 면목패션봉제 -->
-		<div class="nm62-page-wrap" style="display: block;">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<div class="subTitle">면목패션봉제 (면목2동,상봉2동 일대)</div>
 				<ul class="bread">
@@ -721,7 +721,7 @@
 		</div>
 
 		<!-- 가꿈주택사업 -->
-		<div class="nm62-page-wrap" style="display: block;">
+		<div class="sub-content-wrap">
 			<div class="subHead">
 				<div class="subTitle">가꿈주택사업(묵2동,중화2동 일대)</div>
 				<ul class="bread">

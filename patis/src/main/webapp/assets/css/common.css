@@ -1,7 +1,65 @@
 @charset "UTF-8";
 
 body {
-	font-family: 'Seoulnamsan', serif, 'sans-serif';
+	font-family: Seoulnamsan, sans-serif;
 	font-weight: 500;
 	font-style: normal;
+}
+
+.subpage {
+  width: 100%;
+}
+.sub-container {
+  width: 70%;
+  margin: 50px auto;
+}
+.sub-content-wrap {
+	display: none;
+}
+.sub-content-wrap:first-child {
+	display: block;
+}
+.subHead {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 10px;
+}
+
+.subTitle {
+  font-size: 36px;
+  font-weight: bold;
+}
+.bread {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  color: #707070;
+}
+.bold {
+  font-weight: bold;
+}
+.bluetext {
+  color: #3c7bb5;
+}
+.greentext {
+  color: #227c39;
+}
+.table-orangetext {
+  color: #ea8c07;
+}
+.orange {
+  color: #ffeba6;
+}
+.table-sky {
+  background-color: #eaf5f9;
+}
+.table-orange {
+  background-color: #ffefd5;
+}
+.table-yellow {
+  background-color: #fffdd6;
 }
