@@ -93,7 +93,7 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
     <div class="sub-content-wrap">
-      <div style="display: none;" class="sub2-main">
+      <div class="sub2-main">
         <div class="subHead">
           <div class="subTitle">중랑구 도시재생</div>
           <ul class="bread">

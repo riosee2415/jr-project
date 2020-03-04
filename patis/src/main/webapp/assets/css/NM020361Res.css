@@ -1,23 +1,153 @@
 @charset "utf-8";
 
 @media screen and (max-width: 767px) {
-  .sub-container {
-    width: 90%;
-    margin: 50px auto;
+  .sub1-main-content p {
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #707070;
   }
-  .subHead {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    border-bottom: 1px solid #dedede;
-    padding-bottom: 10px;
-  }
-  .subTitle {
-    font-size: 30px;
+  .sub-goal {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    font-size: 22px;
     font-weight: bold;
-    margin: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f18d00;
   }
+  .sub-goal-content {
+    width: 85%;
+    height: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 80px;
+    color: #f18d00;
+    text-align: center;
+    border: 5px solid #f18d00;
+  }
+  .sub-vision {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #227c39;
+  }
+  .sub-vision-content {
+    width: 85%;
+    height: 90px;
+    line-height: 1.7;
+    border: 5px solid #227c39;
+    font-size: 22px;
+    font-weight: bold;
+    color: #227c39;
+    text-align: center;
+  }
+  .sub-vision-none {
+    width: 10%;
+    height: 98px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 88px;
+    text-align: center;
+  }
+  .sub-vision-content-desc {
+    font-size: 12px;
+    color: #707070;
+    text-align: center;
+    font-weight: normal;
+  }
+  .sub-illu-img {
+  display: block;
+  width: 100%;
+  height: 198px;
+  margin: 0 auto;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image: url("/assets/images/image/sub-ill-banner-mo.png");
+}
+  .sub-main-handimg {
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+  margin-top: 110px;
+  background-size: cover;
+  background-image: url("/assets/images/icons/ico_sub_01.png");
+}
+.propel-title {
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #373737;
+  width: 400px;
+  height: 44px;
+  border-radius: 50px;
+}
+.sub-main-propel:after {
+  content: "";
+  z-index: -3;
+  display: block;
+  position: absolute;
+  top: 2315px;
+  width: 90%;
+  height: 170px;
+  border: 1px solid #dedede;
+  border-radius: 50px;
+}
+
+.sub-plan-table thead tr th,
+.sub-status-table thead tr th {
+  font-size: 16px;
+}
+.sub-plan-table tbody tr td,
+.sub-status-table tbody tr td {
+  font-size: 12px;
+}
+.table-caption {
+  font-size: 14px;
+}
+.sub-history__year, .sub-history__year-green {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 24px;
+}
+.sub-history-line, .sub-history-line-green {
+    position: absolute;
+    width: 72%;
+    height: 5px;
+    margin-top: -55px;
+    margin-left: 85px;
+}
+.gray-line {
+  margin-left: 44px;
+  height: 550px;
+}
+.sub-history-content ul {
+  font-size: 15px;
+   margin-left: 70px;
+}
+.sub-history-content ul li:first-child {
+  margin: 0px 15px;
+}
+.sub-history-content ul li:last-child {
+    font-size: 14px;
+}
+.sub-status-title {
+  font-size: 16px;
+}
+.sub-status-img{
+	width:100%;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
 }
