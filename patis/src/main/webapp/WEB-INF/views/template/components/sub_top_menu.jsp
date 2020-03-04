@@ -9,7 +9,7 @@
 			<c:forEach var="detail" items="${DetailMenuList }" varStatus="status">
 				<c:if test="${param.code == detail.PARENT_CODE}" >
 					<c:set value="${menuCount + 1 }" var="menuCount" />
-					<li class="<c:out value="${menuCount eq 1 ? 'active' : ''}" />" onclick="_topMenuClickHandler('${menuCount}')">
+					<li class="<c:out value="${menuCount eq 1 ? 'active' : ''}" />" onclick="_topMenuClickHandler('${menuCount}', '${detail.VAL}')">
 						<span><c:out value="${detail.VAL }"></c:out></span>
 					</li>
 				</c:if>

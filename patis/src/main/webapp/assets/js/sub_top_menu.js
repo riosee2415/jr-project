@@ -20,7 +20,8 @@ $(document).ready(function() {
 	applyTopMenuGrid();
 });
 
-function _topMenuClickHandler(menuNumber) {
+function _topMenuClickHandler(menuNumber, menuName) {
+	$(".sub_title-js").text(menuName);
 	$("#sub-container-js .sub-content-wrap").hide();
 	$("#sub-container-js .sub-content-wrap").eq(menuNumber-1).show();
 	$("#sub_top_subject-js li").removeClass("active");

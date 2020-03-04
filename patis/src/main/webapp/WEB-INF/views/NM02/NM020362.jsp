@@ -3,15 +3,10 @@
 
 <div class="subpage">
 	<div class="sub-container" id="sub-container-js">
+		<!-- 묵2동 -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<!-- 묵2동 -->
-				<div class="subTitle">묵2동</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생사업 소개></a></li>
-					<li><a href="#">도시재생사업 유형별 소개</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 
 			<div class="nm62-content">
@@ -336,24 +331,14 @@
 		<!-- 중화2동 -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<div class="subTitle">중화2동</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생 지역현황></a></li>
-					<li><a href="#">면목3.8동</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 		</div>
 
 		<!-- 면목3.8동 -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<div class="subTitle">면목3.8동</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생 지역현황></a></li>
-					<li><a href="#">면목3.8동</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 
 			<div class="nm62-content">
@@ -425,12 +410,7 @@
 		<!-- 망우본동 -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<div class="subTitle">망우본동</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생 지역현황></a></li>
-					<li><a href="#">망우본동</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 			<div class="nm62-content">
 				<h3 class="nm62-title-style-01">▪종합계획도</h3>
@@ -531,12 +511,7 @@
 		<!-- 사가정시장 -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<div class="subTitle">사가정시장(면목3.8동)</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생 지역현황></a></li>
-					<li><a href="#">사가정시장(면목3.8동)</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 			<div class="nm62-content">
 				<h3 class="nm62-title-style-01">▪종합계획도</h3>
@@ -624,12 +599,7 @@
 		<!-- 중화2동(희망지) -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<div class="subTitle">중화2동 (희망지사업)</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생 지역현황></a></li>
-					<li><a href="#">중화2동 (희망지)</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 			<div class="nm62-content">
 				<h3 class="nm62-title-style-01">▪종합계획도</h3>
@@ -668,12 +638,7 @@
 		<!-- 면목패션봉제 -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<div class="subTitle">면목패션봉제 (면목2동,상봉2동 일대)</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생 지역현황></a></li>
-					<li><a href="#">면목패션봉제</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 			<div class="nm62-content">
 				<h3 class="nm62-title-style-01">▪종합계획도</h3>
@@ -723,12 +688,7 @@
 		<!-- 가꿈주택사업 -->
 		<div class="sub-content-wrap">
 			<div class="subHead">
-				<div class="subTitle">가꿈주택사업(묵2동,중화2동 일대)</div>
-				<ul class="bread">
-					<li><a href="#">HOME></a></li>
-					<li><a href="#">도시재생 지역현황></a></li>
-					<li><a href="#">가꿈주택사업</a></li>
-				</ul>
+				<%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
 			</div>
 			<div class="nm62-content">
 				<div class="nm62-tbl-style-01">
