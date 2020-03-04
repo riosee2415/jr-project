@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,9 +41,22 @@ public class Ad010001Controller {
 	 * @DESC   : 관리자 로그인 페이지로 이동 (로그인 권한 검증)
 	 */
 	@RequestMapping(value = "/admin.do", method = RequestMethod.GET)
-	public String sendScreen(Model model) throws Exception {
+	public String sendScreen(Model model, HttpSession session, @RequestParam(required = false)boolean loginFlag) throws Exception {
 		
 		boolean flag = false;
+		int right = 0;
+		
+		if(loginFlag) {
+			right = (int) session.getAttribute("loginRight");
+			
+			if(right == 1 || right == 2) {
+				middlewareService.printLog("관리자 또는 운영자 권한으로 로그인 되었습니다.");
+				flag = true;
+				
+			}
+		} else { 
+		}
+		
 
 		if (flag) {
 			return "admin";
@@ -63,12 +77,15 @@ public class Ad010001Controller {
 	public String adminLogin(Model model
 							, @RequestParam("id")String id
 							, @RequestParam("pass")String password
-							, InetAddress ip) throws Exception {
+							, InetAddress ip
+							, HttpSession session) throws Exception {
 		
 		int id_check_result = 0;
 		int pass_check_result = 0;
 		int log_save_result = 0;
 		String ipAddress = "";
+		boolean loginFlag = false;
+		
 		try {
 			ip = InetAddress.getLocalHost(); 
 			ipAddress = ip.getHostAddress(); 
@@ -106,9 +123,14 @@ public class Ad010001Controller {
 						
 						//새션에 로그인 데이터 추가하기
 						EmpVO vo  = ad010001Service.getEmpInfo(info);
-						System.out.println(vo.getUSER_ID());
-						System.out.println(vo.getUSER_NAME());
-						System.out.println(vo.getUSER_RIGHT());
+						
+						session.setMaxInactiveInterval(1800);
+						session.setAttribute("loginId", vo.getUSER_ID());
+						session.setAttribute("loginName", vo.getUSER_NAME());
+						session.setAttribute("loginRight", vo.getUSER_RIGHT());
+						
+						loginFlag = true;
+						
 					} else {
 						middlewareService.printLog(id + "로그인 기록 저장 실패 [ " + ipAddress + " ] " );
 					}
@@ -125,7 +147,7 @@ public class Ad010001Controller {
 			model.addAttribute("loginCode", 0);
 		}
 
-		return sendScreen(model);
+		return sendScreen(model, session, loginFlag);
 	}
 
 }
