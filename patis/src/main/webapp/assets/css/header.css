@@ -65,8 +65,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.resmenu__m{
-	font-size:21px;
+.resmenu__m {
+  font-size: 21px;
 }
 
 .resmenu li .sub li {
@@ -88,14 +88,14 @@
 .resmenu li a {
   display: block;
   line-height: 50px;
-  font-size:21px;
+  font-size: 21px;
   color: black;
   font-weight: bold;
 }
 .resmenu li .sub a {
   text-align: left;
   color: #ffffff;
-  font-size:16px;
+  font-size: 16px;
 }
 
 .resmenu li:hover .sub {
@@ -127,7 +127,7 @@
 .resmenu li a:after {
   content: "";
   display: block;
-  width: 85px;
+  width: 67px;
   height: 3px;
   background: transparent;
   margin-left: -200px;
@@ -137,7 +137,7 @@
   background: #f18d00;
   margin-left: 0;
 }
-.sub li:first-child{
+.sub li:first-child {
   margin-left: 15%;
 }
 .sub li {

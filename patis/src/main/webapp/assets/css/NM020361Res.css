@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 @media screen and (max-width: 767px) {
-.sub-container {
-  width: 90%;
-  margin: 50px auto;
-}
+  .sub-container {
+    width: 90%;
+    margin: 50px auto;
+  }
   .subHead {
     display: flex;
     flex-direction: column;

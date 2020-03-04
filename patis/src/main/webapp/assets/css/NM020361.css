@@ -270,7 +270,7 @@
 .sub-status-table {
   width: 100%;
   text-align: center;
-  margin-bottom:90px;
+  margin-bottom: 90px;
 }
 .sub-status-table thead tr th,
 .sub-status-table tbody tr td {
@@ -288,8 +288,8 @@
   border: none;
 }
 .sub-status-table thead tr,
-.sub-status-table tbody tr{
-	line-height: 45px
+.sub-status-table tbody tr {
+  line-height: 45px;
 }
 .sub-status-table thead tr th,
 .sub-status-table tbody tr td {
@@ -305,4 +305,3 @@
   background-color: #f18d00;
   color: #ffffff;
 }
-

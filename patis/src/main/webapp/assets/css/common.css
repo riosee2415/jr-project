@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 body {
-	font-family: Seoulnamsan, sans-serif;
-	font-weight: 500;
-	font-style: normal;
+  font-family: Seoulnamsan, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .subpage {
@@ -14,10 +14,10 @@ body {
   margin: 50px auto;
 }
 .sub-content-wrap {
-	display: none;
+  display: none;
 }
 .sub-content-wrap:first-child {
-	display: block;
+  display: block;
 }
 .subHead {
   display: flex;
