@@ -42,3 +42,16 @@
 	margin-top: 100px;
 	background-color: green;
 }
+
+.login-data {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+
+.login-data .login-data__label {
+	width: 100px;
+	height: 20px;
+
+}

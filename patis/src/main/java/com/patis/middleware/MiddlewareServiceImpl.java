@@ -37,6 +37,12 @@ public class MiddlewareServiceImpl implements I_MiddlewareService {
 		return middlewareDAO.getDetailMenu();
 	}
 
+	@Override
+	public void printLog(String text) {
+		System.out.println("▒▒▒▒▒▒▒[system]▒▒▒▒▒▒▒ :: " + text);
+		
+	}
+
 	
 	
 

@@ -1,11 +1,20 @@
 package com.patis.admin.AD01;
 
-import java.util.List;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.EmpVO;
 
 
 
@@ -16,10 +25,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class Ad010001Controller {
+	
+	
+	@Resource(name = "ad010001Service")
+	private I_Ad010001Service ad010001Service;
+	
+	@Resource(name="middlewareService")
+	private I_MiddlewareService middlewareService;
 
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 4, 2020
+	 * @RETURN : String
+	 * @DESC   : 관리자 로그인 페이지로 이동 (로그인 권한 검증)
+	 */
 	@RequestMapping(value = "/admin.do", method = RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception {
-
+		
 		boolean flag = false;
 
 		if (flag) {
@@ -29,6 +51,81 @@ public class Ad010001Controller {
 
 		}
 
+	}
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 4, 2020
+	 * @RETURN : String
+	 * @DESC   : 관리자 로그인 시도 
+	 */
+	@RequestMapping(value = "/admin.do", method = RequestMethod.POST)
+	public String adminLogin(Model model
+							, @RequestParam("id")String id
+							, @RequestParam("pass")String password
+							, InetAddress ip) throws Exception {
+		
+		int id_check_result = 0;
+		int pass_check_result = 0;
+		int log_save_result = 0;
+		String ipAddress = "";
+		try {
+			ip = InetAddress.getLocalHost(); 
+			ipAddress = ip.getHostAddress(); 
+		} catch(UnknownHostException e) {
+			System.out.println(e);
+		}
+		
+		Map<String, String> info = new HashMap<String, String>();
+		info.put("input_id", id);
+		info.put("input_password", password);
+		info.put("input_ip", ipAddress);
+		
+		try {
+			id_check_result = ad010001Service.adminLoginCheck(info);
+		} catch(Error e) {
+			middlewareService.printLog("로그인 시도 아이디 데이터베이스 검증 실패");
+		}
+		
+		if(id_check_result == 1) {
+			middlewareService.printLog("로그인 시도 아이디 : " + id);
+			try  {
+				pass_check_result = ad010001Service.adminLoginCheck2(info);
+			} catch(Error e) {
+				middlewareService.printLog("로그인 시도 비밀번호 데이터베이스 검증 실패");
+			}
+			
+			if(id_check_result == 1 && pass_check_result == 1) {
+				middlewareService.printLog(id + "로그인에 성공했습니다. [ " + ipAddress + " ] " );
+				
+				try {
+					log_save_result = ad010001Service.saveLoginData(info);
+					
+					if(log_save_result == 1) {
+						middlewareService.printLog(id + "로그인 기록 저장 성공 [ " + ipAddress + " ] " );
+						
+						//새션에 로그인 데이터 추가하기
+						EmpVO vo  = ad010001Service.getEmpInfo(info);
+						System.out.println(vo.getUSER_ID());
+						System.out.println(vo.getUSER_NAME());
+						System.out.println(vo.getUSER_RIGHT());
+					} else {
+						middlewareService.printLog(id + "로그인 기록 저장 실패 [ " + ipAddress + " ] " );
+					}
+				
+				
+				} catch(Error e) {
+					middlewareService.printLog("로그인 기록 저장 중 에러발생");
+				}
+			} else {
+				model.addAttribute("loginCodePass", 0);
+			}
+			
+		} else {
+			model.addAttribute("loginCode", 0);
+		}
+
+		return sendScreen(model);
 	}
 
 }

@@ -37,4 +37,12 @@ public interface I_MiddlewareService {
 	 * @DESC   : 화면 로드 시 COMMON에서 DETAIL_MENU를 가져온다.
 	 */
 	List<CommonVO> getDetailMenu() throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 4, 2020
+	 * @RETURN : void
+	 * @DESC   : 로그를 출력하는 함수
+	 */
+	void printLog(String text);
 }

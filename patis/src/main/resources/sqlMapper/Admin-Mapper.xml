@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Admin-Mapper">
+
+	<select id="ID_CHECK" resultType="int" parameterType="hashMap">
+		SELECT  COUNT(USER_ID)
+		  FROM  EMP
+		 WHERE  USER_ID = #{input_id}
+	</select>
+	
+	
+	<select id="ID_PASS_CHECK" resultType="int" parameterType="hashMap">
+		SELECT  COUNT(USER_ID)
+		  FROM  EMP
+		 WHERE  USER_ID 		= #{input_id}
+		   AND	USER_PASSWORD	= #{input_password}
+	</select>
+	
+	<insert id="SAVE_LOGIN_LOG" parameterType="hashMap">
+		INSERT INTO LOGIN_LOG
+		(
+			LOG_NO,
+			LOG_ID,
+			LOG_IP,
+			LOG_DATE
+		)
+		VALUES
+		(
+			seq_login_log.nextval,
+			#{input_id},
+			#{input_ip},
+			SYSDATE
+		)
+	</insert>
+	
+	<select id="GET_EMP_INFO" resultType="empVO" parameterType="hashMap">
+		SELECT  USER_ID,
+				USER_NAME,
+				USER_RIGHT
+		  FROM  EMP
+		 WHERE	USER_ID = #{input_id}
+	</select>
+	
+	
+</mapper>

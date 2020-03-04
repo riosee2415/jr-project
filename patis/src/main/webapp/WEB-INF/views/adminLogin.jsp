@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,19 +12,36 @@
 	href="/assets/css/admin/adminStyles.css?ver=${ver}" />
 </head>
 <body class="login-body">
+
+	<c:if test="${loginCode == 0 }">
+		<script>
+			alert("ID :: LOGIN ERROR");
+		</script>
+	</c:if>
+	
+	<c:if test="${loginCodePass == 0 }">
+		<script>
+			alert("PASSWORD :: LOGIN ERROR");
+		</script>
+	</c:if>
+
 	<div class="login">
 		<div class="login-box">
 			<div class="login-box__top">top</div>
 			<div class="login-box__center">
-				<form action="" method="post">
+				<form action="${pageContext.request.contextPath }/admin.do" method="post">
 					<div class="login-data">
-						<label class="login-data__label">ID</label> <input
-							class="login-data__input" />
+						<div class="login-data__label">ID</div> <input
+							type="text" class="login-data__input" name="id" />
 					</div>
 
 					<div class="login-data">
-						<label class="login-data__label">PASSWORD</label> <input
-							class="login-data__input" />
+						<div class="login-data__label">PASSWORD</div> <input
+							type="password"class="login-data__input" name="pass"/>
+					</div>
+					
+					<div class="login-data">
+						<input type="submit" value="LOGIN" />
 					</div>
 				</form>
 
