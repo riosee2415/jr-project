@@ -5,12 +5,7 @@ pageEncoding="UTF-8"%>
   <div class="sub-container" id="sub-container-js">
     <div class="sub-content-wrap">
       <div class="subHead">
-        <div class="subTitle">공모사업 신청</div>
-        <ul class="bread">
-          <li><a href="#">HOME></a></li>
-          <li><a href="#">도시재생 공모사업></a></li>
-          <li><a href="#">공모사업 신청</a></li>
-        </ul>
+        <%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 
       <div class="nm66-seachBox">

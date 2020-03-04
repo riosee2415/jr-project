@@ -271,15 +271,26 @@ a.main-plus {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
   justify-content: center;
 }
-.main-cooper-btn .prev,
-.main-cooper-btn .next {
-  outline: none;
+.main-cooper-btn .prev {
   width: 30px;
   height: 30px;
+  display: block;
+  outline: none;
+  border: none;
+  cursor:pointer;
   background-color: transparent;
-  border: 1px solid #707070;
-  border-radius: 100%;
-  text-align: center;
+  background-image: url("/assets/images/icons/prev.png");
+}
+.main-cooper-btn .next {
+  width: 30px;
+  height: 30px;
+  display: block;
+  outline: none;
+  border: none;
+  cursor:pointer;
+  background-color: transparent;
+  background-image: url("/assets/images/icons/next.png");
 }

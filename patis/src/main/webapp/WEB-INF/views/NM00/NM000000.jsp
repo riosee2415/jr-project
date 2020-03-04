@@ -91,7 +91,7 @@ pageEncoding="UTF-8"%>
   
   <div class="mainBotton">
 	  <div class="main-cooper-btn">
-	  	<div><button class="prev">◀</button></div>
+	  	<div><button class="prev"></button></div>
 	  </div>
 	  <div class="main-cooper">
 	    <ul>
@@ -108,7 +108,7 @@ pageEncoding="UTF-8"%>
 	  </div>
 	  
 	  <div class="main-cooper-btn">
-	   	<div><button class="next">▶</button></div>
+	   	<div><button class="next"></button></div>
 	  </div>
 	  
   </div>

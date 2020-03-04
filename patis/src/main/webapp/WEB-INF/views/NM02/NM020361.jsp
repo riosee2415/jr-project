@@ -5,12 +5,7 @@ pageEncoding="UTF-8"%>
     <div class="sub-content-wrap">
       <div class="sub1-main">
         <div class="subHead">
-          <div class="subTitle">도시재생이란</div>
-          <ul class="bread">
-            <li><a href="#">HOME></a></li>
-            <li><a href="#">도시재생정책></a></li>
-            <li><a href="#">도시재생이란</a></li>
-          </ul>
+         <%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
         </div>
 
         <div class="sub-main-title">▪도시재생이란?</div>
@@ -95,12 +90,7 @@ pageEncoding="UTF-8"%>
     <div class="sub-content-wrap">
       <div class="sub2-main">
         <div class="subHead">
-          <div class="subTitle">중랑구 도시재생</div>
-          <ul class="bread">
-            <li><a href="#">HOME></a></li>
-            <li><a href="#">도시재생정책></a></li>
-            <li><a href="#">중랑구 도시재생</a></li>
-          </ul>
+         <%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
         </div>
 
         <div class="sub-main-title">▪중랑구 도시재생사업 추진계획(안)</div>
