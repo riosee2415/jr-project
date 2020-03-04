@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@media screen and (max-width: 767px) {
+  .sub-container {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .subHead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 10px;
+  }
+  .subTitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+@media screen and (min-width: 960px) {
+}
