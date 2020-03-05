@@ -1,0 +1,209 @@
+@media screen and (max-width: 767px) {
+  .nm62-title-style-01 {
+    font-size: 20px;
+  }
+
+  .nm62-title-style-02 {
+    font-size: 18px;
+  }
+
+  .nm62-title-style-03 {
+    font-size: 18px;
+  }
+
+  .nm62-title-style-04 {
+    font-size: 16px;
+  }
+
+  .nm62-desc-style-01 {
+    font-size: 16px;
+  }
+
+  /* 각 이미지 사이즈 */
+  .nm62-content-img__box .nm62-content-img-01-01 {
+    width: 510px;
+    height: 338px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-01-02 {
+    width: 573px;
+    height: 397px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-01-03 {
+    width: 421px;
+    height: 161px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-01-04 {
+    width: 260px;
+    height: 225px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-01-05 {
+    width: 206px;
+    height: 160px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-01-09 {
+    width: 314px;
+    height: 175px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-01-10 {
+    width: 168px;
+    height: 107px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-01-14 {
+    width: 170px;
+    height: 112px;
+    margin-right: 10px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-02-01 {
+    width: 426px;
+    height: 318px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-02-02 {
+    width: 293px;
+    height: 159px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-02-03 {
+    width: 311px;
+    height: 309px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-02-04 {
+    width: 311px;
+    height: 308px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-03-01 {
+    width: 359px;
+    height: 200px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-04-01 {
+    width: 355px;
+    height: 250px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-04-02 {
+    width: 300px;
+    height: 206px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-04-03 {
+    width: 299px;
+    height: 204px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-05-01 {
+    width: 378px;
+    height: 275px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-05-02 {
+    width: 208px;
+    height: 154px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-06-01 {
+    width: 426px;
+    height: 318px;
+  }
+
+  .nm62-content-img__box .nm62-content-img-07-01 {
+    width: 381px;
+    height: 273px;
+  }
+
+  /* 표 스타일 */
+  .nm62-tbl-style-01 > ul > li:nth-child(1) {
+    font-size: 16px;
+  }
+
+  .nm62-tbl-style-01 > ul > li:nth-child(2) {
+    font-size: 14px;
+  }
+
+  .nm62-tbl-style-01 > ul > li > p {
+    font-size: 14px;
+  }
+
+  .nm62-tbl-style-01 > ul > li > span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-top: 10px;
+    color: #f18d00;
+  }
+
+  .nm62-tbl-style-01-02 > ul > li:nth-child(1) {
+    font-size: 16px;
+  }
+
+  .nm62-tbl-style-01-02 > ul > li:nth-child(2) {
+    font-size: 14px;
+  }
+
+  .nm62-tbl-style-02 ul li {
+    font-size: 12px;
+  }
+
+  .nm62-tbl-style-02 ul:first-child li,
+  .nm62-tbl-style-02 ul li:first-child {
+    font-size: 14px;
+  }
+
+  .nm62-list-style-dot {
+    font-size: 14px;
+  }
+
+  .nm62-list-style-dot2 li {
+    font-size: 8px;
+  }
+
+  .nm62-list-style-dot3 li {
+    font-size: 12px;
+  }
+
+  /* 표 설정 */
+  .nm62-list-style-image.grid-one-by-one {
+    grid-template-columns: 314px;
+  }
+
+  .nm62-list-style-image.grid-one-by-one2 {
+    grid-template-columns: 315px;
+  }
+
+  .nm62-list-style-image.grid-one-by-two {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 170px 170px;
+  }
+
+  .nm62-list-style-image.nm62-list-style-image.grid-one-by-two2
+    > li:last-child {
+    font-size: 8px;
+  }
+
+  .nm62-list-style-image.grid-two-by-two {
+    grid-template-columns: 206px 206px;
+    grid-gap: 10px 10px;
+  }
+
+  .nm62-list-style-image.grid-two-by-two2 {
+    grid-template-columns: 168px 168px;
+    grid-gap: 10px 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media screen and (min-width: 960px) {
+}
