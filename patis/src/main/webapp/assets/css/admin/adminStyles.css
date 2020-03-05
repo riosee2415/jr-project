@@ -13,7 +13,6 @@
 
 .admin-box .admin-box__header {
 	width: 100%;
-	background-color: blue;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -22,27 +21,24 @@
 
 .admin-box .admin-box__main {
 	width: 100%;
-	margin-top: 50px;
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
 }
 
 .admin-box .admin-box__main .admin-box__main__left {
-	width: 150px;
-	margin-right: 70px;
-	background-color: yellow;
+	width: 270px;
+}
+
+.admin-box .admin-box__main .admin-box__main__container {
+  width: calc(100% - 270px);
 }
 
 .admin-box .admin-box__main .admin-box__main__content {
 	width: 100%;
-	background-color: red;
 }
 
 .admin-box .admin-box__footer {
 	width: 100%;
-	margin-top: 100px;
-	background-color: green;
 }
 
 .login-data {

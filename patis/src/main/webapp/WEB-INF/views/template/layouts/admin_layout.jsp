@@ -28,13 +28,15 @@
 					<tiles:insertAttribute name="left" />
 				</div>
 				
-				<div class="admin-box__main__content">
-					<tiles:insertAttribute name="content" />
+				<div class="admin-box__main__container">
+					<div class="admin-box__main__content">
+						<tiles:insertAttribute name="content" />
+					</div>
+					
+					<div class="admin-box__footer">
+						<tiles:insertAttribute name="footer" />
+					</div>
 				</div>
-			</div>
-		
-			<div class="admin-box__footer">
-				<tiles:insertAttribute name="footer" />
 			</div>
 		</div>
 	</body>
