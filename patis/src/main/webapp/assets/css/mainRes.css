@@ -8,7 +8,12 @@
     flex-direction: column;
     justify-content: center;
   }
-  .slideimg-01 {
+  .main-container-banner{
+  width:400px;
+  margin:0 auto;
+	overflow:hidden;
+}
+  .slideimg-01,  .slideimg-02, .slideimg-03,  .slideimg-04, .slideimg-05 {
     display: block;
     width: 400px;
     height: 240px;
