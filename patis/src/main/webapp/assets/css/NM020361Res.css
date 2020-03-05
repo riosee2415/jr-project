@@ -145,6 +145,10 @@
 .sub-status-title {
   font-size: 16px;
 }
+.sub-status{
+	width:70%;
+	margin:60px auto;
+}
 .sub-status-img{
 	width:100%;
 }

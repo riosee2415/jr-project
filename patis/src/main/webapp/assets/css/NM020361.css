@@ -255,13 +255,9 @@
 }
 
 .sub-status {
-  width: 70%;
+  width: 682px;
   margin: 60px auto;
 }
-.sub-status-img {
-  margin: 0 auto;
-}
-
 .sub-status-table {
   width: 100%;
   text-align: center;

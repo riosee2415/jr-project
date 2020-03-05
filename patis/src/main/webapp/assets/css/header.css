@@ -159,7 +159,7 @@
   transition: 0.5s;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgb(255,255,255,0.8);
 }
 #menu_call:checked ~ #collap_menu {
   left: 0;
@@ -168,12 +168,16 @@
   clear: both;
   margin: 0;
   border-top: 1px solid #555;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #707070;
   width: 100%;
+  background-color: #dedede;
+}
+#collap_menu li a:hover{
+	color:#227c39;
 }
 #collap_menu li a {
   display: block;
-  color: #fff;
+  color: #0b0b0b;
   text-align: left;
   text-indent: 1.5rem;
   line-height: 3.2;

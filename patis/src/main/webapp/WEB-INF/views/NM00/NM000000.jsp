@@ -5,14 +5,20 @@ pageEncoding="UTF-8"%>
   <div class="main-container">
     <div class="main-container-banner">
       <ul class="main-container__slide">
-        <li class="item1 on">
+        <li class="on">
           <a href="#" class="slideimg-01"> </a>
         </li>
-        <li class="item2">
+        <li>
           <a href="#" class="slideimg-02"> </a>
         </li>
-        <li class="item3">
-          <a href="#"> </a>
+        <li>
+          <a href="#" class="slideimg-03"> </a>
+        </li>
+        <li>
+          <a href="#" class="slideimg-04"> </a>
+        </li>
+        <li>
+          <a href="#" class="slideimg-05"> </a>
         </li>
       </ul>
       <ul class="btn_box">
