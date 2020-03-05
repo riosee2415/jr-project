@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import '../reset.css';
 @import './login.css';
-
+@import './adminHeader.css';
+@import './adminLeft.css';
+@import './adminFooter.css';
 
 .admin-box {
 	width: 100%;
