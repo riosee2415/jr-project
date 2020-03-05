@@ -15,6 +15,8 @@ public class EmpVO {
 	private int USER_MOBILE;
 	private String USER_AVATAR;
 	private String USER_EMAIL;
+	private String SECRET_KEY;
+	
 	public int getUSER_NO() {
 		return USER_NO;
 	}
@@ -93,8 +95,11 @@ public class EmpVO {
 	public void setUSER_EMAIL(String uSER_EMAIL) {
 		USER_EMAIL = uSER_EMAIL;
 	}
-	
-	
-	
+	public String getSECRET_KEY() {
+		return SECRET_KEY;
+	}
+	public void setSECRET_KEY(String sECRET_KEY) {
+		SECRET_KEY = sECRET_KEY;
+	}
 
 }

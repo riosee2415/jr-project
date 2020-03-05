@@ -38,4 +38,12 @@ public interface I_Ad010001DAO {
 	 * @DESC   : 로그인에 성공한 유저 데이터를 데이터베이스에서 가져온다.
 	 */
 	EmpVO getEmpInfo(Map info) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 5, 2020
+	 * @RETURN : EmpVO
+	 * @DESC   : 비밀번호 복호화를 위한 데이터를 데이터베이스에서 가져온다.
+	 */
+	EmpVO getEmpSecretInfo(Map info) throws SQLException;
 }

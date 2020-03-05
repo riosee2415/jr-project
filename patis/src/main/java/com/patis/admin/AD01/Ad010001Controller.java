@@ -6,8 +6,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.codec.net.URLCodec;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.EmpVO;
+import com.patis.util.AES256Util;
 
 
 

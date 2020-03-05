@@ -5,10 +5,12 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.apache.commons.codec.net.URLCodec;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.patis.model.EmpVO;
+import com.patis.util.AES256Util;
 
 @Repository("ad010001DAO")
 public class Ad010001DAOImpl implements I_Ad010001DAO{
@@ -36,6 +38,11 @@ public class Ad010001DAOImpl implements I_Ad010001DAO{
 	@Override
 	public EmpVO getEmpInfo(Map info) throws SQLException {
 		return sqlSession.selectOne(NAMESPACE + ".GET_EMP_INFO", info);
+	}
+
+	@Override
+	public EmpVO getEmpSecretInfo(Map info) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_EMP_SECRET_INFO", info);
 	}
 
 }
