@@ -4,28 +4,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-      text-align: center;
+  text-align: center;
 }
 .left-menu ul {
-  background-color: #dedede;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  
 }
 .left-menu li {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 40px;
+  background-color: #dedede;
+  width: 60px;
+  height: 60px;
   position: relative;
-    text-align: center;
+  text-align: center;
 }
 
 .left-menu li a {
@@ -42,9 +37,12 @@
 }
 
 .left-menu li a:hover {
-    color:#f19d00;
+  color: #f19d00;
 }
 
+.left-menu li .left-menu-sub li{
+	  background-color: #ffffff;
+}
 .left-menu li .left-menu-sub {
   width: 100px;
   height: 160px;
@@ -58,9 +56,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:40px;
+  margin-top: 40px;
   margin-left: 100px;
-  background-color: #ffffff;
 }
 
 .left-menu li .left-menu-sub a:hover {
