@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
 .admin-box__header .header-logo__box {
+	position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 270px;
   height: 100%;
   background: #056a2e;
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.3);
 }
 
 .admin-box__header .header-logo__box .header-logo-text {
@@ -15,15 +17,27 @@
   justify-content: center;
   width: 210px;
   height: 100%;
-  color: #fff;
-  font-size: 28px;
   background: #068238;
+}
+
+.admin-box__header .header-logo__box .header-logo-text .header-link-logo {
+	color: #fff;
+  font-size: 26px;
+	letter-spacing: 0.4px;
+}
+
+.admin-box__header .header-logo__box .header-logo-text .header-link-out {
+  position: absolute;
+  left: 17px;
+  color: #fff;
+  font-size: 24px;
 }
 
 .admin-box__header .header-content__box {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 15px;
   width: calc(100% - 270px);
   height: 100%;
   background: rgba(47, 132, 69, 0.8);

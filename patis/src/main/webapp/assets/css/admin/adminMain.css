@@ -16,3 +16,10 @@
   letter-spacing: 2px;
 }
 
+.admin-main-box__top .admin-main-control__box {
+	padding-right: 15px;
+}
+
+.admin-main-box__content {
+	padding: 0 25px;
+}

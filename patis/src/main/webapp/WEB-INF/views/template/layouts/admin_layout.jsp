@@ -40,4 +40,8 @@
 			</div>
 		</div>
 	</body>
+	
+	<script src="/assets/js/jquery-1.12.4.min.js"></script>
+	<script src="/assets/plugins/fontawesome/fontawesome.js"></script>
+	<script src="/assets/js/admin/admin_left.js"></script>
 </html>

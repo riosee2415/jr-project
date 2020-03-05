@@ -1,77 +1,61 @@
 @charset "UTF-8";
 
 .left-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.left-menu ul {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.left-menu li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #dedede;
-  width: 60px;
-  height: 60px;
-  position: relative;
-  text-align: center;
+	display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100%;
 }
 
-.left-menu li a {
-  display: block;
+.left-menu .left-menu-icon__box {
   width: 60px;
-  height: 40px;
-  line-height: 40px;
+  background: #ebebeb;
 }
 
-.left-menu li a.left-menu-main {
+.left-menu .left-menu-icon__box ul li {
+	height: 56px;
+  line-height: 57px;
+  text-align: center;
+  color: #686868;
   font-size: 18px;
-  text-align: center;
-  font-weight: bold;
+  border-bottom: 1.5px solid #dddddd;
+  cursor: pointer;
 }
 
-.left-menu li a:hover {
-  color: #f19d00;
+.left-menu .left-menu-icon__box ul li.active,
+.left-menu .left-menu-icon__box ul li:hover {
+	color: #f19d00;
+	font-weight: 600;
+	background: #fff;
 }
 
-.left-menu li .left-menu-sub li{
-	  background-color: #ffffff;
-}
-.left-menu li .left-menu-sub {
-  width: 100px;
-  height: 160px;
-  position: absolute;
-  left: 0;
-  z-index: 999;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-left: 100px;
+.left-menu .left-menu-list__box {
+	padding-top: 22px;
 }
 
-.left-menu li .left-menu-sub a:hover {
-  color: #f18d00;
+.left-menu .lefe-menu-list__area{
+	display: none;
+	padding-left: 18px;
 }
 
-.left-menu li:hover .left-menu-sub {
-  font-weight: bold;
-  font-size: 16px;
-  opacity: 1;
-  visibility: visible;
-  text-align: center;
+.lefe-menu-list__area.active {
+	display: block;
 }
-.left-menu:hover {
-  opacity: 1;
-  visibility: visible;
+
+.left-menu .lefe-menu-list__area .left-menu-title {
+  padding-bottom: 14px;
+	font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.left-menu .lefe-menu-list__area .left-menu-sub li {
+  color: #545652;
+  line-height: 180%;
+  cursor: pointer;
+}
+
+.left-menu .lefe-menu-list__area .left-menu-sub li.active,
+.left-menu .lefe-menu-list__area .left-menu-sub li:hover {
+	color: #f19d00;
 }

@@ -2,45 +2,47 @@
 pageEncoding="UTF-8"%>
 
 <nav class="left-menu">
-  <ul>
-    <li>
-      <a href="#" class="left-menu-main">menu1</a>
-      <ul class="left-menu-sub">
-        <li><a href="#">menu1-1</a></li>
-        <li><a href="#">menu1-2</a></li>
-        <li><a href="#">menu1-3</a></li>
+	<div class="left-menu-icon__box" id="left-menu-icon-js">
+		<ul>
+			<li class="active"><i class="far fa-user"></i></li>
+			<li><i class="far fa-user"></i></li>
+			<li><i class="far fa-user"></i></li>
+			<li><i class="far fa-user"></i></li>
+		</ul>
+	</div>
+	
+	<div class="left-menu-list__box" id="left-menu-list-js">
+		<div class="lefe-menu-list__area active">
+			<h3 class="left-menu-title">회원관리1</h3>
+			<ul class="left-menu-sub">
+        <li class="active">menu1-1</li>
+        <li>menu1-2</li>
+        <li>menu1-3</li>
       </ul>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="#" class="left-menu-main">menu2</a>
-      <ul class="left-menu-sub">
-        <li><a href="#">memu2-1</a></li>
-        <li><a href="#">memu2-2</a></li>
-        <li><a href="#">memu2-3</a></li>
+		</div>
+		<div class="lefe-menu-list__area">
+			<h3 class="left-menu-title">회원관리2</h3>
+			<ul class="left-menu-sub">
+        <li>menu2-1</li>
+        <li>menu2-2</li>
+        <li>menu2-3</li>
       </ul>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="#" class="left-menu-main">menu3</a>
-      <ul class="left-menu-sub">
-        <li><a href="#">menu3-1</a></li>
-        <li><a href="#">menu3-2</a></li>
-        <li><a href="#">menu3-3</a></li>
-        <li><a href="#">menu3-4</a></li>
+		</div>
+		<div class="lefe-menu-list__area">
+			<h3 class="left-menu-title">회원관리3</h3>
+			<ul class="left-menu-sub">
+        <li>menu3-1</li>
+        <li>menu3-2</li>
+        <li>menu3-3</li>
       </ul>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="#" class="left-menu-main">menu4</a>
-      <ul class="left-menu-sub">
-        <li><a href="#">menu4-1</a></li>
-        <li><a href="#">menu4-2</a></li>
-        <li><a href="#">menu4-3</a></li>
+		</div>
+		<div class="lefe-menu-list__area">
+			<h3 class="left-menu-title">회원관리4</h3>
+			<ul class="left-menu-sub">
+        <li>menu4-1</li>
+        <li>menu4-2</li>
+        <li>menu4-3</li>
       </ul>
-    </li>
-  </ul>
+		</div>
+	</div>
 </nav>
