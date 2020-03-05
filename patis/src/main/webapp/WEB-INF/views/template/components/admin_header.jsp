@@ -6,5 +6,5 @@
 </div>
 
 <div class="header-content__box">
-	
+	<h1>content</h1>
 </div>

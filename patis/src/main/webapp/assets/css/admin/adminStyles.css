@@ -1,18 +1,28 @@
 @charset "UTF-8";
 @import '../reset.css';
+@import '../fonts.css';
 @import './login.css';
 @import './adminHeader.css';
 @import './adminLeft.css';
+@import './adminMain.css';
 @import './adminFooter.css';
+
+body {
+  font-family: Seoulnamsan, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
 .admin-box {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+  background: #f3f3f3;
 }
 
 .admin-box .admin-box__header {
 	width: 100%;
+	height: 60px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -27,6 +37,7 @@
 
 .admin-box .admin-box__main .admin-box__main__left {
 	width: 270px;
+	background: #fff;
 }
 
 .admin-box .admin-box__main .admin-box__main__container {
@@ -35,6 +46,8 @@
 
 .admin-box .admin-box__main .admin-box__main__content {
 	width: 100%;
+	min-height: 490px;
+	background: #fff;
 }
 
 .admin-box .admin-box__footer {

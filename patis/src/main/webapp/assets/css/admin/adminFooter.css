@@ -1,1 +1,7 @@
 @charset "UTF-8";
+
+.admin-box__footer .footer-copyright-text {
+  padding-top: 20px;
+  min-height: 180px;
+  text-align: center;
+}
