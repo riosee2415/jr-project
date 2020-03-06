@@ -131,21 +131,20 @@
 .sub li a:hover {
   color: #f18d00;
 }
-.resmenu li a:after {
+.resmenu li a.resmenu__m::after {
   content: "";
   position: absolute;
-  bottom: 999px;
+  bottom: 0px;
+  left: 0px;
   width: 67px;
   height: 3px;
   background: transparent;
-  margin-left: -200px;
   transition: 0.5s;
-  animation: resmenuHoverOutAnimation 0.1s forwards;
+  animation: resmenuHoverOutAnimation 1s forwards;
 }
 .resmenu li a.resmenu__m:hover::after {
 	background: #f18d00;
-	margin-left: 0;
-	animation: resmenuHoverInAnimation 0.1s forwards;
+	animation: resmenuHoverInAnimation 0.5s forwards;
 }
 .sub li:first-child {
   margin-left: 15%;
@@ -214,13 +213,23 @@
 }
 
 @keyframes resmenuHoverInAnimation {
+	from {
+		margin-left: -200px;
+		z-index: 1;
+	}
   to {
-    bottom: 0px;
+    margin-left: 0;
+    z-index: 1;
   }
 }
 
 @keyframes resmenuHoverOutAnimation {
-  to {
-  	bottom: 999px;
+	0% {
+		margin-left: 0;
+		z-index: 1;
+	}
+  100% {
+  	margin-left: -200px;
+  	z-index: -1;
   }
 }

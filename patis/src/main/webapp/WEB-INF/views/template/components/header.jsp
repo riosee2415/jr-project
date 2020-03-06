@@ -14,7 +14,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   <div class="deskbox">
     <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
     <nav id="deskmenu">
-      <ul class="menu resmenu">
+      <ul class="menu resmenu" id="resmenu-js">
         <c:forEach var="menu" items="${menuList }">
           <li>
             <a class="resmenu__m" href="${menu.URL }"
