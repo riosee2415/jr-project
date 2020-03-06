@@ -140,7 +140,7 @@
   height: 3px;
   background: transparent;
   transition: 0.5s;
-  animation: resmenuHoverOutAnimation 1s forwards;
+  animation: resmenuHoverOutAnimation 0.5s forwards;
 }
 .resmenu li a.resmenu__m:hover::after {
 	background: #f18d00;
