@@ -13,7 +13,7 @@
   margin:0 auto;
 	overflow:hidden;
 }
-  .slideimg-01,  .slideimg-02, .slideimg-03,  .slideimg-04, .slideimg-05 {
+  .slideimg-01, .slideimg-03,  .slideimg-04, .slideimg-05 {
     display: block;
     width: 400px;
     height: 240px;
@@ -22,6 +22,15 @@
     background-size: cover;
     background-image: url("/assets/images/image/main_slideimg.png");
   }
+  .slideimg-02{
+display: block;
+ width: 400px;
+    height: 240px;
+     margin: 0 auto;
+    background-position: center center;
+  background-size: cover;
+  background-image: url("/assets/images/image/main_bannerimg.png");
+}
   .btn_box {
     width: 450px;
     display: flex;

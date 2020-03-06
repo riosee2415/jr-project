@@ -4,21 +4,27 @@
   width: 100%;
 }
 .main-container {
-  width: 80%;
+  width: 76%;
   margin: 12px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .main-container-banner{
+	width:80%;
 	overflow:hidden;
 }
 .main-container__slide{
-	width:700px;
+	width:502%;
+	box-sizing: border-box;
 	display:flex;
 	flex-direction: row;
-	overflow: hidden;
+	justify-content: center;
 }
+.main-container__slide li{
+	width:80%;
+}
+
 .slideimg-01 {
   display: block;
   width: 700px;

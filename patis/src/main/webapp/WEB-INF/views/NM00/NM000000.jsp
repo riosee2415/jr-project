@@ -5,7 +5,7 @@ pageEncoding="UTF-8"%>
   <div class="main-container">
     <div class="main-container-banner">
       <ul class="main-container__slide">
-        <li class="on">
+        <li>
           <a href="#" class="slideimg-01"> </a>
         </li>
         <li>
@@ -27,7 +27,7 @@ pageEncoding="UTF-8"%>
         <li><button class="btn"></button></li>
         <li><button class="btn"></button></li>
         <li><button class="btn"></button></li>
-        <li><button class="pause"></button> <button class="play"></button></li>
+        <!-- <li><button class="pause"></button> <button class="play"></button></li> -->
       </ul>
     </div>
     <div class="banner">
@@ -92,30 +92,26 @@ pageEncoding="UTF-8"%>
       <a href="" class="main-plus"></a>
     </div>
   </div>
-  
-  
-  
+
   <div class="mainBotton">
-	  <div class="main-cooper-btn">
-	  	<div><button class="prev"></button></div>
-	  </div>
-	  <div class="main-cooper">
-	    <ul>
-	      <li><a class="main-cooper-01" href="#"></a></li>
-	      <li><a class="main-cooper-02" href="#"></a></li>
-	      <li><a class="main-cooper-03" href="#"></a></li>
-	      <li><a class="main-cooper-04" href="#"></a></li>
-	      <li><a class="main-cooper-05" href="#"></a></li>
-	      <li><a class="main-cooper-06" href="#"></a></li>
-	      <li><a class="main-cooper-07" href="#"></a></li>
-	      <li><a class="main-cooper-08" href="#"></a></li>
-	    </ul>
-	   
-	  </div>
-	  
-	  <div class="main-cooper-btn">
-	   	<div><button class="next"></button></div>
-	  </div>
-	  
+    <div class="main-cooper-btn">
+      <div><button class="prev"></button></div>
+    </div>
+    <div class="main-cooper">
+      <ul>
+        <li><a class="main-cooper-01" href="#"></a></li>
+        <li><a class="main-cooper-02" href="#"></a></li>
+        <li><a class="main-cooper-03" href="#"></a></li>
+        <li><a class="main-cooper-04" href="#"></a></li>
+        <li><a class="main-cooper-05" href="#"></a></li>
+        <li><a class="main-cooper-06" href="#"></a></li>
+        <li><a class="main-cooper-07" href="#"></a></li>
+        <li><a class="main-cooper-08" href="#"></a></li>
+      </ul>
+    </div>
+
+    <div class="main-cooper-btn">
+      <div><button class="next"></button></div>
+    </div>
   </div>
 </div>

@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  var intv = setInterval(function() {
+    nextAni();
+  }, 2800);
   function nextAni() {
     $(".main-container__slide")
       .not(":animated")
@@ -7,6 +10,15 @@ $(document).ready(function() {
           .eq(0)
           .appendTo($(".main-container__slide"));
         $(".main-container__slide").css("margin-left", "0px");
+        $(".btn_box li")
+          .eq(0)
+          .appendTo($(".btn_box"));
+        $(".btn_box li")
+          .eq(0)
+          .addClass("on");
+        $(".btn_box li")
+          .not(":first-child")
+          .removeClass("on");
       });
   }
   function prevAni() {
@@ -20,6 +32,5 @@ $(document).ready(function() {
   }
   $(".btn_box .btn").click(function() {
     nextAni();
-    $(".btn_box .btn").eq(0).addClass("on");
   });
 });
