@@ -108,7 +108,7 @@
 }
 
 .resmenu li:hover a:after {
-	display: block;
+  display: block;
 }
 
 .resmenu li:before {
@@ -134,7 +134,7 @@
 .resmenu li a.resmenu__m::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 2px;
   left: 0px;
   width: 67px;
   height: 3px;
@@ -143,8 +143,8 @@
   animation: resmenuHoverOutAnimation 0.5s forwards;
 }
 .resmenu li a.resmenu__m:hover::after {
-	background: #f18d00;
-	animation: resmenuHoverInAnimation 0.5s forwards;
+  background: #f18d00;
+  animation: resmenuHoverInAnimation 0.5s forwards;
 }
 .sub li:first-child {
   margin-left: 15%;
@@ -159,7 +159,6 @@
   display: block;
   text-align: center;
 }
-
 #collap_menu {
   position: fixed;
   left: -110vw;
@@ -168,7 +167,55 @@
   transition: 0.5s;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(255,255,255,0.8);
+  background-color: rgb(255, 255, 255, 0.8);
+}
+#collap_menu ul li {
+  line-height: 32px;
+  position: relative;
+}
+
+#collap_menu ul li a {
+  display: block;
+  text-align: center;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.collap-menu-sub li a {
+  font-weight: normal;
+}
+
+#collap_menu ul li a.collap-menu-main {
+  line-height: 40px;
+  font-size: 1.2em;
+}
+
+#collap_menu ul li .collap-menu-sub {
+  transition: 0.6s;
+  height: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#collap_menu ul li:hover .collap-menu-sub {
+  height: 150px;
+  opacity: 1;
+  visibility: visible;
+}
+
+#collap_menu ul li:hover a.collap-menu-main {
+  border-top: 1px solid #333;
+}
+
+#collap_menu ul li:first-child:hover a.collap-menu-main {
+  border-top: 0;
+}
+
+#collap_menu ul li .collap-menu-sub a:hover {
+  font-weight: bold;
 }
 #menu_call:checked ~ #collap_menu {
   left: 0;
@@ -177,12 +224,12 @@
   clear: both;
   margin: 0;
   border-top: 1px solid #555;
-  border-bottom: 1px solid #707070;
+
   width: 100%;
   background-color: #dedede;
 }
-#collap_menu li a:hover{
-	color:#227c39;
+#collap_menu li a:hover {
+  color: #227c39;
 }
 #collap_menu li a {
   display: block;
@@ -213,10 +260,10 @@
 }
 
 @keyframes resmenuHoverInAnimation {
-	from {
-		margin-left: -200px;
-		z-index: 1;
-	}
+  from {
+    margin-left: -200px;
+    z-index: 1;
+  }
   to {
     margin-left: 0;
     z-index: 1;
@@ -224,12 +271,12 @@
 }
 
 @keyframes resmenuHoverOutAnimation {
-	0% {
-		margin-left: 0;
-		z-index: 1;
-	}
+  0% {
+    margin-left: 0;
+    z-index: 1;
+  }
   100% {
-  	margin-left: -200px;
-  	z-index: -1;
+    margin-left: -200px;
+    z-index: -1;
   }
 }
