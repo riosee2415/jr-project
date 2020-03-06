@@ -15,6 +15,7 @@
       type="image/x-icon"
       href="/assets/images/commons/favicon.png"
     />
+    <link rel="stylesheet" href="/assets/plugins/font-awesome-4.7.0/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/admin/adminStyles.css?ver=${ver}" />
   </head>
   <body>
@@ -42,6 +43,5 @@
 	</body>
 	
 	<script src="/assets/js/jquery-1.12.4.min.js"></script>
-	<script src="/assets/plugins/fontawesome/fontawesome.js"></script>
 	<script src="/assets/js/admin/admin_left.js"></script>
 </html>

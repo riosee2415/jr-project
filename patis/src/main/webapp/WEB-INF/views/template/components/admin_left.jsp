@@ -4,10 +4,10 @@ pageEncoding="UTF-8"%>
 <nav class="left-menu">
 	<div class="left-menu-icon__box" id="left-menu-icon-js">
 		<ul>
-			<li class="active"><i class="far fa-user"></i></li>
-			<li><i class="far fa-user"></i></li>
-			<li><i class="far fa-user"></i></li>
-			<li><i class="far fa-user"></i></li>
+			<li class="active"><i class="fa fa-user-o" aria-hidden="true"></i></li>
+			<li><i class="fa fa-user-o" aria-hidden="true"></i></li>
+			<li><i class="fa fa-user-o" aria-hidden="true"></i></li>
+			<li><i class="fa fa-user-o" aria-hidden="true"></i></li>
 		</ul>
 	</div>
 	

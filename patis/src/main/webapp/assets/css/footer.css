@@ -8,29 +8,80 @@
   clear: both;
 }
 .footer_info {
+	position: relative;
+  width: 80%;
+  margin: 0 auto;
   padding: 2% 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   color: #ffffff;
   line-height: 2;
   font-size: 14px;
 }
 .footer_logo {
-  clear: both;
   display: block;
+  margin-right: 30px;
   width: 320px;
   height: 60px;
   background-size: cover;
   background-image: url("/assets/images/commons/ftlogo.png");
 }
-.family {
-  margin-left: 20px;
+.family__area {
+  position: absolute;
+  right: 0;
 }
-#sel {
-  width: 120px;
-  height: 30px;
-  background-color: transparent;
-  color: #ffffff;
+
+.family__area .family__box {
+	position: relative;
+  padding: 0 15px;
+  width: 168px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #cecece;
+  cursor: pointer;
+}
+
+.family__area .family__box .family-text {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.family__area .family__box .fa {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -8px;
+  font-size: 16px;
+}
+
+.family__area .family__list {
+	display: none;
+  position: absolute;
+  bottom: 34px;
+  width: 198px;
+  border: 1px solid #cecece;
+  border-bottom: none;
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.family__area .family__list li:hover a {
+  color: #fff;
+  background: #545151;
+}
+
+.family__area .family__list li a {
+  display: block;
+  padding: 3px 15px 2px;
+  font-size: 14px;
+  font-weight: 300;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #cecece;
+  letter-spacing: 1px;
+}
+
+.family__area .family__list li:last-child a {
+	border-bottom: none;
 }

@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 <div class="main">
   <div class="main-container">
     <div class="main-container-banner">
-      <ul class="main-container__slide">
+      <ul class="main-container__slide" id="slide-image-js">
         <li>
           <a href="#" class="slideimg-01"> </a>
         </li>
@@ -21,13 +21,16 @@ pageEncoding="UTF-8"%>
           <a href="#" class="slideimg-05"> </a>
         </li>
       </ul>
-      <ul class="btn_box">
-        <li><button class="btn on"></button></li>
-        <li><button class="btn"></button></li>
-        <li><button class="btn"></button></li>
-        <li><button class="btn"></button></li>
-        <li><button class="btn"></button></li>
-        <!-- <li><button class="pause"></button> <button class="play"></button></li> -->
+      <ul class="btn_box" id="slide-btn-js">
+        <li class="slide-button"><button class="btn on"></button></li>
+        <li class="slide-button"><button class="btn"></button></li>
+        <li class="slide-button"><button class="btn"></button></li>
+        <li class="slide-button"><button class="btn"></button></li>
+        <li class="slide-button"><button class="btn"></button></li>
+        <li class="slide-control">
+        	<button class="pause"></button> 
+        	<!-- <button class="play"></button> -->
+       	</li>
       </ul>
     </div>
     <div class="banner">
@@ -51,7 +54,10 @@ pageEncoding="UTF-8"%>
     <div class="main-container-image"></div>
     <div class="main-news">
       <ul>
-        <li class="main-news__title"><a href="">최근소식</a></li>
+        <li class="main-news__title">
+        	<span class="title-text">최근소식</span>
+        	<a href="#" class="main-plus"></a>
+       	</li>
         <li class="main-urbannews__content">
           <a href="">2020년 중랑구 도시재생 홈페이지 개설 안내</a>
         </li>
@@ -68,11 +74,13 @@ pageEncoding="UTF-8"%>
           <a href="">서울형 뉴딜일자리 "찾아가는 복지상담사" 신청 안내</a>
         </li>
       </ul>
-      <a href="" class="main-plus"></a>
     </div>
     <div class="main-urbannews">
       <ul>
-        <li class="main-urbannews__title"><a href="">도시재생 사업 현황</a></li>
+        <li class="main-urbannews__title">
+        	<span class="title-text">도시재생 사업 현황</span>
+        	<a href="#" class="main-plus"></a>
+       	</li>
         <li class="main-urbannews__content">
           <a href="">중화2동 희망지사업 선정(19.12.17.)</a>
         </li>
@@ -89,7 +97,6 @@ pageEncoding="UTF-8"%>
           <a href="">망우본동 희망지사업 선정 (19.05.02.)</a>
         </li>
       </ul>
-      <a href="" class="main-plus"></a>
     </div>
   </div>
 

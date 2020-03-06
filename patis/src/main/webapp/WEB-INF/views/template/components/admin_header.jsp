@@ -4,7 +4,7 @@
 <div class="header-logo__box">
 	<h1 class="header-logo-text">
 		<a href="${pageContext.request.contextPath }/main.do" title="홈페이지로 이동" class="header-link-out">
-			<i class="fas fa-outdent"></i>
+			<i class="fa fa-outdent" aria-hidden="true"></i>
 		</a>
 		<a href="${pageContext.request.contextPath }/admin.do" class="header-link-logo">ADMINISTRATOR</a>
 	</h1>

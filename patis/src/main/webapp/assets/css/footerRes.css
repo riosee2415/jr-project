@@ -1,34 +1,33 @@
 @charset "utf-8";
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1300px) {
   .footer_info {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
+  	flex-direction: column;
+  	align-items: center;
   }
-  #sel {
-    margin: 6% 0;
+  
+  .footer_info .footer_text {
+  	margin: 10px 0 20px;
+  	text-align: center;
   }
+  
+  .family__area {
+    position: relative;
+	}
+}
+
+@media screen and (max-width: 959px) {
+	
+}
+
+@media screen and (max-width: 767px) {
   .footer_logo {
-    clear: both;
-    display: block;
     margin: 1rem;
     width: 250px;
     height: 40px;
-    background-size: cover;
-    background-image: url("/assets/images/commons/ftlogo.png");
   }
-}
-@media screen and (min-width: 768px) and (max-width: 959px) {
-  .footer_info {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 960px) {
-  .footer_info {
-    display: flex;
-    justify-content: center;
+  
+  .footer_info .footer_text {
+  	font-size: 13px;
   }
 }

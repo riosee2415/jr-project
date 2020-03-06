@@ -4,14 +4,15 @@
   width: 100%;
 }
 .main-container {
-  width: 76%;
+  width: 80%;
   margin: 12px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
 }
 .main-container-banner{
-	width:80%;
+	width: 57%;
 	overflow:hidden;
 }
 .main-container__slide{
@@ -22,44 +23,33 @@
 	justify-content: center;
 }
 .main-container__slide li{
-	width:80%;
+	width: 100%;
 }
 
-.slideimg-01 {
-  display: block;
-  width: 700px;
+.main-container__slide li a {
+	display: block;
+  width: 100%;
   height: 400px;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.slideimg-01 {
   background-image: url("/assets/images/image/main_slideimg.png");
 }
 .slideimg-02{
-display: block;
-  width: 700px;
-  height: 400px;
-  background-size: cover;
   background-image: url("/assets/images/image/main_bannerimg.png");
 }
 .slideimg-03{
-display: block;
-  width: 700px;
-  height: 400px;
-  background-size: cover;
   background-image: url("/assets/images/image/main_slideimg.png");
 }
 .slideimg-04{
-display: block;
-  width: 700px;
-  height: 400px;
-  background-size: cover;
   background-image: url("/assets/images/image/main_slideimg.png");
 }
 .slideimg-05{
-display: block;
-  width: 700px;
-  height: 400px;
-  background-size: cover;
   background-image: url("/assets/images/image/main_slideimg.png");
 }
+
 .btn_box {
   width: 680px;
   display: flex;
@@ -73,6 +63,7 @@ display: block;
   height: 15px;
   border-radius: 20px;
   background-color: #f18d00;
+  transition: 0.3s;
   cursor: pointer;
 }
 .btn {
@@ -81,7 +72,7 @@ display: block;
   width: 15px;
   height: 15px;
   border-radius: 20px;
-  margin: 10px;
+  margin: 10px 5px;
   background-color: #707070;
   cursor: pointer;
 }
@@ -109,10 +100,16 @@ display: block;
 }
 
 .banner {
-  clear: both;
+	width: 43%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+.banner > div > div {
+	width: 33.3%;
+}
+
 .up,
 .down {
   clear: both;
@@ -122,11 +119,14 @@ display: block;
 }
 .banner a {
   display: block;
-  width: 170px;
+  width: 100%;
   height: 198px;
   margin-left: 4px;
   margin-bottom: 4px;
   color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 72% center;
 }
 .banner a.banner1 {
   background-image: url("/assets/images/icons/ico_main_banner1_on.png");
@@ -172,25 +172,26 @@ display: block;
   background-image: url("/assets/images/icons/ico_main_banner6_off.png");
 }
 .main-container-content {
-  width: 100%;
+  width: 80%;
   margin: 20px auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 .main-container-image {
-  margin-right: 6px;
   display: block;
-  width: 405px;
+  width: 36%;
   height: 269px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10% center;
   background-image: url("/assets/images/image/main_bannerimg.png");
 }
 .main-news,
 .main-urbannews {
-  padding: 20px;
+	padding: 20px;
   box-sizing: border-box;
-  margin-right: 6px;
-  width: 405px;
+  width: 31%;
   height: 269px;
   border: 1px solid #dedede;
 }
@@ -212,17 +213,23 @@ display: block;
 }
 .main-news__title,
 .main-urbannews__title {
+	position: relative;
+  margin-bottom: 18px;
   border-bottom: 2px solid #474747;
 }
-.main-news__title a,
-.main-urbannews__title a {
-  font-size: 22px;
+
+.main-news__title .title-text,
+.main-urbannews__title .title-text {
+	font-size: 22px;	
 }
-a.main-plus {
+
+.main-news__title .main-plus,
+.main-urbannews__title .main-plus {
   display: block;
   position: absolute;
-  margin-top: -196px;
-  margin-left: 338px;
+  right: 0;
+  top: 50%;
+  margin-top: -12.5px;
   width: 25px;
   height: 25px;
   background-size: cover;
@@ -230,28 +237,28 @@ a.main-plus {
 }
 
 .mainBotton {
-  width: 85%;
+  width: 80%;
   margin: 35px auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .main-cooper {
-  width: 100%;
+	width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
 .main-cooper ul {
-  width: 140%;
+  width: 138%;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .main-cooper ul li {
-  width: 16%;
+  width: 14%;
 }
 .main-cooper li a.main-cooper-01 {
   display: block;
@@ -310,12 +317,11 @@ a.main-plus {
   background-image: url("/assets/images/image/main_cooper_08.png");
 }
 .main-cooper-btn {
-  width: 20%;
-  margin: 0 auto;
-  display: flex;
+	display: flex;
   flex-direction: row;
   cursor: pointer;
   justify-content: center;
+  margin: 0 6px 0 10px;
 }
 .main-cooper-btn .prev {
   width: 30px;

@@ -15,6 +15,7 @@
       type="image/x-icon"
       href="/assets/images/commons/favicon.png"
     />
+    <link rel="stylesheet" href="/assets/plugins/font-awesome-4.7.0/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/styles.css?ver=${ver}" />
   </head>
   <body>
