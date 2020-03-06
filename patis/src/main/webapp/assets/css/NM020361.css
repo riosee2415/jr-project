@@ -139,11 +139,17 @@
 }
 .sub-plan-table thead tr th,
 .sub-status-table thead tr th {
+	height: 70px;
   font-size: 20px;
+  background: #f6f6f6;
 }
 .sub-plan-table tbody tr td,
 .sub-status-table tbody tr td {
   font-size: 16px;
+  height: 80px;
+}
+.sub-plan-table tbody tr:first-child td {
+	height: 55px;
 }
 .sub-plan-table thead tr th,
 .sub-plan-table tbody tr td {
@@ -153,6 +159,7 @@
   align-items: center;
   vertical-align: middle;
   border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dbdbdb;
 }
 .sub-plan-table thead tr th:first-child,
 .sub-status-table thead tr th:first-child {
@@ -163,10 +170,6 @@
 }
 .sub-plan-table tbody tr p {
   line-height: 1.5;
-}
-.sub-plan-table thead tr,
-.sub-plan-table tbody tr {
-  line-height: 45px;
 }
 .sub-plan-table thead tr th.last,
 .sub-plan-table tbody tr td.last {
@@ -276,7 +279,7 @@
 }
 .sub-status-table thead tr th:last-child,
 .sub-status-table tbody tr td:last-child {
-  border: none;
+  border-right: none;
 }
 .sub-status-table thead tr,
 .sub-status-table tbody tr {
@@ -288,6 +291,7 @@
   font-weight: normal;
   align-items: center;
   border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dbdbdb;
 }
 .sub-status-table tbody tr:last-child td {
   font-weight: bold;

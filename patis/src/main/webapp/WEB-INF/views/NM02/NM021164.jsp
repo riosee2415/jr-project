@@ -8,8 +8,8 @@ pageEncoding="UTF-8"%>
         <%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 
-      <div class="nm66-seachBox">
-        <div class="nm66-seachBox__area">
+      <div class="nm1164-seachBox">
+        <div class="nm1164-seachBox__area">
           <select>
             <option value="제목" selected>제목</option>
             <option value="내용">내용</option>
@@ -20,8 +20,8 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
 
-      <div class="nm66-contentBox">
-        <table class="nm66-contentBox__table">
+      <div class="nm1164-contentBox">
+        <table class="nm1164-contentBox__table">
           <thead>
             <tr>
               <th>번호</th>
