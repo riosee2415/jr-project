@@ -91,7 +91,7 @@ public class AES256Util {
 	 * @RETURN : String
 	 * @DESC   : 생성된 키를 16진수로 변환
 	 */
-	public static String getStringKey(String skey) {
+	public static String getHexStringKey(String skey) {
 		return Hex.encodeHexString(skey.getBytes());
 	}
 }

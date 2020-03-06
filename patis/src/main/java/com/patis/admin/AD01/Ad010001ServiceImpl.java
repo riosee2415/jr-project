@@ -32,7 +32,7 @@ public class Ad010001ServiceImpl implements I_Ad010001Service{
 	public int adminLoginCheck2(Map info) throws SQLException {
 		try {
 			String privateKey = ad010001DAO.getEmpSecretInfo(info).getSECRET_KEY();
-			String skey = AES256Util.getStringKey(privateKey);
+			String skey = AES256Util.getHexStringKey(privateKey);
 			AES256Util aes256 = new AES256Util(skey);
 			URLCodec codec = new URLCodec();
 		
