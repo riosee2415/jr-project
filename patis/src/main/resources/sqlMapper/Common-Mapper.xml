@@ -4,7 +4,7 @@
 
 	<select id="selectCommonList" resultType="commonVO">
 		SELECT	*
-		  FROM	COMMON
+		  FROM	JR_DB.COMMON
 	</select>
 	
 	<select id="GET_MENU" resultType="commonVO">
@@ -13,7 +13,7 @@
 		        PARENT_CODE,
 		        VAL,
 		        URL
-		  FROM  COMMON
+		  FROM  JR_DB.COMMON
 		 WHERE  CODE 	= 'NM_01'
 		   AND	USE_YN 	= 1 
 		 ORDER	BY DETAIL_CODE ASC
@@ -26,7 +26,7 @@
 		        VAL,
 		        URL,
 		        USE_YN
-		  FROM  COMMON
+		  FROM  JR_DB.COMMON
 		 WHERE  CODE = 'NM_02'
 		   AND	USE_YN 	= 1 
 		 ORDER	BY DETAIL_CODE ASC
@@ -39,7 +39,7 @@
 		        VAL,
 		        URL,
 		        USE_YN
-		  FROM  COMMON
+		  FROM  JR_DB.COMMON
 		 WHERE  CODE = 'NM_03'
 		   AND	USE_YN 	= 1 
 		 ORDER	BY DETAIL_CODE ASC

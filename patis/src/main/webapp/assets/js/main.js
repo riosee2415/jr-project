@@ -4,7 +4,8 @@ $(document).ready(function() {
   var slideInterval;
   var slideSize;
   
-  slidePlay();
+  if(totalSlide > 0) 
+	  slidePlay();
   
   $('#slide-btn-js .slide-control').on('click', function() {
 	 var control = $(this).find('button');

@@ -4,32 +4,30 @@
 
 	<select id="ID_CHECK" resultType="int" parameterType="hashMap">
 		SELECT  COUNT(USER_ID)
-		  FROM  EMP
+		  FROM  JR_DB.EMP
 		 WHERE  USER_ID = #{input_id}
 	</select>
 	
 	
 	<select id="ID_PASS_CHECK" resultType="int" parameterType="hashMap">
 		SELECT  COUNT(USER_ID)
-		  FROM  EMP
+		  FROM  JR_DB.EMP
 		 WHERE  USER_ID 		= #{input_id}
 		   AND	USER_PASSWORD	= #{input_password}
 	</select>
 	
 	<insert id="SAVE_LOGIN_LOG" parameterType="hashMap">
-		INSERT INTO LOGIN_LOG
+		INSERT INTO JR_DB.LOGIN_LOG
 		(
-			LOG_NO,
 			LOG_ID,
 			LOG_IP,
 			LOG_DATE
 		)
 		VALUES
 		(
-			seq_login_log.nextval,
 			#{input_id},
 			#{input_ip},
-			SYSDATE
+			SYSDATE()
 		)
 	</insert>
 	
@@ -37,14 +35,14 @@
 		SELECT  USER_ID,
 				    USER_NAME,
 				    USER_RIGHT
-		  FROM  EMP
+		  FROM  JR_DB.EMP
 		 WHERE	USER_ID = #{input_id}
 	</select>
 	
 	<select id="GET_EMP_SECRET_INFO" resultType="empVO" parameterType="hashMap">
 		SELECT  USER_PASSWORD,
 				    SECRET_KEY
-		  FROM  EMP
+		  FROM  JR_DB.EMP
 		 WHERE	USER_ID = #{input_id}
 	</select>
 	

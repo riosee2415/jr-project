@@ -16,7 +16,7 @@ public class Ad010001DAOImpl implements I_Ad010001DAO{
 	@Resource(name="sqlSession")
 	private SqlSession sqlSession;
 	
-	private static final String NAMESPACE = "Admin-Map<String, String>per";
+	private static final String NAMESPACE = "Admin-Mapper";
 
 	@Override
 	public int adminLoginCheck(Map<String, String> info) throws SQLException {
