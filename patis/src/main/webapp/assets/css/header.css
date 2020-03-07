@@ -228,12 +228,12 @@
   clear: both;
   margin: 0;
   border-top: 1px solid #555;
-
   width: 100%;
-  background-color: #dedede;
+  background-color: #e7e7e7;
 }
-#collap_menu li a:hover {
-  color: #227c39;
+#collap_menu li a.collap-menu-main:hover {
+  background-color: #227c39;
+  color: #ffffff;
 }
 #collap_menu li a {
   display: block;
@@ -241,6 +241,10 @@
   text-align: left;
   text-indent: 1.5rem;
   line-height: 3.2;
+}
+.collap-menu-sub li a:hover {
+  background-color: #555;
+  color:#ffffff;
 }
 #menu_call ~ .header .menuicon {
   display: block;

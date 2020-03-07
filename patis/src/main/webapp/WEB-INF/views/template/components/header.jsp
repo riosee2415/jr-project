@@ -37,28 +37,6 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     </nav>
   </div>
 </header>
-<!-- <nav id="collap_menu">
-  <ul class="menu">
-    <c:forEach var="menu" items="${menuList }">
-      <li>
-        <a class="resmenu__m" href="${menu.URL }"
-          ><c:out value="${menu.VAL }"></c:out
-        ></a>
-        <ul class="sub">
-          <c:forEach var="subMenu" items="${subMenuList }">
-            <c:if test="${menu.DETAIL_CODE == subMenu.PARENT_CODE }">
-              <li
-                ><a
-                  href="${subMenu.URL }?parent=${subMenu.PARENT_CODE }&code=${subMenu.DETAIL_CODE}"
-                  ><c:out value="${subMenu.VAL }"></c:out></a
-              ></li>
-            </c:if>
-          </c:forEach>
-        </ul>
-      </li>
-    </c:forEach>
-  </ul>
-</nav> -->
 <nav id="collap_menu">
   <ul class="menu">
     <c:forEach var="menu" items="${menuList }">
