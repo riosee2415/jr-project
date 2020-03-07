@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 .nm22-tbl-style-01,
-.nm22-tbl-style-03 {
+.nm22-tbl-style-03,
+.nm22-tbl-style-04 {
   margin: 75px 0 100px;
   width: 100%;
   text-align: center;
@@ -111,4 +112,44 @@
 .nm22-tbl-style-03 thead tr th:last-child,
 .nm22-tbl-style-03 tbody tr td:last-child {
   border-right: none;
+}
+
+/* 서울형 도시재생 현황 */
+.nm22-tbl-style-04 thead tr th,
+.nm22-tbl-style-04 tbody tr td {
+  padding: 30px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  line-height: 1.3;
+}
+.nm22-tbl-style-04 tbody tr:last-child td:last-child {
+  text-align: center;
+}
+.nm22-tbl-style-04 thead tr th:last-child,
+.nm22-tbl-style-04 tbody tr td:last-child {
+  border-right: none;
+}
+.nm22-tbl-style-04 tbody tr td:last-child {
+  text-align: left;
+}
+.nm22-tbl-style-04 thead {
+  background: #f6f6f6;
+}
+.nm22-tbl-style-04 tbody tr:nth-child(n + 1):nth-child(-n + 13) td {
+  color: #303030;
+}
+.nm22-tbl-style-04 thead tr th {
+  font-size: 20px;
+  font-weight: 600;
+}
+.nm22-tbl-style-04 .bold {
+  font-size: 20px;
+}
+
+/* 사업신청 절차 */
+.nm22-content-04__imgbox {
+	width:100%;
+	text-align:center;
+  margin: 75px 0 100px;
 }

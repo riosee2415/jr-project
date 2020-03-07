@@ -209,10 +209,122 @@ pageEncoding="UTF-8"%>
     </div>
 
     <!-- 서울형도시재생현황 -->
+    <div style="display:none;" class="sub-content-wrap">
+      <div class="subHead">
+        <%@ include
+        file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
+      </div>
+      <table class="nm22-tbl-style-04">
+        <caption>
+          서울형 도시재생 현황
+        </caption>
+        <thead class="greentext">
+          <tr>
+            <th>서울형유형</th>
+            <th colspan="2">사업명</th>
+            <th>관련법</th>
+            <th>사업명</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bold">일자리거점 육성형</td>
+            <td colspan="2">경제기반형</td>
+            <td rowspan="4">도시재생 황성화 및<br />지원에 관한 특별법</td>
+            <td>
+              경제적 쇠퇴가 심각한 지역을 대상으로 복합앵커시설을 구축하는 등<br />신(新)경제거점을
+              형성하고 일자리를 창출하는 사업
+            </td>
+          </tr>
+          <tr>
+            <td class="bold">생활중심지 특화형</td>
+            <td rowspan="3">근린<br />재생형</td>
+            <td>중심시가지형</td>
+            <td>
+              원도심의 공공서비스 저하와 상권의 쇠퇴가 심각한 지역을 대상으로<br />공공기능
+              회복과 역사·문화·관광과의 연계를 통한 상권의 활력 증진<br />등을
+              지원하는 사업
+            </td>
+          </tr>
+          <tr>
+            <td class="bold" rowspan="6">주거지 재생형</td>
+            <td>일반근린형</td>
+            <td>
+              주거지와 골목상권이 혼재된 지역을 대상으로 주민공동체 활성화와<br />골목상권
+              활력 증진을 목표로 주민 공동체 거점 조성, 마을가게 운영,<br />보행환경
+              개선 등을 지원하는 사업
+            </td>
+          </tr>
+          <tr>
+            <td>주거지지원형</td>
+            <td>
+              원활한 주택개량을 위해 골목길 정비 등 소규모 주택정비의 기반을<br />마련하고
+              소규모주택 정비사업 및 생활편의시설 공급 등으로 주거지<br />전반의
+              여건을 개선 등을 지원하는 사업
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">주거환경 개선사업</td>
+            <td>도시 및 주거환경 정비법</td>
+            <td>
+              재개발 사업으로 개발이 어려운 지역에 공공시설, 주택개량을<br />수행하여
+              주거환경을 더 좋게 만드는 사업
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">도시활력증진사업</td>
+            <td rowspan="3">국가균형발전 특별법</td>
+            <td>
+              국토교통부에서 정부의 지역발전정책에 따라 지자체 스스로의
+              발전을<br />유도하기 위하여 도시활력 증진지역에 해당하는 지자체에
+              예산을<br />포괄적으로 지원하여 시행하는 사업
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">새뜰마을사업</td>
+            <td>
+              취약지역 주민의 기본적인 생활수준보장을 위해 안전·위생 등
+              긴요한<br />생활인프라 확충 및 주거환경 개선, 주민역량 강화 등을
+              지원하는 사업
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">우리동네살리기</td>
+            <td>
+              생활권 내에 도로 등 기초 기반시설은 갖추고 있으나 인구유출,<br />주거지
+              노후화로 활력을 상실한 지역에 대해 소규모 주택 정비사업 및<br />생활편의시설
+              공급 등으로 마을공동체 회복
+            </td>
+          </tr>
+          <tr>
+            <td class="bold" rowspan="2">거점확산형</td>
+            <td colspan="2">서울형 재생사업</td>
+            <td>개별법에 따라 추진</td>
+            <td rowspan="2">
+              민간 활력을 통해 행정 사각지대에 방치된 유휴공간을
+              활성화함으로써<br />지역사회 전략적 재생 거점으로 활용하여, 새로운
+              재생동력을 확보
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">골목길재생사업</td>
+            <td>서울시 골목길 지원조례</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 사업신청 절차 -->
     <div style="display:block;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
+      </div>
+      <div class="nm22-content-04__imgbox">
+        <img
+          src="/assets/images/image/sub-nm0421-04-01.png"
+          alt="사업신청 절차"
+        />
       </div>
     </div>
   </div>

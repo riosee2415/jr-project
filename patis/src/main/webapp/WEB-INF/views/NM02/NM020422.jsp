@@ -8,7 +8,7 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
-      <h3 class="nm22-title-style-01">
+      <h3 class="nm22-title-style">
         <span class="greentext">▪</span>서울시 주요 도시재생사업 진행현황을 확인
         하실 수 있습니다.
       </h3>

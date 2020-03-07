@@ -209,7 +209,7 @@
 }
 .sub-history-line {
   position: absolute;
-  width: 63%;
+  width: 73%;
   height: 5px;
   margin-top: -55px;
   background-color: #f18d00;
@@ -244,7 +244,7 @@
 }
 .sub-history-line-green {
   position: absolute;
-  width: 63%;
+  width: 73%;
   height: 5px;
   margin-top: -55px;
   background-color: #227c39;

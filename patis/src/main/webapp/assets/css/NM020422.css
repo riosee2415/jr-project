@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.nm22-title-style {
+  margin: 35px 0 95px;
+  font-size: 22px;
+  color: #7c7c7c;
+}
 .nm22-content-img__box {
   position: relative;
   display: flex;
