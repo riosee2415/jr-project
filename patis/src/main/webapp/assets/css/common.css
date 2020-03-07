@@ -10,7 +10,7 @@ body {
   width: 100%;
 }
 .sub-container {
-  width: 70%;
+  width: 80%;
   margin: 50px auto;
 }
 .sub-content-wrap {
@@ -68,4 +68,7 @@ body {
 }
 .table-yellow {
   background-color: #fffdd6;
+}
+caption {
+  display: none;
 }

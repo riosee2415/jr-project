@@ -3,12 +3,13 @@ pageEncoding="UTF-8"%>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
-    <div class="sub-content-wrap">
+    <!-- 도시재생 뉴딜사업 유형 -->
+    <div style="display:none;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
-      <div class="nm62-tbl-style-01">
+      <div class="nm22-tbl-style-01">
         <ul>
           <li class="greentext">사업유형</li>
           <li class="greentext">내용</li>
@@ -63,6 +64,155 @@ pageEncoding="UTF-8"%>
             <p>新경제거점을 형성하고 일자리를 창출하는 사업</p>
           </li>
         </ul>
+      </div>
+
+      <table class="nm22-tbl-style-02">
+        <caption>
+          도시재생 뉴딜사업 유형
+        </caption>
+        <thead>
+          <tr>
+            <th rowspan="2">구분</th>
+            <th colspan="2">주거재생형</th>
+            <th rowspan="2">일반근린형</th>
+            <th rowspan="2">중심시가지형</th>
+            <th rowspan="2">경제기반형</th>
+          </tr>
+          <tr>
+            <th>우리동네 살리기</th>
+            <th>주거지지원형</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>법정 유형</td>
+            <td>-</td>
+            <td colspan="3">근린재생형</td>
+            <td>경제기반형</td>
+          </tr>
+          <tr>
+            <td>기존 사업유형</td>
+            <td>(신규)</td>
+            <td colspan="2">일반근린형</td>
+            <td>중심시가지형</td>
+            <td>경제기반형</td>
+          </tr>
+          <tr>
+            <td>사업추진·지원근거</td>
+            <td>(국가균형발전 특별법)</td>
+            <td colspan="4">도시재생 활성화 및 지원에 관한 특별법</td>
+          </tr>
+          <tr>
+            <td>활성화 계획 수립</td>
+            <td>필요시 수립</td>
+            <td colspan="4">수립 필요</td>
+          </tr>
+          <tr>
+            <td>사업규모<br />(권장면적)</td>
+            <td>소규모 주거<br />(5만㎡ 이하)</td>
+            <td>주거<br />(5만~10만㎡ 내외)</td>
+            <td>준주거, 골목상권<br />(10만~15만㎡ 내외)</td>
+            <td>상업, 지역상권<br />(20만㎡ 내외)</td>
+            <td>산업, 지역경제<br />(50만㎡ 내외)</td>
+          </tr>
+          <tr>
+            <td>대상지역</td>
+            <td>소규모 저층<br />주거밀집지역</td>
+            <td>저층<br />주거밀집지역</td>
+            <td>골목상권과 주거지</td>
+            <td>상업, 창업, 역사,<br />관광, 문화예술 등</td>
+            <td>역세권, 산단, 항만 등</td>
+          </tr>
+          <tr>
+            <td>국비지원 한도<br />/ 집행기간</td>
+            <td>50억 원 / 3년</td>
+            <td>100억 원 / 3년</td>
+            <td>100억 원 / 4년</td>
+            <td>150억 원 / 5년</td>
+            <td>250억 원 / 6년</td>
+          </tr>
+          <tr>
+            <td>기반시설 도입</td>
+            <td>주차장, 공동이용시설<br />등 생활편의시설</td>
+            <td>골목길정비, 주차장,<br />공동이용시설 등<br />생활편의시설</td>
+            <td>소규모 공공·복지·<br />편의시설</td>
+            <td>중규모 공공·복지·<br />편의시설</td>
+            <td>중규모 이상<br />공공·복지·<br />편의시설</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="nm22-table-caption">
+        ※ ‘우리동네살리기’는 향후 「도시재생활성화 및 지원에 관한 특별법」에
+        포함, 법정화 할 계획임
+      </div>
+    </div>
+
+    <!-- 서울형 도시재생사업 유형 -->
+    <div style="display:none;" class="sub-content-wrap">
+      <div class="subHead">
+        <%@ include
+        file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
+      </div>
+      <table class="nm22-tbl-style-03">
+        <caption>
+          서울형 도시재생사업 유형
+        </caption>
+        <thead>
+          <tr>
+            <th>서울형 도시재생 유형</th>
+            <th>일자리거점 육성형</th>
+            <th>생활중심지 특화형</th>
+            <th>주거지 재생형</th>
+            <th>거점확산형(비법정유형)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>재생방향</td>
+            <td>
+              정부·민간부문과 협력적<br />추진일자리와<br />미래 성장동력 창출
+            </td>
+            <td>
+              쇠퇴산(상)업 지역,<br />역사자원 지역을<br />지역혁신거점으로 특화
+            </td>
+            <td>주거환경정비 및<br />지역공동체 회복</td>
+            <td>혁신거점공간 조성을<br />통한 주변지역 활성화</td>
+          </tr>
+          <tr>
+            <td>재생대상</td>
+            <td>대규모(저이용) 가용지를<br />보유한 지역</td>
+            <td>
+              기존의 산업 또는 상업의<br />재활성화가 필요한 지역<br />지역역사·문화·자연자산의<br />활용가치가
+              높은 지역
+            </td>
+            <td>노후(쇠퇴)하고 공동체 회복이<br />필요한 저층주거지 대상</td>
+            <td>
+              유휴 국공유지 등<br />주변으로 파급효과가<br />큰 필지 및 구역단위
+            </td>
+          </tr>
+          <tr>
+            <td>규모</td>
+            <td>50만㎡ 내외</td>
+            <td>20만㎡ 내외</td>
+            <td>20만㎡ 미만</td>
+            <td>필지, 소규모 구역단위</td>
+          </tr>
+          <tr>
+            <td>법적유형</td>
+            <td>경제기반형</td>
+            <td>근린재생 중심시가지형</td>
+            <td>근린재생 일반근린형</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 서울형도시재생현황 -->
+    <div style="display:block;" class="sub-content-wrap">
+      <div class="subHead">
+        <%@ include
+        file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
     </div>
   </div>
