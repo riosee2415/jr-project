@@ -13,7 +13,7 @@ public interface I_Ad010001DAO {
 	 * @RETURN : int
 	 * @DESC   : 관리자 로그인 기능 체크
 	 */
-	int adminLoginCheck(Map info) throws SQLException;
+	int adminLoginCheck(Map<String, String> info) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.YSH
@@ -21,7 +21,7 @@ public interface I_Ad010001DAO {
 	 * @RETURN : int
 	 * @DESC   : 관리자 로그인 기능 체크 (아이디 비밀번호 체크)
 	 */
-	int adminLoginCheck2(Map info) throws SQLException;
+	int adminLoginCheck2(Map<String, String> info) throws SQLException;
 
 	/**
 	 * @AUTHOR : 4LEAF.YSH
@@ -29,7 +29,7 @@ public interface I_Ad010001DAO {
 	 * @RETURN : int
 	 * @DESC   : 로그인이 성공하면 로그인 기록을 데이터베이스에 저장한다.
 	 */
-	int saveLoginData(Map info) throws SQLException;
+	int saveLoginData(Map<String, String> info) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.YSH
@@ -37,7 +37,7 @@ public interface I_Ad010001DAO {
 	 * @RETURN : EmpVO
 	 * @DESC   : 로그인에 성공한 유저 데이터를 데이터베이스에서 가져온다.
 	 */
-	EmpVO getEmpInfo(Map info) throws SQLException;
+	EmpVO getEmpInfo(Map<String, String> info) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
@@ -45,5 +45,5 @@ public interface I_Ad010001DAO {
 	 * @RETURN : EmpVO
 	 * @DESC   : 비밀번호 복호화를 위한 데이터를 데이터베이스에서 가져온다.
 	 */
-	EmpVO getEmpSecretInfo(Map info) throws SQLException;
+	EmpVO getEmpSecretInfo(Map<String, String> info) throws SQLException;
 }

@@ -16,13 +16,6 @@
 		<org.apache.tiles-version>3.0.5</org.apache.tiles-version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>codelds</id>
-			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -149,6 +142,12 @@
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-core</artifactId>
 			<version>${org.apache.tiles-version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.mariadb.jdbc</groupId>
+		    <artifactId>mariadb-java-client</artifactId>
+		    <version>2.5.4</version>
 		</dependency>
 
 		<!-- commons-codec -->

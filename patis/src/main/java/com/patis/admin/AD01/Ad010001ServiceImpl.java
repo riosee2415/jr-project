@@ -1,6 +1,5 @@
 package com.patis.admin.AD01;
 
-import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.util.Map;
 
@@ -24,12 +23,12 @@ public class Ad010001ServiceImpl implements I_Ad010001Service{
 	private I_MiddlewareService middlewareService;
 	
 	@Override
-	public int adminLoginCheck(Map info) throws SQLException {
+	public int adminLoginCheck(Map<String, String> info) throws SQLException {
 		return ad010001DAO.adminLoginCheck(info);
 	}
 
 	@Override
-	public int adminLoginCheck2(Map info) throws SQLException {
+	public int adminLoginCheck2(Map<String, String> info) throws SQLException {
 		try {
 			String privateKey = ad010001DAO.getEmpSecretInfo(info).getSECRET_KEY();
 			String skey = AES256Util.getHexStringKey(privateKey);
@@ -48,12 +47,12 @@ public class Ad010001ServiceImpl implements I_Ad010001Service{
 	}
 
 	@Override
-	public int saveLoginData(Map info) throws SQLException {
+	public int saveLoginData(Map<String, String> info) throws SQLException {
 		return ad010001DAO.saveLoginData(info);
 	}
 
 	@Override
-	public EmpVO getEmpInfo(Map info) throws SQLException {
+	public EmpVO getEmpInfo(Map<String, String> info) throws SQLException {
 		return ad010001DAO.getEmpInfo(info);
 	}
 

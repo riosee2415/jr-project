@@ -23,9 +23,6 @@ public class MainController {
 	@RequestMapping(value="/main.do", method=RequestMethod.GET)
 	public String main(Model model) throws Exception {
 		
-		
-		
-		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
 		List<CommonVO> subMenuList = middlewareService.getSubMenu();
