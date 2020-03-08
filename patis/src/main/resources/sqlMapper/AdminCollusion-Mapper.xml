@@ -16,8 +16,8 @@
 					  FROM 	JR_DB.EMP	Z
 					 WHERE  B_AUTHOR = Z.USER_NO
 				) AS B_AUTHOR, 
-				DATE_FORMAT(B_CREATE_TIME, '%Y년 %m월 %d일  %H시%i분%S초') AS B_CREATE_TIME,
-				DATE_FORMAT(B_UPLOAD_TIME, '%Y년 %m월 %d일  %H시%i분%S초') AS B_UPLOAD_TIME,
+				DATE_FORMAT(B_CREATE_TIME, '%Y/%m/%d/ %H:%i') AS B_CREATE_TIME,
+				DATE_FORMAT(B_UPLOAD_TIME, '%Y/%m/%d/ %H:%i') AS B_UPLOAD_TIME,
 				B_HIT,
 				B_NOTICE,
 				B_USE_YN,

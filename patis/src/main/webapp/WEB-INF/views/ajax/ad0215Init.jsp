@@ -15,5 +15,6 @@
 		<td>${board.b_NOTICE }</td>
 		<td>버튼</td>
 		<td>버튼</td>
+		<td>${board.b_DELETE_TIME }</td>
 	</tr>
 </c:forEach>
