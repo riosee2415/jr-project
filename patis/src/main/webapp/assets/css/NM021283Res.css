@@ -1,0 +1,63 @@
+@media screen and (max-width: 767px) {
+  .nm83-content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nm83-content-img__box {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .nm83-content-img__box:last-child {
+    margin-bottom: 0px;
+  }
+
+  .nm83-content-img__box > ul > li {
+    margin-top: 10px;
+  }
+
+  /* 이미지 사이즈 */
+  .sub-nm1283-01-01,
+  .sub-nm1283-01-02,
+  .sub-nm1283-01-03 {
+    width: 380px;
+    height: 400px;
+  }
+
+  .nm83-imgbox-title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+
+  .nm83-imgbox-title p:nth-child(2n) {
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  .nm83-imgbox-button {
+    cursor: pointer;
+    width: 122px;
+    height: 34px;
+    margin: 0 auto;
+    background-color: #f18d00;
+    border-radius: 20px;
+  }
+
+  .nm83-imgbox-button a {
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media screen and (min-width: 960px) {
+}
