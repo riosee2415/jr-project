@@ -8,6 +8,7 @@
 @import "./adminMain.css";
 @import "./adminFooter.css";
 @import "./AD0101.css";
+@import "./AD0215.css";
 
 body {
   font-family: Seoulnamsan, sans-serif;
@@ -65,10 +66,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
- margin-bottom:20px;
+  margin-bottom: 30px;
 }
 
 .login-data .login-data__label {
   width: 100px;
   height: 20px;
+  line-height: 45px;
+  margin-right: 10px;
 }

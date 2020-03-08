@@ -23,23 +23,14 @@
 }
 
 .ad0101-paging li {
-  margin: 0px 7px;
-  padding: 3px;
+  margin: 0px 5px;
+  padding: 8px;
   cursor: pointer;
 }
-.ad0101-paging li:nth-child(3){
-	background-color:#f19d00;
-	color:#fff;
-	padding:3px 5px;
+.ad0101-paging{
+	font-size: 20px;
 }
-.ad0101-paging li:first-child,
-.ad0101-paging li:last-child {
-  background: #555;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 0 5px 5px;
-}
+
 .ad0101-paging-box{
 	width:100%;
     min-height: 70px;
