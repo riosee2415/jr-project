@@ -23,5 +23,13 @@ public interface I_Ad0215DAO {
 	 * @DES    : 데이터를 카운팅 하여 리턴
 	 */
 	int getListCount();
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 9, 2020
+	 * @RETURN : int
+	 * @DES    : 공지사항 여부 수정
+	 */
+	int chagneNoticeStatus(int status, int no);
 
 }

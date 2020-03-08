@@ -28,4 +28,17 @@
 		 LIMIT 	10 OFFSET #{paging}
 	</select>
 	
+	
+	<update id="MODIFY_NOTICE1" parameterType="int">
+		UPDATE	JR_DB.BOARD_COLLUSION
+		   SET	B_NOTICE = 1
+		 WHERE  B_NO = #{no}
+	</update>
+	
+	<update id="MODIFY_NOTICE2" parameterType="int">
+		UPDATE	JR_DB.BOARD_COLLUSION
+		   SET	B_NOTICE = 0
+		 WHERE  B_NO = #{no}
+	</update>
+	
 </mapper>
