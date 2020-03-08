@@ -4,12 +4,12 @@
 
 	<select id="GET_LOGINLOG" resultType="loginLogVO" parameterType="int">
 		SELECT	LOG_NO,
-				LOG_ID,
+				    LOG_ID,
 		        LOG_IP,
 		        DATE_FORMAT(LOG_DATE, '%Y년 %m월 %d일  %H시%i분%S초') AS LOG_DATE
 		  FROM	JR_DB.LOGIN_LOG
-		  ORDER	BY LOG_NO DESC
-		  LIMIT 10 OFFSET #{paging}
+		 ORDER	BY LOG_NO DESC
+		 LIMIT  10 OFFSET #{paging}
 	</select>
 	
 	

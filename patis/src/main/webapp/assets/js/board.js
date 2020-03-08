@@ -17,4 +17,28 @@ $(document).ready(function() {
 		$(this).addClass('active');
 		$(this).parent().hide();
 	});
+	
+	if($('#collusion-board-js').length > 0) getCollusionPageContent(1);
 });
+
+function getCollusionPageContent(page){
+	var total_page = $('#board-pagination-js .page-number').length;
+	$('#board-pagination-js .page-number').removeClass('active');
+	$('#board-pagination-js .page-number').eq(page-1).addClass('active');
+	$('#board-pagination-js .control-left').on('click', function(e) {
+		e.stopImmediatePropagation();
+		getCollusionPageContent(page == 1 ? 1 : page-1);
+	});
+	$('#board-pagination-js .control-right').on('click', function(e) {
+		e.stopImmediatePropagation();
+		getCollusionPageContent(page == total_page ? total_page : page+1);
+	});
+	$.ajax({
+		url 	: "/nm021164Init.do",
+		type	: "get",
+		data	: { "page" : page },
+		success : function(data){
+			$("#collusion-board-js").html(data);
+		}
+	});
+}

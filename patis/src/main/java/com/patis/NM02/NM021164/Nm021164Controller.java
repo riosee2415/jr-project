@@ -8,8 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.BoardVO;
 import com.patis.model.CommonVO;
 
 /**
@@ -23,6 +25,9 @@ public class Nm021164Controller {
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
 
+	@Resource(name="nm021164Service")
+	private I_Nm021164Service nm021164Service;
+	
 	@RequestMapping(value="/collusion.apply.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
@@ -33,7 +38,22 @@ public class Nm021164Controller {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
+		int page = nm021164Service.getListCount();
+		page = page / 10;
+		model.addAttribute("page", page+1);
+		
 		return "collusion.apply";
+	}
+	
+	@RequestMapping(value = "/nm021164Init.do", method = RequestMethod.GET)
+	public String ajaxPaging(Model model,
+						   @RequestParam("page")int page) throws Exception {
+		
+		List<BoardVO> collusionList = nm021164Service.getCollusionList((page-1)*10);
+		model.addAttribute("collusionList", collusionList);
+	
+		
+		return "ajax/nm021164Init";
 	}
 
 }
