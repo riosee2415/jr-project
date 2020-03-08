@@ -32,7 +32,7 @@
 	<table>
 		<thead>
 			<tr>
-				<th><input type="checkbox" /></th>
+				<th><input type="checkbox" class="check-all" /></th>
 				<th>글번호</th>
 				<th>제목</th>
 				<th>작성자</th>

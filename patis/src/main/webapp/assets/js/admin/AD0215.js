@@ -1,22 +1,28 @@
-$(document).ready(function(){
+$(document).ready(function() {
 	$.ajax({
-    		url 	: "/ad0215Init.do",
-    		type	: "get",
-    		data	: { "page" : 1 },
-    		success : function(data){
-    			$("#ajax-tbody").html(data);
-    			
-    		}
-    	});
+		url : "/ad0215Init.do",
+		type : "get",
+		data : {
+			"page" : 1
+		},
+		success : function(data) {
+			$("#ajax-tbody").html(data);
+
+		}
+	});
+
+	
 })
 
-function getPageContent(page){
+function getPageContent(page) {
 	$.ajax({
-		url 	: "/ad0215Init.do",
-		type	: "get",
-		data	: { "page" : page },
-		success : function(data){
-			
+		url : "/ad0215Init.do",
+		type : "get",
+		data : {
+			"page" : page
+		},
+		success : function(data) {
+
 			$("#ajax-tbody").html(data);
 		}
 	});
