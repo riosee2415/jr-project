@@ -82,7 +82,7 @@ public class Ad0101Controller {
 	}
 	
 	@RequestMapping(value = "/ad0101Init.do", method = RequestMethod.GET)
-	public String ajaxTest(Model model,
+	public String ajaxGetLoginData(Model model,
 							@RequestParam("page")int page) {
 		
 		List<LoginLogVO> loginLogDataList = ad0101Service.getLogData((page-1)*10);

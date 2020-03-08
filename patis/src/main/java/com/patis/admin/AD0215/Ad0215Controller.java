@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.BoardVO;
 import com.patis.model.CommonVO;
 import com.patis.model.LoginLogVO;
 
@@ -26,6 +27,9 @@ public class Ad0215Controller {
 
 	@Resource(name = "middlewareService")
 	private I_MiddlewareService middlewareService;
+	
+	@Resource(name = "ad0215Service")
+	private I_Ad0215Service ad0215Service;
 	
 	
 	/**
@@ -61,8 +65,8 @@ public class Ad0215Controller {
 			middlewareService.printLog("관리자 또는 운영자 권한으로 로그인 되었습니다.");
 			
 			
-			// get Count
-			int page =0;
+			
+			int page = ad0215Service.getListCount();
 			page = page / 10;
 			model.addAttribute("page", page+1);
 			
@@ -78,5 +82,24 @@ public class Ad0215Controller {
 		}
 
 	}
+	
+	
+	@RequestMapping(value = "/ad0215Init.do", method = RequestMethod.GET)
+	public String ajaxGetBoardData(Model model,
+							@RequestParam("page")int page) {
+		
+		System.out.println("0215 init");
+		System.out.println("0215 init");
+		System.out.println("0215 init");
+		System.out.println("0215 init");
+		System.out.println("0215 init");
+		
+		List<BoardVO> boardList = ad0215Service.getBoardData((page-1)*10);
+		model.addAttribute("boardList", boardList);
+	
+		
+		return "ajax/ad0215Init";
+	}
+	
 
 }

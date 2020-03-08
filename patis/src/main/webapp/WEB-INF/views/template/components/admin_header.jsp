@@ -13,3 +13,5 @@
 <div class="header-content__box">
 	<h1>content</h1>
 </div>
+
+<script src="/assets/js/jquery-1.12.4.min.js"></script>

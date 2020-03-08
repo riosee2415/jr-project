@@ -4,7 +4,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!-- CONTENT HEADER -->
 <div class="ad0101-header">
-  <p>로그인기록 관리</p>
+  <p>회원관리 > 로그인기록 관리</p>
 </div>
 <div class="admin__area">
   <input type="text" />
