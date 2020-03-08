@@ -50,7 +50,7 @@
     </definition>
     
     <definition name="role" extends="subLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020464.jsp"/>
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020462.jsp"/>
     </definition>
     
      <definition name="statute" extends="subLayout">
