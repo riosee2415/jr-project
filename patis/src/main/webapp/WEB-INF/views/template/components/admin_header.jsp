@@ -6,7 +6,7 @@
 		<a href="${pageContext.request.contextPath }/main.do" title="홈페이지로 이동" class="header-link-out">
 			<i class="fa fa-outdent" aria-hidden="true"></i>
 		</a>
-		<a href="${pageContext.request.contextPath }/admin.do" class="header-link-logo">ADMINISTRATOR</a>
+		<a href="${pageContext.request.contextPath }/admin.do" class="header-link-logo"></a>
 	</h1>
 </div>
 
