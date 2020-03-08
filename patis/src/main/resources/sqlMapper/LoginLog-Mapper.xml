@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="LoginLog-Mapper">
+
+	<select id="GET_LOGINLOG" resultType="loginLogVO" parameterType="int">
+		SELECT	LOG_NO,
+				LOG_ID,
+		        LOG_IP,
+		        DATE_FORMAT(LOG_DATE, '%Y년 %m월 %d일  %H시%i분%S초')
+		  FROM	JR_DB.LOGIN_LOG
+		  LIMIT 10 OFFSET #{paging}
+	</select>
+
+</mapper>

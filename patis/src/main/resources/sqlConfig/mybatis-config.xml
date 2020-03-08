@@ -5,6 +5,7 @@
 	<typeAliases>
 		<typeAlias type="com.patis.model.CommonVO" alias="commonVO"/>
 		<typeAlias type="com.patis.model.EmpVO" alias="empVO"/>
+		<typeAlias type="com.patis.model.LoginLogVO" alias="loginLogVO"/>
 		<typeAlias type="java.lang.Integer" alias="int"/>
 		
 	</typeAliases>

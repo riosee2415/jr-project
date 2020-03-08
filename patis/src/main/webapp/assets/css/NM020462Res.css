@@ -1,0 +1,76 @@
+@media screen and (max-width: 767px) {
+  .nm62-tbl-style-01 thead tr {
+    background-color: #f6f6f6;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 3rem;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .nm62-tbl-style-01 tbody tr td {
+    font-size: 12px;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .nm62-tbl-style-01 thead tr th,
+  .nm62-tbl-style-01 tbody tr td {
+    border-right: 1px solid #dbdbdb;
+  }
+
+  .nm62-tbl-style-01 thead th:last-child,
+  .nm62-tbl-style-01 tbody tr td:last-child {
+    border-right: none;
+  }
+
+  .nm62-tbl-style-01 thead tr td:first-child,
+  .nm62-tbl-style-01 tbody tr td:first-child {
+    width: 25%;
+  }
+
+  .nm62-tbl-style-01 thead tr td:nth-child(2n),
+  .nm62-tbl-style-01 tbody tr td:nth-child(2n) {
+    width: 30%;
+  }
+
+  .nm62-tbl-style-01 thead tr td:nth-child(3n),
+  .nm62-tbl-style-01 tbody tr td:nth-child(3n) {
+    width: 50%;
+  }
+
+  .tbl-style-sec {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+  }
+
+  .tbl-style-contitle {
+    text-align: start;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 20px;
+    vertical-align: middle;
+  }
+
+  .tbl-style-contitle ul:nth-child(2n) {
+    font-weight: normal;
+    padding-left: 10px;
+  }
+
+  .tbl-style-conlist {
+    vertical-align: middle;
+    padding: 15px;
+  }
+
+  .tbl-style-conlist ul li {
+    text-align: start;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media screen and (min-width: 960px) {
+}

@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
     <!-- 도시재생 뉴딜사업 유형 -->
-    <div style="display:none;" class="sub-content-wrap">
+    <div style="display:block;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
@@ -148,7 +148,7 @@ pageEncoding="UTF-8"%>
     </div>
 
     <!-- 서울형 도시재생사업 유형 -->
-    <div style="display:none;" class="sub-content-wrap">
+    <div style="display:block;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
@@ -209,7 +209,7 @@ pageEncoding="UTF-8"%>
     </div>
 
     <!-- 서울형도시재생현황 -->
-    <div style="display:none;" class="sub-content-wrap">
+    <div style="display:block;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>

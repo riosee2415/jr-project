@@ -1,0 +1,54 @@
+@media screen and (max-width: 767px) {
+  .nm22-tbl-style-01 > ul:nth-child(n + 2):nth-child(-n + 6) > li:nth-child(2),
+  .nm22-tbl-style-02 tbody tr td:first-child,
+  .nm22-tbl-style-02 tbody tr:nth-child(n + 1):nth-child(-n + 9) td,
+  .nm22-table-caption {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .nm22-tbl-style-01 > ul:first-child li,
+  .nm22-tbl-style-01 > ul > li:nth-child(1),
+  .nm22-tbl-style-02 thead tr th {
+    font-size: 14px;
+    padding: 10px;
+  }
+  /* 서울형 도시재생사업유형 */
+  .nm22-tbl-style-03 thead tr th,
+  .nm22-tbl-style-03 tbody tr td,
+  .nm22-tbl-style-03 tbody tr td:first-child {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .nm22-tbl-style-03 tbody tr:nth-child(n + 1):nth-child(-n + 5) td {
+    font-size: 12px;
+    padding: 10px;
+  }
+  /* 서울형 도시재생 현황 */
+  .nm22-tbl-style-04 thead tr th,
+  .nm22-tbl-style-04 tbody tr td {
+    padding: 10px;
+  }
+  .nm22-tbl-style-04 thead tr th,
+  .nm22-tbl-style-04 .bold {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .nm22-tbl-style-04 tbody tr:nth-child(n + 1):nth-child(-n + 13) td {
+    font-size: 13px;
+  }
+  .nm22-content-04__imgbox img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	 .nm22-content-04__imgbox img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+	 .nm22-content-04__imgbox img {
+    width: 100%;
+  }
+}

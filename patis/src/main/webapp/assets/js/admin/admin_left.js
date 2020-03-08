@@ -8,3 +8,16 @@ $(document).ready(function() {
 		$('#left-menu-list-js .lefe-menu-list__area').eq(menuIndex).addClass('active');
 	});
 });
+
+
+
+function subMenuHandler(uri, mc, sc) {
+
+	$("#mc").val(mc);
+	$("#sc").val(sc);
+	
+	var menuFrm = $("#menuFrm");
+	
+	menuFrm.attr("action", (uri + "?mc="+ mc + "&sc=" + sc));
+	menuFrm.submit();
+}

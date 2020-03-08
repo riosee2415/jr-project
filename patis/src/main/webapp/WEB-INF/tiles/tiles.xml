@@ -50,7 +50,7 @@
     </definition>
     
     <definition name="role" extends="subLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020464.jsp"/>
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020462.jsp"/>
     </definition>
     
      <definition name="statute" extends="subLayout">
@@ -61,29 +61,12 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021164.jsp"/>
     </definition>
     
-    <definition name="cityloc" extends="subLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021281.jsp"/>
-    </definition>
-    
-    <definition name="statisloc" extends="subLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021282.jsp"/>
-    </definition>
-    
-     <definition name="citisns" extends="subLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021283.jsp"/>
-    </definition>
     
     
 <!-- 관리자 화면 -->
      <definition name="admin" extends="adminLayout">
        <put-attribute name="content" value="/WEB-INF/views/AD01/AD010001.jsp"/>
     </definition>
-    
-     <definition name="loginInfo" extends="adminLayout">
-       <put-attribute name="content" value="/WEB-INF/views/AD01/AD0101.jsp"/>
-    </definition>
-    
-    
     
     
 </tiles-definitions>

@@ -1,4 +1,4 @@
-package com.patis.main;
+package com.patis.NM02.NM021282;
 
 import java.util.List;
 
@@ -12,14 +12,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
 
+/**
+ * @author : 4LEAF.YSH
+ * @SCREEN : 도시재생 공모사업 ->  공모사업 신청(collusion.apply)
+ *
+ */
 @Controller
-public class MainController {
+public class Nm021282Controller {
 	
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
-	
-	@RequestMapping(value="/main.do", method=RequestMethod.GET)
-	public String main(Model model) throws Exception {
+
+	@RequestMapping(value="/statisloc.do", method=RequestMethod.GET)
+	public String sendScreen(Model model) throws Exception{
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -28,7 +33,7 @@ public class MainController {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		return "main";
+		return "statisloc";
 	}
-	
+
 }
