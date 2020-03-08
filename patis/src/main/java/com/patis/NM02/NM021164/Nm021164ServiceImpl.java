@@ -30,4 +30,19 @@ public class Nm021164ServiceImpl implements I_Nm021164Service{
 		return nm021164DAO.getListCount();
 	}
 
+	@Override
+	public BoardVO getPrevCollusion(int b_no) throws SQLException {
+		return nm021164DAO.getPrevCollusion(b_no);
+	}
+
+	@Override
+	public BoardVO getNextCollusion(int b_no) throws SQLException {
+		return nm021164DAO.getNextCollusion(b_no);
+	}
+	
+	@Override
+	public int modifyHitUp(int b_no) throws SQLException {
+		return nm021164DAO.modifyHitUp(b_no);
+	}
+
 }

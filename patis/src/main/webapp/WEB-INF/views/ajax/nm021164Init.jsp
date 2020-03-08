@@ -8,7 +8,7 @@
 		<c:when test="${collusion.b_NOTICE eq 1 }">
 			<tr class="row-notice">
 				<td>공지</td>
-				<td class="header-title">${collusion.b_TITLE }</td>
+				<td class="header-title" onclick="javascript:goCollusionDetailHandler('${collusion.b_NO}')">${collusion.b_TITLE }</td>
 				<td>${collusion.b_AUTHOR }</td>
 				<td>${collusion.b_CREATE_TIME }</td>
 				<td>${collusion.b_HIT }</td>
@@ -17,7 +17,7 @@
 		<c:otherwise>
 			<tr>
 				<td>${collusion.b_NO }</td>
-				<td class="header-title">${collusion.b_TITLE }</td>
+				<td class="header-title" onclick="javascript:goCollusionDetailHandler('${collusion.b_NO}')">${collusion.b_TITLE }</td>
 				<td>${collusion.b_AUTHOR }</td>
 				<td>${collusion.b_CREATE_TIME }</td>
 				<td>${collusion.b_HIT }</td>

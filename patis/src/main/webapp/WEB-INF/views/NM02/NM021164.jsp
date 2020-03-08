@@ -62,4 +62,10 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
   </div>
+  
+  <form action="/collusion.apply.detail.do" method="get" id="frm-collusion-detail">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="b_no" />
+  </form>
 </div>

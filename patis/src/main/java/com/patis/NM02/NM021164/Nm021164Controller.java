@@ -45,6 +45,29 @@ public class Nm021164Controller {
 		return "collusion.apply";
 	}
 	
+	@RequestMapping(value="/collusion.apply.detail.do", method=RequestMethod.GET)
+	public String sendDetailScreen(Model model,
+			 					   @RequestParam(value="b_no")int b_no) throws Exception {
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		nm021164Service.modifyHitUp(b_no);
+		
+		BoardVO data = nm021164Service.getCollusion(b_no);
+		model.addAttribute("data", data);
+		
+		BoardVO prevData = nm021164Service.getPrevCollusion(b_no);
+		BoardVO nextData = nm021164Service.getNextCollusion(b_no);
+		model.addAttribute("prevData", prevData);
+		model.addAttribute("nextData", nextData);
+		
+		return "collusion.apply.detail";
+	}
+	
 	@RequestMapping(value = "/nm021164Init.do", method = RequestMethod.GET)
 	public String ajaxPaging(Model model,
 						   @RequestParam("page")int page) throws Exception {
@@ -52,7 +75,6 @@ public class Nm021164Controller {
 		List<BoardVO> collusionList = nm021164Service.getCollusionList((page-1)*10);
 		model.addAttribute("collusionList", collusionList);
 	
-		
 		return "ajax/nm021164Init";
 	}
 

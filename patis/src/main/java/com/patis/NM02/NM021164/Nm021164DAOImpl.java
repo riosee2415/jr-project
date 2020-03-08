@@ -33,4 +33,19 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 		return sqlSession.selectOne(NAMESPACE + ".GET_LIST_COUNT");
 	}
 
+	@Override
+	public BoardVO getPrevCollusion(int b_no) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_PREV_COLLUSION", b_no);
+	}
+	
+	@Override
+	public BoardVO getNextCollusion(int b_no) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_NEXT_COLLUSION", b_no);
+	}
+
+	@Override
+	public int modifyHitUp(int b_no) throws SQLException {
+		return sqlSession.update(NAMESPACE + ".MODIFY_HIT_UP", b_no);
+	}
+
 }
