@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.BoardVO;
@@ -97,18 +98,14 @@ public class Ad0215Controller {
 	}
 	
 	@RequestMapping(value = "/ad0215Notice.do", method = RequestMethod.GET)
-	public String ajaxNotice(Model model,
-							@RequestParam("status")int status) {
+	@ResponseBody
+	public int ajaxNotice(Model model,
+							@RequestParam("status")int status,
+							@RequestParam("no")int no) {
 		
-		System.out.println("notice!!!" + status);
-		System.out.println("notice!!!" + status);
-		System.out.println("notice!!!" + status);
-		System.out.println("notice!!!" + status);
-		System.out.println("notice!!!" + status);
-		System.out.println("notice!!!" + status);
+		int result = ad0215Service.chagneNoticeStatus(status, no);
 		
-		
-		return null;
+		return result;
 	}
 	
 

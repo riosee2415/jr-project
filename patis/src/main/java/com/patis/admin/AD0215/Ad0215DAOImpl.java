@@ -1,6 +1,8 @@
 package com.patis.admin.AD0215;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -25,6 +27,18 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 	@Override
 	public List<BoardVO> getBoardData(int paging) {
 		return sqlSession.selectList(NAMESPACE + ".GET_BOARD_DATA", paging);
+	}
+
+	@Override
+	public int chagneNoticeStatus(int status, int no) {
+		
+		
+		
+		if(status == 0) {
+			return sqlSession.update(NAMESPACE + ".MODIFY_NOTICE1", no);
+		} else {
+			return sqlSession.update(NAMESPACE + ".MODIFY_NOTICE2", no);
+		}
 	}
 
 }

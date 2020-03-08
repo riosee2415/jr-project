@@ -24,4 +24,9 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 		return ad0215DAO.getBoardData(paging);
 	}
 
+	@Override
+	public int chagneNoticeStatus(int status, int no) {
+		return ad0215DAO.chagneNoticeStatus(status, no);
+	}
+
 }
