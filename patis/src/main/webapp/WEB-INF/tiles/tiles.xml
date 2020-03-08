@@ -89,13 +89,14 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020833.jsp"/>
     </definition>
     
-    <definition name="hire" extends="subLayout">
+    <definition name="archive" extends="subLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020834.jsp"/>
     </definition>
     
-    <definition name="archive" extends="subLayout">
+    <definition name="hire" extends="subLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020835.jsp"/>
     </definition>
+    
 
 	<definition name="school" extends="subLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021037.jsp"/>

@@ -76,9 +76,11 @@
         </table>
         <ul class="board-pagination">
         	<li class="page-control"><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
-        	<li class="page-number">1</li>
+        	<li class="page-control"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+        	<li class="page-number active">1</li>
         	<li class="page-number">2</li>
         	<li class="page-number">3</li>
+        	<li class="page-control"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
         	<li class="page-control"><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
         </ul>
       </div>
