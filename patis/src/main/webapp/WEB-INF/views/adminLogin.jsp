@@ -26,18 +26,19 @@
 	</c:if>
 
 	<div class="login">
+		<img src="/assets/images/commons/hdlogo.png" alt="로고">
 		<div class="login-box">
-			<div class="login-box__top">top</div>
+			<div class="login-box__top">관리자 로그인</div>
 			<div class="login-box__center">
 				<form action="${pageContext.request.contextPath }/admin.do" method="post">
 					<div class="login-data">
-						<div class="login-data__label">ID</div> <input
-							type="text" class="login-data__input" name="id" />
+						<div class="login-data__label">ID</div> 
+						<input type="text" class="login-data__input" name="id" />
 					</div>
 
 					<div class="login-data">
-						<div class="login-data__label">PASSWORD</div> <input
-							type="password"class="login-data__input" name="pass"/>
+						<div class="login-data__label">PASSWORD</div> 
+						<input type="password"class="login-data__input" name="pass"/>
 					</div>
 					
 					<div class="login-data">
@@ -47,10 +48,9 @@
 
 
 			</div>
-			<div class="login-box__bottom">bottom</div>
+			
 		</div>
 		
-		<div class="login-image">asdfasdfsddddddadf</div>
 	</div>
 </body>
 </html>
