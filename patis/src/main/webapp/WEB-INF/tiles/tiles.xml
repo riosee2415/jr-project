@@ -12,8 +12,12 @@
        <put-attribute name="content" value=""/>
     </definition>
      
-    <definition name="subLayout" template="/WEB-INF/views/template/layouts/sub_layout.jsp" extends="mainLayout">
+    <definition name="subBannerLayout" template="/WEB-INF/views/template/layouts/sub_layout.jsp" extends="mainLayout">
        <put-attribute name="sub_banner" value="/WEB-INF/views/template/components/sub_banner.jsp"/>
+       <put-attribute name="sub_top_menu" value=""/>
+    </definition>
+     
+    <definition name="subTopMenuLayout" template="/WEB-INF/views/template/layouts/sub_layout.jsp" extends="subBannerLayout">
        <put-attribute name="sub_top_menu" value="/WEB-INF/views/template/components/sub_top_menu.jsp"/>
     </definition> 
     
@@ -29,84 +33,88 @@
        <put-attribute name="content" value="/WEB-INF/views/NM00/NM000000.jsp"/>
     </definition>
     
-    <definition name="policy" extends="subLayout">
+    <definition name="policy" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020361.jsp"/>
     </definition>
     
-     <definition name="policy.loc" extends="subLayout">
+     <definition name="policy.loc" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020362.jsp"/>
     </definition>
     
-     <definition name="group" extends="subLayout">
+     <definition name="group" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020363.jsp"/>
     </definition>
     
-    <definition name="intro" extends="subLayout">
+    <definition name="intro" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020421.jsp"/>
     </definition>
     
-    <definition name="business" extends="subLayout">
+    <definition name="business" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020422.jsp"/>
     </definition>
     
-    <definition name="role" extends="subLayout">
+    <definition name="role" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM0204130.jsp"/>
     </definition>
     
-     <definition name="statute" extends="subLayout">
+     <definition name="statute" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM0204131.jsp"/>
     </definition>
     
-     <definition name="collusion.apply" extends="subLayout">
+     <definition name="collusion.apply" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021164.jsp"/>
     </definition>
     
-    <definition name="cityloc" extends="subLayout">
+     <definition name="collusion.apply.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021164_D.jsp"/>
+    </definition>
+    
+    <definition name="cityloc" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021281.jsp"/>
     </definition>
     
-    <definition name="statisloc" extends="subLayout">
+    <definition name="statisloc" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021282.jsp"/>
     </definition>
     
-     <definition name="citisns" extends="subLayout">
+     <definition name="citisns" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021283.jsp"/>
     </definition>
     
-    <definition name="edu" extends="subLayout">
+    <definition name="edu" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020523.jsp"/>
     </definition>
     
-    <definition name="community" extends="subLayout">
+    <definition name="community" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524.jsp"/>
     </definition>
     
-    <definition name="news" extends="subLayout">
+    <definition name="news" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020832.jsp"/>
     </definition>
     
-    <definition name="release" extends="subLayout">
+    <definition name="release" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020833.jsp"/>
     </definition>
     
-    <definition name="archive" extends="subLayout">
+    <definition name="archive" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020834.jsp"/>
     </definition>
     
-    <definition name="hire" extends="subLayout">
+    <definition name="hire" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020835.jsp"/>
     </definition>
     
 
-	<definition name="school" extends="subLayout">
+	<definition name="school" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021037.jsp"/>
     </definition>
     
-    <definition name="academy" extends="subLayout">
+    <definition name="academy" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021038.jsp"/>
     </definition>
     
-    <definition name="presentation" extends="subLayout">
+    <definition name="presentation" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021039.jsp"/>
     </definition> 
     
