@@ -96,7 +96,18 @@
     <definition name="archive" extends="subLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020835.jsp"/>
     </definition>
+
+	<definition name="school" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021037.jsp"/>
+    </definition>
     
+    <definition name="academy" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021038.jsp"/>
+    </definition>
+    
+    <definition name="presentation" extends="subLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021039.jsp"/>
+    </definition> 
     
     
     
