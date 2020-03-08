@@ -181,8 +181,8 @@
 #collap_menu ul li a {
   display: block;
   text-align: center;
-  line-height: 32px;
-  font-size: 14px;
+  line-height: 40px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -191,8 +191,8 @@
 }
 
 #collap_menu ul li a.collap-menu-main {
-  line-height: 40px;
-  font-size: 1.2em;
+  line-height: 50px;
+  font-size: 22px;
 }
 
 #collap_menu ul li .collap-menu-sub {
@@ -237,14 +237,11 @@
 }
 #collap_menu li a {
   display: block;
-  color: #0b0b0b;
-  text-align: left;
-  text-indent: 1.5rem;
   line-height: 3.2;
 }
-.collap-menu-sub li a:hover {
+#collap_menu .menu .collap-menu-sub li:hover a {
   background-color: #555;
-  color:#ffffff;
+  color: #ffffff;
 }
 #menu_call ~ .header .menuicon {
   display: block;
