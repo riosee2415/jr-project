@@ -26,3 +26,13 @@
 .ad02-content table tbody tr:nth-child(2n) td {
   background-color: #33397120;
 }
+
+
+.ad02-bottom {
+	width:95%;	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin : 0 auto;
+	
+}

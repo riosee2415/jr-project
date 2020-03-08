@@ -41,4 +41,59 @@
 		 WHERE  B_NO = #{no}
 	</update>
 	
+	<update id="REMOVE_DATA" parameterType="int">
+		UPDATE	JR_DB.BOARD_COLLUSION
+		   SET	B_USE_YN = 0,
+		   		B_DELETE_TIME = SYSDATE()
+		 WHERE  B_NO = #{no}
+		 
+	</update>
+	
+	
+	<select id="GET_SEARCH_TITLE" resultType="boardVO" parameterType="hashMap">
+		SELECT	B_NO,
+				B_TITLE,
+				B_DESCRIPTION,
+				 (
+					SELECT	Z.USER_NAME
+					  FROM 	JR_DB.EMP	Z
+					 WHERE  B_AUTHOR = Z.USER_NO
+				) AS B_AUTHOR, 
+				DATE_FORMAT(B_CREATE_TIME, '%Y년 %m월 %d일  %H시%i분%S초') AS B_CREATE_TIME,
+				DATE_FORMAT(B_UPLOAD_TIME, '%Y년 %m월 %d일  %H시%i분%S초') AS B_UPLOAD_TIME,
+				B_HIT,
+				B_NOTICE,
+				B_USE_YN,
+				B_TYPE,
+				B_DELETE_TIME
+		  FROM	JR_DB.BOARD_COLLUSION
+		 WHERE  B_TITLE LIKE CONCAT('%', #{serachVal}, '%')
+		 ORDER	BY B_NO DESC
+	</select>
+	
+	<select id="GET_SEARCH_AUTHOR" resultType="boardVO" parameterType="hashMap">
+		SELECT	B_NO,
+				B_TITLE,
+				B_DESCRIPTION,
+				 (
+					SELECT	Z.USER_NAME
+					  FROM 	JR_DB.EMP	Z
+					 WHERE  B_AUTHOR = Z.USER_NO
+				) AS B_AUTHOR, 
+				DATE_FORMAT(B_CREATE_TIME, '%Y년 %m월 %d일  %H시%i분%S초') AS B_CREATE_TIME,
+				DATE_FORMAT(B_UPLOAD_TIME, '%Y년 %m월 %d일  %H시%i분%S초') AS B_UPLOAD_TIME,
+				B_HIT,
+				B_NOTICE,
+				B_USE_YN,
+				B_TYPE,
+				B_DELETE_TIME
+		  FROM	JR_DB.BOARD_COLLUSION
+		 WHERE  B_AUTHOR IN	(
+								SELECT	USER_NO
+                                  FROM	JR_DB.EMP
+								 WHERE	USER_NAME LIKE '%민%'
+							)
+		 ORDER	BY B_NO DESC
+	</select>
+	
 </mapper>

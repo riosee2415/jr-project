@@ -29,4 +29,14 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 		return ad0215DAO.chagneNoticeStatus(status, no);
 	}
 
+	@Override
+	public int deleteOne(int no) {
+		return ad0215DAO.deleteOne(no);
+	}
+
+	@Override
+	public List<BoardVO> getSearch(String serachVal, String searchType) {
+		return ad0215DAO.getSearch(serachVal, searchType);
+	}
+
 }

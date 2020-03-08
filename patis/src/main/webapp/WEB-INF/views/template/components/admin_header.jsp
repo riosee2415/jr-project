@@ -11,7 +11,10 @@
 </div>
 
 <div class="header-content__box">
-	<h1>content</h1>
+	<ul>
+		<li>${loginId }</li>
+		<li>${loginName }</li>
+	</ul>
 </div>
 
 <script src="/assets/js/jquery-1.12.4.min.js"></script>

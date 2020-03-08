@@ -32,4 +32,20 @@ public interface I_Ad0215DAO {
 	 */
 	int chagneNoticeStatus(int status, int no);
 
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 9, 2020
+	 * @RETURN : int
+	 * @DES    : 삭제처리
+	 */
+	int deleteOne(int no);
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 8, 2020
+	 * @RETURN : List<BoardVO>
+	 * @DES    : 데이터를 검색하여 리턴 
+	 */
+	List<BoardVO> getSearch(String serachVal, String searchType);
+	
 }

@@ -1,5 +1,6 @@
 package com.patis.admin.AD0215;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,6 +40,30 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 		} else {
 			return sqlSession.update(NAMESPACE + ".MODIFY_NOTICE2", no);
 		}
+	}
+
+	@Override
+	public int deleteOne(int no) {
+		int result = sqlSession.update(NAMESPACE + ".REMOVE_DATA", no);
+		
+		return result;
+	}
+
+	@Override
+	public List<BoardVO> getSearch(String serachVal, String searchType) {
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("serachVal", serachVal);
+		
+		List<BoardVO> list = new ArrayList<BoardVO>();
+		
+		if(searchType.equals("제목")) {
+			list =  sqlSession.selectList(NAMESPACE + ".GET_SEARCH_TITLE", map);
+		} else if(searchType.equals("작성자")) {
+			list =  sqlSession.selectList(NAMESPACE + ".GET_SEARCH_AUTHOR", map);
+		}
+			
+		
+		return list;
 	}
 
 }
