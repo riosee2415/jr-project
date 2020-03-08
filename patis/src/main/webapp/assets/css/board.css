@@ -130,6 +130,7 @@
 
 .board-list__box .board-list__table thead tr th {
   padding: 18px 0;
+  font-size: 16px;
 }
 
 .board-list__box .board-list__table thead tr th.header-5 {
@@ -145,13 +146,14 @@
 }
 
 .board-list__box .board-list__table tr .header-title {
+  padding-left: 90px;
 	text-align: left;
-  padding-left: 60px;
   word-break: break-word;
 }
 
 .board-list__box .board-list__table tbody tr td {
 	padding: 15px 0;
+	font-size: 15px;
 }
 
 .board-list__box .board-list__table tbody tr {
@@ -159,8 +161,19 @@
   border-bottom: 1px solid #e9e9e9;
 }
 
+.board-list__box .board-list__table tbody tr.row-notice {
+	background: #ffebd0;
+  border-top: 1px solid #e7d5bc;
+  border-bottom: 1px solid #e7d5bc;
+}
+
+.board-list__box .board-list__table tbody tr.row-notice td {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 .board-list__box .board-list__table tbody tr td:nth-child(2) {
-  color: #a0a0a0;
+  color: #777;
 }
 
 .board-list__box .board-list__table tbody tr td:nth-child(2):hover {
@@ -173,7 +186,6 @@
   font-weight: 800;
   color: #4c4c4c;
 }
-
 
 .board-pagination {
   display: flex;
@@ -200,6 +212,7 @@
 	border-left: none;
 }
 
+.board-pagination li.active,
 .board-pagination li:hover {
   background-color: #444;
   color: #fff;

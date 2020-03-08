@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .admin-box__header .header-logo__box {
-	position: relative;
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -21,9 +21,12 @@
 }
 
 .admin-box__header .header-logo__box .header-logo-text .header-link-logo {
-	color: #fff;
-  font-size: 26px;
-	letter-spacing: 0.4px;
+  display: block;
+  width: 210px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/commons/ftlogo.png");
 }
 
 .admin-box__header .header-logo__box .header-logo-text .header-link-out {

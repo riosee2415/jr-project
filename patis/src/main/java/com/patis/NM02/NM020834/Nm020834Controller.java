@@ -23,7 +23,7 @@ public class Nm020834Controller {
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
 
-	@RequestMapping(value="/hire.do", method=RequestMethod.GET)
+	@RequestMapping(value="/archive.do", method=RequestMethod.GET)
 	public String sendScreen(Model model) throws Exception{
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
@@ -33,7 +33,7 @@ public class Nm020834Controller {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		return "hire";
+		return "archive";
 	}
 
 }
