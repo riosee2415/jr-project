@@ -1,0 +1,19 @@
+@media screen and (max-width: 767px) {
+  .nm22-tbl-style-01 > ul:nth-child(n + 2):nth-child(-n + 6) > li:nth-child(2),
+  .nm22-tbl-style-02 tbody tr td:first-child,
+  .nm22-tbl-style-02 tbody tr:nth-child(n + 2):nth-child(-n + 9) td,
+  .nm22-table-caption {
+    font-size: 12px;
+  }
+  .nm22-tbl-style-01 > ul:first-child li,
+  .nm22-tbl-style-01 > ul > li:nth-child(1),
+  .nm22-tbl-style-02 thead tr th {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media screen and (min-width: 960px) {
+}
