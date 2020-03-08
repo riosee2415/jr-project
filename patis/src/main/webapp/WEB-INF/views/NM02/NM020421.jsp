@@ -148,7 +148,7 @@ pageEncoding="UTF-8"%>
     </div>
 
     <!-- 서울형 도시재생사업 유형 -->
-    <div style="display:none;" class="sub-content-wrap">
+    <div style="display:block;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
@@ -209,7 +209,7 @@ pageEncoding="UTF-8"%>
     </div>
 
     <!-- 서울형도시재생현황 -->
-    <div style="display:none;" class="sub-content-wrap">
+    <div style="display:block;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
@@ -315,7 +315,7 @@ pageEncoding="UTF-8"%>
     </div>
 
     <!-- 사업신청 절차 -->
-    <div style="display:none;" class="sub-content-wrap">
+    <div style="display:block;" class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>

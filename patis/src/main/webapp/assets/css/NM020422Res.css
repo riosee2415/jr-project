@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+  .nm22-title-style {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media screen and (min-width: 960px) {
+}
