@@ -6,7 +6,10 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="ad0101-header">
   <p>로그인기록 관리</p>
 </div>
-
+<div class="admin__area">
+  <input type="text" />
+  <button>검색</button>
+</div>
 <div class="ad0101-content">
   <table>
     <thead>
@@ -22,11 +25,14 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   </table>
 
   <ul class="ad0101-paging">
-    <li onClick="javascript:getPageContent(1)">처음으로</li>
-    <c:forEach var="i" begin="1" end="${page }" step="1">
-      <li onClick="javascript:getPageContent(${i})">${i }</li>
-    </c:forEach>
-    <li onClick="javascript:getPageContent(${page})">맨뒤로</li>
+    <li onClick="javascript:getPageContent(1)">«</li>
+    <li>
+      <c:forEach var="i" begin="1" end="${page }" step="1">
+        <li onClick="javascript:getPageContent(${i})">${i }</li>
+      </c:forEach>
+    </li>
+
+    <li onClick="javascript:getPageContent(${page})">»</li>
   </ul>
 </div>
 

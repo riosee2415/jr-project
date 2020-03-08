@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   padding-top: 10px;
 }
 
@@ -29,12 +29,23 @@
   padding: 3px;
   cursor: pointer;
 }
+.ad0101-paging li:first-child,
+.ad0101-paging li:last-child {
+  background: #555;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 5px 5px;
+}
+.ad0101-paging li:hover {
+  color: #f19d00;
+}
 .ad0101-content {
   width: 100%;
 }
 .ad0101-content table {
   width: 100%;
-  margin: 70px auto;
+  margin: 10px auto;
   font-size: 16px;
   text-align: center;
 }
@@ -51,4 +62,24 @@
 }
 .ad0101-content table tbody tr:nth-child(2n) td {
   background-color: rgba(47, 132, 69, 0.1);
+}
+.admin__area{
+	    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px
+}
+.admin__area input {
+	width:165px;
+	height:30px;
+	outline:none;
+}
+.admin__area button{
+	width:70px;
+	height:35px;
+	outline:none;
+	border:none;
+	cursor: pointer;
+	background-color:#f19d00;
+	color:#fff;
+	font-weight: bold;
 }
