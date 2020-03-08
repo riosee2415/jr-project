@@ -36,5 +36,5 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   </ul>
 </div>
 
-<script src="/assets/js/jquery-1.12.4.min.js"></script>
+
 <script src="/assets/js/admin/AD0101.js"></script>
