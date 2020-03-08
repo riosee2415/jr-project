@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+.nm82-page-wrap {
+  display: none;
+}
+
+.nm82-content {
+  margin-top: 50px;
+}
+
+.nm82-title-style-01 {
+  font-size: 22px;
+  color: #237d3a;
+}
+
+.nm82-title-style-01 span {
+  color: #7c7c7c;
+}
+
+/* 이미지 스타일 */
+.nm82-content-img__box {
+  background-image: url(../images/image/nm1280/sub-nm1282-01-01.png);
+  background-repeat: no-repeat;
+  width: 394px;
+  height: 374px;
+  border: 10px solid #578ac8;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-nm1282-01-03 {
+  width: 226px;
+  height: 50px;
+  position: absolute;
+  top: 70px;
+}
+
+.nm82-imgbox-title {
+  position: relative;
+  top: -15px;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nm82-imgbox-title2 {
+  position: absolute;
+  bottom: 140px;
+  font-size: 34px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.nm82-imgbox-button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 70px;
+  outline: none;
+  border: 0px;
+  width: 113px;
+  height: 33px;
+  background-color: #578ac8;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #ffffff;
+}

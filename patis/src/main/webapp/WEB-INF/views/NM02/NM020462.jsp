@@ -5,13 +5,9 @@
         <!-- 도시재생 주체별 역할 -->
         <div class="nm63-page-wrap" style="display: block;">
           <div class="subHead">
-            <div class="subTitle">도시재생 주체별 역할</div>
-            <ul class="bread">
-              <li><a href="#">HOME&gt;</a></li>
-              <li><a href="#">도시재생사업 소개&gt;</a></li>
-              <li><a href="#">도시재생 주체별 역할</a></li>
-            </ul>
-          </div>
+	        <%@ include
+	        file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
+	      </div>
 
           <div class="nm62-content">
             <div>
