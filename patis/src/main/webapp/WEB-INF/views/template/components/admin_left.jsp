@@ -6,8 +6,8 @@ pageEncoding="UTF-8"%>
 	<div class="left-menu-icon__box" id="left-menu-icon-js">
 		<ul>
 			<li class="<c:if test="${param.mc eq 1 || empty param.mc}">active</c:if>"><i class="fa fa-user-o" aria-hidden="true"></i></li>
-			<li class="<c:if test="${param.mc eq 2}">active</c:if>"><i class="fa fa-user-o" aria-hidden="true"></i></li>
-			<li class="<c:if test="${param.mc eq 3}">active</c:if>"><i class="fa fa-user-o" aria-hidden="true"></i></li>
+			<li class="<c:if test="${param.mc eq 2}">active</c:if>"><i class="fa fa-list" aria-hidden="true"></i></li>
+			<li class="<c:if test="${param.mc eq 3}">active</c:if>"><i class="fa fa-cog" aria-hidden="true"></i></li>
 			<li class="<c:if test="${param.mc eq 4}">active</c:if>"><i class="fa fa-user-o" aria-hidden="true"></i></li>
 		</ul>
 	</div>

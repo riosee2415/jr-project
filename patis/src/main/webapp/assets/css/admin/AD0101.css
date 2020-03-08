@@ -48,6 +48,7 @@
   width: 100%;
   border: 1px solid #d5d5d5;
   border-top: none;
+  z-index:10;
 }
 
 .board-search-type .search-type__list li {
