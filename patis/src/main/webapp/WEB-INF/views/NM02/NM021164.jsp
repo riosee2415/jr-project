@@ -22,6 +22,7 @@ pageEncoding="UTF-8"%>
 
       <div class="nm1164-contentBox">
         <table class="nm1164-contentBox__table">
+        <caption>공모사업 신청</caption>
           <thead>
             <tr>
               <th>번호</th>
