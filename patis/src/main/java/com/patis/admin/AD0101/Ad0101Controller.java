@@ -1,13 +1,10 @@
 package com.patis.admin.AD0101;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.collections.map.HashedMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,8 +62,11 @@ public class Ad0101Controller {
 		if (right == 1 || right == 2) {
 			middlewareService.printLog("관리자 또는 운영자 권한으로 로그인 되었습니다.");
 			
-			List<LoginLogVO> loginLogDataList = ad0101Service.getLogData(0);
-			model.addAttribute("loginLogDataList", loginLogDataList);
+			
+			
+			int page = ad0101Service.getListCount();
+			page = page / 10;
+			model.addAttribute("page", page+1);
 			
 			flag = true;
 
@@ -80,5 +80,20 @@ public class Ad0101Controller {
 		}
 
 	}
+	
+	@RequestMapping(value = "/ad0101Init.do", method = RequestMethod.GET)
+	public String ajaxTest(Model model,
+							@RequestParam("page")int page) {
+		
+		List<LoginLogVO> loginLogDataList = ad0101Service.getLogData((page-1)*10);
+		model.addAttribute("loginLogDataList", loginLogDataList);
+	
+		
+		return "ajax/ad0101Init";
+	}
+	
+	
+	
+	
 
 }

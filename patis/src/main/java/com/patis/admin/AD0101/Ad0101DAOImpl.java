@@ -22,4 +22,9 @@ public class Ad0101DAOImpl implements I_Ad0101DAO{
 		return sqlSession.selectList(NAMESPACE + ".GET_LOGINLOG", paging);
 	}
 
+	@Override
+	public int getListCount() {
+		return sqlSession.selectOne(NAMESPACE + ".GET_COUNT");
+	}
+
 }

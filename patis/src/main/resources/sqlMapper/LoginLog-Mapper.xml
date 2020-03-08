@@ -6,9 +6,15 @@
 		SELECT	LOG_NO,
 				LOG_ID,
 		        LOG_IP,
-		        DATE_FORMAT(LOG_DATE, '%Y년 %m월 %d일  %H시%i분%S초')
+		        DATE_FORMAT(LOG_DATE, '%Y년 %m월 %d일  %H시%i분%S초') AS LOG_DATE
 		  FROM	JR_DB.LOGIN_LOG
 		  LIMIT 10 OFFSET #{paging}
+	</select>
+	
+	
+	<select id="GET_COUNT" resultType="int">
+		SELECT	COUNT(LOG_NO)
+		  FROM	JR_DB.LOGIN_LOG;
 	</select>
 
 </mapper>

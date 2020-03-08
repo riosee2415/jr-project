@@ -20,6 +20,11 @@ public class Ad0101ServiceImpl implements I_Ad0101Service{
 	public List<LoginLogVO> getLogData(int paging) {
 		return adDAO0101DAO.getLogData(paging);
 	}
+
+	@Override
+	public int getListCount() {
+		return adDAO0101DAO.getListCount();
+	}
 	
 	
 	

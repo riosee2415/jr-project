@@ -13,5 +13,14 @@ public interface I_Ad0101Service {
 	 * @DES    : 로그인 정보를 가져오는 함수
 	 */
 	List<LoginLogVO> getLogData(int paging);
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 8, 2020
+	 * @RETURN : int
+	 * @DES    : 데이터를 카운팅 하여 리턴
+	 */
+	int getListCount();
 
 }

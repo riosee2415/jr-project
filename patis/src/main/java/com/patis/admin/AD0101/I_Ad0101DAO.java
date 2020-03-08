@@ -15,4 +15,11 @@ public interface I_Ad0101DAO {
 	List<LoginLogVO> getLogData(int paging);
 
 
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 8, 2020
+	 * @RETURN : int
+	 * @DES    : 데이터를 카운팅 하여 리턴
+	 */
+	int getListCount();
 }
