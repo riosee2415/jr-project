@@ -88,11 +88,6 @@ public class Ad0215Controller {
 	public String ajaxGetBoardData(Model model,
 							@RequestParam("page")int page) {
 		
-		System.out.println("0215 init");
-		System.out.println("0215 init");
-		System.out.println("0215 init");
-		System.out.println("0215 init");
-		System.out.println("0215 init");
 		
 		List<BoardVO> boardList = ad0215Service.getBoardData((page-1)*10);
 		model.addAttribute("boardList", boardList);
