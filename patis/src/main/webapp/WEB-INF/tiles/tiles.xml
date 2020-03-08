@@ -121,6 +121,10 @@
        <put-attribute name="content" value="/WEB-INF/views/AD01/AD0101.jsp"/>
     </definition>
     
+    <definition name="adminCollusion" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0215.jsp"/>
+    </definition>
+    
     
     
     
