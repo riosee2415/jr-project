@@ -14,7 +14,7 @@ import com.patis.model.CommonVO;
 
 /**
  * @author : 4LEAF.YSH
- * @SCREEN : 도시재상사업 소개 ->  도시재생사업 유형별 소개(intro)
+ * @SCREEN : 도시재생사업 소개 ->  도시재생사업 유형별 소개(intro)
  *
  */
 @Controller

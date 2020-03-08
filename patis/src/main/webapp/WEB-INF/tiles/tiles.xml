@@ -50,11 +50,11 @@
     </definition>
     
     <definition name="role" extends="subLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020462.jsp"/>
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0204130.jsp"/>
     </definition>
     
      <definition name="statute" extends="subLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020465.jsp"/>
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0204131.jsp"/>
     </definition>
     
      <definition name="collusion.apply" extends="subLayout">

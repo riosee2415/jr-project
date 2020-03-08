@@ -1,4 +1,4 @@
-package com.patis.NM02.NM020465;
+package com.patis.NM02.NM0204131;
 
 import java.util.List;
 
@@ -14,11 +14,11 @@ import com.patis.model.CommonVO;
 
 /**
  * @author : 4LEAF.YSH
- * @SCREEN : 도시재상사업 소개 ->  도시재생 관계 법령(statute)
+ * @SCREEN : 도시재생사업 소개 ->  도시재생 관계 법령(statute)
  *
  */
 @Controller
-public class Nm020465Controller {
+public class Nm0204131Controller {
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
 

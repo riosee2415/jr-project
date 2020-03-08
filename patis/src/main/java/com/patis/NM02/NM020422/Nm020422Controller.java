@@ -14,7 +14,7 @@ import com.patis.model.CommonVO;
 
 /**
  * @author : 4LEAF.YSH
- * @SCREEN : 도시재상사업 소개 ->  서울시 도시재생사업 진행현황(business)
+ * @SCREEN : 도시재생사업 소개 ->  서울시 도시재생사업 진행현황(business)
  *
  */
 @Controller
