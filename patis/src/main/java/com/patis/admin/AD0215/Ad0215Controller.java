@@ -96,5 +96,20 @@ public class Ad0215Controller {
 		return "ajax/ad0215Init";
 	}
 	
+	@RequestMapping(value = "/ad0215Notice.do", method = RequestMethod.GET)
+	public String ajaxNotice(Model model,
+							@RequestParam("status")int status) {
+		
+		System.out.println("notice!!!" + status);
+		System.out.println("notice!!!" + status);
+		System.out.println("notice!!!" + status);
+		System.out.println("notice!!!" + status);
+		System.out.println("notice!!!" + status);
+		System.out.println("notice!!!" + status);
+		
+		
+		return null;
+	}
+	
 
 }
