@@ -23,7 +23,8 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 
     <tbody id="ajax-tbody"></tbody>
   </table>
-
+</div>
+<div class="ad0101-paging-box">
   <ul class="ad0101-paging">
     <li onClick="javascript:getPageContent(1)">«</li>
     <li>
