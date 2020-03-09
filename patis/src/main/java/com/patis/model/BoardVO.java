@@ -1,6 +1,7 @@
 package com.patis.model;
 
 public class BoardVO {
+	private String ROWNUM;
 	private int B_NO;
 	private String B_TITLE;
 	private String B_DESCRIPTION;
@@ -13,7 +14,12 @@ public class BoardVO {
 	private String B_TYPE;
 	private String B_DELETE_TIME;
 	
-	
+	public String getROWNUM() {
+		return ROWNUM;
+	}
+	public void setROWNUM(String rOWNUM) {
+		ROWNUM = rOWNUM;
+	}
 	public String getB_DELETE_TIME() {
 		return B_DELETE_TIME;
 	}

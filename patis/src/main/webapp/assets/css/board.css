@@ -217,3 +217,91 @@
   background-color: #444;
   color: #fff;
 }
+
+.board-detail__box .detail-title {
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 23px;
+  font-weight: 600;
+  border-top: 1.5px solid #444;
+}
+
+.board-detail__box .detail-info__box {
+  border-top: 1px solid #444;
+}
+
+.board-detail__box .detail-info__box table {
+	width: 100%;
+}
+
+.board-detail__box .detail-info__box th {
+	padding: 15px 0;
+	width: 20%;
+  font-size: 17px;
+  background: #eff0f1;
+  border-bottom: 1px solid #ddd;
+}
+
+.board-detail__box .detail-info__box td {
+  padding-left: 15px;
+  width: 30%;
+  font-size: 17px;
+  border-bottom: 1px solid #ddd;
+}
+
+.board-detail__box .detail-desc__box {
+	padding: 45px 25px;
+  min-height: 350px;
+  font-size: 18px;
+}
+
+.board-detail__box .detail-paging__box table {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.board-detail__box .detail-paging__box th {
+  padding: 15px 16px;
+  width: 15%;
+  text-align: left;
+  background: #eff0f1;
+	border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.board-detail__box .detail-paging__box td {
+  padding: 15px 16px;
+	width: 85%;
+  color: #444;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.board-detail__box .detail-paging__box td:hover {
+	text-decoration: underline;	
+}
+
+.board-detail__box .detail-paging__box td.empty {
+	text-decoration: none;
+	cursor: default;
+}
+
+.board-detail__box .btn__box {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 20px 0 10px;
+}
+
+.board-detail__box .btn__box button {
+	margin-left: 10px;
+  padding: 5px 10px 6px;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  background: #314688;
+  cursor: pointer;
+}

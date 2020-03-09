@@ -40,48 +40,24 @@
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              <td>71</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-
-            <tr>
-              <td>71</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-
-            <tr>
-              <td>71</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-
-            <tr>
-              <td>71</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-          </tbody>
+          <tbody id="statute-board-js"></tbody>
         </table>
-        <ul class="board-pagination">
-        	<li class="page-control"><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
-        	<li class="page-control"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-        	<li class="page-number active">1</li>
-        	<li class="page-number">2</li>
-        	<li class="page-number">3</li>
-        	<li class="page-control"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-        	<li class="page-control"><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+        <ul class="board-pagination" id="board-pagination-js">
+        	<li class="page-control control-double-left" onclick="javascript:getStatutePageContent(1)">
+        		<i class="fa fa-angle-double-left" aria-hidden="true"></i>
+       		</li>
+        	<li class="page-control control-left">
+        		<i class="fa fa-angle-left" aria-hidden="true"></i>
+       		</li>
+		      <c:forEach var="i" begin="1" end="${page }" step="1">
+		        <li class="page-number" onclick="javascript:getStatutePageContent(${i})">${i}</li>
+		      </c:forEach>
+			    <li class="page-control control-right">
+			    	<i class="fa fa-angle-right" aria-hidden="true"></i>
+		    	</li>
+			    <li class="page-control control-double-right" onclick="javascript:getStatutePageContent(${page})">
+			    	<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+		    	</li>
         </ul>
       </div>
     </div>

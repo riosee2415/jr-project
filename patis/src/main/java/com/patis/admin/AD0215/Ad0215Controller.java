@@ -108,5 +108,41 @@ public class Ad0215Controller {
 		return result;
 	}
 	
+	@RequestMapping(value = "/ad0215Delete.do", method = RequestMethod.GET)
+	@ResponseBody
+	public int ajaxDelete(Model model,
+							@RequestParam("no")int no) {
+		
+		int result = ad0215Service.deleteOne(no);
+		
+		return result;
+	}
+	
+	@RequestMapping(value = "/ad0215DeleteAll.do", method = RequestMethod.GET)
+	@ResponseBody
+	public int ajaxDeleteAll(Model model,
+							@RequestParam(value = "noArr[]")List<String> noArr) {
+		
+		int result = 0;
+		
+		for(int i = 0; i < noArr.size(); i++) {
+			result = ad0215Service.deleteOne(Integer.parseInt(noArr.get(i)));
+		}
+		
+		return result;
+	}
+	
+	
+	@RequestMapping(value = "/ad0215Search.do", method = RequestMethod.GET)
+	public String ajaxSearchData(Model model
+							, @RequestParam("serachVal")String serachVal
+							, @RequestParam("searchType")String searchType) {
+		
+		
+		List<BoardVO> boardList = ad0215Service.getSearch(serachVal, searchType);
+		model.addAttribute("boardList", boardList);
+		
+		return "ajax/ad0215Init";
+	}
 
 }

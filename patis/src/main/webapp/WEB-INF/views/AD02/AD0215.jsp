@@ -1,31 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div class="ad0101-header">
 	<p>게시판 관리 > 공모사업신청 관리</p>
 </div>
 
 <div class="admin__area">
-<div class="board-search__area">
-  <div class="board-search-type">
-    <div class="search-type__box active" id="search-type-js">
-      <p class="search-type-text">전체</p>
-      <i class="fa fa-caret-down" aria-hidden="true"></i>
-    </div>
-    <ul
-      class="search-type__list"
-      id="search-type-list-js"
-      style="display: none;"
-    >
-      <li class="active">전체</li>
-      <li>아이디</li>
-      <li>아이디주소</li>
-    </ul>
-  </div>
-  </div>
-  <input type="text" />
-  <button>검색</button>
+	<div class="board-search__area">
+		<div class="board-search-type">
+			<div class="search-type__box active" id="search-type-js">
+				<p class="search-type-text" id="serach-type-text">제목</p>
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<ul class="search-type__list" id="search-type-list-js"
+				style="display: none;">
+				<li class="active">제목</li>
+				<li>작성자</li>
+			</ul>
+		</div>
+	</div>
+	<input type="text" id="searchValue-js" onkeydown="JavaScript:enterCheck()"/>
+	<button id="search-btn-js" onClick="javascript:serachData()">검색</button>
 </div>
 
 <div class="ad02-content">
@@ -51,14 +47,28 @@
 	</table>
 
 	<ul class="ad0101-paging">
-		<li onClick="javascript:getPageContent(1)"><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
-		<li><c:forEach var="i" begin="1" end="${page }" step="1">
-				<li onClick="javascript:getPageContent(${i})">${i }</li>
-			</c:forEach></li>
+		<li onClick="javascript:getPageContent(1)"><i
+			class="fa fa-angle-double-left" aria-hidden="true"></i></li>
+		<c:forEach var="i" begin="1" end="${page }" step="1">
+			<li onClick="javascript:getPageContent(${i})">${i }</li>
+		</c:forEach>
 
-		<li onClick="javascript:getPageContent(${page})"><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+		<li onClick="javascript:getPageContent(${page})"><i
+			class="fa fa-angle-double-right" aria-hidden="true"></i></li>
 	</ul>
+
+	<div class="ad02-bottom">
+		<div class="ad02-bottom__left">
+		</div>
+
+		<div class="ad02-bottom__right">
+			<input type="button" id="checkDel" class="btn btn-md btn-red" value="일괄삭제" onClick="javascript:allDelete()"/>
+		</div>
+	</div>
+
 </div>
+
+
 
 
 <script src="/assets/js/admin/AD0215.js"></script>
