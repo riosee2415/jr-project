@@ -107,7 +107,7 @@
 .resmenu__m:hover + .sub {
   width: 100%;
   height: 55px;
-  background: #00000080;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 200;
 }
 
@@ -126,11 +126,17 @@
   top: 60px;
   z-index: 0;
   border-bottom: 3px solid transparent;
+  -webkit-border-bottom: 3px solid transparent;
+  -moz-border-bottom: 3px solid transparent;
+  -o-border-bottom: 3px solid transparent;
   transition: 0.5s;
 }
 .resmenu:hover::before {
   height: 200px;
   border-bottom: 3px solid #333;
+  -webkit-border-bottom: 3px solid #333;
+  -moz-border-bottom: 3px solid #333;
+  -o-border-bottom: 3px solid #333;
 }
 .sub li a:hover {
   color: #f18d00;
@@ -144,10 +150,12 @@
   height: 3px;
   background: transparent;
   transition: 0.5s;
+  -webkit-animation: resmenuHoverOutAnimation 0.5s forwards;
   animation: resmenuHoverOutAnimation 0.5s forwards;
 }
 .resmenu li a.resmenu__m:hover::after {
   background: #f18d00;
+  -webkit-animation: resmenuHoverInAnimation 0.5s forwards;
   animation: resmenuHoverInAnimation 0.5s forwards;
 }
 .sub li:first-child {
@@ -200,6 +208,9 @@
   height: 0px;
   overflow: hidden;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
 }
@@ -212,10 +223,16 @@
 
 #collap_menu ul li:hover a.collap-menu-main {
   border-top: 1px solid #333;
+  -webkit-border-top: 1px solid #333;
+  -moz-border-top: 1px solid #333;
+  -o-border-top: 1px solid #333;
 }
 
 #collap_menu ul li:first-child:hover a.collap-menu-main {
   border-top: 0;
+  -webkit-border-top: 0;
+  -moz-border-top: 0;
+  -o-border-top: 0;
 }
 
 #collap_menu ul li .collap-menu-sub a:hover {
@@ -228,6 +245,9 @@
   clear: both;
   margin: 0;
   border-top: 1px solid #555;
+  -webkit-border-top: 1px solid #555;
+  -moz-border-top: 1px solid #555;
+  -o-border-top: 1px solid #555;
   width: 100%;
   background-color: #e7e7e7;
 }
@@ -276,6 +296,27 @@
 }
 
 @keyframes resmenuHoverOutAnimation {
+  0% {
+    margin-left: 0;
+    z-index: 1;
+  }
+  100% {
+    margin-left: -200px;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes resmenuHoverInAnimation {
+  from {
+    margin-left: -200px;
+    z-index: 1;
+  }
+  to {
+    margin-left: 0;
+    z-index: 1;
+  }
+}
+
+@-webkit-keyframes resmenuHoverOutAnimation {
   0% {
     margin-left: 0;
     z-index: 1;

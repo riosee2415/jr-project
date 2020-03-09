@@ -8,7 +8,7 @@
   clear: both;
 }
 .footer_info {
-	position: relative;
+  position: relative;
   width: 80%;
   margin: 0 auto;
   padding: 2% 0;
@@ -34,12 +34,15 @@
 }
 
 .family__area .family__box {
-	position: relative;
+  position: relative;
   padding: 0 15px;
   width: 168px;
   height: 32px;
   line-height: 32px;
   border: 1px solid #cecece;
+  -webkit-border: 1px solid #cecece;
+  -moz-border: 1px solid #cecece;
+  -o-border: 1px solid #cecece;
   cursor: pointer;
 }
 
@@ -58,13 +61,22 @@
 }
 
 .family__area .family__list {
-	display: none;
+  display: none;
   position: absolute;
   bottom: 34px;
   width: 198px;
   border: 1px solid #cecece;
   border-bottom: none;
   box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-border: 1px solid #cecece;
+  -webkit-border-bottom: none;
+  -webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+  -moz-border: 1px solid #cecece;
+  -moz-border-bottom: none;
+  -moz-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+  -o-border: 1px solid #cecece;
+  -o-border-bottom: none;
+  -o-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .family__area .family__list li:hover a {
@@ -79,9 +91,15 @@
   font-weight: 300;
   background: rgba(255, 255, 255, 0.98);
   border-bottom: 1px solid #cecece;
+  -webkit-border-bottom: 1px solid #cecece;
+  -moz-border-bottom: 1px solid #cecece;
+  -o-border-bottom: 1px solid #cecece;
   letter-spacing: 1px;
 }
 
 .family__area .family__list li:last-child a {
-	border-bottom: none;
+  border-bottom: none;
+  -webkit-border-bottom: none;
+  -moz-border-bottom: none;
+  -o-border-bottom: none;
 }
