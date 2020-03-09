@@ -28,6 +28,21 @@
 
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
+	.subTitle {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px;
+  }
+  .sub-main-title {
+    font-size: 24px;
+    color: #f18d00;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+    .subHead{
+    padding:0
+    }
 }
 @media screen and (min-width: 960px) {
 }
