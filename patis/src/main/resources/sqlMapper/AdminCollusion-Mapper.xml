@@ -8,7 +8,7 @@
 	</select>
 	
 	<select id="GET_BOARD_DATA" resultType="boardVO" parameterType="int">
-		SELECT	B_NO,
+		SELECT  B_NO,
 				B_TITLE,
 				B_DESCRIPTION,
 				(

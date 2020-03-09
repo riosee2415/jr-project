@@ -14,7 +14,6 @@ pageEncoding="UTF-8"%>
           <li class="greentext">사업유형</li>
           <li class="greentext">내용</li>
         </ul>
-
         <ul>
           <li>우리동네살리기(1)<br />(소규모 주거)</li>
           <li>

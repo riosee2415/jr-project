@@ -4,25 +4,25 @@
 
 	<select id="GET_COLLUSION_LIST" resultType="boardVO" parameterType="int">
 		SELECT  B_NO, 
-						B_TITLE,
-						B_DESCRIPTION,
-						(
-							SELECT  Z.USER_NAME
-							  FROM  JR_DB.EMP Z
-							 WHERE  B_AUTHOR = Z.USER_NO
-						) AS B_AUTHOR,
-						DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
-						DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
-						DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
-						B_HIT,
-						B_NOTICE,
-						B_USE_YN,
-						B_TYPE
-		  FROM  JR_DB.BOARD_COLLUSION
-		 WHERE  B_USE_YN = 1
-		 ORDER  BY B_NOTICE DESC,
-		           B_NO DESC
-		 LIMIT  10 OFFSET #{paging}
+				B_TITLE,
+				B_DESCRIPTION,
+				(
+					SELECT  Z.USER_NAME
+					  FROM  JR_DB.EMP Z
+					 WHERE  B_AUTHOR = Z.USER_NO
+				) AS B_AUTHOR,
+				DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+				DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+				DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+				B_HIT,
+				B_NOTICE,
+				B_USE_YN,
+				B_TYPE
+  FROM  JR_DB.BOARD_COLLUSION
+ WHERE  B_USE_YN = 1
+ ORDER  BY B_NOTICE DESC,
+           B_NO DESC
+ LIMIT  10 OFFSET #{paging}
 	</select>
 	
 	<select id="GET_LIST_COUNT" resultType="int">
