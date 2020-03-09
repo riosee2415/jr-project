@@ -4,7 +4,8 @@
 	
 	<select id="GET_COUNT" resultType="int">
 		SELECT	COUNT(B_NO)
-		  FROM	JR_DB.BOARD_COLLUSION;
+		  FROM	JR_DB.BOARD_COLLUSION
+		 WHERE	B_USE_YN = 1
 	</select>
 	
 	<select id="GET_BOARD_DATA" resultType="boardVO" parameterType="int">
