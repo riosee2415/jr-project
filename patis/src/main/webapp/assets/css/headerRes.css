@@ -35,6 +35,9 @@
   #menu_call ~ .wrap {
     margin: 0 auto;
   }
+  .logo{
+  	margin: 10px auto;
+  }
 }
 @media screen and (min-width: 960px) {
   .desk {
