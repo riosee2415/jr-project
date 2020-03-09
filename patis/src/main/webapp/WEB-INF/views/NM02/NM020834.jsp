@@ -9,11 +9,11 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
-      <div class="board-search__box">
+      <div class="board-search__box"> 
         <div class="board-search__area">
           <div class="board-search-type">
         		<div class="search-type__box" id="search-type-js">
-        			<p class="search-type-text">전체</p>
+        			<p class="search-type-text"> 전체 </p>
         			<i class="fa fa-caret-down" aria-hidden="true"></i>
         		</div>
         		<ul class="search-type__list" id="search-type-list-js">
