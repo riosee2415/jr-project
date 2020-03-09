@@ -6,14 +6,15 @@
 
   /* 이미지 스타일 */
   .nm82-content-img__box {
-    background-image: url(../images/image/nm1280/sub-nm1282-01-01.png);
+    background-image: url(../images/image/sub-nm1282-01-01.png);
     background-repeat: no-repeat;
-    width: 394px;
-    height: 374px;
+    width: 324px;
+    height: 314px;
     border: 10px solid #62bdd7;
     margin: 0 auto;
     position: relative;
-    margin-top: 150px;
+    margin-top: 95px;
+    margin-bottom: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +30,7 @@
   .nm82-imgbox-title {
     position: relative;
     top: -15px;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
   }
@@ -37,7 +38,7 @@
   .nm82-imgbox-title2 {
     position: absolute;
     bottom: 140px;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: normal;
     text-align: center;
   }

@@ -8,12 +8,16 @@
   }
 
   .nm34-content-img-box {
+    margin:0 auto;
     margin-bottom: 25px;
     border: 1px solid #d5d5d5;
-    width: 379px;
+    width: 339px;
     height: 380px;
   }
-
+	.nm34-imgbox {
+	  width: 338px;
+	  height: 222px;
+	}
   .nm34-imgbox-title {
     font-size: 20px;
     overflow: hidden;

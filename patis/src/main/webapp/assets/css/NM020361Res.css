@@ -21,7 +21,7 @@
   .sub-goal-content {
     width: 85%;
     height: 80px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 80px;
     color: #f18d00;
@@ -44,7 +44,7 @@
     height: 90px;
     line-height: 1.7;
     border: 5px solid #227c39;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     color: #227c39;
     text-align: center;
@@ -81,13 +81,13 @@
   background-image: url("/assets/images/icons/ico_sub_01.png");
 }
 .propel-title {
-  font-size: 30px;
+  font-size: 24px;
   color: #ffffff;
-  line-height: 1.4;
+  line-height: 44px;
   text-align: center;
   margin: 0 auto;
   background-color: #373737;
-  width: 400px;
+  width: 94%;
   height: 44px;
   border-radius: 50px;
 }
@@ -115,18 +115,19 @@
   font-size: 14px;
 }
 .sub-history__year, .sub-history__year-green {
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 .sub-history-line, .sub-history-line-green {
     position: absolute;
     width: 72%;
     height: 5px;
-    margin-top: -55px;
-    margin-left: 85px;
+    margin-top: -40px;
+    z-index: -1;
+    margin-left: 64px;
 }
 .gray-line {
   margin-left: 44px;

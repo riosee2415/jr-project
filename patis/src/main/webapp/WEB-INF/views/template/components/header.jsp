@@ -4,7 +4,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 
 <input type="checkbox" id="menu_call" class="ck" />
 <header class="mobile header">
-  <a href="" class="logo"></a>
+  <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
   <label for="menu_call" class="lst">
     <div class="menuicon"></div>
     <div class="xicon"></div>
