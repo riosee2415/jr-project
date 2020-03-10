@@ -24,7 +24,7 @@ public interface I_Ad0215DAO {
 	 * @RETURN : int
 	 * @DES    : 데이터를 카운팅 하여 리턴
 	 */
-	int getListCount();
+	int getListCount(Map<String, String> params);
 	
 	/**
 	 * @AUTHOR : 4LEAF.YSH
@@ -48,7 +48,7 @@ public interface I_Ad0215DAO {
 	 * @RETURN : List<BoardVO>
 	 * @DES    : 데이터를 검색하여 리턴 
 	 */
-	List<BoardVO> getSearch(String serachVal, String searchType);
+	List<BoardVO> getSearch(Map<String, Object> params);
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM

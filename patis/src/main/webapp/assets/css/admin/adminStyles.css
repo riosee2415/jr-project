@@ -10,6 +10,7 @@
 @import "./AD0101.css";
 @import "./AD0215.css";
 @import "./boardDetailModal.css";
+@import "./pagination.css";
 
 body {
   font-family: Seoulnamsan, sans-serif;

@@ -17,8 +17,8 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 	private I_Ad0215DAO ad0215DAO;
 
 	@Override
-	public int getListCount() {
-		return ad0215DAO.getListCount();
+	public int getListCount(Map<String, String> params) {
+		return ad0215DAO.getListCount(params);
 	}
 
 	@Override
@@ -37,8 +37,8 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 	}
 
 	@Override
-	public List<BoardVO> getSearch(String serachVal, String searchType) {
-		return ad0215DAO.getSearch(serachVal, searchType);
+	public List<BoardVO> getSearch(Map<String, Object> params) {
+		return ad0215DAO.getSearch(params);
 	}
 
 	@Override

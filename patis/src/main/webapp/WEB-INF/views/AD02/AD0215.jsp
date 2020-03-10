@@ -87,5 +87,5 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   </div>
 </div>
 
-<script src="/assets/js/admin/AD0215ajax.js"></script>
-<script src="/assets/js/admin/AD0215.js"></script>
+<script src="/assets/js/admin/AD_board_ajax.js"></script>
+<script src="/assets/js/admin/AD_board.js"></script>

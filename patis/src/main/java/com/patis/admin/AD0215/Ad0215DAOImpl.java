@@ -1,6 +1,5 @@
 package com.patis.admin.AD0215;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,8 +21,8 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 	private static final String NAMESPACE = "AdminCollusion-Mapper";
 
 	@Override
-	public int getListCount() {
-		return sqlSession.selectOne(NAMESPACE + ".GET_COUNT");
+	public int getListCount(Map<String, String> params) {
+		return sqlSession.selectOne(NAMESPACE + ".GET_COUNT", params);
 	}
 
 	@Override
@@ -51,19 +50,8 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 	}
 
 	@Override
-	public List<BoardVO> getSearch(String serachVal, String searchType) {
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("serachVal", serachVal);
-		
-		List<BoardVO> list = new ArrayList<BoardVO>();
-		
-		if(searchType.equals("제목")) {
-			list =  sqlSession.selectList(NAMESPACE + ".GET_SEARCH_TITLE", map);
-		} else if(searchType.equals("작성자")) {
-			list =  sqlSession.selectList(NAMESPACE + ".GET_SEARCH_AUTHOR", map);
-		}
-		
-		return list;
+	public List<BoardVO> getSearch(Map<String, Object> params) {
+		return sqlSession.selectList(NAMESPACE + ".GET_SEARCH", params);
 	}
 
 	@Override

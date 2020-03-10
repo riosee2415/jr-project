@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+.board-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 25px;
+  border: 1.5px solid #e5e5e5;
+}
+
+.board-pagination li {
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #5f5e5e;
+  text-align: center;
+  background-color: #fefefe;
+  border-left: 1.5px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.board-pagination li:first-child {
+  border-left: none;
+}
+
+.board-pagination li.active,
+.board-pagination li:hover {
+  background-color: #444;
+  color: #fff;
+}

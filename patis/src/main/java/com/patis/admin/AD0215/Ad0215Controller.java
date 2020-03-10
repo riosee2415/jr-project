@@ -70,10 +70,6 @@ public class Ad0215Controller {
 			
 			
 			
-			int page = ad0215Service.getListCount();
-			page = page / 10;
-			model.addAttribute("page", page+1);
-			
 			flag = true;
 
 		}
@@ -90,14 +86,38 @@ public class Ad0215Controller {
 	
 	@RequestMapping(value = "/ad0215Init.do", method = RequestMethod.GET)
 	public String ajaxGetBoardData(Model model,
-							@RequestParam("page")int page) {
+							@RequestParam("page")int page,
+							@RequestParam(value="search_type", defaultValue="") String searchType,
+			               @RequestParam(value="search_keyword", defaultValue="") String searchKeyword) {
 		
 		
-		List<BoardVO> boardList = ad0215Service.getBoardData((page-1)*10);
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("paging", Integer.toString((page-1) * 10));
+		params.put("searchType", searchType);
+		params.put("searchKeyword", searchKeyword);
+	
+		List<BoardVO> boardList = ad0215Service.getSearch(params);
 		model.addAttribute("boardList", boardList);
 	
 		
 		return "ajax/ad0215Init";
+	}
+	
+	@RequestMapping(value = "/ad0215Pagination.do", method = RequestMethod.GET)
+	public String ajaxPagination(Model model,
+								 @RequestParam(value="search_type", defaultValue="") String searchType,
+					             @RequestParam(value="search_keyword", defaultValue="") String searchKeyword
+							) {
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("searchType", searchType);
+		params.put("searchKeyword", searchKeyword);
+		
+		int page = ad0215Service.getListCount(params);
+		page = page % 10 == 0 ? page / 10 : page / 10 + 1;
+		model.addAttribute("page", page);
+		
+		return "ajax/adPagination";
 	}
 	
 	@RequestMapping(value = "/ad0215Notice.do", method = RequestMethod.GET)
@@ -136,17 +156,17 @@ public class Ad0215Controller {
 	}
 	
 	
-	@RequestMapping(value = "/ad0215Search.do", method = RequestMethod.GET)
-	public String ajaxSearchData(Model model
-							, @RequestParam("serachVal")String serachVal
-							, @RequestParam("searchType")String searchType) {
-		
-		
-		List<BoardVO> boardList = ad0215Service.getSearch(serachVal, searchType);
-		model.addAttribute("boardList", boardList);
-		
-		return "ajax/ad0215Init";
-	}
+//	@RequestMapping(value = "/ad0215Search.do", method = RequestMethod.GET)
+//	public String ajaxSearchData(Model model
+//							, @RequestParam("serachVal")String serachVal
+//							, @RequestParam("searchType")String searchType) {
+//		
+//		
+//		List<BoardVO> boardList = ad0215Service.getSearch(serachVal, searchType);
+//		model.addAttribute("boardList", boardList);
+//		
+//		return "ajax/ad0215Init";
+//	}
 	
 	@RequestMapping(value = "/ad0215Comments.do", method = RequestMethod.GET)
 	@ResponseBody

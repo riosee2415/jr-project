@@ -47,5 +47,5 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 </c:forEach>
 
 
-<script src="/assets/js/admin/AD0215ajax.js"></script>
+<script src="/assets/js/admin/AD_board_ajax.js"></script>
 <script src="/assets/js/admin/boardDetailModal.js"></script>
