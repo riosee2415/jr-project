@@ -13,4 +13,5 @@
 	<script src="/assets/js/board.js"></script>
 	<script src="./assets/js/NM000000.js"></script>
 	<script src="./assets/js/NM020523.js"></script>
+	<script src="./assets/js/header.js"></script>
 </html>
