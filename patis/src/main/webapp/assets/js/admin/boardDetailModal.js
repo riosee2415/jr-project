@@ -36,12 +36,12 @@ function intoComments(b_no, b_title, b_author) {
 
           if (data.co_USE_YN == 1) {
             tags +=
-              "<div class='mld__useYn id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-xs btn-red' value='삭제' onClick='commentsDeleteHandler(" +
+              "<div class='mld__useYn' id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-sm btn-red' value='삭제' onClick='commentsDeleteHandler(" +
               data.co_NO +
               ")'></input></div>";
           } else {
             tags +=
-              "<div class='mld__useYn id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-xs btn-orange' value='삭제처리' onClick='alert(\"이미 삭제된 댓글입니다.\");'></input></div>";
+              "<div class='mld__useYn' id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-sm btn-orange' value='삭제처리' onClick='alert(\"이미 삭제된 댓글입니다.\");'></input></div>";
           }
 
           tags += "</li>";
