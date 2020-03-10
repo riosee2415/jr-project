@@ -8,7 +8,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       ><input type="checkbox" class="ab" name="ab" value="${board.b_NO }"
     /></td>
     <td>${board.b_NO }</td>
-    <td class="modal-pop">${board.b_TITLE }</td>
+    <td class="modal-pop" onclick="javascript:intoComments()">${board.b_TITLE }</td>
     <td>${board.b_AUTHOR }</td>
     <td>${board.b_CREATE_TIME }</td>
     <td>${board.b_UPLOAD_TIME }</td>
@@ -48,4 +48,4 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 
 
 <script src="/assets/js/admin/AD0215ajax.js"></script>
-<script src="/assets/js/admin/modal.js"></script>
+<script src="/assets/js/admin/boardDetailModal.js"></script>
