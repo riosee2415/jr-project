@@ -25,7 +25,7 @@
 .modal-header {
   background-color: #579b68;
   color: #fff;
-  font-size: 28px;
+  font-size: 20px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -41,13 +41,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   margin: 10px 0 10px;
   padding-bottom: 10px;
 }
 .modal-X i {
   color: #fff;
-  font-size: 40px;
+  font-size: 36px;
 }
 .modal_box__header {
   display: flex;
@@ -62,6 +62,7 @@
   overflow-y: scroll;
 }
 .mm__list li {
+	width:100%;
   box-shadow: 0px 4px 6px 0px rgba(32, 33, 36, 0.2);
   display: flex;
   color:#707070;
@@ -71,8 +72,20 @@
   margin-top:10px;
   padding:10px 6px 10px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 10px;
+}
+.mld__desc{
+	width:52%;
+}
+.mld__author{
+	width:10%;
+}
+.mld__time {
+    width: 20%;
+}
+.mld__useYn {
+	width:8%;
 }
 .mld__no,
 .mld__type,
