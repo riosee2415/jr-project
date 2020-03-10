@@ -28,25 +28,26 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 </div>
 
 <div class="ad02-content">
-  <table>
-    <thead>
-      <tr>
-        <th><input type="checkbox" class="check-all" /></th>
-        <th>글번호</th>
-        <th>제목</th>
-        <th>작성자</th>
-        <th>작성시간</th>
-        <th>최근 수정시간</th>
-        <th>조회수</th>
-        <th>공지사항 설정</th>
-        <th>글삭제</th>
-        <th>삭제시간</th>
-      </tr>
-    </thead>
+  <div class="ad02-table">
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox" class="check-all" /></th>
+          <th>글번호</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성시간</th>
+          <th>최근 수정시간</th>
+          <th>조회수</th>
+          <th>공지사항 설정</th>
+          <th>글삭제</th>
+          <th>삭제시간</th>
+        </tr>
+      </thead>
 
-    <tbody id="ajax-tbody"></tbody>
-  </table>
-
+      <tbody id="ajax-tbody"></tbody>
+    </table>
+  </div>
   <ul class="ad0101-paging">
     <li onClick="javascript:getPageContent(1)">
       <i class="fa fa-angle-double-left" aria-hidden="true"></i>
@@ -73,25 +74,21 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       />
     </div>
   </div>
-<div class="modal">
-  <div class="modal_box">
-    <a href="#" class="modal-X">X</a>
-    <div class="modal_box__header mh" id="modal_box__header">
-    	<div id="mh__no" class="mh__no"></div>
-    	<div id="mh__title" class="mh__title"></div>
-    	<div id="mh__author" class="mh__author"></div>
-    </div>
-    
-    <div class="modal_box__main mm" id="modal_box__main">
-		<ul class="mm__list" id="mm__list">
-		
-		</ul>
+  <div class="modal">
+    <div class="modal_box">
+      <a href="#" class="modal-X">X</a>
+      <div class="modal_box__header mh" id="modal_box__header">
+        <div id="mh__no" class="mh__no"></div>
+        <div id="mh__title" class="mh__title"></div>
+        <div id="mh__author" class="mh__author"></div>
+      </div>
+
+      <div class="modal_box__main mm" id="modal_box__main">
+        <ul class="mm__list" id="mm__list"></ul>
+      </div>
     </div>
   </div>
 </div>
 
-</div>
-
 <script src="/assets/js/admin/AD0215ajax.js"></script>
 <script src="/assets/js/admin/AD0215.js"></script>
-
