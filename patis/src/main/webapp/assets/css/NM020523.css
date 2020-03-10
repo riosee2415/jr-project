@@ -1,5 +1,45 @@
 @charset "utf-8";
 
+.nm23-content {
+  display: none;
+}
+
+.nm23-select {
+  margin: 85px auto;
+}
+
+.nm23-select ul {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #d2d2d2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.nm23-select ul li {
+  width: 70%;
+  line-height: 65px;
+  border-right: 1px solid #d2d2d2;
+  font-size: 24px;
+  color: #545454;
+  cursor: pointer;
+}
+
+.nm23-select ul li:last-child {
+  border-right: none;
+}
+
+.nm23-select ul li.active {
+  color: #ffffff;
+  background-color: #4e4e4e;
+}
+
+.nm23-content-1 {
+  margin-bottom: 160px;
+}
+
 .nm23-title-style-01 {
   margin: 30px 0 20px;
   font-size: 30px;
@@ -15,13 +55,13 @@
   margin-bottom: 20px;
 }
 
-.nm23-list-title2 {
+.nm23-list-title-1 {
   margin: 70px 0 30px;
   font-size: 26px;
   color: #f18d00;
 }
 
-.nm23-list-title2 span {
+.nm23-list-title-1 span {
   color: #585858;
 }
 
@@ -54,6 +94,7 @@
 }
 
 .nm23-table-style {
+  width: 100%;
   font-size: 20px;
   line-height: 2rem;
 }
@@ -82,6 +123,7 @@
 }
 
 .table-middle {
+  text-align: center;
   padding-right: 20px;
   border-right: 1px solid #e5e5e5;
 }
@@ -187,7 +229,6 @@
 
 /* 제2기 도시재생학교 */
 .nm23-title4 {
-  font-weight: bold;
   font-size: 26px;
   color: #f18d00;
   margin-bottom: 45px;
@@ -214,10 +255,23 @@
 }
 
 /* 찾아가는 주민설명회(2019) */
+.nm23-content-mt {
+  margin-top: 300px;
+}
+
+.nm23-list-title2 {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #46a9c6;
+}
+
 .nm23-imgtable-img {
   display: flex;
   flex-direction: row;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .nm23-imgtable-img li {
@@ -308,7 +362,8 @@
 }
 
 /* 묵2동 장미학교(2019) */
-.nm23-list-title3 {
+.nm23-list-title4 {
+  margin-top: 70px;
   font-size: 26px;
   color: #ff5454;
   margin-bottom: 30px;
@@ -321,13 +376,13 @@
   margin-bottom: 130px;
 }
 
-.nm23-list-title4 {
+.nm23-list-title5 {
   font-size: 26px;
   color: #ff5454;
   margin-bottom: 40px;
 }
 
-.nm23-list-title4 span {
+.nm23-list-title5 span {
   color: #585858;
 }
 
@@ -401,6 +456,7 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  margin-bottom: 180px;
 }
 
 .nm23-table5-img2 li {
