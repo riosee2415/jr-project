@@ -73,6 +73,12 @@ function getPageContent(paging){
 }
 
 function boardSearchHandler() {
+	var flag = validationInputLength($('#search-keyword-js').val());
+	if(flag) {
+		$('#search-keyword-js').val('');
+		$('#search-keyword-js').focus();
+		return;
+	}
 	search_type = $('#search-type-list-js li.active').data('type');
     search_keyword = $('#search-keyword-js').val();
     

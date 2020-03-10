@@ -8,6 +8,7 @@ function enterCheck() {
 	if(flag){
 		$("#searchValue-js").val("");
 		$("#searchValue-js").focus();
+		return;
 	}
 	
 	if (event.keyCode == 13) {
