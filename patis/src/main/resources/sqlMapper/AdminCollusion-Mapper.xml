@@ -104,7 +104,12 @@
 		        CO_PARENT_NO,
 		        CO_DESCRIPTION,
 		        CO_CREATE_TIME,
-		        CO_USE_YN
+		        CO_USE_YN,
+		        (
+		        	SELECT	USER_NAME
+		        	  FROM	JR_DB.EMP
+		        	 WHERE	USER_NO = CO_AUTHOR
+		        ) AS CO_AUTHOR
 		  FROM	JR_DB.COMMENTS
 		 WHERE	CO_BOARD_TYPE = 'COLLUSION'
 		   AND 	CO_PARENT_NO = #{p_no}

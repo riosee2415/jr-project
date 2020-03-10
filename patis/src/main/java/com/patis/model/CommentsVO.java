@@ -8,8 +8,15 @@ public class CommentsVO {
     private String CO_DESCRIPTION;
     private String CO_CREATE_TIME;
     private int CO_USE_YN;
+    private String CO_AUTHOR;
     
     
+	public String getCO_AUTHOR() {
+		return CO_AUTHOR;
+	}
+	public void setCO_AUTHOR(String cO_AUTHOR) {
+		CO_AUTHOR = cO_AUTHOR;
+	}
 	public int getCO_NO() {
 		return CO_NO;
 	}

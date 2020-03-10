@@ -25,6 +25,7 @@ function intoComments(b_no, b_title, b_author) {
           tags += "<div class='mld__desc'>" + data.co_DESCRIPTION + "</div>";
           tags += "<div class='mld__useYn'>" + data.co_USE_YN + "</div>";
           tags += "<div class='mld__time'>" + data.co_CREATE_TIME + "</div>";
+          tags += "<div class='mld__author'>" + data.co_AUTHOR + "</div>";
 
           tags += "</li>";
         });
