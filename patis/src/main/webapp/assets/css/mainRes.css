@@ -20,7 +20,7 @@
 
   .banner {
     flex-direction: row;
-    width: 100%;
+    width: 98%;
   }
 
   .up,
@@ -111,11 +111,11 @@
     height: 275px;
   }
   .banner a {
-    width: 110px;
-    height: 118px;
+    width: 100%;
+    height: 180px;
   }
   .banner > div > div {
-    width: auto;
+    width: 100%;
   }
   .main-container-content {
     width: 90%;
