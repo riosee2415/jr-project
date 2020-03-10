@@ -71,7 +71,9 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">▪주민공동이용시설 및 거점시설 현황</h3>
+        <h3 class="nm62-title-style-02">
+          <span>▪</span>주민공동이용시설 및 거점시설 현황
+        </h3>
         <div class="nm62-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-01-02.png"
@@ -121,7 +123,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>층수 / 연면적</li>
             <li>지상 4층,<br />403㎡</li>
-            <li>동청사 : 2,552㎡중<br />지하 1층, 330㎡</li>
+            <li>동청사 : 3,552㎡중<br />지하 1층, 330㎡</li>
             <li>지하 1층 / 지상 5층,<br />494㎡</li>
             <li>지하1층 / 지상5층,<br />495㎡</li>
             <li>지상3층<br />429㎡</li>
@@ -645,7 +647,7 @@ pageEncoding="UTF-8"%>
                   ·&nbsp;2018.09.21. : 관리형 주거환경개선사업 후보지 결정
                 </li>
                 <li>
-                  ·&nbsp;2019.06.03. : 관리형 주고환경개선사업 대상지 결정
+                  ·&nbsp;2019.06.03. : 관리형 주거환경개선사업 대상지 결정
                 </li>
                 <li>·&nbsp;2019.11.01. : 정비계획수립용역 계약</li>
                 <li>·&nbsp;2019.11.05. : 정비계획수립용역 착수</li>
@@ -658,13 +660,13 @@ pageEncoding="UTF-8"%>
         <div class="nm62-tbl-style-01">
           <ul>
             <li>위치</li>
-            <li>중량구 용마산로334, 동남빌딩 4층</li>
+            <li>중랑구 용마산로334, 동남빌딩 4층</li>
           </ul>
           <ul>
             <li>연락처</li>
             <li>
               <ul class="nm62-list-style-dot">
-                <li>총괄코디네이터1, 사무국장1, 코디4, 둥량구청파견직원1</li>
+                <li>총괄코디네이터1, 사무국장1, 코디4, 중랑구청파견직원1</li>
               </ul>
             </li>
           </ul>
@@ -680,7 +682,7 @@ pageEncoding="UTF-8"%>
                 <li>
                   ·&nbsp;2019.12.16. : 선진지역 탐방(금천구 독산 1동 금하마을)
                 </li>
-                <li>·&nbsp;2019.12.18. : 용마베꽃마을 축제</li>
+                <li>·&nbsp;2019.12.18. : 용마배꽃마을 축제</li>
               </ul>
             </li>
           </ul>
@@ -707,7 +709,7 @@ pageEncoding="UTF-8"%>
         <div class="nm62-tbl-style-01">
           <ul>
             <li>위치</li>
-            <li>망우본동 182-34 일대 (면적 : 137,576 ㎡)</li>
+            <li>망우본동 182-34 일대 (면적 : 137,576㎡)</li>
           </ul>
           <ul>
             <li>추진현황</li>
@@ -783,7 +785,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>위치</li>
             <li>
-              우본동580(금호어울림아파트 상가동 101호, 36.21㎡)
+              우본동 580(금호어울림아파트 상가동 101호, 36.21㎡)
               <span>※19.7 개소</span>
             </li>
           </ul>
@@ -829,7 +831,7 @@ pageEncoding="UTF-8"%>
         <div class="nm62-tbl-style-01">
           <ul>
             <li>위치</li>
-            <li>면목3.8동 459-1 일대 (면적 : 99,706 ㎡)</li>
+            <li>면목3.8동 459-1 일대 (면적 : 99,706㎡)</li>
           </ul>
           <ul>
             <li>사업내용</li>
@@ -881,6 +883,9 @@ pageEncoding="UTF-8"%>
 
         <h3 class="nm62-title-style-02">
           <span>▪</span>사가정시장 거점시설 현황
+        </h3>
+        <h3 class="nm62-title-style-04">
+          ·&nbsp;주민거점시설(사가정사랑방)
         </h3>
         <div class="nm62-tbl-style-01">
           <ul>
@@ -964,7 +969,7 @@ pageEncoding="UTF-8"%>
                 <li>·&nbsp;2019.12.17. : 희망지사업 선정</li>
                 <li>·&nbsp;2019.12. ~ 2020.12. : 사업추진</li>
               </ul>
-              <ul class="nm21-list-style-dot3">
+              <ul class="nm62-list-style-dot3">
                 <li>
                   주민모임공간마련, 주민역량강화, 지역조사, 의제발굴, 소규모
                   환경개선사업 시행(주민의제)
@@ -1014,7 +1019,7 @@ pageEncoding="UTF-8"%>
                 </li>
                 <li>
                   ·&nbsp;&lt;플리마켓 및 공방거리&gt; 운영 &lpar;소규모 시범
-                  재생사업&rarr;
+                  재생사업&rpar;
                 </li>
               </ul>
             </li>
@@ -1026,7 +1031,7 @@ pageEncoding="UTF-8"%>
                 <li>·&nbsp;2019.04.11. : 중심시가지형 도시재생 후보지 선정</li>
                 <li>·&nbsp;2019.05.09. : 주민설명회 개최</li>
                 <li>
-                  ·&nbsp;2019.09.21. ~ 22. : 중량패션위크(테마 : 패션업사이클링)
+                  ·&nbsp;2019.09.21. ~ 22. : 중랑패션위크(테마 : 패션업사이클링)
                   개최
                 </li>
                 <li>·&nbsp;2019.10.16. : 중심지형 도시재생 대상지 신청</li>

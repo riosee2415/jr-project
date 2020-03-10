@@ -3,14 +3,13 @@ var title;
 var author;
 
 function intoComments(b_no, b_title, b_author) {
-	
-	no = b_no;
-	title = b_title;
-	author = b_author;
-	
+  no = b_no;
+  title = b_title;
+  author = b_author;
+
   $("#mm__list").html("");
 
-  $(".modal").css("display", "block");
+  $(".modal-01").css("display", "block");
 
   $.ajax({
     url: "/ad0215Comments.do",
@@ -34,11 +33,15 @@ function intoComments(b_no, b_title, b_author) {
           tags += "<div class='mld__desc'>" + data.co_DESCRIPTION + "</div>";
           tags += "<div class='mld__author'>" + data.co_AUTHOR + "</div>";
           tags += "<div class='mld__time'>" + data.co_CREATE_TIME + "</div>";
-          
-          if(data.co_USE_YN == 1) {
-        	  tags += "<div class='mld__useYn id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-xs btn-red' value='삭제' onClick='commentsDeleteHandler(" + data.co_NO + ")'></input></div>";
+
+          if (data.co_USE_YN == 1) {
+            tags +=
+              "<div class='mld__useYn id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-xs btn-red' value='삭제' onClick='commentsDeleteHandler(" +
+              data.co_NO +
+              ")'></input></div>";
           } else {
-        	  tags += "<div class='mld__useYn id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-xs btn-orange' value='삭제처리' onClick='alert(\"이미 삭제된 댓글입니다.\");'></input></div>";
+            tags +=
+              "<div class='mld__useYn id='mld__useYn'><input type='button' id='co_delBtn' class='btn btn-xs btn-orange' value='삭제처리' onClick='alert(\"이미 삭제된 댓글입니다.\");'></input></div>";
           }
 
           tags += "</li>";
@@ -54,26 +57,27 @@ function intoComments(b_no, b_title, b_author) {
   $("#mh__author").html(b_author);
 }
 function closeModal() {
-  $(".modal").css("display", "none");
+  $(".modal-01").css("display", "none");
+  $(".modal-02").css("display", "none");
 }
 
-function commentsDeleteHandler(co_no){
-	
-	
-	
-	var mc = numberFormat($('#ad02-table').data('mc'), 2);
-	var sc = numberFormat($('#ad02-table').data('sc'), 2);
-	
-	var adCode = mc + sc;
-	
-	 $.ajax({
-	      url: "/ad" + adCode + "CommentDelete.do",
-	      type: "get",
-	      data: {
-	    	  co_no: co_no
-	      },
-	      success: function(data) {
-	    	  intoComments(no, title, author);
-	      }
-	    });
+function secondModal() {
+  $(".modal-02").css("display", "block");
+}
+function commentsDeleteHandler(co_no) {
+  var mc = numberFormat($("#ad02-table").data("mc"), 2);
+  var sc = numberFormat($("#ad02-table").data("sc"), 2);
+
+  var adCode = mc + sc;
+
+  $.ajax({
+    url: "/ad" + adCode + "CommentDelete.do",
+    type: "get",
+    data: {
+      co_no: co_no
+    },
+    success: function(data) {
+      intoComments(no, title, author);
+    }
+  });
 }

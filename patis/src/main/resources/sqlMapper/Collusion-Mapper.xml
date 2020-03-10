@@ -33,13 +33,13 @@
 	
 	<sql id="search">
       <if test="searchType != null and searchType != ''">
-          <if test="searchType == 'title'.toString()">
+          <if test="searchType == 't'.toString()">
               AND B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
           </if>
-          <if test="searchType == 'desc'.toString()">
+          <if test="searchType == 'd'.toString()">
               AND B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%')
           </if>
-          <if test="searchType == 'all'.toString()">
+          <if test="searchType == 'td'.toString()">
               AND ( B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
                OR   B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%') )
           </if>

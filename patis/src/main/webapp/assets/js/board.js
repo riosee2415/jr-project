@@ -18,12 +18,14 @@ $(document).ready(function() {
 		$(this).parent().hide();
 	});
 	
-	var b_type = $('#board-list-js').data('btype');
-	if(!isEmpty(b_type)) {
-		b_type = b_type.toLowerCase();
-		if($('#' + b_type + '-board-js').length > 0) 
-			getPageContent(1);
-	}
+	if(!boardSearchInit()) {
+		var b_type = $('#board-list-js').data('btype');
+		if(!isEmpty(b_type)) {
+			b_type = b_type.toLowerCase();
+			if($('#' + b_type + '-board-js').length > 0) 
+				getPageContent(1);
+		}
+	} 
 });
 
 var search_type = '';
@@ -120,6 +122,7 @@ function boardHitUp(b_no) {
 }
 
 function boardSearchInit() {
+	var result = false;
 	var s_type = $('#search-area-js').data('type');
 	var s_keyword = $('#search-area-js').data('keyword');
 	if(!isEmpty(s_type) && !isEmpty(s_keyword)) {
@@ -136,5 +139,7 @@ function boardSearchInit() {
 		$('#search-keyword-js').val(search_keyword);
 		
 		getPageContent(1);
+		result = true;
 	}
+	return result;
 }

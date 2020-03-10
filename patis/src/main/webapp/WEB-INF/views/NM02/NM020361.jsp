@@ -59,8 +59,8 @@ pageEncoding="UTF-8"%>
           <div class="sub-vision-content">
             일지역정체성 기반 문화 가치/경관 회복
             <p class="sub-vision-content-desc">
-              성했던 쇠퇴 구도심 등이 보유하고 있는 역사적/문화적 정체성을
-              활용하여 품격있는 공간을 조성하고 문화서비스를 확충한다.
+              과거 번성했던 쇠퇴 구도심 등이 보유하고 있는 역사적/문화적
+              정체성을 활용하여 품격있는 공간을 조성하고 문화서비스를 확충한다.
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@ pageEncoding="UTF-8"%>
               </tr>
               <tr>
                 <td class="table-sky">1</td>
-                <td class="table-sky">목2동</td>
+                <td class="table-sky">묵2동</td>
                 <td class="table-orange">
                   <p>기 뉴딜사업 선정</p>
                   <p class="table-orangetext">(2018. 8. 선정 완료)</p>
@@ -203,7 +203,7 @@ pageEncoding="UTF-8"%>
                 <td>주민홍보 및 역량강화</td>
                 <td>희망지사업 선정</td>
                 <td>활성화지역 선정</td>
-                <td class="last orange">뉴딜사업 선정</td>
+                <td class="last table-orange">뉴딜사업 선정</td>
               </tr>
             </tbody>
           </table>
@@ -224,7 +224,7 @@ pageEncoding="UTF-8"%>
           <div class="sub-history-content">
             <ul>
               <li>02. 16.</li>
-              <li>·목동2동 도시재생 활성화지역 선정</li>
+              <li>·묵2동 도시재생 활성화지역 선정</li>
             </ul>
           </div>
           <div class="sub-history__title">
@@ -235,7 +235,7 @@ pageEncoding="UTF-8"%>
           <div class="sub-history-content">
             <ul>
               <li>08. 31.</li>
-              <li>·목동2동 뉴딜사업구역 선정</li>
+              <li>·묵2동 뉴딜사업구역 선정</li>
             </ul>
           </div>
           <div class="sub-history__title">
@@ -246,7 +246,7 @@ pageEncoding="UTF-8"%>
           <div class="sub-history-content">
             <ul>
               <li>04. 11.</li>
-              <li>·중화2동 도시재생활성화징젹 선정</li>
+              <li>·중화2동 도시재생활성화지역 선정</li>
             </ul>
             <ul>
               <li>05. 02.</li>
@@ -262,7 +262,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul>
               <li>11. 25.</li>
-              <li>·면목동 중심지(면목·상봉2동) 도시재생활성화지역 선정</li>
+              <li>·면목동 중심지(면목2·상봉2동) 도시재생활성화지역 선정</li>
             </ul>
             <ul>
               <li>12. 17.</li>
@@ -275,7 +275,7 @@ pageEncoding="UTF-8"%>
           <p>▪중랑구 도시재생사업 추진 현황</p>
           <p></p>
           <p class="sub-status-title">
-            중랑구 도시재생 추진현황도 (8개소/220HA, 사업자4, 희망자4)
+            중랑구 도시재생 추진현황도 (8개소/220HA, 사업지4, 희망지4)
           </p>
         </div>
 
@@ -301,7 +301,7 @@ pageEncoding="UTF-8"%>
           <tbody>
             <tr>
               <td class="table-sky table-center">1</td>
-              <td class="table-sky bluetext">목2동</td>
+              <td class="table-sky bluetext">묵2동</td>
               <td>493,219</td>
               <td>
                 <p>
@@ -319,7 +319,7 @@ pageEncoding="UTF-8"%>
               <td class="table-sky bluetext">면목3.8동</td>
               <td>18,020</td>
               <td>
-                <span class="bluetext">추진환경관리사업 선정</span>(’18. 8. 31.
+                <span class="bluetext">주거환경관리사업 선정</span>(’18. 8. 31.
                 - ‘22. 12월)
               </td>
             </tr>
@@ -360,8 +360,8 @@ pageEncoding="UTF-8"%>
               <td>147,998</td>
               <td>
                 <span class="greentext"
-                  >전통시장 연계형 희망지 활성화지역 선정 </span
-                >(’19. 11. 25. - ‘24. 12월)
+                  >전통시장 연계형 희망지 선정 </span
+                >(’19. 5. 15. - ‘20. 3월)
               </td>
             </tr>
             <tr>
