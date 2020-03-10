@@ -68,22 +68,27 @@ function allDelete() {
 		$("input[name='ab']:checked").each(function(i) {
 			checkArr.push($(this).val());
 		});
-
-		$.ajax({
-			url : "/adDeleteAll.do",
-			type : "get",
-			data : {
-				noArr : checkArr
-			},
-			success : function(data) {
-				if (data === 1) {
-					alert("일괄삭제 처리가 완료되었습니다.");
-				} else {
-					alert("일괄삭제 처리에 실패했습니다.");
+		
+		if(checkArr.length == 0) {
+			alert("삭제할 데이터를 선택해주세요.")
+			 return;
+		} else {
+			$.ajax({
+				url : "/ad"+adCode+"DeleteAll.do",
+				type : "get",
+				data : {
+					noArr : checkArr
+				},
+				success : function(data) {
+					if (data === 1) {
+						alert("일괄삭제 처리가 완료되었습니다.");
+					} else {
+						alert("일괄삭제 처리에 실패했습니다.");
+					}
+					getPageContent(1);
 				}
-				window.location.reload();
-			}
-		});
+			});
+		}
 	} else {
 		alert("삭제가 취소되었습니다.");
 	}
