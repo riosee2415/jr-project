@@ -71,7 +71,9 @@
 .resmenu__m {
   font-size: 21px;
 }
-
+.resmenu__m:hover {
+  color: #f18d00;
+}
 .resmenu li .sub li {
   clear: both;
 }
@@ -103,12 +105,20 @@
   font-size: 16px;
   font-weight: normal;
 }
-
+.sub:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.resmenu li:hover .resmenu__m {
+  color: #f18d00;
+}
 .resmenu li:hover .sub,
 .resmenu__m:hover + .sub {
   width: 100%;
   height: 55px;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 200;
 }
 
@@ -139,7 +149,8 @@
   -moz-border-bottom: 3px solid #333;
   -o-border-bottom: 3px solid #333;
 }
-.sub li a:hover {
+
+.sub li a:hover  {
   color: #f18d00;
 }
 .resmenu li a.resmenu__m::after {
@@ -151,16 +162,35 @@
   height: 3px;
   background: transparent;
   transition: 0.5s;
-  -webkit-animation: resmenuHoverOutAnimation 0.5s forwards;
-  animation: resmenuHoverOutAnimation 0.5s forwards;
+  -webkit-animation: resmenuHoverOutInAnimation 0.5s both;
+  animation: resmenuHoverOutAnimation 0.5s both;
 }
-.resmenu li a.resmenu__m:hover::after {
+.resmenu li a.resmenu__m:hover::after{
   background: #f18d00;
-  -webkit-animation: resmenuHoverInAnimation 0.5s forwards;
-  animation: resmenuHoverInAnimation 0.5s forwards;
+  -webkit-animation: resmenuHoverInAnimation 0.5s both;
+  animation: resmenuHoverInAnimation 0.5s both;
 }
-.sub li:first-child {
-  margin-left: 15%;
+
+.resmenu li:first-child .sub li:first-child {
+  margin-left: 10%;
+}
+.resmenu li:nth-child(2) .sub li:first-child {
+  margin-left: 23%;
+}
+.resmenu li:nth-child(3) .sub li:first-child {
+  margin-left: 37%;
+}
+.resmenu li:nth-child(4) .sub li:first-child {
+  margin-left: 43%;
+}
+.resmenu li:nth-child(5) .sub li:first-child {
+  margin-left: 50%;
+}
+.resmenu li:nth-child(6) .sub li:first-child {
+  margin-left: 69%;
+}
+.resmenu li:last-child .sub li:first-child {
+  margin-left: 69%;
 }
 .sub li {
   margin-right: 15px;
@@ -292,6 +322,16 @@
   }
   to {
     margin-left: 0;
+    z-index: 1;
+  }
+}
+@keyframes resmenuSubInAnimation {
+  from {
+    margin-left: 0px;
+    z-index: 1;
+  }
+  to {
+    margin-left: 0px;
     z-index: 1;
   }
 }

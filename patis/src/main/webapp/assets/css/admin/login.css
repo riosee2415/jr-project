@@ -18,7 +18,10 @@
 }
 .login-box__top{
 	font-size:30px;
-	font-weight:bold;
+	color: #333;
+    font-weight: 800;
+    letter-spacing: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	margin:0px 0px 50px;
 }
 .login-data__input{
