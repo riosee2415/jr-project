@@ -56,6 +56,6 @@ public interface I_Ad0215DAO {
 	 * @RETURN : List<CommentsVO>
 	 * @DESC   : 
 	 */
-	List<CommentsVO> getCommentsById(Map map);
+	List<CommentsVO> getCommentsById(int p_no);
 	
 }
