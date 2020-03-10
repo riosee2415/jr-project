@@ -73,10 +73,14 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       />
     </div>
   </div>
-
-  <div class="modal">
-    <input type="text" />
+<div class="modal">
+  <div class="modal_box">
+    <a href="#" class="modal-X">X</a>
   </div>
 </div>
 
+</div>
+
+<script src="/assets/js/admin/AD0215ajax.js"></script>
 <script src="/assets/js/admin/AD0215.js"></script>
+

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.modal {
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+}
+.modal_box {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  margin-top: -245px;
+  width: 60%;
+  height: 500px;
+  background-color: #f19d00;
+}
+.modal-X{
+	font-size: 30px;
+}

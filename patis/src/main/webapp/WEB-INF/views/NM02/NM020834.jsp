@@ -9,22 +9,22 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
-      <div class="board-search__box"> 
+      <div class="board-search__box">
         <div class="board-search__area">
           <div class="board-search-type">
-        		<div class="search-type__box" id="search-type-js">
-        			<p class="search-type-text"> 전체 </p>
-        			<i class="fa fa-caret-down" aria-hidden="true"></i>
-        		</div>
-        		<ul class="search-type__list" id="search-type-list-js">
-        			<li class="active">전체</li>
-        			<li>제목</li>
-        			<li>내용</li>
-        		</ul>
+            <div class="search-type__box" id="search-type-js">
+              <p class="search-type-text">전체</p>
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <ul class="search-type__list" id="search-type-list-js">
+              <li class="active">전체</li>
+              <li>제목</li>
+              <li>내용</li>
+            </ul>
           </div>
           <div class="board-search-keyword">
-	          <input type="text" class="search-keyword" />
-	          <button type="button" class="search-button"></button>
+            <input type="text" class="search-keyword" />
+            <button type="button" class="search-button"></button>
           </div>
         </div>
       </div>
@@ -180,7 +180,7 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
     </div>
-     <!--현장지원센터 -->
+    <!--현장지원센터 -->
     <div class="sub-content-wrap">
       <div class="subHead">
         <%@ include
@@ -189,19 +189,19 @@ pageEncoding="UTF-8"%>
       <div class="board-search__box">
         <div class="board-search__area">
           <div class="board-search-type">
-        		<div class="search-type__box" id="search-type-js">
-        			<p class="search-type-text">전체</p>
-        			<i class="fa fa-caret-down" aria-hidden="true"></i>
-        		</div>
-        		<ul class="search-type__list" id="search-type-list-js">
-        			<li class="active">전체</li>
-        			<li>제목</li>
-        			<li>내용</li>
-        		</ul>
+            <div class="search-type__box" id="search-type-js">
+              <p class="search-type-text">전체</p>
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <ul class="search-type__list" id="search-type-list-js">
+              <li class="active">전체</li>
+              <li>제목</li>
+              <li>내용</li>
+            </ul>
           </div>
           <div class="board-search-keyword">
-	          <input type="text" class="search-keyword" />
-	          <button type="button" class="search-button"></button>
+            <input type="text" class="search-keyword" />
+            <button type="button" class="search-button"></button>
           </div>
         </div>
       </div>

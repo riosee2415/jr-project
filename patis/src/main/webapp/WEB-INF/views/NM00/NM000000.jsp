@@ -77,7 +77,9 @@ pageEncoding="UTF-8"%>
     </div>
   </div>
   <div class="main-container-content">
-    <div class="main-container-image"></div>
+    <a class="main-container-image" href="${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62">
+      
+    </a>
     <div class="main-news">
       <ul>
         <li class="main-news__title">
