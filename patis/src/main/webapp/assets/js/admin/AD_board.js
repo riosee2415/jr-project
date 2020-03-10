@@ -3,7 +3,12 @@ $(document).ready(function() {
 });
 function enterCheck() {
 	
-	validationInputLength($("#searchValue-js").val());
+	var flag = validationInputLength($("#searchValue-js").val());
+	
+	if(flag){
+		$("#searchValue-js").val("");
+		$("#searchValue-js").focus();
+	}
 	
 	if (event.keyCode == 13) {
 		$("#search-btn-js").trigger("click");

@@ -20,7 +20,16 @@ function isEmpty(value){
 
 
 function validationInputLength(e){
+	
+	var flag = false;
+	
 	if(e.length >= 30) {
 		alert("검색할 내용이 너무 길어 데이터를 반영할 수 없습니다.");
+		
+		flag = true;
 	}
+	
+	return flag;
+	
+	
 }
