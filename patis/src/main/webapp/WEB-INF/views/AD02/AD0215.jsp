@@ -69,7 +69,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         type="button"
         id="checkDel"
         class="btn btn-md btn-gray"
-        value="모달모달"
+        value="권한관리"
         onClick="javascript:secondModal()"
       />
     </div>
@@ -99,7 +99,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <div class="modal-02">
     <div class="modal_box">
       <header class="modal-header">
-        <div>모달모달</div>
+        <div>권한관리</div>
         <a href="javascript:closeModal()" class="modal-X">
           <i class="fa fa-times-circle" aria-hidden="true"></i>
         </a>
