@@ -77,17 +77,18 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <div class="modal">
     <div class="modal_box">
       <header class="modal-header">
-        <div class="modal_box__header mh" id="modal_box__header">
-          <div id="mh__no" class="mh__no"></div>
-          <div id="mh__title" class="mh__title"></div>
-          <div id="mh__author" class="mh__author"></div>
-        </div>
+      <div>댓글관리</div>
         <a href="javascript:closeModal()" class="modal-X">
         	<i class="fa fa-times-circle" aria-hidden="true"></i>
         </a>
       </header>
 
       <div class="modal_box__main mm" id="modal_box__main">
+        <div class="modal_box__header mh" id="modal_box__header">
+          <div id="mh__no" class="mh__no"></div>
+          <div id="mh__title" class="mh__title"></div>
+          <div id="mh__author" class="mh__author"></div>
+        </div>
         <ul class="mm__list" id="mm__list"></ul>
       </div>
     </div>
