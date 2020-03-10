@@ -72,6 +72,10 @@ pageEncoding="UTF-8"%>
 					<button type="button" onclick="boardListMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}')">목록</button>
 				</div>
 			</div>
+			
+			<div class="board-comment__area">
+				<%@ include file="/WEB-INF/views/template/components/board_comment.jsp" %>
+			</div>
     </div>
   </div>
   
