@@ -83,7 +83,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     </div>
     
     <div class="modal_box__main mm" id="modal_box__main">
-		<ul class="mm__list">
+		<ul class="mm__list" id="mm__list">
 		
 		</ul>
     </div>
