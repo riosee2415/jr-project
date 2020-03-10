@@ -13,10 +13,10 @@
 	</c:forEach>
 </div>
 <ul class="bread">
-  <li><a href="${pageContext.request.contextPath }/main.do">HOME></a></li>
+  <li><a href="${pageContext.request.contextPath }/main.do">HOME&nbsp;>&nbsp;</a></li>
   <c:forEach var="menu" items="${menuList }" varStatus="status">
   	<c:if test="${param.parent == menu.DETAIL_CODE }">
-		  <li><a href="${menu.URL}">${menu.VAL}></a></li>
+		  <li><a href="${menu.URL}">${menu.VAL}&nbsp;>&nbsp;</a></li>
   	</c:if>
 	</c:forEach>
   <c:forEach var="subMenu" items="${subMenuList }" varStatus="status">

@@ -1,8 +1,11 @@
 $(document).ready(function() {
+	slideInterval = setInterval(function() {
+		  nextAni();
+	  }, 5000);
   function nextAni() {
     $(".main-cooper ul")
       .not(":animated")
-      .animate({ "margin-left": "-170px" }, 500, function() {
+      .animate({ "margin-left": "-200px" }, 500, function() {
         $(".main-cooper ul li")
           .eq(0)
           .appendTo($(".main-cooper ul"));
@@ -13,7 +16,7 @@ $(document).ready(function() {
     $(".main-cooper ul li")
       .eq(2)
       .prependTo($(".main-cooper ul"));
-    $(".main-cooper ul").css("margin-left", "-170px");
+    $(".main-cooper ul").css("margin-left", "-200px");
     $(".main-cooper ul")
       .not(":animated")
       .animate({ "margin-left": "0px" }, 500);

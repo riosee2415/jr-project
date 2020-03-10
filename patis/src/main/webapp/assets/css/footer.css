@@ -17,14 +17,14 @@
   justify-content: flex-start;
   align-items: flex-start;
   color: #ffffff;
-  line-height: 2;
+  line-height: 1.5;
   font-size: 14px;
 }
 .footer_logo {
   display: block;
   margin-right: 30px;
-  width: 320px;
-  height: 60px;
+  width: 270px;
+  height: 45px;
   background-size: cover;
   background-image: url("/assets/images/commons/ftlogo.png");
 }
