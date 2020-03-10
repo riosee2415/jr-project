@@ -126,9 +126,8 @@ pageEncoding="UTF-8"%>
             <li>
               주민 눈높이와 지역의 특성을 고려한 수요자 중심의 맞춤형
               도시재생학교를 추진하여 도시재생에 대한 이해 증진과 참여를
-              유도하고 <br />
-              도시재생 리더를 발굴하는 등 재생역량을 강화하여 도시재생사업을
-              적극 유치코자 함
+              유도하고 도시재생 리더를 발굴하는 등 재생역량을 강화하여
+              도시재생사업을 적극 유치코자 함
             </li>
           </ul>
 
@@ -875,33 +874,33 @@ pageEncoding="UTF-8"%>
               </tr>
             </table>
 
-            <ul class="nm23-table5-img">
+            <ul class="nm23-table5-img2">
               <li>
                 <img
                   src="/assets/images/image/sub-nm0523-02-22.png"
                   alt="수익성 상품기획 과정 -1"
-                  class="sub-nm0523-02-22.png"
+                  class="sub-nm0523-02-22"
                 />
               </li>
               <li>
                 <img
                   src="/assets/images/image/sub-nm0523-02-23.png"
                   alt="수익성 상품기획 과정 -2"
-                  class="sub-nm0523-02-22.png"
+                  class="sub-nm0523-02-22"
                 />
               </li>
               <li>
                 <img
                   src="/assets/images/image/sub-nm0523-02-24.png"
                   alt="수익성 상품기획 과정 -3"
-                  class="sub-nm0523-02-22.png"
+                  class="sub-nm0523-02-22"
                 />
               </li>
               <li>
                 <img
                   src="/assets/images/image/sub-nm0523-02-25.png"
                   alt="수익성 상품기획 과정 -4"
-                  class="sub-nm0523-02-22.png"
+                  class="sub-nm0523-02-22"
                 />
               </li>
             </ul>
@@ -951,7 +950,7 @@ pageEncoding="UTF-8"%>
               </tr>
             </table>
 
-            <ul class="nm23-table5-img2">
+            <ul class="nm23-table5-img3">
               <li>
                 <img
                   src="/assets/images/image/sub-nm0523-02-26.png"

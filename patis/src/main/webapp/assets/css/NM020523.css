@@ -454,7 +454,7 @@
 .nm23-table5-img2 {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   margin-bottom: 180px;
 }
@@ -463,7 +463,28 @@
   margin-right: 5px;
 }
 
-.nm23-table-img2 li:last-child {
+.nm23-table5-img2 li:last-child {
+  margin-right: 0px;
+}
+
+.sub-nm0523-02-22 {
+  width: 295px;
+  height: 219px;
+}
+
+.nm23-table5-img3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 180px;
+}
+
+.nm23-table5-img3 li {
+  margin-right: 5px;
+}
+
+.nm23-table5-img3 li:last-child {
   margin-right: 0px;
 }
 
