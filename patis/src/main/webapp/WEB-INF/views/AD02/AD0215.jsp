@@ -3,7 +3,7 @@ pageEncoding="UTF-8"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div class="ad0101-header">
-  <p>게시판 관리 > 공모사업신청 관리</p>
+  <p>게시판 관리 > 공모사업신청 관리(AD0215)</p>
 </div>
 
 <div class="admin__area">
@@ -48,18 +48,6 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       <tbody id="ajax-tbody"></tbody>
     </table>
   </div>
-  <ul class="ad0101-paging">
-    <li onClick="javascript:getPageContent(1)">
-      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-    </li>
-    <c:forEach var="i" begin="1" end="${page }" step="1">
-      <li onClick="javascript:getPageContent(${i})">${i }</li>
-    </c:forEach>
-
-    <li onClick="javascript:getPageContent(${page})">
-      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-    </li>
-  </ul>
 
   <div class="ad02-bottom">
     <div class="ad02-bottom__left"></div>
@@ -74,14 +62,30 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       />
     </div>
   </div>
+  <ul class="ad0101-paging">
+    <li onClick="javascript:getPageContent(1)">
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+    </li>
+    <c:forEach var="i" begin="1" end="${page }" step="1">
+      <li onClick="javascript:getPageContent(${i})">${i }</li>
+    </c:forEach>
+
+    <li onClick="javascript:getPageContent(${page})">
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </li>
+  </ul>
   <div class="modal">
     <div class="modal_box">
-      <a href="#" class="modal-X">X</a>
-      <div class="modal_box__header mh" id="modal_box__header">
-        <div id="mh__no" class="mh__no"></div>
-        <div id="mh__title" class="mh__title"></div>
-        <div id="mh__author" class="mh__author"></div>
-      </div>
+      <header class="modal-header">
+        <div class="modal_box__header mh" id="modal_box__header">
+          <div id="mh__no" class="mh__no"></div>
+          <div id="mh__title" class="mh__title"></div>
+          <div id="mh__author" class="mh__author"></div>
+        </div>
+        <a href="javascript:closeModal()" class="modal-X">
+        	<i class="fa fa-times-circle" aria-hidden="true"></i>
+        </a>
+      </header>
 
       <div class="modal_box__main mm" id="modal_box__main">
         <ul class="mm__list" id="mm__list"></ul>
