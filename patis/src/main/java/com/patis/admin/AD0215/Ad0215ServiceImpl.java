@@ -42,8 +42,8 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 	}
 
 	@Override
-	public List<CommentsVO> getCommentsById(Map map) {
-		return ad0215DAO.getCommentsById(map);
+	public List<CommentsVO> getCommentsById(int p_no) {
+		return ad0215DAO.getCommentsById(p_no);
 	}
 
 }

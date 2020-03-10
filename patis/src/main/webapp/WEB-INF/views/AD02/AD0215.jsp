@@ -76,6 +76,17 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="modal">
   <div class="modal_box">
     <a href="#" class="modal-X">X</a>
+    <div class="modal_box__header mh" id="modal_box__header">
+    	<div id="mh__no" class="mh__no"></div>
+    	<div id="mh__title" class="mh__title"></div>
+    	<div id="mh__author" class="mh__author"></div>
+    </div>
+    
+    <div class="modal_box__main mm" id="modal_box__main">
+		<ul class="mm__list">
+		
+		</ul>
+    </div>
   </div>
 </div>
 

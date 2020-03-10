@@ -8,7 +8,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       ><input type="checkbox" class="ab" name="ab" value="${board.b_NO }"
     /></td>
     <td>${board.b_NO }</td>
-    <td class="modal-pop" onclick="javascript:intoComments()">${board.b_TITLE }</td>
+    <td class="modal-pop" onclick="javascript:intoComments(`${board.b_NO}`, `${board.b_TITLE }`, `${board.b_AUTHOR }`)">${board.b_TITLE }</td>
     <td>${board.b_AUTHOR }</td>
     <td>${board.b_CREATE_TIME }</td>
     <td>${board.b_UPLOAD_TIME }</td>

@@ -22,3 +22,8 @@
 .modal-X{
 	font-size: 30px;
 }
+
+.modal_box .modal_box__header {
+	display: flex;
+	flex-direction: row;
+}

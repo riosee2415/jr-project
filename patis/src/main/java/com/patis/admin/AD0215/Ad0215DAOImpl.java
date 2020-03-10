@@ -68,8 +68,8 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 	}
 
 	@Override
-	public List<CommentsVO> getCommentsById(Map map) {
-		return sqlSession.selectList(NAMESPACE + ".GET_COMMENT_BY_ID", map);
+	public List<CommentsVO> getCommentsById(int p_no) {
+		return sqlSession.selectList(NAMESPACE + ".GET_COMMENT_BY_ID", p_no);
 	}
 
 }
