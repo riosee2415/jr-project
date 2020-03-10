@@ -9,9 +9,9 @@
 			<i class="fa fa-caret-down" aria-hidden="true"></i>
 		</div>
 		<ul class="search-type__list" id="search-type-list-js">
-			<li class="active" data-type="all">전체</li>
-			<li data-type="title">제목</li>
-			<li data-type="desc">내용</li>
+			<li class="active" data-type="td">전체</li>
+			<li data-type="t">제목</li>
+			<li data-type="d">내용</li>
 		</ul>
   </div>
   <div class="board-search-keyword">
