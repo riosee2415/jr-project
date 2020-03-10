@@ -28,7 +28,12 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 </div>
 
 <div class="ad02-content">
-  <div class="ad02-table" id="ad02-table" data-mc="${param.mc }" data-sc="${param.sc }">
+  <div
+    class="ad02-table"
+    id="ad02-table"
+    data-mc="${param.mc }"
+    data-sc="${param.sc }"
+  >
     <table>
       <thead>
         <tr>
@@ -60,6 +65,13 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         value="일괄삭제"
         onClick="javascript:allDelete()"
       />
+      <input
+        type="button"
+        id="checkDel"
+        class="btn btn-md btn-gray"
+        value="모달모달"
+        onClick="javascript:secondModal()"
+      />
     </div>
   </div>
   <ul class="ad0101-paging">
@@ -74,12 +86,12 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       <i class="fa fa-angle-double-right" aria-hidden="true"></i>
     </li>
   </ul>
-  <div class="modal">
+  <div class="modal-01">
     <div class="modal_box">
       <header class="modal-header">
-      <div>댓글관리</div>
+        <div>댓글관리</div>
         <a href="javascript:closeModal()" class="modal-X">
-        	<i class="fa fa-times-circle" aria-hidden="true"></i>
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
         </a>
       </header>
 
@@ -90,8 +102,17 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           <div id="mh__author" class="mh__author"></div>
         </div>
         <ul class="mm__list" id="mm__list"></ul>
-        
       </div>
+    </div>
+  </div>
+  <div class="modal-02">
+    <div class="modal_box">
+      <header class="modal-header">
+        <div>모달모달</div>
+        <a href="javascript:closeModal()" class="modal-X">
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </a>
+      </header>
     </div>
   </div>
 </div>
