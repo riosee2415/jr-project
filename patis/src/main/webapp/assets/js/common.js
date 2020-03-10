@@ -17,4 +17,3 @@ function isEmpty(value){
 		return false 
 	}
 };
-

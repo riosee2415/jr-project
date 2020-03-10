@@ -39,10 +39,6 @@ public class Nm021164Controller {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		int page = nm021164Service.getListCount();
-		page = page / 10; 
-		model.addAttribute("page", page % 10 == 0 ? page : page + 1);
-		
 		String b_type = nm021164Service.getBoardType();
 		model.addAttribute("b_type", b_type);
 		
@@ -60,7 +56,6 @@ public class Nm021164Controller {
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
 		BoardVO data = nm021164Service.getCollusion(b_no);
-		System.out.println(data);
 		model.addAttribute("data", data);
 		
 		BoardVO prevData = nm021164Service.getPrevCollusion(b_no);
@@ -80,12 +75,21 @@ public class Nm021164Controller {
 	}
 	
 	@RequestMapping(value = "/nm021164Init.do", method = RequestMethod.GET)
-	public String ajaxPaging(Model model,
-			@RequestParam("page")int page) throws Exception {
+	public String ajaxInit(Model model,
+						   @RequestParam("page")int page) throws Exception {
 		List<BoardVO> collusionList = nm021164Service.getCollusionList((page-1)*10);
 		model.addAttribute("boardList", collusionList);
 		
 		return "ajax/nm021164Init";
+	}
+	
+	@RequestMapping(value = "/nm021164Paging.do", method = RequestMethod.GET)
+	public String ajaxPaging(Model model) throws Exception {
+		int page = nm021164Service.getListCount();
+		page = page % 10 == 0 ? page / 10 : page / 10 + 1;
+		model.addAttribute("page", page);
+		
+		return "ajax/pagination";
 	}
 
 }
