@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<div class="board-search__area">
+<div class="board-search__area" id="search-area-js" data-type="${searchType}" data-keyword="${searchKeyword}">
   <div class="board-search-type">
 		<div class="search-type__box" id="search-type-js">
 			<p class="search-type-text">전체</p>

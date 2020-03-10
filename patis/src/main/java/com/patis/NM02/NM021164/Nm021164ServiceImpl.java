@@ -47,13 +47,13 @@ public class Nm021164ServiceImpl implements I_Nm021164Service{
 	}
 
 	@Override
-	public BoardVO getPrevCollusion(int b_no) throws SQLException {
-		return nm021164DAO.getPrevCollusion(b_no);
+	public BoardVO getPrevCollusion(Map<String, Object> params) throws SQLException {
+		return nm021164DAO.getPrevCollusion(params);
 	}
 
 	@Override
-	public BoardVO getNextCollusion(int b_no) throws SQLException {
-		return nm021164DAO.getNextCollusion(b_no);
+	public BoardVO getNextCollusion(Map<String, Object> params) throws SQLException {
+		return nm021164DAO.getNextCollusion(params);
 	}
 	
 	@Override

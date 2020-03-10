@@ -62,7 +62,7 @@ public interface I_Nm021164DAO {
 	 * @RETURN : int
 	 * @DESC   : 공모사업 신청 게시판 이전글 조회
 	 */
-	BoardVO getPrevCollusion(int b_no) throws SQLException;
+	BoardVO getPrevCollusion(Map<String, Object> params) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
@@ -70,7 +70,7 @@ public interface I_Nm021164DAO {
 	 * @RETURN : int
 	 * @DESC   : 공모사업 신청 게시판 다음글 조회
 	 */
-	BoardVO getNextCollusion(int b_no) throws SQLException;
+	BoardVO getNextCollusion(Map<String, Object> params) throws SQLException;
 	
 	
 	/**

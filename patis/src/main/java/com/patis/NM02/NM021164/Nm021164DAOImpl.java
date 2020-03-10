@@ -50,13 +50,13 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 	}
 
 	@Override
-	public BoardVO getPrevCollusion(int b_no) throws SQLException {
-		return sqlSession.selectOne(NAMESPACE + ".GET_PREV_COLLUSION", b_no);
+	public BoardVO getPrevCollusion(Map<String, Object> params) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_PREV_COLLUSION", params);
 	}
 	
 	@Override
-	public BoardVO getNextCollusion(int b_no) throws SQLException {
-		return sqlSession.selectOne(NAMESPACE + ".GET_NEXT_COLLUSION", b_no);
+	public BoardVO getNextCollusion(Map<String, Object> params) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_NEXT_COLLUSION", params);
 	}
 
 	@Override

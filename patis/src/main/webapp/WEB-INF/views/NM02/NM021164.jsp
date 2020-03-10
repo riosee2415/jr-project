@@ -37,5 +37,8 @@ pageEncoding="UTF-8"%>
   	<input type="hidden" name="parent" value="${param.parent }" />
   	<input type="hidden" name="code" value="${param.code }" />
   	<input type="hidden" name="b_no" />
+  	<input type="hidden" name="rownum" />
+  	<input type="hidden" name="s_type" />
+  	<input type="hidden" name="s_keyword" />
   </form>
 </div>

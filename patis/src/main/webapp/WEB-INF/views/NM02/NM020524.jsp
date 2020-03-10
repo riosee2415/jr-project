@@ -83,6 +83,9 @@
         	<li class="page-control"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
         	<li class="page-control"><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
         </ul>
+        <div class="board-btn__box">
+        	<button type="button">글쓰기</button>
+        </div>
       </div>
     </div>
   </div>

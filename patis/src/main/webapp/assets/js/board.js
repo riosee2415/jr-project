@@ -83,15 +83,22 @@ function boardSearchEnterHandler() {
     }
 }
 
-function boardListMoveHandler(b_type) {
+function boardListMoveHandler(b_type, s_type, s_keyword) {
 	b_type = b_type.toLowerCase();
+	$('#frm-' + b_type + ' input[name=s_type]').val(s_type);
+	$('#frm-' + b_type + ' input[name=s_keyword]').val(s_keyword);
 	$('#frm-' + b_type).submit();
 }
 
-function boardDetailMoveHandler(b_type, b_no) {
+function boardDetailMoveHandler(b_type, b_no, rownum, type, keyword) {
+	var s_type = isEmpty(type) ? search_type : type;
+	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
 	boardHitUp(b_no);
 	b_type = b_type.toLowerCase();
 	$('#frm-' + b_type + '-detail input[name=b_no]').val(b_no);
+	$('#frm-' + b_type + '-detail input[name=rownum]').val(rownum);
+	$('#frm-' + b_type + '-detail input[name=s_type]').val(s_type);
+	$('#frm-' + b_type + '-detail input[name=s_keyword]').val(s_keyword);
 	$('#frm-' + b_type + '-detail').submit();
 }
 
@@ -110,4 +117,24 @@ function boardHitUp(b_no) {
 			console.log('error');
 		}
 	});
+}
+
+function boardSearchInit() {
+	var s_type = $('#search-area-js').data('type');
+	var s_keyword = $('#search-area-js').data('keyword');
+	if(!isEmpty(s_type) && !isEmpty(s_keyword)) {
+		search_type = s_type;
+		search_keyword = s_keyword;
+		
+		$('#search-type-list-js li').removeClass('active');
+		$.each($('#search-type-list-js li'), function(index, value) {
+			if($(this).data('type') == search_type) {
+				$(this).addClass('active');
+				$('#search-type-js .search-type-text').text($(this).text());
+			}
+		});
+		$('#search-keyword-js').val(search_keyword);
+		
+		getPageContent(1);
+	}
 }

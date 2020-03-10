@@ -14,7 +14,7 @@
 				<c:when test="${board.b_NOTICE eq 1 }">
 					<tr class="row-notice">
 						<td>공지</td>
-						<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}')">${board.b_TITLE }</td>
+						<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE }</td>
 						<td>${board.b_AUTHOR }</td>
 						<td>${board.b_CREATE_TIME }</td>
 						<td>${board.b_HIT }</td>
@@ -22,8 +22,8 @@
 				</c:when>
 				<c:otherwise>
 					<tr>
-						<td>${board.b_NO }</td>
-						<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}')">${board.b_TITLE }</td>
+						<td>${board.ROWNUM }</td>
+						<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE }</td>
 						<td>${board.b_AUTHOR }</td>
 						<td>${board.b_CREATE_TIME }</td>
 						<td>${board.b_HIT }</td>

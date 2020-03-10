@@ -33,7 +33,9 @@ public class Nm021164Controller {
 	private I_Nm021164Service nm021164Service;
 	
 	@RequestMapping(value="/collusion.apply.do", method=RequestMethod.GET)
-	public String sendScreen(Model model) throws Exception{
+	public String sendScreen(Model model,
+							 @RequestParam(value="s_type", defaultValue="")String searchType,
+						 	 @RequestParam(value="s_keyword", defaultValue="")String searchKeyword) throws Exception{
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -45,12 +47,18 @@ public class Nm021164Controller {
 		String b_type = nm021164Service.getBoardType();
 		model.addAttribute("b_type", b_type);
 		
+		model.addAttribute("searchType", searchType);
+		model.addAttribute("searchKeyword", searchKeyword);
+		
 		return "collusion.apply";
 	}
 	
 	@RequestMapping(value="/collusion.apply.detail.do", method=RequestMethod.GET)
 	public String sendDetailScreen(Model model,
-			 					   @RequestParam(value="b_no")int b_no) throws Exception {
+			 					   @RequestParam(value="b_no")int b_no,
+			 					   @RequestParam(value="rownum")int rownum,
+			 					   @RequestParam(value="s_type", defaultValue="")String searchType,
+			 					   @RequestParam(value="s_keyword", defaultValue="")String searchKeyword) throws Exception {
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
 		List<CommonVO> subMenuList = middlewareService.getSubMenu();
@@ -61,10 +69,19 @@ public class Nm021164Controller {
 		BoardVO data = nm021164Service.getCollusion(b_no);
 		model.addAttribute("data", data);
 		
-		BoardVO prevData = nm021164Service.getPrevCollusion(b_no);
-		BoardVO nextData = nm021164Service.getNextCollusion(b_no);
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("rownum", rownum);
+		params.put("searchType", searchType);
+		params.put("searchKeyword", searchKeyword);
+		
+		BoardVO prevData = nm021164Service.getPrevCollusion(params);
+		BoardVO nextData = nm021164Service.getNextCollusion(params);
+		
 		model.addAttribute("prevData", prevData);
 		model.addAttribute("nextData", nextData);
+		
+		model.addAttribute("searchType", searchType);
+		model.addAttribute("searchKeyword", searchKeyword);
 		
 		return "collusion.apply.detail";
 	}
