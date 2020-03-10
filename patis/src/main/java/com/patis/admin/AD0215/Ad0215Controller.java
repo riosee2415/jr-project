@@ -148,17 +148,17 @@ public class Ad0215Controller {
 		return "ajax/ad0215Init";
 	}
 	
-	@RequestMapping(value = "/ad0215Search.do", method = RequestMethod.GET)
-	@ResponseBody
-	public List<CommentsVO> getCommentById(@RequestParam("p_no")String p_no){
-		
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("type", "COLLUSION");
-		map.put("p_no", p_no);
-		
-		List<CommentsVO> list = ad0215Service.getCommentsById(map);
-		
-		return list;
-	}
+//	@RequestMapping(value = "/ad0215Search.do", method = RequestMethod.GET)
+//	@ResponseBody
+//	public List<CommentsVO> getCommentById(@RequestParam("p_no")String p_no){
+//		
+//		Map<String, Object> map = new HashMap<String, Object>();
+//		map.put("type", "COLLUSION");
+//		map.put("p_no", p_no);
+//		
+//		List<CommentsVO> list = ad0215Service.getCommentsById(map);
+//		
+//		return list;
+//	}
 
 }
