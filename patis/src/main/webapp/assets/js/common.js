@@ -17,3 +17,10 @@ function isEmpty(value){
 		return false 
 	}
 };
+
+
+function validationInputLength(e){
+	if(e.length >= 30) {
+		alert("검색할 내용이 너무 길어 데이터를 반영할 수 없습니다.");
+	}
+}

@@ -2,6 +2,9 @@ $(document).ready(function() {
 	getPageContent(1);
 });
 function enterCheck() {
+	
+	validationInputLength($("#searchValue-js").val());
+	
 	if (event.keyCode == 13) {
 		$("#search-btn-js").trigger("click");
 	}
@@ -47,8 +50,6 @@ function getPageContent(page) {
 
 function serachData() {
 
-	console.log("get!");
-	
 	search_keyword = $("#searchValue-js").val();
 	search_type = $("#serach-type-text").text();
 
