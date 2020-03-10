@@ -7,8 +7,8 @@
   .desk {
     display: none;
   }
-  #collap_menu{
-  display:block;
+  #collap_menu {
+    display: block;
   }
   #menu_call ~ .wrap {
     margin: 0 auto;
@@ -29,14 +29,38 @@
   .mobile {
     display: none;
   }
-   #collap_menu{
-  display:none;
+  #collap_menu {
+    display: none;
   }
   #menu_call ~ .wrap {
     margin: 0 auto;
   }
-  .logo{
-  	margin: 10px auto;
+  .logo {
+    margin: 10px auto;
+  }
+  .resmenu li a.resmenu__m::after{
+  bottom:5px;
+  }
+  .resmenu li .sub a {
+  text-align: left;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: normal;
+}
+  .resmenu li:nth-child(3) .sub li:first-child {
+    margin-left: 38%;
+  }
+  .resmenu li:nth-child(4) .sub li:first-child {
+    margin-left: 42%;
+  }
+  .resmenu li:nth-child(5) .sub li:first-child {
+    margin-left: 43%;
+  }
+  .resmenu li:nth-child(6) .sub li:first-child {
+    margin-left: 67%;
+  }
+  .resmenu li:last-child .sub li:first-child {
+    margin-left: 55%;
   }
 }
 @media screen and (min-width: 960px) {
@@ -46,8 +70,8 @@
   .mobile {
     display: none;
   }
-    #collap_menu{
-  display:none;
+  #collap_menu {
+    display: none;
   }
   #menu_call ~ .wrap {
     width: 100%;
