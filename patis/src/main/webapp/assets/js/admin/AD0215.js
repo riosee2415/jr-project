@@ -70,7 +70,7 @@ function allDelete() {
     });
 
     $.ajax({
-      url: "/ad" + adCode + "DeleteAll.do",
+      url: "/adDeleteAll.do",
       type: "get",
       data: {
         noArr: checkArr

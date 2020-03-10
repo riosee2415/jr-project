@@ -28,7 +28,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 </div>
 
 <div class="ad02-content">
-  <div class="ad02-table">
+  <div class="ad02-table" id="ad02-table" data-mc="${param.mc }" data-sc="${param.sc }">
     <table>
       <thead>
         <tr>
