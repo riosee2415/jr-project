@@ -28,25 +28,51 @@ pageEncoding="UTF-8"%>
         <li class="slide-button"><button class="btn"></button></li>
         <li class="slide-button"><button class="btn"></button></li>
         <li class="slide-control">
-        	<button class="pause"></button> 
-        	<!-- <button class="play"></button> -->
-       	</li>
+          <button class="pause"></button>
+          <!-- <button class="play"></button> -->
+        </li>
       </ul>
     </div>
     <div class="banner">
       <div class="up">
         <div>
-          <a href="" class="banner1"></a>
+          <a
+            href="${pageContext.request.contextPath }/policy.do?parent=3&code=61"
+            class="banner1"
+          ></a>
         </div>
         <div>
-          <a href="" class="banner2"></a>
+          <a
+            href="${pageContext.request.contextPath }/business.do?parent=4&code=22"
+            class="banner2"
+          ></a>
         </div>
-        <div><a href="" class="banner3"></a></div>
+        <div>
+          <a
+            href="${pageContext.request.contextPath }/intro.do?parent=4&code=21"
+            class="banner3"
+          ></a>
+        </div>
       </div>
       <div class="down">
-        <div><a href="" class="banner4"></a></div>
-        <div><a href="" class="banner5"></a></div>
-        <div><a href="" class="banner6"></a></div>
+        <div>
+          <a
+            href="${pageContext.request.contextPath }/education.do?parent=5&code=23"
+            class="banner4"
+          ></a>
+        </div>
+        <div>
+          <a
+            href="${pageContext.request.contextPath }/news.do?parent=8&code=32"
+            class="banner5"
+          ></a>
+        </div>
+        <div>
+          <a
+            href="${pageContext.request.contextPath }/school.do?parent=10&code=37"
+            class="banner6"
+          ></a>
+        </div>
       </div>
     </div>
   </div>
@@ -55,9 +81,9 @@ pageEncoding="UTF-8"%>
     <div class="main-news">
       <ul>
         <li class="main-news__title">
-        	<span class="title-text">최근소식</span>
-        	<a href="#" class="main-plus"></a>
-       	</li>
+          <span class="title-text">최근소식</span>
+          <a href="#" class="main-plus"></a>
+        </li>
         <li class="main-urbannews__content">
           <a href="">2020년 중랑구 도시재생 홈페이지 개설 안내</a>
         </li>
@@ -78,9 +104,9 @@ pageEncoding="UTF-8"%>
     <div class="main-urbannews">
       <ul>
         <li class="main-urbannews__title">
-        	<span class="title-text">도시재생 사업 현황</span>
-        	<a href="#" class="main-plus"></a>
-       	</li>
+          <span class="title-text">도시재생 사업 현황</span>
+          <a href="#" class="main-plus"></a>
+        </li>
         <li class="main-urbannews__content">
           <a href="">중화2동 희망지사업 선정(19.12.17.)</a>
         </li>

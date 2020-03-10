@@ -18,7 +18,10 @@
   opacity: 90%;
   color: #ffffff;
 }
-
+.ad02-content table tbody tr td:nth-child(3):hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
 .ad02-content table thead tr th,
 .ad02-content table tbody tr td {
   padding: 10px 20px;
