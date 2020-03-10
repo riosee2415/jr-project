@@ -1,12 +1,14 @@
 package com.patis.admin.AD0215;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
 import com.patis.model.BoardVO;
+import com.patis.model.CommentsVO;
 
 @Service("ad0215Service")
 public class Ad0215ServiceImpl implements I_Ad0215Service{
@@ -37,6 +39,11 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 	@Override
 	public List<BoardVO> getSearch(String serachVal, String searchType) {
 		return ad0215DAO.getSearch(serachVal, searchType);
+	}
+
+	@Override
+	public List<CommentsVO> getCommentsById(Map map) {
+		return ad0215DAO.getCommentsById(map);
 	}
 
 }

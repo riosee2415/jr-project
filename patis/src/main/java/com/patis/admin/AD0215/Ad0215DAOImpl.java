@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.patis.model.BoardVO;
+import com.patis.model.CommentsVO;
 
 @Repository("ad0215DAO")
 public class Ad0215DAOImpl implements I_Ad0215DAO{
@@ -64,6 +65,11 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 			
 		
 		return list;
+	}
+
+	@Override
+	public List<CommentsVO> getCommentsById(Map map) {
+		return sqlSession.selectList(NAMESPACE + ".GET_COMMENT_BY_ID", map);
 	}
 
 }

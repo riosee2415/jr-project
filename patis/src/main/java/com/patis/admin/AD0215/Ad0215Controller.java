@@ -1,6 +1,8 @@
 package com.patis.admin.AD0215;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.BoardVO;
+import com.patis.model.CommentsVO;
 import com.patis.model.CommonVO;
 import com.patis.model.LoginLogVO;
 
@@ -143,6 +146,19 @@ public class Ad0215Controller {
 		model.addAttribute("boardList", boardList);
 		
 		return "ajax/ad0215Init";
+	}
+	
+	@RequestMapping(value = "/ad0215Search.do", method = RequestMethod.GET)
+	@ResponseBody
+	public List<CommentsVO> getCommentById(@RequestParam("p_no")String p_no){
+		
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("type", "COLLUSION");
+		map.put("p_no", p_no);
+		
+		List<CommentsVO> list = ad0215Service.getCommentsById(map);
+		
+		return list;
 	}
 
 }
