@@ -28,7 +28,12 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 </div>
 
 <div class="ad02-content">
-  <div class="ad02-table" id="ad02-table" data-mc="${param.mc }" data-sc="${param.sc }">
+  <div
+    class="ad02-table"
+    id="ad02-table"
+    data-mc="${param.mc }"
+    data-sc="${param.sc }"
+  >
     <table>
       <thead>
         <tr>
@@ -72,12 +77,12 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <ul class="ad0101-paging" id="ad0101-paging">
    
   </ul>
-  <div class="modal">
+  <div class="modal-01">
     <div class="modal_box">
       <header class="modal-header">
-      <div>댓글관리</div>
+        <div>댓글관리</div>
         <a href="javascript:closeModal()" class="modal-X">
-        	<i class="fa fa-times-circle" aria-hidden="true"></i>
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
         </a>
       </header>
 
@@ -103,5 +108,5 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   </div>
 </div>
 
-<script src="/assets/js/admin/AD0215ajax.js"></script>
-<script src="/assets/js/admin/AD0215.js"></script>
+<script src="/assets/js/admin/AD_board_ajax.js"></script>
+<script src="/assets/js/admin/AD_board.js"></script>
