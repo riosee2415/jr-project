@@ -2,6 +2,7 @@ package com.patis.NM02.NM021164;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -22,6 +23,11 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 	public List<BoardVO> getCollusionList(int paging) throws SQLException {
 		return sqlSession.selectList(NAMESPACE + ".GET_COLLUSION_LIST", paging);
 	}
+	
+	@Override
+	public List<BoardVO> getCollusionSearchList(Map<String, Object> params) throws SQLException {
+		return sqlSession.selectList(NAMESPACE + ".GET_COLLUSION_SEARCH_LIST", params);
+	}
 
 	@Override
 	public BoardVO getCollusion(int b_no) throws SQLException {
@@ -31,6 +37,11 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 	@Override
 	public int getListCount() throws SQLException {
 		return sqlSession.selectOne(NAMESPACE + ".GET_LIST_COUNT");
+	}
+	
+	@Override
+	public int getSearchListCount(Map<String, String> params) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_SEARCH_LIST_COUNT", params);
 	}
 
 	@Override

@@ -6,7 +6,7 @@
   <div class="board-search-type">
 		<div class="search-type__box" id="search-type-js">
 			<p class="search-type-text">전체</p>
-			<i class="fa fa-caret-down" aria-hidden="true" onclick="javascript:boardSearchHandler()"></i>
+			<i class="fa fa-caret-down" aria-hidden="true"></i>
 		</div>
 		<ul class="search-type__list" id="search-type-list-js">
 			<li class="active" data-type="all">전체</li>
@@ -15,7 +15,7 @@
 		</ul>
   </div>
   <div class="board-search-keyword">
-   <input type="text" class="search-keyword" onkey/>
-   <button type="button" class="search-button"></button>
+   <input type="text" class="search-keyword" id="search-keyword-js" onkeydown="javascript:boardSearchEnterHandler()" />
+   <button type="button" class="search-button" onclick="javascript:boardSearchHandler()"></button>
   </div>
 </div>

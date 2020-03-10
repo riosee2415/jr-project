@@ -1,11 +1,14 @@
 package com.patis.NM02.NM021164;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -67,25 +70,41 @@ public class Nm021164Controller {
 	}
 	
 	@ResponseBody
-	@RequestMapping(value = "/collusion.apply.hitUp.do", method = RequestMethod.POST, produces="application/text; charset=utf8")
-	public int ajaxHitUp(Model model,
-						    @RequestParam("b_no")int b_no) throws Exception {
+	@RequestMapping(value = "/collusion.apply.hitUp.do", method = RequestMethod.POST, produces="application/json")
+	public Map<String, Object> ajaxHitUp(Model model,
+						 @RequestParam("b_no")int b_no) throws Exception {
+		Map<String, Object> data = new HashMap<String, Object>();
 		int result = nm021164Service.modifyHitUp(b_no);
-		return result;
+		data.put("result", result);
+		
+		return data;
 	}
 	
 	@RequestMapping(value = "/nm021164Init.do", method = RequestMethod.GET)
 	public String ajaxInit(Model model,
-						   @RequestParam("page")int page) throws Exception {
-		List<BoardVO> collusionList = nm021164Service.getCollusionList((page-1)*10);
+			               @RequestParam("paging") int paging,
+			               @RequestParam(value="search_type", defaultValue="") String searchType,
+			               @RequestParam(value="search_keyword", defaultValue="") String searchKeyword) throws Exception {
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("paging", Integer.toString((paging-1) * 10));
+		params.put("searchType", searchType);
+		params.put("searchKeyword", searchKeyword);
+		
+		List<BoardVO> collusionList = nm021164Service.getCollusionSearchList(params);
 		model.addAttribute("boardList", collusionList);
 		
 		return "ajax/nm021164Init";
 	}
 	
 	@RequestMapping(value = "/nm021164Paging.do", method = RequestMethod.GET)
-	public String ajaxPaging(Model model) throws Exception {
-		int page = nm021164Service.getListCount();
+	public String ajaxPaging(Model model,  
+							 @RequestParam(value="search_type", defaultValue="") String searchType,
+				             @RequestParam(value="search_keyword", defaultValue="") String searchKeyword) throws Exception {
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("searchType", searchType);
+		params.put("searchKeyword", searchKeyword);
+		
+		int page = nm021164Service.getSearchListCount(params);
 		page = page % 10 == 0 ? page / 10 : page / 10 + 1;
 		model.addAttribute("page", page);
 		
