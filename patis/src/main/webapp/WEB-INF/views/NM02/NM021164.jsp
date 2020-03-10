@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -13,12 +14,12 @@ pageEncoding="UTF-8"%>
           <div class="board-search-type">
         		<div class="search-type__box" id="search-type-js">
         			<p class="search-type-text">전체</p>
-        			<i class="fa fa-caret-down" aria-hidden="true"></i>
+        			<i class="fa fa-caret-down" aria-hidden="true" onclick="javascript:"></i>
         		</div>
         		<ul class="search-type__list" id="search-type-list-js">
-        			<li class="active">전체</li>
-        			<li>제목</li>
-        			<li>내용</li>
+        			<li class="active" data-type="all">전체</li>
+        			<li data-type="title">제목</li>
+        			<li data-type="desc">내용</li>
         		</ul>
           </div>
           <div class="board-search-keyword">
@@ -28,7 +29,7 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
 
-      <div class="board-list__box">
+      <div class="board-list__box" id="board-list-js" data-btype="${b_type}" data-parent="${param.parent}" data-code="${param.code}">
         <table class="board-list__table">
           <thead>
             <tr>
@@ -40,22 +41,22 @@ pageEncoding="UTF-8"%>
             </tr>
           </thead>
 
-          <tbody id="collusion-board-js"></tbody>
+          <tbody id="${fn:toLowerCase(b_type)}-board-js"></tbody>
         </table>
         <ul class="board-pagination" id="board-pagination-js">
-        	<li class="page-control control-double-left" onclick="javascript:getCollusionPageContent(1)">
+        	<li class="page-control control-double-left" onclick="javascript:getPageContent(1)">
         		<i class="fa fa-angle-double-left" aria-hidden="true"></i>
        		</li>
         	<li class="page-control control-left">
         		<i class="fa fa-angle-left" aria-hidden="true"></i>
        		</li>
 		      <c:forEach var="i" begin="1" end="${page }" step="1">
-		        <li class="page-number" onclick="javascript:getCollusionPageContent(${i})">${i}</li>
+		        <li class="page-number" onclick="javascript:getPageContent(${i})">${i}</li>
 		      </c:forEach>
 			    <li class="page-control control-right">
 			    	<i class="fa fa-angle-right" aria-hidden="true"></i>
 		    	</li>
-			    <li class="page-control control-double-right" onclick="javascript:getCollusionPageContent(${page})">
+			    <li class="page-control control-double-right" onclick="javascript:getPageContent(${page})">
 			    	<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 		    	</li>
         </ul>
@@ -63,7 +64,7 @@ pageEncoding="UTF-8"%>
     </div>
   </div>
   
-  <form action="/collusion.apply.detail.do" method="get" id="frm-collusion-detail">
+  <form action="/collusion.apply.detail.do" method="get" id="frm-${fn:toLowerCase(b_type)}-detail">
   	<input type="hidden" name="parent" value="${param.parent }" />
   	<input type="hidden" name="code" value="${param.code }" />
   	<input type="hidden" name="b_no" />

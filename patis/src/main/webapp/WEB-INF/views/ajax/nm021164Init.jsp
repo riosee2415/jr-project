@@ -3,24 +3,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
-<c:forEach var="collusion" items="${collusionList }">
+<c:forEach var="board" items="${boardList }">
 	<c:choose>
-		<c:when test="${collusion.b_NOTICE eq 1 }">
+		<c:when test="${board.b_NOTICE eq 1 }">
 			<tr class="row-notice">
 				<td>공지</td>
-				<td class="header-title" onclick="javascript:goCollusionDetailHandler('${collusion.b_NO}')">${collusion.b_TITLE }</td>
-				<td>${collusion.b_AUTHOR }</td>
-				<td>${collusion.b_CREATE_TIME }</td>
-				<td>${collusion.b_HIT }</td>
+				<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}')">${board.b_TITLE }</td>
+				<td>${board.b_AUTHOR }</td>
+				<td>${board.b_CREATE_TIME }</td>
+				<td>${board.b_HIT }</td>
 			</tr>
 		</c:when>
 		<c:otherwise>
 			<tr>
-				<td>${collusion.b_NO }</td>
-				<td class="header-title" onclick="javascript:goCollusionDetailHandler('${collusion.b_NO}')">${collusion.b_TITLE }</td>
-				<td>${collusion.b_AUTHOR }</td>
-				<td>${collusion.b_CREATE_TIME }</td>
-				<td>${collusion.b_HIT }</td>
+				<td>${board.b_NO }</td>
+				<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}')">${board.b_TITLE }</td>
+				<td>${board.b_AUTHOR }</td>
+				<td>${board.b_CREATE_TIME }</td>
+				<td>${board.b_HIT }</td>
 			</tr>
 		</c:otherwise>
 	</c:choose>

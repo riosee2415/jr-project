@@ -62,4 +62,10 @@
       </div>
     </div>
   </div>
+  
+  <form action="/statute.detail.do" method="get" id="frm-statute-detail">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="b_no" />
+  </form>
 </div>

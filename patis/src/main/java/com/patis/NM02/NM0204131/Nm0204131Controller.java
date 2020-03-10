@@ -39,9 +39,35 @@ public class Nm0204131Controller {
 		
 		int page = nm0204131Service.getListCount();
 		page = page / 10;
-		model.addAttribute("page", page+1);
+		model.addAttribute("page", page % 10 == 0 ? page : page + 1);
+		
+		String b_type = nm0204131Service.getBoardType();
+		model.addAttribute("b_type", b_type);
 		
 		return "statute";
+	}
+	
+	@RequestMapping(value="/statute.detail.do", method=RequestMethod.GET)
+	public String sendDetailScreen(Model model,
+			 					   @RequestParam(value="b_no")int b_no) throws Exception {
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		nm0204131Service.modifyHitUp(b_no);
+		
+		BoardVO data = nm0204131Service.getStatute(b_no);
+		model.addAttribute("data", data);
+		
+		BoardVO prevData = nm0204131Service.getPrevStatute(b_no);
+		BoardVO nextData = nm0204131Service.getNextStatute(b_no);
+		model.addAttribute("prevData", prevData);
+		model.addAttribute("nextData", nextData);
+		
+		return "statute.detail";
 	}
 	
 	@RequestMapping(value = "/nm0204131Init.do", method = RequestMethod.GET)
@@ -49,7 +75,7 @@ public class Nm0204131Controller {
 						   @RequestParam("page")int page) throws Exception {
 		
 		List<BoardVO> statuteList = nm0204131Service.getStatuteList((page-1)*10);
-		model.addAttribute("statuteList", statuteList);
+		model.addAttribute("boardList", statuteList);
 	
 		
 		return "ajax/nm0204131Init";

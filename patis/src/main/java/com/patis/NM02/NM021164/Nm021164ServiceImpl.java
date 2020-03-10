@@ -31,6 +31,11 @@ public class Nm021164ServiceImpl implements I_Nm021164Service{
 	}
 
 	@Override
+	public String getBoardType() throws SQLException {
+		return nm021164DAO.getBoardType();
+	}
+
+	@Override
 	public BoardVO getPrevCollusion(int b_no) throws SQLException {
 		return nm021164DAO.getPrevCollusion(b_no);
 	}

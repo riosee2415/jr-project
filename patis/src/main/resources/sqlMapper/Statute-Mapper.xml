@@ -31,6 +31,14 @@
 		 WHERE  B_USE_YN = 1
 	</select>
 	
+	<select id="GET_BOARD_TYPE" resultType="str">
+		SELECT	B_TYPE
+		  FROM	JR_DB.BOARD_STATUTE
+		 WHERE  B_USE_YN = 1 
+		   AND  B_TYPE IS NOT NULL
+		 LIMIT  1
+	</select>
+	
 	<select id="GET_STATUTE" resultType="boardVO" parameterType="int">
 		SELECT  B_NO, 
 						B_TITLE,
@@ -51,5 +59,35 @@
 		 WHERE  B_NO = #{b_no}
 		   AND  B_USE_YN = 1
 	</select>
+	
+	<select id="GET_PREV_STATUTE" resultType="boardVO" parameterType="int">
+		<![CDATA[
+		SELECT  B_NO,
+		        B_TITLE,
+		        B_TYPE
+		  FROM  JR_DB.BOARD_STATUTE
+		 WHERE  B_NO < #{b_no}
+		 ORDER  BY B_NO DESC
+		 LIMIT  1
+	  ]]>
+	</select>
+	
+	<select id="GET_NEXT_STATUTE" resultType="boardVO" parameterType="int">
+		<![CDATA[
+		SELECT  B_NO,
+		        B_TITLE,
+		        B_TYPE
+		  FROM  JR_DB.BOARD_STATUTE
+		 WHERE  B_NO > #{b_no}
+		 ORDER  BY B_NO ASC
+		 LIMIT  1
+	  ]]>
+	</select>
+	
+	<update id="MODIFY_HIT_UP" parameterType="int">
+		UPDATE  JR_DB.BOARD_STATUTE
+		   SET  B_HIT = B_HIT + 1
+		 WHERE  B_NO = #{b_no}
+	</update>
 	
 </mapper>

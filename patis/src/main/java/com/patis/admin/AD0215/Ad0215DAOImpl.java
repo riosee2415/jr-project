@@ -62,7 +62,6 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 		} else if(searchType.equals("작성자")) {
 			list =  sqlSession.selectList(NAMESPACE + ".GET_SEARCH_AUTHOR", map);
 		}
-			
 		
 		return list;
 	}
