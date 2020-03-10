@@ -31,6 +31,26 @@ public class Nm0204131DAOImpl implements I_Nm0204131DAO{
 	@Override
 	public int getListCount() throws SQLException {
 		return sqlSession.selectOne(NAMESPACE + ".GET_LIST_COUNT");
+	}	
+	
+	@Override
+	public String getBoardType() throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_BOARD_TYPE");
+	}
+
+	@Override
+	public BoardVO getPrevStatute(int b_no) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_PREV_STATUTE", b_no);
+	}
+
+	@Override
+	public BoardVO getNextStatute(int b_no) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_NEXT_STATUTE", b_no);
+	}
+
+	@Override
+	public int modifyHitUp(int b_no) throws SQLException {
+		return sqlSession.update(NAMESPACE + ".MODIFY_HIT_UP", b_no);
 	}
 
 }

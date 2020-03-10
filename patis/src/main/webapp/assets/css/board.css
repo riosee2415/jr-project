@@ -250,6 +250,10 @@
   border-bottom: 1px solid #ddd;
 }
 
+.board-detail__box .detail-info__box td .info-text {
+	color: #e02929;
+}
+
 .board-detail__box .detail-desc__box {
 	padding: 45px 25px;
   min-height: 350px;

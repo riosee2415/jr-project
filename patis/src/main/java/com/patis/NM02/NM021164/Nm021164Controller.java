@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.BoardVO;
@@ -39,8 +40,11 @@ public class Nm021164Controller {
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
 		int page = nm021164Service.getListCount();
-		page = page / 10;
-		model.addAttribute("page", page+1);
+		page = page / 10; 
+		model.addAttribute("page", page % 10 == 0 ? page : page + 1);
+		
+		String b_type = nm021164Service.getBoardType();
+		model.addAttribute("b_type", b_type);
 		
 		return "collusion.apply";
 	}
@@ -55,9 +59,8 @@ public class Nm021164Controller {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		nm021164Service.modifyHitUp(b_no);
-		
 		BoardVO data = nm021164Service.getCollusion(b_no);
+		System.out.println(data);
 		model.addAttribute("data", data);
 		
 		BoardVO prevData = nm021164Service.getPrevCollusion(b_no);
@@ -68,13 +71,20 @@ public class Nm021164Controller {
 		return "collusion.apply.detail";
 	}
 	
+	@ResponseBody
+	@RequestMapping(value = "/collusion.apply.hitUp.do", method = RequestMethod.POST, produces="application/text; charset=utf8")
+	public int ajaxHitUp(Model model,
+						    @RequestParam("b_no")int b_no) throws Exception {
+		int result = nm021164Service.modifyHitUp(b_no);
+		return result;
+	}
+	
 	@RequestMapping(value = "/nm021164Init.do", method = RequestMethod.GET)
 	public String ajaxPaging(Model model,
-						   @RequestParam("page")int page) throws Exception {
-		
+			@RequestParam("page")int page) throws Exception {
 		List<BoardVO> collusionList = nm021164Service.getCollusionList((page-1)*10);
-		model.addAttribute("collusionList", collusionList);
-	
+		model.addAttribute("boardList", collusionList);
+		
 		return "ajax/nm021164Init";
 	}
 

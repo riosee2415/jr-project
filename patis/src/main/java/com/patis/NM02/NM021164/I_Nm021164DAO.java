@@ -34,6 +34,14 @@ public interface I_Nm021164DAO {
 	/**
 	 * @AUTHOR : 4LEAF.NJM
 	 * @DATE   : Mar 9, 2020
+	 * @RETURN : String
+	 * @DESC   : 공모사업 신청 게시판 B_TYPE 조회
+	 */
+	String getBoardType() throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 9, 2020
 	 * @RETURN : int
 	 * @DESC   : 공모사업 신청 게시판 이전글 조회
 	 */

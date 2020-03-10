@@ -86,6 +86,11 @@ public class BoardVO {
 	public void setB_TYPE(String b_TYPE) {
 		B_TYPE = b_TYPE;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "BoardVO [ROWNUM=" + ROWNUM + ", B_NO=" + B_NO + ", B_TITLE=" + B_TITLE + ", B_DESCRIPTION="
+				+ B_DESCRIPTION + ", B_AUTHOR=" + B_AUTHOR + ", B_CREATE_TIME=" + B_CREATE_TIME + ", B_UPLOAD_TIME="
+				+ B_UPLOAD_TIME + ", B_HIT=" + B_HIT + ", B_NOTICE=" + B_NOTICE + ", B_USE_YN=" + B_USE_YN + ", B_TYPE="
+				+ B_TYPE + ", B_DELETE_TIME=" + B_DELETE_TIME + "]";
+	}
 }

@@ -3,26 +3,32 @@
 <mapper namespace="Collusion-Mapper">
 
 	<select id="GET_COLLUSION_LIST" resultType="boardVO" parameterType="int">
-		SELECT  B_NO, 
-				B_TITLE,
-				B_DESCRIPTION,
-				(
-					SELECT  Z.USER_NAME
-					  FROM  JR_DB.EMP Z
-					 WHERE  B_AUTHOR = Z.USER_NO
-				) AS B_AUTHOR,
-				DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
-				DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
-				DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
-				B_HIT,
-				B_NOTICE,
-				B_USE_YN,
-				B_TYPE
-  FROM  JR_DB.BOARD_COLLUSION
- WHERE  B_USE_YN = 1
- ORDER  BY B_NOTICE DESC,
-           B_NO DESC
- LIMIT  10 OFFSET #{paging}
+		SELECT  *  
+			FROM  ( 
+		          SELECT  @ROWNUM:=@ROWNUM+1 as ROWNUM,
+									    B_NO, 
+									    B_TITLE,
+									    B_DESCRIPTION,
+									    (
+										    SELECT  Z.USER_NAME
+										    FROM  JR_DB.EMP Z
+										    WHERE  B_AUTHOR = Z.USER_NO
+									    ) AS B_AUTHOR,
+									    DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+									    DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+									    DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+									    B_HIT,
+									    B_NOTICE,
+									    B_USE_YN,
+									    B_TYPE
+					      FROM  JR_DB.BOARD_COLLUSION A,
+					            ( SELECT @ROWNUM:=0 ) R
+					              WHERE  B_USE_YN = 1
+					              ORDER  BY B_NOTICE DESC,
+					              B_NO ASC
+	              ) Z
+        ORDER  BY ROWNUM DESC
+				LIMIT  10 OFFSET #{paging}
 	</select>
 	
 	<select id="GET_LIST_COUNT" resultType="int">
@@ -31,8 +37,16 @@
 		 WHERE  B_USE_YN = 1
 	</select>
 	
+	<select id="GET_BOARD_TYPE" resultType="str">
+		SELECT	B_TYPE
+		  FROM	JR_DB.BOARD_COLLUSION
+		 WHERE  B_USE_YN = 1
+		   AND  B_TYPE IS NOT NULL
+		 LIMIT  1
+	</select>
+	
 	<select id="GET_COLLUSION" resultType="boardVO" parameterType="int">
-		SELECT  B_NO, 
+		SELECT  B_NO,
 						B_TITLE,
 						B_DESCRIPTION,
 						(
@@ -55,7 +69,8 @@
 	<select id="GET_PREV_COLLUSION" resultType="boardVO" parameterType="int">
 		<![CDATA[
 		SELECT  B_NO,
-		        B_TITLE
+		        B_TITLE,
+		        B_TYPE
 		  FROM  JR_DB.BOARD_COLLUSION
 		 WHERE  B_NO < #{b_no}
 		 ORDER  BY B_NO DESC
@@ -66,7 +81,8 @@
 	<select id="GET_NEXT_COLLUSION" resultType="boardVO" parameterType="int">
 		<![CDATA[
 		SELECT  B_NO,
-		        B_TITLE
+		        B_TITLE,
+		        B_TYPE
 		  FROM  JR_DB.BOARD_COLLUSION
 		 WHERE  B_NO > #{b_no}
 		 ORDER  BY B_NO ASC

@@ -30,4 +30,24 @@ public class Nm0204131ServiceImpl implements I_Nm0204131Service{
 		return nm0204131DAO.getListCount();
 	}
 
+	@Override
+	public String getBoardType() throws SQLException {
+		return nm0204131DAO.getBoardType();
+	}
+	
+	@Override
+	public BoardVO getPrevStatute(int b_no) throws SQLException {
+		return nm0204131DAO.getPrevStatute(b_no);
+	}
+
+	@Override
+	public BoardVO getNextStatute(int b_no) throws SQLException {
+		return nm0204131DAO.getNextStatute(b_no);
+	}
+
+	@Override
+	public int modifyHitUp(int b_no) throws SQLException {
+		return nm0204131DAO.modifyHitUp(b_no);
+	}
+
 }

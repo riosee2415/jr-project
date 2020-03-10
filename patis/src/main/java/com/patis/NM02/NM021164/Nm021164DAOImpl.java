@@ -34,6 +34,11 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 	}
 
 	@Override
+	public String getBoardType() throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_BOARD_TYPE");
+	}
+
+	@Override
 	public BoardVO getPrevCollusion(int b_no) throws SQLException {
 		return sqlSession.selectOne(NAMESPACE + ".GET_PREV_COLLUSION", b_no);
 	}
