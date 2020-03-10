@@ -57,4 +57,12 @@ public interface I_Ad0215Service {
 	 * @DESC   : 
 	 */
 	List<CommentsVO> getCommentsById(int p_no);
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : Mar 10, 2020
+	 * @RETURN : int
+	 * @DES    : 댓글 삭제처리
+	 */
+	int commentDelete(int co_no);
 }

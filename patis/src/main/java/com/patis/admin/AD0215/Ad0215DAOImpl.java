@@ -71,4 +71,11 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 		return sqlSession.selectList(NAMESPACE + ".GET_COMMENT_BY_ID", p_no);
 	}
 
+	@Override
+	public int commentDelete(int co_no) {
+		int result = sqlSession.update(NAMESPACE + ".REMOVE_COMMENT", co_no);
+		
+		return result;
+	}
+
 }

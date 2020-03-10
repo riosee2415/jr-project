@@ -156,5 +156,13 @@ public class Ad0215Controller {
 		
 		return list;
 	}
+	
+	@RequestMapping(value = "/ad0215CommentDelete.do", method = RequestMethod.GET)
+	@ResponseBody
+	public int commentDelete(@RequestParam("co_no")int co_no){
+		
+		
+		return ad0215Service.commentDelete(co_no);
+	}
 
 }

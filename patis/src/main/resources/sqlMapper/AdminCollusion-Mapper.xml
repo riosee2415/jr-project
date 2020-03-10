@@ -116,4 +116,11 @@
 		 ORDER	BY CO_CREATE_TIME ASC;
 	</select>
 	
+	
+	<update id="REMOVE_COMMENT" parameterType="int">
+		UPDATE	JR_DB.COMMENTS
+		   SET	CO_USE_YN = 0
+		 WHERE	CO_NO = #{co_no}
+			</update>
+	
 </mapper>

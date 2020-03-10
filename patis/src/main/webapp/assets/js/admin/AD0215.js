@@ -26,6 +26,8 @@ function getPageContent(page) {
   });
 }
 
+
+
 function serachData() {
 	
 	var mc = numberFormat($('#ad02-table').data('mc'), 2);

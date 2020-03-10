@@ -46,4 +46,9 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 		return ad0215DAO.getCommentsById(p_no);
 	}
 
+	@Override
+	public int commentDelete(int co_no) {
+		return ad0215DAO.commentDelete(co_no);
+	}
+
 }
