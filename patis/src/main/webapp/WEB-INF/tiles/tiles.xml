@@ -61,6 +61,10 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM0204131.jsp"/>
     </definition>
     
+     <definition name="statute.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0204131_D.jsp"/>
+    </definition>
+    
      <definition name="collusion.apply" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021164.jsp"/>
     </definition>
