@@ -115,6 +115,11 @@
 .resmenu li:hover .resmenu__m {
   color: #f18d00;
 }
+.resmenu li:hover .resmenu__m::after {
+  background-color: #f18d00;
+   -webkit-animation: resmenuSubInAnimation 0.5s both;
+  animation: resmenuSubInAnimation 0.5s both;
+}
 .resmenu li:hover .sub,
 .resmenu__m:hover + .sub {
   width: 100%;
@@ -126,33 +131,10 @@
   display: block;
 }
 
-.resmenu li:before {
-  content: "";
-  display: block;
-  width: 180px;
-  height: 0px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 60px;
-  z-index: 0;
-  border-bottom: 3px solid transparent;
-  -webkit-border-bottom: 3px solid transparent;
-  -moz-border-bottom: 3px solid transparent;
-  -o-border-bottom: 3px solid transparent;
-  transition: 0.5s;
-}
-.resmenu:hover::before {
-  height: 200px;
-  border-bottom: 3px solid #333;
-  -webkit-border-bottom: 3px solid #333;
-  -moz-border-bottom: 3px solid #333;
-  -o-border-bottom: 3px solid #333;
-}
-
 .sub li a:hover  {
   color: #f18d00;
 }
+
 .resmenu li a.resmenu__m::after {
   content: "";
   position: absolute;
@@ -331,7 +313,7 @@
     z-index: 1;
   }
   to {
-    margin-left: 0px;
+    margin-left: 0;
     z-index: 1;
   }
 }
@@ -356,7 +338,16 @@
     z-index: 1;
   }
 }
-
+@-webkit-keyframes resmenuSubInAnimation {
+  from {
+    margin-left: 0px;
+    z-index: 1;
+  }
+  to {
+    margin-left: 0;
+    z-index: 1;
+  }
+}
 @-webkit-keyframes resmenuHoverOutAnimation {
   0% {
     margin-left: 0;
