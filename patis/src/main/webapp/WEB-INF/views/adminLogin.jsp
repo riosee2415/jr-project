@@ -28,7 +28,7 @@
 	<div class="login">
 		<img src="/assets/images/commons/hdlogo.png" alt="로고">
 		<div class="login-box">
-			<div class="login-box__top">관리자 로그인</div>
+			<div class="login-box__top">ADMIN LOGIN</div>
 			<div class="login-box__center">
 				<form action="${pageContext.request.contextPath }/admin.do" method="post">
 					<div class="login-data">
@@ -42,7 +42,7 @@
 					</div>
 					
 					<div class="login-data">
-						<input type="submit" value="LOGIN" />
+						<input type="submit" value="LOGIN" class="login-data__button"/>
 					</div>
 				</form>
 
