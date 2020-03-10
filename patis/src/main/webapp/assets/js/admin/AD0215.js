@@ -8,8 +8,14 @@ function enterCheck() {
 }
 
 function getPageContent(page) {
+	
+	var mc = numberFormat($('#ad02-table').data('mc'), 2);
+	var sc = numberFormat($('#ad02-table').data('sc'), 2);
+	
+	var adCode = mc + sc;
+	
   $.ajax({
-    url: "/ad0215Init.do",
+    url: "/ad" + adCode + "Init.do",
     type: "get",
     data: {
       page: page
@@ -21,6 +27,12 @@ function getPageContent(page) {
 }
 
 function serachData() {
+	
+	var mc = numberFormat($('#ad02-table').data('mc'), 2);
+	var sc = numberFormat($('#ad02-table').data('sc'), 2);
+	
+	var adCode = mc + sc;
+	
   var serachVal = $("#searchValue-js").val();
   var searchType = $("#serach-type-text").text();
 
@@ -28,7 +40,7 @@ function serachData() {
     getPageContent(1);
   } else {
     $.ajax({
-      url: "/ad0215Search.do",
+      url: "/ad" + adCode + "Search.do",
       type: "get",
       data: {
         serachVal: serachVal,
@@ -42,6 +54,12 @@ function serachData() {
 }
 
 function allDelete() {
+	
+	var mc = numberFormat($('#ad02-table').data('mc'), 2);
+	var sc = numberFormat($('#ad02-table').data('sc'), 2);
+	
+	var adCode = mc + sc;
+	
   var delConfirm = confirm(
     "데이터를 삭제할 경우 복원이 어렵습니다. 삭제하시겠습니까?"
   );
@@ -52,7 +70,7 @@ function allDelete() {
     });
 
     $.ajax({
-      url: "/ad0215DeleteAll.do",
+      url: "/ad" + adCode + "DeleteAll.do",
       type: "get",
       data: {
         noArr: checkArr
