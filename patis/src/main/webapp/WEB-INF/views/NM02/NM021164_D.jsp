@@ -73,7 +73,7 @@ pageEncoding="UTF-8"%>
 				</div>
 			</div>
 			
-			<div class="board-comment__area">
+			<div class="board-comment__area" id="boad-comment-js" data-btype="${data.b_TYPE }" data-pno="${data.b_NO}">
 				<%@ include file="/WEB-INF/views/template/components/board_comment.jsp" %>
 			</div>
     </div>

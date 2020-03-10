@@ -149,3 +149,51 @@ function boardSearchInit() {
 	}
 	return result;
 }
+
+function boardCommentInit() {
+	var b_type = $('#board-comment-js').data('btype');
+	var p_no = $('#board-comment-js').data('pno');
+	$.ajax({
+		url: '/commentList.do',
+		type: 'get',
+		data: {'b_type': b_type, 'p_no': b_no},
+		success: function(data) {
+			console.log(data);
+			$('#comment-list-js').html(data);
+		},
+		error: function() {
+			console.log('error');
+		}
+	});
+}
+
+function boardCommentWrite(loginId) {
+	if(isEmpty(loginId)) {
+		alert('로그인 후 이용 가능합니다.');
+		return;
+	}
+	
+	var desc = $('#write-input-js').val();
+	if(isEmpty(desc)) {
+		alert('작성하실 댓글을 입력해주세요.');
+		$('#write-input-js').focus();
+		return;
+	}
+	
+	var b_type = $('#board-comment-js').data('btype');
+	var p_no = $('#board-comment-js').data('pno');
+	/*
+	$.ajax({
+		url: '/commentWrite.do',
+		type: 'post',
+		data: {'b_type': b_type, 'p_no': b_no, 'desc'},
+		success: function(data) {
+			console.log(data);
+			$('#comment-list-js').html(data);
+		},
+		error: function() {
+			console.log('error');
+		}
+	});
+	*/
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Comments-Mapper">
+
+	<select id="GET_COMMENT_LIST" resultType="commentsVO" parameterType="hashMap">
+		SELECT	CO_NO,
+						CO_BOARD_TYPE,
+		        CO_PARENT_NO,
+		        CO_DESCRIPTION,
+		        CO_CREATE_TIME,
+		        CO_USE_YN,
+		        (
+		        	SELECT	USER_ID,
+		        					USER_NAME
+		        	  FROM	JR_DB.EMP
+		        	 WHERE	USER_NO = CO_AUTHOR
+		        ) AS CO_AUTHOR
+		  FROM	JR_DB.COMMENTS
+		 WHERE	CO_BOARD_TYPE = #{b_type}
+		   AND 	CO_PARENT_NO = #{p_no}
+		 ORDER	BY CO_CREATE_TIME DESC
+	</select>
+	
+	<insert id="SET_COMMENT" parameterType="commentsVO">
+		INSERT INTO JR_DB.COMMENTS
+		(
+			CO_BOARD_TYPE,
+      CO_PARENT_NO,
+      CO_DESCRIPTION,
+      CO_CREATE_TIME,
+      CO_AUTHOR
+		)
+		VALUES 
+		(
+			#{CO_BOARD_TYPE},
+			#{CO_PARENT_NO},
+			#{CO_DESCRIPTION},
+			SYSDATE(),
+			${CO_AUTHOR}
+		)
+	</insert>
+	
+	<update id="MODIFY_COMMENT" parameterType="commentsVO">
+		UPDATE	COMMENTS
+		   SET	CO_DESCRIPTION = #{CO_DESCRIPTION}
+		 WHERE	CO_NO = #{CO_NO}
+	</update>
+	
+	<update id="REMOVE_COMMENT" parameterType="int">
+		UPDATE	COMMENTS
+		   SET	CO_USE_YN = 0
+		 WHERE	CO_NO = #{co_no}
+	</update>
+	
+</mapper>

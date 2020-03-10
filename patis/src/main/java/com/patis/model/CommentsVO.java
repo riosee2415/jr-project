@@ -9,6 +9,7 @@ public class CommentsVO {
     private String CO_CREATE_TIME;
     private int CO_USE_YN;
     private String CO_AUTHOR;
+    private String CO_USER_ID;
     
     
 	public String getCO_AUTHOR() {
@@ -53,7 +54,11 @@ public class CommentsVO {
 	public void setCO_USE_YN(int cO_USE_YN) {
 		CO_USE_YN = cO_USE_YN;
 	}
-
-    
+	public String getCO_USER_ID() {
+		return CO_USER_ID;
+	}
+	public void setCO_USER_ID(String cO_USER_ID) {
+		CO_USER_ID = cO_USER_ID;
+	}
     
 }
