@@ -9,17 +9,17 @@
   justify-content: center;
   align-items: center;
 }
-.topHeader input {
+.topHeader button {
   outline: none;
   border: none;
   font-size: 16px;
   cursor: pointer;
 }
-.topHeader .login input {
+.topHeader .login button {
   background: transparent;
   margin-right: 10px;
 }
-.topHeader .join input {
+.topHeader .join button {
   background: #f18d00;
   color: #fff;
   padding: 8px;
