@@ -6,8 +6,8 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 <header class="mobile header">
   <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
   <div class="topHeader">
-    <div class="login"><input type="button" value="로그인" /></div>
-    <div class="join"><input type="button" value="회원가입" /></div>
+    <div class="login"><button type="button" onclick="javacript:pageLink('/login.do')">로그인</button></div>
+    <div class="join"><button type="button" onclick="javacript:pageLink('/join.do')">회원가입</button></div>
   </div>
   <label for="menu_call" class="lst">
     <div class="menuicon"></div>

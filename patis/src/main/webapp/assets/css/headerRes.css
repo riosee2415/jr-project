@@ -29,6 +29,13 @@
 .topHeader button {
   font-size: 14px;
 }
+.topHeader button {
+  width:80px;
+  height:30px;
+}
+.topHeader .login button {
+    margin-right: 0px;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .desk {
@@ -69,6 +76,9 @@
   }
   .resmenu li:last-child .sub li:first-child {
     margin-left: 55%;
+  }
+  .topHeader{
+  position:inherit;
   }
 }
 @media screen and (min-width: 960px) {
