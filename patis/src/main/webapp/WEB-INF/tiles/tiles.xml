@@ -33,6 +33,10 @@
        <put-attribute name="content" value="/WEB-INF/views/NM00/NM000000.jsp"/>
     </definition>
     
+    <definition name="common/*" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/{1}.jsp"/>
+    </definition> 
+    
     <definition name="policy" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020361.jsp"/>
     </definition>
