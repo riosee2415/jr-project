@@ -31,7 +31,7 @@ pageEncoding="UTF-8"%>
 
       <div class="board-list__box">
         <!-- PC버전 -->
-        <div class="board-pc-ver" style="display: none">
+        <div class="board-pc-ver">
           <table class="board-list__table">
             <thead>
               <tr>

@@ -4,6 +4,8 @@
     <form method="get" id="frm-link"></form>
 	</body>
 	
+	<script src="/assets/plugins/daum-editor/js/editor_loader.js"></script>
+	<script src="/assets/js/daum_editor.js"></script>
 	<script src="/assets/js/jquery-1.12.4.min.js"></script>
 	<script src="/assets/js/init.js"></script>
 	<script src="/assets/js/common.js"></script>

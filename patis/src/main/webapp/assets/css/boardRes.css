@@ -8,12 +8,19 @@
 @media (max-width: 993px) {
 }
 
-@media screen and (max-width: 959px) and (min-width: 768px) {
+@media screen and (max-width: 959px) {
+	.board-list__box .board-pc-ver {
+		display: none;
+	}
+	.board-list__box .board-mobile-ver {
+		display: block;
+	}
   .board-mobile-wrap {
     width: 100%;
   }
 
   .border-list__table2 {
+    width: 100%;
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
   }

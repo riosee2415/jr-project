@@ -116,6 +116,15 @@
   justify-content: center;
 }
 
+.board-list__box .board-pc-ver,
+.board-list__box .board-mobile-ver {
+	width: 100%;
+}
+
+.board-list__box .board-mobile-ver {
+	display: none;
+}
+
 .board-list__box .board-list__table {
   width: 100%;
   margin: 0 auto;
