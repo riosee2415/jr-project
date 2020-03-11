@@ -102,13 +102,59 @@ function boardListMoveHandler(b_type, s_type, s_keyword) {
 function boardDetailMoveHandler(b_type, b_no, rownum, type, keyword) {
 	var s_type = isEmpty(type) ? search_type : type;
 	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
+	
 	boardHitUp(b_no);
 	b_type = b_type.toLowerCase();
+	
 	$('#frm-' + b_type + '-detail input[name=b_no]').val(b_no);
 	$('#frm-' + b_type + '-detail input[name=rownum]').val(rownum);
 	$('#frm-' + b_type + '-detail input[name=s_type]').val(s_type);
 	$('#frm-' + b_type + '-detail input[name=s_keyword]').val(s_keyword);
 	$('#frm-' + b_type + '-detail').submit();
+}
+
+function boardWriteMoveHandler(loginId, b_type, type, keyword) {
+	if(isEmpty(loginId)) {
+		alert('로그인 후 이용 가능합니다.');
+		return;
+	}
+	var s_type = isEmpty(type) ? search_type : type;
+	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
+	
+	b_type = b_type.toLowerCase();
+	
+	$('#frm-' + b_type + '-write input[name=s_type]').val(s_type);
+	$('#frm-' + b_type + '-write input[name=s_keyword]').val(s_keyword);
+	$('#frm-' + b_type + '-write').submit();
+}
+
+function boardWriteProcessHandler(b_type, mode, b_no) {
+	var b_title = $('#input-title-js').val();
+	var b_description = $('#input-desc-js').text();
+	
+	b_type = b_type.toLowerCase();
+	
+	if(isEmpty(b_title)) {
+		alert('제목을 입력해주세요.');
+		$('#input-title-js').focus();
+		return;
+	} else if(isEmpty(b_description)) {
+		alert('내용을 입력해주세요.');
+		//$('#input-title-js').focus();
+		return;
+	}
+	$('#frm-' + b_type + '-write-process input[name=b_title]').val(b_title);
+	$('#frm-' + b_type + '-write-process input[name=b_description]').val(b_description);
+	
+	var message = '';
+	if(mode == 'WRITE') {
+		message = '입력하신 내용으로 게시글을 등록하시겠습니까 ?';
+	} else {
+		message = '입력하신 내용으로 게시글을 변경하시겠습니까 ?';
+	}
+	if(confirm(message)) {
+		$('#frm-' + b_type + '-write-process').submit();
+	}
 }
 
 function boardHitUp(b_no) {
@@ -152,6 +198,8 @@ function boardSearchInit() {
 }
 
 function boardCommentInit() {
+	if($('#board-comment-js').length == 0) return;
+	
 	var b_type = $('#board-comment-js').data('btype');
 	var p_no = $('#board-comment-js').data('pno');
 	$.ajax({

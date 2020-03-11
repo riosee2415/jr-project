@@ -1,3 +1,6 @@
+var formId = $('#board-detail-js').data('btype').toLowerCase();
+formId = 'frm-' + formId + '-write-process';
+console.log(formId);
 var config = {
 	txHost : '', /*
 					 * 런타임 시 리소스들을 로딩할 때 필요한 부분으로, 경로가 변경되면 이 부분 수정이 필요. ex)
@@ -11,7 +14,7 @@ var config = {
 	txProject : 'sample', /* 수정필요없음. 프로젝트가 여러개일 경우만 수정한다. */
 	initializedId : "", /* 대부분의 경우에 빈문자열 */
 	wrapper : "tx_trex_container", /* 에디터를 둘러싸고 있는 레이어 이름(에디터 컨테이너) */
-	form : 'boardWrite' + "", /* 등록하기 위한 Form 이름 */
+	form : formId, /* 등록하기 위한 Form 이름 */
 	txIconPath : "/assets/plugins/daum-editor/images/icon/editor/", /*
 																										 * 에디터에
 																										 * 사용되는
@@ -60,10 +63,11 @@ var config = {
 			show : true,
 			confirmForDeleteAll : true
 		}
-	},
+	}
+	/*
 	size : {
-		contentWidth : 700
-	/* 지정된 본문영역의 넓이가 있을 경우에 설정 */}
+		contentWidth : 700 */
+	/* 지정된 본문영역의 넓이가 있을 경우에 설정 */
 };
 EditorJSLoader.ready(function(Editor) {
 	var editor = new Editor(config);

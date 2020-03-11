@@ -97,6 +97,10 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524.jsp"/>
     </definition>
     
+    <definition name="community.write" extends="subTopMenuLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524_W.jsp"/>
+    </definition>
+    
     <definition name="news" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020832.jsp"/>
     </definition>
