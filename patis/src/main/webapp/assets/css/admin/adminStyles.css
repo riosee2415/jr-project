@@ -8,9 +8,10 @@
 @import "./adminMain.css";
 @import "./adminFooter.css";
 @import "./AD0101.css";
-@import "./AD0215.css";
+@import "./ADBoard.css";
 @import "./boardDetailModal.css";
 @import "./pagination.css";
+@import "./adRight.css";
 
 body {
   font-family: Seoulnamsan, sans-serif;
