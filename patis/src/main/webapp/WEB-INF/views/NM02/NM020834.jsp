@@ -216,8 +216,8 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
       <div class="nm34-page-wrap">
-        <!-- 1번째 -->
         <div class="nm34-content">
+          <!-- 1번째 -->
           <div class="nm34-content-img-box">
             <ul>
               <li>
@@ -236,8 +236,10 @@ pageEncoding="UTF-8"%>
                 2020.01.02
               </li>
               <li class="nm34-imgbox-view">
-                <span>조회수 <span>71</span></span>
-                <span>♡ <span>0</span></span>
+                <span class="nm34-imgbox-view-span"
+                  >조회수 <span>71</span></span
+                >
+                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
               </li>
             </ul>
           </div>
@@ -260,8 +262,10 @@ pageEncoding="UTF-8"%>
                 2020.01.02
               </li>
               <li class="nm34-imgbox-view">
-                <span>조회수 <span>53</span></span>
-                <span>♡ <span>0</span></span>
+                <span class="nm34-imgbox-view-span"
+                  >조회수 <span>53</span></span
+                >
+                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
               </li>
             </ul>
           </div>
@@ -284,15 +288,15 @@ pageEncoding="UTF-8"%>
                 2020.01.02
               </li>
               <li class="nm34-imgbox-view">
-                <span>조회수 <span>64</span></span>
-                <span>♡ <span>0</span></span>
+                <span class="nm34-imgbox-view-span"
+                  >조회수 <span>64</span></span
+                >
+                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
               </li>
             </ul>
           </div>
-        </div>
 
-        <!-- 2번째 -->
-        <div class="nm34-content">
+          <!-- 2번째 -->
           <div class="nm34-content-img-box">
             <ul>
               <li>
@@ -311,8 +315,10 @@ pageEncoding="UTF-8"%>
                 2019.10.31
               </li>
               <li class="nm34-imgbox-view">
-                <span>조회수 <span>112</span></span>
-                <span>♡ <span>0</span></span>
+                <span class="nm34-imgbox-view-span"
+                  >조회수 <span>112</span></span
+                >
+                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
               </li>
             </ul>
           </div>
@@ -335,8 +341,10 @@ pageEncoding="UTF-8"%>
                 2019.10.31
               </li>
               <li class="nm34-imgbox-view">
-                <span>조회수 <span>39</span></span>
-                <span>♡ <span>0</span></span>
+                <span class="nm34-imgbox-view-span"
+                  >조회수 <span>39</span></span
+                >
+                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
               </li>
             </ul>
           </div>
@@ -359,8 +367,10 @@ pageEncoding="UTF-8"%>
                 2019.10.31
               </li>
               <li class="nm34-imgbox-view">
-                <span>조회수 <span>76</span></span>
-                <span>♡ <span>0</span></span>
+                <span class="nm34-imgbox-view-span"
+                  >조회수 <span>76</span></span
+                >
+                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
               </li>
             </ul>
           </div>
