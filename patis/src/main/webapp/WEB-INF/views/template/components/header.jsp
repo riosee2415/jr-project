@@ -7,7 +7,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
   <div class="topHeader">
     <div class="login"><input type="button" value="로그인" /></div>
-    <div class="signIn"><input type="button" value="회원가입" /></div>
+    <div class="join"><input type="button" value="회원가입" /></div>
   </div>
   <label for="menu_call" class="lst">
     <div class="menuicon"></div>
@@ -19,7 +19,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
     <div class="topHeader">
       <div class="login"><input type="button" value="로그인" /></div>
-      <div class="signIn"><input type="button" value="회원가입" /></div>
+      <div class="join"><input type="button" value="회원가입" /></div>
     </div>
     <nav id="deskmenu">
       <ul class="menu resmenu" id="resmenu-js">
