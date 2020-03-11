@@ -111,7 +111,7 @@
 	
 	
 	<update id="REMOVE_COMMENT" parameterType="int">
-		UPDATE	COMMENTS
+		UPDATE	JR_DB.COMMENTS
 		   SET	CO_USE_YN = 0
 		 WHERE	CO_NO = #{co_no}
 			</update>
