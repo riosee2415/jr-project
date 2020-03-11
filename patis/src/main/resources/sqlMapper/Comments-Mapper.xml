@@ -7,17 +7,22 @@
 						CO_BOARD_TYPE,
 		        CO_PARENT_NO,
 		        CO_DESCRIPTION,
-		        CO_CREATE_TIME,
+		        DATE_FORMAT(CO_CREATE_TIME, '%Y-%m-%d %H:%i:%S') AS CO_CREATE_TIME,
 		        CO_USE_YN,
 		        (
-		        	SELECT	USER_ID,
-		        					USER_NAME
-		        	  FROM	JR_DB.EMP
-		        	 WHERE	USER_NO = CO_AUTHOR
-		        ) AS CO_AUTHOR
+							SELECT Z.USER_NAME
+							  FROM  JR_DB.EMP Z
+							 WHERE  CO_AUTHOR = Z.USER_NO
+						) AS CO_AUTHOR,
+						(
+							SELECT Z.USER_ID
+							  FROM  JR_DB.EMP Z
+							 WHERE  CO_AUTHOR = Z.USER_NO
+						) AS CO_USER_ID
 		  FROM	JR_DB.COMMENTS
 		 WHERE	CO_BOARD_TYPE = #{b_type}
 		   AND 	CO_PARENT_NO = #{p_no}
+		   AND	CO_USE_YN = 1
 		 ORDER	BY CO_CREATE_TIME DESC
 	</select>
 	
@@ -41,13 +46,13 @@
 	</insert>
 	
 	<update id="MODIFY_COMMENT" parameterType="commentsVO">
-		UPDATE	COMMENTS
+		UPDATE	JR_DB.COMMENTS
 		   SET	CO_DESCRIPTION = #{CO_DESCRIPTION}
 		 WHERE	CO_NO = #{CO_NO}
 	</update>
 	
 	<update id="REMOVE_COMMENT" parameterType="int">
-		UPDATE	COMMENTS
+		UPDATE	JR_DB.COMMENTS
 		   SET	CO_USE_YN = 0
 		 WHERE	CO_NO = #{co_no}
 	</update>

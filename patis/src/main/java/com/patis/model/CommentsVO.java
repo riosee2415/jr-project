@@ -60,5 +60,11 @@ public class CommentsVO {
 	public void setCO_USER_ID(String cO_USER_ID) {
 		CO_USER_ID = cO_USER_ID;
 	}
+	@Override
+	public String toString() {
+		return "CommentsVO [CO_NO=" + CO_NO + ", CO_BOARD_TYPE=" + CO_BOARD_TYPE + ", CO_PARENT_NO=" + CO_PARENT_NO
+				+ ", CO_DESCRIPTION=" + CO_DESCRIPTION + ", CO_CREATE_TIME=" + CO_CREATE_TIME + ", CO_USE_YN="
+				+ CO_USE_YN + ", CO_AUTHOR=" + CO_AUTHOR + ", CO_USER_ID=" + CO_USER_ID + "]";
+	}
     
 }
