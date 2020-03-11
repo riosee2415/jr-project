@@ -74,9 +74,23 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       />
     </div>
   </div>
+  
   <ul class="ad0101-paging" id="ad0101-paging">
    
   </ul>
+  
+  
+  <div class="rightArea">
+  	<div class="rightArea__title"> title </div>
+  	<div class="rightArea__content">
+  		<div class="rightArea__content__left"> left </div>
+  		<div class="rightArea__content__right"> right </div>
+  	</div>
+  	<div class="rightArea__footer"> footer </div>
+  </div>
+  
+  
+  
   <div class="modal-01">
     <div class="modal_box">
       <header class="modal-header">
@@ -104,7 +118,18 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           <i class="fa fa-times-circle" aria-hidden="true"></i>
         </a>
       </header>
-      <div>사용자 권한 별 게시판 관리 가능여부에 대한 기능을 개발 중 입니다.</div>
+      <div class="modal_content">
+      
+      	<div class="modal_content__block">
+      		<span>읽기 권한</span>
+      		<select></select>
+      	</div>
+      	
+      	<div class="modal_content__block">
+      		<span>쓰기 권한</span>
+      		<select></select>
+      	</div>
+      </div>
     </div>
   </div>
 </div>

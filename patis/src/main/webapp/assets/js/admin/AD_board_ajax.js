@@ -6,11 +6,14 @@ $(document).ready(function() {
 
 function noticeBtnHandler(status, no, btn) {
 
-	if (status === 0) {
-		$(btn).val("해제");
-	} else {
-		$(btn).val("설정");
-	}
+//	if (status === 0) {
+//		$(btn).val("해제");
+//	} else {
+//		$(btn).val("설정");
+//	}
+	
+	console.log("aaa");
+	
 
 	$.ajax({
 		url : "/ad0215Notice.do",
@@ -20,7 +23,8 @@ function noticeBtnHandler(status, no, btn) {
 			"no" : no
 		},
 		success : function(data) {
-
+			getPageContent(currentPage);
+			alert("처리완료");
 		}
 	});
 }
@@ -37,7 +41,7 @@ function deleteBtnHandler(no, btn) {
 			},
 			success : function(data) {
 				alert("선택하신 데이터가 삭제되었습니다.");
-				window.location.reload();
+				getPageContent(currentPage);
 			}
 		});
 	} else {

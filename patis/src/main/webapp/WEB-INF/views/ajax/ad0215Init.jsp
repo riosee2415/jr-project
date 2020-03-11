@@ -16,7 +16,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     <td>
       <c:if test="${board.b_NOTICE eq 0}"
         ><input
-          class="btn btn-xs btn-orange"
+          class="btn btn-xs btn-blue"
           type="button"
           id="notice-btn"
           value="설정"

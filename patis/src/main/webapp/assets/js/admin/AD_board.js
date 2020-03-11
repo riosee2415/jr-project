@@ -18,12 +18,14 @@ function enterCheck() {
 
 var search_type = '';
 var search_keyword = '';
+var currentPage = '';
 
 function getPageContent(page) {
 	
 	var mc = numberFormat($('#ad02-table').data('mc'), 2);
 	var sc = numberFormat($('#ad02-table').data('sc'), 2);
-
+	currentPage = page;
+	
 	var adCode = mc + sc;
 
 
