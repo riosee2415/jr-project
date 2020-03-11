@@ -12,6 +12,11 @@
 @import "./subTopMenu.css";
 @import "./subTopMenuRes.css";
 @import "./board.css";
+@import "./boardRes.css";
+@import "./login.css";
+@import "./loginRes.css";
+@import "./join.css";
+@import "./joinRes.css";
 @import "./NM020361.css";
 @import "./NM020361Res.css";
 @import "./NM020362.css";
@@ -34,7 +39,3 @@
 @import "./NM021283Res.css";
 @import "./NM020523.css";
 @import "./NM020523Res.css";
-@import "./login.css";
-@import "./loginRes.css";
-@import "./join.css";
-@import "./joinRes.css";

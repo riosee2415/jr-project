@@ -14,7 +14,7 @@
 .board-search__box .board-search__area {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 42px;
   background: #fff;
   border: 1px solid #d2d2d2;
