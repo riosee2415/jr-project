@@ -21,6 +21,14 @@
     background-size: cover;
     background-image: url("/assets/images/commons/hdlogo.png");
   }
+  .topHeader {
+  top: 10px;
+  position: absolute;
+  right: 16%;
+}
+.topHeader input {
+  font-size: 14px;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .desk {

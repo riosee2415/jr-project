@@ -5,6 +5,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 <input type="checkbox" id="menu_call" class="ck" />
 <header class="mobile header">
   <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
+  <div class="topHeader">
+    <div class="login"><input type="button" value="로그인" /></div>
+    <div class="signIn"><input type="button" value="회원가입" /></div>
+  </div>
   <label for="menu_call" class="lst">
     <div class="menuicon"></div>
     <div class="xicon"></div>
@@ -13,6 +17,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 <header class="desk header">
   <div class="deskbox">
     <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
+    <div class="topHeader">
+      <div class="login"><input type="button" value="로그인" /></div>
+      <div class="signIn"><input type="button" value="회원가입" /></div>
+    </div>
     <nav id="deskmenu">
       <ul class="menu resmenu" id="resmenu-js">
         <c:forEach var="menu" items="${menuList }">

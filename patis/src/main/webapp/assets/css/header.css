@@ -1,5 +1,31 @@
 @charset "utf-8";
 
+.topHeader {
+  top: 20px;
+  position: absolute;
+  right: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.topHeader input {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.topHeader .login input {
+  background: transparent;
+  margin-right: 10px;
+}
+.topHeader .signIn input {
+  background: #f18d00;
+  color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgb(30, 30, 30, 0.4);
+}
 .ck {
   display: none;
 }
@@ -117,7 +143,7 @@
 }
 .resmenu li:hover .resmenu__m::after {
   background-color: #f18d00;
-   -webkit-animation: resmenuSubInAnimation 0.5s both;
+  -webkit-animation: resmenuSubInAnimation 0.5s both;
   animation: resmenuSubInAnimation 0.5s both;
 }
 .resmenu li:hover .sub,
@@ -131,7 +157,7 @@
   display: block;
 }
 
-.sub li a:hover  {
+.sub li a:hover {
   color: #f18d00;
 }
 
@@ -147,7 +173,7 @@
   -webkit-animation: resmenuHoverOutInAnimation 0.5s both;
   animation: resmenuHoverOutAnimation 0.5s both;
 }
-.resmenu li a.resmenu__m:hover::after{
+.resmenu li a.resmenu__m:hover::after {
   background: #f18d00;
   -webkit-animation: resmenuHoverInAnimation 0.5s both;
   animation: resmenuHoverInAnimation 0.5s both;
