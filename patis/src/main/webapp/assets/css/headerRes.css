@@ -50,9 +50,6 @@
   #menu_call ~ .wrap {
     margin: 0 auto;
   }
-  .logo {
-    margin: 10px auto;
-  }
   .resmenu li a.resmenu__m::after{
   bottom:5px;
   }
@@ -78,7 +75,7 @@
     margin-left: 55%;
   }
   .topHeader{
-  position:inherit;
+  position:absolute;
   }
 }
 @media screen and (min-width: 960px) {

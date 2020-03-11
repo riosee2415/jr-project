@@ -83,3 +83,15 @@ function stopScroll() {
     return false;
   });
 }
+
+function emailSelection() {
+  $("select[name=emailSelection]").change(function() {
+    if ($(this).val() == "1") {
+      $(".emailBox").val("");
+    } else {
+      $(".emailBox").val($(this).val());
+
+      $(".emailBox").attr("readonly", true);
+    }
+  });
+}

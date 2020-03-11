@@ -33,12 +33,14 @@
   display: none;
 }
 .menuicon {
+  cursor:pointer;
   width: 44px;
   height: 44px;
   background-size: cover;
   background-image: url("/assets/images/icons/ico_header_res1.png");
 }
 .xicon {
+  cursor:pointer;
   width: 44px;
   height: 44px;
   background-size: cover;
