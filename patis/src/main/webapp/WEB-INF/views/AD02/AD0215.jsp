@@ -104,6 +104,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           <i class="fa fa-times-circle" aria-hidden="true"></i>
         </a>
       </header>
+      <div>사용자 권한 별 게시판 관리 가능여부에 대한 기능을 개발 중 입니다.</div>
     </div>
   </div>
 </div>
