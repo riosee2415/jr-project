@@ -50,7 +50,7 @@ pageEncoding="UTF-8"%>
         <!-- 모바일 버전 -->
         <div class="board-mobile-ver">
           <div class="board-mobile-wrap">
-            <div>
+            <div class="border-lsit_wrap">
               <table class="border-list__table2">
                 <caption>
                   도시재생 관계법령 모바일.ver
@@ -71,7 +71,26 @@ pageEncoding="UTF-8"%>
               </table>
             </div>
 
-            <div></div>
+            <div class="border-lsit_wrap">
+              <table class="border-list__table2">
+                <caption>
+                  도시재생 관계법령 모바일.ver
+                </caption>
+                <thead>
+                  <tr>
+                    <th>71</th>
+                    <th colspan="3">제목</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="2">작성자</td>
+                    <td>2020.03.11.</td>
+                    <td>조회수</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         <ul class="board-pagination" id="board-pagination-js">

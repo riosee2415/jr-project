@@ -9,14 +9,20 @@
 }
 
 @media screen and (max-width: 959px) {
-	.board-list__box .board-pc-ver {
-		display: none;
-	}
-	.board-list__box .board-mobile-ver {
-		display: block;
-	}
+  .board-list__box .board-pc-ver {
+    display: none;
+  }
+
+  .board-list__box .board-mobile-ver {
+    display: block;
+  }
+
   .board-mobile-wrap {
     width: 100%;
+  }
+
+  .border-lsit_wrap {
+    margin-bottom: 20px;
   }
 
   .border-list__table2 {
@@ -26,15 +32,16 @@
   }
 
   .border-list__table2 thead tr {
-    height: 80px;
-    font-size: 26px;
+    height: 50px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom: 1px solid #ddd;
   }
 
   .border-list__table2 tbody tr {
-    height: 80px;
-    font-size: 20px;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
   }
 
   .border-list__table2 thead tr th,
@@ -54,6 +61,15 @@
 
   .border-list__table2 thead tr th:nth-child(2n) {
     width: 80%;
+  }
+
+  .border-list__table2 tbody tr td:first-child {
+    width: 33%;
+  }
+
+  .border-list__table2 tbody tr td:nth-child(2n),
+  .border-list__table2 tbody tr td:nth-child(3m) {
+    width: 33%;
   }
 }
 
