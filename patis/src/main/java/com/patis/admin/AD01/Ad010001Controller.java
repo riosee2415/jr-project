@@ -132,6 +132,7 @@ public class Ad010001Controller {
 						EmpVO vo  = ad010001Service.getEmpInfo(info);
 						
 						session.setMaxInactiveInterval(1800);
+						session.setAttribute("loginNo", vo.getUSER_NO());
 						session.setAttribute("loginId", vo.getUSER_ID());
 						session.setAttribute("loginName", vo.getUSER_NAME());
 						session.setAttribute("loginRight", vo.getUSER_RIGHT());

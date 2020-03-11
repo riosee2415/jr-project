@@ -21,6 +21,21 @@
     background-size: cover;
     background-image: url("/assets/images/commons/hdlogo.png");
   }
+  .topHeader {
+  bottom:-10%;
+  position: absolute;
+  right: 4%;
+}
+.topHeader button {
+  font-size: 14px;
+}
+.topHeader button {
+  width:80px;
+  height:30px;
+}
+.topHeader .login button {
+    margin-right: 0px;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .desk {
@@ -34,9 +49,6 @@
   }
   #menu_call ~ .wrap {
     margin: 0 auto;
-  }
-  .logo {
-    margin: 10px auto;
   }
   .resmenu li a.resmenu__m::after{
   bottom:5px;
@@ -61,6 +73,9 @@
   }
   .resmenu li:last-child .sub li:first-child {
     margin-left: 55%;
+  }
+  .topHeader{
+  position:absolute;
   }
 }
 @media screen and (min-width: 960px) {

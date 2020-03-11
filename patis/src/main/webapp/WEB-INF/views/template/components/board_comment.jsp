@@ -7,7 +7,7 @@
 			<form action="/commentWrite.do" method="post" id="frm-comment-write">
 				<div class="write-input__box">
 					<textarea class="write-input" id="write-input-js"></textarea>
-					<button type="button" class="write-button" onclick="javascript:boardCommentWrite('${sessionScope.loginId}')">등록</button>		
+					<button type="button" class="write-button" id="write-button-js" onclick="javascript:boardCommentWrite('${sessionScope.loginNo}')">등록</button>		
 				</div>
 			</form>
 	</div>

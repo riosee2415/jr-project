@@ -32,9 +32,10 @@
 	</insert>
 	
 	<select id="GET_EMP_INFO" resultType="empVO" parameterType="hashMap">
-		SELECT  USER_ID,
-			    USER_NAME,
-			    USER_RIGHT
+		SELECT  USER_NO,
+						USER_ID,
+				    USER_NAME,
+				    USER_RIGHT
 		  FROM  JR_DB.EMP
 		 WHERE	USER_ID = #{input_id}
 	</select>

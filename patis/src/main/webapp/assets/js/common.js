@@ -30,6 +30,9 @@ function validationInputLength(e){
 	}
 	
 	return flag;
-	
-	
+}
+
+function pageLink(url) {
+	$('#frm-link').attr('action', url);
+	$('#frm-link').submit();
 }

@@ -26,6 +26,7 @@ $(document).ready(function() {
 				getPageContent(1);
 		}
 	} 
+	boardCommentInit();
 });
 
 var search_type = '';
@@ -156,9 +157,8 @@ function boardCommentInit() {
 	$.ajax({
 		url: '/commentList.do',
 		type: 'get',
-		data: {'b_type': b_type, 'p_no': b_no},
+		data: {'b_type': b_type, 'p_no': p_no},
 		success: function(data) {
-			console.log(data);
 			$('#comment-list-js').html(data);
 		},
 		error: function() {
@@ -167,8 +167,10 @@ function boardCommentInit() {
 	});
 }
 
-function boardCommentWrite(loginId) {
-	if(isEmpty(loginId)) {
+var commentMode = 'WRITE';
+
+function boardCommentWrite(loginNo, co_no) {
+	if(isEmpty(loginNo)) {
 		alert('로그인 후 이용 가능합니다.');
 		return;
 	}
@@ -179,21 +181,83 @@ function boardCommentWrite(loginId) {
 		$('#write-input-js').focus();
 		return;
 	}
+	desc = desc.replace(/(?:\r\n|\r|\n)/g, '<br/>');
 	
-	var b_type = $('#board-comment-js').data('btype');
-	var p_no = $('#board-comment-js').data('pno');
-	/*
-	$.ajax({
-		url: '/commentWrite.do',
-		type: 'post',
-		data: {'b_type': b_type, 'p_no': b_no, 'desc'},
-		success: function(data) {
-			console.log(data);
-			$('#comment-list-js').html(data);
-		},
-		error: function() {
-			console.log('error');
+	if(commentMode == 'WRITE') {
+		if(confirm('입력하신 내용으로 댓글을 작성하시겠습니까 ?')) {
+			var b_type = $('#board-comment-js').data('btype');
+			var p_no = $('#board-comment-js').data('pno');
+			$.ajax({
+				url: '/commentWrite.do',
+				type: 'post',
+				dataType: 'json',
+				data: {'b_type': b_type, 'p_no': p_no, 'desc': desc, 'author': loginNo},
+				success: function(data) {
+					if(data.result == 0) {
+						alert('댓글 작성에 실패했습니다.');
+					} else {
+						$('#write-input-js').val('');
+						boardCommentInit();
+					}
+				},
+				error: function() {
+					console.log('error');
+				}
+			});
 		}
-	});
-	*/
+	} else {
+		if(confirm('입력하신 내용으로 댓글을 변경하시겠습니까 ?')) {
+			var co_no = $('#write-button-js').data('no');
+			$.ajax({
+				url: '/commentModify.do',
+				type: 'post',
+				dataType: 'json',
+				data: {'co_no': co_no, desc: desc},
+				success: function(data) {
+					if(data.result == 0) {
+						alert('댓글 수정에 실패했습니다.');
+					} else {
+						$('#write-input-js').val('');
+						$('#write-button-js').text('등록');
+						boardCommentInit();
+					}
+				},
+				error: function() {
+					console.log('error');
+				}
+			});
+		}
+	}
+}
+
+function boardCommentModify(co_no, co_description) {
+	co_description = co_description.replace(/(<br>|<br\/>|<br \/>)/g, '\r\n');
+	co_description = co_description.replace('</button>', '');
+	
+	$('#write-input-js').val(co_description);
+	$('#write-input-js').focus();
+	$('#write-button-js').text('변경');
+	$('#write-button-js').data('no', co_no);
+	commentMode = "MODIFY";
+}
+
+function boardCommentRemove(co_no) {
+	if(confirm('해당 댓글을 삭제하시겠습니까 ?')) {
+		$.ajax({
+			url: '/commentRemove.do',
+			type: 'post',
+			dataType: 'json',
+			data: {'co_no': co_no},
+			success: function(data) {
+				if(data.result == 0) {
+					alert('댓글을 삭제 처리하는 중 문제가 발생했습니다.');
+				} else {
+					boardCommentInit();
+				}
+			},
+			error: function() {
+				console.log('error');
+			}
+		});
+	}
 }
