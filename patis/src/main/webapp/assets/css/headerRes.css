@@ -22,9 +22,9 @@
     background-image: url("/assets/images/commons/hdlogo.png");
   }
   .topHeader {
-  top: 10px;
+  bottom:-10%;
   position: absolute;
-  right: 16%;
+  right: 4%;
 }
 .topHeader button {
   font-size: 14px;
