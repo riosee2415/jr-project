@@ -34,7 +34,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 43%;
-  background-image: url('../images/image/sub-nm0363-01-01.png');
+  background-image: url("../images/image/sub-nm0363-01-01.png");
 }
 
 .nm0363-content-img__box .nm0363-content-img-02-01 {
@@ -44,7 +44,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 54% 51%;
-  background-image: url('../images/image/sub-nm0363-02-01.png');
+  background-image: url("../images/image/sub-nm0363-02-01.png");
 }
 
 .sub-nm0363-02-02 {
@@ -65,7 +65,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 54% 40%;
-  background-image: url('../images/image/sub-nm0363-02-04.png');
+  background-image: url("../images/image/sub-nm0363-02-04.png");
 }
 
 .sub-nm0363-02-05 {
@@ -97,7 +97,7 @@
 }
 
 .tbl-style-title li {
-	padding: 8px 5px;
+  padding: 8px 5px;
 }
 
 .tbl-style-con {
@@ -121,7 +121,12 @@
 
 .tbl-style-image1 {
   border-bottom: 1px solid #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   justify-self: start;
   padding: 30px 20px;

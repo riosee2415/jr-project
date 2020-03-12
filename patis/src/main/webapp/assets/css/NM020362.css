@@ -187,13 +187,21 @@
 }
 
 .nm62-tbl-style-01 > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .nm62-tbl-style-01 > ul > li:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 20%;
   color: #237d3a;
@@ -221,8 +229,14 @@
 }
 
 .nm62-tbl-style-01-02 > ul > li:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 20%;
   color: #515677;
@@ -244,12 +258,20 @@
 }
 
 .nm62-tbl-style-02 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .nm62-tbl-style-02 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: calc(100% / 6);
   height: 60px;
@@ -298,20 +320,24 @@
 }
 
 .nm62-list-style-image {
+  display: -ms-grid;
   display: grid;
   width: 80%;
 }
 
 .nm62-list-style-image.grid-one-by-one {
+  -ms-grid-columns: 591px;
   grid-template-columns: 591px;
   margin-top: 20px;
 }
 
 .nm62-list-style-image.grid-one-by-one2 {
+  -ms-grid-columns: 315px;
   grid-template-columns: 315px;
   margin-top: 20px;
 }
 .nm62-list-style-image.grid-one-by-two {
+  -ms-grid-columns: 285px 285px;
   grid-template-columns: 285px 285px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -323,6 +349,7 @@
 }
 
 .nm62-list-style-image.grid-two-by-two {
+  -ms-grid-columns: 289px 40px 289px;
   grid-template-columns: 289px 289px;
   grid-gap: 15px 40px;
   margin-top: 10px;
@@ -330,6 +357,7 @@
 }
 
 .nm62-list-style-image.grid-two-by-two2 {
+  -ms-grid-columns: 289px 10px 289px;
   grid-template-columns: 289px 289px;
   grid-gap: 10px 10px;
   margin-top: 10px;

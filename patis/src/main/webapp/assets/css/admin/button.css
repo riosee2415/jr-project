@@ -3,13 +3,13 @@
 .btn {
   border: none;
   outline: none;
-	background: none;
+  background: none;
   text-align: center;
   cursor: pointer;
 }
 
 .btn.btn-xs {
-	width: 42px;
+  width: 42px;
   height: 24px;
   line-height: 20px;
   font-size: 13px;
@@ -23,7 +23,7 @@
 }
 
 .btn.btn-md {
-	width: 130px;
+  width: 130px;
   height: 28px;
   line-height: 25px;
   font-size: 13.5px;
@@ -38,7 +38,7 @@
 }
 
 .btn.btn-xl {
-	width: 180px;
+  width: 180px;
   height: 45px;
   line-height: 44px;
   font-size: 14px;
@@ -46,57 +46,64 @@
 }
 
 .btn.btn-white {
-	color: #3d3d3d;
-	background: #fdfdfd;
+  color: #3d3d3d;
+  background: #fdfdfd;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn.btn-black {
-	color: #fff;
+  color: #fff;
   background: #3d3d3d;
   border: 1px solid #191818;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn.btn-gray {
-	color: #fff;
+  color: #fff;
   background: #9eacc7;
   border: 1px solid #97a4bd;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn.btn-blue {
-	color: #fff;
+  color: #fff;
   background: #3867d6;
   border: 1px solid #244fb5;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn.btn-red {
-	color: #fff;
+  color: #fff;
   background: #eb3b5a;
   border: 1px solid #d62a49;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn.btn-green {
   color: #fff;
-	background: #20bf6b;
+  background: #20bf6b;
   border: 1px solid #168c4d;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn.btn-orange {
   color: #fff;
-	background: #fd9644;
+  background: #fd9644;
   border: 1px solid #ef8530;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }

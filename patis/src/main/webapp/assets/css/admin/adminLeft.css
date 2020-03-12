@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
 .left-menu {
-	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   height: 100%;
 }
@@ -13,7 +20,7 @@
 }
 
 .left-menu .left-menu-icon__box ul li {
-	height: 56px;
+  height: 56px;
   line-height: 57px;
   text-align: center;
   color: #686868;
@@ -24,27 +31,27 @@
 
 .left-menu .left-menu-icon__box ul li.active,
 .left-menu .left-menu-icon__box ul li:hover {
-	color: #f19d00;
-	font-weight: 600;
-	background: #fff;
+  color: #f19d00;
+  font-weight: 600;
+  background: #fff;
 }
 
 .left-menu .left-menu-list__box {
-	padding-top: 22px;
+  padding-top: 22px;
 }
 
-.left-menu .lefe-menu-list__area{
-	display: none;
-	padding-left: 18px;
+.left-menu .lefe-menu-list__area {
+  display: none;
+  padding-left: 18px;
 }
 
 .lefe-menu-list__area.active {
-	display: block;
+  display: block;
 }
 
 .left-menu .lefe-menu-list__area .left-menu-title {
   padding-bottom: 14px;
-	font-size: 15px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -57,5 +64,5 @@
 
 .left-menu .lefe-menu-list__area .left-menu-sub li.active,
 .left-menu .lefe-menu-list__area .left-menu-sub li:hover {
-	color: #f19d00;
+  color: #f19d00;
 }

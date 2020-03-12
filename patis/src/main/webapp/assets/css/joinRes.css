@@ -83,17 +83,29 @@
     padding: 0;
   }
   .join-right li:nth-child(3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     line-height: 25px;
     padding-top: 10px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   .join-right li:nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     line-height: 25px;
     padding-top: 4px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 55px;
   }
@@ -105,6 +117,7 @@
     font-size: 12px;
   }
   .join-box__infobox ul li {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   .join-right input,

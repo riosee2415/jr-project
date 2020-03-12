@@ -17,6 +17,8 @@
   color: #303030;
 }
 .nm22-tbl-style-01 > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -30,8 +32,14 @@
   width: calc(80% - 10px);
 }
 .nm22-tbl-style-01 > ul > li:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 20%;
   font-size: 20px;
