@@ -11,6 +11,8 @@
 				<option value="${data.DETAIL_CODE }">${data.VAL }</option>
 			</c:forEach>
 		</select>
+		
+		<span class="guide"> - 홈페이지 게시판에 적용 할 권한을 선택해주세요. </span>
 	</div>
 	
 	<div class="right__content__block">
@@ -20,6 +22,8 @@
 				<option value="${data.DETAIL_CODE }">${data.VAL }</option>
 			</c:forEach>
 		</select>
+		
+		<span class="guide"> - 홈페이지 게시판에 적용 할 권한을 선택해주세요. </span>
 	</div>
 	
 	<div class="right__content__block right__content__block__button">
