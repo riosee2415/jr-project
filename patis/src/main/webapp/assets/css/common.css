@@ -26,6 +26,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
   width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -58,6 +59,7 @@ body {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
+  -webkit-justify-content: end;
   color: #707070;
 }
 .bold {

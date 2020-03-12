@@ -16,6 +16,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-justify-content: center;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -38,6 +39,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-justify-content: center;
 }
 .main-container__slide li {
   width: 100%;
@@ -78,6 +80,7 @@
   flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .btn.on {
@@ -136,6 +139,7 @@
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -156,6 +160,7 @@
   flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .banner a {
@@ -237,6 +242,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
 }
 .main-container-image {
   display: block;
@@ -311,6 +317,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -335,6 +342,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-justify-content: center;
 }
 .main-cooper ul li {
   width: 14%;
@@ -407,6 +415,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-justify-content: center;
   margin: 0 6px 0 10px;
 }
 .main-cooper-btn .prev {

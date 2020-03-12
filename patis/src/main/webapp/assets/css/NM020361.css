@@ -30,6 +30,7 @@
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
 }
 .sub-goal {
   width: 10%;
@@ -64,10 +65,11 @@
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
 }
 .sub-vision {
   width: 10%;
-  height: 98px;
+  height: 100px;
   color: #ffffff;
   font-size: 28px;
   font-weight: bold;
@@ -242,6 +244,7 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
   margin-left: 100px;
   font-size: 24px;
   margin-bottom: 20px;

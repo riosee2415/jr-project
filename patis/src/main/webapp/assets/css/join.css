@@ -50,6 +50,7 @@ h3.join-title:before {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -139,6 +140,7 @@ h3.join-title:before {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
 }
 .join-right {
   width: 80%;
