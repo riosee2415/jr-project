@@ -1,6 +1,31 @@
 $(document).ready(function() {
 	getPageContent(1);
+	
+	getRight("COLLUSION")
 });
+
+
+function getRight(type){
+	
+	var mc = numberFormat($('#ad02-table').data('mc'), 2);
+	var sc = numberFormat($('#ad02-table').data('sc'), 2);
+	
+	var adCode = mc + sc;
+	
+	
+	$.ajax({
+		url : "/ad" + adCode + "GetRight.do",
+		type : "get",
+		data : {
+			"type" : type
+		},
+		success : function(data) {
+			console.log(data);
+		}
+	});
+}
+
+
 function enterCheck() {
 	
 	var flag = validationInputLength($("#searchValue-js").val());

@@ -6,14 +6,6 @@ $(document).ready(function() {
 
 function noticeBtnHandler(status, no, btn) {
 
-//	if (status === 0) {
-//		$(btn).val("해제");
-//	} else {
-//		$(btn).val("설정");
-//	}
-	
-	console.log("aaa");
-	
 
 	$.ajax({
 		url : "/ad0215Notice.do",

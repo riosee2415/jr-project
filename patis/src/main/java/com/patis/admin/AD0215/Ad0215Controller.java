@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.Accept_typeVO;
 import com.patis.model.BoardVO;
 import com.patis.model.CommentsVO;
 import com.patis.model.CommonVO;
@@ -100,7 +101,7 @@ public class Ad0215Controller {
 		model.addAttribute("boardList", boardList);
 	
 		
-		return "ajax/ad0215Init";
+		return "ajax/adBoardInit";
 	}
 	
 	@RequestMapping(value = "/ad0215Pagination.do", method = RequestMethod.GET)
@@ -183,6 +184,17 @@ public class Ad0215Controller {
 		
 		
 		return ad0215Service.commentDelete(co_no);
+	}
+	
+	
+	@RequestMapping(value = "/ad0215GetRight.do", method = RequestMethod.GET)
+	public String getRight(	@RequestParam("type")String type
+							,Model model) {
+		
+		List<Accept_typeVO> list = ad0215Service.getRight(type);
+		model.addAttribute("rightData", list);
+		
+		return "ajax/adRightInit";
 	}
 
 }

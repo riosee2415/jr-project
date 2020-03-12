@@ -8,6 +8,7 @@
 		<typeAlias type="com.patis.model.LoginLogVO" alias="loginLogVO"/>
 		<typeAlias type="com.patis.model.BoardVO" alias="boardVO"/>
 		<typeAlias type="com.patis.model.CommentsVO" alias="commentsVO"/>
+		<typeAlias type="com.patis.model.Accept_typeVO" alias="accept_typeVO"/>
 		<typeAlias type="java.lang.Integer" alias="int"/>
 		<typeAlias type="java.lang.String" alias="str"/>
 	</typeAliases>

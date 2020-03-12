@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.patis.model.Accept_typeVO;
 import com.patis.model.BoardVO;
 import com.patis.model.CommentsVO;
 
@@ -64,6 +65,17 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 		int result = sqlSession.update(NAMESPACE + ".REMOVE_COMMENT", co_no);
 		
 		return result;
+	}
+
+	@Override
+	public List<Accept_typeVO> getRight(String type) {
+		return sqlSession.selectList(NAMESPACE + ".GET_RIGHT", type);
+	}
+
+	@Override
+	public int updateRight() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
