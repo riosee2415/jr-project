@@ -191,10 +191,19 @@ public class Ad0215Controller {
 	public String getRight(	@RequestParam("type")String type
 							,Model model) {
 		
-		List<Accept_typeVO> list = ad0215Service.getRight(type);
-		model.addAttribute("rightData", list);
+		List<CommonVO> list = ad0215Service.getRight();
+		model.addAttribute("RightList", list);
 		
 		return "ajax/adRightInit";
+	}
+	
+	@RequestMapping(value = "/ad0215CurrentRight.do",  method = RequestMethod.GET)
+	public String currentRight(Model model) {
+		
+		Accept_typeVO vo = ad0215Service.currentRight();
+		model.addAttribute("current", vo);
+		
+		return "ajax/adCurrentRight";
 	}
 
 }

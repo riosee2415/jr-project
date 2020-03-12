@@ -6,6 +6,7 @@ import java.util.Map;
 import com.patis.model.Accept_typeVO;
 import com.patis.model.BoardVO;
 import com.patis.model.CommentsVO;
+import com.patis.model.CommonVO;
 
 public interface I_Ad0215Service {
 	
@@ -73,7 +74,7 @@ public interface I_Ad0215Service {
 	 * @RETURN : List<Accept_typeVO>
 	 * @DESC   : 게시판 별 권한을 가져온다.
 	 */
-	List<Accept_typeVO> getRight(String type);
+	List<CommonVO> getRight();
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
@@ -82,4 +83,13 @@ public interface I_Ad0215Service {
 	 * @DESC   : 게시판 별 권한을 수정한다.
 	 */
 	int updateRight();
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 12.
+	 * @RETURN : Accept_typeVO
+	 * @DESC   : 현재 게시판의 권한을 가져온다.
+	 */
+	Accept_typeVO currentRight();
 }

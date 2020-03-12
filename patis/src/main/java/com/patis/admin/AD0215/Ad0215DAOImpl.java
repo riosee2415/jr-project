@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.patis.model.Accept_typeVO;
 import com.patis.model.BoardVO;
 import com.patis.model.CommentsVO;
+import com.patis.model.CommonVO;
 
 @Repository("ad0215DAO")
 public class Ad0215DAOImpl implements I_Ad0215DAO{
@@ -68,14 +69,19 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 	}
 
 	@Override
-	public List<Accept_typeVO> getRight(String type) {
-		return sqlSession.selectList(NAMESPACE + ".GET_RIGHT", type);
+	public List<CommonVO> getRight() {
+		return sqlSession.selectList(NAMESPACE + ".GET_RIGHT");
 	}
 
 	@Override
 	public int updateRight() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Accept_typeVO currentRight() {
+		return sqlSession.selectOne(NAMESPACE + ".GET_CURRENT_RIGHT");
 	}
 
 }

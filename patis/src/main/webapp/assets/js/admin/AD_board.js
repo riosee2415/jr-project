@@ -20,7 +20,7 @@ function getRight(type){
 			"type" : type
 		},
 		success : function(data) {
-			console.log(data);
+			$("#rightArea__content__right").html(data);
 		}
 	});
 }

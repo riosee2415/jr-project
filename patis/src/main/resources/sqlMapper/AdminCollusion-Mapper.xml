@@ -117,11 +117,19 @@
 	</update>
 	
 	
-	<select id="GET_RIGHT" resultType="accept_typeVO" parameterType="str">
-		SELECT	VIEW_RIGHT,
+	<select id="GET_RIGHT" resultType="commonVO" parameterType="str">
+		SELECT 	DETAIL_CODE,
+				VAL
+		  FROM	JR_DB.COMMON
+		 WHERE	CODE = 'RG_01'
+		 ORDER	BY	DETAIL_CODE ASC
+	</select>
+	
+	<select id="GET_CURRENT_RIGHT" resultType="accept_typeVO">
+		SELECT  VIEW_RIGHT,
 				WRITE_RIGHT
 		  FROM	JR_DB.ACCEPT_RIGHT
-		 WHERE  BOARD_TYPE = #{type}
+		 WHERE	BOARD_TYPE = 'COLLUSION'
 	</select>
 	
 </mapper>

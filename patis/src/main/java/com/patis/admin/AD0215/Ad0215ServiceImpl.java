@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.patis.model.Accept_typeVO;
 import com.patis.model.BoardVO;
 import com.patis.model.CommentsVO;
+import com.patis.model.CommonVO;
 
 @Service("ad0215Service")
 public class Ad0215ServiceImpl implements I_Ad0215Service{
@@ -53,14 +54,19 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 	}
 
 	@Override
-	public List<Accept_typeVO> getRight(String type) {
-		return ad0215DAO.getRight(type);
+	public List<CommonVO> getRight() {
+		return ad0215DAO.getRight();
 	}
 
 	@Override
 	public int updateRight() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Accept_typeVO currentRight() {
+		return ad0215DAO.currentRight();
 	}
 
 }

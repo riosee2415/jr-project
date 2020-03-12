@@ -84,9 +84,21 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   	<div class="rightArea__title"> 권한관리 </div>
   	<div class="rightArea__content">
   		<div class="rightArea__content__left"> left </div>
-  		<div class="rightArea__content__right"> right </div>
+  		<div class="rightArea__content__right" id="rightArea__content__right">
+  				
+  		</div>
   	</div>
-  	<div class="rightArea__footer"> footer </div>
+  	<div class="rightArea__footer">
+  		<span>
+  			현재 보이는 데이터가 해당 게시판의 읽기, 쓰기 권한입니다.
+  		</span>
+  		<span>
+  			게시판 별 읽기, 쓰기 권한을 설정할 수 있습니다.
+  		</span>
+  		<span>
+  			수정은 작성자 본인만 가능하며, 삭제는 관리자모드에서만 가능합니다.
+  		</span>
+  	</div>
   </div>
   
   
