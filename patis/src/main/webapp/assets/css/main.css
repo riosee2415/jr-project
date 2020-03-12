@@ -181,6 +181,7 @@
 .banner a.banner1:hover {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  -ms-transition: 0.5s;
   transition: 0.5s;
   background-image: url("/assets/images/icons/ico_main_banner1_off.png");
 }
@@ -190,6 +191,7 @@
 .banner a.banner2:hover {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  -ms-transition: 0.5s;
   transition: 0.5s;
   background-image: url("/assets/images/icons/ico_main_banner2_off.png");
 }
@@ -199,6 +201,7 @@
 .banner a.banner3:hover {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  -ms-transition: 0.5s;
   transition: 0.5s;
   background-image: url("/assets/images/icons/ico_main_banner3_off.png");
 }
@@ -208,6 +211,7 @@
 .banner a.banner4:hover {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  -ms-transition: 0.5s;
   transition: 0.5s;
   background-image: url("/assets/images/icons/ico_main_banner4_off.png");
 }
@@ -217,6 +221,7 @@
 .banner a.banner5:hover {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  -ms-transition: 0.5s;
   transition: 0.5s;
   background-image: url("/assets/images/icons/ico_main_banner5_off.png");
 }
@@ -226,6 +231,7 @@
 .banner a.banner6:hover {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  -ms-transition: 0.5s;
   transition: 0.5s;
   background-image: url("/assets/images/icons/ico_main_banner6_off.png");
 }

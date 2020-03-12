@@ -54,6 +54,8 @@
   position: absolute;
   bottom: 140px;
   font-size: 34px;
+  width: 100%;
+  left: 0;
   font-weight: normal;
   text-align: center;
 }
@@ -66,6 +68,7 @@
   line-height: 33px;
   width: 113px;
   height: 33px;
+  left: 36%;
   background-color: #62bdd7;
   border-radius: 20px;
   font-size: 20px;
