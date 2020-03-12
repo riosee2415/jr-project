@@ -10,16 +10,16 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 
-      <div class="nm62-content">
-        <h3 class="nm62-title-style-01">▪종합계획도</h3>
-        <div class="nm62-content-img__box">
+      <div class="nm020362-content">
+        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="../../assets/images/image/sub-nm62-01-01.png"
             alt="종합계획도 사진"
-            class="nm62-content-img-01-01"
+            class="nm020362-content-img-01-01"
           />
         </div>
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>묵2동 전역 (면적: 493.219㎡)</li>
@@ -27,7 +27,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>사업내용</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;서울장미축제 등 지역자원과 연계한 도시재생사업 추진
                 </li>
@@ -41,7 +41,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진사항</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2016.06.02. : 2016 희망지사업 선정</li>
                 <li>
                   ·&nbsp;2017.02.16. : 서울시 도시재생(근린재생형)활성화지역
@@ -71,19 +71,19 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">
+        <h3 class="nm020362-title-style-02">
           <span>▪</span>주민공동이용시설 및 거점시설 현황
         </h3>
-        <div class="nm62-content-img__box">
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-01-02.png"
             alt="주민공동이용시설 및 거점시설 현황 사진"
-            class="nm62-content-img-01-02"
+            class="nm020362-content-img-01-02"
           />
         </div>
 
-        <h3 class="nm62-title-style-02"><span>▪</span>주민공동이용시설</h3>
-        <div class="nm62-tbl-style-02">
+        <h3 class="nm020362-title-style-02"><span>▪</span>주민공동이용시설</h3>
+        <div class="nm020362-tbl-style-02">
           <ul>
             <li>구 분</li>
             <li>어르신문화센터<br />(한양경로당)</li>
@@ -130,8 +130,8 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02"><span>▪</span>거점시설</h3>
-        <div class="nm62-tbl-style-02">
+        <h3 class="nm020362-title-style-02"><span>▪</span>거점시설</h3>
+        <div class="nm020362-tbl-style-02">
           <ul>
             <li>구 분</li>
             <li>현장지원센터</li>
@@ -176,17 +176,19 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02"><span>▪</span>주민협의체 구성</h3>
-        <div class="nm62-content-img__box">
+        <h3 class="nm020362-title-style-02"><span>▪</span>주민협의체 구성</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-01-03.png"
             alt="주민협의체 구성 사진"
-            class="nm62-content-img-01-03"
+            class="nm020362-content-img-01-03"
           />
         </div>
 
-        <h4 class="nm62-title-style-03">·&nbsp;&nbsp;도시재생현장지원센터</h4>
-        <div class="nm62-tbl-style-01 nm62-tbl-style-01-02">
+        <h4 class="nm020362-title-style-03">
+          ·&nbsp;&nbsp;도시재생현장지원센터
+        </h4>
+        <div class="nm020362-tbl-style-01 nm62--tbl-style-01">
           <ul>
             <li>위치</li>
             <li>묵동 240-46</li>
@@ -204,20 +206,20 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h4 class="nm62-title-style-01">▪서울형 10분 동네 생활SOC 사업</h4>
-        <p class="nm62-desc-style-01">
+        <h4 class="nm020362-title-style-01">▪서울형 10분 동네 생활SOC 사업</h4>
+        <p class="nm020362-desc-style-01">
           <span>·&nbsp;사업개념 : </span>모든 주민이 집에서 도보 5~10분 거리
           이내에서 생활밀착형 사회기반시설을 향유할 수 있는 주거 환경 공간 구성
         </p>
-        <div class="nm62-content-img__box">
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-01-04.png"
             alt="서울형 10분 동네 생활SOC 사업 사업개념 사진"
-            class="nm62-content-img-01-04"
+            class="nm020362-content-img-01-04"
           />
         </div>
 
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>사업명</li>
             <li>묵2동 어린이도서관 신축</li>
@@ -229,7 +231,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진사항</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;2019.08.02. : 10분 동네 생활SOC 선정 결과 알림 (시 →
                   구)
@@ -241,8 +243,8 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h4 class="nm62-title-style-01">▪서울시 골목길 재생사업</h4>
-        <div class="nm62-tbl-style-01">
+        <h4 class="nm020362-title-style-01">▪서울시 골목길 재생사업</h4>
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>사업명</li>
             <li>묵2동 문화와 예술이 살아 숨쉬는 장미문화 골목길</li>
@@ -254,33 +256,33 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>예시도</li>
             <li>
-              <ul class="nm62-list-style-image grid-two-by-two">
-                <li class="nm62-content-img__box">
+              <ul class="nm020362-list-style-image grid-two-by-two">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-05.png"
                     alt="서울시 골목길 재생사업 예시도 사진 1"
-                    class="nm62-content-img-01-05"
+                    class="nm020362-content-img-01-05"
                   />
                 </li>
-                <li class="nm62-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-06.png"
                     alt="서울시 골목길 재생사업 예시도 사진 2"
-                    class="nm62-content-img-01-05"
+                    class="nm020362-content-img-01-05"
                   />
                 </li>
-                <li class="nm62-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-07.png"
                     alt="서울시 골목길 재생사업 예시도 사진 3"
-                    class="nm62-content-img-01-05"
+                    class="nm020362-content-img-01-05"
                   />
                 </li>
-                <li class="nm62-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-08.png"
                     alt="서울시 골목길 재생사업 예시도 사진 4"
-                    class="nm62-content-img-01-05"
+                    class="nm020362-content-img-01-05"
                   />
                 </li>
               </ul>
@@ -289,7 +291,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진사항</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2019.08.20. : 서울 골목길 재생사업 공모 선정</li>
                 <li>·&nbsp;2019.11.18. : 골목길 재생 실행계획 용역 발주</li>
               </ul>
@@ -297,8 +299,10 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h4 class="nm62-title-style-01">▪송계원 장미길 골목정원 조성사업</h4>
-        <div class="nm62-tbl-style-01">
+        <h4 class="nm020362-title-style-01">
+          ▪송계원 장미길 골목정원 조성사업
+        </h4>
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>사업명</li>
             <li>문화와 예술이 살아 숨쉬는 장미문화 골목길</li>
@@ -307,12 +311,12 @@ pageEncoding="UTF-8"%>
             <li>위치</li>
             <li>
               중랑구 동일로169가길 일대 (2,467㎡)
-              <ul class="nm62-list-style-image grid-one-by-one">
-                <li class="nm62-content-img__box">
+              <ul class="nm020362-list-style-image grid-one-by-one">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-09.png"
                     alt="송계원 장미길 골목정원 조성사업 위치 사진"
-                    class="nm62-content-img-01-09"
+                    class="nm020362-content-img-01-09"
                   />
                 </li>
               </ul>
@@ -321,33 +325,33 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>예시도</li>
             <li>
-              <ul class="nm62-list-style-image grid-two-by-two2">
-                <li class="nm62-content-img__box">
+              <ul class="nm020362-list-style-image grid-two-by-two2">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-10.png"
                     alt="서울시 골목길 재생사업 예시도 사진 1"
-                    class="nm62-content-img-01-10"
+                    class="nm020362-content-img-01-10"
                   />
                 </li>
-                <li class="nm62-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-11.png"
                     alt="서울시 골목길 재생사업 예시도 사진 2"
-                    class="nm62-content-img-01-10"
+                    class="nm020362-content-img-01-10"
                   />
                 </li>
-                <li class="nm62-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-12.png"
                     alt="서울시 골목길 재생사업 예시도 사진 3"
-                    class="nm62-content-img-01-10"
+                    class="nm020362-content-img-01-10"
                   />
                 </li>
-                <li class="nm62-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-13.png"
                     alt="서울시 골목길 재생사업 예시도 사진 4"
-                    class="nm62-content-img-01-10"
+                    class="nm020362-content-img-01-10"
                   />
                 </li>
               </ul>
@@ -356,7 +360,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>사업내용</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;골목길 녹화(자연지반형 화단 조성, 조경 플랜트 설치 등)
                 </li>
@@ -370,7 +374,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진사항</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;2019.10.10. : 주민공모사업 협약체결(우리구-대표 제안자)
                 </li>
@@ -378,23 +382,23 @@ pageEncoding="UTF-8"%>
                 <li>·&nbsp;2019.12.12. : 현장 설명회 개최</li>
               </ul>
 
-              <ul class="nm62-list-style-image grid-one-by-two">
-                <li class="nm62-content-img__box">
+              <ul class="nm020362-list-style-image grid-one-by-two">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-14.png"
                     alt="서울시 골목길 재생사업 예시도 사진 1"
-                    class="nm62-content-img-01-14"
+                    class="nm020362-content-img-01-14"
                   />
                 </li>
-                <li class="nm62-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-15.png"
                     alt="서울시 골목길 재생사업 예시도 사진 2"
-                    class="nm62-content-img-01-14"
+                    class="nm020362-content-img-01-14"
                   />
                 </li>
               </ul>
-              <ul class="nm62-list-style-dot2">
+              <ul class="nm020362-list-style-dot2">
                 <li>※ 도로 등 공공시설물은 2020.10. 준공</li>
               </ul>
             </li>
@@ -410,17 +414,17 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 
-      <div class="nm62-content">
-        <h3 class="nm62-title-style-01">▪종합계획도</h3>
-        <div class="nm62-content-img__box">
+      <div class="nm020362-content">
+        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-02-01.png"
             alt="종합계획도 사진"
-            class="nm62-content-img-02-01"
+            class="nm020362-content-img-02-01"
           />
         </div>
 
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>중화2동 329-38일대 (면적 : 140,855㎡)</li>
@@ -428,7 +432,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>사업내용</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;도시재생활성화계획 수립 및 도시재생 현장지원센터 운영
                 </li>
@@ -446,7 +450,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진사항</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2006.12.21. : 중화 재정비촉진지구 지정</li>
                 <li>·&nbsp;2014.11.06. : 중화2 재정비촉진구역 해제</li>
                 <li>·&nbsp;2018.12.04. : 도시재생 희망지사업 선정</li>
@@ -460,17 +464,17 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">
+        <h3 class="nm020362-title-style-02">
           <span>▪</span> 중화2동 주민공동이용시설
         </h3>
-        <div class="nm62-content-img__box">
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-02-02.png"
             alt="중화2동 주민공동이용시설 사진"
-            class="nm62-content-img-02-02"
+            class="nm020362-content-img-02-02"
           />
         </div>
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>화동 327-85 (125㎡) <span>※ 현재 건축공사 추진중</span></li>
@@ -478,7 +482,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>연락처</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>개관 이후</li>
               </ul>
             </li>
@@ -486,7 +490,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>운영</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   주민협의체 분과모임(공간기획단 등) 구성을 통한 주민주도 관리
                   운영
@@ -497,7 +501,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>층별용도</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   1층&rpar;공유부엌, 2층&rpar;공유도서관, 3층&rpar;다목적실,
                   4층&rpar;관리운영사무실
@@ -507,17 +511,17 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">
+        <h3 class="nm020362-title-style-02">
           <span>▪</span> 중화2동 거점시설(보담마을)
         </h3>
-        <div class="nm62-content-img__box">
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-02-03.png"
             alt="중화2동 거점시설 사진"
-            class="nm62-content-img-02-03"
+            class="nm020362-content-img-02-03"
           />
         </div>
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>봉화산로4길 53, 1층 (56.95㎡ 약17.2평)</li>
@@ -525,7 +529,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>연락처</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>02-433-7055</li>
               </ul>
             </li>
@@ -533,7 +537,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>운영</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   주민운영방식, 운영과 관련한 사항들은 주민협의체의
                   의사결정구조를 통해 결정
@@ -544,7 +548,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>층별용도</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   도시재생 교욱 및 홍보, 도시재생과 관련된 회의 및 주민공동체
                   활동 공간
@@ -554,15 +558,17 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02"><span>▪</span> 도시재생현장지원센터</h3>
-        <div class="nm62-content-img__box">
+        <h3 class="nm020362-title-style-02">
+          <span>▪</span> 도시재생현장지원센터
+        </h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-02-04.png"
             alt="도시재생현장지원센터 사진"
-            class="nm62-content-img-02-04"
+            class="nm020362-content-img-02-04"
           />
         </div>
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>중랑구 중랑역로 87, 2층 (중화동 312-3, 127.62㎡ 약38.6평)</li>
@@ -570,7 +576,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>연락처</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>02-491-2201</li>
               </ul>
             </li>
@@ -578,7 +584,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>직원구성</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>총괄 코디네이터1, 사무국장1, 코디4, 중랑구청 파견직원1</li>
               </ul>
             </li>
@@ -586,7 +592,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>역할</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;도시재생활성화계획 수립과 관련 사업 추진 지원</li>
                 <li>
                   ·&nbsp;도시재생활성화지역 주민의 의견조정을 위하여 필요한 사항
@@ -613,17 +619,17 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 
-      <div class="nm62-content">
-        <h3 class="nm62-title-style-01">▪종합계획도</h3>
-        <div class="nm62-content-img__box">
+      <div class="nm020362-content">
+        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-03-01.png"
             alt="종합계획도 사진"
-            class="nm62-content-img-03-01"
+            class="nm020362-content-img-03-01"
           />
         </div>
 
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>면목3.8동 1075번지 일대 (면적 : 18,020.6 ㎡)</li>
@@ -631,7 +637,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>사업내용</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;주거환경정비계획 수립</li>
                 <li>·&nbsp;도로, 공원 등 기반시설 확충 및 정비</li>
                 <li>·&nbsp;다양한 공동체 활동을 통한 마을 커뮤니티 회복</li>
@@ -642,7 +648,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진사항</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;2018.09.21. : 관리형 주거환경개선사업 후보지 결정
                 </li>
@@ -656,8 +662,8 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">▪면목3.8동 거점시설</h3>
-        <div class="nm62-tbl-style-01">
+        <h3 class="nm020362-title-style-02">▪면목3.8동 거점시설</h3>
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>중랑구 용마산로334, 동남빌딩 4층</li>
@@ -665,7 +671,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>연락처</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>총괄코디네이터1, 사무국장1, 코디4, 중랑구청파견직원1</li>
               </ul>
             </li>
@@ -673,7 +679,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>활동사항</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2019.06.~ : 관리형 주거환경개산사업 대상지 결정</li>
                 <li>
                   ·&nbsp;2019.11.04. : 선진지역 탐방(도봉구 도봉동 새동네)
@@ -696,17 +702,17 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
-      <div class="nm62-content">
-        <h3 class="nm62-title-style-01">▪종합계획도</h3>
-        <div class="nm62-content-img__box">
+      <div class="nm020362-content">
+        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-04-01.png"
             alt="종합계획도 사진"
-            class="nm62-content-img-04-01"
+            class="nm020362-content-img-04-01"
           />
         </div>
 
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>망우본동 182-34 일대 (면적 : 137,576㎡)</li>
@@ -714,7 +720,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진현황</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2019.05.02. : 도시재생 희망지 사업 선정</li>
                 <li>·&nbsp;2019.07.23. : 현장거점(들락날락) 개소</li>
                 <li>·&nbsp;2019.09.06. : 주민공동이용시설 부지 매입</li>
@@ -725,17 +731,17 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">
+        <h3 class="nm020362-title-style-02">
           <span>▪</span>주민공동이용시설 및 거점시설
         </h3>
-        <div class="nm62-content-img__box">
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-04-02.png"
             alt="주민공동이용시설 및 거점시설 사진"
-            class="nm62-content-img-04-02"
+            class="nm020362-content-img-04-02"
           />
         </div>
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>
@@ -746,7 +752,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>연락처</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>개관 이후</li>
               </ul>
             </li>
@@ -754,7 +760,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>운영</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>주민운영</li>
               </ul>
             </li>
@@ -762,7 +768,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>층별용도</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   지층-강당, 1층-주민 쉼터, 2층-사무실 및 회의실, 옥탑-정원
                 </li>
@@ -771,17 +777,17 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">
+        <h3 class="nm020362-title-style-02">
           <span>▪</span>망우본동 주민공동이용시설 및 거점시설
         </h3>
-        <div class="nm62-content-img__box">
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-04-03.png"
             alt="망우본동 주민공동이용시설 및 거점시설 사진"
-            class="nm62-content-img-04-03"
+            class="nm020362-content-img-04-03"
           />
         </div>
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>
@@ -792,7 +798,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>연락처</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>개관 이후</li>
               </ul>
             </li>
@@ -800,7 +806,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>역할</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   도시재생 홍보 및 교육, 도시재생과 관련된 회의 및 주민 모임
                   공간
@@ -818,17 +824,17 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
-      <div class="nm62-content">
-        <h3 class="nm62-title-style-01">▪종합계획도</h3>
-        <div class="nm62-content-img__box">
+      <div class="nm020362-content">
+        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-05-01.png"
             alt="종합계획도 사진"
-            class="nm62-content-img-05-01"
+            class="nm020362-content-img-05-01"
           />
         </div>
 
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>면목3.8동 459-1 일대 (면적 : 99,706㎡)</li>
@@ -836,7 +842,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>사업내용</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;현장거점 운영, 주민모임 활성화, 도시재생 홍보 및 공감대
                   형성(주민)
@@ -851,7 +857,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진현황</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2019.05.15. : 희망지사업(전통시장연계형) 선정</li>
                 <li>
                   ·&nbsp;2019.08.14. : 희망지 현장거점 '사가정사랑방'
@@ -881,13 +887,13 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm62-title-style-02">
+        <h3 class="nm020362-title-style-02">
           <span>▪</span>사가정시장 거점시설 현황
         </h3>
-        <h3 class="nm62-title-style-04">
+        <h3 class="nm020362-title-style-04">
           ·&nbsp;주민거점시설(사가정사랑방)
         </h3>
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>중랑구 사가정로 53길8, 2층</li>
@@ -895,7 +901,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>연락처</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>02-433-4550</li>
               </ul>
             </li>
@@ -903,7 +909,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>운영</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>주민모임(사가정발전위원회), 현장 코디네이터</li>
               </ul>
             </li>
@@ -911,16 +917,16 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>역할</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>정기주민회의, 주민소모임 (4개) 운영, 주민사랑방</li>
               </ul>
 
-              <ul class="nm62-list-style-image grid-one-by-one2">
+              <ul class="nm020362-list-style-image grid-one-by-one2">
                 <li class="nm21-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-05-02.png"
                     alt="사가정시장 거점시설 현황 역할 사진"
-                    class="nm62-content-img-05-02"
+                    class="nm020362-content-img-05-02"
                   />
                 </li>
               </ul>
@@ -936,17 +942,17 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
-      <div class="nm62-content">
-        <h3 class="nm62-title-style-01">▪종합계획도</h3>
-        <div class="nm62-content-img__box">
+      <div class="nm020362-content">
+        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-06-01.png"
             alt="종합계획도 사진"
-            class="nm62-content-img-06-01"
+            class="nm020362-content-img-06-01"
           />
         </div>
 
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>중화2동 일대 (면적 : 03.98㎢)</li>
@@ -954,7 +960,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>사업내용</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   도시재생 희망지사업 선정 및 활성화지역 선정을 위한 주민 홍보
                   및 역량강화 추진
@@ -965,11 +971,11 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진현황</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2019.12.17. : 희망지사업 선정</li>
                 <li>·&nbsp;2019.12. ~ 2020.12. : 사업추진</li>
               </ul>
-              <ul class="nm62-list-style-dot3">
+              <ul class="nm020362-list-style-dot3">
                 <li>
                   주민모임공간마련, 주민역량강화, 지역조사, 의제발굴, 소규모
                   환경개선사업 시행(주민의제)
@@ -987,17 +993,17 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
-      <div class="nm62-content">
-        <h3 class="nm62-title-style-01">▪종합계획도</h3>
-        <div class="nm62-content-img__box">
+      <div class="nm020362-content">
+        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-07-01.png"
             alt="종합계획도 사진"
-            class="nm62-content-img-07-01"
+            class="nm020362-content-img-07-01"
           />
         </div>
 
-        <div class="nm62-tbl-style-01">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>
@@ -1008,7 +1014,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>사업내용</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>
                   ·&nbsp;&lt;패션봉제 클러스터&gt; 조성 &lpar;스마트앵커,
                   패션봉제종합정보센터, 창업보육센터 등&rpar;
@@ -1027,7 +1033,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진현황</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2019.04.11. : 중심시가지형 도시재생 후보지 선정</li>
                 <li>·&nbsp;2019.05.09. : 주민설명회 개최</li>
                 <li>
@@ -1055,8 +1061,8 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
-      <div class="nm62-content">
-        <div class="nm62-tbl-style-01">
+      <div class="nm020362-content">
+        <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
             <li>
@@ -1067,7 +1073,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>추진현황</li>
             <li>
-              <ul class="nm62-list-style-dot">
+              <ul class="nm020362-list-style-dot">
                 <li>·&nbsp;2020.02. : 가꿈주택사업 참여자 모집 공고</li>
                 <li>·&nbsp;2020.04.~11. : 가꿈주택사업(집수리공사) 추진</li>
               </ul>
