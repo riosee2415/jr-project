@@ -13,9 +13,9 @@
 
 @font-face {
   font-family: Seoulnamsan;
-  /* src: url('../fonts/Seoulnamsan/Seoulnamsan_M.eot'); */
-  src: url("../fonts/Seoulnamsan/Seoulnamsan_M.eot?#iefix")
-      format("embedded-opentype"),
+  src: url('../fonts/Seoulnamsan/Seoulnamsan_M.eot'); 
+  src: /* url("../fonts/Seoulnamsan/Seoulnamsan_M.eot?#iefix")
+      format("embedded-opentype"),*/
     url("../fonts/Seoulnamsan/Seoulnamsan_M.woff") format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_M.ttf") format("truetype");
   font-weight: 400;
@@ -25,8 +25,8 @@
 @font-face {
   font-family: Seoulnamsan;
   src: url("../fonts/Seoulnamsan/Seoulnamsan_B.eot");
-  src: url("../fonts/Seoulnamsan/Seoulnamsan_B.eot?#iefix")
-      format("embedded-opentype"),
+  src:/* url("../fonts/Seoulnamsan/Seoulnamsan_B.eot?#iefix")
+      format("embedded-opentype"),*/
     url("../fonts/Seoulnamsan/Seoulnamsan_B.woff") format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_B.ttf") format("truetype");
   font-weight: 500;
@@ -36,8 +36,8 @@
 @font-face {
   font-family: Seoulnamsan;
   src: url("../fonts/Seoulnamsan/Seoulnamsan_EB.eot");
-  src: url("../fonts/Seoulnamsan/Seoulnamsan_EB.eot?#iefix")
-      format("embedded-opentype"),
+  src: /*url("../fonts/Seoulnamsan/Seoulnamsan_EB.eot?#iefix")
+      format("embedded-opentype"),*/
     url("../fonts/Seoulnamsan/Seoulnamsan_EB.woff") format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_EB.ttf") format("truetype");
   font-weight: 700;
@@ -47,8 +47,8 @@
 @font-face {
   font-family: Seoulnamsan;
   src: url("../fonts/Seoulnamsan/Seoulnamsan_BL.eot");
-  src: url("../fonts/Seoulnamsan/Seoulnamsan_BL.eot?#iefix")
-      format("embedded-opentype"),
+  src: /*url("../fonts/Seoulnamsan/Seoulnamsan_BL.eot?#iefix")
+      format("embedded-opentype"),*/
     url("../fonts/Seoulnamsan/Seoulnamsan_BL.woff") format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_BL.ttf") format("truetype");
   font-weight: 800;
