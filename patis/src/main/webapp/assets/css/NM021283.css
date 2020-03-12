@@ -1,17 +1,27 @@
-@charset "UTF-8";
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+@charset "UTF-8";
 
 .nm83-content {
   margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .nm83-content-img__box {
   text-align: center;
-  margin-bottom:120px;
+  margin-bottom: 120px;
 }
 
 .nm83-content-img__box:last-child {

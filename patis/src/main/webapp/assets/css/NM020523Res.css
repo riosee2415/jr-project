@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @media screen and (max-width: 767px) {
   .nm23-select ul {
     width: 100%;
@@ -45,6 +47,8 @@
   }
 
   .nm23-imgbox {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -77,6 +81,8 @@
   }
 
   .nm23-imgtable-img {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -90,6 +96,8 @@
   }
 
   .nm23-imgtable-img2 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -122,6 +130,8 @@
   }
 
   .nm23-table5-img {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -135,6 +145,8 @@
   }
 
   .nm23-table5-img2 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -148,6 +160,8 @@
   }
 
   .nm23-table5-img3 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -208,6 +222,8 @@
   }
 
   .nm23-imgbox {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -244,6 +260,8 @@
   }
 
   .nm23-imgtable-img {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -257,6 +275,8 @@
   }
 
   .nm23-imgtable-img2 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -289,6 +309,8 @@
   }
 
   .nm23-table5-img {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -302,6 +324,8 @@
   }
 
   .nm23-table5-img2 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -315,6 +339,8 @@
   }
 
   .nm23-table5-img3 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
