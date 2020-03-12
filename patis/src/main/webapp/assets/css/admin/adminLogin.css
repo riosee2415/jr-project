@@ -39,10 +39,9 @@
   height: 40px;
   outline: none;
   border: none;
-  background-color: #227c39;
+  background-color: rgba(34, 124, 56, 0.5);
   -webkit-box-shadow: 0 1px 3px 0 rgba(32, 33, 36, 0.27);
   box-shadow: 0 1px 3px 0 rgba(32, 33, 36, 0.27);
-  opacity: 50%;
   color: #fff;
   font-weight: bold;
   cursor: pointer;

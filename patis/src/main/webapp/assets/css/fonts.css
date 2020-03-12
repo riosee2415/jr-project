@@ -4,7 +4,7 @@
 @font-face {
 	font-family: Seoulnamsan;
 	src: url('../fonts/Seoulnamsan/Seoulnamsan_L.eot');
-	src: url('../fonts/Seoulnamsan/Seoulnamsan_L.eot?#iefix') format('embedded-opentype'), 
+	src: /*url('../fonts/Seoulnamsan/Seoulnamsan_L.eot?#iefix') format('embedded-opentype'),*/ 
 	     url('../fonts/Seoulnamsan/Seoulnamsan_L.woff') format('woff'), 
 	     url('../fonts/Seoulnamsan/Seoulnamsan_L.ttf') format('truetype');
 	font-weight: 300;
