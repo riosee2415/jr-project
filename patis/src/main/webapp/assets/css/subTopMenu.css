@@ -6,6 +6,10 @@
 }
 
 .sub-top-menu .top-menu__list {
+  -webkit-display: grid;
+  -moz-display: grid;
+  -ms-display: grid;
+  -o-display: grid;
   display: grid;
   display: -ms-grid;
   border: 1px solid #d2d2d2;
@@ -13,31 +17,95 @@
 }
 
 .sub-top-menu .top-menu__list.menu-one {
+  -ms-grid-columns: 100%;
   grid-template-columns: 100%;
+  -ms-grid-rows: 50px;
   grid-template-rows: 50px;
 }
 
+.sub-top-menu .top-menu__list.menu-one > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
 .sub-top-menu .top-menu__list.menu-two {
+  -ms-grid-columns: 50% 50%;
   grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50px;
   grid-template-rows: 50px;
   grid-auto-rows: 50px;
 }
 
+.sub-top-menu .top-menu__list.menu-two > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.sub-top-menu .top-menu__list.menu-two > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
 .sub-top-menu .top-menu__list.menu-three {
+  -ms-grid-columns: 33.3% 33.3% 33.3%;
   grid-template-columns: 33.3% 33.3% 33.3%;
+  -ms-grid-rows: 50px;
   grid-template-rows: 50px;
   grid-auto-rows: 50px 50px;
 }
 
+.sub-top-menu .top-menu__list.menu-three > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.sub-top-menu .top-menu__list.menu-three > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.sub-top-menu .top-menu__list.menu-three > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
 .sub-top-menu .top-menu__list.menu-more {
+  -ms-grid-columns: 25% 25% 25% 25%;
   grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-rows: 50px;
   grid-template-rows: 50px;
   grid-auto-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
 }
 
+.sub-top-menu .top-menu__list.menu-more > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.sub-top-menu .top-menu__list.menu-more > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.sub-top-menu .top-menu__list.menu-more > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.sub-top-menu .top-menu__list.menu-more > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
 .sub-top-menu .top-menu__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 50px;
   text-align: center;
@@ -45,9 +113,9 @@
   border-left: 1px solid #d2d2d2;
   border-top: 1px solid #d2d2d2;
 }
-.sub-top-menu .top-menu__list li:hover{
-	background:#eeeeee;
-	border-bottom:1px solid #d2d2d2;
+.sub-top-menu .top-menu__list li:hover {
+  background: #eeeeee;
+  border-bottom: 1px solid #d2d2d2;
 }
 
 .sub-top-menu .top-menu__list li span {
