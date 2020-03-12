@@ -155,6 +155,9 @@ h3.join-title:before {
   color: #fff;
   background-color: #707070;
   padding: 6px 10px;
+  width:100px;
+  height:30px;
+  line-height: 15px;
 }
 .overlap {
   outline: none;
@@ -162,6 +165,9 @@ h3.join-title:before {
   border: 1px solid #dedede;
   background: transparent;
   cursor: pointer;
+  width: 68px;
+  height: 32px;
+  line-height: 15px;
 }
 .join-button {
   margin-top: 75px;
