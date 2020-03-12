@@ -22,8 +22,8 @@
 		</select>
 	</div>
 	
-	<div class="right__content__block">
-		<input type="submit" value="권한변경" />
+	<div class="right__content__block right__content__block__button">
+		<input type="submit" class="btn btn-sm btn-gray" value="권한변경" />
 	</div>
 </form>
 

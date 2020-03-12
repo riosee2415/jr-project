@@ -61,9 +61,6 @@ function closeModal() {
   $(".modal-02").css("display", "none");
 }
 
-function secondModal() {
-  $(".modal-02").css("display", "block");
-}
 function commentsDeleteHandler(co_no) {
   var mc = numberFormat($("#ad02-table").data("mc"), 2);
   var sc = numberFormat($("#ad02-table").data("sc"), 2);
