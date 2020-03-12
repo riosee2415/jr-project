@@ -81,7 +81,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   
   
   <div class="rightArea">
-  	<div class="rightArea__title"> title </div>
+  	<div class="rightArea__title"> 권한관리 </div>
   	<div class="rightArea__content">
   		<div class="rightArea__content__left"> left </div>
   		<div class="rightArea__content__right"> right </div>
