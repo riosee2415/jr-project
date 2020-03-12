@@ -283,6 +283,7 @@
   position: absolute;
   bottom: 30px;
   right: 0;
+  display: none;
 }
 
 .board-list__box .board-btn__box button {

@@ -80,4 +80,12 @@ public interface I_Nm021164DAO {
 	 * @DESC   : 공모사업 신청 게시판 조회수 증가
 	 */
 	int modifyHitUp(int b_no) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 12, 2020
+	 * @RETURN : int
+	 * @DESC   : 공모사업 신청  게시판 글 작성
+	 */
+	int setCollusion(BoardVO boardVO) throws SQLException;
 }

@@ -77,6 +77,10 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021164_D.jsp"/>
     </definition>
     
+     <definition name="collusion.apply.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021164_W.jsp"/>
+    </definition>
+    
     <definition name="cityloc" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021281.jsp"/>
     </definition>

@@ -30,9 +30,9 @@
         
         <div id="${fn:toLowerCase(b_type)}-paging-js"></div>
         
-        <div class="board-btn__box">
+        <%-- <div class="board-btn__box">
         	<button type="button" onclick="javascript:boardWriteMoveHandler('${sessionScope.loginId}', '${data.b_TYPE}', '${searchType}', '${searchKeyword}')">글쓰기</button>
-        </div>
+        </div> --%>
       </div>
     </div>
   </div>

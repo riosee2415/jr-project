@@ -63,11 +63,26 @@ if ($('#board-write-js').length > 0) {
 			attachbox : {
 				show : true,
 				confirmForDeleteAll : true
+			},
+			// 이미지첨부 관련 추가 config 
+			attacher:{ 
+				image: {
+					features:{left:250,top:65,width:400,height:190,scrollbars:0}, //팝업창 사이즈
+					popPageUrl:'/daumEditor/imagePopup.do' //팝업창 주소  
+				},
+				file: { 
+					features:{left:250,top:65,width:400,height:190,scrollbars:0}, 
+					popPageUrl:'/daumEditor/filePopup.do' // 팝업창 주소
+				}
+			},
+			capacity: {
+				maximum: 10000000000*1024*1024 // 최대 첨부 용량
 			}
 		},
-     	/* size : { contentWidth : 1000 } */
-		/* 지정된 본문영역의 넓이가 있을 경우에 설정 */	
+	/* size : { contentWidth : 1000 } */
+	/* 지정된 본문영역의 넓이가 있을 경우에 설정 */
 	};
+	
 	EditorJSLoader.ready(function(Editor) {
 		var editor = new Editor(config);
 	});
@@ -81,18 +96,17 @@ if ($('#board-write-js').length > 0) {
 		}
 		return true;
 	}
-	
-	function setForm(editor) { 
-		var i, input; 
-		var form = editor.getForm(); 
+
+	function setForm(editor) {
+		var i, input;
+		var form = editor.getForm();
 		var content = editor.getContent();
-		
+
 		var textarea = document.createElement('textarea');
 		textarea.style.display = 'none';
-		textarea.name = 'b_description',
-		textarea.value = content;
+		textarea.name = 'b_description', textarea.value = content;
 		form.createField(textarea);
-		
+
 		return true;
 	}
 

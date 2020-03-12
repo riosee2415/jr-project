@@ -49,6 +49,7 @@ function getPageContent(paging){
 			} else {
 				$("#" + b_type + "-paging-js").show();
 			}
+			$("#" + b_type + "-button-js").show();
 		}
 	});
 	$.ajax({

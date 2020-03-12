@@ -60,5 +60,10 @@ public class Nm021164ServiceImpl implements I_Nm021164Service{
 	public int modifyHitUp(int b_no) throws SQLException {
 		return nm021164DAO.modifyHitUp(b_no);
 	}
+	
+	@Override
+	public int setCollusion(BoardVO boardVO) throws SQLException {
+		return nm021164DAO.setCollusion(boardVO);
+	}
 
 }

@@ -166,4 +166,24 @@
 		 WHERE  B_NO = #{b_no}
 	</update>
 	
+	<insert id="SET_COLLUSION" parameterType="boardVO">
+		INSERT INTO JR_DB.BOARD_COLLUSION
+		(
+			B_TITLE,
+			B_DESCRIPTION,
+			B_AUTHOR,
+			B_CREATE_TIME,
+			B_UPLOAD_TIME,
+			B_TYPE
+		)
+		VALUES
+		(
+			#{B_TITLE},
+			#{B_DESCRIPTION},
+			${B_AUTHOR},
+			SYSDATE(),
+			SYSDATE(),
+			#{B_TYPE}
+		)
+	</insert>
 </mapper>

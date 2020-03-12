@@ -22,7 +22,7 @@ public class BoardVO {
 	}
 	public String getB_DELETE_TIME() {
 		return B_DELETE_TIME;
-	}
+	}	
 	public void setB_DELETE_TIME(String b_DELETE_TIME) {
 		B_DELETE_TIME = b_DELETE_TIME;
 	}

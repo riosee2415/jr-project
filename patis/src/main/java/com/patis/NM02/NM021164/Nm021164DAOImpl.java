@@ -66,5 +66,10 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 	public int modifyHitUp(int b_no) throws SQLException {
 		return sqlSession.update(NAMESPACE + ".MODIFY_HIT_UP", b_no);
 	}
+	
+	@Override
+	public int setCollusion(BoardVO boardVO) throws SQLException {
+		return sqlSession.insert(NAMESPACE + ".SET_COLLUSION", boardVO);
+	}
 
 }

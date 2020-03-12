@@ -29,6 +29,10 @@ pageEncoding="UTF-8"%>
         </table>
         
         <div id="${fn:toLowerCase(b_type)}-paging-js"></div>
+        
+        <div class="board-btn__box" id="${fn:toLowerCase(b_type)}-button-js">
+        	<button type="button" onclick="javascript:boardWriteMoveHandler('${sessionScope.loginId}', '${b_type}', '${searchType}', '${searchKeyword}')">글쓰기</button>
+        </div>
       </div>
     </div>
   </div>
@@ -40,5 +44,13 @@ pageEncoding="UTF-8"%>
   	<input type="hidden" name="rownum" />
   	<input type="hidden" name="s_type" />
   	<input type="hidden" name="s_keyword" />
+  </form>
+  
+  <form action="/collusion.apply.write.do" method="get" id="frm-${fn:toLowerCase(b_type)}-write">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="s_type" />
+  	<input type="hidden" name="s_keyword" />
+  	<input type="hidden" name="mode" value="WRITE" />
   </form>
 </div>
