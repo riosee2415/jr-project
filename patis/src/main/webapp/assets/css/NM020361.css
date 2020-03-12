@@ -29,8 +29,8 @@
   flex-direction: row;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  -webkit-justify-content: space-evenly;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
 }
 .sub-goal {
   width: 10%;
@@ -64,8 +64,8 @@
   flex-direction: row;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  -webkit-justify-content: space-evenly;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
 }
 .sub-vision {
   width: 10%;
