@@ -46,7 +46,10 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 
 	@Override
 	public String getBoardType() throws SQLException {
-		return sqlSession.selectOne(NAMESPACE + ".GET_BOARD_TYPE");
+		String boardType = sqlSession.selectOne(NAMESPACE + ".GET_BOARD_TYPE");
+		if(boardType == null)
+			boardType = NAMESPACE.replace("-Mapper", "").toUpperCase();
+		return boardType;
 	}
 
 	@Override

@@ -63,7 +63,7 @@ public class Nm020524Controller {
 			// model.addAttribute("data", data);
 		}
 		
-		String b_type = nm021164Service.getBoardType(); // 수정 필요
+		String b_type = nm020524Service.getBoardType(); // 수정 필요
 		model.addAttribute("b_type", b_type);
 		
 		model.addAttribute("mode", mode);
@@ -89,7 +89,6 @@ public class Nm020524Controller {
 		boardVO.setB_DESCRIPTION(b_description);
 		boardVO.setB_AUTHOR(b_author);
 		
-		System.out.println(boardVO);
 		if(mode.equals("WRITE")) {
 			nm020524Service.setCommunity(boardVO);
 			rttr.addFlashAttribute("msg", "게시글이 등록되었습니다.");

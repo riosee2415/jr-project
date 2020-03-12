@@ -12,34 +12,46 @@ pageEncoding="UTF-8"%>
         <%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 		
-			<div class="board-detail__box" id="board-detail-js" data-btype="${b_type}">
-				<div class="detail-info__box">
-					<div class="detail-tit__box">
-						<input type="text" name="B_TITLE" value="${data.b_TITLE}" placeholder="제목을 입력해주세요" class="input-title init-input-focus" id="input-title-js" />
-						<ul class="detail-list">
-							<li>
-								<span class="data-tit">작성자</span>
-								<span class="data-txt"><c:out value="${mode eq 'WRITE' ? sessionScope.loginName : data.b_AUTHOR}" /></span>
-							</li>
-							<li>
-								<span class="data-tit">작성일</span>
-								<span class="data-txt"><c:out value="${mode eq 'WRITE' ? TODAY_DATE : data.b_CREATE_TIME}" /></span>
-							</li>
-							<li>
-								<span class="data-tit">조회수</span>
-								<span class="data-txt"><c:out value="${mode eq 'WRITE' ? '0' : data.b_HIT}" /></span>
-							</li>
-						</ul>
+			<div class="board-write__box" id="board-write-js" data-btype="${b_type}">
+				<div class="write-row__box">
+					<div class="write-col-head">
+						<span class="data-tit">작성자</span>
+					</div>
+					<div class="write-col-body">
+						<c:if test="${sessionScope.loginId eq null }">
+							<input type="text" value="${data.b_AUTHOR }" class="input-author" id="input-author-js" />
+						</c:if>
+						<c:if test="${sessionScope.loginId ne null }">
+							<span class="data-txt"><c:out value="${mode eq 'WRITE' ? sessionScope.loginName : data.b_AUTHOR}" /></span>
+						</c:if>
 					</div>
 				</div>
-				<div class="detail-desc__box" id="input-desc-js">
-					<%@ include file="/WEB-INF/views/daum-editor/editor_frame.jsp" %>
+				
+				<div class="write-row__box">
+					<div class="write-col-head">
+						<span class="data-tit">제목</span>
+					</div>
+					<div class="write-col-body">
+						<input type="text" value="${data.b_TITLE }" class="input-title" id="input-title-js" />
+					</div>
+				</div>
+				
+				<div class="write-row__box">
+					<div class="write-col-head">
+						<span class="data-tit">내용</span>
+					</div>
+					<div class="write-col-body">
+						<%@ include file="/WEB-INF/views/daum-editor/editor_frame.jsp" %>
+						<c:if test="${mode eq 'MODIFY'}">
+							<script>Editor.modify({'content': '${data.b_DESCRIPTION}'})</script>
+						</c:if>
+					</div>
 				</div>
 				<div class="btn__box">
-					<button type="button" onclick="boardWriteProcessHandler('${b_type}', '${mode}', '${data.b_No}')">
-						<c:out value="${mode eq 'WRITE' ? '등록' : '변경'}" />
+					<button type="button" class="btn-write" onclick="boardWriteProcessHandler('${b_type}', '${mode}', '${data.b_No}')">
+						<c:out value="${mode eq 'WRITE' ? '등록하기' : '변경하기'}" />
 					</button>
-					<button type="button" onclick="boardListMoveHandler('${b_type}', '${searchType}', '${searchKeyword}')">목록</button>
+					<button type="button" class="btn-cancel" onclick="boardListMoveHandler('${b_type}', '${searchType}', '${searchKeyword}')">취소</button>
 				</div>
 			</div>
     </div>

@@ -130,7 +130,6 @@ function boardWriteMoveHandler(loginId, b_type, type, keyword) {
 
 function boardWriteProcessHandler(b_type, mode, b_no) {
 	var b_title = $('#input-title-js').val();
-	var b_description = $('#input-desc-js').text();
 	
 	b_type = b_type.toLowerCase();
 	
@@ -138,13 +137,8 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		alert('제목을 입력해주세요.');
 		$('#input-title-js').focus();
 		return;
-	} else if(isEmpty(b_description)) {
-		alert('내용을 입력해주세요.');
-		//$('#input-title-js').focus();
-		return;
-	}
+	} 
 	$('#frm-' + b_type + '-write-process input[name=b_title]').val(b_title);
-	$('#frm-' + b_type + '-write-process input[name=b_description]').val(b_description);
 	
 	var message = '';
 	if(mode == 'WRITE') {
@@ -153,7 +147,7 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		message = '입력하신 내용으로 게시글을 변경하시겠습니까 ?';
 	}
 	if(confirm(message)) {
-		$('#frm-' + b_type + '-write-process').submit();
+		Editor.save();
 	}
 }
 

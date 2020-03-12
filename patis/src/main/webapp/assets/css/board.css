@@ -379,6 +379,97 @@
   text-shadow: 0.8px 0.5px 1px rgba(0, 0, 0, 0.3);
 }
 
+.board-write__box {
+  margin-top: 50px;
+  border-top: 2px solid #0a0a0a;
+}
+
+.board-write__box .write-row__box {
+	display: flex;
+}
+
+.board-write__box .write-row__box .write-col-head {
+  padding: 25px 0;
+	width: 20%;
+  text-align: center;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+.board-write__box .write-row__box .write-col-head .data-tit {
+	font-size: 18px;
+  font-weight: 600;
+  color: #323232;
+}
+
+.board-write__box .write-row__box .write-col-body {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+	width: 80%;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.board-write__box .write-row__box .write-col-body .tx-editor-container {
+	width: 100%;
+}
+
+.board-write__box .write-row__box .write-col-body .data-txt {
+  color: #313131;
+	font-size: 18px;
+}
+
+.board-write__box .write-row__box .write-col-body .input-author {
+	height: 26px;
+  line-height: 26px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  padding: 0 10px;
+  color: #313131;
+}
+
+.board-write__box .write-row__box .write-col-body .input-title {
+	width: calc(100% - 20px);
+	height: 26px;
+  line-height: 26px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  padding: 0 10px;
+  color: #313131;
+}
+
+.board-write__box .btn__box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.board-write__box .btn__box button {
+	margin: 0 5px;
+	width: 180px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);	
+}
+
+.board-write__box .btn__box .btn-write {
+	color: #fff;
+  background: #f18d00;
+}
+
+.board-write__box .btn__box .btn-cancel {
+	color: #4f4f4f;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+}
+
 .board-comment__box {
   padding: 0 10px;
 }
