@@ -107,6 +107,7 @@
 	}
 	.up, .down {
 		width: 100%;
+		height:305px;
 	}
 	.main-container-content {
 		-webkit-box-orient: vertical;
@@ -184,7 +185,7 @@
 		width: 1800px;
 	}
 	.main-container-banner {
-		width:360px;
+		width: 360px;
 		margin: 0 auto;
 		overflow: hidden;
 	}
@@ -194,7 +195,7 @@
 		margin: 0 atuo
 	}
 	.banner {
-		width:360px;
+		width: 360px;
 	}
 	.banner a {
 		width: 100%;
@@ -203,7 +204,7 @@
 	.banner>div>div {
 		width: 100%;
 		margin: 0 atuo;
-		height:154px;
+		height: 154px;
 	}
 	.banner a {
 		margin: 0;
@@ -243,32 +244,33 @@
 	}
 	.main-regeneration, .main-img-rayer {
 		width: 100%;
-		height: 354px;
+		height: 242px;
+	}
+	.up, .down{
+	height:160px;
 	}
 }
 
-@media screen and (min-width: 375px) and (max-width: 760px) {
-	.main-news {
-		margin-top: -100px;
-	}
-	.banner a {
-		height: 154px;
-	}
-}
 
 @media screen and (min-width: 554px) and (max-width: 966px) {
+	.banner{
+	width:700px;
+	}
 	.main-news {
 		margin-top: 10px;
-		.
-		banner
-		a{
-		height
-		:
-		163px;
+	}
+	.banner a {
+	width:228px;
+		height: 298px;
+	}
+	.main-container-content{
+	width:700px;
+	}
+	.mainBotton{
+	width:700px;
 	}
 }
 
-}
 @media screen and (min-width: 827px) and (max-width: 1009px) {
 	.banner a {
 		height: 278px;
