@@ -14,7 +14,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 <header class="desk header">
   <div class="deskbox">
     <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
-    <div class="topHeader">
+    <!-- <div class="topHeader">
       <div class="login">
         <button type="button" onclick="javacript:pageLink('/login.do')">
           로그인
@@ -25,7 +25,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           회원가입
         </button>
       </div>
-    </div>
+    </div> -->
     <nav id="deskmenu">
       <ul class="menu resmenu" id="resmenu-js">
         <c:forEach var="menu" items="${menuList }">
@@ -54,7 +54,9 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   <ul class="menu">
     <c:forEach var="menu" items="${menuList }">
       <li>
-        <a class="collap-menu-main" onclick="javascript:mobileMenuHandler(this)"><c:out value="${menu.VAL }"></c:out></a>
+        <a class="collap-menu-main" onclick="javascript:mobileMenuHandler(this)"
+          ><c:out value="${menu.VAL }"></c:out
+        ></a>
         <ul class="collap-menu-sub">
           <c:forEach var="subMenu" items="${subMenuList }">
             <c:if test="${menu.DETAIL_CODE == subMenu.PARENT_CODE }">
@@ -69,7 +71,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       </li>
     </c:forEach>
   </ul>
-  <div class="topHeader">
+  <!-- <div class="topHeader">
     <div class="login">
       <button type="button" onclick="javacript:pageLink('/login.do')">
         로그인
@@ -80,5 +82,5 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         회원가입
       </button>
     </div>
-  </div>
+  </div> -->
 </nav>
