@@ -53,10 +53,8 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 <nav id="collap_menu">
   <ul class="menu">
     <c:forEach var="menu" items="${menuList }">
-      <li>
-        <a class="collap-menu-main" href="${menu.URL }"
-          ><c:out value="${menu.VAL }"></c:out
-        ></a>
+      <li onclick="javascript:mobileMenuHandler()">
+        <a class="collap-menu-main"><c:out value="${menu.VAL }"></c:out></a>
         <ul class="collap-menu-sub">
           <c:forEach var="subMenu" items="${subMenuList }">
             <c:if test="${menu.DETAIL_CODE == subMenu.PARENT_CODE }">

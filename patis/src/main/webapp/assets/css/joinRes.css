@@ -82,6 +82,10 @@
     font-size: 10px;
     padding: 0;
   }
+  .join-left li:nth-child(4),.join-left li:nth-child(7) {
+  line-height: 20px;
+  padding:10px;
+  }
   .join-right li:nth-child(3) {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -140,5 +144,11 @@
   }
   .join-left li {
     padding-left: 8px;
+  }
+  .post-up{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display:flex;
+  padding:10px;
   }
 }

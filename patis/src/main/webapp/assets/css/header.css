@@ -280,6 +280,7 @@
 }
 #collap_menu ul li {
   line-height: 32px;
+  cursor: pointer;
   position: relative;
 }
 
@@ -292,6 +293,7 @@
 }
 
 .collap-menu-sub li a {
+  cursor: pointer;
   font-weight: normal;
 }
 
@@ -315,7 +317,7 @@
   visibility: hidden;
 }
 
-#collap_menu ul li:hover .collap-menu-sub {
+#collap_menu ul li.active .collap-menu-sub {
   height: 150px;
   opacity: 1;
   visibility: visible;
