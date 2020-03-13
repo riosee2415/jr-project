@@ -61,7 +61,11 @@
     height: 100%;
   }
 
-  .nm020362-content-img__box .nm020362-content-img-01-09,
+  .nm020362-content-img__box .nm020362-content-img-01-09 {
+    width: 130%;
+    height: 80%;
+  }
+
   .nm020362-content-img__box .nm020362-content-img-05-02 {
     width: 130%;
     height: 80%;
@@ -87,11 +91,6 @@
     width: 100%;
   }
 
-   {
-    width: 100%;
-    height: 100%;
-  }
-
   .nm020362-content-img__box .nm020362-content-img-02-02 {
     width: 100%;
   }
@@ -103,6 +102,10 @@
   }
 
   /* 표 스타일 */
+  .nm020362-tbl-style-01 {
+    margin-bottom: 50px;
+  }
+
   .nm020362-tbl-style-01 > ul > li:nth-child(1),
   .nm020362-tbl-style-01-02 > ul > li:nth-child(1) {
     font-size: 16px;
@@ -147,15 +150,11 @@
   }
 
   /* 표 설정 */
-  .nm020362-list-style-image.grid-one-by-one {
+  .nm020362-list-style-image.grid-one-by-one,
+  .nm020362-list-style-image.grid-one-by-one2 {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
     margin-left: 0px;
-  }
-
-  .nm020362-list-style-image.grid-one-by-one2 {
-    -ms-grid-columns: 315px;
-    grid-template-columns: 315px;
   }
 
   .nm020362-list-style-image.grid-one-by-two {

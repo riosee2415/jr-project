@@ -188,7 +188,7 @@ pageEncoding="UTF-8"%>
         <h4 class="nm020362-title-style-03">
           ·&nbsp;&nbsp;도시재생현장지원센터
         </h4>
-        <div class="nm020362-tbl-style-01 nm62--tbl-style-01">
+        <div class="nm020362-tbl-style-01 ">
           <ul>
             <li>위치</li>
             <li>묵동 240-46</li>
@@ -928,7 +928,7 @@ pageEncoding="UTF-8"%>
               </ul>
 
               <ul class="nm020362-list-style-image grid-one-by-one2">
-                <li class="nm21-content-img__box">
+                <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-05-02.png"
                     alt="사가정시장 거점시설 현황 역할 사진"
