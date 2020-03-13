@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TempFile-Mapper">
+
+	<select id="GET_TEMP_FILE_LIST_BY_KEY" resultType="tempFileVO" parameterType="str">
+		SELECT	TFILE_NO,
+						TFILE_O_PATH,
+						TFILE_V_PATH,
+						TFILE_KEY
+			FROM	JR_DB.BOARD_TEMP_FILE
+		 WHERE	TFILE_KEY = #{TFILE_KEY}
+	</select>
+	
+	
+	<insert id="SET_TEMP_FILE" parameterType="tempFileVO">
+		INSERT INTO JR_DB.BOARD_TEMP_FILE
+		(
+			TFILE_O_PATH,
+			TFILE_V_PATH,
+			TFILE_KEY
+		)
+		VALUES
+		(
+			#{TFILE_O_PATH},
+			#{TFILE_V_PATH},
+			#{TFILE_KEY}
+		)
+	</insert>
+	
+	<delete id="REMOVE_TEMP_FILE" parameterType="str">
+		DELETE	FROM JR_DB.BOARD_TEMP_FILE
+		 WHERE	TFILE_KEY = #{TFILE_KEY}
+	</delete>
+
+</mapper>

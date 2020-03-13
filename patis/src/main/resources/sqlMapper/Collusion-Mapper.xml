@@ -166,7 +166,7 @@
 		 WHERE  B_NO = #{b_no}
 	</update>
 	
-	<insert id="SET_COLLUSION" parameterType="boardVO">
+	<insert id="SET_COLLUSION" parameterType="boardVO" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO JR_DB.BOARD_COLLUSION
 		(
 			B_TITLE,

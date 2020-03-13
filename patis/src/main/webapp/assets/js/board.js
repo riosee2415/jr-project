@@ -1,4 +1,14 @@
 $(document).ready(function() {
+	if($('#board-write-js').length > 0) {
+		var checkUnload = true;
+		
+		$(window).on("beforeunload", function(){
+		    if(checkUnload) {
+		    	return "변경사항이 저장되지 않을 수 있습니다.";
+		    }
+		});
+	}
+	
 	$('#search-type-js').on('click', function() {
 		$(this).toggleClass('active');
 	
@@ -148,6 +158,7 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		message = '입력하신 내용으로 게시글을 변경하시겠습니까 ?';
 	}
 	if(confirm(message)) {
+		checkUnload = false;
 		Editor.save();
 	}
 }

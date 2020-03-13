@@ -7,29 +7,44 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.patis.common.tempFile.I_TempFileService;
+import com.patis.model.BoardFileVO;
+import com.patis.model.BoardTempFileVO;
+
 @Controller
 @RequestMapping(value = "/daumEditor")
 public class DaumEditorController {
 
+	@Resource(name="tempFileService")
+	private I_TempFileService tempFileService;
+	
 	@RequestMapping(value = "/imagePopup.do", method = RequestMethod.GET)
-	public String imagePopup() {
-		System.out.println("hi");
+	public String imagePopup(Model model, 
+							 @RequestParam("btype")String btype,
+							 @RequestParam("file_key")String file_key) {
+		model.addAttribute("btype", btype);
+		model.addAttribute("file_key", file_key);
+		
 		return "daum-editor/image";
 	}
 
 	@ResponseBody
 	@RequestMapping(value="/singleUploadImageAjax.do", method=RequestMethod.POST)
 	public Map<String, Object> singleUploadImageAjax(@RequestParam("Filedata") MultipartFile multipartFile,
-										 			 HttpSession httpSession) {
+													 @RequestParam("btype") String btype,
+													 @RequestParam("file_key") String file_key,
+										 			 HttpSession httpSession) throws Exception {
 
 		Map<String, Object> fileInfo = new HashMap<String, Object>();
 		
@@ -42,13 +57,13 @@ public class DaumEditorController {
 				return fileInfo; 
 			}
 			
-			long filesize = multipartFile.getSize(); 
-			long limitFileSize = 10*1024*1024; 
-			if(limitFileSize < filesize){ 
+			long filesize = multipartFile.getSize();
+			long limitFileSize = 10*1024*1024;
+			if(limitFileSize < filesize){
 				fileInfo.put("result", -2); 
-				return fileInfo; 
+				return fileInfo;
 			}
-
+			
 			String defaultPath = httpSession.getServletContext().getRealPath("/"); 
 			String path = defaultPath + File.separator + "upload" + File.separator + "board" + File.separator + "images" + File.separator + ""; 
 			File file = new File(path); 
@@ -70,6 +85,12 @@ public class DaumEditorController {
 				 System.out.println("이미지 파일 업로드 실패 - singleUploadImageAjax"); 
 			 }
 			 
+			 BoardTempFileVO tempFileVO = new BoardTempFileVO();
+			 tempFileVO.setTFILE_O_PATH(path + originalName);
+			 tempFileVO.setTFILE_V_PATH(path + modifyName);
+			 tempFileVO.setTFILE_KEY(file_key);
+			 tempFileService.setTempFile(tempFileVO);
+			 
 			 String imageurl = httpSession.getServletContext().getContextPath() + "/upload/board/images/" + modifyName;
 			 fileInfo.put("imageurl", imageurl); 
 			 fileInfo.put("filename", modifyName); 
@@ -83,14 +104,22 @@ public class DaumEditorController {
 	}
 	
 	@RequestMapping(value = "/filePopup.do") 
-	public String filePopup() { 
-		return "daum-editor/file"; 
+	public String filePopup(Model model, 
+							@RequestParam("btype")String btype,
+							@RequestParam("file_key")String file_key) {
+		
+		model.addAttribute("btype", btype);
+		model.addAttribute("file_key", file_key);
+		
+		return "daum-editor/file";
 	}
 
 	@ResponseBody
 	@RequestMapping(value="/singleUploadFileAjax.do", method=RequestMethod.POST) 
 	public Map<String, Object> singleUploadFileAjax(@RequestParam("Filedata") MultipartFile multipartFile, 
-		 											HttpSession httpSession) { 
+													@RequestParam("btype") String btype,
+													@RequestParam("file_key") String file_key,
+		 											HttpSession httpSession) throws Exception { 
 		Map<String, Object> fileInfo = new HashMap<String, Object>(); 
 		
 		if(multipartFile != null && !(multipartFile.getOriginalFilename().equals(""))) { 
@@ -122,6 +151,12 @@ public class DaumEditorController {
 				 e.printStackTrace(); 
 				 System.out.println("파일업로드 실패 - singleUploadFileAjax"); 
 	 		 }
+			
+			 BoardTempFileVO tempFileVO = new BoardTempFileVO();
+			 tempFileVO.setTFILE_O_PATH(path + originalName);
+			 tempFileVO.setTFILE_V_PATH(path + modifyName);
+			 tempFileVO.setTFILE_KEY(file_key);
+			 tempFileService.setTempFile(tempFileVO);
 			
 			 String fileMime = multipartFile.getContentType(); 
 			 String attachurl = httpSession.getServletContext().getContextPath() + "/upload/board/files/" + modifyName;

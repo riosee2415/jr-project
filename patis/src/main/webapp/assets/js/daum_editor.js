@@ -1,6 +1,7 @@
 if ($('#board-write-js').length > 0) {
-	var formId = $('#board-write-js').data('btype').toLowerCase();
-	formId = 'frm-' + formId + '-write-process';
+	var btype = $('#board-write-js').data('btype').toLowerCase();
+	var file_key = $('#board-write-js').data('key');
+	var formId = 'frm-' + btype + '-write-process';
 
 	var config = {
 		txHost : '', /*
@@ -68,11 +69,11 @@ if ($('#board-write-js').length > 0) {
 			attacher:{ 
 				image: {
 					features:{left:250,top:65,width:400,height:190,scrollbars:0}, //팝업창 사이즈
-					popPageUrl:'/daumEditor/imagePopup.do' //팝업창 주소  
+					popPageUrl:'/daumEditor/imagePopup.do?btype=' + btype + '&file_key=' + file_key //팝업창 주소  
 				},
 				file: { 
 					features:{left:250,top:65,width:400,height:190,scrollbars:0}, 
-					popPageUrl:'/daumEditor/filePopup.do' // 팝업창 주소
+					popPageUrl:'/daumEditor/filePopup.do?btype=' + btype + '&file_key=' + file_key // 팝업창 주소
 				}
 			},
 			capacity: {

@@ -358,7 +358,7 @@
 }
 
 .board-detail__box .detail-file__box {
-  padding: 18px 20px 18px;
+  padding: 18px 0;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 }

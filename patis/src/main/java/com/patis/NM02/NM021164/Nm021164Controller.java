@@ -3,19 +3,23 @@ package com.patis.NM02.NM021164;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.patis.common.file.I_FileService;
+import com.patis.common.tempFile.I_TempFileService;
 import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.BoardFileVO;
+import com.patis.model.BoardTempFileVO;
 import com.patis.model.BoardVO;
 import com.patis.model.CommonVO;
 
@@ -32,6 +36,12 @@ public class Nm021164Controller {
 
 	@Resource(name="nm021164Service")
 	private I_Nm021164Service nm021164Service;
+	
+	@Resource(name="fileService")
+	private I_FileService fileService;
+	
+	@Resource(name="tempFileService")
+	private I_TempFileService tempFileService;
 	
 	@RequestMapping(value="/collusion.apply.do", method=RequestMethod.GET)
 	public String sendScreen(Model model,
@@ -101,7 +111,9 @@ public class Nm021164Controller {
 	@RequestMapping(value="/collusion.apply.write.do", method=RequestMethod.GET)
 	public String collusionWrite(Model model,
 								 @RequestParam(value="mode", defaultValue="WRITE")String mode,
-								 @RequestParam(value="b_no", required=false)Integer b_no) throws Exception{
+								 @RequestParam(value="b_no", required=false)Integer b_no,
+								 @RequestParam(value="s_type", defaultValue="")String searchType,
+		 					     @RequestParam(value="s_keyword", defaultValue="")String searchKeyword) throws Exception{
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -118,7 +130,12 @@ public class Nm021164Controller {
 		String b_type = nm021164Service.getBoardType();
 		model.addAttribute("b_type", b_type);
 		
+		String file_key = UUID.randomUUID().toString();
+		model.addAttribute("file_key", file_key);
+		
 		model.addAttribute("mode", mode);
+		model.addAttribute("searchType", searchType);
+		model.addAttribute("searchKeyword", searchKeyword);
 		
 		return "collusion.apply.write";
 	}
@@ -133,7 +150,10 @@ public class Nm021164Controller {
 								 @RequestParam(value="b_title")String b_title,
 								 @RequestParam(value="b_description")String b_description,
 								 @RequestParam(value="b_author")String b_author,
+								 @RequestParam(value="file_key")String file_key,
 								 RedirectAttributes rttr) throws Exception{
+		
+		int boardNo = 0;
 		
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
@@ -142,11 +162,22 @@ public class Nm021164Controller {
 		boardVO.setB_AUTHOR(b_author);
 		
 		if(mode.equals("WRITE")) {
-			nm021164Service.setCollusion(boardVO);
+			boardNo = nm021164Service.setCollusion(boardVO);
 			rttr.addFlashAttribute("msg", "게시글이 등록되었습니다.");
 		} else {
+			boardNo = b_no;
 			boardVO.setB_NO(b_no);
 		}
+		List<BoardTempFileVO> tempFileList = tempFileService.getTempFileListByKey(file_key);
+		for(BoardTempFileVO tempFileVO : tempFileList) {
+			BoardFileVO fileVO = new BoardFileVO();
+			fileVO.setFILE_O_PATH(tempFileVO.getTFILE_O_PATH());
+			fileVO.setFILE_V_PATH(tempFileVO.getTFILE_V_PATH());
+			fileVO.setBOARD_TYPE(b_type);
+			fileVO.setBOARD_NO(boardNo);
+			fileService.setFile(fileVO);
+		}
+		tempFileService.removeTempFile(file_key);
 		
 		rttr.addAttribute("parent", parent);
 		rttr.addAttribute("code", code);

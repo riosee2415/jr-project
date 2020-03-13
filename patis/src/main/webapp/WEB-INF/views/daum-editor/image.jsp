@@ -166,6 +166,8 @@
 						action="">
 						<!-- 파일첨부 -->
 						<div class=file>
+							<input type="hidden" name="btype" value="${btype}" />
+							<input type="hidden" name="file_key" value="${file_key}" />
 							<input disabled type="text" class=file-text> <label class=file-btn
 								for=uploadInputBox>사진첨부</label> <input id=uploadInputBox
 								style="display: none" type=file name=Filedata>
