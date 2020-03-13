@@ -4,7 +4,7 @@
   width: 100%;
 }
 .main-container {
-  width: 80%;
+  width: 1200px;
   margin: 12px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,7 +26,7 @@
   overflow: hidden;
 }
 .main-container__slide {
-  width: 502%;
+  width: 3500px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
@@ -82,6 +82,7 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  margin-bottom:20px;
 }
 .btn.on {
   outline: none;
@@ -145,7 +146,7 @@
 
 .banner > div > div {
   width: 160px;
-  margin-right: 14px;
+  margin-right: 12px;
 }
 
 .up,
@@ -236,7 +237,7 @@
   background-image: url("/assets/images/icons/ico_main_banner6_off.png");
 }
 .main-container-content {
-  width: 80%;
+  width: 1200px;
   margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,7 +337,7 @@
   font-size: 14px;
 }
 .mainBotton {
-  width: 80%;
+  width: 1200px;
   margin: 35px auto;
   display: -webkit-box;
   display: -ms-flexbox;

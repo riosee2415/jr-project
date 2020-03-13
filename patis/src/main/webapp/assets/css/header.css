@@ -85,7 +85,7 @@
 }
 .header .deskbox {
   margin: 0 auto;
-  width: 80%;
+  width: 1200px;
 }
 .lst {
   display: block;
@@ -236,13 +236,13 @@
 }
 
 .resmenu li:first-child .sub li:first-child {
-  margin-left: 10%;
+  margin-left: 14%;
 }
 .resmenu li:nth-child(2) .sub li:first-child {
-  margin-left: 23%;
+  margin-left: 24.5%;
 }
 .resmenu li:nth-child(3) .sub li:first-child {
-  margin-left: 37%;
+  margin-left: 38%;
 }
 .resmenu li:nth-child(4) .sub li:first-child {
   margin-left: 43%;
@@ -251,10 +251,10 @@
   margin-left: 50%;
 }
 .resmenu li:nth-child(6) .sub li:first-child {
-  margin-left: 69%;
+  margin-left: 68%;
 }
 .resmenu li:last-child .sub li:first-child {
-  margin-left: 69%;
+  margin-left: 67%;
 }
 .sub li {
   margin-right: 15px;

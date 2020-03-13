@@ -7,6 +7,7 @@
     -o-flex-direction: column;
     flex-direction: column;
     align-items: center;
+    width:780px;
   }
 
   .footer_info .footer_text {
@@ -20,6 +21,10 @@
 }
 
 @media screen and (max-width: 959px) {
+	.footer_info{
+		width:780px;
+		margin:0 auto;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -32,4 +37,8 @@
   .footer_info .footer_text {
     font-size: 13px;
   }
+  .footer_info{
+		width:360px;
+		margin:0 auto;
+	}
 }
