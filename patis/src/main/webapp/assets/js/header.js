@@ -6,8 +6,9 @@ function stopScroll() {
   });
 }
 
-function mobileMenuHandler() {
-  $(".collap-menu-sub")
-    .parent()
-    .toggleClass("active");
+function mobileMenuHandler(menu) {
+	
+	var menuSelector = menu.parentNode;
+	
+	$(menuSelector).toggleClass("active");
 }

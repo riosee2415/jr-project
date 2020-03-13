@@ -25,6 +25,7 @@
     bottom: -64%;
     position: absolute;
     right: 4%;
+    z-index: -1;
   }
   .topHeader button {
     font-size: 14px;
@@ -93,3 +94,5 @@
     margin: 0 auto;
   }
 }
+
+

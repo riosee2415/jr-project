@@ -24,6 +24,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
+
 .topHeader button {
   outline: none;
   border: none;
@@ -300,6 +301,7 @@
 #collap_menu ul li a.collap-menu-main {
   line-height: 50px;
   font-size: 22px;
+  padding: 1px 20px;
 }
 
 #collap_menu ul li .collap-menu-sub {
@@ -315,6 +317,7 @@
   -o-box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
+  z-index: 888;
 }
 
 #collap_menu ul li.active .collap-menu-sub {
