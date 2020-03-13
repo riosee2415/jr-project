@@ -57,7 +57,7 @@ pageEncoding="UTF-8"%>
         <div class="vision">
           <div class="sub-vision-none"></div>
           <div class="sub-vision-content">
-            일지역정체성 기반 문화 가치/경관 회복
+            지역정체성 기반 문화 가치/경관 회복
             <p class="sub-vision-content-desc">
               과거 번성했던 쇠퇴 구도심 등이 보유하고 있는 역사적/문화적
               정체성을 활용하여 품격있는 공간을 조성하고 문화서비스를 확충한다.
@@ -155,7 +155,7 @@ pageEncoding="UTF-8"%>
               </tr>
               <tr>
                 <td class="table-sky">4</td>
-                <td class="table-sky">망우 본동</td>
+                <td class="table-sky">망우본동</td>
                 <td>희망지사업 선정</td>
                 <td>활성화지역 선정</td>
                 <td class="table-orange">뉴딜사업 선정</td>
@@ -359,9 +359,8 @@ pageEncoding="UTF-8"%>
               </td>
               <td>147,998</td>
               <td>
-                <span class="greentext"
-                  >전통시장 연계형 희망지 선정 </span
-                >(’19. 5. 15. - ‘20. 3월)
+                <span class="greentext">전통시장 연계형 희망지 선정 </span>(’19.
+                5. 15. - ‘20. 3월)
               </td>
             </tr>
             <tr>

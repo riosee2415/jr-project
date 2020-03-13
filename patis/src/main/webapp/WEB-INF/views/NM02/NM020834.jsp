@@ -148,7 +148,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;더 깊이 더 높게 경청해 광
+                &lsqb;서울시&rsqb;더 깊이 더 높게 경청해
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31
@@ -174,7 +174,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&apos;상생서울&apos; 메이커 시티 &apos;다
+                &lsqb;서울시&rsqb;&apos;상생서울&apos; 메이커 시티
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31

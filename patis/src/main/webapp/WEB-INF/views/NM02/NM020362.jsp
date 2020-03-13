@@ -188,7 +188,7 @@ pageEncoding="UTF-8"%>
         <h4 class="nm020362-title-style-03">
           ·&nbsp;&nbsp;도시재생현장지원센터
         </h4>
-        <div class="nm020362-tbl-style-01 ">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-style-mobile">
           <ul>
             <li>위치</li>
             <li>묵동 240-46</li>
@@ -1052,7 +1052,7 @@ pageEncoding="UTF-8"%>
                 <li>·&nbsp;2020년 : 국토부 뉴딜사업 신청(중심시가지형)</li>
                 <li>
                   ·&nbsp;2020년 : 도시재생지원센터 운영 및
-                  주민공모사업(의견청취)진행
+                  주민공모사업(의견청취) 진행
                 </li>
               </ul>
             </li>
