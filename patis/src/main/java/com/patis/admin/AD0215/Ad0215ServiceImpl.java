@@ -59,14 +59,13 @@ public class Ad0215ServiceImpl implements I_Ad0215Service{
 	}
 
 	@Override
-	public int updateRight() {
-		// TODO Auto-generated method stub
-		return 0;
+	public Accept_typeVO currentRight() {
+		return ad0215DAO.currentRight();
 	}
 
 	@Override
-	public Accept_typeVO currentRight() {
-		return ad0215DAO.currentRight();
+	public int UpdateRight(Map<String, Object> params) {
+		return ad0215DAO.UpdateRight(params);
 	}
 
 }

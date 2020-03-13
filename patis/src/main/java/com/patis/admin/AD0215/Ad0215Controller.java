@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.Accept_typeVO;
@@ -204,6 +205,27 @@ public class Ad0215Controller {
 		model.addAttribute("current", vo);
 		
 		return "ajax/adCurrentRight";
+	}
+	
+	@RequestMapping(value = "/ad0215UpdateRight.do",  method = RequestMethod.GET)
+	public String UpdateRight(@RequestParam("type")String type,
+			@RequestParam("read")String read,
+			@RequestParam("write")String write,
+			RedirectAttributes ra) {
+		
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("type", type);
+		params.put("read", read);
+		params.put("write", write);
+		
+		int result = ad0215Service.UpdateRight(params);
+		
+		System.out.println(result);
+		System.out.println(result);
+		System.out.println(result);
+		
+		ra.addAttribute("type", type);
+		return "redirect:ad0215GetRight.do";
 	}
 
 }

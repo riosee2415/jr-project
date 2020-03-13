@@ -73,15 +73,15 @@ public class Ad0215DAOImpl implements I_Ad0215DAO{
 		return sqlSession.selectList(NAMESPACE + ".GET_RIGHT");
 	}
 
-	@Override
-	public int updateRight() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@Override
 	public Accept_typeVO currentRight() {
 		return sqlSession.selectOne(NAMESPACE + ".GET_CURRENT_RIGHT");
+	}
+
+	@Override
+	public int UpdateRight(Map<String, Object> params) {
+		return sqlSession.update(NAMESPACE + ".MODIFY_RIGHT", params);
 	}
 
 }

@@ -132,4 +132,11 @@
 		 WHERE	BOARD_TYPE = 'COLLUSION'
 	</select>
 	
+	<update id="MODIFY_RIGHT" parameterType="hashMap">
+		UPDATE	JR_DB.ACCEPT_RIGHT
+		   SET	VIEW_RIGHT = ${read},
+				WRITE_RIGHT = ${write}
+		 WHERE	BOARD_TYPE = #{type}
+	</update>
+	
 </mapper>

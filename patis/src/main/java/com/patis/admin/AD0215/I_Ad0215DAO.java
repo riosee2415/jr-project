@@ -80,16 +80,16 @@ public interface I_Ad0215DAO {
 	/**
 	 * @AUTHOR : 4LEAF.NJM
 	 * @DATE   : 2020. 3. 12.
-	 * @RETURN : List<Accept_typeVO>
-	 * @DESC   : 게시판 별 권한을 수정한다.
-	 */
-	int updateRight();
-	
-	/**
-	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : 2020. 3. 12.
 	 * @RETURN : Accept_typeVO
 	 * @DESC   : 현재 게시판의 권한을 가져온다.
 	 */
 	Accept_typeVO currentRight();
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 13.
+	 * @RETURN : int
+	 * @DESC   : 현재 권한을 업데이트 한다.
+	 */
+	int UpdateRight(Map<String, Object> params);
 }
