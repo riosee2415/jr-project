@@ -74,7 +74,7 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02">
           <span>▪</span>주민공동이용시설 및 거점시설 현황
         </h3>
-        <div class="nm020362-content-img__box">
+        <div class="nm020362-content-img__box ">
           <img
             src="/assets/images/image/sub-nm62-01-02.png"
             alt="주민공동이용시설 및 거점시설 현황 사진"
@@ -177,7 +177,7 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02"><span>▪</span>주민협의체 구성</h3>
-        <div class="nm020362-content-img__box">
+        <div class="nm020362-content-img__box nm020362-slideBox">
           <img
             src="/assets/images/image/sub-nm62-01-03.png"
             alt="주민협의체 구성 사진"
@@ -256,7 +256,9 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>예시도</li>
             <li>
-              <ul class="nm020362-list-style-image grid-two-by-two">
+              <ul
+                class="nm020362-list-style-image grid-two-by-two nm020362-slideBox2"
+              >
                 <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-05.png"
@@ -325,7 +327,9 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>예시도</li>
             <li>
-              <ul class="nm020362-list-style-image grid-two-by-two2">
+              <ul
+                class="nm020362-list-style-image grid-two-by-two2 nm020362-slideBox3"
+              >
                 <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-10.png"
@@ -382,7 +386,9 @@ pageEncoding="UTF-8"%>
                 <li>·&nbsp;2019.12.12. : 현장 설명회 개최</li>
               </ul>
 
-              <ul class="nm020362-list-style-image grid-one-by-two">
+              <ul
+                class="nm020362-list-style-image grid-one-by-two nm020362-slideBox4"
+              >
                 <li class="nm020362-content-img__box">
                   <img
                     src="/assets/images/image/sub-nm62-01-14.png"
