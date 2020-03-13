@@ -49,6 +49,8 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    width:90%;
+    margin:0 auto;
   }
 
   .banner > div > div {
@@ -154,7 +156,7 @@
   }
   .banner a {
     width: 100%;
-    height: 180px;
+    height: 276px;
   }
   .banner > div > div {
     width: 100%;
@@ -204,9 +206,25 @@
 	.main-news{
     margin-top:-100px;
     }
+    .banner a{
+     height:163px;
+    }
 }
 @media screen and (min-width: 554px) and (max-width: 966px){
 	.main-news{
     margin-top:10px;
+    .banner a{
+     height:163px;
     }
+    }
+}
+@media screen and (min-width: 827px) and (max-width: 1009px){
+	.banner a{
+	height:278px;
+	}
+}
+@media screen and (min-width: 1150px) and (max-width: 1009px){
+	.banner a{
+	height:334px;
+	}
 }
