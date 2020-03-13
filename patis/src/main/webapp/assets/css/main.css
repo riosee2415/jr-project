@@ -129,7 +129,7 @@
 }
 
 .banner {
-  width: 43%;
+  width: 530px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,8 +144,8 @@
 }
 
 .banner > div > div {
-  width: 33.3%;
-  margin-right: 6px;
+  width: 160px;
+  margin-right: 14px;
 }
 
 .up,
@@ -165,7 +165,7 @@
 }
 .banner a {
   display: block;
-  width: 100%;
+  width: 165px;;
   height: 198px;
   margin-left: 4px;
   margin-bottom: 4px;
@@ -247,8 +247,8 @@
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
+  justify-content: center;
+  -webkit-justify-content: center;
 }
 .main-regeneration {
   overflow: hidden;
