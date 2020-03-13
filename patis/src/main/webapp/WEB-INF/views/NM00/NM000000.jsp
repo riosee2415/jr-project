@@ -77,9 +77,17 @@ pageEncoding="UTF-8"%>
     </div>
   </div>
   <div class="main-container-content">
-    <a class="main-container-image" href="${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62">
-      
-    </a>
+    <div
+      class="main-regeneration"
+      onclick="javascript:pageLink('${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62')"
+    >
+      <div class="text-layer">
+        <p>URBAN REGENERATION</p>
+        <p>도시재생<br /><span>지역현황</span></p>
+        <p>우리 지역의 <span>도시재생정보</span>를<br />알 수 있습니다.</p>
+      </div>
+      <div class="image-layer"></div>
+    </div>
     <div class="main-news">
       <ul>
         <li class="main-news__title">
