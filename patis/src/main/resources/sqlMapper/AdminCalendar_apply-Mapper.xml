@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="AdminCollusion-Mapper">
+<mapper namespace="AdminCalendar_apply-Mapper">
 	
 	<select id="GET_COUNT" resultType="int" parameterType="hashMap">
 		SELECT	COUNT(B_NO)
-		  FROM	JR_DB.BOARD_COLLUSION
+		  FROM	JR_DB.BOARD_YEAR_CALENDAR_APPLY
 		 WHERE	B_USE_YN = 1
 		 		 <if test="searchType == '제목'.toString()">
 		   AND	B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
@@ -32,26 +32,26 @@
 				B_USE_YN,
 				B_TYPE,
 				B_DELETE_TIME
-		  FROM	JR_DB.BOARD_COLLUSION
+		  FROM	JR_DB.BOARD_YEAR_CALENDAR_APPLY
 		 ORDER	BY B_NO DESC
 		 LIMIT 	10 OFFSET #{paging}
 	</select>
 	
 	
 	<update id="MODIFY_NOTICE1" parameterType="int">
-		UPDATE	JR_DB.BOARD_COLLUSION
+		UPDATE	JR_DB.BOARD_YEAR_CALENDAR_APPLY
 		   SET	B_NOTICE = 1
 		 WHERE  B_NO = #{no}
 	</update>
 	
 	<update id="MODIFY_NOTICE2" parameterType="int">
-		UPDATE	JR_DB.BOARD_COLLUSION
+		UPDATE	JR_DB.BOARD_YEAR_CALENDAR_APPLY
 		   SET	B_NOTICE = 0
 		 WHERE  B_NO = #{no}
 	</update>
 	
 	<update id="REMOVE_DATA" parameterType="int">
-		UPDATE	JR_DB.BOARD_COLLUSION
+		UPDATE	JR_DB.BOARD_YEAR_CALENDAR_APPLY
 		   SET	B_USE_YN = 0,
 		   		B_DELETE_TIME = SYSDATE()
 		 WHERE  B_NO = #{no}
@@ -75,7 +75,7 @@
 				B_USE_YN,
 				B_TYPE,
 				B_DELETE_TIME
-		  FROM	JR_DB.BOARD_COLLUSION
+		  FROM	JR_DB.BOARD_YEAR_CALENDAR_APPLY
 		 WHERE	1=1
 		 		 <if test="searchType == '제목'.toString()">
 		   AND	B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
@@ -104,7 +104,7 @@
 		        	 WHERE	USER_NO = CO_AUTHOR
 		        ) AS CO_AUTHOR
 		  FROM	JR_DB.COMMENTS
-		 WHERE	CO_BOARD_TYPE = 'COLLUSION'
+		 WHERE	CO_BOARD_TYPE = 'CALENDAR_APPLY'
 		   AND 	CO_PARENT_NO = #{p_no}
 		 ORDER	BY CO_CREATE_TIME ASC
 	</select>
@@ -129,14 +129,14 @@
 		SELECT  VIEW_RIGHT,
 				WRITE_RIGHT
 		  FROM	JR_DB.ACCEPT_RIGHT
-		 WHERE	BOARD_TYPE = 'COLLUSION'
+		 WHERE	BOARD_TYPE = 'CALENDAR_APPLY'
 	</select>
 	
 	<update id="MODIFY_RIGHT" parameterType="hashMap">
 		UPDATE	JR_DB.ACCEPT_RIGHT
 		   SET	VIEW_RIGHT = ${read},
 				WRITE_RIGHT = ${write}
-		 WHERE	BOARD_TYPE = 'COLLUSION'
+		 WHERE	BOARD_TYPE = 'CALENDAR_APPLY'
 	</update>
 	
 </mapper>

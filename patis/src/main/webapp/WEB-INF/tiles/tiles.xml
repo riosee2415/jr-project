@@ -150,6 +150,33 @@
        <put-attribute name="content" value="/WEB-INF/views/AD02/AD0215.jsp"/>
     </definition>
     
+     <definition name="adminPresentation" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0214.jsp"/>
+    </definition>
+   
+    <definition name="adminCalendar_apply" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0213.jsp"/>
+    </definition>
+    
+    <definition name="adminCalendar" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0212.jsp"/>
+    </definition>
+    
+    <definition name="adminEduSupport" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0211.jsp"/>
+    </definition>
+    
+    <definition name="admineduOffice" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0210.jsp"/>
+    </definition>
+
+	<definition name="adminHire" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0209.jsp"/>
+    </definition>
+        
+    <definition name="adminYardSupport" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0208.jsp"/>
+    </definition>
     
     
     

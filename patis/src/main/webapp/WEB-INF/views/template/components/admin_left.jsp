@@ -35,13 +35,13 @@ pageEncoding="UTF-8"%>
         <li onclick="javascript:subMenuHandler('/admin..do', 2, 5)">행사자료</li>
         <li onclick="javascript:subMenuHandler('/admin..do', 2, 6)">보도자료</li>
         <li onclick="javascript:subMenuHandler('/admin..do', 2, 7)">구청[사진 및 영상자료]</li>
-        <li onclick="javascript:subMenuHandler('/admin..do', 2, 8)">현장지원센터[사진 및 영상자료]</li>
-        <li onclick="javascript:subMenuHandler('/admin..do', 2, 9)">채용공고</li>
-        <li onclick="javascript:subMenuHandler('/admin..do', 2, 10)">구청[도시재생학교]</li>
-        <li onclick="javascript:subMenuHandler('/admin..do', 2, 11)">현장지원센터[도시재생학교]</li>
-        <li onclick="javascript:subMenuHandler('/admin..do', 2, 12)">교육 연간일정표</li>
-        <li onclick="javascript:subMenuHandler('/admin..do', 2, 13)">교육 일정등록 및 신청</li>
-        <li onclick="javascript:subMenuHandler('/admin..do', 2, 14)">주민설명회</li>
+        <li onclick="javascript:subMenuHandler('/admin.yardSupport.do', 2, 8)">현장지원센터[사진 및 영상자료]</li>
+        <li onclick="javascript:subMenuHandler('/admin.hire.do', 2, 9)">채용공고</li>
+        <li onclick="javascript:subMenuHandler('/admin.eduOffice.do', 2, 10)">구청[도시재생학교]</li>
+        <li onclick="javascript:subMenuHandler('/admin.eduSupport.do', 2, 11)">현장지원센터[도시재생학교]</li>
+        <li onclick="javascript:subMenuHandler('/admin.calendar.do', 2, 12)">교육 연간일정표</li>
+        <li onclick="javascript:subMenuHandler('/admin.calendar_apply.do', 2, 13)">교육 일정등록 및 신청</li>
+        <li onclick="javascript:subMenuHandler('/admin.presentation.do', 2, 14)">주민설명회</li>
         <li onclick="javascript:subMenuHandler('/admin.collusion.do', 2, 15)">공모사업신청</li>
       </ul>
 		</div>

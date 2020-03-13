@@ -3,7 +3,7 @@ pageEncoding="UTF-8"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div class="ad0101-header">
-  <p>게시판 관리 > 공모사업신청 관리(AD0215)</p>
+  <p>게시판 관리 > 현장지원센터(AD0208)</p>
 </div>
 
 

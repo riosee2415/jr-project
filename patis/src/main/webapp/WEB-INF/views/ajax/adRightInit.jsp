@@ -42,15 +42,25 @@
 
 		var mc = numberFormat($('#ad02-table').data('mc'), 2);
 		var sc = numberFormat($('#ad02-table').data('sc'), 2);
-		
+		var type = '';
 		var adCode = mc + sc;
+
+		switch(adCode) {
+		case '0215' :
+			type = 'COLLUSION';
+			break;
+		case '0214' :
+			type = 'PRESENTATION';
+			break;
+	}
+	
 
 		
 		 $.ajax({
 			    url: "/ad" + adCode + "CurrentRight.do",
 			    type: "get",
 			    data: {
-			      
+			      "type" : type
 			    },
 			    success: function(data) {
 				    var view = $.trim(data.split("-----")[0]);
@@ -68,8 +78,21 @@
 	function updateRight(){
 		var mc = numberFormat($('#ad02-table').data('mc'), 2);
 		var sc = numberFormat($('#ad02-table').data('sc'), 2);
-		
+		var type = '';
 		var adCode = mc + sc;
+
+		console.log(adCode);
+
+		switch(adCode) {
+			case '0215' :
+				type = 'COLLUSION';
+				break;
+			case '0214' :
+				type = 'PRESENTATION';
+				break;
+		}
+
+		console.log(type);
 
 		var read = $("select[name=right-read]").val();
 		var write = $("select[name=right-write]").val();
@@ -78,7 +101,7 @@
 			    url: "/ad" + adCode + "UpdateRight.do",
 			    type: "get",
 			    data: {
-			      "type" : "COLLUSION",
+			      "type" : type,
 			      "read" : read,
 			      "write" : write
 			    },

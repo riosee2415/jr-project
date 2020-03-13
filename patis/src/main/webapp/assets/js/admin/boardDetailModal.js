@@ -3,6 +3,11 @@ var title;
 var author;
 
 function intoComments(b_no, b_title, b_author) {
+	
+  var mc = numberFormat($("#ad02-table").data("mc"), 2);
+  var sc = numberFormat($("#ad02-table").data("sc"), 2);
+
+  var adCode = mc + sc;
   no = b_no;
   title = b_title;
   author = b_author;
@@ -12,7 +17,7 @@ function intoComments(b_no, b_title, b_author) {
   $(".modal-01").css("display", "block");
 
   $.ajax({
-    url: "/ad0215Comments.do",
+    url: "/ad"+adCode+"Comments.do",
     type: "get",
     data: {
       p_no: b_no
