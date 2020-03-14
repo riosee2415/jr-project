@@ -178,6 +178,36 @@
        <put-attribute name="content" value="/WEB-INF/views/AD02/AD0208.jsp"/>
     </definition>
     
+    <definition name="adminYardOffice" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0207.jsp"/>
+    </definition>
+    
+    <definition name="adminRelease" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0206.jsp"/>
+    </definition>
+    
+    <definition name="adminEventArchive" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0205.jsp"/>
+    </definition>
+    
+    <definition name="adminEventAlert" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0204.jsp"/>
+    </definition>
+    
+    <definition name="adminNotice" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0203.jsp"/>
+    </definition>
+    
+    <definition name="adminCommunity" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0202.jsp"/>
+    </definition>
+    
+    <definition name="adminStatute" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD02/AD0201.jsp"/>
+    </definition>
+    
+    
+    
     
     
 </tiles-definitions>
