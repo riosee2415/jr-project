@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.patis.common.file.I_FileService;
 import com.patis.common.tempFile.I_TempFileService;
 import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.Accept_typeVO;
 import com.patis.model.BoardFileVO;
 import com.patis.model.BoardTempFileVO;
 import com.patis.model.BoardVO;
@@ -58,6 +60,9 @@ public class Nm021164Controller {
 		String b_type = nm021164Service.getBoardType();
 		model.addAttribute("b_type", b_type);
 		
+		Accept_typeVO AcceptRight = middlewareService.getAcceptRight(b_type);
+		model.addAttribute("AcceptRight", AcceptRight);
+		
 		model.addAttribute("searchType", searchType);
 		model.addAttribute("searchKeyword", searchKeyword);
 		
@@ -65,11 +70,31 @@ public class Nm021164Controller {
 	}
 	
 	@RequestMapping(value="/collusion.apply.detail.do", method=RequestMethod.GET)
-	public String sendDetailScreen(Model model,
+	public String sendDetailScreen(Model model, 
+								   HttpSession session,
+								   @RequestParam(value="parent")String parent,
+								   @RequestParam(value="code")String code,
 			 					   @RequestParam(value="b_no")int b_no,
 			 					   @RequestParam(value="rownum")int rownum,
 			 					   @RequestParam(value="s_type", defaultValue="")String searchType,
-			 					   @RequestParam(value="s_keyword", defaultValue="")String searchKeyword) throws Exception {
+			 					   @RequestParam(value="s_keyword", defaultValue="")String searchKeyword,
+			 					   RedirectAttributes rttr) throws Exception {
+		
+		String btype = nm021164Service.getBoardType();
+		
+		Accept_typeVO AcceptRight = middlewareService.getAcceptRight(btype);
+		model.addAttribute("AcceptRight", AcceptRight);
+		
+		if(session.getAttribute("loginRight") != null) {
+			if(Integer.parseInt(session.getAttribute("loginRight").toString()) > Integer.parseInt(AcceptRight.getVIEW_RIGHT())) {
+				rttr.addAttribute("parent", parent);
+				rttr.addAttribute("code", code);
+				rttr.addAttribute("s_type", searchType);
+				rttr.addAttribute("s_keyword", searchKeyword);
+				rttr.addFlashAttribute("msg", "사용자님은 해당 글을 볼 수 있는 권한이 없습니다.");
+				return "redirect:/collusion.apply.do";
+			}
+		}
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
 		List<CommonVO> subMenuList = middlewareService.getSubMenu();
@@ -79,8 +104,6 @@ public class Nm021164Controller {
 		
 		BoardVO data = nm021164Service.getCollusion(b_no);
 		model.addAttribute("data", data);
-		
-		String btype = nm021164Service.getBoardType();
 		
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("BOARD_TYPE", btype);
@@ -100,7 +123,6 @@ public class Nm021164Controller {
 		model.addAttribute("prevData", prevData);
 		model.addAttribute("nextData", nextData);
 		
-		System.out.println("search: " + searchType + " " + searchKeyword);
 		model.addAttribute("rownum", rownum);
 		model.addAttribute("searchType", searchType);
 		model.addAttribute("searchKeyword", searchKeyword);
@@ -121,11 +143,31 @@ public class Nm021164Controller {
 	
 	@RequestMapping(value="/collusion.apply.write.do", method=RequestMethod.GET)
 	public String collusionWrite(Model model,
+								 HttpSession session,
+								 RedirectAttributes rttr,
+								 @RequestParam(value="parent")String parent,
+							     @RequestParam(value="code")String code,
 								 @RequestParam(value="mode", defaultValue="WRITE")String mode,
 								 @RequestParam(value="b_no", required=false)Integer b_no,
 								 @RequestParam(value="rownum", required=false)Integer rownum,
 								 @RequestParam(value="s_type", defaultValue="")String searchType,
 		 					     @RequestParam(value="s_keyword", defaultValue="")String searchKeyword) throws Exception{
+		
+		String b_type = nm021164Service.getBoardType();
+		
+		Accept_typeVO AcceptRight = middlewareService.getAcceptRight(b_type);
+		model.addAttribute("AcceptRight", AcceptRight);
+		
+		if(session.getAttribute("loginRight") != null) {
+			if(Integer.parseInt(session.getAttribute("loginRight").toString()) > Integer.parseInt(AcceptRight.getWRITE_RIGHT())) {
+				rttr.addAttribute("parent", parent);
+				rttr.addAttribute("code", code);
+				rttr.addAttribute("s_type", searchType);
+				rttr.addAttribute("s_keyword", searchKeyword);
+				rttr.addFlashAttribute("msg", "사용자님은 해당 게시판에 작성할 수 있는 권한이 없습니다.");
+				return "redirect:/collusion.apply.do";
+			}
+		}
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -137,7 +179,6 @@ public class Nm021164Controller {
 		String file_key = UUID.randomUUID().toString();
 		model.addAttribute("file_key", file_key);
 		
-		String b_type = nm021164Service.getBoardType();
 		if(mode.equals("MODIFY")) {
 			BoardVO data = nm021164Service.getCollusion(b_no);
 			model.addAttribute("data", data);
