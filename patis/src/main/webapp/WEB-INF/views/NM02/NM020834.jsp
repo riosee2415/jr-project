@@ -43,7 +43,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&lsqb;도깨비영화제 영상 공모전&rsqb;
+                &#91;서울시&#93;&#91;도깨비영화제 영상 공모전&#93;
               </li>
               <li class="nm34-imgbox-date">
                 2020.01.02
@@ -69,7 +69,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&lsqb;도깨비영화제 영상 공모전&rsqb;
+                &#91;서울시&#93;&#91;도깨비영화제 영상 공모전&#93;
               </li>
               <li class="nm34-imgbox-date">
                 2020.01.02
@@ -95,7 +95,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&lsqb;도깨비영화제 영상 공모전&rsqb;
+                &#91;서울시&#93;&#91;도깨비영화제 영상 공모전&#93;
               </li>
               <li class="nm34-imgbox-date">
                 2020.01.02
@@ -122,7 +122,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;세운상가&rsqb;시제품 제작지원 프로젝트
+                &#91;세운상가&#93;시제품 제작지원 프로젝트
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31
@@ -148,7 +148,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;더 깊이 더 높게 경청해
+                &#91;서울시&#93;더 깊이 더 높게 경청해
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31
@@ -174,7 +174,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&apos;상생서울&apos; 메이커 시티
+                &#91;서울시&#93;&#39;상생서울&#39; 메이커 시티
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31
@@ -230,7 +230,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&lsqb;도깨비영화제 영상 공모전&rsqb;
+                &#91;서울시&#93;&#91;도깨비영화제 영상 공모전&#93;
               </li>
               <li class="nm34-imgbox-date">
                 2020.01.02
@@ -256,7 +256,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&lsqb;도깨비영화제 영상 공모전&rsqb;
+                &#91;서울시&#93;&#91;도깨비영화제 영상 공모전&#93;
               </li>
               <li class="nm34-imgbox-date">
                 2020.01.02
@@ -282,7 +282,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&lsqb;도깨비영화제 영상 공모전&rsqb;
+                &#91;서울시&#93;&#91;도깨비영화제 영상 공모전&#93;
               </li>
               <li class="nm34-imgbox-date">
                 2020.01.02
@@ -309,7 +309,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;세운상가&rsqb;시제품 제작지원 프로젝트
+                &#91;세운상가&#93;시제품 제작지원 프로젝트
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31
@@ -335,7 +335,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;더 깊이 더 높게 경청해 광
+                &#91;서울시&#93;더 깊이 더 높게 경청해 광
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31
@@ -361,7 +361,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm34-imgbox-con">
               <li class="nm34-imgbox-title">
-                &lsqb;서울시&rsqb;&apos;상생서울&apos; 메이커 시티 &apos;다
+                &#91;서울시&#93;&#39;상생서울&#39; 메이커 시티 &#39;다
               </li>
               <li class="nm34-imgbox-date">
                 2019.10.31

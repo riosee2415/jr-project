@@ -96,8 +96,8 @@ pageEncoding="UTF-8"%>
                 <td class="tbl-style-sec">주민</td>
                 <td class="tbl-style-contitle">
                   <ul>
-                    <li>주민&lpar;상인&rpar;협의제</li>
-                    <li>마을활동가&lpar;조직&rpar;</li>
+                    <li>주민&#40;상인&#41;협의제</li>
+                    <li>마을활동가&#40;조직&#41;</li>
                     <li>소유자</li>
                   </ul>
                 </td>

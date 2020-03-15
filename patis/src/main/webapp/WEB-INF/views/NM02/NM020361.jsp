@@ -24,7 +24,7 @@ pageEncoding="UTF-8"%>
             >시키는 것을 말합니다.
           </p>
           <br />
-          <p>(도시재생 활성화 및 지원에 관한 특별법 제2조)</p>
+          <p>&#40;도시재생 활성화 및 지원에 관한 특별법 제2조&#41;</p>
         </div>
         <div class="sub-illu-img"></div>
         <div class="sub-main-title">▪중랑구 비전/목표</div>
@@ -95,11 +95,13 @@ pageEncoding="UTF-8"%>
           file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
         </div>
 
-        <div class="sub-main-title">▪중랑구 도시재생사업 추진계획(안)</div>
+        <div class="sub-main-title">
+          ▪중랑구 도시재생사업 추진계획&#40;안&#41;
+        </div>
         <div class="sub-plan">
           <table class="sub-plan-table">
             <caption>
-              중랑구 도시재생사업 추진계획(안)
+              중랑구 도시재생사업 추진계획&#40;안&#41;
             </caption>
             <thead>
               <tr>
@@ -125,7 +127,7 @@ pageEncoding="UTF-8"%>
                 <td class="table-sky">묵2동</td>
                 <td class="table-orange">
                   <p>기 뉴딜사업 선정</p>
-                  <p class="table-orangetext">(2018. 8. 선정 완료)</p>
+                  <p class="table-orangetext">&#40;2018. 8. 선정 완료&#41;</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -135,11 +137,11 @@ pageEncoding="UTF-8"%>
                 <td class="table-yellow">2</td>
                 <td class="table-yellow">
                   <p>면목3.8동</p>
-                  <p>(서울형 도시재생사업)</p>
+                  <p>&#40;서울형 도시재생사업&#41;</p>
                 </td>
                 <td class="table-orange">
                   <p>주거환경개선사업</p>
-                  <p class="table-orangetext">(2019. 5. 선정 완료)</p>
+                  <p class="table-orangetext">&#40;2019. 5. 선정 완료&#41;</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -176,7 +178,7 @@ pageEncoding="UTF-8"%>
                 <td class="table-yellow">6</td>
                 <td class="table-yellow">
                   <p>사가정시장</p>
-                  <p>(서울형 도시재생사업)</p>
+                  <p>&#40;서울형 도시재생사업&#41;</p>
                 </td>
                 <td class="table-orange">
                   <p>전통시장 연계형</p>
@@ -191,7 +193,7 @@ pageEncoding="UTF-8"%>
                 <td class="table-sky">중화3존치</td>
                 <td>
                   <p>희망지사업 선정</p>
-                  <p>(하반기)</p>
+                  <p>&#40;하반기&#41;</p>
                 </td>
                 <td>활성화지역 선정</td>
                 <td class="table-orange">뉴딜사업 선정</td>
@@ -262,7 +264,9 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul>
               <li>11. 25.</li>
-              <li>·면목동 중심지(면목2·상봉2동) 도시재생활성화지역 선정</li>
+              <li>
+                ·면목동 중심지&#40;면목2·상봉2동&#41; 도시재생활성화지역 선정
+              </li>
             </ul>
             <ul>
               <li>12. 17.</li>
@@ -275,7 +279,7 @@ pageEncoding="UTF-8"%>
           <p>▪중랑구 도시재생사업 추진 현황</p>
           <p></p>
           <p class="sub-status-title">
-            중랑구 도시재생 추진현황도 (8개소/220HA, 사업지4, 희망지4)
+            중랑구 도시재생 추진현황도 &#40;8개소/220HA, 사업지4, 희망지4&#41;
           </p>
         </div>
 
@@ -294,7 +298,7 @@ pageEncoding="UTF-8"%>
             <tr>
               <th>연번</th>
               <th>위&nbsp;치</th>
-              <th>면적(㎡)</th>
+              <th>면적&#40;㎡&#41;</th>
               <th>추진현황</th>
             </tr>
           </thead>
@@ -305,12 +309,12 @@ pageEncoding="UTF-8"%>
               <td>493,219</td>
               <td>
                 <p>
-                  <span class="bluetext">활성화지역 선정 </span>(’17. 2. 16. -
-                  ‘22. 12월)
+                  <span class="bluetext">활성화지역 선정 </span>&#40;’17. 2. 16.
+                  - ‘22. 12월&#41;
                 </p>
                 <p>
-                  <span class="bluetext">국토부뉴딜사업 선정 </span>(’18. 8. 31.
-                  - ’22. 12월)
+                  <span class="bluetext">국토부뉴딜사업 선정 </span>&#40;’18. 8.
+                  31. - ’22. 12월&#41;
                 </p>
               </td>
             </tr>
@@ -319,8 +323,8 @@ pageEncoding="UTF-8"%>
               <td class="table-sky bluetext">면목3.8동</td>
               <td>18,020</td>
               <td>
-                <span class="bluetext">주거환경관리사업 선정</span>(’18. 8. 31.
-                - ‘22. 12월)
+                <span class="bluetext">주거환경관리사업 선정</span>&#40;’18. 8.
+                31. - ‘22. 12월&#41;
               </td>
             </tr>
             <tr>
@@ -328,8 +332,8 @@ pageEncoding="UTF-8"%>
               <td class="table-sky bluetext">중화2촉진</td>
               <td>140,885</td>
               <td>
-                <span class="bluetext">활성화지역 선정 </span>(’19. 4. 11. -
-                ‘23. 12월)
+                <span class="bluetext">활성화지역 선정 </span>&#40;’19. 4. 11. -
+                ‘23. 12월&#41;
               </td>
             </tr>
             <tr>
@@ -337,8 +341,8 @@ pageEncoding="UTF-8"%>
               <td class="table-sky">망우본동</td>
               <td>129,497</td>
               <td>
-                <span class="greentext">희망지사업 선정 </span>(’19. 5. 2. -
-                ’19. 11월)
+                <span class="greentext">희망지사업 선정 </span>&#40;’19. 5. 2. -
+                ’19. 11월&#41;
                 <span class="table-orangetext">※종료</span>
               </td>
             </tr>
@@ -347,20 +351,20 @@ pageEncoding="UTF-8"%>
               <td class="table-sky bluetext">면목2, 상봉2동</td>
               <td>292,000</td>
               <td>
-                <span class="bluetext">활성화지역 선정 </span>(’19. 11. 25. -
-                ‘24. 12월)
+                <span class="bluetext">활성화지역 선정 </span>&#40;’19. 11. 25.
+                - ‘24. 12월&#41;
               </td>
             </tr>
             <tr>
               <td class="table-sky">6</td>
               <td class="table-sky">
                 <p>면목3.9동</p>
-                <p>(사가정시장)</p>
+                <p>&#40;사가정시장&#41;</p>
               </td>
               <td>147,998</td>
               <td>
-                <span class="greentext">전통시장 연계형 희망지 선정 </span>(’19.
-                5. 15. - ‘20. 3월)
+                <span class="greentext">전통시장 연계형 희망지 선정 </span
+                >&#40;’19. 5. 15. - ‘20. 3월&#41;
               </td>
             </tr>
             <tr>
@@ -368,7 +372,8 @@ pageEncoding="UTF-8"%>
               <td class="table-sky">중화3존치</td>
               <td rowspan="2">980,000</td>
               <td rowspan="2">
-                <span class="greentext">희망지사업 선정 </span>(’19. 12. 17.~)
+                <span class="greentext">희망지사업 선정 </span>&#40;’19. 12.
+                17.~&#41;
               </td>
             </tr>
             <tr>
@@ -379,7 +384,7 @@ pageEncoding="UTF-8"%>
               <td colspan="2">계</td>
               <td class="table-orange">2,201,589</td>
               <td class="table-orangetext table-orange">
-                ※중랑구 주거면적(10.82㎡) 대비 20% 차지
+                ※중랑구 주거면적&#40;10.82㎡&#41; 대비 20% 차지
               </td>
             </tr>
           </tbody>
