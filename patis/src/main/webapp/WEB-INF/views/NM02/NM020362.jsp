@@ -804,8 +804,9 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>주민거점시설(들락날락)
+          <span>▪</span>망우본동 주민공동이용시설 및 거점시설
         </h3>
+        <div class="nm020362-title-sub">·&nbsp;주민거점시설(들락날락)</div>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-04-03.png"
