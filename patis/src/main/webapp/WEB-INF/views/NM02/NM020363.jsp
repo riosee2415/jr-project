@@ -69,11 +69,11 @@ pageEncoding="UTF-8"%>
       <!-- 묵2동 도시재생지원센터 -->
       <div class="nm0363-content">
         <h3 class="nm0363-title-style-01">▪묵2동 도시재생지원센터</h3>
-        <!-- 
+
         <div class="nm0363-content-img__box">
           <div class="nm0363-content-img-02-01"></div>
         </div>
-         -->
+
         <div class="nm0363-tbl-style-01">
           <ul class="tbl-style-title">
             <li>·&nbsp;오시는길</li>
@@ -94,7 +94,7 @@ pageEncoding="UTF-8"%>
           <ul class="tbl-style-con tbl-style-numcon">
             <li>02-6951-0100</li>
           </ul>
-          <ul class="tbl-style-image1">
+          <!-- <ul class="tbl-style-image1">
             <li>
               <img
                 src="/assets/images/image/sub-nm0363-02-02.png"
@@ -109,7 +109,7 @@ pageEncoding="UTF-8"%>
                 class="sub-nm0363-02-03"
               />
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
 
@@ -121,7 +121,7 @@ pageEncoding="UTF-8"%>
         </div>
         <div class="nm0363-tbl-style-01">
           <ul class="tbl-style-title">
-            <li>·&nbsp;오시는 길</li>
+            <li>·&nbsp;오시는길</li>
           </ul>
           <ul class="tbl-style-con">
             <li>서울특별시 중랑구 중랑역로 87, 2층</li>
@@ -139,7 +139,7 @@ pageEncoding="UTF-8"%>
           <ul class="tbl-style-con tbl-style-numcon">
             <li>02-491-2201</li>
           </ul>
-          <ul class="tbl-style-image1">
+          <!-- <ul class="tbl-style-image1">
             <li>
               <img
                 src="/assets/images/image/sub-nm0363-02-05.png"
@@ -154,7 +154,7 @@ pageEncoding="UTF-8"%>
                 class="sub-nm0363-02-06"
               />
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>

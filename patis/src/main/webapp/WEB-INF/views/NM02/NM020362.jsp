@@ -652,7 +652,7 @@ pageEncoding="UTF-8"%>
         <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
-            <li>면목3.8동 1075번지 일대 &#40;면적 &#58; 18,020.6 ㎡&#41;</li>
+            <li>면목3·8동 1075번지 일대 &#40;면적 &#58; 18,020.6 ㎡&#41;</li>
           </ul>
           <ul>
             <li>사업내용</li>
@@ -682,7 +682,7 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm020362-title-style-02">▪면목3.8동 거점시설</h3>
+        <h3 class="nm020362-title-style-02">▪면목3·8동 거점시설</h3>
         <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
@@ -804,9 +804,8 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>망우본동 주민공동이용시설 및 거점시설
+          <span>▪</span>주민거점시설(들락날락)
         </h3>
-        <div class="nm020362-title-sub">-주민거점시설(들락날락)</div>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-04-03.png"
@@ -868,7 +867,7 @@ pageEncoding="UTF-8"%>
         <div class="nm020362-tbl-style-01">
           <ul>
             <li>위치</li>
-            <li>면목3.8동 459-1 일대 &#40;면적 &#58; 99,706㎡&#41;</li>
+            <li>면목3·8동 459-1 일대 &#40;면적 &#58; 99,706㎡&#41;</li>
           </ul>
           <ul>
             <li>사업내용</li>
@@ -912,15 +911,6 @@ pageEncoding="UTF-8"%>
                 </li>
                 <li>·&nbsp;2020.01.07. &#58; 도시재생 시범사업 평가표 배부</li>
                 <li>·&nbsp;2019.06. ~ 2020.02. &#58; 희망지사업 추진</li>
-                <li>
-                  ·&nbsp;2020.01.30. &#58; 사업대상지 기본구상안&#40;PPT
-                  발표자료&#41; 제출
-                </li>
-                <li>
-                  ·&nbsp;2020.02.01. &#58; 도시재생 시범사업 평가위원회 재구성
-                  및 평가
-                </li>
-                <li>·&nbsp;2020.02.10. &#58; 도시재생 시범사업 선정</li>
               </ul>
             </li>
           </ul>
