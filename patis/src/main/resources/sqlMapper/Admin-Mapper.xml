@@ -47,5 +47,20 @@
 		 WHERE	USER_ID = #{input_id}
 	</select>
 	
+	<select id="LOOKUP_CONNECT" resultType="int" parameterType="hashMap">
+		SELECT	COUNT(*)
+		  FROM	JR_DB.CONNECT_RECORD
+		 WHERE	CONNECT_IP = #{ipAdress}
+		   AND	CONNECT_DATE = #{currentDate}
+	</select>
+	
+	<insert id="ADD_CONNECT" parameterType="hashMap">
+		INSERT INTO JR_DB.CONNECT_RECORD
+		VALUES
+		(
+			#{ipAdress}, #{currentDate}
+		);
+	</insert>
+	
 	
 </mapper>

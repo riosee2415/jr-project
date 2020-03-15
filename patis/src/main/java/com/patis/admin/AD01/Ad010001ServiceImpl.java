@@ -56,4 +56,14 @@ public class Ad010001ServiceImpl implements I_Ad010001Service{
 		return ad010001DAO.getEmpInfo(info);
 	}
 
+	@Override
+	public int lookupConnectReport(Map<String, String> params) {
+		return ad010001DAO.lookupConnectReport(params);
+	}
+
+	@Override
+	public int addConnectReport(Map<String, String> params) {
+		return ad010001DAO.addConnectReport(params);
+	}
+
 }

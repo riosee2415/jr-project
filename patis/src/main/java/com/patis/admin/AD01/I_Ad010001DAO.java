@@ -46,4 +46,21 @@ public interface I_Ad010001DAO {
 	 * @DESC   : 비밀번호 복호화를 위한 데이터를 데이터베이스에서 가져온다.
 	 */
 	EmpVO getEmpSecretInfo(Map<String, String> info) throws SQLException;
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 15.
+	 * @RETURN : int
+	 * @DESC   : IP주소와 날짜를 기준으로 접속 기록이 있는지 조회한다.
+	 */
+	int lookupConnectReport(Map<String, String> params);
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 15.
+	 * @RETURN : int
+	 * @DESC   : 접속기록이 없는 경우, 새로운 접속기록을 기록한다.
+	 */
+	int addConnectReport(Map<String, String> params);
 }

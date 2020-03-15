@@ -43,4 +43,14 @@ public class Ad010001DAOImpl implements I_Ad010001DAO{
 		return sqlSession.selectOne(NAMESPACE + ".GET_EMP_SECRET_INFO", info);
 	}
 
+	@Override
+	public int lookupConnectReport(Map<String, String> params) {
+		return sqlSession.selectOne(NAMESPACE + ".LOOKUP_CONNECT", params);
+	}
+
+	@Override
+	public int addConnectReport(Map<String, String> params) {
+		return sqlSession.insert(NAMESPACE + ".ADD_CONNECT", params);
+	}
+
 }

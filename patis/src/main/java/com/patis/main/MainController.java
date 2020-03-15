@@ -1,6 +1,11 @@
 package com.patis.main;
 
+import java.net.InetAddress;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -9,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.patis.admin.AD01.I_Ad010001Service;
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
 
@@ -17,6 +23,9 @@ public class MainController {
 	
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
+	
+	@Resource(name = "ad010001Service")
+	private I_Ad010001Service ad010001Service;
 	
 	@RequestMapping(value="/main.do", method=RequestMethod.GET)
 	public String main(Model model) throws Exception {
@@ -29,6 +38,39 @@ public class MainController {
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
 		return "main";
+	}
+	
+	
+	@RequestMapping(value="/connectRecord.do", method=RequestMethod.GET)
+	public String connectRecord	(InetAddress ip) {
+		
+		String ipAdress = "000.000.000.000";
+		String currentDate = "9999/99/99";
+		
+		try {
+			ip = InetAddress.getLocalHost(); 
+			ipAdress = ip.getHostAddress(); 
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		SimpleDateFormat format = new SimpleDateFormat ("yyyy/MM/dd");
+		Date time = new Date();
+		currentDate = format.format(time);
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("ipAdress", ipAdress);
+		params.put("currentDate", currentDate);
+		
+		int result = ad010001Service.lookupConnectReport(params);
+		
+		if(result == 1) {
+			return null;
+		} else {
+			int isAdd = ad010001Service.addConnectReport(params);
+			return null;
+		}
+		
 	}
 	
 }

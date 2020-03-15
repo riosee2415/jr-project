@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	
+	
 	slideInterval = setInterval(function() {
 		  nextAni();
 	  }, 5000);
@@ -27,4 +29,25 @@ $(document).ready(function() {
   $(".main-cooper-btn .next").click(function() {
     nextAni();
   });
+  
+  
+  connectRecord();
+  
+  
 });
+
+
+
+function connectRecord(){
+	
+	$.ajax({
+		url : "/connectRecord.do",
+		type : "get",
+		data : {
+		},
+		success : function(data) {
+		}
+	});
+	
+	
+}
