@@ -585,7 +585,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm23-imgtable-des">
               <li>
-                [찾아가는 주민설명회 리플렛]
+                &#91;찾아가는 주민설명회 리플렛&#92;
               </li>
             </ul>
             <table class="nm23-table-style4">
@@ -928,7 +928,7 @@ pageEncoding="UTF-8"%>
               </caption>
               <tr>
                 <th>교육기간</th>
-                <td>2019. 9. 12. ~ 2019. 12. 26.</td>
+                <td>2019. 12. 5. ~ 2019. 12. 26.</td>
               </tr>
               <tr>
                 <th>교육목적</th>

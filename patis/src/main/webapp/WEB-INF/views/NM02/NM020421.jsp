@@ -225,7 +225,7 @@ pageEncoding="UTF-8"%>
             <th>서울형유형</th>
             <th colspan="2">사업명</th>
             <th>관련법</th>
-            <th>사업명</th>
+            <th>내용</th>
           </tr>
         </thead>
         <tbody>
