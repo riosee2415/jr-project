@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.patis.model.Accept_typeVO;
 import com.patis.model.CommonVO;
 
 @Service("middlewareService")
@@ -40,10 +41,11 @@ public class MiddlewareServiceImpl implements I_MiddlewareService {
 	@Override
 	public void printLog(String text) {
 		System.out.println("▒▒▒▒▒▒▒[system]▒▒▒▒▒▒▒ :: " + text);
-		
 	}
 
-	
-	
+	@Override
+	public Accept_typeVO getAcceptRight(String BOARD_TYPE) throws SQLException {
+		return middlewareDAO.getAcceptRight(BOARD_TYPE);
+	}
 
 }

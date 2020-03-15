@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AcceptRight-Mapper">
+
+	<select id="GET_ACCEPT_RIGHT" resultType="accept_typeVO" parameterType="str">
+		SELECT	VIEW_RIGHT,
+						WRITE_RIGHT
+			FROM	JR_DB.ACCEPT_RIGHT
+		 WHERE	BOARD_TYPE = #{BOARD_TYPE}
+	</select>
+	
+</mapper>

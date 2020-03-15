@@ -3,6 +3,7 @@ package com.patis.middleware;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.patis.model.Accept_typeVO;
 import com.patis.model.CommonVO;
 
 public interface I_MiddlewareDAO {
@@ -38,4 +39,12 @@ public interface I_MiddlewareDAO {
 	 * @DESC   : 화면 로드 시 COMMON에서 DETAIL_MENU를 가져온다.
 	 */
 	List<CommonVO> getDetailMenu() throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 16, 2020
+	 * @RETURN : Accept_typeVO
+	 * @DESC   : 게시판별 권한 정보를 가져온다.
+	 */
+	Accept_typeVO getAcceptRight(String BOARD_TYPE) throws SQLException;
 }
