@@ -50,7 +50,7 @@ pageEncoding="UTF-8"%>
             삶의 질 향상 및 생활복지 구현
             <p class="sub-vision-content-desc">
               주민 모두가 최소한의 생활수준을 누릴 수 있도록, 저소득층/노후주거
-              밀집지역 등의 기초생활인프라 등을 적정수준으로 공급한다.
+              밀집지역 등의 기초생활인프라 등을 적정수준으로 공급한다
             </p>
           </div>
         </div>
@@ -182,7 +182,7 @@ pageEncoding="UTF-8"%>
                 </td>
                 <td class="table-orange">
                   <p>전통시장 연계형</p>
-                  <p>도시재생 시범사업 선정</p>
+                  <p>도시재생 시범시업 선정</p>
                 </td>
                 <td>뉴딜사업 선정</td>
                 <td></td>
