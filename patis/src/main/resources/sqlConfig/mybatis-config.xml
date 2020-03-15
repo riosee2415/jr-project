@@ -11,6 +11,7 @@
 		<typeAlias type="com.patis.model.Accept_typeVO" alias="accept_typeVO"/>
 		<typeAlias type="com.patis.model.BoardFileVO" alias="fileVO"/>
 		<typeAlias type="com.patis.model.BoardTempFileVO" alias="tempFileVO"/>
+		<typeAlias type="com.patis.model.ConnectRecordVO" alias="connectRecordVO"/>
 		<typeAlias type="java.lang.Integer" alias="int"/>
 		<typeAlias type="java.lang.String" alias="str"/>
 	</typeAliases>

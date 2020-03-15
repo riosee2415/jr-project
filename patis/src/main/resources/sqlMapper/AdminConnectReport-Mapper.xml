@@ -9,4 +9,31 @@
 	</select>
 	
 	
+	<select id="GET_CONNECT_DATA_SEARCH" resultType="str" parameterType="hashMap">
+		SELECT	COUNT(*)
+		  FROM	JR_DB.CONNECT_RECORD
+		 WHERE	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
+		   AND	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ <= ]]> STR_TO_DATE(#{end}, '%Y/%m/%d')
+	</select>
+	
+	<select id="GET_DETAIL_CONNECT_DATA_TODAY" resultType="connectRecordVO" parameterType="str">
+		SELECT	@rownum:=@rownum+1 AS ROWNUM,
+				A.CONNECT_IP,
+				A.CONNECT_DATE,
+				A.CONNECT_OS,
+				A.CONNECT_FULL_DATE
+		  FROM	JR_DB.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
+		 WHERE	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
+	</select>
+	
+	<select id="GET_SEARCH_DETAIL_CONNECT_DATA_TODAY" resultType="connectRecordVO" parameterType="hashMap">
+		SELECT	@rownum:=@rownum+1 AS ROWNUM,
+				A.CONNECT_IP,
+				A.CONNECT_DATE,
+				A.CONNECT_OS,
+				A.CONNECT_FULL_DATE
+		  FROM	JR_DB.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
+		 WHERE	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
+		   AND	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ <= ]]> STR_TO_DATE(#{end}, '%Y/%m/%d')
+	</select>
 </mapper>

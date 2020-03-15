@@ -17,6 +17,11 @@
     />
     <link rel="stylesheet" href="/assets/plugins/font-awesome-4.7.0/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/admin/adminStyles.css?ver=${ver}" />
+    
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+	
+	
+	
   </head>
   <body>
 		<div class="admin-box">
@@ -41,8 +46,9 @@
 			</div>
 		</div>
 	</body>
-	
 	<script src="/assets/js/jquery-1.12.4.min.js"></script>
 	<script src="/assets/js/admin/admin_left.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+	<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 	
 </html>

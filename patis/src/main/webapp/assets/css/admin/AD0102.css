@@ -10,8 +10,8 @@
 
 .stis_one .stis_one__title{
 	width: 100%;
-	height: 20px;
-	padding : 5px 15px;
+	height: 30px;
+	box-sizing : border-box;
 	background-color: #707070;
 	color : #fff;
 	display: flex;
@@ -57,4 +57,9 @@
 
 .stis__area .stis_one .stis_one__desc .stis_one__desc__right .stis_one__desc__right__detail{
 	margin-left: 40px;
+}
+
+
+.desc__right__dateArea {
+	margin-right: 15px;
 }
