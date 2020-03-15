@@ -17,6 +17,18 @@
 	.header .deskbox {
 		width: 700px;
 	}
+	.mobile {
+		display: block;
+	}
+	.desk {
+		display: none;
+	}
+	#collap_menu {
+		display: block;
+	}
+	#menu_call ~ .wrap {
+		margin: 0 auto;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -61,18 +73,21 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
-	.desk {
-		display: block;
-	}
+	
 	.header .deskbox {
 		margin: 0 auto;
 		width: 700px;
 	}
 	.mobile {
+		display: block;
+		width: 700px;
+        margin: 0 auto;
+	}
+	.desk {
 		display: none;
 	}
 	#collap_menu {
-		display: none;
+		display: block;
 	}
 	#menu_call ~ .wrap {
 		margin: 0 auto;
