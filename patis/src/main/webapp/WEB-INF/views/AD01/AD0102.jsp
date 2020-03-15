@@ -86,6 +86,7 @@
 				<div class="desc__right__dateArea">
 					<label>시작일</label>
 					<input type="text" id="startDate">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
 				</div>
 
 				<div class="desc__right__dateArea">
@@ -95,6 +96,7 @@
 				<div class="desc__right__dateArea">
 					<label>종료일</label> 
 					<input type="text" id="endDate">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
 				</div>
 
 				<div class="desc__right__dateArea">
