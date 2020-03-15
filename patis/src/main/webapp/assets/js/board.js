@@ -42,7 +42,9 @@ function getPageContent(paging){
 		type	: "get",
 		data	: {"paging": paging, "search_type": search_type, "search_keyword": search_keyword},
 		success : function(data){
-			$("#" + b_type + "-board-js").html(data);
+			var page = data.split('-----');
+			$("#" + b_type + "-board-js").html(page[0]);
+			$("#" + b_type + "-board-m-js").html(page[1]);
 			
 			if($("#" + b_type + "-board-js tr").first().hasClass('row-empty')) {
 				$("#" + b_type + "-paging-js").hide();
@@ -114,11 +116,7 @@ function boardDetailMoveHandler(b_type, b_no, rownum, type, keyword) {
 	$('#frm-' + b_type + '-detail').submit();
 }
 
-function boardWriteMoveHandler(loginId, b_type, type, keyword, b_no) {
-	if(isEmpty(loginId)) {
-		alert('로그인 후 이용 가능합니다.');
-		return;
-	}
+function boardWriteMoveHandler(b_type, type, keyword, b_no) {
 	var s_type = isEmpty(type) ? search_type : type;
 	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
 	

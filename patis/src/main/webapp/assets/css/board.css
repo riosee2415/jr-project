@@ -313,6 +313,7 @@
   color: #090909;
   font-size: 24px;
   font-weight: 600;
+  word-break: break-all;
 }
 
 .board-detail__box .detail-info__box .input-title {
@@ -327,6 +328,10 @@
   border: none;
   border-bottom: 1px solid #dedede;
   outline: none;
+}
+
+.board-detail__box .btn__box button {
+	width: 100px;
 }
 
 .board-detail__box .detail-info__box .detail-list {

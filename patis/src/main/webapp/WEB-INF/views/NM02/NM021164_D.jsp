@@ -76,7 +76,7 @@ pageEncoding="UTF-8"%>
 				</div>
 				<div class="btn__box">
 					<c:if test="${sessionScope.loginId eq data.b_AUTHOR_ID}">
-						<button type="button" onclick="javascript:boardWriteMoveHandler('${sessionScope.loginId}', '${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')">수정</button>
+						<button type="button" onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')">수정</button>
 						<button type="button" onclick="javascript:boardRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')">삭제</button>
 					</c:if>
 					<button type="button" onclick="boardListMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}')">목록</button>

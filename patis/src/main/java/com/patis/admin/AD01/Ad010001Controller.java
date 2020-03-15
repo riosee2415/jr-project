@@ -136,9 +136,7 @@ public class Ad010001Controller {
 						session.setAttribute("loginId", vo.getUSER_ID());
 						session.setAttribute("loginName", vo.getUSER_NAME());
 						session.setAttribute("loginRight", vo.getUSER_RIGHT());
-						
 						loginFlag = true;
-						
 					} else {
 						middlewareService.printLog(id + "로그인 기록 저장 실패 [ " + ipAddress + " ] " );
 					}
