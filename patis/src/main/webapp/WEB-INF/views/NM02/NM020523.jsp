@@ -746,7 +746,7 @@ pageEncoding="UTF-8"%>
                 <td>2019. 9, 25. ~ 2019. 12. 4.</td>
               </tr>
               <tr>
-                <th>교욱구성</th>
+                <th>교육구성</th>
                 <td>
                   <ul>
                     <li>
