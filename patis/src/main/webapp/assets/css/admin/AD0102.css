@@ -5,7 +5,7 @@
 .stis_one {
 	width: 95%; 
 	margin : 10px auto;
-	margin: 10px auto;
+	margin-bottom: 80px;
 }
 
 .stis_one .stis_one__title{
@@ -20,22 +20,31 @@
 	justify-content: flex-start;
 }
 
-.admin__area .stis_one .stis_one__desc{
+.stis__area .stis_one .stis_one__desc{
 	display: flex;
 	flex-direction: row;
 }
 
-.admin__area .stis_one .stis_one__desc .stis_one__desc__left,
-.admin__area .stis_one .stis_one__desc .stis_one__desc__right{
-	padding : 20px;
+.stis__area .stis_one .stis_one__desc .stis_one__desc__left,
+.stis__area .stis_one .stis_one__desc .stis_one__desc__right{
+	padding : 10px 20px;
 }
 
-.admin__area .stis_one .stis_one__desc .stis_one__desc__left{
+.stis__area .stis_one .stis_one__desc .stis_one__desc__left{
 	background-color: #e7e7e7;
 	width: 150px;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;	
+	border-bottom: 1px solid #fff;
 }
 
-.admin__area .stis_one .stis_one__desc .stis_one__desc__right{
+.stis__area .stis_one .stis_one__desc .stis_one__desc__left p {
+	margin-top : 5px;	
+	
+}
+
+.stis__area .stis_one .stis_one__desc .stis_one__desc__right{
 	border-bottom: 1px solid #e7e7e7;
 	width: 100%;
 	display: flex;
@@ -46,6 +55,6 @@
 }
 
 
-.admin__area .stis_one .stis_one__desc .stis_one__desc__right .stis_one__desc__right__detail{
+.stis__area .stis_one .stis_one__desc .stis_one__desc__right .stis_one__desc__right__detail{
 	margin-left: 40px;
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AdminConnectReport-Mapper">
+	
+	<select id="GET_CONNECT_DATA_TODAY" resultType="str" parameterType="str">
+		SELECT	COUNT(*)
+		  FROM	JR_DB.CONNECT_RECORD
+		 WHERE	CONNECT_DATE = #{today}
+	</select>
+	
+	
+</mapper>
