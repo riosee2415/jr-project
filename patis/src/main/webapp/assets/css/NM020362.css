@@ -52,7 +52,12 @@
 .nm020362-content-img__box {
   text-align: center;
 }
-
+.nm020362-title-sub{
+	font-size: 20px;
+	text-indent: 24px;
+	margin-top:-16px;
+	color:#585858;
+}
 /* 각 이미지 사이즈 */
 .nm020362-content-img__box .nm020362-content-img-01-01 {
   width: 854px;
