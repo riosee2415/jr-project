@@ -11,22 +11,22 @@ pageEncoding="UTF-8"%>
 
         <div class="sub-main-title">▪도시재생이란?</div>
         <div class="sub1-main-content">
-        <div>
-          <p>
-            인구의 감소, 산업구조의 변화, 도시의 무분별한 확장, 주거환경의
-            노후화 등으로
-          </p>
-          <p>
-            쇠퇴하는 도시를 지역역량의 강화, 새로운 기능의 도입ㆍ창출 및
-            지역자원의 활용을 통하여
-          </p>
-          <p>
-            <span class="bold">경제적ㆍ사회적ㆍ물리적ㆍ환경적으로 활성화</span
-            >시키는 것을 말합니다.
-          </p>
-          <br />
-          <p>&#40;도시재생 활성화 및 지원에 관한 특별법 제2조&#41;</p>
-        </div>
+          <div>
+            <p>
+              인구의 감소, 산업구조의 변화, 도시의 무분별한 확장, 주거환경의
+              노후화 등으로
+            </p>
+            <p>
+              쇠퇴하는 도시를 지역역량의 강화, 새로운 기능의 도입ㆍ창출 및
+              지역자원의 활용을 통하여
+            </p>
+            <p>
+              <span class="bold">경제적ㆍ사회적ㆍ물리적ㆍ환경적으로 활성화</span
+              >시키는 것을 말합니다.
+            </p>
+            <br />
+            <p>&#40;도시재생 활성화 및 지원에 관한 특별법 제2조&#41;</p>
+          </div>
         </div>
         <div class="sub-illu-img"></div>
         <div class="sub-main-title">▪중랑구 비전/목표</div>
@@ -52,14 +52,24 @@ pageEncoding="UTF-8"%>
             삶의 질 향상 및 생활복지 구현
             <p class="sub-vision-content-desc">
               주민 모두가 최소한의 생활수준을 누릴 수 있도록, 저소득층·노후주거
-              밀집지역 등의 기초생활인프라 등을 적정수준으로 공급한다
+              밀집지역 등의 기초생활인프라 등을 적정수준으로 공급한다.
             </p>
           </div>
         </div>
         <div class="vision">
           <div class="sub-vision-none"></div>
           <div class="sub-vision-content">
-            지역정체성 기반 문화 가치·경관 회복
+            쾌적하고 안전한 정주환경 조성
+            <p class="sub-vision-content-desc">
+              환경친화적이고 건강한 도시를 지향하고, 범죄 및 재해로부터 안전한
+              생활환경을 조성한다.
+            </p>
+          </div>
+        </div>
+        <div class="vision">
+          <div class="sub-vision-none"></div>
+          <div class="sub-vision-content">
+            지역 정체성 기반 문화 가치·경관 회복
             <p class="sub-vision-content-desc">
               과거 번성했던 쇠퇴 구도심 등이 보유하고 있는 역사적·문화적
               정체성을 활용하여 품격있는 공간을 조성하고 문화서비스를 확충한다.
@@ -184,7 +194,7 @@ pageEncoding="UTF-8"%>
                 </td>
                 <td class="table-orange">
                   <p>전통시장 연계형</p>
-                  <p>도시재생 시범시업 선정</p>
+                  <p>도시재생 시범사업 선정</p>
                 </td>
                 <td>뉴딜사업 선정</td>
                 <td></td>
