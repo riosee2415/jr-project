@@ -105,20 +105,60 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524.jsp"/>
     </definition>
     
-    <definition name="community.detail" extends="subTopMenuLayout">
+    <definition name="community.detail" extends="subBannerLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524_D.jsp"/>
     </definition>
     
-    <definition name="community.write" extends="subTopMenuLayout">
+    <definition name="community.write" extends="subBannerLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524_W.jsp"/>
     </definition>
     
-    <definition name="news" extends="subTopMenuLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020832.jsp"/>
+    <definition name="news.notice" extends="subTopMenuLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208321.jsp"/>
+    </definition>
+    
+    <definition name="news.notice.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208321_D.jsp"/>
+    </definition>
+    
+    <definition name="news.notice.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208321_W.jsp"/>
+    </definition>
+    
+    <definition name="news.event_alert" extends="subTopMenuLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208322.jsp"/>
+    </definition>
+    
+    <definition name="news.event_alert.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208322_D.jsp"/>
+    </definition>
+   
+    <definition name="news.event_alert.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208322_W.jsp"/>
+    </definition>
+    
+    <definition name="news.event_archive" extends="subTopMenuLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208323.jsp"/>
+    </definition>
+    
+    <definition name="news.event_archive.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208323_D.jsp"/>
+    </definition>
+    
+    <definition name="news.event_archive.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM0208323_W.jsp"/>
     </definition>
     
     <definition name="release" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020833.jsp"/>
+    </definition>
+    
+    <definition name="release.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020833_D.jsp"/>
+    </definition>
+    
+    <definition name="release.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020833_W.jsp"/>
     </definition>
     
     <definition name="archive" extends="subTopMenuLayout">
