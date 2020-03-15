@@ -43,7 +43,7 @@
 	background-color: #707070;
 	color: #fff;
 	font-size: 20px;
-	padding: 5px 10px;
+	padding: 4px 10px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -152,7 +152,12 @@
 	font-size: 16px;
 	border-radius: 0px;
 }
-
+.modal-02 .mm__list li{
+	-webkit-box-shadow: 0px 4px 6px 0px rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 4px 6px 0px rgba(255, 255, 255, 0.3);
+	border-top:1px solid #dedede;
+	border-bottom:1px solid #dedede;
+}
 .mld__desc {
 	width: 52%;
 }
