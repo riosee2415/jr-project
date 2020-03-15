@@ -16,7 +16,7 @@ pageEncoding="UTF-8"%>
 						<ul class="detail-list">
 							<li>
 								<span class="data-tit">작성자</span>
-								<span class="data-txt">${data.b_AUTHOR }</span>
+								<span class="data-txt"><c:out value="${data.b_AUTHOR_NO eq 0 ? data.b_AUTHOR_NONE : data.b_AUTHOR}" /></span>
 							</li>
 							<li>
 								<span class="data-tit">작성일</span>
@@ -75,9 +75,11 @@ pageEncoding="UTF-8"%>
 					</table>
 				</div>
 				<div class="btn__box">
-					<c:if test="${sessionScope.loginId eq data.b_AUTHOR_ID}">
-						<button type="button" onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')">수정</button>
-						<button type="button" onclick="javascript:boardRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')">삭제</button>
+					<c:if test="${not empty sessionScope.loginId }">
+						<c:if test="${sessionScope.loginId eq data.b_AUTHOR_ID}">
+							<button type="button" onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')">수정</button>
+							<button type="button" onclick="javascript:boardRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')">삭제</button>
+						</c:if>
 					</c:if>
 					<button type="button" onclick="boardListMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}')">목록</button>
 				</div>

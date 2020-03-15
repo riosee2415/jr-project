@@ -15,7 +15,7 @@
 					<tr class="row-notice">
 						<td>공지</td>
 						<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE }</td>
-						<td>${board.b_AUTHOR }</td>
+						<td><c:out value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}" /></td>
 						<td>${board.b_CREATE_TIME }</td>
 						<td>${board.b_HIT }</td>
 					</tr>
@@ -24,7 +24,7 @@
 					<tr>
 						<td>${board.ROWNUM }</td>
 						<td class="header-title" onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE }</td>
-						<td>${board.b_AUTHOR }</td>
+						<td><c:out value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}" /></td>
 						<td>${board.b_CREATE_TIME }</td>
 						<td>${board.b_HIT }</td>
 					</tr>
@@ -58,7 +58,7 @@
 		          </thead>
 		          <tbody>
 		            <tr>
-		              <td colspan="2">${board.b_AUTHOR }</td>
+		              <td colspan="2"><c:out value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}" /></td>
 		              <td>${board.b_CREATE_TIME }</td>
 		              <td>${board.b_HIT }</td>
 		            </tr>
@@ -77,7 +77,7 @@
 		          </thead>
 		          <tbody>
 		            <tr>
-		              <td colspan="2">${board.b_AUTHOR }</td>
+		              <td colspan="2"><c:out value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}" /></td>
 		              <td>${board.b_CREATE_TIME }</td>
 		              <td>${board.b_HIT }</td>
 		            </tr>

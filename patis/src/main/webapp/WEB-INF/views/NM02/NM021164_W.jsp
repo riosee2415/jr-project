@@ -22,7 +22,7 @@ pageEncoding="UTF-8"%>
 			  	<input type="hidden" name="b_no" value="${data.b_NO }" />
 			  	<input type="hidden" name="b_title" />
 			  	<input type="hidden" name="b_description" />
-			  	<input type="hidden" name="b_author" value="${sessionScope.loginNo }" />
+			  	<input type="hidden" name="b_author" value="<c:out value='${sessionScope.loginNo ? sessionScope.loginNo : 0}' />" />
 			  	<input type="hidden" name="file_key" value="${file_key }" />
 			  	<input type="hidden" name="remove_file" value="${remove_file }" />
 			  	<input type="hidden" name="s_type" value="${searchType }" />
@@ -34,7 +34,7 @@ pageEncoding="UTF-8"%>
 						</div>
 						<div class="write-col-body">
 							<c:if test="${sessionScope.loginId eq null }">
-								<input type="text" value="${data.b_AUTHOR }" class="input-author" id="input-author-js" />
+								<input type="text" name="b_author_none" value="${data.b_AUTHOR }" class="input-author" id="input-author-js" />
 							</c:if>
 							<c:if test="${sessionScope.loginId ne null }">
 								<span class="data-txt"><c:out value="${mode eq 'WRITE' ? sessionScope.loginName : data.b_AUTHOR}" /></span>

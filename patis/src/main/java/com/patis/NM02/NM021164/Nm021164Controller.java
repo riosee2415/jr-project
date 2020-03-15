@@ -209,6 +209,7 @@ public class Nm021164Controller {
 										@RequestParam(value="b_title")String b_title,
 										@RequestParam(value="b_description")String b_description,
 										@RequestParam(value="b_author")String b_author,
+										@RequestParam(value="b_author_none")String b_author_none,
 										@RequestParam(value="file_key")String file_key,
 										@RequestParam(value="remove_file")String removeFile,
 										@RequestParam(value="s_type", defaultValue="")String searchType,
@@ -225,6 +226,7 @@ public class Nm021164Controller {
 		boardVO.setB_TITLE(b_title);
 		boardVO.setB_DESCRIPTION(b_description);
 		boardVO.setB_AUTHOR(b_author);
+		boardVO.setB_AUTHOR_NONE(b_author_none);
 		
 		if(mode.equals("WRITE")) {
 			nm021164Service.setCollusion(boardVO);

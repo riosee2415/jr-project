@@ -6,7 +6,9 @@ public class BoardVO {
 	private String B_TITLE;
 	private String B_DESCRIPTION;
 	private String B_AUTHOR;
+	private String B_AUTHOR_NO;
 	private String B_AUTHOR_ID;
+	private String B_AUTHOR_NONE;
 	private String B_CREATE_TIME;
 	private String B_UPLOAD_TIME;
 	private int B_HIT;
@@ -51,11 +53,23 @@ public class BoardVO {
 	public void setB_AUTHOR(String b_AUTHOR) {
 		B_AUTHOR = b_AUTHOR;
 	}
+	public String getB_AUTHOR_NO() {
+		return B_AUTHOR_NO;
+	}
+	public void setB_AUTHOR_NO(String b_AUTHOR_NO) {
+		B_AUTHOR_NO = b_AUTHOR_NO;
+	}
 	public String getB_AUTHOR_ID() {
 		return B_AUTHOR_ID;
 	}
-	public void setB_AUTHOR_NO(String b_AUTHOR_ID) {
+	public void setB_AUTHOR_ID(String b_AUTHOR_ID) {
 		B_AUTHOR_ID = b_AUTHOR_ID;
+	}
+	public String getB_AUTHOR_NONE() {
+		return B_AUTHOR_NONE;
+	}
+	public void setB_AUTHOR_NONE(String b_AUTHOR_NONE) {
+		B_AUTHOR_NONE = b_AUTHOR_NONE;
 	}
 	public String getB_CREATE_TIME() {
 		return B_CREATE_TIME;
