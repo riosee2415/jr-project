@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.patis.NM02.NM020524.I_Nm020524DAO;
 import com.patis.model.BoardVO;
 
 @Service("nm020524Service")
@@ -17,18 +18,18 @@ public class Nm020524ServiceImpl implements I_Nm020524Service{
 	private  I_Nm020524DAO nm020524DAO;
 
 	@Override
-	public List<BoardVO> getCollusionList(int paging) throws SQLException {
-		return nm020524DAO.getCollusionList(paging);
+	public List<BoardVO> getCommunityList(int paging) throws SQLException {
+		return nm020524DAO.getCommunityList(paging);
 	}
 	
 	@Override
-	public List<BoardVO> getCollusionSearchList(Map<String, Object> params) throws SQLException {
-		return nm020524DAO.getCollusionSearchList(params);
+	public List<BoardVO> getCommunitySearchList(Map<String, Object> params) throws SQLException {
+		return nm020524DAO.getCommunitySearchList(params);
 	}
 
 	@Override
-	public BoardVO getCollusion(int b_no) throws SQLException {
-		return nm020524DAO.getCollusion(b_no);
+	public BoardVO getCommunity(int b_no) throws SQLException {
+		return nm020524DAO.getCommunity(b_no);
 	}
 
 	@Override
@@ -47,23 +48,33 @@ public class Nm020524ServiceImpl implements I_Nm020524Service{
 	}
 
 	@Override
-	public BoardVO getPrevCollusion(Map<String, Object> params) throws SQLException {
-		return nm020524DAO.getPrevCollusion(params);
+	public BoardVO getPrevCommunity(Map<String, Object> params) throws SQLException {
+		return nm020524DAO.getPrevCommunity(params);
 	}
 
 	@Override
-	public BoardVO getNextCollusion(Map<String, Object> params) throws SQLException {
-		return nm020524DAO.getNextCollusion(params);
+	public BoardVO getNextCommunity(Map<String, Object> params) throws SQLException {
+		return nm020524DAO.getNextCommunity(params);
 	}
 	
 	@Override
 	public int modifyHitUp(int b_no) throws SQLException {
 		return nm020524DAO.modifyHitUp(b_no);
 	}
-
+	
 	@Override
 	public int setCommunity(BoardVO boardVO) throws SQLException {
 		return nm020524DAO.setCommunity(boardVO);
+	}
+
+	@Override
+	public void modifyCommunity(BoardVO boardVO) throws SQLException {
+		nm020524DAO.modifyCommunity(boardVO);
+	}
+
+	@Override
+	public void removeCommunity(int b_no) throws SQLException {
+		nm020524DAO.removeCommunity(b_no);
 	}
 
 }

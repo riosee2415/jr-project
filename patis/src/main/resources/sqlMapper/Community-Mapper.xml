@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Community-Mapper">
 
-	<select id="GET_COLLUSION_LIST" resultType="boardVO" parameterType="int">
+	<select id="GET_COMMUNITY_LIST" resultType="boardVO" parameterType="int">
 		SELECT	*  
 			FROM	( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
@@ -14,6 +14,8 @@
 								 FROM  JR_DB.EMP Z
 								 WHERE  B_AUTHOR = Z.USER_NO
 							)	 AS B_AUTHOR,
+							B_AUTHOR AS B_AUTHOR_NO,
+							B_AUTHOR_NONE,
 							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
 							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
 							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
@@ -21,7 +23,7 @@
 							B_NOTICE,
 							B_USE_YN,
 							B_TYPE
-							FROM  JR_DB.BOARD_COLLUSION A,
+							FROM  JR_DB.BOARD_COMMUNITY A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							ORDER  BY B_NOTICE ASC,
@@ -46,7 +48,7 @@
       </if>
   </sql>
 
-	<select id="GET_COLLUSION_SEARCH_LIST" resultType="boardVO" parameterType="hashMap">
+	<select id="GET_COMMUNITY_SEARCH_LIST" resultType="boardVO" parameterType="hashMap">
 		SELECT	*  
 			FROM	( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
@@ -58,6 +60,13 @@
 								 FROM  JR_DB.EMP Z
 								 WHERE  B_AUTHOR = Z.USER_NO
 							)	 AS B_AUTHOR,
+							(
+								SELECT  Z.USER_ID
+								  FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							) AS B_AUTHOR_ID,
+							B_AUTHOR AS B_AUTHOR_NO,
+							B_AUTHOR_NONE,
 							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
 							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
 							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
@@ -65,7 +74,7 @@
 							B_NOTICE,
 							B_USE_YN,
 							B_TYPE
-							FROM  JR_DB.BOARD_COLLUSION A,
+							FROM  JR_DB.BOARD_COMMUNITY A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							<include refid="search"></include>
@@ -78,26 +87,26 @@
 	
 	<select id="GET_LIST_COUNT" resultType="int">
 		 SELECT  COUNT(B_NO)
-			 FROM	 JR_DB.BOARD_COLLUSION
+			 FROM	 JR_DB.BOARD_COMMUNITY
 			WHERE  B_USE_YN = 1
 	</select>
 	
 	<select id="GET_SEARCH_LIST_COUNT" resultType="int" parameterType="hashMap">
 		 SELECT	 COUNT(B_NO)
-		   FROM	 JR_DB.BOARD_COLLUSION
+		   FROM	 JR_DB.BOARD_COMMUNITY
 		  WHERE  B_USE_YN = 1
 		 <include refid="search"></include>
 	</select>
 	
 	<select id="GET_BOARD_TYPE" resultType="str">
 		 SELECT	 B_TYPE
-		   FROM	 JR_DB.BOARD_COLLUSION
+		   FROM	 JR_DB.BOARD_COMMUNITY
 		  WHERE  B_USE_YN = 1
 		    AND  B_TYPE IS NOT NULL
 		  LIMIT  1
 	</select>
 	
-	<select id="GET_COLLUSION" resultType="boardVO" parameterType="int">
+	<select id="GET_COMMUNITY" resultType="boardVO" parameterType="int">
 		SELECT  B_NO,
 						B_TITLE,
 						B_DESCRIPTION,
@@ -106,6 +115,13 @@
 							  FROM  JR_DB.EMP Z
 							 WHERE  B_AUTHOR = Z.USER_NO
 						) AS B_AUTHOR,
+						(
+							SELECT  Z.USER_ID
+							  FROM  JR_DB.EMP Z
+							 WHERE  B_AUTHOR = Z.USER_NO
+						) AS B_AUTHOR_ID,
+						B_AUTHOR AS B_AUTHOR_NO,
+						B_AUTHOR_NONE,
 						DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
 						DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
 						DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
@@ -113,19 +129,19 @@
 						B_NOTICE,
 						B_USE_YN,
 						B_TYPE
-		  FROM  JR_DB.BOARD_COLLUSION
+		  FROM  JR_DB.BOARD_COMMUNITY
 		 WHERE  B_NO = #{b_no}
 		   AND  B_USE_YN = 1
 	</select>
 	
-	<select id="GET_PREV_COLLUSION" resultType="boardVO" parameterType="hashMap">
+	<select id="GET_PREV_COMMUNITY" resultType="boardVO" parameterType="hashMap">
 		SELECT  *
 		  FROM  ( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
 							B_NO,
 			        B_TITLE,
 			        B_TYPE
-							FROM  JR_DB.BOARD_COLLUSION A,
+							FROM  JR_DB.BOARD_COMMUNITY A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							<include refid="search"></include>
@@ -139,14 +155,14 @@
 	  ]]>
 	</select>
 	
-	<select id="GET_NEXT_COLLUSION" resultType="boardVO" parameterType="hashMap">
+	<select id="GET_NEXT_COMMUNITY" resultType="boardVO" parameterType="hashMap">
 		SELECT  *
 		  FROM  ( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
 							B_NO,
 			        B_TITLE,
 			        B_TYPE
-							FROM  JR_DB.BOARD_COLLUSION A,
+							FROM  JR_DB.BOARD_COMMUNITY A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							<include refid="search"></include>
@@ -161,17 +177,18 @@
 	</select>
 	
 	<update id="MODIFY_HIT_UP" parameterType="int">
-		UPDATE  JR_DB.BOARD_COLLUSION
+		UPDATE  JR_DB.BOARD_COMMUNITY
 		   SET  B_HIT = B_HIT + 1
 		 WHERE  B_NO = #{b_no}
 	</update>
 	
-	<insert id="SET_COMMUNITY" parameterType="boardVO">
+	<insert id="SET_COMMUNITY" parameterType="boardVO" useGeneratedKeys="true" keyProperty="B_NO">
 		INSERT INTO JR_DB.BOARD_COMMUNITY
 		(
 			B_TITLE,
 			B_DESCRIPTION,
 			B_AUTHOR,
+			B_AUTHOR_NONE,
 			B_CREATE_TIME,
 			B_UPLOAD_TIME,
 			B_TYPE
@@ -181,10 +198,26 @@
 			#{B_TITLE},
 			#{B_DESCRIPTION},
 			${B_AUTHOR},
+			#{B_AUTHOR_NONE},
 			SYSDATE(),
 			SYSDATE(),
 			#{B_TYPE}
 		)
 	</insert>
+	
+	<update id="MODIFY_COMMUNITY" parameterType="boardVO">
+		UPDATE 	JR_DB.BOARD_COMMUNITY
+		   SET	B_TITLE = #{B_TITLE},
+		   			B_DESCRIPTION = #{B_DESCRIPTION},
+		   			B_UPLOAD_TIME = SYSDATE()
+		 WHERE	B_NO = #{B_NO}
+	</update>
+	
+	<update id="REMOVE_COMMUNITY" parameterType="int">
+		UPDATE 	JR_DB.BOARD_COMMUNITY
+		   SET	B_USE_YN = 0,
+		   			B_DELETE_TIME = SYSDATE()
+		 WHERE	B_NO = #{b_no}
+	</update>
 	
 </mapper>

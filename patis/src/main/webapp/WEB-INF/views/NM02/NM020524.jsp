@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <div class="subpage">
@@ -14,25 +14,35 @@
       </div>
 
       <div class="board-list__box" id="board-list-js" data-btype="${b_type}" data-parent="${param.parent}" data-code="${param.code}">
-        <table class="board-list__table">
-          <thead>
-            <tr>
-              <th class="header-5">번호</th>
-              <th class="header-title">제목</th>
-              <th class="header-15">작성자</th>
-              <th class="header-15">날짜</th>
-              <th class="header-5">조회</th>
-            </tr>
-          </thead>
-
-          <tbody id="${fn:toLowerCase(b_type)}-board-js"></tbody>
-        </table>
+        <!-- PC버전 -->
+        <div class="board-pc-ver">
+	        <table class="board-list__table">
+	          <thead>
+	            <tr>
+	              <th class="header-5">번호</th>
+	              <th class="header-title">제목</th>
+	              <th class="header-15">작성자</th>
+	              <th class="header-15">날짜</th>
+	              <th class="header-5">조회</th>
+	            </tr>
+	          </thead>
+	
+	          <tbody id="${fn:toLowerCase(b_type)}-board-js"></tbody>
+	        </table>
+        </div>
+        
+        <!-- 모바일 버전 -->
+        <div class="board-mobile-ver">
+          <div class="board-mobile-wrap" id="${fn:toLowerCase(b_type)}-board-m-js"></div>
+        </div>
         
         <div id="${fn:toLowerCase(b_type)}-paging-js"></div>
         
-        <%-- <div class="board-btn__box">
-        	<button type="button" onclick="javascript:boardWriteMoveHandler('${sessionScope.loginId}', '${data.b_TYPE}', '${searchType}', '${searchKeyword}')">글쓰기</button>
-        </div> --%>
+        <div class="board-btn__box" id="${fn:toLowerCase(b_type)}-button-js">
+        	<c:if test="${sessionScope.loginRight <= AcceptRight.WRITE_RIGHT}">
+	        	<button type="button" onclick="javascript:boardWriteMoveHandler('${b_type}', '${searchType}', '${searchKeyword}')">글쓰기</button>
+        	</c:if>
+        </div>
       </div>
     </div>
   </div>

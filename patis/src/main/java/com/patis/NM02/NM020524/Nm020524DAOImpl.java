@@ -20,18 +20,18 @@ public class Nm020524DAOImpl implements I_Nm020524DAO{
 	private static final String NAMESPACE = "Community-Mapper";
 
 	@Override
-	public List<BoardVO> getCollusionList(int paging) throws SQLException {
-		return sqlSession.selectList(NAMESPACE + ".GET_COLLUSION_LIST", paging);
+	public List<BoardVO> getCommunityList(int paging) throws SQLException {
+		return sqlSession.selectList(NAMESPACE + ".GET_COMMUNITY_LIST", paging);
 	}
 	
 	@Override
-	public List<BoardVO> getCollusionSearchList(Map<String, Object> params) throws SQLException {
-		return sqlSession.selectList(NAMESPACE + ".GET_COLLUSION_SEARCH_LIST", params);
+	public List<BoardVO> getCommunitySearchList(Map<String, Object> params) throws SQLException {
+		return sqlSession.selectList(NAMESPACE + ".GET_COMMUNITY_SEARCH_LIST", params);
 	}
 
 	@Override
-	public BoardVO getCollusion(int b_no) throws SQLException {
-		return sqlSession.selectOne(NAMESPACE + ".GET_COLLUSION", b_no);
+	public BoardVO getCommunity(int b_no) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_COMMUNITY", b_no);
 	}
 
 	@Override
@@ -53,23 +53,33 @@ public class Nm020524DAOImpl implements I_Nm020524DAO{
 	}
 
 	@Override
-	public BoardVO getPrevCollusion(Map<String, Object> params) throws SQLException {
-		return sqlSession.selectOne(NAMESPACE + ".GET_PREV_COLLUSION", params);
+	public BoardVO getPrevCommunity(Map<String, Object> params) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_PREV_COMMUNITY", params);
 	}
 	
 	@Override
-	public BoardVO getNextCollusion(Map<String, Object> params) throws SQLException {
-		return sqlSession.selectOne(NAMESPACE + ".GET_NEXT_COLLUSION", params);
+	public BoardVO getNextCommunity(Map<String, Object> params) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_NEXT_COMMUNITY", params);
 	}
 
 	@Override
 	public int modifyHitUp(int b_no) throws SQLException {
 		return sqlSession.update(NAMESPACE + ".MODIFY_HIT_UP", b_no);
 	}
-
+	
 	@Override
 	public int setCommunity(BoardVO boardVO) throws SQLException {
 		return sqlSession.insert(NAMESPACE + ".SET_COMMUNITY", boardVO);
+	}
+
+	@Override
+	public void modifyCommunity(BoardVO boardVO) throws SQLException {
+		sqlSession.update(NAMESPACE + ".MODIFY_COMMUNITY", boardVO);
+	}
+
+	@Override
+	public void removeCommunity(int b_no) throws SQLException {
+		sqlSession.delete(NAMESPACE + ".REMOVE_COMMUNITY", b_no);
 	}
 
 }

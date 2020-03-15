@@ -10,82 +10,98 @@ public interface I_Nm020524DAO {
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : List<BoardVO>
-	 * @DESC   : 공모사업 신청 게시판 목록 조회(페이징)
+	 * @DESC   : 마을 커뮤니티 게시판 목록 조회(페이징)
 	 */
-	List<BoardVO> getCollusionList(int paging) throws SQLException;
+	List<BoardVO> getCommunityList(int paging) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : List<BoardVO>
-	 * @DESC   : 공모사업 신청 게시판 목록 조회(검색)
+	 * @DESC   : 마을 커뮤니티 게시판 목록 조회(검색)
 	 */
-	List<BoardVO> getCollusionSearchList(Map<String, Object> params) throws SQLException;
+	List<BoardVO> getCommunitySearchList(Map<String, Object> params) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : BoardVO
-	 * @DESC   : 공모사업 신청 게시판 상세 조회
+	 * @DESC   : 마을 커뮤니티 게시판 상세 조회
 	 */
-	BoardVO getCollusion(int b_no) throws SQLException;
+	BoardVO getCommunity(int b_no) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : int
-	 * @DESC   : 공모사업 신청 게시판 개수 조회
+	 * @DESC   : 마을 커뮤니티 게시판 개수 조회
 	 */
 	int getListCount() throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : int
-	 * @DESC   : 공모사업 신청 게시판 개수 조회 (검색)
+	 * @DESC   : 마을 커뮤니티 게시판 개수 조회 (검색)
 	 */
 	int getSearchListCount(Map<String, String> params) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : String
-	 * @DESC   : 공모사업 신청 게시판 B_TYPE 조회
+	 * @DESC   : 마을 커뮤니티 게시판 B_TYPE 조회
 	 */
 	String getBoardType() throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
-	 * @RETURN : int
-	 * @DESC   : 공모사업 신청 게시판 이전글 조회
+	 * @DATE   : Mar 16, 2020
+	 * @RETURN : BoardVO
+	 * @DESC   : 마을 커뮤니티 게시판 이전글 조회
 	 */
-	BoardVO getPrevCollusion(Map<String, Object> params) throws SQLException;
+	BoardVO getPrevCommunity(Map<String, Object> params) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
-	 * @RETURN : int
-	 * @DESC   : 공모사업 신청 게시판 다음글 조회
+	 * @DATE   : Mar 16, 2020
+	 * @RETURN : BoardVO
+	 * @DESC   : 마을 커뮤니티 게시판 다음글 조회
 	 */
-	BoardVO getNextCollusion(Map<String, Object> params) throws SQLException;
+	BoardVO getNextCommunity(Map<String, Object> params) throws SQLException;
 	
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 9, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : int
-	 * @DESC   : 공모사업 신청 게시판 조회수 증가
+	 * @DESC   : 마을 커뮤니티 게시판 조회수 증가
 	 */
 	int modifyHitUp(int b_no) throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 12, 2020
+	 * @DATE   : Mar 16, 2020
 	 * @RETURN : int
-	 * @DESC   : 마을 커뮤니티 게시판 글 작성
+	 * @DESC   : 마을 커뮤니티  게시판 글 작성
 	 */
 	int setCommunity(BoardVO boardVO) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 16, 2020
+	 * @RETURN : void
+	 * @DESC   : 마을 커뮤니티  게시판 글 수정
+	 */
+	void modifyCommunity(BoardVO boardVO) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 16, 2020
+	 * @RETURN : void
+	 * @DESC   : 마을 커뮤니티  게시판 글 삭제
+	 */
+	void removeCommunity(int b_no) throws SQLException;
 }

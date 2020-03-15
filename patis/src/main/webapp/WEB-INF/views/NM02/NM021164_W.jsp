@@ -22,7 +22,7 @@ pageEncoding="UTF-8"%>
 			  	<input type="hidden" name="b_no" value="${data.b_NO }" />
 			  	<input type="hidden" name="b_title" />
 			  	<input type="hidden" name="b_description" />
-			  	<input type="hidden" name="b_author" value="<c:out value='${sessionScope.loginNo ? sessionScope.loginNo : 0}' />" />
+			  	<input type="hidden" name="b_author" value="<c:out value='${sessionScope.loginNo > 0 ? sessionScope.loginNo : 0}' />" />
 			  	<input type="hidden" name="file_key" value="${file_key }" />
 			  	<input type="hidden" name="remove_file" value="${remove_file }" />
 			  	<input type="hidden" name="s_type" value="${searchType }" />

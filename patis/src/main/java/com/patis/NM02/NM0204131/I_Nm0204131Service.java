@@ -59,7 +59,7 @@ public interface I_Nm0204131Service {
 	/**
 	 * @AUTHOR : 4LEAF.NJM
 	 * @DATE   : Mar 16, 2020
-	 * @RETURN : int
+	 * @RETURN : BoardVO
 	 * @DESC   : 도시재생 관계법령 게시판 이전글 조회
 	 */
 	BoardVO getPrevStatute(Map<String, Object> params) throws SQLException;
@@ -67,7 +67,7 @@ public interface I_Nm0204131Service {
 	/**
 	 * @AUTHOR : 4LEAF.NJM
 	 * @DATE   : Mar 16, 2020
-	 * @RETURN : int
+	 * @RETURN : BoardVO
 	 * @DESC   : 도시재생 관계법령 게시판 다음글 조회
 	 */
 	BoardVO getNextStatute(Map<String, Object> params) throws SQLException;
