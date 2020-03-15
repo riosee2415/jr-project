@@ -244,7 +244,7 @@ pageEncoding="UTF-8"%>
 
         <div class="nm23-content-2">
           <!-- 제1기 도시재생학교 -->
-          <h3 class="nm23-title3">▪&nbsp;<span>제1기 도시재생학교</span></h3>
+          <h3 class="nm23-title4">▪&nbsp;<span>제1기 도시재생학교</span></h3>
           <table class="nm23-table-style3">
             <caption>
               제1기 도시재생학교
@@ -585,7 +585,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm23-imgtable-des">
               <li>
-                &#91;찾아가는 주민설명회 리플렛&#92;
+                [찾아가는 주민설명회 리플렛]
               </li>
             </ul>
             <table class="nm23-table-style4">
@@ -651,7 +651,7 @@ pageEncoding="UTF-8"%>
                   alt="찾아가는 주민설명회 리플렛-2 -1"
                   class="sub-nm0523-02-16"
                 />
-                <p>&#91;현장사진1&#92;</p>
+                <p>[현장사진1]</p>
               </li>
               <li>
                 <img
@@ -659,7 +659,7 @@ pageEncoding="UTF-8"%>
                   alt="찾아가는 주민설명회 리플렛-2 -2"
                   class="sub-nm0523-02-16"
                 />
-                <p>&#91;현장사진2&#92;</p>
+                <p>[현장사진2]</p>
               </li>
             </ul>
           </div>
@@ -668,7 +668,7 @@ pageEncoding="UTF-8"%>
         <!-- 묵2동 장미학교(2019) -->
         <div class="nm23-content-2">
           <h3 class="nm23-title-style-01">
-            묵2동 장미학교  &#40;2019&#41;
+            묵2동 장미학교 &#40;2019&#41;
           </h3>
           <div class="nm23-list-content">
             <h3 class="nm23-list-title4">▪목적</h3>
