@@ -206,6 +206,10 @@
        <put-attribute name="content" value="/WEB-INF/views/AD02/AD0201.jsp"/>
     </definition>
     
+    <definition name="loginReport" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD01/AD0102.jsp"/>
+    </definition>
+    
     
     
     

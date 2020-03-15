@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+
+
+.stis_one {
+	width: 95%; 
+	margin : 10px auto;
+	margin: 10px auto;
+}
+
+.stis_one .stis_one__title{
+	width: 100%;
+	height: 20px;
+	padding : 5px 15px;
+	background-color: #707070;
+	color : #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.admin__area .stis_one .stis_one__desc{
+	display: flex;
+	flex-direction: row;
+}
+
+.admin__area .stis_one .stis_one__desc .stis_one__desc__left,
+.admin__area .stis_one .stis_one__desc .stis_one__desc__right{
+	padding : 20px;
+}
+
+.admin__area .stis_one .stis_one__desc .stis_one__desc__left{
+	background-color: #e7e7e7;
+	width: 150px;
+}
+
+.admin__area .stis_one .stis_one__desc .stis_one__desc__right{
+	border-bottom: 1px solid #e7e7e7;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;	
+	
+}
+
+
+.admin__area .stis_one .stis_one__desc .stis_one__desc__right .stis_one__desc__right__detail{
+	margin-left: 40px;
+}

@@ -40,6 +40,7 @@ $(document).ready(function() {
 
 function connectRecord(){
 	
+	
 	$.ajax({
 		url : "/connectRecord.do",
 		type : "get",

@@ -21,7 +21,7 @@ pageEncoding="UTF-8"%>
 			<h3 class="left-menu-title">회원 관리</h3>
 			<ul class="left-menu-sub">
         <li onclick="javascript:subMenuHandler('/loginInfo.do', 1, 1)">로그인기록 관리</li>
-        <li onclick="javascript:subMenuHandler('/main.do')">menu1-2</li>
+        <li onclick="javascript:subMenuHandler('/loginReport.do',1 ,2)">접속통계</li>
         <li onclick="javascript:subMenuHandler('/main.do')">menu1-3</li>
       </ul>
 		</div>

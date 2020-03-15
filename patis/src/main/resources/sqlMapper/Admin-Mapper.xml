@@ -58,7 +58,7 @@
 		INSERT INTO JR_DB.CONNECT_RECORD
 		VALUES
 		(
-			#{ipAdress}, #{currentDate}
+			#{ipAdress}, #{currentDate}, #{os}, SYSDATE()
 		);
 	</insert>
 	
