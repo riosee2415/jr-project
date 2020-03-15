@@ -11,6 +11,7 @@ pageEncoding="UTF-8"%>
 
         <div class="sub-main-title">▪도시재생이란?</div>
         <div class="sub1-main-content">
+        <div>
           <p>
             인구의 감소, 산업구조의 변화, 도시의 무분별한 확장, 주거환경의
             노후화 등으로
@@ -25,6 +26,7 @@ pageEncoding="UTF-8"%>
           </p>
           <br />
           <p>&#40;도시재생 활성화 및 지원에 관한 특별법 제2조&#41;</p>
+        </div>
         </div>
         <div class="sub-illu-img"></div>
         <div class="sub-main-title">▪중랑구 비전/목표</div>

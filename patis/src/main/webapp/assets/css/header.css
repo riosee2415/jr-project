@@ -138,7 +138,7 @@
   align-items: center;
 }
 .resmenu__m {
-  font-size: 21px;
+  font-size: 19px;
 }
 .resmenu__m:hover {
   color: #f18d00;
@@ -177,14 +177,14 @@
   display: block;
   height: 40px;
   line-height: 40px;
-  font-size: 21px;
+  font-size: 19px;
   color: black;
   font-weight: bold;
 }
 .resmenu li .sub a {
   text-align: left;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: normal;
 }
 .sub:before {
