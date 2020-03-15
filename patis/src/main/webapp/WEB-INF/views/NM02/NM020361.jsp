@@ -49,7 +49,7 @@ pageEncoding="UTF-8"%>
           <div class="sub-vision-content">
             삶의 질 향상 및 생활복지 구현
             <p class="sub-vision-content-desc">
-              주민 모두가 최소한의 생활수준을 누릴 수 있도록, 저소득층/노후주거
+              주민 모두가 최소한의 생활수준을 누릴 수 있도록, 저소득층·노후주거
               밀집지역 등의 기초생활인프라 등을 적정수준으로 공급한다
             </p>
           </div>
@@ -57,9 +57,9 @@ pageEncoding="UTF-8"%>
         <div class="vision">
           <div class="sub-vision-none"></div>
           <div class="sub-vision-content">
-            지역정체성 기반 문화 가치/경관 회복
+            지역정체성 기반 문화 가치·경관 회복
             <p class="sub-vision-content-desc">
-              과거 번성했던 쇠퇴 구도심 등이 보유하고 있는 역사적/문화적
+              과거 번성했던 쇠퇴 구도심 등이 보유하고 있는 역사적·문화적
               정체성을 활용하여 품격있는 공간을 조성하고 문화서비스를 확충한다.
             </p>
           </div>

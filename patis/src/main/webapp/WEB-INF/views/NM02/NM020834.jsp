@@ -52,7 +52,7 @@ pageEncoding="UTF-8"%>
                 <span class="nm34-imgbox-view-span"
                   >조회수 <span>71</span></span
                 >
-                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
+                
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@ pageEncoding="UTF-8"%>
                 <span class="nm34-imgbox-view-span"
                   >조회수 <span>53</span></span
                 >
-                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
+               
               </li>
             </ul>
           </div>
@@ -104,7 +104,7 @@ pageEncoding="UTF-8"%>
                 <span class="nm34-imgbox-view-span"
                   >조회수 <span>64</span></span
                 >
-                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
+                
               </li>
             </ul>
           </div>
@@ -131,7 +131,7 @@ pageEncoding="UTF-8"%>
                 <span class="nm34-imgbox-view-span"
                   >조회수 <span>112</span></span
                 >
-                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
+               
               </li>
             </ul>
           </div>
@@ -157,7 +157,7 @@ pageEncoding="UTF-8"%>
                 <span class="nm34-imgbox-view-span"
                   >조회수 <span>39</span></span
                 >
-                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
+                
               </li>
             </ul>
           </div>
@@ -183,7 +183,7 @@ pageEncoding="UTF-8"%>
                 <span class="nm34-imgbox-view-span"
                   >조회수 <span>76</span></span
                 >
-                <span class="nm34-imgbox-view-span">♡ <span>0</span></span>
+                
               </li>
             </ul>
           </div>

@@ -80,11 +80,10 @@
 .header.desk {
   width: 100%;
   height: 100px;
-  margin: 0 auto;
-  padding-bottom: 8px;
+  margin: 0 auto 75px;
 }
 .header .deskbox {
-  margin: 0 auto;
+  margin: 0 auto 75px;
   width: 1200px;
 }
 .lst {
@@ -102,6 +101,7 @@
   margin-top: 1rem;
   width: 310px;
   height: 60px;
+  margin-bottom:18px;
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-image: url("/assets/images/commons/hdlogo.png");
@@ -112,6 +112,9 @@
 #deskmenu {
   clear: both;
   width: 100%;
+  border-top:1px solid #dedede;
+  border-bottom:1px solid #dedede;
+  margin-bottom:30px;
 }
 .resmenu {
   display: -webkit-box;
@@ -172,8 +175,8 @@
 .resmenu li a {
   position: relative;
   display: block;
-  height: 55px;
-  line-height: 55px;
+  height: 40px;
+  line-height: 40px;
   font-size: 21px;
   color: black;
   font-weight: bold;
@@ -181,7 +184,7 @@
 .resmenu li .sub a {
   text-align: left;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
 }
 .sub:before {
@@ -193,46 +196,17 @@
 .resmenu li:hover .resmenu__m {
   color: #f18d00;
 }
-.resmenu li:hover .resmenu__m::after {
-  background-color: #f18d00;
-  -webkit-animation: resmenuSubInAnimation 0.5s both;
-  animation: resmenuSubInAnimation 0.5s both;
-}
+
 .resmenu li:hover .sub,
 .resmenu__m:hover + .sub {
   width: 100%;
   height: 55px;
   z-index: 200;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.resmenu li:hover a:after {
-  display: block;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .sub li a:hover {
   color: #f18d00;
-}
-
-.resmenu li a.resmenu__m::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0px;
-  width: 100%;
-  height: 3px;
-  background: transparent;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-animation: resmenuHoverOutInAnimation 0.5s both;
-  animation: resmenuHoverOutAnimation 0.5s both;
-}
-.resmenu li a.resmenu__m:hover::after {
-  background: #f18d00;
-  -webkit-animation: resmenuHoverInAnimation 0.5s both;
-  animation: resmenuHoverInAnimation 0.5s both;
 }
 
 .resmenu li:first-child .sub li:first-child {
@@ -392,64 +366,4 @@
   margin-left: 100vw;
 }
 
-@keyframes resmenuHoverInAnimation {
-  from {
-    margin-left: -200px;
-    z-index: 1;
-  }
-  to {
-    margin-left: 0;
-    z-index: 1;
-  }
-}
-@keyframes resmenuSubInAnimation {
-  from {
-    margin-left: 0px;
-    z-index: 1;
-  }
-  to {
-    margin-left: 0;
-    z-index: 1;
-  }
-}
 
-@keyframes resmenuHoverOutAnimation {
-  0% {
-    margin-left: 0;
-    z-index: 1;
-  }
-  100% {
-    margin-left: -200px;
-    z-index: -1;
-  }
-}
-@-webkit-keyframes resmenuHoverInAnimation {
-  from {
-    margin-left: -200px;
-    z-index: 1;
-  }
-  to {
-    margin-left: 0;
-    z-index: 1;
-  }
-}
-@-webkit-keyframes resmenuSubInAnimation {
-  from {
-    margin-left: 0px;
-    z-index: 1;
-  }
-  to {
-    margin-left: 0;
-    z-index: 1;
-  }
-}
-@-webkit-keyframes resmenuHoverOutAnimation {
-  0% {
-    margin-left: 0;
-    z-index: 1;
-  }
-  100% {
-    margin-left: -200px;
-    z-index: -1;
-  }
-}

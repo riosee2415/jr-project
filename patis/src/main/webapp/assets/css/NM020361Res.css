@@ -118,6 +118,9 @@
     border: 1px solid #dedede;
     border-radius: 50px;
   }
+  .propel-content {
+  font-size:16px;
+}
 
   .sub-plan-table thead tr th,
   .sub-status-table thead tr th {
@@ -285,7 +288,7 @@
     display: block;
     position: absolute;
     top: 2285px;
-    width: 80%;
+    width: 700px;
     height: 170px;
     border: 1px solid #dedede;
     border-radius: 50px;
@@ -326,4 +329,14 @@
   }
 }
 @media screen and (min-width: 960px) {
+	.sub-vision{
+	height:110px;
+	line-height: 106px;
+	}
+	.sub-vision-content{
+	height:100px;
+	}
+	.sub-vision-content-desc{
+	font-size: 18px;
+	}
 }
