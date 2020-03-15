@@ -50,7 +50,7 @@ pageEncoding="UTF-8"%>
             삶의 질 향상 및 생활복지 구현
             <p class="sub-vision-content-desc">
               주민 모두가 최소한의 생활수준을 누릴 수 있도록, 저소득층/노후주거
-              밀집지역 등의 기초생활인프라 등을 적정수준으로 공급한다
+              밀집지역 등의 기초생활인프라 등을 적정수준으로 공급한다.
             </p>
           </div>
         </div>
@@ -182,7 +182,7 @@ pageEncoding="UTF-8"%>
                 </td>
                 <td class="table-orange">
                   <p>전통시장 연계형</p>
-                  <p>도시재생 시범시업 선정</p>
+                  <p>도시재생 시범사업 선정</p>
                 </td>
                 <td>뉴딜사업 선정</td>
                 <td></td>
@@ -276,7 +276,7 @@ pageEncoding="UTF-8"%>
         </div>
 
         <div class="sub-main-title">
-          <p>▪중랑구 도시재생사업 추진 현황</p>
+          <p>▪중랑구 도시재생 추진 현황</p>
           <p></p>
           <p class="sub-status-title">
             중랑구 도시재생 추진현황도 &#40;8개소/220HA, 사업지4, 희망지4&#41;
@@ -313,8 +313,8 @@ pageEncoding="UTF-8"%>
                   - ‘22. 12월&#41;
                 </p>
                 <p>
-                  <span class="bluetext">국토부뉴딜사업 선정 </span>&#40;’18. 8.
-                  31. - ’22. 12월&#41;
+                  <span class="bluetext">국토부 뉴딜사업 선정 </span>&#40;’18.
+                  8. 31. - ’22. 12월&#41;
                 </p>
               </td>
             </tr>
@@ -323,14 +323,14 @@ pageEncoding="UTF-8"%>
               <td class="table-sky bluetext">면목3.8동</td>
               <td>18,020</td>
               <td>
-                <span class="bluetext">주거환경관리사업 선정</span>&#40;’18. 8.
-                31. - ‘22. 12월&#41;
+                <span class="bluetext">주거환경관리사업 선정</span>&#40;’19. 5.
+                20. - ‘22. 12월&#41;
               </td>
             </tr>
             <tr>
               <td class="table-sky">3</td>
               <td class="table-sky bluetext">중화2촉진</td>
-              <td>140,885</td>
+              <td>140,855</td>
               <td>
                 <span class="bluetext">활성화지역 선정 </span>&#40;’19. 4. 11. -
                 ‘23. 12월&#41;
@@ -358,7 +358,7 @@ pageEncoding="UTF-8"%>
             <tr>
               <td class="table-sky">6</td>
               <td class="table-sky">
-                <p>면목3.9동</p>
+                <p>면목3.8동</p>
                 <p>&#40;사가정시장&#41;</p>
               </td>
               <td>147,998</td>
@@ -384,7 +384,7 @@ pageEncoding="UTF-8"%>
               <td colspan="2">계</td>
               <td class="table-orange">2,201,589</td>
               <td class="table-orangetext table-orange">
-                ※중랑구 주거면적&#40;10.82㎡&#41; 대비 20% 차지
+                ※중랑구 주거면적&#40;10.82㎢&#41; 대비 20% 차지
               </td>
             </tr>
           </tbody>
