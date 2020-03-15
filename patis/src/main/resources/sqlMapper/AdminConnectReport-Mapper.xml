@@ -23,7 +23,7 @@
 				A.CONNECT_OS,
 				A.CONNECT_FULL_DATE
 		  FROM	JR_DB.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
-		 WHERE	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
+		 WHERE	CONNECT_DATE = #{today}
 	</select>
 	
 	<select id="GET_SEARCH_DETAIL_CONNECT_DATA_TODAY" resultType="connectRecordVO" parameterType="hashMap">
@@ -35,5 +35,6 @@
 		  FROM	JR_DB.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
 		 WHERE	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
 		   AND	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ <= ]]> STR_TO_DATE(#{end}, '%Y/%m/%d')
+		 ORDER	BY	A.CONNECT_FULL_DATE DESC
 	</select>
 </mapper>

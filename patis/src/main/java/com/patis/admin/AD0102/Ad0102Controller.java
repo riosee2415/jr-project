@@ -66,7 +66,9 @@ public class Ad0102Controller {
 		
 		List<ConnectRecordVO> list = ad0102Service.getTodayDetailConnectData(today);
 		
+		
 		model.addAttribute("list", list);
+		
 		
 		return "ajax/connectList";
 	}
