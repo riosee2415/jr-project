@@ -103,7 +103,7 @@
     text-align: center;
     margin: 0 auto;
     background-color: #373737;
-    width: 94%;
+    width: 360px;
     height: 44px;
     border-radius: 50px;
   }
@@ -113,7 +113,7 @@
     display: block;
     position: absolute;
     top: 2265px;
-    width: 90%;
+    width: 360px;
     height: 170px;
     border: 1px solid #dedede;
     border-radius: 50px;

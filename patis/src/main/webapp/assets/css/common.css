@@ -6,12 +6,12 @@ body {
   font-style: normal;
 }
 
-.subpage {
-  width: 100%;
-}
 .sub-container {
-  width: 1200px;
+    width: 1200px;
   margin: 50px auto;
+}
+.sub-container-wrap {
+  width: 100%;
 }
 .sub-content-wrap {
   display: none;
