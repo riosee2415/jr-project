@@ -192,12 +192,12 @@ pageEncoding="UTF-8"%>
                   <p>사가정시장</p>
                   <p>&#40;서울형 도시재생사업&#41;</p>
                 </td>
+                <td></td>
+                <td></td>
                 <td class="table-orange">
                   <p>전통시장 연계형</p>
                   <p>도시재생 시범사업 선정</p>
                 </td>
-                <td>뉴딜사업 선정</td>
-                <td></td>
                 <td class="last"></td>
               </tr>
               <tr>
@@ -222,7 +222,7 @@ pageEncoding="UTF-8"%>
             </tbody>
           </table>
           <div class="table-caption">
-            *2020년까지 목표 : 뉴딜사업 선정 6개소, 서울형 도시재생사업선정
+            *2022년까지 목표 : 뉴딜사업 선정 6개소, 서울형 도시재생사업선정
             2개소
           </div>
         </div>
