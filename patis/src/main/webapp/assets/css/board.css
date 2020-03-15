@@ -334,22 +334,26 @@
   display: -ms-flexbox;
   display: flex;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 .board-detail__box .detail-info__box .detail-list li {
+	display: flex;
   padding-right: 24px;
 }
 
 .board-detail__box .detail-info__box .data-tit {
+  min-width: 47px;
   color: #2b2b2b;
   font-size: 17px;
   font-weight: 600;
+  line-height: 110%;
 }
 
 .board-detail__box .detail-info__box .data-txt {
-  padding-left: 4px;
   color: #a8a8a5;
   font-size: 17px;
+  line-height: 110%;
 }
 
 .board-detail__box .detail-tit__box {
@@ -358,9 +362,22 @@
 }
 
 .board-detail__box .detail-file__box {
-  padding: 18px 0;
+  padding: 13px 0;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+}
+
+.board-detail__box .detail-file__box .detail-list li {
+	margin: 5px 0;
+	width: calc(25% - 24px);	
+}
+
+.board-detail__box .detail-file__box .detail-list li.empty {
+	width: 100%;
+}
+
+.board-detail__box .detail-file__box .data-txt {
+  word-break: break-all;
 }
 
 .board-detail__box .detail-file__box .data-txt:hover {

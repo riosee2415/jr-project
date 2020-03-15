@@ -66,4 +66,14 @@ public class Nm021164ServiceImpl implements I_Nm021164Service{
 		return nm021164DAO.setCollusion(boardVO);
 	}
 
+	@Override
+	public void modifyCollusion(BoardVO boardVO) throws SQLException {
+		nm021164DAO.modifyCollusion(boardVO);
+	}
+
+	@Override
+	public void removeCollusion(int b_no) throws SQLException {
+		nm021164DAO.removeCollusion(b_no);
+	}
+
 }

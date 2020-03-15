@@ -30,14 +30,20 @@ pageEncoding="UTF-8"%>
 					</div>
 					<div class="detail-file__box">
 						<ul class="detail-list">
-							<li>
-								<span class="data-tit">파일1</span>
-								<span class="data-txt">붙임1. 공고문.hwp</span>
-							</li>
-							<li>
-								<span class="data-tit">파일2</span>
-								<span class="data-txt">붙임2. 공고문.hwp</span>
-							</li>
+							<c:choose>
+								<c:when test="${empty fileList }">
+									<li class="empty">첨부파일이 없습니다.</li>
+								</c:when>
+								<c:otherwise>
+									<c:forEach var="file" items="${fileList}" varStatus="status">
+										<c:set var="fileName" value="${fn:split(file.FILE_O_PATH, '/')}" />
+										<li>
+											<span class="data-tit">파일${status.count}</span>
+											<span class="data-txt" onclick="fileDownload('${file.FILE_V_PATH}', '${fileName[fn:length(fileName)-1]}')">${fileName[fn:length(fileName)-1]}</span>
+										</li>
+									</c:forEach>
+								</c:otherwise>
+							</c:choose>
 						</ul>
 					</div>
 				</div>

@@ -2,6 +2,10 @@
     pageEncoding="UTF-8"%>
     
     <form method="get" id="frm-link"></form>
+    <form action="/fileDownload.do" method="post" id="frm-download">
+    	<input type="hidden" name="filePath" />
+    	<input type="hidden" name="fileName" />
+    </form>
 	</body>
 	
 	<script src="/assets/plugins/daum-editor/js/editor_loader.js"></script>

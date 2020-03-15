@@ -70,7 +70,9 @@ public class DaumEditorController {
 			if(!file.exists()) { 
 				file.mkdirs(); 
 			}
-
+			
+			String uploadPath = "/upload/board/images/";
+			
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss"); 
 			String today= formatter.format(new Date()); 
 			String modifyName = today + "-" + UUID.randomUUID().toString().substring(20) + "." + originalNameExtension; 
@@ -86,12 +88,12 @@ public class DaumEditorController {
 			 }
 			 
 			 BoardTempFileVO tempFileVO = new BoardTempFileVO();
-			 tempFileVO.setTFILE_O_PATH(path + originalName);
-			 tempFileVO.setTFILE_V_PATH(path + modifyName);
+			 tempFileVO.setTFILE_O_PATH(uploadPath + originalName);
+			 tempFileVO.setTFILE_V_PATH(uploadPath + modifyName);
 			 tempFileVO.setTFILE_KEY(file_key);
 			 tempFileService.setTempFile(tempFileVO);
 			 
-			 String imageurl = httpSession.getServletContext().getContextPath() + "/upload/board/images/" + modifyName;
+			 String imageurl = httpSession.getServletContext().getContextPath() + uploadPath + modifyName;
 			 fileInfo.put("imageurl", imageurl); 
 			 fileInfo.put("filename", modifyName); 
 			 fileInfo.put("filesize", filesize);
@@ -141,6 +143,9 @@ public class DaumEditorController {
 			String today = formatter.format(new Date());
 			String originalName = multipartFile.getOriginalFilename(); 
 			String modifyName = today + "-" + originalName; 
+			
+			String uploadPath = "/upload/board/files/";
+			
 			try { 
 				multipartFile.transferTo(new File(path + modifyName)); 
 				 System.out.println("** upload 정보 **"); 
@@ -153,13 +158,13 @@ public class DaumEditorController {
 	 		 }
 			
 			 BoardTempFileVO tempFileVO = new BoardTempFileVO();
-			 tempFileVO.setTFILE_O_PATH(path + originalName);
-			 tempFileVO.setTFILE_V_PATH(path + modifyName);
+			 tempFileVO.setTFILE_O_PATH(uploadPath + originalName);
+			 tempFileVO.setTFILE_V_PATH(uploadPath + modifyName);
 			 tempFileVO.setTFILE_KEY(file_key);
 			 tempFileService.setTempFile(tempFileVO);
 			
 			 String fileMime = multipartFile.getContentType(); 
-			 String attachurl = httpSession.getServletContext().getContextPath() + "/upload/board/files/" + modifyName;
+			 String attachurl = httpSession.getServletContext().getContextPath() + uploadPath + modifyName;
 			 fileInfo.put("attachurl", attachurl); 
 			 fileInfo.put("filemime", fileMime);
 			 fileInfo.put("filename", modifyName); 

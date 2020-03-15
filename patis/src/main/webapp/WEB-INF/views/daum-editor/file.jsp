@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8" />
 
 <title>Daum에디터 - 파일 첨부</title>
 
@@ -112,7 +111,7 @@
 		execAttach(_mockdata);
 		closeWindow();
 	}
-
+	
 	//잘못된 경로로 접근할 때 호출되는 함수
 	function initUploader() {
 		var _opener = PopupUtil.getOpener();

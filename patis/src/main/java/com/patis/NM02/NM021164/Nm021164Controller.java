@@ -80,7 +80,16 @@ public class Nm021164Controller {
 		BoardVO data = nm021164Service.getCollusion(b_no);
 		model.addAttribute("data", data);
 		
+		String btype = nm021164Service.getBoardType();
+		
 		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("BOARD_TYPE", btype);
+		params.put("BOARD_NO", b_no);
+		
+		List<BoardFileVO> fileList = fileService.getFileList(params);
+		model.addAttribute("fileList", fileList);
+		
+		params = new HashMap<String, Object>();
 		params.put("rownum", rownum);
 		params.put("searchType", searchType);
 		params.put("searchKeyword", searchKeyword);
@@ -155,6 +164,9 @@ public class Nm021164Controller {
 		
 		int boardNo = 0;
 		
+		if(b_description.indexOf(',') == 0) {
+			b_description = b_description.substring(1, b_description.length());
+		}
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
 		boardVO.setB_TITLE(b_title);
@@ -162,7 +174,8 @@ public class Nm021164Controller {
 		boardVO.setB_AUTHOR(b_author);
 		
 		if(mode.equals("WRITE")) {
-			boardNo = nm021164Service.setCollusion(boardVO);
+			nm021164Service.setCollusion(boardVO);
+			boardNo = boardVO.getB_NO();
 			rttr.addFlashAttribute("msg", "게시글이 등록되었습니다.");
 		} else {
 			boardNo = b_no;

@@ -72,4 +72,12 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 		return sqlSession.insert(NAMESPACE + ".SET_COLLUSION", boardVO);
 	}
 
+	@Override
+	public void modifyCollusion(BoardVO boardVO) throws SQLException {
+	}
+
+	@Override
+	public void removeCollusion(int b_no) throws SQLException {
+	}
+
 }
