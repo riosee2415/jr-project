@@ -189,7 +189,13 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021039.jsp"/>
     </definition> 
     
+    <definition name="presentation.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021039_D.jsp"/>
+    </definition> 
     
+    <definition name="presentation.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021039_W.jsp"/>
+    </definition> 
     
     
 <!-- 관리자 화면 -->

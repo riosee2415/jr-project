@@ -1,90 +1,66 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
-  	<!-- 주민설명회 -->
     <div class="sub-content-wrap">
       <div class="subHead">
         <%@ include file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 
       <div class="board-search__box">
-        <div class="board-search__area">
-          <div class="board-search-type">
-        		<div class="search-type__box" id="search-type-js">
-        			<p class="search-type-text">전체</p>
-        			<i class="fa fa-caret-down" aria-hidden="true"></i>
-        		</div>
-        		<ul class="search-type__list" id="search-type-list-js">
-        			<li class="active">전체</li>
-        			<li>제목</li>
-        			<li>내용</li>
-        		</ul>
-          </div>
-          <div class="board-search-keyword">
-	          <input type="text" class="search-keyword" />
-	          <button type="button" class="search-button"></button>
-          </div>
-        </div>
+        <%@ include file="/WEB-INF/views/template/components/board_search.jsp" %>
       </div>
 
-      <div class="board-list__box">
-        <table class="board-list__table">
-          <thead>
-            <tr>
-              <th class="header-5">번호</th>
-              <th class="header-title">제목</th>
-              <th class="header-15">작성자</th>
-              <th class="header-15">날짜</th>
-              <th class="header-5">조회</th>
-            </tr>
-          </thead>
-
-          <tbody>
-          	<tr class="row-notice">
-              <td>공지</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-            
-            <tr>
-              <td>71</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-
-            <tr>
-              <td>71</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-
-            <tr>
-              <td>71</td>
-              <td class="header-title">제목 테스</td>
-              <td>관리</td>
-              <td>2020-01-01</td>
-              <td>412</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul class="board-pagination">
-        	<li class="page-control"><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
-        	<li class="page-control"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-        	<li class="page-number active">1</li>
-        	<li class="page-number">2</li>
-        	<li class="page-number">3</li>
-        	<li class="page-control"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-        	<li class="page-control"><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
-        </ul>
+      <div class="board-list__box" id="board-list-js" data-btype="${b_type}" data-parent="${param.parent}" data-code="${param.code}">
+        <!-- PC버전 -->
+        <div class="board-pc-ver">
+	        <table class="board-list__table">
+	          <thead>
+	            <tr>
+	              <th class="header-5">번호</th>
+	              <th class="header-title">제목</th>
+	              <th class="header-15">작성자</th>
+	              <th class="header-15">날짜</th>
+	              <th class="header-5">조회</th>
+	            </tr>
+	          </thead>
+	
+	          <tbody id="${fn:toLowerCase(b_type)}-board-js"></tbody>
+	        </table>
+        </div>
+        
+        <!-- 모바일 버전 -->
+        <div class="board-mobile-ver">
+          <div class="board-mobile-wrap" id="${fn:toLowerCase(b_type)}-board-m-js"></div>
+        </div>
+        
+        <div id="${fn:toLowerCase(b_type)}-paging-js"></div>
+        
+        <div class="board-btn__box" id="${fn:toLowerCase(b_type)}-button-js">
+        	<c:if test="${sessionScope.loginRight <= AcceptRight.WRITE_RIGHT}">
+	        	<button type="button" onclick="javascript:boardWriteMoveHandler('${b_type}', '${searchType}', '${searchKeyword}')">글쓰기</button>
+        	</c:if>
+        </div>
       </div>
     </div>
   </div>
+  
+  <form action="/presentation.detail.do" method="get" id="frm-${fn:toLowerCase(b_type)}-detail">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="b_no" />
+  	<input type="hidden" name="rownum" />
+  	<input type="hidden" name="s_type" />
+  	<input type="hidden" name="s_keyword" />
+  </form>
+  
+  <form action="/presentation.write.do" method="get" id="frm-${fn:toLowerCase(b_type)}-write">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="s_type" />
+  	<input type="hidden" name="s_keyword" />
+  	<input type="hidden" name="mode" value="WRITE" />
+  </form>
 </div>
