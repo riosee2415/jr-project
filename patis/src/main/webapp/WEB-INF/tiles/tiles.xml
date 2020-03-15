@@ -211,7 +211,21 @@
     </definition>
     
     
+<!-- 테스트 화면 -->
+    <definition name="phone1" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup1.jsp"/>
+    </definition>
     
+    <definition name="phone2" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup2.jsp"/>
+    </definition>
     
+    <definition name="phone3" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup3.jsp"/>
+    </definition>
+    
+    <definition name="phone4" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup4.jsp"/>
+    </definition>
     
 </tiles-definitions>
