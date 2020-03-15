@@ -24,6 +24,9 @@ public class Accept_typeVO {
 	public void setWRITE_RIGHT(String wRITE_RIGHT) {
 		WRITE_RIGHT = wRITE_RIGHT;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "Accept_typeVO [BOARD_TYPE=" + BOARD_TYPE + ", VIEW_RIGHT=" + VIEW_RIGHT + ", WRITE_RIGHT=" + WRITE_RIGHT
+				+ "]";
+	}
 }

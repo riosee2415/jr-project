@@ -29,4 +29,10 @@ public class LoginLogVO {
 	public void setLOG_DATE(String lOG_DATE) {
 		LOG_DATE = lOG_DATE;
 	}
+	@Override
+	public String toString() {
+		return "LoginLogVO [LOG_NO=" + LOG_NO + ", LOG_ID=" + LOG_ID + ", LOG_IP=" + LOG_IP + ", LOG_DATE=" + LOG_DATE
+				+ "]";
+	}
+	
 }

@@ -39,7 +39,7 @@ pageEncoding="UTF-8"%>
 										<c:set var="fileName" value="${fn:split(file.FILE_O_PATH, '/')}" />
 										<li>
 											<span class="data-tit">파일${status.count}</span>
-											<span class="data-txt" onclick="fileDownload('${file.FILE_V_PATH}', '${fileName[fn:length(fileName)-1]}')">${fileName[fn:length(fileName)-1]}</span>
+											<span class="data-txt" onclick="fileDownload('${file.FILE_NO}', '${file.FILE_V_PATH}', '${fileName[fn:length(fileName)-1]}', this)">${fileName[fn:length(fileName)-1]}</span>
 										</li>
 									</c:forEach>
 								</c:otherwise>
@@ -75,6 +75,10 @@ pageEncoding="UTF-8"%>
 					</table>
 				</div>
 				<div class="btn__box">
+					<c:if test="${sessionScope.loginId eq data.b_AUTHOR_ID}">
+						<button type="button" onclick="javascript:boardWriteMoveHandler('${sessionScope.loginId}', '${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')">수정</button>
+						<button type="button" onclick="javascript:boardRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')">삭제</button>
+					</c:if>
 					<button type="button" onclick="boardListMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}')">목록</button>
 				</div>
 			</div>
@@ -97,6 +101,24 @@ pageEncoding="UTF-8"%>
   	<input type="hidden" name="code" value="${param.code }" />
   	<input type="hidden" name="b_no" />
   	<input type="hidden" name="rownum" />
+  	<input type="hidden" name="s_type" />
+  	<input type="hidden" name="s_keyword" />
+  </form>
+  
+  <form action="/collusion.apply.write.do" method="get" id="frm-${fn:toLowerCase(data.b_TYPE)}-write">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="b_no" />
+  	<input type="hidden" name="rownum" value="${rownum}"/>
+  	<input type="hidden" name="s_type" />
+  	<input type="hidden" name="s_keyword" />
+  	<input type="hidden" name="mode" value="MODIFY" />
+  </form>
+  
+  <form action="/collusion.apply.remove.do" method="post" id="frm-${fn:toLowerCase(data.b_TYPE)}-remove">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="b_no" />
   	<input type="hidden" name="s_type" />
   	<input type="hidden" name="s_keyword" />
   </form>

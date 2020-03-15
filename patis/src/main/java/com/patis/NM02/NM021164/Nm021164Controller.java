@@ -86,7 +86,7 @@ public class Nm021164Controller {
 		params.put("BOARD_TYPE", btype);
 		params.put("BOARD_NO", b_no);
 		
-		List<BoardFileVO> fileList = fileService.getFileList(params);
+		List<BoardFileVO> fileList = fileService.getAttachFileList(params);
 		model.addAttribute("fileList", fileList);
 		
 		params = new HashMap<String, Object>();
@@ -100,6 +100,8 @@ public class Nm021164Controller {
 		model.addAttribute("prevData", prevData);
 		model.addAttribute("nextData", nextData);
 		
+		System.out.println("search: " + searchType + " " + searchKeyword);
+		model.addAttribute("rownum", rownum);
 		model.addAttribute("searchType", searchType);
 		model.addAttribute("searchKeyword", searchKeyword);
 		
@@ -121,6 +123,7 @@ public class Nm021164Controller {
 	public String collusionWrite(Model model,
 								 @RequestParam(value="mode", defaultValue="WRITE")String mode,
 								 @RequestParam(value="b_no", required=false)Integer b_no,
+								 @RequestParam(value="rownum", required=false)Integer rownum,
 								 @RequestParam(value="s_type", defaultValue="")String searchType,
 		 					     @RequestParam(value="s_keyword", defaultValue="")String searchKeyword) throws Exception{
 		
@@ -131,18 +134,24 @@ public class Nm021164Controller {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		if(mode.equals("MODIFY")) {
-			// BoardVO data = nm020524Service.getCommunity(b_no);
-			// model.addAttribute("data", data);
-		}
-		
-		String b_type = nm021164Service.getBoardType();
-		model.addAttribute("b_type", b_type);
-		
 		String file_key = UUID.randomUUID().toString();
 		model.addAttribute("file_key", file_key);
 		
+		String b_type = nm021164Service.getBoardType();
+		if(mode.equals("MODIFY")) {
+			BoardVO data = nm021164Service.getCollusion(b_no);
+			model.addAttribute("data", data);
+			
+			Map<String, Object> params = new HashMap<String, Object>();
+			params.put("BOARD_TYPE", b_type);
+			params.put("BOARD_NO", b_no);
+			
+			List<BoardFileVO> fileList = fileService.getAttachFileList(params);
+			model.addAttribute("fileList", fileList);
+		} 
 		model.addAttribute("mode", mode);
+		model.addAttribute("b_type", b_type);
+		model.addAttribute("rownum", rownum);
 		model.addAttribute("searchType", searchType);
 		model.addAttribute("searchKeyword", searchKeyword);
 		
@@ -150,20 +159,23 @@ public class Nm021164Controller {
 	}
 	
 	@RequestMapping(value="/collusion.apply.write.do", method=RequestMethod.POST)
-	public String collusionWriteProcess(Model model,
-		 						 @RequestParam(value="parent")String parent,
-		 						 @RequestParam(value="code")String code,
-								 @RequestParam(value="mode")String mode,
-								 @RequestParam(value="b_type")String b_type,
-								 @RequestParam(value="b_no", required=false)Integer b_no,
-								 @RequestParam(value="b_title")String b_title,
-								 @RequestParam(value="b_description")String b_description,
-								 @RequestParam(value="b_author")String b_author,
-								 @RequestParam(value="file_key")String file_key,
-								 RedirectAttributes rttr) throws Exception{
-		
+	public String collusionWriteProcess(@RequestParam(value="parent")String parent,
+				 						@RequestParam(value="code")String code,
+										@RequestParam(value="mode")String mode,
+										@RequestParam(value="b_type")String b_type,
+										@RequestParam(value="rownum", required=false)Integer rownum,
+										@RequestParam(value="b_no", required=false)Integer b_no,
+										@RequestParam(value="b_title")String b_title,
+										@RequestParam(value="b_description")String b_description,
+										@RequestParam(value="b_author")String b_author,
+										@RequestParam(value="file_key")String file_key,
+										@RequestParam(value="remove_file")String removeFile,
+										@RequestParam(value="s_type", defaultValue="")String searchType,
+				 					    @RequestParam(value="s_keyword", defaultValue="")String searchKeyword,
+										RedirectAttributes rttr) throws Exception{
+		String url = "";
 		int boardNo = 0;
-		
+	
 		if(b_description.indexOf(',') == 0) {
 			b_description = b_description.substring(1, b_description.length());
 		}
@@ -176,10 +188,26 @@ public class Nm021164Controller {
 		if(mode.equals("WRITE")) {
 			nm021164Service.setCollusion(boardVO);
 			boardNo = boardVO.getB_NO();
+			
 			rttr.addFlashAttribute("msg", "게시글이 등록되었습니다.");
+			url = "redirect:/collusion.apply.do";
 		} else {
 			boardNo = b_no;
 			boardVO.setB_NO(b_no);
+			nm021164Service.modifyCollusion(boardVO);
+			
+			if(!removeFile.equals("")) {
+				String[] removeFiles = removeFile.split(",");
+				for(String fileNo : removeFiles) {
+					fileService.removeFile(Integer.parseInt(fileNo));
+				}
+			}
+			rttr.addAttribute("b_no", b_no);
+			rttr.addAttribute("rownum", rownum);
+			rttr.addAttribute("s_type", searchType);
+			rttr.addAttribute("s_keyword", searchKeyword);
+			rttr.addFlashAttribute("msg", "게시글이 변경되었습니다.");
+			url = "redirect:/collusion.apply.detail.do";
 		}
 		List<BoardTempFileVO> tempFileList = tempFileService.getTempFileListByKey(file_key);
 		for(BoardTempFileVO tempFileVO : tempFileList) {
@@ -188,6 +216,7 @@ public class Nm021164Controller {
 			fileVO.setFILE_V_PATH(tempFileVO.getTFILE_V_PATH());
 			fileVO.setBOARD_TYPE(b_type);
 			fileVO.setBOARD_NO(boardNo);
+			fileVO.setATTACH_YN(tempFileVO.getATTACH_YN());
 			fileService.setFile(fileVO);
 		}
 		tempFileService.removeTempFile(file_key);
@@ -195,9 +224,28 @@ public class Nm021164Controller {
 		rttr.addAttribute("parent", parent);
 		rttr.addAttribute("code", code);
 		
-		return "redirect:/collusion.apply.do";
+		return url;
 	}
 	
+	@RequestMapping(value="/collusion.apply.remove.do", method=RequestMethod.POST)
+	public String collusionRemoveProcess(@RequestParam(value="parent")String parent,
+										 @RequestParam(value="code")String code,
+										 @RequestParam(value="b_no")Integer b_no,
+										 @RequestParam(value="s_type", defaultValue="")String searchType,
+										 @RequestParam(value="s_keyword", defaultValue="")String searchKeyword,
+										 RedirectAttributes rttr) throws Exception {
+		
+		nm021164Service.removeCollusion(b_no);
+		
+		rttr.addFlashAttribute("msg", "게시글이 삭제 처리 되었습니다.");
+		
+		rttr.addAttribute("parent", parent);
+		rttr.addAttribute("code", code);
+		rttr.addAttribute("s_type", searchType);
+		rttr.addAttribute("s_keyword", searchKeyword);
+		
+		return "redirect:/collusion.apply.do";
+	}
 	@RequestMapping(value = "/nm021164Init.do", method = RequestMethod.GET)
 	public String ajaxInit(Model model,
 			               @RequestParam("paging") int paging,

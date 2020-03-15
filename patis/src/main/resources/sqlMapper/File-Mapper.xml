@@ -7,12 +7,27 @@
 						FILE_O_PATH,
 						FILE_V_PATH,
 						BOARD_NO,
-						BOARD_TYPE
+						BOARD_TYPE,
+						ATTACH_YN
 			FROM	JR_DB.BOARD_FILE
 		 WHERE	BOARD_TYPE = #{BOARD_TYPE}
 		 	 AND	BOARD_NO = #{BOARD_NO}
+		 	 AND	USE_YN = 1
 	</select>
 	
+	<select id="GET_ATTACH_FILE_LIST" resultType="fileVO" parameterType="hashMap">
+		SELECT	FILE_NO,
+						FILE_O_PATH,
+						FILE_V_PATH,
+						BOARD_NO,
+						BOARD_TYPE,
+						ATTACH_YN
+			FROM	JR_DB.BOARD_FILE
+		 WHERE	BOARD_TYPE = #{BOARD_TYPE}
+		 	 AND	BOARD_NO = #{BOARD_NO}
+		 	 AND	ATTACH_YN = 1
+		 	 AND	USE_YN = 1
+	</select>
 	
 	<insert id="SET_FILE" parameterType="fileVO">
 		INSERT INTO JR_DB.BOARD_FILE
@@ -20,15 +35,24 @@
 			FILE_O_PATH,
 			FILE_V_PATH,
 			BOARD_NO,
-			BOARD_TYPE
+			BOARD_TYPE,
+			ATTACH_YN
 		)
 		VALUES
 		(
 			#{FILE_O_PATH},
 			#{FILE_V_PATH},
 			#{BOARD_NO},
-			#{BOARD_TYPE}
+			#{BOARD_TYPE},
+			#{ATTACH_YN}
 		)
 	</insert>
+	
+	<update id="REMOVE_FILE" parameterType="int">
+		UPDATE	JR_DB.BOARD_FILE
+		 	 SET	USE_YN = 0,
+		 	 			DELETE_TIME = SYSDATE()
+		 WHERE	FILE_NO = #{file_no}
+	</update>
 
 </mapper>

@@ -17,12 +17,16 @@ pageEncoding="UTF-8"%>
 			  	<input type="hidden" name="parent" value="${param.parent }" />
 			  	<input type="hidden" name="code" value="${param.code }" />
 			  	<input type="hidden" name="mode" value="${mode }" />
+			  	<input type="hidden" name="rownum" value="${rownum }" />
 			  	<input type="hidden" name="b_type" value="${b_type }" />
-			  	<input type="hidden" name="b_no" value="${data.b_No }" />
+			  	<input type="hidden" name="b_no" value="${data.b_NO }" />
 			  	<input type="hidden" name="b_title" />
 			  	<input type="hidden" name="b_description" />
 			  	<input type="hidden" name="b_author" value="${sessionScope.loginNo }" />
 			  	<input type="hidden" name="file_key" value="${file_key }" />
+			  	<input type="hidden" name="remove_file" value="${remove_file }" />
+			  	<input type="hidden" name="s_type" value="${searchType }" />
+			  	<input type="hidden" name="s_keyword" value="${searchKeyword }" />
 			  	
 					<div class="write-row__box">
 						<div class="write-col-head">
@@ -54,24 +58,50 @@ pageEncoding="UTF-8"%>
 						<div class="write-col-body">
 							<%@ include file="/WEB-INF/views/daum-editor/editor_frame.jsp" %>
 							<c:if test="${mode eq 'MODIFY'}">
-								<script>Editor.modify({'content': '${data.b_DESCRIPTION}'})</script>
+								<script>
+									window.onload = function() {
+										modifyEditor('${data.b_DESCRIPTION}');
+									}
+								</script>
 							</c:if>
 						</div>
 					</div>
+					
+					<c:if test="${not empty fileList}">
+						<div class="write-row__box">
+							<div class="write-col-head">
+								<span class="data-tit">파일</span>
+							</div>
+							<div class="write-col-body">
+								<ul class="file-list">
+									<c:forEach var="file" items="${fileList}">
+										<c:set var="fileName" value="${fn:split(file.FILE_O_PATH, '/')}" />
+										<li>
+											<i class="fa fa-floppy-o" aria-hidden="true"></i>
+											<span onclick="fileDownload('${file.FILE_NO}', '${file.FILE_V_PATH}', '${fileName[fn:length(fileName)-1]}', this)">${fileName[fn:length(fileName)-1]}</span>
+											<i class="fa fa-times" aria-hidden="true" onclick="javascript:boardRemoveFileHandler(this, '${file.FILE_NO}')"></i>
+										</li>
+									</c:forEach>
+								</ul>
+							</div>
+						</div>
+					</c:if>
 					<div class="btn__box">
-						<button type="button" class="btn-write" onclick="boardWriteProcessHandler('${b_type}', '${mode}', '${data.b_No}')">
+						<button type="button" class="btn-write" onclick="javascript:boardWriteProcessHandler('${b_type}', '${mode}', '${data.b_NO}')">
 							<c:out value="${mode eq 'WRITE' ? '등록하기' : '변경하기'}" />
 						</button>
-						<button type="button" class="btn-cancel" onclick="boardListMoveHandler('${b_type}', '${searchType}', '${searchKeyword}')">취소</button>
+						<button type="button" class="btn-cancel" onclick="javascript:boardDetailMoveHandler('${b_type}', '${data.b_NO}', '${rownum}', '${searchType}', '${searchKeyword}')">취소</button>
 					</div>
 				</form>
 			</div>
     </div>
   </div>
   
-  <form action="/collusion.apply.do" method="get" id="frm-${fn:toLowerCase(b_type)}">
+  <form action="/collusion.apply.detail.do" method="get" id="frm-${fn:toLowerCase(b_type)}-detail">
   	<input type="hidden" name="parent" value="${param.parent }" />
   	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="b_no" />
+  	<input type="hidden" name="rownum" />
   	<input type="hidden" name="s_type" />
   	<input type="hidden" name="s_keyword" />
   </form>

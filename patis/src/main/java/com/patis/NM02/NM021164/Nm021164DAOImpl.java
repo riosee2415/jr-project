@@ -74,10 +74,12 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 
 	@Override
 	public void modifyCollusion(BoardVO boardVO) throws SQLException {
+		sqlSession.update(NAMESPACE + ".MODIFY_COLLUSION", boardVO);
 	}
 
 	@Override
 	public void removeCollusion(int b_no) throws SQLException {
+		sqlSession.delete(NAMESPACE + ".REMOVE_COLLUSION", b_no);
 	}
 
 }

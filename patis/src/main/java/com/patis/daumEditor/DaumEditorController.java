@@ -91,6 +91,7 @@ public class DaumEditorController {
 			 tempFileVO.setTFILE_O_PATH(uploadPath + originalName);
 			 tempFileVO.setTFILE_V_PATH(uploadPath + modifyName);
 			 tempFileVO.setTFILE_KEY(file_key);
+			 tempFileVO.setATTACH_YN(0);
 			 tempFileService.setTempFile(tempFileVO);
 			 
 			 String imageurl = httpSession.getServletContext().getContextPath() + uploadPath + modifyName;
@@ -161,15 +162,17 @@ public class DaumEditorController {
 			 tempFileVO.setTFILE_O_PATH(uploadPath + originalName);
 			 tempFileVO.setTFILE_V_PATH(uploadPath + modifyName);
 			 tempFileVO.setTFILE_KEY(file_key);
+			 tempFileVO.setATTACH_YN(1);
+			
 			 tempFileService.setTempFile(tempFileVO);
 			
-			 String fileMime = multipartFile.getContentType(); 
+			 String fileMime = multipartFile.getContentType();
 			 String attachurl = httpSession.getServletContext().getContextPath() + uploadPath + modifyName;
 			 fileInfo.put("attachurl", attachurl); 
 			 fileInfo.put("filemime", fileMime);
 			 fileInfo.put("filename", modifyName); 
 			 fileInfo.put("filesize", filesize); 
-			 fileInfo.put("result", 1); 
+			 fileInfo.put("result", 1);
 		}
 		
 		return fileInfo; 

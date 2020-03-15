@@ -22,10 +22,20 @@ public class FileServiceImpl implements I_FileService {
 	public List<BoardFileVO> getFileList(Map<String, Object> params) throws SQLException {
 		return fileDAO.getFileList(params);
 	}
+	
+	@Override
+	public List<BoardFileVO> getAttachFileList(Map<String, Object> params) throws SQLException {
+		return fileDAO.getAttachFileList(params);
+	}
 
 	@Override
 	public void setFile(BoardFileVO fileVO) throws SQLException {
 		fileDAO.setFile(fileVO);
+	}
+
+	@Override
+	public void removeFile(int file_no) throws SQLException {
+		fileDAO.removeFile(file_no);
 	}
 
 }

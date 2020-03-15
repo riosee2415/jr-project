@@ -1,4 +1,4 @@
-if ($('#board-write-js').length > 0) {
+if ($('#board-write-js').length > 0 || document.getElementById('board-write-js')) {
 	var btype = $('#board-write-js').data('btype').toLowerCase();
 	var file_key = $('#board-write-js').data('key');
 	var formId = 'frm-' + btype + '-write-process';
@@ -109,6 +109,10 @@ if ($('#board-write-js').length > 0) {
 		form.createField(textarea);
 
 		return true;
+	}
+	
+	function modifyEditor(content) {
+		Editor.modify({'content': content});
 	}
 
 }

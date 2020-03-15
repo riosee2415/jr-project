@@ -6,6 +6,7 @@ public class BoardTempFileVO {
 	private String TFILE_O_PATH;
 	private String TFILE_V_PATH;
 	private String TFILE_KEY;
+	private int ATTACH_YN;
 	
 	public int getTFILE_NO() {
 		return TFILE_NO;
@@ -31,5 +32,15 @@ public class BoardTempFileVO {
 	public void setTFILE_KEY(String tFILE_KEY) {
 		TFILE_KEY = tFILE_KEY;
 	}
-	
+	public int getATTACH_YN() {
+		return ATTACH_YN;
+	}
+	public void setATTACH_YN(int aTTACH_YN) {
+		ATTACH_YN = aTTACH_YN;
+	}
+	@Override
+	public String toString() {
+		return "BoardTempFileVO [TFILE_NO=" + TFILE_NO + ", TFILE_O_PATH=" + TFILE_O_PATH + ", TFILE_V_PATH="
+				+ TFILE_V_PATH + ", TFILE_KEY=" + TFILE_KEY + ", ATTACH_YN=" + ATTACH_YN + "]";
+	}
 }

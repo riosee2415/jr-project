@@ -101,5 +101,13 @@ public class EmpVO {
 	public void setSECRET_KEY(String sECRET_KEY) {
 		SECRET_KEY = sECRET_KEY;
 	}
+	@Override
+	public String toString() {
+		return "EmpVO [USER_NO=" + USER_NO + ", USER_ID=" + USER_ID + ", USER_PASSWORD=" + USER_PASSWORD
+				+ ", USER_NAME=" + USER_NAME + ", USER_DEPARTMENT=" + USER_DEPARTMENT + ", USER_RIGHT=" + USER_RIGHT
+				+ ", USER_GROUP=" + USER_GROUP + ", PASS_HINT=" + PASS_HINT + ", HINT_ANSWER=" + HINT_ANSWER
+				+ ", USER_TEL=" + USER_TEL + ", USER_MOBILE=" + USER_MOBILE + ", USER_AVATAR=" + USER_AVATAR
+				+ ", USER_EMAIL=" + USER_EMAIL + ", SECRET_KEY=" + SECRET_KEY + "]";
+	}
 
 }

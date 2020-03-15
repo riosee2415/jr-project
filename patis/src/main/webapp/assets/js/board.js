@@ -114,7 +114,7 @@ function boardDetailMoveHandler(b_type, b_no, rownum, type, keyword) {
 	$('#frm-' + b_type + '-detail').submit();
 }
 
-function boardWriteMoveHandler(loginId, b_type, type, keyword) {
+function boardWriteMoveHandler(loginId, b_type, type, keyword, b_no) {
 	if(isEmpty(loginId)) {
 		alert('로그인 후 이용 가능합니다.');
 		return;
@@ -124,11 +124,14 @@ function boardWriteMoveHandler(loginId, b_type, type, keyword) {
 	
 	b_type = b_type.toLowerCase();
 	
+	if(!isEmpty(b_no))
+		$('#frm-' + b_type + '-write input[name=b_no]').val(b_no);
 	$('#frm-' + b_type + '-write input[name=s_type]').val(s_type);
 	$('#frm-' + b_type + '-write input[name=s_keyword]').val(s_keyword);
 	$('#frm-' + b_type + '-write').submit();
 }
 
+var remove_file = new Array();
 function boardWriteProcessHandler(b_type, mode, b_no) {
 	var b_title = $('#input-title-js').val();
 	
@@ -140,6 +143,7 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		return;
 	} 
 	$('#frm-' + b_type + '-write-process input[name=b_title]').val(b_title);
+	$('#frm-' + b_type + '-write-process input[name=remove_file]').val(remove_file.join(','));
 	
 	var message = '';
 	if(mode == 'WRITE') {
@@ -150,6 +154,34 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 	if(confirm(message)) {
 		$('#tx_canvas iframe').contents().find('body').find('.txc-file').remove();
 		Editor.save();
+	}
+}
+
+function boardRemoveProcessHandler(b_type, b_no, type, keyword) {
+	if(!confirm('해당 작성 글을 삭제하시겠습니까 ?')) {
+		return;
+	}
+	var s_type = isEmpty(type) ? search_type : type;
+	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
+	
+	b_type = b_type.toLowerCase();
+	
+	$('#frm-' + b_type + '-remove input[name=b_no]').val(b_no);
+	$('#frm-' + b_type + '-remove input[name=s_type]').val(s_type);
+	$('#frm-' + b_type + '-remove input[name=s_keyword]').val(s_keyword);
+	$('#frm-' + b_type + '-remove').submit();
+}
+
+
+function boardRemoveFileHandler(obj, file_no) {
+	event.stopPropagation();
+	if(obj.previousSibling.previousSibling.classList.contains('remove')) {
+		alert('이미 삭제한 첨부파일 입니다.');
+	} else {
+		if(confirm('선택한 첨부파일을 삭제하시겠습니까 ?')) {
+			obj.previousSibling.previousSibling.classList.toggle('remove');
+			remove_file.push(file_no);
+		}
 	}
 }
 
@@ -306,7 +338,14 @@ function boardCommentRemove(co_no) {
 	}
 }
 
-function fileDownload(filePath, fileName) {
+function fileDownload(fileNo, filePath, fileName, obj) {
+	if(obj.classList.contains('remove')) {
+		if(confirm('삭제하신 파일을 복구하시겠습니까 ?')) {
+			obj.classList.toggle('remove');
+			remove_file.splice(remove_file.indexOf(fileNo), 1);
+		}
+		return;
+	}
 	$("#frm-download input[name='filePath']").val(filePath);
 	$("#frm-download input[name='fileName']").val(fileName);
 	$("#frm-download").submit();

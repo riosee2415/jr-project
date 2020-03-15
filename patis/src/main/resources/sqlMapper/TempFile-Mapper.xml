@@ -6,7 +6,8 @@
 		SELECT	TFILE_NO,
 						TFILE_O_PATH,
 						TFILE_V_PATH,
-						TFILE_KEY
+						TFILE_KEY,
+						ATTACH_YN
 			FROM	JR_DB.BOARD_TEMP_FILE
 		 WHERE	TFILE_KEY = #{TFILE_KEY}
 	</select>
@@ -17,13 +18,15 @@
 		(
 			TFILE_O_PATH,
 			TFILE_V_PATH,
-			TFILE_KEY
+			TFILE_KEY,
+			ATTACH_YN
 		)
 		VALUES
 		(
 			#{TFILE_O_PATH},
 			#{TFILE_V_PATH},
-			#{TFILE_KEY}
+			#{TFILE_KEY},
+			#{ATTACH_YN}
 		)
 	</insert>
 	

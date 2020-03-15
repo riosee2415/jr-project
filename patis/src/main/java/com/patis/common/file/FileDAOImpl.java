@@ -23,8 +23,18 @@ public class FileDAOImpl implements I_FileDAO {
 		return sqlSession.selectList(NAMESPACE + ".GET_FILE_LIST", params);
 	}
 	
+	@Override
+	public List<BoardFileVO> getAttachFileList(Map<String, Object> params) throws SQLException {
+		return sqlSession.selectList(NAMESPACE + ".GET_ATTACH_FILE_LIST", params);
+	}
+	
 	public void setFile(BoardFileVO fileVO) throws SQLException {
 		sqlSession.insert(NAMESPACE + ".SET_FILE", fileVO);
 	}
-	
+
+	@Override
+	public void removeFile(int file_no) throws SQLException {
+		sqlSession.update(NAMESPACE + ".REMOVE_FILE", file_no);
+	}
+
 }

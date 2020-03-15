@@ -58,6 +58,11 @@
 								 FROM  JR_DB.EMP Z
 								 WHERE  B_AUTHOR = Z.USER_NO
 							)	 AS B_AUTHOR,
+							(
+								SELECT  Z.USER_ID
+								  FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							) AS B_AUTHOR_ID,
 							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
 							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
 							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
@@ -106,6 +111,11 @@
 							  FROM  JR_DB.EMP Z
 							 WHERE  B_AUTHOR = Z.USER_NO
 						) AS B_AUTHOR,
+						(
+							SELECT  Z.USER_ID
+							  FROM  JR_DB.EMP Z
+							 WHERE  B_AUTHOR = Z.USER_NO
+						) AS B_AUTHOR_ID,
 						DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
 						DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
 						DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
@@ -186,4 +196,20 @@
 			#{B_TYPE}
 		)
 	</insert>
+	
+	<update id="MODIFY_COLLUSION" parameterType="boardVO">
+		UPDATE 	JR_DB.BOARD_COLLUSION
+		   SET	B_TITLE = #{B_TITLE},
+		   			B_DESCRIPTION = #{B_DESCRIPTION},
+		   			B_UPLOAD_TIME = SYSDATE()
+		 WHERE	B_NO = #{B_NO}
+	</update>
+	
+	<update id="REMOVE_COLLUSION" parameterType="int">
+		UPDATE 	JR_DB.BOARD_COLLUSION
+		   SET	B_USE_YN = 0,
+		   			B_DELETE_TIME = SYSDATE()
+		 WHERE	B_NO = #{b_no}
+	</update>
+	
 </mapper>

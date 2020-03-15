@@ -53,7 +53,10 @@ public class CommonVO {
 	public void setUP_USER(String uP_USER) {
 		UP_USER = uP_USER;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "CommonVO [CODE=" + CODE + ", DETAIL_CODE=" + DETAIL_CODE + ", PARENT_CODE=" + PARENT_CODE + ", VAL="
+				+ VAL + ", INS_USER=" + INS_USER + ", UP_USER=" + UP_USER + ", URL=" + URL + "]";
+	}
 
 }

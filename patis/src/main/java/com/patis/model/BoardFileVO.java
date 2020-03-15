@@ -6,6 +6,7 @@ public class BoardFileVO {
 	private String FILE_V_PATH;
 	private int BOARD_NO;
 	private String BOARD_TYPE;
+	private int ATTACH_YN;
 	
 	public int getFILE_NO() {
 		return FILE_NO;
@@ -37,5 +38,15 @@ public class BoardFileVO {
 	public void setBOARD_TYPE(String bOARD_TYPE) {
 		BOARD_TYPE = bOARD_TYPE;
 	}
-	
+	public int getATTACH_YN() {
+		return ATTACH_YN;
+	}
+	public void setATTACH_YN(int aTTACH_YN) {
+		ATTACH_YN = aTTACH_YN;
+	}
+	@Override
+	public String toString() {
+		return "BoardFileVO [FILE_NO=" + FILE_NO + ", FILE_O_PATH=" + FILE_O_PATH + ", FILE_V_PATH=" + FILE_V_PATH
+				+ ", BOARD_NO=" + BOARD_NO + ", BOARD_TYPE=" + BOARD_TYPE + ", ATTACH_YN=" + ATTACH_YN + "]";
+	}
 }
