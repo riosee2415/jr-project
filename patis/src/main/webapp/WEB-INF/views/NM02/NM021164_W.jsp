@@ -90,12 +90,24 @@ pageEncoding="UTF-8"%>
 						<button type="button" class="btn-write" onclick="javascript:boardWriteProcessHandler('${b_type}', '${mode}', '${data.b_NO}')">
 							<c:out value="${mode eq 'WRITE' ? '등록하기' : '변경하기'}" />
 						</button>
-						<button type="button" class="btn-cancel" onclick="javascript:boardDetailMoveHandler('${b_type}', '${data.b_NO}', '${rownum}', '${searchType}', '${searchKeyword}')">취소</button>
+						<c:if test="${mode eq 'WRITE'}">
+							<button type="button" class="btn-cancel" onclick="javascript:boardListMoveHandler('${b_type}', '${searchType}', '${searchKeyword}')">취소</button>
+						</c:if>
+						<c:if test="${mode eq 'MODIFY'}">
+							<button type="button" class="btn-cancel" onclick="javascript:boardDetailMoveHandler('${b_type}', '${data.b_NO}', '${rownum}', '${searchType}', '${searchKeyword}')">취소</button>
+						</c:if>
 					</div>
 				</form>
 			</div>
     </div>
   </div>
+  
+  <form action="/collusion.apply.do" method="get" id="frm-${fn:toLowerCase(b_type)}">
+  	<input type="hidden" name="parent" value="${param.parent }" />
+  	<input type="hidden" name="code" value="${param.code }" />
+  	<input type="hidden" name="s_type" />
+  	<input type="hidden" name="s_keyword" />
+  </form>
   
   <form action="/collusion.apply.detail.do" method="get" id="frm-${fn:toLowerCase(b_type)}-detail">
   	<input type="hidden" name="parent" value="${param.parent }" />
