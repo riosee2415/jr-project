@@ -3,44 +3,111 @@
 <mapper namespace="Statute-Mapper">
 
 	<select id="GET_STATUTE_LIST" resultType="boardVO" parameterType="int">
-		SELECT  B_NO, 
-						B_TITLE,
-						B_DESCRIPTION,
-						(
-							SELECT  Z.USER_NAME
-							  FROM  JR_DB.EMP Z
-							 WHERE  B_AUTHOR = Z.USER_NO
-						) AS B_AUTHOR,
-						DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
-						DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
-						DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
-						B_HIT,
-						B_NOTICE,
-						B_USE_YN,
-						B_TYPE
-		  FROM  JR_DB.BOARD_STATUTE
-		 WHERE  B_USE_YN = 1
-		 ORDER  BY B_NOTICE DESC,
-		           B_NO DESC
-		 LIMIT  10 OFFSET #{paging}
+		SELECT	*  
+			FROM	( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO, 
+							B_TITLE,
+							B_DESCRIPTION,
+							(
+								 SELECT  Z.USER_NAME
+								 FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							)	 AS B_AUTHOR,
+							B_AUTHOR AS B_AUTHOR_NO,
+							B_AUTHOR_NONE,
+							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+							B_HIT,
+							B_NOTICE,
+							B_USE_YN,
+							B_TYPE
+							FROM  JR_DB.BOARD_STATUTE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							ORDER  BY B_NOTICE ASC,
+										 B_NO ASC
+						) Z
+			ORDER	BY ROWNUM DESC
+			LIMIT	10 OFFSET ${paging}
+	</select>
+	
+	<sql id="search">
+      <if test="searchType != null and searchType != ''">
+          <if test="searchType == 't'.toString()">
+              AND B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+          </if>
+          <if test="searchType == 'd'.toString()">
+              AND B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%')
+          </if>
+          <if test="searchType == 'td'.toString()">
+              AND ( B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+               OR   B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%') )
+          </if>
+      </if>
+  </sql>
+
+	<select id="GET_STATUTE_SEARCH_LIST" resultType="boardVO" parameterType="hashMap">
+		SELECT	*  
+			FROM	( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO, 
+							B_TITLE,
+							B_DESCRIPTION,
+							(
+								 SELECT  Z.USER_NAME
+								 FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							)	 AS B_AUTHOR,
+							(
+								SELECT  Z.USER_ID
+								  FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							) AS B_AUTHOR_ID,
+							B_AUTHOR AS B_AUTHOR_NO,
+							B_AUTHOR_NONE,
+							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+							B_HIT,
+							B_NOTICE,
+							B_USE_YN,
+							B_TYPE
+							FROM  JR_DB.BOARD_STATUTE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							<include refid="search"></include>
+							ORDER  BY B_NOTICE ASC,
+										 B_NO ASC
+						) Z
+			ORDER	BY ROWNUM DESC
+			LIMIT	10 OFFSET ${paging}
 	</select>
 	
 	<select id="GET_LIST_COUNT" resultType="int">
-		SELECT	COUNT(B_NO)
-		  FROM	JR_DB.BOARD_STATUTE
-		 WHERE  B_USE_YN = 1
+		 SELECT  COUNT(B_NO)
+			 FROM	 JR_DB.BOARD_STATUTE
+			WHERE  B_USE_YN = 1
+	</select>
+	
+	<select id="GET_SEARCH_LIST_COUNT" resultType="int" parameterType="hashMap">
+		 SELECT	 COUNT(B_NO)
+		   FROM	 JR_DB.BOARD_STATUTE
+		  WHERE  B_USE_YN = 1
+		 <include refid="search"></include>
 	</select>
 	
 	<select id="GET_BOARD_TYPE" resultType="str">
-		SELECT	B_TYPE
-		  FROM	JR_DB.BOARD_STATUTE
-		 WHERE  B_USE_YN = 1 
-		   AND  B_TYPE IS NOT NULL
-		 LIMIT  1
+		 SELECT	 B_TYPE
+		   FROM	 JR_DB.BOARD_STATUTE
+		  WHERE  B_USE_YN = 1
+		    AND  B_TYPE IS NOT NULL
+		  LIMIT  1
 	</select>
 	
 	<select id="GET_STATUTE" resultType="boardVO" parameterType="int">
-		SELECT  B_NO, 
+		SELECT  B_NO,
 						B_TITLE,
 						B_DESCRIPTION,
 						(
@@ -48,6 +115,13 @@
 							  FROM  JR_DB.EMP Z
 							 WHERE  B_AUTHOR = Z.USER_NO
 						) AS B_AUTHOR,
+						(
+							SELECT  Z.USER_ID
+							  FROM  JR_DB.EMP Z
+							 WHERE  B_AUTHOR = Z.USER_NO
+						) AS B_AUTHOR_ID,
+						B_AUTHOR AS B_AUTHOR_NO,
+						B_AUTHOR_NONE,
 						DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
 						DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
 						DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
@@ -60,26 +134,44 @@
 		   AND  B_USE_YN = 1
 	</select>
 	
-	<select id="GET_PREV_STATUTE" resultType="boardVO" parameterType="int">
+	<select id="GET_PREV_STATUTE" resultType="boardVO" parameterType="hashMap">
+		SELECT  *
+		  FROM  ( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO,
+			        B_TITLE,
+			        B_TYPE
+							FROM  JR_DB.BOARD_STATUTE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							<include refid="search"></include>
+							ORDER  BY B_NOTICE ASC,
+		    					  		B_NO ASC
+						) Z
 		<![CDATA[
-		SELECT  B_NO,
-		        B_TITLE,
-		        B_TYPE
-		  FROM  JR_DB.BOARD_STATUTE
-		 WHERE  B_NO < #{b_no}
-		 ORDER  BY B_NO DESC
+		 WHERE  ROWNUM < ${rownum}
+		 ORDER  BY ROWNUM DESC
 		 LIMIT  1
 	  ]]>
 	</select>
 	
-	<select id="GET_NEXT_STATUTE" resultType="boardVO" parameterType="int">
+	<select id="GET_NEXT_STATUTE" resultType="boardVO" parameterType="hashMap">
+		SELECT  *
+		  FROM  ( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO,
+			        B_TITLE,
+			        B_TYPE
+							FROM  JR_DB.BOARD_STATUTE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							<include refid="search"></include>
+							ORDER  BY B_NOTICE ASC,
+		    					  		B_NO ASC
+						) Z
 		<![CDATA[
-		SELECT  B_NO,
-		        B_TITLE,
-		        B_TYPE
-		  FROM  JR_DB.BOARD_STATUTE
-		 WHERE  B_NO > #{b_no}
-		 ORDER  BY B_NO ASC
+		 WHERE  ROWNUM > ${rownum}
+		 ORDER  BY ROWNUM ASC
 		 LIMIT  1
 	  ]]>
 	</select>
@@ -88,6 +180,44 @@
 		UPDATE  JR_DB.BOARD_STATUTE
 		   SET  B_HIT = B_HIT + 1
 		 WHERE  B_NO = #{b_no}
+	</update>
+	
+	<insert id="SET_STATUTE" parameterType="boardVO" useGeneratedKeys="true" keyProperty="B_NO">
+		INSERT INTO JR_DB.BOARD_STATUTE
+		(
+			B_TITLE,
+			B_DESCRIPTION,
+			B_AUTHOR,
+			B_AUTHOR_NONE,
+			B_CREATE_TIME,
+			B_UPLOAD_TIME,
+			B_TYPE
+		)
+		VALUES
+		(
+			#{B_TITLE},
+			#{B_DESCRIPTION},
+			${B_AUTHOR},
+			#{B_AUTHOR_NONE},
+			SYSDATE(),
+			SYSDATE(),
+			#{B_TYPE}
+		)
+	</insert>
+	
+	<update id="MODIFY_STATUTE" parameterType="boardVO">
+		UPDATE 	JR_DB.BOARD_STATUTE
+		   SET	B_TITLE = #{B_TITLE},
+		   			B_DESCRIPTION = #{B_DESCRIPTION},
+		   			B_UPLOAD_TIME = SYSDATE()
+		 WHERE	B_NO = #{B_NO}
+	</update>
+	
+	<update id="REMOVE_STATUTE" parameterType="int">
+		UPDATE 	JR_DB.BOARD_STATUTE
+		   SET	B_USE_YN = 0,
+		   			B_DELETE_TIME = SYSDATE()
+		 WHERE	B_NO = #{b_no}
 	</update>
 	
 </mapper>
