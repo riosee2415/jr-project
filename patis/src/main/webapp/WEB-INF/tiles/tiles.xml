@@ -169,8 +169,15 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020835.jsp"/>
     </definition>
     
+    <definition name="hire.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020835_D.jsp"/>
+    </definition>
+    
+    <definition name="hire.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020835_W.jsp"/>
+    </definition>
 
-	<definition name="school" extends="subTopMenuLayout">
+	  <definition name="school" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021037.jsp"/>
     </definition>
     
