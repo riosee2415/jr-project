@@ -19,7 +19,7 @@ pageEncoding="UTF-8"%>
               <tr>
                 <th>구분</th>
                 <th>주체</th>
-                <th>역할&nbsp;&sol;&nbsp;기능</th>
+                <th>역할&nbsp;&#47;&nbsp;기능</th>
               </tr>
             </thead>
             <tbody>
