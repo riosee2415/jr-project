@@ -20,7 +20,7 @@ pageEncoding="UTF-8"%>
       <!-- 도시재생학교(2018) -->
       <div class="nm23-content nm23-content-1">
         <h3 class="nm23-title-style-01">
-          도시재생학교&#40;2018&#41;
+          도시재생학교 &#40;2018&#41;
         </h3>
         <div class="nm23-list-content">
           <h3 class="nm23-list-title">▪&nbsp;목적</h3>
@@ -118,7 +118,7 @@ pageEncoding="UTF-8"%>
       <!-- 도시재생학교(2019) -->
       <div class="nm23-content">
         <h3 class="nm23-title-style-01">
-          도시재생학교&#40;2019&#41;
+          도시재생학교 &#40;2019&#41;
         </h3>
         <div class="nm23-list-content">
           <h3 class="nm23-list-title">▪&nbsp;목적</h3>
@@ -170,7 +170,7 @@ pageEncoding="UTF-8"%>
               진행&#40;기초반 운영&#41;
             </li>
             <li>
-              -&nbsp;하반기 &#58; 도시재생 실행단계로 복합·다향한 내용 위주로
+              -&nbsp;하반기 &#58; 도시재생 실행단계로 복합·다양한 내용 위주로
               진행&#40;심화반 운영&#41;
             </li>
           </ul>
@@ -183,7 +183,7 @@ pageEncoding="UTF-8"%>
           </ul>
           <ul class="nm23-barlist-style">
             <li>
-              -&nbsp;교육 수요자 의견 수렵을 통한 주민에게 필요한 프로그램 집중
+              -&nbsp;교육 수요자 의견 수렴을 통한 주민에게 필요한 프로그램 집중
               추진
             </li>
             <li>
@@ -229,7 +229,7 @@ pageEncoding="UTF-8"%>
             </tr>
             <tr>
               <th>교육기간</th>
-              <td>2019. 4 ~ 2018. 11</td>
+              <td>2019. 4 ~ 2019. 11</td>
             </tr>
             <tr>
               <th>교육구성</th>
@@ -522,7 +522,7 @@ pageEncoding="UTF-8"%>
         <!-- 찾아가는 주민설명회(2019) -->
         <div class="nm23-content-mt">
           <h3 class="nm23-title-style-01">
-            찾아가는 주민설명회&#40;2019&#41;
+            찾아가는 주민설명회 &#40;2019&#41;
           </h3>
           <div class="nm23-list-content">
             <h3 class="nm23-list-title2">▪&nbsp;목적</h3>
@@ -558,7 +558,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm23-barlist-style">
               <li>
-                -&nbsp;주민과의 소통을 통한 진역의 특색 및 여건에 맞는
+                -&nbsp;주민과의 소통을 통한 지역의 특색 및 여건에 맞는
                 도시재생사업 발굴
               </li>
               <li>
@@ -668,7 +668,7 @@ pageEncoding="UTF-8"%>
         <!-- 묵2동 장미학교(2019) -->
         <div class="nm23-content-2">
           <h3 class="nm23-title-style-01">
-            묵2동 장미학교 &#40;2019&#41;
+            묵2동 장미학교  &#40;2019&#41;
           </h3>
           <div class="nm23-list-content">
             <h3 class="nm23-list-title4">▪목적</h3>
@@ -749,10 +749,10 @@ pageEncoding="UTF-8"%>
               </caption>
               <tr>
                 <th>교육기간</th>
-                <td>2019. 9, 25. ~ 2019. 12. 4.</td>
+                <td>2019. 9. 25. ~ 2019. 12. 4.</td>
               </tr>
               <tr>
-                <th>교육구성</th>
+                <th>교육목적</th>
                 <td>
                   <ul>
                     <li>
@@ -831,7 +831,7 @@ pageEncoding="UTF-8"%>
               </caption>
               <tr>
                 <th>교육기간</th>
-                <td>2019. 9, 27. ~ 2019. 12. 20.</td>
+                <td>2019. 9. 27. ~ 2019. 12. 20.</td>
               </tr>
               <tr>
                 <th>교육목적</th>
@@ -928,7 +928,7 @@ pageEncoding="UTF-8"%>
               </caption>
               <tr>
                 <th>교육기간</th>
-                <td>2019. 9, 27. ~ 2019. 12. 20.</td>
+                <td>2019. 9. 12. ~ 2019. 12. 26.</td>
               </tr>
               <tr>
                 <th>교육목적</th>
@@ -955,7 +955,7 @@ pageEncoding="UTF-8"%>
                 <td>
                   <ul>
                     <li>1강 &#58; 토분모양 화분 만들기</li>
-                    <li>2강 &#58; 걸이화분 만들기기획</li>
+                    <li>2강 &#58; 걸이화분 만들기</li>
                     <li>3강 &#58; 손잡이가 달린 화분 만들기</li>
                     <li>4강 &#58; 기물에 화장기법 장식하기</li>
                   </ul>

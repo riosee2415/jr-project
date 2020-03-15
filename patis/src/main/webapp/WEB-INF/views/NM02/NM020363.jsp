@@ -26,7 +26,7 @@ pageEncoding="UTF-8"%>
 
         <div class="nm0363-tbl-style-01">
           <ul class="tbl-style-title">
-            <li>·&nbsp;지하철 + 버스 이용시</li>
+            <li>·&nbsp;지하철+버스 이용시</li>
           </ul>
           <ul class="tbl-style-con">
             <li>
@@ -34,8 +34,8 @@ pageEncoding="UTF-8"%>
               앞 하차
             </li>
             <li>
-              6호선 &#58; 봉화산역&#40;3번출구&#41; - 241, 1122, 2012, 2115 번
-              버스 승차 - 중랑구청앞 하차
+              6호선 &#58; 봉화산역&#40;3번출구&#41; - 241, 1122, 2012, 2115번
+              버스 승차 - 중랑구청 앞 하차
             </li>
             <li>
               7호선 &#58; 중화역&#40;2번출구 건너편&#41; - 273, 1122, 2115번
@@ -69,12 +69,14 @@ pageEncoding="UTF-8"%>
       <!-- 묵2동 도시재생지원센터 -->
       <div class="nm0363-content">
         <h3 class="nm0363-title-style-01">▪묵2동 도시재생지원센터</h3>
+        <!-- 
         <div class="nm0363-content-img__box">
           <div class="nm0363-content-img-02-01"></div>
         </div>
+         -->
         <div class="nm0363-tbl-style-01">
           <ul class="tbl-style-title">
-            <li>·&nbsp;오시는 길</li>
+            <li>·&nbsp;오시는길</li>
           </ul>
           <ul class="tbl-style-con">
             <li>서울특별시 중랑구 동일로157길 30 한아름빌딩 2층</li>

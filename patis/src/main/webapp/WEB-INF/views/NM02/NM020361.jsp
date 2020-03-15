@@ -262,12 +262,12 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul>
               <li>05. 20.</li>
-              <li>·면목3.8동 주거환경관리사업 선정</li>
+              <li>·면목3·8동 주거환경관리사업 선정</li>
             </ul>
             <ul>
               <li>11. 25.</li>
               <li>
-                ·면목동 중심지&#40;면목2·상봉2동&#41; 도시재생활성화지역 선정
+                ·면목동 중심지&#40;면목2,상봉2동&#41; 도시재생활성화지역 선정
               </li>
             </ul>
             <ul>
@@ -281,7 +281,7 @@ pageEncoding="UTF-8"%>
           <p>▪중랑구 도시재생 추진 현황</p>
           <p></p>
           <p class="sub-status-title">
-            중랑구 도시재생 추진현황도 &#40;8개소/220HA, 사업지4, 희망지4&#41;
+            중랑구 도시재생 추진현황도 &#40;8개소/220ha, 사업지4, 희망지4&#41;
           </p>
         </div>
 
@@ -322,11 +322,11 @@ pageEncoding="UTF-8"%>
             </tr>
             <tr>
               <td class="table-sky">2</td>
-              <td class="table-sky bluetext">면목3.8동</td>
+              <td class="table-sky bluetext">면목3·8동</td>
               <td>18,020</td>
               <td>
                 <span class="bluetext">주거환경관리사업 선정</span>&#40;’19. 5.
-                20. - ‘22. 12월&#41;
+                20. - 22. 12월&#41;
               </td>
             </tr>
             <tr>
@@ -360,13 +360,13 @@ pageEncoding="UTF-8"%>
             <tr>
               <td class="table-sky">6</td>
               <td class="table-sky">
-                <p>면목3.8동</p>
+                <p>면목3·8동</p>
                 <p>&#40;사가정시장&#41;</p>
               </td>
               <td>147,998</td>
               <td>
                 <span class="greentext">전통시장 연계형 희망지 선정 </span
-                >&#40;’19. 5. 15. - ‘20. 3월&#41;
+                >&#40;’19. 5. 15. - ‘20. 2월&#41;
               </td>
             </tr>
             <tr>
