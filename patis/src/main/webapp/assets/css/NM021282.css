@@ -44,7 +44,7 @@
   height: 50px;
   position: absolute;
   top: 70px;
-  left:20%;
+  left: 20%;
 }
 
 .nm82-imgbox-title {
@@ -59,8 +59,8 @@
   position: absolute;
   bottom: 140px;
   font-size: 34px;
-  width:100%;
-  left:0;
+  width: 100%;
+  left: 0;
   font-weight: normal;
   text-align: center;
 }
@@ -73,7 +73,7 @@
   line-height: 33px;
   width: 113px;
   height: 33px;
-  left:36%;
+  left: 36%;
   background-color: #578ac8;
   border-radius: 20px;
   font-size: 20px;

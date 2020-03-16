@@ -1,96 +1,99 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 1300px) {
-	.sub-top-menu .top-menu__box {
-		width: 1000px;
-		margin: 0 auto;
-	}
+  .sub-top-menu .top-menu__box {
+    width: 1000px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 1100px) {
-	.sub-top-menu .top-menu__list.menu-two {
-		-webkit-grid-template-columns: 50% 50%;
-		-moz-grid-template-columns: 50% 50%;
-		-o-grid-template-columns: 50% 50%;
-		grid-template-columns: 50% 50%;
-	}
-	.sub-top-menu .top-menu__list.menu-more {
-		-webkit-grid-template-columns: 50% 50%;
-		-moz-grid-template-columns: 50% 50%;
-		-o-grid-template-columns: 50% 50%;
-		grid-template-columns: 50% 50%;
-	}
-	.sub-top-menu .top-menu__box {
-		width: 700px;
-		margin: 0 auto;
-	}
+  .sub-top-menu .top-menu__list.menu-two {
+    -webkit-grid-template-columns: 50% 50%;
+    -moz-grid-template-columns: 50% 50%;
+    -o-grid-template-columns: 50% 50%;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+  }
+  .sub-top-menu .top-menu__list.menu-more {
+    -webkit-grid-template-columns: 50% 50%;
+    -moz-grid-template-columns: 50% 50%;
+    -o-grid-template-columns: 50% 50%;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+  }
+  .sub-top-menu .top-menu__box {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 950px) and (max-width: 1000px) {
-	.sub-top-menu .top-menu__box {
-		margin: 0 auto;
-		width: 780px;
-	}
+  .sub-top-menu .top-menu__box {
+    margin: 0 auto;
+    width: 780px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
-	.sub-top-menu .top-menu__box {
-		width: 700px;
-		margin: 0 auto;
-	}
+  .sub-top-menu .top-menu__box {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.sub-top-menu .top-menu__box {
-		width: 360px;
-	}
-	.sub-top-menu .top-menu__list li span {
-	font-size: 16px;
-	}
+  .sub-top-menu .top-menu__box {
+    width: 360px;
+  }
+  .sub-top-menu .top-menu__list li span {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-	.sub-top-menu .top-menu__list.menu-three {
-		-webkit-grid-template-columns: 100%;
-		-moz-grid-template-columns: 100%;
-		-o-grid-template-columns: 100%;
-		grid-template-columns: 100%;
-	}
+  .sub-top-menu .top-menu__list.menu-three {
+    -webkit-grid-template-columns: 100%;
+    -moz-grid-template-columns: 100%;
+    -o-grid-template-columns: 100%;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+  }
 }
 
 /* IE10+ */
 @media screen and (-ms-high-contrast: 425px) {
-	/* Enter your style code */
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(1) {
-		-ms-grid-row: 1;
-		-ms-grid-column: 1;
-	}
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(2) {
-		-ms-grid-row: 1;
-		-ms-grid-column: 2;
-	}
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(3) {
-		-ms-grid-row: 2;
-		-ms-grid-column: 1;
-	}
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(4) {
-		-ms-grid-row: 2;
-		-ms-grid-column: 2;
-	}
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(5) {
-		-ms-grid-row: 3;
-		-ms-grid-column: 1;
-	}
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(6) {
-		-ms-grid-row: 3;
-		-ms-grid-column: 2;
-	}
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(7) {
-		-ms-grid-row: 4;
-		-ms-grid-column: 3;
-	}
-	.sub-top-menu .top-menu__list.menu-more>*:nth-child(8) {
-		-ms-grid-row: 5;
-		-ms-grid-column: 4;
-	}
+  /* Enter your style code */
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .sub-top-menu .top-menu__list.menu-more > *:nth-child(8) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
 }

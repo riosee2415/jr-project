@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
 .sub-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   margin-top: 13px;
@@ -21,36 +27,30 @@
   background-image: url("/assets/images/image/sub_banner_02.png");
 }
 
-
 .sub-banner-3 {
   background-position: center 10%;
   background-image: url("/assets/images/image/sub_banner_03.png");
 }
-
 
 .sub-banner-4 {
   background-position: center 10%;
   background-image: url("/assets/images/image/sub_banner_04.png");
 }
 
-
 .sub-banner-5 {
   background-position: center 10%;
   background-image: url("/assets/images/image/sub_banner_05.png");
 }
-
 
 .sub-banner-6 {
   background-position: center 10%;
   background-image: url("/assets/images/image/sub_banner_06.png");
 }
 
-
 .sub-banner-7 {
   background-position: center 10%;
   background-image: url("/assets/images/image/sub_banner_07.png");
 }
-
 
 .sub-banner .sub-banner-overlay {
   position: absolute;
@@ -63,7 +63,7 @@
 }
 
 .sub-banner .sub-banner-title {
-	font-size: 35px;
+  font-size: 35px;
   font-weight: 400;
   color: #fff;
   z-index: 2;
