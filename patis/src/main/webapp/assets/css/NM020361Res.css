@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+@media screen and (max-width: 1300px){
+	.sub-main-propel:after {
+    content: "";
+    z-index: -3;
+    display: block;
+    position: absolute;
+    top: 3024px;
+    width: 1000px;
+}
+}
+
 @media screen and (max-width: 767px) {
   .sub1-main-content p {
     margin: 10px;
@@ -112,14 +123,14 @@
     z-index: -3;
     display: block;
     position: absolute;
-    top: 2508px;
+    top: 2525px;
     width: 360px;
     height: 170px;
     border: 1px solid #dedede;
     border-radius: 50px;
   }
   .propel-content {
-    font-size: 16px;
+    font-size: 15px;
   }
   .sub-plan-table thead tr th,
   .sub-status-table thead tr th {
@@ -286,7 +297,7 @@
     z-index: -3;
     display: block;
     position: absolute;
-    top: 2444px;
+    top: 2484px;
     width: 700px;
     height: 170px;
     border: 1px solid #dedede;
