@@ -149,30 +149,30 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
           </div>
         </form>
       </div>
+      
+      <form
+		    action="/collusion.apply.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(b_type)}"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form>
+		
+		  <form
+		    action="/collusion.apply.detail.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(b_type)}-detail"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="rownum" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form>
     </div>
   </div>
-
-  <form
-    action="/collusion.apply.do"
-    method="get"
-    id="frm-${fn:toLowerCase(b_type)}"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-  </form>
-
-  <form
-    action="/collusion.apply.detail.do"
-    method="get"
-    id="frm-${fn:toLowerCase(b_type)}-detail"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="b_no" />
-    <input type="hidden" name="rownum" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-  </form>
 </div>
