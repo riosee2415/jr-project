@@ -13,7 +13,9 @@ pageEncoding="UTF-8"%>
       <div class="nm0363-content">
         <h3 class="nm0363-title-style-01">▪중랑구청 도시환경국 도시재생과</h3>
         <div class="nm0363-content-img__box">
-          <div class="nm0363-content-img-01-01"></div>
+          <a href="https://url.kr/K7jMIi" target="_blank">
+            <img class="nm0363-content-img-01-01" />
+          </a>
         </div>
         <div class="nm0363-tbl-style-01">
           <ul class="tbl-style-title">
@@ -69,11 +71,11 @@ pageEncoding="UTF-8"%>
       <!-- 묵2동 도시재생지원센터 -->
       <div class="nm0363-content">
         <h3 class="nm0363-title-style-01">▪묵2동 도시재생지원센터</h3>
-
         <div class="nm0363-content-img__box">
-          <div class="nm0363-content-img-02-01"></div>
+          <a href="https://url.kr/J3Awkh" target="_blank">
+            <img class="nm0363-content-img-02-01" />
+          </a>
         </div>
-
         <div class="nm0363-tbl-style-01">
           <ul class="tbl-style-title">
             <li>·&nbsp;오시는길</li>
@@ -116,8 +118,11 @@ pageEncoding="UTF-8"%>
       <!-- 중화2동 도시재생지원센터 -->
       <div class="nm0363-content">
         <h3 class="nm0363-title-style-01">▪중화2동 도시재생지원센터</h3>
+
         <div class="nm0363-content-img__box">
-          <div class="nm0363-content-img-02-04"></div>
+          <a href="https://url.kr/cIsUb1" target="_blank">
+            <img class="nm0363-content-img-02-04" />
+          </a>
         </div>
         <div class="nm0363-tbl-style-01">
           <ul class="tbl-style-title">
