@@ -21,9 +21,28 @@ $(document).ready(function() {
 });
 
 function _topMenuClickHandler(menuNumber, menuName) {
-	$(".sub_title-js").text(menuName);
-	$("#sub-container-js .sub-content-wrap").hide();
-	$("#sub-container-js .sub-content-wrap").eq(menuNumber-1).show();
+	$("#sub-container-js .sub-content-wrap").removeClass('active');
+	$("#sub-container-js .sub-content-wrap").eq(menuNumber-1).addClass('active');
 	$("#sub_top_subject-js li").removeClass("active");
 	$("#sub_top_subject-js li").eq(menuNumber-1).addClass("active");
+	
+	setTitleName(menuName);
+	boardSearchInit();
+	getPageContent(1);
+}
+
+function _topMenuActiveInit(tab) {
+	var menuName = $('#sub_top_subject-js li').eq(tab-1).find('span').text();
+	$("#sub-container-js .sub-content-wrap").removeClass('active');
+	$("#sub-container-js .sub-content-wrap").eq(tab-1).addClass('active');
+	$("#sub_top_subject-js li").removeClass("active");
+	$("#sub_top_subject-js li").eq(tab-1).addClass("active");
+	
+	setTitleName(menuName);
+	boardSearchEventInit();
+	getPageContent(1);
+}
+
+function setTitleName(name) {
+	$(".sub_title-js").text(name);
 }
