@@ -331,7 +331,7 @@
 }
 
 .board-detail__box .btn__box button {
-	width: 100px;
+  width: 100px;
 }
 
 .board-detail__box .detail-info__box .detail-list {
@@ -339,11 +339,14 @@
   display: -ms-flexbox;
   display: flex;
   padding: 0 20px;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .board-detail__box .detail-info__box .detail-list li {
-	display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-right: 24px;
 }
 
@@ -373,12 +376,12 @@
 }
 
 .board-detail__box .detail-file__box .detail-list li {
-	margin: 5px 0;
-	width: calc(25% - 24px);	
+  margin: 5px 0;
+  width: calc(25% - 24px);
 }
 
 .board-detail__box .detail-file__box .detail-list li.empty {
-	width: 100%;
+  width: 100%;
 }
 
 .board-detail__box .detail-file__box .data-txt {
@@ -492,15 +495,20 @@
   padding: 20px 15px;
   width: 80%;
   border-bottom: 1px solid #eaeaea;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .board-write__box .write-row__box .write-col-body .file-list {
-	width: 100%;
+  width: 100%;
 }
 
 .board-write__box .write-row__box .write-col-body .file-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 4px 0;
 }
@@ -510,38 +518,48 @@
   padding: 0 10px;
   overflow: hidden;
   white-space: nowrap;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   color: #4c4c4c;
   cursor: pointer;
 }
 
-.board-write__box .write-row__box .write-col-body .file-list li span:hover { 
-	text-decoration: underline;	
-	color: #313131;
+.board-write__box .write-row__box .write-col-body .file-list li span:hover {
+  text-decoration: underline;
+  color: #313131;
 }
 
 .board-write__box .write-row__box .write-col-body .file-list li span.remove {
-	color: #c3c3c3;
-	text-decoration: line-through;
+  color: #c3c3c3;
+  text-decoration: line-through;
 }
 
-.board-write__box .write-row__box .write-col-body .file-list li span.remove:hover {
-	color: #828282;
+.board-write__box
+  .write-row__box
+  .write-col-body
+  .file-list
+  li
+  span.remove:hover {
+  color: #828282;
 }
-
 
 .board-write__box .write-row__box .write-col-body .file-list li .fa-floppy-o {
-	color: #4c4c4c;
+  color: #4c4c4c;
 }
 
-.board-write__box .write-row__box .write-col-body .file-list li:hover .fa-floppy-o { 
-	text-decoration: underline;	
-	color: #313131;
+.board-write__box
+  .write-row__box
+  .write-col-body
+  .file-list
+  li:hover
+  .fa-floppy-o {
+  text-decoration: underline;
+  color: #313131;
 }
 
 .board-write__box .write-row__box .write-col-body .file-list li .fa-times {
-	color: #e45c5c;
-	cursor: pointer;
+  color: #e45c5c;
+  cursor: pointer;
 }
 
 .board-write__box .write-row__box .write-col-body .tx-editor-container {

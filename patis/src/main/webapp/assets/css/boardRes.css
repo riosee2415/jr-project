@@ -40,14 +40,14 @@
   }
 
   .border-list__table2 thead tr.row-notice {
-  	background: #ffebd0;
+    background: #ffebd0;
   }
-  
+
   .border-list__table2 tbody tr.row-empty td {
-  	padding: 60px 0;
-  	cursor: default;
+    padding: 60px 0;
+    cursor: default;
   }
-  
+
   .border-list__table2 tbody tr {
     height: 50px;
     font-size: 18px;
@@ -80,15 +80,14 @@
   .border-list__table2 tbody tr td:nth-child(2n) {
     width: 40%;
   }
-  
+
   .board-pagination {
-  	margin-top: 100px;
+    margin-top: 100px;
   }
-  
+
   .board-list__box .board-btn__box {
-  	bottom: 80px;
+    bottom: 80px;
   }
-  
 }
 
 /* Small devices */
@@ -105,53 +104,59 @@
   .board-search__box .board-search-type::after {
     width: 1px;
   }
-  
+
   .board-detail__box .detail-info__box .detail-list {
-  	flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-  
+
   .board-detail__box .detail-info__box .detail-list li {
-  	padding-top: 2px;
-  	padding-bottom: 2px;
-		padding-right: 0;
-		justify-content: space-between;  
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
-  
+
   .board-detail__box .detail-file__box .detail-list li {
-  	width: 100%;
+    width: 100%;
   }
-  
+
   .board-detail__box .detail-desc__box {
-  	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  
+
   .board-detail__box .detail-desc__box p {
     word-break: break-all;
   }
-  
+
   .board-detail__box .detail-desc__box img {
-  	width: 100%;
+    width: 100%;
   }
-  
+
   .board-detail__box .detail-paging__box th {
-  	width: 60px;
+    width: 60px;
   }
-  
+
   .board-detail__box .detail-paging__box td {
     width: calc(100% - 60px);
   }
-  
+
   .board-comment__box .comment-write__box .write-input__box .write-input {
     padding: 10px;
     width: calc(100% - 120px);
   }
-  
+
   .board-comment__box .comment-write__box .write-input__box .write-button {
     width: 100px;
-  } 
-  
+  }
+
   .board-detail__box .btn__box button {
-  	width: 100px;
+    width: 100px;
   }
 }
 

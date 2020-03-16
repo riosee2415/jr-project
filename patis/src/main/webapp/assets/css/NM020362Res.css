@@ -27,6 +27,8 @@
   }
 
   .nm020362-slideBox {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -48,6 +50,8 @@
   }
 
   .nm020362-slideBox2 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -78,6 +82,8 @@
   }
 
   .nm020362-slideBox3 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
@@ -85,6 +91,8 @@
   }
 
   .nm020362-slideBox4 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
     white-space: nowrap;
     overflow: auto;
