@@ -161,7 +161,7 @@ pageEncoding="UTF-8"%>
               </tr>
               <tr>
                 <td class="table-sky">3</td>
-                <td class="table-sky">중화2촉진</td>
+                <td class="table-sky">舊)중화2촉진</td>
                 <td>활성화지역 선정</td>
                 <td class="table-orange">뉴딜사업 선정</td>
                 <td></td>
