@@ -42,4 +42,43 @@
 		 WHERE	A.USER_ID = #{userId}
 	</select>
 	
+	<update id="MODIFI_USER_DATA" parameterType="hashMap">
+		UPDATE	JR_DB.EMP
+		   SET	USER_DEPARTMENT = #{userDept},
+		   		USER_RIGHT = ${userRight},
+		   		USER_GROUP = #{userGroup},
+		   		USER_TEL = #{userTel},
+		   		USER_MOBILE = #{userMobile},
+		   		USER_EMAIL = #{userEmail}
+	     WHERE	USER_ID = #{userId}
+	</update>
+	
+	
+	<select id="GET_SEARCH_USER_INFO" resultType="empVO" parameterType="hashMap">
+		SELECT	A.USER_ID  
+				,A.USER_NAME
+				,A.USER_DEPARTMENT
+				,	(
+						SELECT	VAL
+						  FROM	JR_DB.COMMON
+						 WHERE	CODE = 'RG_01'
+						   AND	DETAIL_CODE = A.USER_RIGHT
+					) AS USER_RIGHT
+				,A.USER_GROUP 
+				,A.PASS_HINT 
+				,A.HINT_ANSWER 
+				,A.USER_TEL
+				,A.USER_MOBILE
+				,A.USER_AVATAR
+				,A.USER_EMAIL
+		  FROM	JR_DB.EMP	A
+		 WHERE	1=1
+		<if test="searchType == 'NAME'.toString()">
+		   AND	A.USER_NAME LIKE CONCAT('%', #{searchValue}, '%')
+ 		</if>
+ 		<if test="searchType == 'ID'.toString()">
+		   AND	A.USER_ID LIKE CONCAT('%', #{searchValue}, '%')
+ 		</if>
+	</select>
+	
 </mapper>

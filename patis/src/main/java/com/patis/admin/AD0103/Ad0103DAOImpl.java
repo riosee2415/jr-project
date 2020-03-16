@@ -1,6 +1,7 @@
 package com.patis.admin.AD0103;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -25,6 +26,16 @@ public class Ad0103DAOImpl implements I_Ad0103DAO {
 	@Override
 	public EmpVO getUserById(String userId) {
 		return sqlSession.selectOne(NAMESPACE + ".GET_ALL_USER_ID", userId);
+	}
+
+	@Override
+	public int updateUserInfo(Map<String, Object> params) {
+		return sqlSession.update(NAMESPACE + ".MODIFI_USER_DATA", params);
+	}
+
+	@Override
+	public List<EmpVO> searchUserInfo(Map<String, String> params) {
+		return sqlSession.selectList(NAMESPACE + ".GET_SEARCH_USER_INFO", params);
 	}
 
 }

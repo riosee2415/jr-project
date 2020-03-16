@@ -53,11 +53,15 @@
 	padding-left:4px;
 }
 .userList .userList__search input[type=button]{
-	background:#c7dbfe;
+	background: #6a89cc;
 	border:none;
 	cursor: pointer;
 	width:80px;
 	height:33px;
+	color : #fff;
+	border-radius: 5px;
+	font-weight: 600;
+	box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
 }
 .userList__dataList {
 	margin-top: 15px;
@@ -73,6 +77,8 @@
 
 .userList__dataList thead tr th {
 	width: 100px;
+	font-weight: 600;
+	font-size: 16px;
 }
 
 .userList__dataList tbody {
@@ -80,11 +86,12 @@
 	cursor: pointer;
 	text-align: center;
 	color: #707070;
+	font-size: 14px;
 }
 .userList__dataList tbody tr{
 	border-bottom:1px solid #dedede;
 }
-.userList__dataList tbody tr td:hover {
+.userList__dataList tbody tr:hover {
 	color: black;
 }
 
@@ -138,3 +145,25 @@
 .user_detailData_area:nth-child(10) div:nth-child(2) input{
 	width:392px;
 }
+
+.user_detailData_area:nth-child(11) {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.user_detailData_area .detailData_saveBtn {
+	margin-top : 10px;
+	background: #1e3799;
+	border:none;
+	cursor: pointer;
+	width:80px;
+	height:33px;
+	color : #fff;
+	border-radius: 5px;
+	font-weight: 600;
+	outline: none;
+	box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
+}
+

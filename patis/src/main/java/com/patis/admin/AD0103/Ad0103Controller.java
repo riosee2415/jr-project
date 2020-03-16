@@ -2,7 +2,9 @@ package com.patis.admin.AD0103;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
@@ -105,4 +108,52 @@ public class Ad0103Controller {
 
 		return "ajax/combo";
 	}
+	
+	
+	@RequestMapping(value = "/updateUserInfo.do", method = RequestMethod.GET)
+	public String updateUserInfo(@RequestParam("userId")String userId
+								,@RequestParam("userDept")String userDept
+								,@RequestParam("userGroup")String userGroup
+								,@RequestParam("userRight")String userRight
+								,@RequestParam("userTel")String userTel
+								,@RequestParam("userMobile")String userMobile
+								,@RequestParam("userEmail")String userEmail
+								,RedirectAttributes redirect) {
+		
+		Map<String, Object> params = new HashMap<String, Object>();
+		
+		params.put("userId", userId);
+		params.put("userDept", userDept);
+		params.put("userGroup", userGroup);
+		params.put("userRight", Integer.parseInt(userRight));
+		params.put("userTel", userTel);
+		params.put("userMobile", userMobile);
+		params.put("userEmail", userEmail);
+		
+		int result = ad0103Service.updateUserInfo(params);
+		
+		redirect.addAttribute("userId", userId);
+		
+		return "redirect:/getUserById.do";
+	}
+	
+
+	@RequestMapping(value = "/searchUserInfo.do", method = RequestMethod.GET)
+	public String searchUserInfo(@RequestParam("searchType")String searchType
+								,@RequestParam("searchValue")String searchValue
+								,Model model) {
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("searchType", searchType);
+		params.put("searchValue", searchValue);
+		
+		List<EmpVO> list = ad0103Service.searchUserInfo(params);
+		
+		model.addAttribute("userList", list);
+
+		return "ajax/adAllUser";
+	}
+	
+	
+	
 }

@@ -18,7 +18,9 @@
   width: 60px;
   background: #ebebeb;
 }
-
+.left-menu-sub{
+	font-size:15px;
+}
 .left-menu .left-menu-icon__box ul li {
   height: 56px;
   line-height: 57px;

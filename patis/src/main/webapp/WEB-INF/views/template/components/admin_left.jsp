@@ -34,8 +34,8 @@ pageEncoding="UTF-8"%>
         <li class="<c:if test='${param.mc eq 2 && param.sc eq 4 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.eventAlert.do', 2, 4)">행사알림</li>
         <li class="<c:if test='${param.mc eq 2 && param.sc eq 5 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.eventArchive.do', 2, 5)">행사자료</li>
         <li class="<c:if test='${param.mc eq 2 && param.sc eq 6 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.release.do', 2, 6)">보도자료</li>
-        <li class="<c:if test='${param.mc eq 2 && param.sc eq 7 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.yardOffice.do', 2, 7)">구청[사진 및 영상자료]</li>
-        <li class="<c:if test='${param.mc eq 2 && param.sc eq 8 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.yardSupport.do', 2, 8)">현장지원센터[사진 및 영상자료]</li>
+        <li class="<c:if test='${param.mc eq 2 && param.sc eq 7 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.yardOffice.do', 2, 7)">구청[알림마당]</li>
+        <li class="<c:if test='${param.mc eq 2 && param.sc eq 8 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.yardSupport.do', 2, 8)">현장지원센터[알림마당]</li>
         <li class="<c:if test='${param.mc eq 2 && param.sc eq 9 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.hire.do', 2, 9)">채용공고</li>
         <li class="<c:if test='${param.mc eq 2 && param.sc eq 10 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.eduOffice.do', 2, 10)">구청[도시재생학교]</li>
         <li class="<c:if test='${param.mc eq 2 && param.sc eq 11 }'>active</c:if>" onclick="javascript:subMenuHandler('/admin.eduSupport.do', 2, 11)">현장지원센터[도시재생학교]</li>

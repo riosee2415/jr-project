@@ -12,12 +12,12 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 	<div class="userAdmin_aera__userList userList">
 		<!-- 검색영역 -->
 		<div class="userList__search">
-			<select class="userList__search__combo">
+			<select class="userList__search__combo" id="search-combo">
 				<option value="NAME" selected="selected">회원명</option>
 				<option value="ID">회원아이디</option>
 			</select>
-			<input class="userList__search__input" type="text" />
-			<input class="userList__search__btn" type="button" value="검색" />
+			<input class="userList__search__input" id="search-value" type="text"  onkeydown="javascript:enterDown()"/>
+			<input class="userList__search__btn"  id="user-search-btn" type="button" value="검색" onclick="javascript:searchBtnHandler()"/>
 		</div>
 		
 		<!-- 데이터영역 -->
@@ -42,6 +42,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 	<div class="userAdmin_aera__userInfo">
 		<div class="userAdmin_aera__userInfo__title">
 			<p><i class="fa fa-id-card-o" aria-hidden="true"></i>  사용자 상세정보</p>
+			<input type="hidden" id="sessionRight" value="<%=session.getAttribute("loginRight")%>" />
 		</div>
 		
 		<div class="userAdmin_aera__userInfo__data" id="userDetail-info">
@@ -49,5 +50,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 		</div>
 	</div>
 </div>
+
+
 
 <script src="/assets/js/admin/AD0103.js"></script>
