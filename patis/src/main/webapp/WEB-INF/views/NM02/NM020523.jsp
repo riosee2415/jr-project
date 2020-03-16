@@ -13,7 +13,7 @@ pageEncoding="UTF-8"%>
         <ul id="nm23-select-js">
           <li class="active">2018</li>
           <li>2019</li>
-          <li>2020</li>
+          <!-- <li>2020</li> -->
         </ul>
       </div>
 
@@ -585,7 +585,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="nm23-imgtable-des">
               <li>
-                &#91;찾아가는 주민설명회 리플렛&#92;
+                [찾아가는 주민설명회 리플렛]
               </li>
             </ul>
             <table class="nm23-table-style4">
@@ -982,6 +982,104 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
       </div>
+
+      <!-- 도시재생학교(2020) -->
+      <!-- <div class="nm23-content nm23-content-1">
+        <h3 class="nm23-title-style-01">
+          도시재생학교 &#40;2020&#41;
+        </h3>
+        <div class="nm23-list-content">
+          <h3 class="nm23-list-title">▪&nbsp;목적</h3>
+          <ul class="nm23-list-style">
+            <li>
+              주민 눈높이와 지역의 특성을 고려한 수요자 중심의 맞춤형
+              도시재생학교를 추진하여 도시재생에 대한 이해 증진과 참여를
+              유도하고 도시재생 리더를 발굴하는 등 재생역량을 강화하여
+              도시재생사업을 적극 유치코자 함
+            </li>
+          </ul>
+
+          <h3 class="nm23-list-title">▪&nbsp;기대효과</h3>
+          <ul class="nm23-dotlist-style">
+            <li>
+              ·&nbsp;
+              <span>도시재생 이해 증진 및 지속적인 주민 참여 유도</span>
+            </li>
+            <li>
+              ·&nbsp;
+              <span
+                >공공지원 및 재생역량 강화를 통한 도시재생 사업 적극 유치
+              </span>
+            </li>
+            <li>
+              ·&nbsp;
+              <span>
+                주민과 소통하고 주민이 참여하는 협력적 거버넌스 구축
+              </span>
+            </li>
+            <li>
+              ·&nbsp;
+              <span>정부와 서울시의 도시재생 뉴딜사업 유치 사전 대비</span>
+            </li>
+          </ul>
+
+          <h3 class="nm23-list-title-1">
+            ▪&nbsp; <span>2018 도시재생학교</span>
+          </h3>
+          <table class="nm23-table-style">
+            <caption>
+              2018 도시재생학교
+            </caption>
+            <tr>
+              <th>교육기간</th>
+              <td colspan="2">2018. 7 ~ 2018. 12</td>
+            </tr>
+            <tr>
+              <th>교육구성</th>
+              <td colspan="2">
+                3기 구성 &#47; 총 12회 &#40;1기당 4회 운영&#41;
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="3">교육내용</th>
+              <td class="table-middle">제1기 도시재생학교</td>
+              <td>
+                <ul>
+                  <li>교육기간 2018. 7. ~ 8.</li>
+                  <li>수강인원 &#58; 총 58명</li>
+                  <li>
+                    교육내용 &#58; 도시재생일반, 법령, 사례, 사회적 경제 등
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="table-middle">제2기 도시재생 학교</td>
+              <td>
+                <ul>
+                  <li>교육기간 &#58; 2018. 11.</li>
+                  <li>수강인원 &#58; 총 35명</li>
+                  <li>
+                    교육내용 &#58; 도시재생, 마을공동체의 역할, 도시재생 이야기
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="table-middle">제3기 도시재생 학교</td>
+              <td>
+                <ul>
+                  <li>교육기간 &#58; 2018. 12.</li>
+                  <li>수강인원 &#58; 총 31명</li>
+                  <li>
+                    교육내용 &#58; 도시재생의 이해, 해외의 도시재생 사례
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div> -->
     </div>
   </div>
 </div>
