@@ -124,56 +124,56 @@ prefix="fn" %>
         <%@ include file="/WEB-INF/views/template/components/board_comment.jsp"
         %>
       </div>
+      
+     	<form
+		    action="/presentation.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(data.b_TYPE)}"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form>
+		
+		  <form
+		    action="/presentation.detail.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(data.b_TYPE)}-detail"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="rownum" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form>
+		
+		  <form
+		    action="/presentation.write.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(data.b_TYPE)}-write"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="rownum" value="${rownum}" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		    <input type="hidden" name="mode" value="MODIFY" />
+		  </form>
+		
+		  <form
+		    action="/presentation.remove.do"
+		    method="post"
+		    id="frm-${fn:toLowerCase(data.b_TYPE)}-remove"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form>
     </div>
   </div>
-
-  <form
-    action="/presentation.do"
-    method="get"
-    id="frm-${fn:toLowerCase(data.b_TYPE)}"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-  </form>
-
-  <form
-    action="/presentation.detail.do"
-    method="get"
-    id="frm-${fn:toLowerCase(data.b_TYPE)}-detail"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="b_no" />
-    <input type="hidden" name="rownum" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-  </form>
-
-  <form
-    action="/presentation.write.do"
-    method="get"
-    id="frm-${fn:toLowerCase(data.b_TYPE)}-write"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="b_no" />
-    <input type="hidden" name="rownum" value="${rownum}" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-    <input type="hidden" name="mode" value="MODIFY" />
-  </form>
-
-  <form
-    action="/presentation.remove.do"
-    method="post"
-    id="frm-${fn:toLowerCase(data.b_TYPE)}-remove"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="b_no" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-  </form>
 </div>
