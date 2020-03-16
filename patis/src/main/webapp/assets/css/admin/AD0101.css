@@ -135,7 +135,7 @@
 .ad0101-content table thead {
   font-weight: bold;
   border-bottom: 2px solid #dedede;
-  background-color: rgba(47, 132, 69, 0.9);
+  background-color: #555555;
   color: #ffffff;
 }
 
@@ -144,7 +144,7 @@
   padding: 10px 20px;
 }
 .ad0101-content table tbody tr:nth-child(2n) td {
-  background-color: rgba(47, 132, 69, 0.1);
+  background-color: #ecf0f1;
 }
 .admin__area {
   display: -webkit-box;

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.CommonVO;
 import com.patis.model.ConnectRecordVO;
 
 
@@ -25,14 +28,53 @@ import com.patis.model.ConnectRecordVO;
 @Controller
 public class Ad0102Controller {
 	
+	@Resource(name = "middlewareService")
+	private I_MiddlewareService middlewareService;
+	
 	@Resource(name = "ad0102Service")
 	private I_Ad0102Service ad0102Service;
 	
 	
 	@RequestMapping(value = "/loginReport.do", method = RequestMethod.GET)
-	public String sendScreen() {
+	public String sendScreen(@RequestParam("mc") String mc, @RequestParam("sc") String sc, HttpSession session,
+			Model model) {
 		
-		return "loginReport";
+		boolean flag = false;
+		int right = 0;
+
+		if (session.getAttribute("loginRight") == null) {
+			try {
+				List<CommonVO> menuList = middlewareService.getMenu();
+				model.addAttribute("menuList", menuList);
+				List<CommonVO> subMenuList = middlewareService.getSubMenu();
+				model.addAttribute("subMenuList", subMenuList);
+				List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+				model.addAttribute("DetailMenuList", DetailMenuList);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+
+		} else {
+			right = Integer.parseInt((String) session.getAttribute("loginRight"));
+		}
+
+		if (right == 1 || right == 2) {
+			middlewareService.printLog("관리자 또는 운영자 권한으로 로그인 되었습니다.");
+			
+			
+			
+			flag = true;
+
+		}
+
+		if (flag) {
+			return "loginReport";
+		} else {
+			return "main";
+
+		}
+		
+		
 	}
 	
 	

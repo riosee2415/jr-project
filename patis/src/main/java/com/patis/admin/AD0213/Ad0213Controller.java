@@ -64,7 +64,7 @@ public class Ad0213Controller {
 			}
 
 		} else {
-			right = (int) session.getAttribute("loginRight");
+			right = Integer.parseInt((String) session.getAttribute("loginRight"));
 		}
 
 		if (right == 1 || right == 2) {

@@ -31,7 +31,7 @@
 
 .left-menu .left-menu-icon__box ul li.active,
 .left-menu .left-menu-icon__box ul li:hover {
-  color: #f19d00;
+  color: #8e44ad;
   font-weight: 600;
   background: #fff;
 }
@@ -62,7 +62,15 @@
   cursor: pointer;
 }
 
-.left-menu .lefe-menu-list__area .left-menu-sub li.active,
+
 .left-menu .lefe-menu-list__area .left-menu-sub li:hover {
-  color: #f19d00;
+  color: #8e44ad;
 }
+
+.left-menu .lefe-menu-list__area .left-menu-sub li.active{
+	font-weight: 600;
+	color : #8e44ad;
+	text-shadow: 2px 2px 10px #95a5a6;
+}
+
+
