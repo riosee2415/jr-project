@@ -169,6 +169,14 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021038.jsp"/>
     </definition>
     
+    <definition name="academy.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021038_D.jsp"/>
+    </definition>
+    
+    <definition name="academy.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021038_W.jsp"/>
+    </definition>
+    
     <definition name="presentation" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021039.jsp"/>
     </definition> 
@@ -179,7 +187,7 @@
     
     <definition name="presentation.write" extends="subBannerLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021039_W.jsp"/>
-    </definition> 
+    </definition>
     
     
 <!-- 관리자 화면 -->

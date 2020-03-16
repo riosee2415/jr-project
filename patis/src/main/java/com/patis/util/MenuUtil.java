@@ -39,10 +39,10 @@ public class MenuUtil {
 		case "EDU_SUPPORT":
 			name = "현장지원센터";
 			break;
-		case "YEAR_CALENDAR":
+		case "CALENDAR":
 			name = "교육 연간일정표";
 			break;
-		case "YEAR_CALENDAR_APPLY":
+		case "CALENDAR_APPLY":
 			name = "교육 일정등록 및 신청";
 			break;
 		case "PRESENTATION":
