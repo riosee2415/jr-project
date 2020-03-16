@@ -11,8 +11,8 @@ public class EmpVO {
 	private String USER_GROUP;
 	private String PASS_HINT;
 	private String HINT_ANSWER;
-	private int USER_TEL;
-	private int USER_MOBILE;
+	private String USER_TEL;
+	private String USER_MOBILE;
 	private String USER_AVATAR;
 	private String USER_EMAIL;
 	private String SECRET_KEY;
@@ -89,19 +89,19 @@ public class EmpVO {
 		HINT_ANSWER = hINT_ANSWER;
 	}
 
-	public int getUSER_TEL() {
+	public String getUSER_TEL() {
 		return USER_TEL;
 	}
 
-	public void setUSER_TEL(int uSER_TEL) {
+	public void setUSER_TEL(String uSER_TEL) {
 		USER_TEL = uSER_TEL;
 	}
 
-	public int getUSER_MOBILE() {
+	public String getUSER_MOBILE() {
 		return USER_MOBILE;
 	}
 
-	public void setUSER_MOBILE(int uSER_MOBILE) {
+	public void setUSER_MOBILE(String uSER_MOBILE) {
 		USER_MOBILE = uSER_MOBILE;
 	}
 

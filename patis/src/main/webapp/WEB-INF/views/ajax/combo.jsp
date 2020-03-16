@@ -6,3 +6,5 @@
 <c:forEach var="data" items="${combo }">
 	<option value="${data.DETAIL_CODE }">${data.VAL }</option>
 </c:forEach>
+
+
