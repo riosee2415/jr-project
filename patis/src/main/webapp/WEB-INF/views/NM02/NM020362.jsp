@@ -918,7 +918,7 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>사가정시장 거점시설 현황
+          <span>▪</span>사가정시장 거점시설
         </h3>
         <h3 class="nm020362-title-style-04">
           ·&nbsp;주민거점시설&#40;사가정사랑방&#41;
