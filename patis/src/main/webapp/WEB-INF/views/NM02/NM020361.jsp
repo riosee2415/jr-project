@@ -31,13 +31,13 @@ pageEncoding="UTF-8"%>
         <div class="sub-illu-img"></div>
         <div class="sub-main-title">▪중랑구 비전/목표</div>
         <div class="goal">
-          <div class="sub-goal">목표</div>
+          <div class="sub-goal">비전</div>
           <div class="sub-goal-content">
             주민이 행복한 경쟁력 있는 도시 재창조
           </div>
         </div>
         <div class="vision">
-          <div class="sub-vision">비전</div>
+          <div class="sub-vision">목표</div>
           <div class="sub-vision-content">
             일자리 창출 및 도시경쟁력 강화
             <p class="sub-vision-content-desc">
