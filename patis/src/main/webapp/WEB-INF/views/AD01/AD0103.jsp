@@ -41,7 +41,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 	
 	<div class="userAdmin_aera__userInfo">
 		<div class="userAdmin_aera__userInfo__title">
-			<p>사용자 상세정보</p>
+			<p><i class="fa fa-id-card-o" aria-hidden="true"></i>  사용자 상세정보</p>
 		</div>
 		
 		<div class="userAdmin_aera__userInfo__data" id="userDetail-info">
