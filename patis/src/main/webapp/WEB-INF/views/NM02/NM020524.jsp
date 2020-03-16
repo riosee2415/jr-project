@@ -59,31 +59,31 @@ prefix="fn" %>
           </c:if>
         </div>
       </div>
+      
+			<form
+		    action="/community.detail.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(b_type)}-detail"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="rownum" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form>
+		
+		  <form
+		    action="/community.write.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(b_type)}-write"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		    <input type="hidden" name="mode" value="WRITE" />
+		  </form>      
     </div>
   </div>
-
-  <form
-    action="/community.detail.do"
-    method="get"
-    id="frm-${fn:toLowerCase(b_type)}-detail"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="b_no" />
-    <input type="hidden" name="rownum" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-  </form>
-
-  <form
-    action="/community.write.do"
-    method="get"
-    id="frm-${fn:toLowerCase(b_type)}-write"
-  >
-    <input type="hidden" name="parent" value="${param.parent }" />
-    <input type="hidden" name="code" value="${param.code }" />
-    <input type="hidden" name="s_type" />
-    <input type="hidden" name="s_keyword" />
-    <input type="hidden" name="mode" value="WRITE" />
-  </form>
 </div>
