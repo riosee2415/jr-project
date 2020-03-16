@@ -16,7 +16,7 @@ body {
 .sub-content-wrap {
   display: none;
 }
-.sub-content-wrap:first-child {
+.sub-content-wrap.active {
   display: block;
 }
 .subHead {

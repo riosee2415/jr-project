@@ -1,5 +1,7 @@
+var CURRENT_PAGE = '.sub-content-wrap.active';
+
 function init() {
-	$('.init-input-focus').focus();
+	$('.sub-content-wrap').eq(0).addClass('active');
 }
 
 init();
