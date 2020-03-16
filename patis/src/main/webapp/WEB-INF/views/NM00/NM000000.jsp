@@ -155,15 +155,14 @@ pageEncoding="UTF-8"%>
           <a
             class="main-cooper-03"
             target="_blank"
-             href="https://uri.seoul.go.kr/surc/main.do"
-          
+            href="https://uri.seoul.go.kr/surc/main.do"
           ></a>
         </li>
         <li>
           <a
             class="main-cooper-04"
             target="_blank"
-             href="https://www.city.go.kr/index.do"
+            href="https://www.city.go.kr/index.do"
           ></a>
         </li>
         <li>
@@ -171,7 +170,6 @@ pageEncoding="UTF-8"%>
             class="main-cooper-05"
             target="_blank"
             href="http://www.law.go.kr/"
-            
           ></a>
         </li>
         <li>

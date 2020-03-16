@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-	
+pageEncoding="UTF-8"%>
+
 <footer id="footer">
   <div class="container-fluid footer_bot">
     <div class="container">
@@ -13,7 +13,8 @@
             02-2094-2150(야간,공휴일/당직실) / FAX : 02-490-4658
           </p>
           <p>
-            COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGRANG URBAN REGENERATION CENTER
+            COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGRANG URBAN REGENERATION
+            CENTER
           </p>
         </div>
         <!-- <div class="family__area" id="family-area-js">
@@ -27,7 +28,7 @@
         		<li><a href="http://www.google.com" target="_blank">관련사이트 3</a></li>
         	</ul>
         </div>
-         -->       
+         -->
       </div>
     </div>
   </div>

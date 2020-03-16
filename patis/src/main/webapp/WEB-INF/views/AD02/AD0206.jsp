@@ -6,19 +6,14 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <p>게시판 관리 > 보도자료(AD0206)</p>
 </div>
 
-
 <div class="admin__area">
- 
   <div class="board-search__area">
     <div class="board-search-type">
       <div class="search-type__box active" id="search-type-js">
         <p class="search-type-text" id="serach-type-text">제목</p>
         <i class="fa fa-caret-down" aria-hidden="true"></i>
       </div>
-      
-     
-      
-      
+
       <ul
         class="search-type__list"
         id="search-type-list-js"
@@ -33,7 +28,6 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <button id="search-btn-js" onClick="javascript:serachData()">검색</button>
 </div>
 
-
 <div class="ad02-content">
   <div
     class="ad02-table"
@@ -41,8 +35,6 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     data-mc="${param.mc }"
     data-sc="${param.sc }"
   >
-  
-  	
     <table>
       <thead>
         <tr>
@@ -74,38 +66,33 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         value="일괄삭제"
         onClick="javascript:allDelete()"
       />
-      
     </div>
   </div>
-  
-  <ul class="ad0101-paging" id="ad0101-paging">
-   
-  </ul>
-  
-  
+
+  <ul class="ad0101-paging" id="ad0101-paging"></ul>
+
   <div class="rightArea">
-  	<div class="rightArea__title"> 권한 관리 </div>
-  	<div class="rightArea__content">
-  		<div class="rightArea__content__left"> 설정 </div>
-  		<div class="rightArea__content__right" id="rightArea__content__right">
-  				
-  		</div>
-  	</div>
-  	<div class="rightArea__footer">
-  		<p>
-  			- 현재 보이는 데이터가 해당 게시판의 읽기, 쓰기 권한입니다.
-  		</p>
-  		<p>
-  			- 게시판 별 읽기, 쓰기 권한을 설정할 수 있습니다.
-  		</p>
-  		<p>
-  			- 수정은 작성자 본인만 가능하며, 삭제는 관리자모드에서만 가능합니다.
-  		</p>
-  	</div>
+    <div class="rightArea__title">권한 관리</div>
+    <div class="rightArea__content">
+      <div class="rightArea__content__left">설정</div>
+      <div
+        class="rightArea__content__right"
+        id="rightArea__content__right"
+      ></div>
+    </div>
+    <div class="rightArea__footer">
+      <p>
+        - 현재 보이는 데이터가 해당 게시판의 읽기, 쓰기 권한입니다.
+      </p>
+      <p>
+        - 게시판 별 읽기, 쓰기 권한을 설정할 수 있습니다.
+      </p>
+      <p>
+        - 수정은 작성자 본인만 가능하며, 삭제는 관리자모드에서만 가능합니다.
+      </p>
+    </div>
   </div>
-  
-  
-  
+
   <div class="modal-01">
     <div class="modal_box">
       <header class="modal-header">
@@ -125,7 +112,6 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       </div>
     </div>
   </div>
-
 </div>
 
 <script src="/assets/js/admin/AD_board_ajax.js"></script>
