@@ -81,8 +81,7 @@ pageEncoding="UTF-8"%>
       class="main-regeneration"
       onclick="javascript:pageLink('${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62')"
     >
-    <div class="main-img-rayer"></div>
-     
+      <div class="main-img-rayer"></div>
     </div>
     <div class="main-news">
       <ul>
@@ -138,14 +137,64 @@ pageEncoding="UTF-8"%>
     </div>
     <div class="main-cooper">
       <ul>
-        <li><a class="main-cooper-01" href="#"></a></li>
-        <li><a class="main-cooper-02" href="#"></a></li>
-        <li><a class="main-cooper-03" href="#"></a></li>
-        <li><a class="main-cooper-04" href="#"></a></li>
-        <li><a class="main-cooper-05" href="#"></a></li>
-        <li><a class="main-cooper-06" href="#"></a></li>
-        <li><a class="main-cooper-07" href="#"></a></li>
-        <li><a class="main-cooper-08" href="#"></a></li>
+        <li>
+          <a
+            class="main-cooper-01"
+            target="_blank"
+            href="http://www.molit.go.kr/portal.do"
+          ></a>
+        </li>
+        <li>
+          <a
+            class="main-cooper-02"
+            target="_blank"
+            href="https://www.seoul.go.kr/main/index.jsp"
+          ></a>
+        </li>
+        <li>
+          <a
+            class="main-cooper-03"
+            target="_blank"
+             href="https://uri.seoul.go.kr/surc/main.do"
+          
+          ></a>
+        </li>
+        <li>
+          <a
+            class="main-cooper-04"
+            target="_blank"
+             href="https://www.city.go.kr/index.do"
+          ></a>
+        </li>
+        <li>
+          <a
+            class="main-cooper-05"
+            target="_blank"
+            href="http://www.law.go.kr/"
+            
+          ></a>
+        </li>
+        <li>
+          <a
+            class="main-cooper-06"
+            target="_blank"
+            href="https://www.lh.or.kr/index.do"
+          ></a>
+        </li>
+        <li>
+          <a
+            class="main-cooper-07"
+            target="_blank"
+            href="https://i-sh.co.kr/main/index.do"
+          ></a>
+        </li>
+        <li>
+          <a
+            class="main-cooper-08"
+            target="_blank"
+            href="https://www.khug.or.kr/index.jsp"
+          ></a>
+        </li>
       </ul>
     </div>
 
