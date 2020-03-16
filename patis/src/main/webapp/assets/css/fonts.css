@@ -13,10 +13,10 @@
 
 @font-face {
   font-family: Seoulnamsan;
-  src: url('../fonts/Seoulnamsan/Seoulnamsan_M.eot'); 
+  src: url("../fonts/Seoulnamsan/Seoulnamsan_M.eot");
   src: /* url("../fonts/Seoulnamsan/Seoulnamsan_M.eot?#iefix")
-      format("embedded-opentype"),*/
-    url("../fonts/Seoulnamsan/Seoulnamsan_M.woff") format("woff"),
+      format("embedded-opentype"),*/ url("../fonts/Seoulnamsan/Seoulnamsan_M.woff")
+      format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_M.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -26,8 +26,8 @@
   font-family: Seoulnamsan;
   src: url("../fonts/Seoulnamsan/Seoulnamsan_B.eot");
   src:/* url("../fonts/Seoulnamsan/Seoulnamsan_B.eot?#iefix")
-      format("embedded-opentype"),*/
-    url("../fonts/Seoulnamsan/Seoulnamsan_B.woff") format("woff"),
+      format("embedded-opentype"),*/ url("../fonts/Seoulnamsan/Seoulnamsan_B.woff")
+      format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_B.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -37,8 +37,8 @@
   font-family: Seoulnamsan;
   src: url("../fonts/Seoulnamsan/Seoulnamsan_EB.eot");
   src: /*url("../fonts/Seoulnamsan/Seoulnamsan_EB.eot?#iefix")
-      format("embedded-opentype"),*/
-    url("../fonts/Seoulnamsan/Seoulnamsan_EB.woff") format("woff"),
+      format("embedded-opentype"),*/ url("../fonts/Seoulnamsan/Seoulnamsan_EB.woff")
+      format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_EB.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -48,9 +48,55 @@
   font-family: Seoulnamsan;
   src: url("../fonts/Seoulnamsan/Seoulnamsan_BL.eot");
   src: /*url("../fonts/Seoulnamsan/Seoulnamsan_BL.eot?#iefix")
-      format("embedded-opentype"),*/
-    url("../fonts/Seoulnamsan/Seoulnamsan_BL.woff") format("woff"),
+      format("embedded-opentype"),*/ url("../fonts/Seoulnamsan/Seoulnamsan_BL.woff")
+      format("woff"),
     url("../fonts/Seoulnamsan/Seoulnamsan_BL.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* NotoSans */
+@font-face {
+  font-family: NotoSans;
+  src: url("../fonts/NotoSans/NotoSans-Thin.eot");
+  src: url("../fonts/NotoSans/NotoSans-Thin.woff") format("woff"),
+    url("../fonts/NotoSans/NotoSans-Thin.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url("../fonts/NotoSans/NotoSans-Regular.eot");
+  src: url("../fonts/NotoSans/NotoSans-Regular.woff") format("woff"),
+    url("../fonts/NotoSans/NotoSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url("../fonts/NotoSans/NotoSans-Medium.eot");
+  src: url("../fonts/NotoSans/NotoSans-Medium.woff") format("woff"),
+    url("../fonts/NotoSans/NotoSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url("../fonts/NotoSans/NotoSans-Bold.eot");
+  src: url("../fonts/NotoSans/NotoSans-Bold.woff") format("woff"),
+    url("../fonts/NotoSans/NotoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url("../fonts/NotoSans/NotoSans-Black.eot");
+  src: url("../fonts/NotoSans/NotoSans-Black.woff") format("woff"),
+    url("../fonts/NotoSans/NotoSans-Black.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
