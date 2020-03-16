@@ -16,7 +16,7 @@ pageEncoding="UTF-8"%>
         <div class="nm22-content">
           서울시<br />주요 도시재생사업<br /><span>진행현황</span>
         </div>
-        <a href="" class="nm22-content-button">바로가기 &#62;&#62;</a>
+        <a href="https://uri.seoul.go.kr/surc/propProgress/businessStatusMapView.do?s_text_m=" target="_blank" class="nm22-content-button">바로가기 &#62;&#62;</a>
       </div>
     </div>
   </div>
