@@ -6,7 +6,7 @@ uri="http://java.sun.com/jsp/jstl/fmt"%>
 <fmt:formatDate value="${today}" pattern="yyyyMMddHHmmddss" var="ver" />
 
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta
