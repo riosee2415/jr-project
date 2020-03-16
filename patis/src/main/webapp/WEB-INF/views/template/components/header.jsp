@@ -7,8 +7,8 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
 
   <label for="menu_call" class="lst" onclick="javascript:stopScroll()">
-    <div class="menuicon"></div>
-    <div class="xicon"></div>
+    <span class="menuicon"></span>
+    <span class="xicon"></span>
   </label>
 </header>
 <header class="desk header">

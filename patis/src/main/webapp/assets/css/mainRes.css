@@ -295,7 +295,7 @@
   .main-container__slide li a {
     width: 360px;
     height: 230px;
-    margin: 0 atuo;
+    margin: 0 auto;
   }
   .banner {
     width: 360px;
@@ -306,7 +306,7 @@
   }
   .banner > div > div {
     width: 100%;
-    margin: 0 atuo;
+    margin: 0 auto;
     height: 154px;
   }
   .banner a {

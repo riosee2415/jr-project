@@ -129,7 +129,7 @@
 }
 
 .banner {
-  margin: 0 auto;
+  margin: 0px auto;
   width: 465px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,7 +147,7 @@
   width: 168px;
 }
 .banner > div > div:nth-child(2) {
-  margin: 0 6px;
+  margin: 0px 6px;
 }
 .up {
   margin-bottom: 5px;
@@ -351,7 +351,7 @@
 
 .main-cooper {
   width: 90%;
-  margin: 0 auto;
+  margin: 0px auto;
   overflow: hidden;
 }
 .main-cooper ul {
@@ -438,7 +438,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-justify-content: center;
-  margin: 0 6px 0 10px;
+  margin: 0px 6px 0px 10px;
 }
 .main-cooper-btn .prev {
   width: 30px;
