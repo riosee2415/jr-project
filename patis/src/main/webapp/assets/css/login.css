@@ -1,8 +1,10 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @charset "utf-8";
 
 .login-page {
   width: 100%;
-  margin: 100px 0px 200px;
+  margin: 145px 0px 200px;
 }
 .login-box {
   width: 40%;
@@ -15,7 +17,7 @@
 }
 h3.login-title {
   font-weight: bold;
-  color: #227c39;
+  color: #333971;
   font-size: 30px;
   text-align: left;
   margin-bottom: 60px;
@@ -41,6 +43,8 @@ h3.login-title {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -60,10 +64,24 @@ h3.login-title {
 }
 .login-button .login-btn {
   color: #fff;
-  background-color: #227c39;
+  background-color: #333971;
   margin-right: 10px;
 }
 .login-button .join-btn {
-  color: #227c39;
-  border: 1px solid #227c39;
+  color: #333971;
+  border: 2px solid #333971;
+}
+.topHeader .login button i,
+.topHeader .join button i {
+  -webkit-transition: -webkit-transform 600ms ease-in-out 0s;
+  transition: -webkit-transform 600ms ease-in-out 0s;
+  -o-transition: transform 600ms ease-in-out 0s;
+  transition: transform 600ms ease-in-out 0s;
+  transition: transform 600ms ease-in-out 0s,
+    -webkit-transform 600ms ease-in-out 0s;
+}
+.topHeader .login button i:hover,
+.topHeader .join button i:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }

@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @charset "utf-8";
 
 .main {
@@ -309,6 +311,11 @@
   background-size: cover;
   background-image: url("/assets/images/icons/ico_plus.png");
 }
+.main-news__title .main-plus:hover,
+.main-urbannews__title .main-plus:hover {
+  -webkit-animation: spin 0.7s ease;
+  animation: spin 0.7s ease;
+}
 .text-layer p {
   color: #ffffff;
   line-height: 1.2;
@@ -459,4 +466,24 @@
   cursor: pointer;
   background-color: transparent;
   background-image: url("/assets/images/icons/next.png");
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
 }

@@ -3,7 +3,7 @@
 .topHeader {
   top: 20px;
   position: absolute;
-  right: 10%;
+  right: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +23,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-bottom: 4px solid #c7dbfe;
 }
 
 .topHeader button {
@@ -31,9 +32,9 @@
   -webkit-border: none;
   -moz-border: none;
   -o-border: none;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
-  width: 100px;
+  width: 90px;
   height: 30px;
   text-align: center;
   line-height: 30px;
@@ -42,12 +43,10 @@
   background: transparent;
   margin-right: 10px;
 }
-.topHeader .join button {
-  background: #f18d00;
-  color: #fff;
-  border-radius: 12px;
-  box-shadow: 0px 2px 10px rgba(30, 30, 30, 0.4);
-  -webkit-box-shadow: 0px 2px 10px rgba(30, 30, 30, 0.4);
+.topHeader .join button,
+.topHeader .login button {
+  background: transparent;
+  color: #333333;
 }
 .ck {
   display: none;
@@ -323,15 +322,16 @@
 #collap_menu li {
   clear: both;
   margin: 0;
-  border-top: 1px solid #555;
-  -webkit-border-top: 1px solid #555;
-  -moz-border-top: 1px solid #555;
-  -o-border-top: 1px solid #555;
+  border-bottom: 1px solid #b6b6b6;
+  -webkit-border-bottom: 1px solid #b6b6b6;
+  -moz-border-bottom: 1px solid #b6b6b6;
+  -o-border-bottom: 1px solid #b6b6b6;
   width: 100%;
-  background-color: #e7e7e7;
+  background-color: #ffffff;
 }
 #collap_menu li a.collap-menu-main:hover {
   background-color: #227c39;
+  opacity: 90%;
   color: #ffffff;
 }
 #collap_menu li a {

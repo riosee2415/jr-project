@@ -14,18 +14,18 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 <header class="desk header">
   <div class="deskbox">
     <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
-    <!-- <div class="topHeader">
+    <div class="topHeader">
       <div class="login">
         <button type="button" onclick="javacript:pageLink('/login.do')">
-          로그인
+          <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
         </button>
       </div>
       <div class="join">
         <button type="button" onclick="javacript:pageLink('/join.do')">
-          회원가입
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
         </button>
       </div>
-    </div> -->
+    </div>
     <nav id="deskmenu">
       <ul class="menu resmenu" id="resmenu-js">
         <c:forEach var="menu" items="${menuList }">
@@ -71,7 +71,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       </li>
     </c:forEach>
   </ul>
-  <!-- <div class="topHeader">
+  <div class="topHeader">
     <div class="login">
       <button type="button" onclick="javacript:pageLink('/login.do')">
         로그인
@@ -82,5 +82,5 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         회원가입
       </button>
     </div>
-  </div> -->
+  </div>
 </nav>
