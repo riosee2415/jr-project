@@ -116,7 +116,10 @@
     margin-left: 55%;
   }
   .topHeader {
+    bottom: -64%;
     position: absolute;
+    right: 4%;
+    z-index: -1;
   }
 }
 
