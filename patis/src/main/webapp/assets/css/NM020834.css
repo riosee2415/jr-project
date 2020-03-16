@@ -62,11 +62,13 @@
   width: 100%;
   height: 414px;
   position: relative;
+ box-sizing:border-box;
 }
 
 .nm34-imgbox {
   width: 100%;
   height: 260px;
+  cursor: pointer;
 }
 
 .nm34-imgbox-con {
