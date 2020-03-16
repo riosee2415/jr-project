@@ -35,7 +35,7 @@ pageEncoding="UTF-8"%>
             <ul>
               <li>
                 <img
-                  src="/assets/images/image/nm0834-01-01.png"
+                  src="/assets/images/image/default-thumbnail.png"
                   alt="영상자료1"
                   class="nm34-imgbox"
                 />
