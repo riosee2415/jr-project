@@ -210,25 +210,25 @@
 }
 
 .resmenu li:first-child .sub li:first-child {
-  margin-left: 14%;
+  margin-left: 13%;
 }
 .resmenu li:nth-child(2) .sub li:first-child {
   margin-left: 24.5%;
 }
 .resmenu li:nth-child(3) .sub li:first-child {
-  margin-left: 38%;
+  margin-left: 37.5%;
 }
 .resmenu li:nth-child(4) .sub li:first-child {
-  margin-left: 43%;
+  margin-left: 42%;
 }
 .resmenu li:nth-child(5) .sub li:first-child {
-  margin-left: 50%;
+  margin-left: 46%;
 }
 .resmenu li:nth-child(6) .sub li:first-child {
-  margin-left: 68%;
+  margin-left: 66%;
 }
 .resmenu li:last-child .sub li:first-child {
-  margin-left: 67%;
+  margin-left: 62%;
 }
 .sub li {
   margin-right: 15px;

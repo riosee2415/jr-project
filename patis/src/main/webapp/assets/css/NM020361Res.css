@@ -143,7 +143,7 @@
   .sub-history-line,
   .sub-history-line-green {
     position: absolute;
-    width: 72%;
+    width: 60%;
     height: 5px;
     margin-top: -40px;
     z-index: -1;
