@@ -16,7 +16,7 @@
             COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGRANG URBAN REGENERATION CENTER
           </p>
         </div>
-        <div class="family__area" id="family-area-js">
+        <!-- <div class="family__area" id="family-area-js">
         	<div class="family__box">
         		<span class="family-text">관련사이트</span>
         		<i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -27,6 +27,7 @@
         		<li><a href="http://www.google.com" target="_blank">관련사이트 3</a></li>
         	</ul>
         </div>
+         -->       
       </div>
     </div>
   </div>
