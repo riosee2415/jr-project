@@ -47,4 +47,13 @@ public interface I_MiddlewareDAO {
 	 * @DESC   : 게시판별 권한 정보를 가져온다.
 	 */
 	Accept_typeVO getAcceptRight(String BOARD_TYPE) throws SQLException;
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 16.
+	 * @RETURN : List<CommonVO>
+	 * @DESC   : 콤보박스에 사용할 데이터를 가져온다.
+	 */
+	List<CommonVO> getComboData(String code) throws SQLException;
 }

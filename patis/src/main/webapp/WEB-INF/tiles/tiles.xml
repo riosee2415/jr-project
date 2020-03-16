@@ -271,6 +271,14 @@
        <put-attribute name="content" value="/WEB-INF/views/AD01/AD0102.jsp"/>
     </definition>
     
+    <definition name="useControll" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD01/AD0103.jsp"/>
+    </definition>
+    
+    
+    
+    
+    
     
 <!-- 테스트 화면 -->
     <definition name="phone1" extends="adminLayout">
@@ -288,5 +296,8 @@
     <definition name="phone4" extends="adminLayout">
        <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup4.jsp"/>
     </definition>
+    
+    
+    
     
 </tiles-definitions>

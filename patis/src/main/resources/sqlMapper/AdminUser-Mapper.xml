@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AdminUser-Mapper">
+	<select id="GET_ALL_USER" resultType="empVO">
+		SELECT	A.USER_ID  
+				,A.USER_NAME
+				,A.USER_DEPARTMENT
+				,	(
+						SELECT	VAL
+						  FROM	JR_DB.COMMON
+						 WHERE	CODE = 'RG_01'
+						   AND	DETAIL_CODE = A.USER_RIGHT
+					) AS USER_RIGHT
+				,A.USER_GROUP 
+				,A.PASS_HINT 
+				,A.HINT_ANSWER 
+				,A.USER_TEL
+				,A.USER_MOBILE
+				,A.USER_AVATAR
+				,A.USER_EMAIL
+		  FROM	JR_DB.EMP	A
+	</select>
+	
+	<select id="GET_ALL_USER_ID" parameterType="str" resultType="empVO">
+		SELECT	A.USER_ID  
+				,A.USER_NAME
+				,A.USER_DEPARTMENT
+				,	(
+						SELECT	VAL
+						  FROM	JR_DB.COMMON
+						 WHERE	CODE = 'RG_01'
+						   AND	DETAIL_CODE = A.USER_RIGHT
+					) AS USER_RIGHT
+				,A.USER_GROUP 
+				,A.PASS_HINT 
+				,A.HINT_ANSWER 
+				,A.USER_TEL
+				,A.USER_MOBILE
+				,A.USER_AVATAR
+				,A.USER_EMAIL
+		  FROM	JR_DB.EMP	A
+		 WHERE	A.USER_ID = #{userId}
+	</select>
+	
+</mapper>

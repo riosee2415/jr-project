@@ -9,6 +9,7 @@
 @import "./adminFooter.css";
 @import "./AD0101.css";
 @import "./AD0102.css";
+@import "./AD0103.css";
 @import "./ADBoard.css";
 @import "./boardDetailModal.css";
 @import "./pagination.css";
@@ -82,7 +83,7 @@ body {
 
 .admin-box .admin-box__main .admin-box__main__content {
   width: 100%;
-  min-height: 600px;
+  min-height: 730px;
   background: #fff;
 }
 

@@ -45,5 +45,14 @@
 		 ORDER	BY DETAIL_CODE ASC
 	</select>
 	
+	<select id="GET_COMBO_DATA" resultType="commonVO" parameterType="str">
+		SELECT	DETAIL_CODE,
+				VAL
+		  FROM	JR_DB.COMMON
+		 WHERE	CODE = #{code}
+		 ORDER	BY	DETAIL_CODE ASC
+	
+	</select>
+	
 	
 </mapper>

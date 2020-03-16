@@ -45,4 +45,9 @@ public class MiddlewareDAOImpl implements I_MiddlewareDAO {
 		return sqlSession.selectOne(ACCEPT_NAMESPACE + ".GET_ACCEPT_RIGHT", BOARD_TYPE);
 	}
 
+	@Override
+	public List<CommonVO> getComboData(String code) throws SQLException {
+		return sqlSession.selectList(COMMON_NAMESPACE + ".GET_COMBO_DATA", code);
+	}
+
 }

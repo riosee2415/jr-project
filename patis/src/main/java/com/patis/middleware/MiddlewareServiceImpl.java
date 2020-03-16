@@ -48,4 +48,9 @@ public class MiddlewareServiceImpl implements I_MiddlewareService {
 		return middlewareDAO.getAcceptRight(BOARD_TYPE);
 	}
 
+	@Override
+	public List<CommonVO> getComboData(String code) throws SQLException {
+		return middlewareDAO.getComboData(code);
+	}
+
 }

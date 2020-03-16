@@ -112,7 +112,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!-- CONTENT HEADER -->
 <div class="ad0101-header">
-  <p>회원관리 > 접속통계(AD0102)</p>
+  <p>회원관리 > 접속통계 관리(AD0102)</p>
 </div>
 
 <div class="stis__area">
