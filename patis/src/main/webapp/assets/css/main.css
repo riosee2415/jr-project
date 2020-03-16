@@ -247,12 +247,12 @@
 }
 .main-regeneration {
   overflow: hidden;
-  width: 436px;
-  height: 290px;
+  width: 376px;
+  height: 252px;
 }
 .main-img-rayer {
-  width: 436px;
-  height: 250px;
+  width: 376px;
+  height: 252px;
   background-image: url("/assets/images/image/main_bannerimg.png");
   background-size: contain;
   background-repeat: no-repeat;
