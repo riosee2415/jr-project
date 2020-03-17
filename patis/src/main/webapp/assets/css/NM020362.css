@@ -235,10 +235,8 @@
   -ms-flex-align: center;
   align-items: center;
   width: 20%;
-  color: #ffffff;
   font-size: 22px;
   font-weight: 500;
-  background: #2780c4;
 }
 
 .nm020362-tbl-style-01 > ul > li:nth-child(2) {
@@ -257,6 +255,11 @@
   margin-top: 10px;
   font-size: 20px;
   color: #656565;
+}
+
+.nm020362-tbl-blue > ul > li:nth-child(1) {
+  color: #fff;
+  background-color: #2780c4;
 }
 
 .nm020362-tbl-skyblue > ul > li:nth-child(1) {

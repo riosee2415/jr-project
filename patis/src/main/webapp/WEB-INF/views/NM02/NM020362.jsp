@@ -21,7 +21,7 @@ pageEncoding="UTF-8"%>
             class="nm020362-content-img-01-01"
           />
         </div>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>묵2동 전역 &#40;면적 &#58; 493.219㎡&#41;</li>
@@ -237,7 +237,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01 nm020362-tbl-styblue">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-blue">
           <ul>
             <li>사업명</li>
             <li>묵2동 어린이도서관 신축</li>
@@ -324,7 +324,7 @@ pageEncoding="UTF-8"%>
         <h4 class="nm020362-title-style-01 nm020361-title-blue">
           ▪송계원 장미길 골목정원 조성사업
         </h4>
-        <div class="nm020362-tbl-style-01 nm020361-tbl-skyblue">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-skyblue">
           <ul>
             <li>사업명</li>
             <li>문화와 예술이 살아 숨쉬는 장미문화 골목길</li>
