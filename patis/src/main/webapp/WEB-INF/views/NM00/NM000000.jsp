@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <div class="main">
   <div class="main-container">
@@ -84,49 +86,43 @@ pageEncoding="UTF-8"%>
       <div class="main-img-rayer"></div>
     </div>
     <div class="main-news">
-      <ul>
-        <li class="main-news__title">
-          <span class="title-text">최근소식</span>
-          <a href="#" class="main-plus"></a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">2020년 중랑구 도시재생 홈페이지 개설 안내</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">신종 코로나바이러스감염 예방행동 수칙</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">중랑구 도시재생 현장지원센터 인력 채용 모집 공고</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">면목 38동 도시재생 마을활동가 모집 공고(~2/28)</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">서울형 뉴딜일자리 "찾아가는 복지상담사" 신청 안내</a>
-        </li>
+      <ul>	
+	        <li class="main-news__title">
+	          <span class="title-text">최근소식</span>
+	          <a href="boardListMoveHandler('${boardData01.btype}')" class="main-plus"></a>
+	        </li>
+	        <c:choose>
+	      		<c:when test="${empty boardData01.list}">
+	      			<li class="main-urbannews__content empty">조회된 데이터가 없습니다.</li>
+	      		</c:when>
+	      		<c:otherwise>
+	      			<c:forEach var="board" items="${boardData01.list}">
+	      				<li class="main-urbannews__content">
+				          <a href="boardDetailMoveHandler('${boardData01.btype}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE}</a>
+				        </li>
+	      			</c:forEach>
+	      		</c:otherwise>
+	      	</c:choose>
       </ul>
     </div>
     <div class="main-urbannews">
       <ul>
         <li class="main-urbannews__title">
           <span class="title-text">도시재생 사업 현황</span>
-          <a href="#" class="main-plus"></a>
+          <a href="boardListMoveHandler('${boardData02.btype}')" class="main-plus"></a>
         </li>
-        <li class="main-urbannews__content">
-          <a href="">중화2동 희망지사업 선정(19.12.17.)</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">면목동 중심지(면목2·상봉2동) 도시재생활성화지역 선정</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">면목3.8동 주거환경관리사업 선정 (19.05.20.)</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">전통시장 연계형 근린재생 희망지사업 선정</a>
-        </li>
-        <li class="main-urbannews__content">
-          <a href="">망우본동 희망지사업 선정 (19.05.02.)</a>
-        </li>
+        <c:choose>
+      		<c:when test="${empty boardData02.list}">
+      			<li class="main-urbannews__content empty">조회된 데이터가 없습니다.</li>
+      		</c:when>
+      		<c:otherwise>
+      			<c:forEach var="board" items="${boardData02.list}">
+      				<li class="main-urbannews__content">
+			          <a href="boardDetailMoveHandler('${boardData02.btype}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE}</a>
+			        </li>
+      			</c:forEach>
+      		</c:otherwise>
+      	</c:choose>
       </ul>
     </div>
   </div>
@@ -199,5 +195,52 @@ pageEncoding="UTF-8"%>
     <div class="main-cooper-btn">
       <div><button class="next"></button></div>
     </div>
+  </div>
+  
+  <div class="sub-content-wrap">
+  	<form
+	    action="/news.do"
+	    method="get"
+	    id="frm-${fn:toLowerCase(boardData01.btype)}"
+	  >
+	    <input type="hidden" name="parent" value="${boardData01.parent }" />
+	    <input type="hidden" name="code" value="${boardData01.code }" />
+	    <input type="hidden" name="s_type" />
+	    <input type="hidden" name="s_keyword" />
+	  </form>
+	  <form
+	    action="/news.detail.do"
+	    method="get"
+	    id="frm-${fn:toLowerCase(boardData01.btype)}-detail"
+	  >
+	    <input type="hidden" name="parent" value="${boardData01.parent }" />
+	    <input type="hidden" name="code" value="${boardData01.code }" />
+	    <input type="hidden" name="b_no" />
+	    <input type="hidden" name="rownum" />
+	    <input type="hidden" name="s_type" />
+	    <input type="hidden" name="s_keyword" />
+	  </form>
+	  <form
+	    action="/collusion.apply.do"
+	    method="get"
+	    id="frm-${fn:toLowerCase(boardData02.btype)}"
+	  >
+	    <input type="hidden" name="parent" value="${boardData02.parent }" />
+	    <input type="hidden" name="code" value="${boardData02.code }" />
+	    <input type="hidden" name="s_type" />
+	    <input type="hidden" name="s_keyword" />
+	  </form>
+	  <form
+	    action="/collusion.apply.detail.do"
+	    method="get"
+	    id="frm-${fn:toLowerCase(boardData02.btype)}-detail"
+	  >
+	    <input type="hidden" name="parent" value="${boardData02.parent }" />
+	    <input type="hidden" name="code" value="${boardData02.code }" />
+	    <input type="hidden" name="b_no" />
+	    <input type="hidden" name="rownum" />
+	    <input type="hidden" name="s_type" />
+	    <input type="hidden" name="s_keyword" />
+	  </form>
   </div>
 </div>
