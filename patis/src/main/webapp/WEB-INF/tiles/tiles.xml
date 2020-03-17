@@ -275,6 +275,9 @@
        <put-attribute name="content" value="/WEB-INF/views/AD03/AD0302.jsp"/>
     </definition>
     
+    <definition name="rejectedRight" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD01/rejectedRight.jsp"/>
+    </definition>
     
     
     
