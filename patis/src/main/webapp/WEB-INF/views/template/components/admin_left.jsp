@@ -8,7 +8,7 @@ pageEncoding="UTF-8"%>
 			<li class="<c:if test="${param.mc eq 1 || empty param.mc}">active</c:if>"><i class="fa fa-user-o" aria-hidden="true"></i></li>
 			<li class="<c:if test="${param.mc eq 2}">active</c:if>"><i class="fa fa-list" aria-hidden="true"></i></li>
 			<li class="<c:if test="${param.mc eq 3}">active</c:if>"><i class="fa fa-cog" aria-hidden="true"></i></li>
-			<li class="<c:if test="${param.mc eq 4}">active</c:if>"><i class="fa fa-user-o" aria-hidden="true"></i></li>
+			<%-- <li class="<c:if test="${param.mc eq 4}">active</c:if>"><i class="fa fa-user-o" aria-hidden="true"></i></li> --%>
 		</ul>
 	</div>
 	
@@ -49,18 +49,17 @@ pageEncoding="UTF-8"%>
 			<h3 class="left-menu-title">환경설정</h3>
 			<ul class="left-menu-sub">
         <li class="<c:if test='${param.mc eq 3 && param.sc eq 1 }'>active</c:if>" onclick="javascript:subMenuHandler('/boardManager.do', 3, 1)">게시판 별 권한 관리</li>
-        <li onclick="javascript:subMenuHandler('/main.do')">menu3-2</li>
-        <li onclick="javascript:subMenuHandler('/main.do')">menu3-3</li>
+        <li class="<c:if test='${param.mc eq 3 && param.sc eq 2 }'>active</c:if>" onclick="javascript:subMenuHandler('/popupManager.do', 3, 2)">팝업(배너) 관리</li>
       </ul>
 		</div>
-		<div class="lefe-menu-list__area <c:if test="${param.mc eq 4}">active</c:if>">
+		<%-- <div class="lefe-menu-list__area <c:if test="${param.mc eq 4}">active</c:if>">
 			<h3 class="left-menu-title">회원관리4</h3>
 			<ul class="left-menu-sub">
         <li onclick="javascript:subMenuHandler('/main.do')">menu4-1</li>
         <li onclick="javascript:subMenuHandler('/main.do')">menu4-2</li>
         <li onclick="javascript:subMenuHandler('/main.do')">menu4-3</li>
       </ul>
-		</div>
+		</div> --%>
 	</div>
 </nav>
 
