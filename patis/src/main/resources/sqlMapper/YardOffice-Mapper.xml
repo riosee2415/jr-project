@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Yard_Office-Mapper">
+
+	<select id="GET_YARD_OFFICE_LIST" resultType="boardVO" parameterType="int">
+		SELECT	*  
+			FROM	( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO, 
+							B_TITLE,
+							B_DESCRIPTION,
+							(
+								 SELECT  Z.USER_NAME
+								 FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							)	 AS B_AUTHOR,
+							B_AUTHOR AS B_AUTHOR_NO,
+							B_AUTHOR_NONE,
+							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+							B_HIT,
+							B_NOTICE,
+							B_USE_YN,
+							B_TYPE
+							FROM  JR_DB.BOARD_YARD_OFFICE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							ORDER  BY B_NOTICE ASC,
+										 B_NO ASC
+						) Z
+			ORDER	BY ROWNUM DESC
+			LIMIT	10 OFFSET ${paging}
+	</select>
+	
+	<sql id="search">
+      <if test="searchType != null and searchType != ''">
+          <if test="searchType == 't'.toString()">
+              AND B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+          </if>
+          <if test="searchType == 'd'.toString()">
+              AND B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%')
+          </if>
+          <if test="searchType == 'td'.toString()">
+              AND ( B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+               OR   B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%') )
+          </if>
+      </if>
+  </sql>
+
+	<select id="GET_YARD_OFFICE_SEARCH_LIST" resultType="boardVO" parameterType="hashMap">
+		SELECT	*  
+			FROM	( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO, 
+							B_TITLE,
+							B_DESCRIPTION,
+							(
+								 SELECT  Z.USER_NAME
+								 FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							)	 AS B_AUTHOR,
+							(
+								SELECT  Z.USER_ID
+								  FROM  JR_DB.EMP Z
+								 WHERE  B_AUTHOR = Z.USER_NO
+							) AS B_AUTHOR_ID,
+							B_AUTHOR AS B_AUTHOR_NO,
+							B_AUTHOR_NONE,
+							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+							B_HIT,
+							B_NOTICE,
+							B_USE_YN,
+							B_TYPE
+							FROM  JR_DB.BOARD_YARD_OFFICE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							<include refid="search"></include>
+							ORDER  BY B_NOTICE ASC,
+										 B_NO ASC
+						) Z
+			ORDER	BY ROWNUM DESC
+			LIMIT	10 OFFSET ${paging}
+	</select>
+	
+	<select id="GET_YARD_OFFICE_LIST_COUNT" resultType="int">
+		 SELECT  COUNT(B_NO)
+			 FROM	 JR_DB.BOARD_YARD_OFFICE
+			WHERE  B_USE_YN = 1
+	</select>
+	
+	<select id="GET_YARD_OFFICE_SEARCH_LIST_COUNT" resultType="int" parameterType="hashMap">
+		 SELECT	 COUNT(B_NO)
+		   FROM	 JR_DB.BOARD_YARD_OFFICE
+		  WHERE  B_USE_YN = 1
+		 <include refid="search"></include>
+	</select>
+	
+	<select id="GET_YARD_OFFICE_BOARD_TYPE" resultType="str">
+		 SELECT	 B_TYPE
+		   FROM	 JR_DB.BOARD_YARD_OFFICE
+		  WHERE  B_USE_YN = 1
+		    AND  B_TYPE IS NOT NULL
+		  LIMIT  1
+	</select>
+	
+	<select id="GET_YARD_OFFICE" resultType="boardVO" parameterType="int">
+		SELECT  B_NO,
+						B_TITLE,
+						B_DESCRIPTION,
+						(
+							SELECT  Z.USER_NAME
+							  FROM  JR_DB.EMP Z
+							 WHERE  B_AUTHOR = Z.USER_NO
+						) AS B_AUTHOR,
+						(
+							SELECT  Z.USER_ID
+							  FROM  JR_DB.EMP Z
+							 WHERE  B_AUTHOR = Z.USER_NO
+						) AS B_AUTHOR_ID,
+						B_AUTHOR AS B_AUTHOR_NO,
+						B_AUTHOR_NONE,
+						DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+						DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+						DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+						B_HIT,
+						B_NOTICE,
+						B_USE_YN,
+						B_TYPE
+		  FROM  JR_DB.BOARD_YARD_OFFICE
+		 WHERE  B_NO = #{b_no}
+		   AND  B_USE_YN = 1
+	</select>
+	
+	<select id="GET_PREV_YARD_OFFICE" resultType="boardVO" parameterType="hashMap">
+		SELECT  *
+		  FROM  ( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO,
+			        B_TITLE,
+			        B_TYPE
+							FROM  JR_DB.BOARD_YARD_OFFICE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							<include refid="search"></include>
+							ORDER  BY B_NOTICE ASC,
+		    					  		B_NO ASC
+						) Z
+		<![CDATA[
+		 WHERE  ROWNUM < ${rownum}
+		 ORDER  BY ROWNUM DESC
+		 LIMIT  1
+	  ]]>
+	</select>
+	
+	<select id="GET_NEXT_YARD_OFFICE" resultType="boardVO" parameterType="hashMap">
+		SELECT  *
+		  FROM  ( 
+			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+							B_NO,
+			        B_TITLE,
+			        B_TYPE
+							FROM  JR_DB.BOARD_YARD_OFFICE A,
+							( SELECT @ROWNUM:=0 ) R
+							WHERE  B_USE_YN = 1
+							<include refid="search"></include>
+							ORDER  BY B_NOTICE ASC,
+		    					  		B_NO ASC
+						) Z
+		<![CDATA[
+		 WHERE  ROWNUM > ${rownum}
+		 ORDER  BY ROWNUM ASC
+		 LIMIT  1
+	  ]]>
+	</select>
+	
+	<update id="MODIFY_YARD_OFFICE_HIT_UP" parameterType="int">
+		UPDATE  JR_DB.BOARD_YARD_OFFICE
+		   SET  B_HIT = B_HIT + 1
+		 WHERE  B_NO = #{b_no}
+	</update>
+	
+	<insert id="SET_YARD_OFFICE" parameterType="boardVO" useGeneratedKeys="true" keyProperty="B_NO">
+		INSERT INTO JR_DB.BOARD_YARD_OFFICE
+		(
+			B_TITLE,
+			B_DESCRIPTION,
+			B_AUTHOR,
+			B_AUTHOR_NONE,
+			B_CREATE_TIME,
+			B_UPLOAD_TIME,
+			B_TYPE
+		)
+		VALUES
+		(
+			#{B_TITLE},
+			#{B_DESCRIPTION},
+			${B_AUTHOR},
+			#{B_AUTHOR_NONE},
+			SYSDATE(),
+			SYSDATE(),
+			#{B_TYPE}
+		)
+	</insert>
+	
+	<update id="MODIFY_YARD_OFFICE" parameterType="boardVO">
+		UPDATE 	JR_DB.BOARD_YARD_OFFICE
+		   SET	B_TITLE = #{B_TITLE},
+		   			B_DESCRIPTION = #{B_DESCRIPTION},
+		   			B_UPLOAD_TIME = SYSDATE()
+		 WHERE	B_NO = #{B_NO}
+	</update>
+	
+	<update id="REMOVE_YARD_OFFICE" parameterType="int">
+		UPDATE 	JR_DB.BOARD_YARD_OFFICE
+		   SET	B_USE_YN = 0,
+		   			B_DELETE_TIME = SYSDATE()
+		 WHERE	B_NO = #{b_no}
+	</update>
+	
+</mapper>
