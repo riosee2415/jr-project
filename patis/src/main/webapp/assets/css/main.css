@@ -72,7 +72,7 @@
 }
 
 .btn_box {
-  width: 200px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,22 +82,24 @@
   flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  background-color:#0b0b0b;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  margin-top:-41px;
 }
 
+.btn_box li{
+	background-color:rgba(0,0,0,0.5);
+	border:0.5px solid #ffffff;
+}
 .left-btn {
   width: 20px;
   height: 20px;
   border: none;
   outline: none;
-  margin: 8px;
+  margin: 10px;
   background-size: cover;
   background-color: transparent;
   background-image: url("/assets/images/icons/left-btn.png");
-  margin: 10px 5px;
-  background-color: transparent;
   cursor: pointer;
 }
 .right-btn {
@@ -105,12 +107,10 @@
   height: 20px;
   border: none;
   outline: none;
-  margin: 8px;
+  margin: 10px;
   background-size: cover;
   background-color: transparent;
   background-image: url("/assets/images/icons/right-btn.png");
-  margin: 10px 5px;
-  background-color: transparent;
   cursor: pointer;
 }
 .pause {
@@ -118,7 +118,7 @@
   height: 20px;
   border: none;
   outline: none;
-  margin: 8px;
+  margin: 10px;
   background-size: cover;
   background-color: transparent;
   background-image: url("/assets/images/icons/ico_pause.png");
@@ -129,7 +129,7 @@
   height: 20px;
   border: none;
   outline: none;
-  margin: 8px;
+  margin: 10px;
   background-size: cover;
   background-color: transparent;
   background-image: url("/assets/images/icons/ico_play.png");

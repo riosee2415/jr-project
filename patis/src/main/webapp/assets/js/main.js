@@ -37,13 +37,6 @@ $(document).ready(function() {
 
   function slideNext() {
     if (currentSlide > totalSlide) currentSlide = 1;
-    $("#slide-btn-js .slide-button")
-      .find(".btn")
-      .removeClass("on");
-    $("#slide-btn-js .slide-button")
-      .eq(currentSlide - 1)
-      .find(".btn")
-      .addClass("on");
 
     slideSize = $("#slide-image-js li a")
       .css("width")
@@ -58,13 +51,6 @@ $(document).ready(function() {
     slidePause();
 
     currentSlide = idx + 1;
-    $("#slide-btn-js .slide-button")
-      .find(".btn")
-      .removeClass("on");
-    $("#slide-btn-js .slide-button")
-      .eq(currentSlide - 1)
-      .find(".btn")
-      .addClass("on");
 
     slideSize = $("#slide-image-js li a")
       .css("width")
