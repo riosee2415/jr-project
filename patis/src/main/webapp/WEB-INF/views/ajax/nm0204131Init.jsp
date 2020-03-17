@@ -63,10 +63,10 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       <c:choose>
         <c:when test="${board.b_NOTICE eq 1 }">
           <div
-            class="border-lsit_wrap"
+            class="border-list_wrap"
             onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}', '${board.ROWNUM}')"
           >
-            <table class="border-list__table2">
+            <!-- <table class="border-list__table2">
               <thead>
                 <tr class="row-notice">
                   <th>공지</th>
@@ -84,15 +84,27 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                   <td>${board.b_HIT }</td>
                 </tr>
               </tbody>
-            </table>
+			</table> -->
+
+            <p class="border-notice">공지</p>
+            <h3 class="border-list_title">${board.b_TITLE }</h3>
+            <ul class="border-list_com">
+              <li>
+                <c:out
+                  value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}"
+                />
+              </li>
+              <li>${board.b_CREATE_TIME }</li>
+              <li>${board.b_HIT }</li>
+            </ul>
           </div>
         </c:when>
         <c:otherwise>
           <div
-            class="border-lsit_wrap"
+            class="border-list_wrap"
             onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}', '${board.ROWNUM}')"
           >
-            <table class="border-list__table2">
+            <!-- <table class="border-list__table2">
               <thead>
                 <tr>
                   <th>${board.ROWNUM }</th>
@@ -109,7 +121,18 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                   <td>${board.b_HIT }</td>
                 </tr>
               </tbody>
-            </table>
+			</table> -->
+
+            <h3 class="border-list_title">${board.b_TITLE }</h3>
+            <ul class="border-list_com">
+              <li>
+                <c:out
+                  value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}"
+                />
+              </li>
+              <li>${board.b_CREATE_TIME }</li>
+              <li>${board.b_HIT }</li>
+            </ul>
           </div>
         </c:otherwise>
       </c:choose>
