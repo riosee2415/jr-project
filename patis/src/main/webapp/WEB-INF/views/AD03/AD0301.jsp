@@ -10,7 +10,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="manager_area">
 	
 	<div class="manager_area__title">
-		<p>title</p>
+		<p>권한 설정</p>
 	</div>
 	
 	<div class="manager_area__desc">
