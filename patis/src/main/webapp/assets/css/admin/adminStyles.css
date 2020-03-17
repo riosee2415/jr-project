@@ -16,6 +16,7 @@
 @import "./boardDetailModal.css";
 @import "./pagination.css";
 @import "./adRight.css";
+@import "./rejected.css";
 
 body {
   font-family:'Roboto', sans-serif;
