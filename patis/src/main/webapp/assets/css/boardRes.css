@@ -167,16 +167,10 @@
 
   .border-list_title {
     font-size: 18px;
-    font-weight: bold;
-    line-height: 2.5rem;
   }
 
   .border-list_com li {
     font-size: 16px;
-  }
-
-  .border-list_com li:last-child {
-    padding-right: none;
   }
 
   .board-pagination {
