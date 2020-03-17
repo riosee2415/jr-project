@@ -1,1 +1,30 @@
 @charset "UTF-8";
+
+.unauthorized {
+  position: relative;
+  width: 100%;
+}
+
+.inner_box {
+  position: absolute;
+  top: 10rem;
+  width: 95%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.fa-exclamation-circle {
+  font-size: 100px;
+  color: #faed7d;
+}
+
+.error_title {
+  color: red;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.unauthorized_title {
+  font-size: 18px;
+  line-height: 2rem;
+}
