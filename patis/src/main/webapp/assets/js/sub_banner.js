@@ -1,10 +1,5 @@
-
-
 function getBannerTitle(){
-	
-	
-	
-}
 
+}
 
 getBannerTitle();
