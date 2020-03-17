@@ -98,7 +98,7 @@
 .logo {
   display: block;
   margin-top: 1rem;
-  width: 310px;
+  width: 320px;
   height: 60px;
   margin-bottom: 18px;
   background-repeat: no-repeat;
@@ -183,7 +183,7 @@
 .resmenu li .sub a {
   text-align: left;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: normal;
 }
 .sub:before {
