@@ -107,7 +107,7 @@ pageEncoding="UTF-8"%>
           file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
         </div>
 
-        <div class="sub-main-title">
+        <div class="sub-main-title-blue">
           ▪중랑구 도시재생사업 추진계획&#40;안&#41;
         </div>
         <div class="sub-plan">
@@ -148,7 +148,7 @@ pageEncoding="UTF-8"%>
               <tr>
                 <td class="table-yellow">2</td>
                 <td class="table-yellow">
-                  <p>면목3.8동</p>
+                  <p>면목3·8동</p>
                   <p>&#40;서울형 도시재생사업&#41;</p>
                 </td>
                 <td class="table-orange">
@@ -192,12 +192,12 @@ pageEncoding="UTF-8"%>
                   <p>사가정시장</p>
                   <p>&#40;서울형 도시재생사업&#41;</p>
                 </td>
-                <td></td>
-                <td></td>
                 <td class="table-orange">
                   <p>전통시장 연계형</p>
                   <p>도시재생 시범사업 선정</p>
                 </td>
+                <td>뉴딜사업 선정</td>
+                <td></td>
                 <td class="last"></td>
               </tr>
               <tr>
@@ -226,7 +226,9 @@ pageEncoding="UTF-8"%>
             2개소
           </div>
         </div>
-        <div class="sub-main-title">▪중랑구 도시재생사업 추진연혁</div>
+        <div class="sub-main-title-blue">
+          ▪중랑구 도시재생사업 추진연혁
+        </div>
 
         <div class="sub-history">
           <div class="gray-line"></div>
@@ -253,8 +255,8 @@ pageEncoding="UTF-8"%>
             </ul>
           </div>
           <div class="sub-history__title">
-            <div class="sub-history__year">2019</div>
-            <div class="sub-history-line"></div>
+            <div class="sub-history__year-blue">2019</div>
+            <div class="sub-history-line-blue"></div>
           </div>
 
           <div class="sub-history-content">
@@ -287,7 +289,7 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
 
-        <div class="sub-main-title">
+        <div class="sub-main-title-blue">
           <p>▪중랑구 도시재생 추진 현황</p>
           <p></p>
           <p class="sub-status-title">
@@ -341,7 +343,7 @@ pageEncoding="UTF-8"%>
             </tr>
             <tr>
               <td class="table-sky">3</td>
-              <td class="table-sky bluetext">중화2촉진</td>
+              <td class="table-sky bluetext">(舊)중화2촉진</td>
               <td>140,855</td>
               <td>
                 <span class="bluetext">활성화지역 선정 </span>&#40;’19. 4. 11. -
@@ -394,8 +396,8 @@ pageEncoding="UTF-8"%>
             </tr>
             <tr>
               <td colspan="2">계</td>
-              <td class="table-orange">2,201,589</td>
-              <td class="table-orangetext table-orange">
+              <td class="table-lightGreen">2,201,589</td>
+              <td class="table-lightGreentext table-lightGreen">
                 ※중랑구 주거면적&#40;10.82㎢&#41; 대비 20% 차지
               </td>
             </tr>

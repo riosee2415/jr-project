@@ -41,6 +41,13 @@ body {
   margin-top: 70px;
   margin-bottom: 70px;
 }
+.sub-main-title-blue {
+  font-size: 28px;
+  color: #2572ba;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
 .subTitle {
   font-size: 36px;
   font-weight: bold;
@@ -92,6 +99,12 @@ caption {
 .red {
   color: red;
 }
-.darkBluetext{
-	color:#2572ba;
+.darkBluetext {
+  color: #2572ba;
+}
+.table-lightGreen {
+  background-color: #effce2;
+}
+.table-lightGreentext {
+  color: #82c63f;
 }

@@ -39,6 +39,13 @@
     margin-top: 70px;
     margin-bottom: 70px;
   }
+  .sub-main-title-blue {
+    font-size: 24px;
+    color: #2572ba;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
   .subHead {
     padding: 0;
   }
@@ -85,6 +92,13 @@
   .sub-main-title {
     font-size: 22px;
     color: #f18d00;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+   .sub-main-title-blue {
+    font-size: 22px;
+    color: #2572ba;
     font-weight: bold;
     margin-top: 70px;
     margin-bottom: 70px;

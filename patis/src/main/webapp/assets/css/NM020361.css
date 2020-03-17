@@ -229,9 +229,9 @@
   line-height: 100px;
   text-align: center;
   font-size: 30px;
-  color: #f18d00;
+  color: #82c63f;
   font-weight: bold;
-  border: 5px solid #f18d00;
+  border: 5px solid #82c63f;
   border-radius: 100%;
   background-color: #ffffff;
 }
@@ -240,7 +240,7 @@
   width: 73%;
   height: 5px;
   margin-top: -55px;
-  background-color: #f18d00;
+  background-color: #82c63f;
   margin-left: 110px;
 }
 .sub-history-content ul {
@@ -261,7 +261,6 @@
 }
 .sub-history-content ul li:first-child {
   margin: 0px 50px;
-  font-weight: bold;
 }
 .sub-history-content ul li:last-child {
   color: #363636;
@@ -273,8 +272,8 @@
   text-align: center;
   font-size: 30px;
   font-weight: bold;
-  color: #227c39;
-  border: 5px solid #227c39;
+  color: #17b4ad;
+  border: 5px solid #17b4ad;
   background-color: #ffffff;
   border-radius: 100%;
 }
@@ -283,7 +282,27 @@
   width: 73%;
   height: 5px;
   margin-top: -55px;
-  background-color: #227c39;
+  background-color: #17b4ad;
+  margin-left: 110px;
+}
+.sub-history__year-blue {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2572ba;
+  border: 5px solid #2572ba;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+.sub-history-line-blue {
+  position: absolute;
+  width: 73%;
+  height: 5px;
+  margin-top: -55px;
+  background-color: #2572ba;
   margin-left: 110px;
 }
 .sub-status-title {
@@ -336,6 +355,6 @@
   font-weight: bold;
 }
 .sub-status-table tbody tr:last-child td:first-child {
-  background-color: #f18d00;
+  background-color: #82c63f;
   color: #ffffff;
 }
