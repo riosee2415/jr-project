@@ -139,4 +139,9 @@
 		 WHERE	BOARD_TYPE = 'EVENT_ALERT'
 	</update>
 	
+	<select id="GET_ADMIN_CONTROLL_RIGHT" resultType="int">
+		SELECT	BOARD_CONTROLL_RIGHT
+		  FROM	JR_DB.ACCEPT_RIGHT
+		 WHERE	BOARD_TYPE = 'EVENT_ALERT'
+	</select>
 </mapper>

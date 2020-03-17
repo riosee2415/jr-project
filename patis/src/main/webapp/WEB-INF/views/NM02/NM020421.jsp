@@ -220,7 +220,7 @@ pageEncoding="UTF-8"%>
         <caption>
           서울형 도시재생 현황
         </caption>
-        <thead class="greentext">
+        <thead>
           <tr>
             <th>서울형유형</th>
             <th colspan="2">사업명</th>

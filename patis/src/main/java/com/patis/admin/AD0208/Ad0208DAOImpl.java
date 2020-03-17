@@ -83,4 +83,9 @@ public class Ad0208DAOImpl implements I_Ad0208DAO{
 		return sqlSession.update(NAMESPACE + ".MODIFY_RIGHT", params);
 	}
 
+	@Override
+	public int getAdminControllRight() {
+		return sqlSession.selectOne(NAMESPACE + ".GET_ADMIN_CONTROLL_RIGHT");
+	}
+
 }

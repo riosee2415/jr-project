@@ -5,7 +5,7 @@ pageEncoding="UTF-8"%>
   <div class="sub-container" id="sub-container-js">
     <div class="join-page">
       <div class="join-box">
-        <h3 class="join-title">정보입력</h3>
+        <h3 class="join-title"><span>정보</span>입력</h3>
         <div class="join-title__content">
           도시재생 포털사이트의 다양한 서비스를 이용 하실 수 있습니다.
         </div>

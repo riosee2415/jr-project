@@ -11,7 +11,9 @@ pageEncoding="UTF-8"%>
       </div>
 
       <div class="nm020362-content">
-        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <h3 class="nm020362-title-style-01 nm020361-title-green">
+          ▪종합계획도
+        </h3>
         <div class="nm020362-content-img__box">
           <img
             src="../../assets/images/image/sub-nm62-01-01.png"
@@ -19,7 +21,7 @@ pageEncoding="UTF-8"%>
             class="nm020362-content-img-01-01"
           />
         </div>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>묵2동 전역 &#40;면적 &#58; 493.219㎡&#41;</li>
@@ -200,7 +202,9 @@ pageEncoding="UTF-8"%>
         <h4 class="nm020362-title-style-03">
           ·&nbsp;&nbsp;도시재생현장지원센터
         </h4>
-        <div class="nm020362-tbl-style-01 nm020362-tbl-style-mobile">
+        <div
+          class="nm020362-tbl-style-01 nm020362-tbl-style-mobile nm020362-table-green"
+        >
           <ul>
             <li>위치</li>
             <li>묵동 240-46</li>
@@ -218,7 +222,7 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h4 class="nm020362-title-style-01">
+        <h4 class="nm020362-title-style-01 nm020361-title-blue">
           ▪묵2동 - 서울형 10분 동네 생활SOC 사업
         </h4>
         <p class="nm020362-desc-style-01">
@@ -233,7 +237,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-blue">
           <ul>
             <li>사업명</li>
             <li>묵2동 어린이도서관 신축</li>
@@ -257,8 +261,10 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h4 class="nm020362-title-style-01">▪묵2동 - 서울시 골목길 재생사업</h4>
-        <div class="nm020362-tbl-style-01">
+        <h4 class="nm020362-title-style-01 nm020361-title-blue">
+          ▪묵2동 - 서울시 골목길 재생사업
+        </h4>
+        <div class="nm020362-tbl-style-01 nm020362-tbl-skyblue">
           <ul>
             <li>사업명</li>
             <li>문화와 예술이 살아 숨쉬는 장미문화 골목길</li>
@@ -315,10 +321,10 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h4 class="nm020362-title-style-01">
+        <h4 class="nm020362-title-style-01 nm020361-title-blue">
           ▪송계원 장미길 골목정원 조성사업
         </h4>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-skyblue">
           <ul>
             <li>사업명</li>
             <li>문화와 예술이 살아 숨쉬는 장미문화 골목길</li>
@@ -441,7 +447,9 @@ pageEncoding="UTF-8"%>
       </div>
 
       <div class="nm020362-content">
-        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <h3 class="nm020362-title-style-01 nm020361-title-green">
+          ▪종합계획도
+        </h3>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-02-01.png"
@@ -450,7 +458,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>중화2동 329-38일대 &#40;면적 &#58; 140,855㎡&#41;</li>
@@ -502,7 +510,7 @@ pageEncoding="UTF-8"%>
             class="nm020362-content-img-02-02"
           />
         </div>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
             <li>
@@ -541,7 +549,7 @@ pageEncoding="UTF-8"%>
             class="nm020362-content-img-02-03"
           />
         </div>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
             <li>봉화산로4길 53, 1층 &#40;면적 : 56.95㎡ &#41;</li>
@@ -588,7 +596,7 @@ pageEncoding="UTF-8"%>
             class="nm020362-content-img-02-04"
           />
         </div>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
             <li>중랑구 중랑역로 87, 2층 &#40;면적 : 127.62㎡&#41;</li>
@@ -640,7 +648,9 @@ pageEncoding="UTF-8"%>
       </div>
 
       <div class="nm020362-content">
-        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <h3 class="nm020362-title-style-01 nm020361-title-green">
+          ▪종합계획도
+        </h3>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-03-01.png"
@@ -649,7 +659,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>면목3·8동 1075번지 일대 &#40;면적 &#58; 18,020.6 ㎡&#41;</li>
@@ -682,8 +692,10 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm020362-title-style-02">▪면목3·8동 거점시설</h3>
-        <div class="nm020362-tbl-style-01">
+        <h3 class="nm020362-title-style-02">
+          <span>▪</span>&nbsp;면목3·8동 거점시설
+        </h3>
+        <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
             <li>중랑구 용마산로334, 동남빌딩 4층</li>
@@ -727,7 +739,9 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
       <div class="nm020362-content">
-        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <h3 class="nm020362-title-style-01 nm020361-title-green">
+          ▪종합계획도
+        </h3>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-04-01.png"
@@ -736,7 +750,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>망우본동 182-34 일대 &#40;면적 &#58; 137,576㎡&#41;</li>
@@ -757,7 +771,7 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm020362-title-style-02">
+        <h3 class="nm020362-title-style-02 nm020362-table-green">
           <span>▪</span>주민공동이용시설 및 거점시설
         </h3>
         <div class="nm020362-content-img__box">
@@ -767,7 +781,7 @@ pageEncoding="UTF-8"%>
             class="nm020362-content-img-04-02"
           />
         </div>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
             <li>
@@ -804,9 +818,8 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>망우본동 주민공동이용시설 및 거점시설
+          <span>▪</span>주민거점시설(들락날락)
         </h3>
-        <div class="nm020362-title-sub">·&nbsp;주민거점시설(들락날락)</div>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-04-03.png"
@@ -814,7 +827,7 @@ pageEncoding="UTF-8"%>
             class="nm020362-content-img-04-03"
           />
         </div>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
             <li>
@@ -856,7 +869,9 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
       <div class="nm020362-content">
-        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <h3 class="nm020362-title-style-01 nm020361-title-green">
+          ▪종합계획도
+        </h3>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-05-01.png"
@@ -865,7 +880,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>면목3·8동 459-1 일대 &#40;면적 &#58; 99,706㎡&#41;</li>
@@ -923,7 +938,7 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-04">
           ·&nbsp;주민거점시설&#40;사가정사랑방&#41;
         </h3>
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
             <li>중랑구 사가정로 53길8, 2층</li>
@@ -966,14 +981,16 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
 
-    <!-- 중화2동&#40;희망지&#41; -->
+    <!-- 중화2동(희망지) -->
     <div class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
       <div class="nm020362-content">
-        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <h3 class="nm020362-title-style-01 nm020361-title-green">
+          ▪종합계획도
+        </h3>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-06-01.png"
@@ -982,7 +999,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>중화2동 일대 &#40;면적 &#58; 03.98㎢&#41;</li>
@@ -1024,7 +1041,9 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
       <div class="nm020362-content">
-        <h3 class="nm020362-title-style-01">▪종합계획도</h3>
+        <h3 class="nm020362-title-style-01 nm020361-title-green">
+          ▪종합계획도
+        </h3>
         <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-07-01.png"
@@ -1033,7 +1052,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>
@@ -1097,7 +1116,7 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
       <div class="nm020362-content">
-        <div class="nm020362-tbl-style-01">
+        <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
             <li>

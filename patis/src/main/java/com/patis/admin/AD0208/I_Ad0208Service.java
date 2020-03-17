@@ -93,4 +93,12 @@ public interface I_Ad0208Service {
 	 */
 	int UpdateRight(Map<String, Object> params);
 	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 17.
+	 * @RETURN : int
+	 * @DESC   : 관리자 접속 권한을 가져온다.
+	 */
+	int getAdminControllRight();
+	
 }

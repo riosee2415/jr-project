@@ -65,20 +65,20 @@ public class Ad0208Controller {
 		} else {
 			right = Integer.parseInt((String) session.getAttribute("loginRight"));
 		}
+		
+		int adminRight = ad0208Service.getAdminControllRight();
 
-		if (right == 1 || right == 2) {
-			middlewareService.printLog("관리자 또는 운영자 권한으로 로그인 되었습니다.");
-			
-			
+		if (right <= adminRight) {
+			middlewareService.printLog("해당 게시판 관리자 자격이 충분합니다.");
 			
 			flag = true;
-
 		}
-
+		
+		
 		if (flag) {
 			return "adminYardSupport";
 		} else {
-			return "main";
+			return "redirect:/admin.do";
 
 		}
 
