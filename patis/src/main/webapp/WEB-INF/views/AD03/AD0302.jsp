@@ -7,4 +7,15 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <p>환경설정 > 팝업(배너) 관리(AD0302)</p>
 </div>
 
+<div class="popup_area">
+	<div class="popup_area__title">
+		<p>팝업 관리</p>
+	</div>
+	
+	<div class="popup_area__desc">
+		<div class="popup_area__desc__subject">1</div>
+		<div class="popup_area__desc__content">2</div>
+	</div>
+</div>
+
 <script src="/assets/js/admin/AD0302.js"></script>
