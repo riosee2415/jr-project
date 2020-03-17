@@ -267,6 +267,12 @@
        <put-attribute name="content" value="/WEB-INF/views/AD01/AD0103.jsp"/>
     </definition>
     
+    <definition name="boardManager" extends="adminLayout">
+       <put-attribute name="content" value="/WEB-INF/views/AD03/AD0301.jsp"/>
+    </definition>
+    
+    
+    
     
     
     

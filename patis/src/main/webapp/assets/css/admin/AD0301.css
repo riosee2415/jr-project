@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.manager_area {
+	display: flex;
+	flex-direction: column;
+	width: 1200px;
+	height: 500px;
+	margin : 0 auto;
+}
+
+.manager_area .manager_area__title {
+	width: 100%;
+	height: 35px;
+	background-color: #555555;
+	color : #fff;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.manager_area .manager_area__title p {
+	margin-left: 30px;
+}
+
+.manager_area .manager_area__desc{
+	display: flex;
+	flex-direction: row;
+}
+
+.manager_area .manager_area__desc .manager_area__desc__list{
+	width : 250px;
+	height : 350px;
+	background-color: green;
+}
+
+.manager_area .manager_area__desc .manager_area__desc__list ul li {
+	cursor: pointer;
+}
+
+.manager_area .manager_area__desc .manager_area__desc__list ul li:hover{
+	font-weight: 600;	
+}
+
+.manager_area .manager_area__desc .manager_area__desc__content{
+	width : 950px;
+	height : 350px;
+	background-color: blue;
+}

@@ -54,7 +54,7 @@ public class Ad0103Controller {
 			right = Integer.parseInt((String) session.getAttribute("loginRight"));
 		}
 
-		if (right == 1 || right == 2) {
+		if (right == 1 || right == 2 || right == 3) {
 			middlewareService.printLog("관리자 또는 운영자 권한으로 로그인 되었습니다.");
 			
 			

@@ -46,9 +46,9 @@ pageEncoding="UTF-8"%>
       </ul>
 		</div>
 		<div class="lefe-menu-list__area <c:if test="${param.mc eq 3}">active</c:if>">
-			<h3 class="left-menu-title">회원관리3</h3>
+			<h3 class="left-menu-title">환경설정</h3>
 			<ul class="left-menu-sub">
-        <li onclick="javascript:subMenuHandler('/main.do')">menu3-1</li>
+        <li class="<c:if test='${param.mc eq 3 && param.sc eq 1 }'>active</c:if>" onclick="javascript:subMenuHandler('/boardManager.do', 3, 1)">게시판 별 권한 관리</li>
         <li onclick="javascript:subMenuHandler('/main.do')">menu3-2</li>
         <li onclick="javascript:subMenuHandler('/main.do')">menu3-3</li>
       </ul>
