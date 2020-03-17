@@ -4,8 +4,23 @@ public class Accept_typeVO {
 	private String BOARD_TYPE;
 	private String VIEW_RIGHT;
 	private String WRITE_RIGHT;
+	private String BOARD_NAME;
+	private String BOARD_CONTROLL_RIGHT;
 	
 	
+	
+	public String getBOARD_NAME() {
+		return BOARD_NAME;
+	}
+	public void setBOARD_NAME(String bOARD_NAME) {
+		BOARD_NAME = bOARD_NAME;
+	}
+	public String getBOARD_CONTROLL_RIGHT() {
+		return BOARD_CONTROLL_RIGHT;
+	}
+	public void setBOARD_CONTROLL_RIGHT(String bOARD_CONTROLL_RIGHT) {
+		BOARD_CONTROLL_RIGHT = bOARD_CONTROLL_RIGHT;
+	}
 	public String getBOARD_TYPE() {
 		return BOARD_TYPE;
 	}
