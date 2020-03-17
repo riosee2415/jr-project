@@ -8,7 +8,7 @@ pageEncoding="UTF-8"%>
           <%@ include
           file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
         </div>
-
+        <!-- 도시재생이란 -->
         <div class="sub-main-title">▪도시재생이란?</div>
         <div class="sub1-main-content">
           <div>
@@ -100,6 +100,7 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
     </div>
+
     <div class="sub-content-wrap">
       <div class="sub2-main">
         <div class="subHead">
@@ -107,6 +108,7 @@ pageEncoding="UTF-8"%>
           file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
         </div>
 
+        <!-- 중랑구 도시재생 -->
         <div class="sub-main-title-blue">
           ▪중랑구 도시재생사업 추진계획&#40;안&#41;
         </div>
@@ -192,12 +194,12 @@ pageEncoding="UTF-8"%>
                   <p>사가정시장</p>
                   <p>&#40;서울형 도시재생사업&#41;</p>
                 </td>
+                <td></td>
+                <td></td>
                 <td class="table-orange">
                   <p>전통시장 연계형</p>
                   <p>도시재생 시범사업 선정</p>
                 </td>
-                <td>뉴딜사업 선정</td>
-                <td></td>
                 <td class="last"></td>
               </tr>
               <tr>

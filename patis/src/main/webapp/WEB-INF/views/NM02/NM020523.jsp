@@ -196,7 +196,7 @@ pageEncoding="UTF-8"%>
             ▪&nbsp;하반기 추진방향&#40;4~6기&#41;
           </h3>
           <ul class="nm23-dotlist-style">
-            <li>
+            <li class="nm23-dotlist-title-style">
               ·&nbsp;
               <span>주민 중심의 커리큘럼 집중 운영</span>
             </li>
@@ -548,7 +548,7 @@ pageEncoding="UTF-8"%>
 
             <h3 class="nm23-list-title2">▪&nbsp;기대효과</h3>
             <ul class="nm23-dotlist-style">
-              <li>
+              <li class="nm23-dotlist-title-style">
                 ·&nbsp;
                 <span>중랑구 전 지역으로 도시재생 확산 및 주민공감대 형성</span>
               </li>
@@ -563,7 +563,7 @@ pageEncoding="UTF-8"%>
               </li>
             </ul>
             <ul class="nm23-dotlist-style">
-              <li>
+              <li class="nm23-dotlist-title-style">
                 ·&nbsp;
                 <span>각 지역별 유형에 맞는 맞춤형 도시재생사업 발굴</span>
               </li>
