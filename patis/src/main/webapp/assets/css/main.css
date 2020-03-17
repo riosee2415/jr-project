@@ -72,7 +72,7 @@
 }
 
 .btn_box {
-  width: 627px;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,27 +84,33 @@
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 20px;
+  background-color:#0b0b0b;
 }
-.btn.on {
-  outline: none;
+
+.left-btn {
+  width: 20px;
+  height: 20px;
   border: none;
-  width: 50px;
-  height: 15px;
-  border-radius: 20px;
-  background-color: #f18d00;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  outline: none;
+  margin: 8px;
+  background-size: cover;
+  background-color: transparent;
+  background-image: url("/assets/images/icons/left-btn.png");
+  margin: 10px 5px;
+  background-color: transparent;
   cursor: pointer;
 }
-.btn {
+.right-btn {
+  width: 20px;
+  height: 20px;
   border: none;
   outline: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 20px;
+  margin: 8px;
+  background-size: cover;
+  background-color: transparent;
+  background-image: url("/assets/images/icons/right-btn.png");
   margin: 10px 5px;
-  background-color: #707070;
+  background-color: transparent;
   cursor: pointer;
 }
 .pause {

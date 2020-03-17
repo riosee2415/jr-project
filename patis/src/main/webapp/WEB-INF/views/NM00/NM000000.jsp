@@ -24,15 +24,12 @@ pageEncoding="UTF-8"%>
         </li>
       </ul>
       <ul class="btn_box" id="slide-btn-js">
-        <li class="slide-button"><button class="btn on"></button></li>
-        <li class="slide-button"><button class="btn"></button></li>
-        <li class="slide-button"><button class="btn"></button></li>
-        <li class="slide-button"><button class="btn"></button></li>
-        <li class="slide-button"><button class="btn"></button></li>
-        <li class="slide-control">
-          <button class="pause"></button>
-          <!-- <button class="play"></button> -->
-        </li>
+        <li class="slide-button"><button class="right-btn"></button></li>
+       
+	        <li class="slide-control">
+	          <button class="pause"></button>
+	        </li>
+        <li class="slide-button"><button class="left-btn"></button></li>
       </ul>
     </div>
     <div class="banner">
@@ -89,7 +86,7 @@ pageEncoding="UTF-8"%>
       <ul>	
 	        <li class="main-news__title">
 	          <span class="title-text">최근소식</span>
-	          <a href="boardListMoveHandler('${boardData01.btype}')" class="main-plus"></a>
+	          <a href="javascript:boardListMoveHandler('${boardData01.btype}')" class="main-plus"></a>
 	        </li>
 	        <c:choose>
 	      		<c:when test="${empty boardData01.list}">
@@ -98,7 +95,7 @@ pageEncoding="UTF-8"%>
 	      		<c:otherwise>
 	      			<c:forEach var="board" items="${boardData01.list}">
 	      				<li class="main-urbannews__content">
-				          <a href="boardDetailMoveHandler('${boardData01.btype}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE}</a>
+				          <a href="javascript:boardDetailMoveHandler('${boardData01.btype}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE}</a>
 				        </li>
 	      			</c:forEach>
 	      		</c:otherwise>
@@ -109,7 +106,7 @@ pageEncoding="UTF-8"%>
       <ul>
         <li class="main-urbannews__title">
           <span class="title-text">도시재생 사업 현황</span>
-          <a href="boardListMoveHandler('${boardData02.btype}')" class="main-plus"></a>
+          <a href="javascript:boardListMoveHandler('${boardData02.btype}')" class="main-plus"></a>
         </li>
         <c:choose>
       		<c:when test="${empty boardData02.list}">
@@ -118,7 +115,7 @@ pageEncoding="UTF-8"%>
       		<c:otherwise>
       			<c:forEach var="board" items="${boardData02.list}">
       				<li class="main-urbannews__content">
-			          <a href="boardDetailMoveHandler('${boardData02.btype}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE}</a>
+			          <a href="javascript:boardDetailMoveHandler('${boardData02.btype}', '${board.b_NO}', '${board.ROWNUM}')">${board.b_TITLE}</a>
 			        </li>
       			</c:forEach>
       		</c:otherwise>
