@@ -68,4 +68,9 @@ public class Ad0208serviceImpl implements I_Ad0208Service{
 		return ad0208DAO.UpdateRight(params);
 	}
 
+	@Override
+	public int getAdminControllRight() {
+		return ad0208DAO.getAdminControllRight();
+	}
+
 }

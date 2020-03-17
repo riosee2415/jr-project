@@ -78,7 +78,7 @@ public class Ad0201Controller {
 		if (flag) {
 			return "adminStatute";
 		} else {
-			return "redirect:/main.do";
+			return "redirect:/admin.do";
 
 		}
 
