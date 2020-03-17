@@ -22,15 +22,21 @@
   }
 
   .border-list_wrap {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px;
     width: 100%;
+    color: #4c4c4c;
     cursor: pointer;
     border-bottom: 1px solid #c2c2c2;
   }
 
   .border-list_wrap:first-child {
     border-top: 1px solid #c2c2c2;
+  }
+
+  .border-list_wrap:nth-child(2n) {
+    background-color: #f1f1f1;
   }
 
   .border-notice {
@@ -44,7 +50,7 @@
   }
 
   .border-list_title {
-    height: 40px;
+    height: 30px;
     font-size: 20px;
     font-weight: bold;
     line-height: 2rem;
@@ -55,18 +61,30 @@
     width: 100%;
     height: 20px;
     line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
   }
 
   .border-list_com li {
     font-size: 18px;
-    padding-right: 15px;
+    padding-right: 20px;
   }
 
   .border-list_com li:last-child {
     padding-right: none;
+  }
+
+  .border-list_com li i {
+    font-size: 16px;
+    color: #4c4c4c;
   }
 
   .board-pagination {
@@ -155,7 +173,6 @@
 
   .border-list_com li {
     font-size: 16px;
-    padding-right: 15px;
   }
 
   .border-list_com li:last-child {
@@ -177,13 +194,11 @@
     width: 95%;
   }
   .border-list_title {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 2.5rem;
+    font-size: 14px;
   }
 
   .border-list_com li {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .board-pagination {

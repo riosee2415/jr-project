@@ -90,12 +90,19 @@ uri="http://java.sun.com/jsp/jstl/core"%>
             <h3 class="border-list_title">${board.b_TITLE }</h3>
             <ul class="border-list_com">
               <li>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
                 <c:out
                   value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}"
                 />
               </li>
-              <li>${board.b_CREATE_TIME }</li>
-              <li>${board.b_HIT }</li>
+              <li>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                ${board.b_CREATE_TIME }</li
+              >
+              <li>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                ${board.b_HIT }</li
+              >
             </ul>
           </div>
         </c:when>
@@ -126,12 +133,19 @@ uri="http://java.sun.com/jsp/jstl/core"%>
             <h3 class="border-list_title">${board.b_TITLE }</h3>
             <ul class="border-list_com">
               <li>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
                 <c:out
                   value="${board.b_AUTHOR_NO eq 0 ? board.b_AUTHOR_NONE : board.b_AUTHOR}"
                 />
               </li>
-              <li>${board.b_CREATE_TIME }</li>
-              <li>${board.b_HIT }</li>
+              <li>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                ${board.b_CREATE_TIME }</li
+              >
+              <li>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                ${board.b_HIT }</li
+              >
             </ul>
           </div>
         </c:otherwise>
