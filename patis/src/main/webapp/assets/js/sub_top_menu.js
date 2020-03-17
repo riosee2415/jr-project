@@ -20,12 +20,15 @@ $(document).ready(function() {
 	applyTopMenuGrid();
 });
 
+$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $("#sub_top_subject-js li").eq(0).find('span').text());
+
 function _topMenuClickHandler(menuNumber, menuName) {
 	$("#sub-container-js .sub-content-wrap").removeClass('active');
 	$("#sub-container-js .sub-content-wrap").eq(menuNumber-1).addClass('active');
 	$("#sub_top_subject-js li").removeClass("active");
 	$("#sub_top_subject-js li").eq(menuNumber-1).addClass("active");
-	
+	$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + menuName);
+
 	setTitleName(menuName);
 	boardSearchInit();
 	getPageContent(1);
