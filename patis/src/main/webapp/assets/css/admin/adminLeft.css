@@ -44,7 +44,7 @@
 
 .left-menu .lefe-menu-list__area {
   display: none;
-  padding-left: 18px;
+  padding-left: 15px;
 }
 
 .lefe-menu-list__area.active {
@@ -60,7 +60,8 @@
 
 .left-menu .lefe-menu-list__area .left-menu-sub li {
   color: #545652;
-  line-height: 180%;
+  font-size: 14.5px;
+  line-height: 210%;
   cursor: pointer;
 }
 

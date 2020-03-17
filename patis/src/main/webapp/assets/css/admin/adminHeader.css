@@ -35,16 +35,19 @@
 
 .admin-box__header .header-logo__box .header-logo-text .header-link-logo {
   display: block;
-  width: 210px;
+  width: 92%;
   height: 40px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position-y: center;
   background-image: url("/assets/images/commons/ftlogo.png");
 }
 
 .admin-box__header .header-logo__box .header-logo-text .header-link-out {
   position: absolute;
+  top: 50%;
   left: 17px;
+  margin-top: -12px;
   color: #fff;
   font-size: 24px;
 }
