@@ -19,7 +19,7 @@ pageEncoding="UTF-8"%>
 
       <!-- 도시재생학교(2018) -->
       <div class="nm23-content nm23-content-1">
-        <h3 class="nm23-title-style-01">
+        <h3 class="nm23-title-style-01 darkBluetext">
           도시재생학교 &#40;2018&#41;
         </h3>
         <div class="nm23-list-content">
@@ -117,7 +117,7 @@ pageEncoding="UTF-8"%>
 
       <!-- 도시재생학교(2019) -->
       <div class="nm23-content">
-        <h3 class="nm23-title-style-01">
+        <h3 class="nm23-title-style-01 darkBluetext">
           도시재생학교 &#40;2019&#41;
         </h3>
         <div class="nm23-list-content">
@@ -159,7 +159,7 @@ pageEncoding="UTF-8"%>
             ▪&nbsp;상반기 추진방향&#40;1~3기&#41;
           </h3>
           <ul class="nm23-dotlist-style">
-            <li>
+            <li class="nm23-dotlist-title-style">
               ·&nbsp;
               <span>교육 수요자 여건을 고려한 맞춤형 프로그램 운영</span>
             </li>
@@ -176,7 +176,7 @@ pageEncoding="UTF-8"%>
           </ul>
 
           <ul class="nm23-dotlist-style">
-            <li>
+            <li class="nm23-dotlist-title-style">
               ·&nbsp;
               <span>주민 중심의 교육 프로그램 집중 운영</span>
             </li>
@@ -244,7 +244,9 @@ pageEncoding="UTF-8"%>
 
         <div class="nm23-content-2">
           <!-- 제1기 도시재생학교 -->
-          <h3 class="nm23-title4">▪&nbsp;<span>제1기 도시재생학교</span></h3>
+          <h3 class="nm23-title4 darkBluetext">
+            ▪&nbsp;<span>제1기 도시재생학교</span>
+          </h3>
           <table class="nm23-table-style3">
             <caption>
               제1기 도시재생학교
@@ -298,7 +300,9 @@ pageEncoding="UTF-8"%>
           </ul>
 
           <!-- 제2기 도시재생학교 -->
-          <h3 class="nm23-title4">▪&nbsp;<span>제2기 도시재생학교</span></h3>
+          <h3 class="nm23-title4 darkBluetext">
+            ▪&nbsp;<span>제2기 도시재생학교</span>
+          </h3>
           <table class="nm23-table-style3">
             <caption>
               제2기 도시재생학교
@@ -352,7 +356,9 @@ pageEncoding="UTF-8"%>
           </ul>
 
           <!-- 제3기 도시재생학교 -->
-          <h3 class="nm23-title4">▪&nbsp;<span>제3기 도시재생학교</span></h3>
+          <h3 class="nm23-title4 darkBluetext">
+            ▪&nbsp;<span>제3기 도시재생학교</span>
+          </h3>
           <table class="nm23-table-style3">
             <tbody>
               <tr>
@@ -403,7 +409,9 @@ pageEncoding="UTF-8"%>
           </ul>
 
           <!-- 제4기 도시재생학교 -->
-          <h3 class="nm23-title4">▪&nbsp;<span>제4기 도시재생학교</span></h3>
+          <h3 class="nm23-title4 darkBluetext">
+            ▪&nbsp;<span>제4기 도시재생학교</span>
+          </h3>
           <table class="nm23-table-style3 nm23-table-style3-01">
             <tbody>
               <tr>
@@ -431,7 +439,9 @@ pageEncoding="UTF-8"%>
           </table>
 
           <!-- 제5기 도시재생학교 -->
-          <h3 class="nm23-title4">▪&nbsp;<span>제5기 도시재생학교</span></h3>
+          <h3 class="nm23-title4 darkBluetext">
+            ▪&nbsp;<span>제5기 도시재생학교</span>
+          </h3>
           <table class="nm23-table-style3">
             <tbody>
               <tr>
@@ -482,7 +492,9 @@ pageEncoding="UTF-8"%>
           </ul>
 
           <!-- 제6기 도시재생학교 -->
-          <h3 class="nm23-title4">▪&nbsp;<span>제6기 도시재생학교</span></h3>
+          <h3 class="nm23-title4 darkBluetext">
+            ▪&nbsp;<span>제6기 도시재생학교</span>
+          </h3>
           <table class="nm23-table-style3">
             <tbody>
               <tr>
@@ -521,7 +533,7 @@ pageEncoding="UTF-8"%>
 
         <!-- 찾아가는 주민설명회(2019) -->
         <div class="nm23-content-mt">
-          <h3 class="nm23-title-style-01">
+          <h3 class="nm23-title-style-01 nm23-title-green">
             찾아가는 주민설명회 &#40;2019&#41;
           </h3>
           <div class="nm23-list-content">
@@ -529,8 +541,8 @@ pageEncoding="UTF-8"%>
             <ul class="nm23-list-style">
               <li>
                 도시재생 필요성에 대한 공론화 및 공감대를 형성하고, 주민들과의
-                지속적인 소통을 통해 <br />새로운 지역을 적극 발굴하는 등
-                도시재생 활성화 토대를 마련코자 함.
+                지속적인 소통을 통해 새로운 지역을 적극 발굴하는 등 도시재생
+                활성화 토대를 마련코자 함.
               </li>
             </ul>
 
@@ -667,7 +679,7 @@ pageEncoding="UTF-8"%>
 
         <!-- 묵2동 장미학교(2019) -->
         <div class="nm23-content-2">
-          <h3 class="nm23-title-style-01">
+          <h3 class="nm23-title-style-01 nm23-title-coral">
             묵2동 장미학교 &#40;2019&#41;
           </h3>
           <div class="nm23-list-content">

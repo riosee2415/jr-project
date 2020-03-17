@@ -51,25 +51,32 @@
   margin: 30px 0 20px;
   font-size: 30px;
   font-weight: bold;
-  color: #237d3a;
+}
+
+.nm23-title-green {
+  color: #6dba3d;
+}
+
+.nm23-title-coral {
+  color: #f9694f;
 }
 
 .nm23-list-title {
   margin: 70px 0 30px;
   font-size: 26px;
   font-weight: bold;
-  color: #f18d00;
+  color: #00a29a;
   margin-bottom: 20px;
 }
 
 .nm23-list-title-1 {
   margin: 70px 0 30px;
   font-size: 26px;
-  color: #f18d00;
+  color: #2572ba;
 }
 
 .nm23-list-title-1 span {
-  color: #585858;
+  color: #4e4e4e;
 }
 
 .nm23-list-style {
@@ -81,7 +88,6 @@
 
 .nm23-dotlist-style {
   font-size: 22px;
-  font-weight: bold;
   line-height: 2.5rem;
   padding-left: 20px;
   color: #237d3a;
@@ -89,6 +95,10 @@
 
 .nm23-dotlist-style span {
   color: #3a3a3a;
+}
+
+.nm23-dotlist-title-style {
+  font-weight: 600;
 }
 
 .nm23-barlist-style {
@@ -113,10 +123,10 @@
 
 .nm23-table-style tr th {
   width: 20%;
-  border-right: 1px solid #e5e5e5;
-  background-color: #f5f5f5;
+  background-color: #d6e9f8;
   font-size: 22px;
-  color: #f18d00;
+  font-weight: 600;
+  color: #2279bc;
   vertical-align: middle;
 }
 
@@ -153,8 +163,8 @@
   height: 80px;
   font-size: 22px;
   font-weight: bold;
-  background-color: #fff3e1;
-  border-right: 1px solid #e5e5e5;
+  color: #ffffff;
+  background-color: #00a29a;
   vertical-align: middle;
 }
 
@@ -187,7 +197,7 @@
 
 .nm23-table-style3 tr {
   height: 80px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #c5c5c5;
 }
 
 .nm23-table-style3 tr:first-child {
@@ -196,10 +206,10 @@
 
 .nm23-table-style3 tr th {
   width: 20%;
-  background-color: #f5f5f5;
-  color: #f18d00;
+  background-color: #d6e9f8;
   font-size: 22px;
   font-weight: bold;
+  color: #2572ba;
   vertical-align: middle;
 }
 
@@ -247,7 +257,6 @@
 /* 제2기 도시재생학교 */
 .nm23-title4 {
   font-size: 26px;
-  color: #f18d00;
   margin-bottom: 45px;
 }
 
@@ -287,6 +296,7 @@
   margin-top: 70px;
   margin-bottom: 30px;
   font-size: 26px;
+  font-weight: 500;
   color: #46a9c6;
 }
 
@@ -343,8 +353,8 @@
 
 .nm23-table-style4 tr th {
   width: 20%;
-  background-color: #f5f5f5;
-  color: #46a9c6;
+  background-color: #00a29a;
+  color: #ffff;
   font-size: 22px;
   font-weight: bold;
   vertical-align: middle;
@@ -434,7 +444,7 @@
 }
 
 .nm23-table-style5 tr {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #bcbcbc;
 }
 
 .nm23-table-style5 tr:first-child {
@@ -444,8 +454,7 @@
 .nm23-table-style5 tr th {
   width: 20%;
   height: 80px;
-  background-color: #f5f5f5;
-  border-right: 1px solid #e5e5e5;
+  background-color: #fce2de;
   color: #ff5454;
   font-size: 22px;
   font-weight: bold;
