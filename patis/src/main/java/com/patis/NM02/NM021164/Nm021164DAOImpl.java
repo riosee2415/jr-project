@@ -20,6 +20,11 @@ public class Nm021164DAOImpl implements I_Nm021164DAO{
 	private static final String NAMESPACE = "Collusion-Mapper";
 
 	@Override
+	public List<BoardVO> getCollusionMainList() throws SQLException {
+		return sqlSession.selectList(NAMESPACE + ".GET_COLLUSION_MAIN_LIST");
+	}
+	
+	@Override
 	public List<BoardVO> getCollusionList(int paging) throws SQLException {
 		return sqlSession.selectList(NAMESPACE + ".GET_COLLUSION_LIST", paging);
 	}

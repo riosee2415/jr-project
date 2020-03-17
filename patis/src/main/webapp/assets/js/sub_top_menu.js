@@ -18,9 +18,13 @@ $(document).ready(function() {
 		$("#sub_top_subject-js").addClass(className);
 	}
 	applyTopMenuGrid();
+	
+	if($('#sub_top_subject-js').length > 0) {
+		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $("#sub_top_subject-js li").eq(0).find('span').text());
+	} else {
+		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $('.sub_title-js').text());
+	}
 });
-
-$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $("#sub_top_subject-js li").eq(0).find('span').text());
 
 function _topMenuClickHandler(menuNumber, menuName) {
 	$("#sub-container-js .sub-content-wrap").removeClass('active');

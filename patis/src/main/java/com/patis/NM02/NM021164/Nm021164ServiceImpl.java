@@ -17,6 +17,11 @@ public class Nm021164ServiceImpl implements I_Nm021164Service{
 	private  I_Nm021164DAO nm021164DAO;
 
 	@Override
+	public List<BoardVO> getCollusionMainList() throws SQLException {
+		return nm021164DAO.getCollusionMainList();
+	}
+	
+	@Override
 	public List<BoardVO> getCollusionList(int paging) throws SQLException {
 		return nm021164DAO.getCollusionList(paging);
 	}

@@ -2,6 +2,37 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Collusion-Mapper">
 
+	<select id="GET_COLLUSION_MAIN_LIST" resultType="boardVO">
+ 	SELECT	*  
+		FROM	( 
+		  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
+						B_NO, 
+						B_TITLE,
+						B_DESCRIPTION,
+						(
+							 SELECT  Z.USER_NAME
+							 FROM  JR_DB.EMP Z
+							 WHERE  B_AUTHOR = Z.USER_NO
+						)	 AS B_AUTHOR,
+						B_AUTHOR AS B_AUTHOR_NO,
+						B_AUTHOR_NONE,
+						DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
+						DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
+						DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
+						B_HIT,
+						B_NOTICE,
+						B_USE_YN,
+						B_TYPE
+						FROM  JR_DB.BOARD_COLLUSION A,
+						( SELECT @ROWNUM:=0 ) R
+						WHERE  B_USE_YN = 1
+						  AND  B_NOTICE = 0
+						ORDER  BY B_NO ASC
+					) Z
+		ORDER	BY ROWNUM DESC
+		LIMIT	5
+	</select>
+	
 	<select id="GET_COLLUSION_LIST" resultType="boardVO" parameterType="int">
 		SELECT	*  
 			FROM	( 

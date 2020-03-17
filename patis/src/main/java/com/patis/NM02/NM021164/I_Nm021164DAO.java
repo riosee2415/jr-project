@@ -7,6 +7,14 @@ import java.util.Map;
 import com.patis.model.BoardVO;
 
 public interface I_Nm021164DAO {
+
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 17, 2020
+	 * @RETURN : List<BoardVO>
+	 * @DESC   : 공모사업 신청 게시판 목록 조회(메인)
+	 */
+	List<BoardVO> getCollusionMainList() throws SQLException;
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
