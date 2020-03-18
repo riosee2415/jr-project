@@ -79,7 +79,7 @@ public class Ad0209Controller {
 		if (flag) {
 			return "adminHire";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

@@ -78,7 +78,7 @@ public class Ad0208Controller {
 		if (flag) {
 			return "adminYardSupport";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

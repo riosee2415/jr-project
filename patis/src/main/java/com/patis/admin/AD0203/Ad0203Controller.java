@@ -78,7 +78,7 @@ public class Ad0203Controller {
 		if (flag) {
 			return "adminNotice";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

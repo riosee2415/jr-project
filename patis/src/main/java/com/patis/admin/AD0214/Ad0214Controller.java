@@ -79,7 +79,7 @@ public class Ad0214Controller {
 		if (flag) {
 			return "adminPresentation";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

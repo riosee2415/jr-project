@@ -78,7 +78,7 @@ public class Ad0206Controller {
 		if (flag) {
 			return "adminRelease";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

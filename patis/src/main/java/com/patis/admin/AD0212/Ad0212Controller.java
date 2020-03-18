@@ -79,7 +79,7 @@ public class Ad0212Controller {
 		if (flag) {
 			return "adminCalendar";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

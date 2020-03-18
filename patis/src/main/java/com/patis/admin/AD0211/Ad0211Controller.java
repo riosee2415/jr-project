@@ -79,7 +79,7 @@ public class Ad0211Controller {
 		if (flag) {
 			return "adminEduSupport";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

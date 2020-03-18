@@ -78,7 +78,7 @@ public class Ad0205Controller {
 		if (flag) {
 			return "adminEventArchive";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 

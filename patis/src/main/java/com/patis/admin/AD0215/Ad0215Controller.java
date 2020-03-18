@@ -79,7 +79,7 @@ public class Ad0215Controller {
 		if (flag) {
 			return "adminCollusion";
 		} else {
-			return "redirect:/admin.do";
+			return "rejectedRight";
 
 		}
 
