@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
           <p>[02043] 서울 중랑구 봉화산로 179 (신내동) 중랑구청 2층</p>
           <p>
             TEL : 02-2094-0114 (120다산콜센터로 연결) /
-            02-2094-2150(야간,공휴일/당직실) / FAX : 02-490-4658
+            02-2094-2150(야간,공휴일/당직실) / FAX : 02-490-4449
           </p>
           <p>
             COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGRANG URBAN REGENERATION

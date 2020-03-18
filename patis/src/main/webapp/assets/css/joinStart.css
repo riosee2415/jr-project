@@ -165,16 +165,6 @@
   margin: 0px 30px;
 }
 
-.gray_section > li > a::after {
-  content: "|";
-  color: #cccccc;
-  padding-left: 30px;
-}
-
-.gray_section > li:last-child > a::after {
-  content: "";
-}
-
 .gray_section > li > p {
   color: #666666;
   line-height: 22px;
