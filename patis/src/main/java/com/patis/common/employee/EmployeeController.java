@@ -31,6 +31,32 @@ public class EmployeeController {
 		return "common/login";
 	}
 	
+	@RequestMapping(value="/joinStart.do", method=RequestMethod.GET)
+	public String joinStart(Model model) throws Exception {
+		
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		return "common/joinStart";
+	}
+	
+	@RequestMapping(value="/agree.do", method=RequestMethod.GET)
+	public String agree(Model model) throws Exception {
+		
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		return "common/agree";
+	}
+	
 	@RequestMapping(value="/join.do", method=RequestMethod.GET)
 	public String join(Model model) throws Exception {
 		
