@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 959px) {
   .join-box {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     border-radius: 20px;
@@ -39,6 +39,9 @@
   .overlap {
     font-size: 12px;
   }
+  .agree-title {
+    font-size: 26px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -66,9 +69,10 @@
     font-size: 10px;
     padding: 0;
   }
-  .join-left li:nth-child(4),.join-left li:nth-child(7) {
-  line-height: 20px;
-  padding:10px;
+  .join-left li:nth-child(4),
+  .join-left li:nth-child(7) {
+    line-height: 20px;
+    padding: 10px;
   }
   .join-right li:nth-child(3) {
     display: -webkit-box;
@@ -129,10 +133,20 @@
   .join-left li {
     padding-left: 8px;
   }
-  .post-up{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display:flex;
-  padding:10px;
+  .post-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+  }
+  .agree-title {
+    font-size: 20px;
+  }
+  .agree-box-01-title,
+  .agree-box-01-title i {
+    font-size: 16px;
+  }
+  .agree-check {
+    font-size: 12px;
   }
 }
