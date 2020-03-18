@@ -762,4 +762,8 @@ pageEncoding="UTF-8"%>
       회원가입 가능)
     </div>
   </div>
+  <div class="join-button">
+    <button type="button" class="join-btn-01">회원가입</button>
+    <button type="button" class="join-btn-02">취소</button>
+  </div>
 </div>
