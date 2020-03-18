@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 .nm34-page-wrap {
+	position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

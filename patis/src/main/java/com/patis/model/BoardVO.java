@@ -16,7 +16,7 @@ public class BoardVO {
 	private int B_USE_YN;
 	private String B_TYPE;
 	private String B_DELETE_TIME;
-	private String B_THUMG_PATH;
+	private String B_THUMB_PATH;
 	
 	public String getROWNUM() {
 		return ROWNUM;
@@ -108,11 +108,11 @@ public class BoardVO {
 	public void setB_TYPE(String b_TYPE) {
 		B_TYPE = b_TYPE;
 	}
-	public String getB_THUMG_PATH() {
-		return B_THUMG_PATH;
+	public String getB_THUMB_PATH() {
+		return B_THUMB_PATH;
 	}
-	public void setB_THUMG_PATH(String b_THUMG_PATH) {
-		B_THUMG_PATH = b_THUMG_PATH;
+	public void setB_THUMB_PATH(String b_THUMG_PATH) {
+		B_THUMB_PATH = b_THUMG_PATH;
 	}
 	
 }

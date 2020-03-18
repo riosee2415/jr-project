@@ -22,7 +22,8 @@
 							B_HIT,
 							B_NOTICE,
 							B_USE_YN,
-							B_TYPE
+							B_TYPE,
+							B_THUMB_PATH
 							FROM  JR_DB.BOARD_YARD_OFFICE A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
@@ -30,7 +31,7 @@
 										 B_NO ASC
 						) Z
 			ORDER	BY ROWNUM DESC
-			LIMIT	10 OFFSET ${paging}
+			LIMIT	6 OFFSET ${paging}
 	</select>
 	
 	<sql id="search">
@@ -73,7 +74,8 @@
 							B_HIT,
 							B_NOTICE,
 							B_USE_YN,
-							B_TYPE
+							B_TYPE,
+							B_THUMB_PATH
 							FROM  JR_DB.BOARD_YARD_OFFICE A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
@@ -82,7 +84,7 @@
 										 B_NO ASC
 						) Z
 			ORDER	BY ROWNUM DESC
-			LIMIT	10 OFFSET ${paging}
+			LIMIT	6 OFFSET ${paging}
 	</select>
 	
 	<select id="GET_YARD_OFFICE_LIST_COUNT" resultType="int">
@@ -128,7 +130,8 @@
 						B_HIT,
 						B_NOTICE,
 						B_USE_YN,
-						B_TYPE
+						B_TYPE,
+						B_THUMB_PATH
 		  FROM  JR_DB.BOARD_YARD_OFFICE
 		 WHERE  B_NO = #{b_no}
 		   AND  B_USE_YN = 1
@@ -191,7 +194,8 @@
 			B_AUTHOR_NONE,
 			B_CREATE_TIME,
 			B_UPLOAD_TIME,
-			B_TYPE
+			B_TYPE,
+			B_THUMB_PATH
 		)
 		VALUES
 		(
@@ -201,7 +205,8 @@
 			#{B_AUTHOR_NONE},
 			SYSDATE(),
 			SYSDATE(),
-			#{B_TYPE}
+			#{B_TYPE},
+			#{B_THUMB_PATH}
 		)
 	</insert>
 	
@@ -209,6 +214,7 @@
 		UPDATE 	JR_DB.BOARD_YARD_OFFICE
 		   SET	B_TITLE = #{B_TITLE},
 		   			B_DESCRIPTION = #{B_DESCRIPTION},
+						B_THUMB_PATH = #{B_THUMB_PATH},
 		   			B_UPLOAD_TIME = SYSDATE()
 		 WHERE	B_NO = #{B_NO}
 	</update>

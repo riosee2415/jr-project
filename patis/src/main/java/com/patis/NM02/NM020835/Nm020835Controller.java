@@ -217,9 +217,15 @@ public class Nm020835Controller {
 		String url = "";
 		int boardNo = 0;
 	
-		if(b_description.indexOf(',') == 0) {
-			b_description = b_description.substring(1, b_description.length());
+		String[] tags = b_description.split("<p>");
+		b_description = "";
+		
+		for(String tag : tags) {
+			if(tag.contains("</p>")) {
+				b_description += "<p>" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
+			} 
 		}
+		
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
 		boardVO.setB_TITLE(b_title);

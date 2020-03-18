@@ -1,5 +1,8 @@
 package com.patis.NM02.NM020834;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.patis.common.file.I_FileService;
@@ -88,7 +92,7 @@ public class Nm020834Controller {
 			 					   @RequestParam(value="s_type", defaultValue="")String searchType,
 			 					   @RequestParam(value="s_keyword", defaultValue="")String searchKeyword,
 			 					   RedirectAttributes rttr) throws Exception {
-		
+
 		String btype = null;
 		
 		switch(tab) {
@@ -279,19 +283,67 @@ public class Nm020834Controller {
 										@RequestParam(value="remove_file")String removeFile,
 										@RequestParam(value="s_type", defaultValue="")String searchType,
 				 					    @RequestParam(value="s_keyword", defaultValue="")String searchKeyword,
+				 					    @RequestParam("thumbnail_file") MultipartFile multipartFile,
+				 					    HttpSession httpSession,
 										RedirectAttributes rttr) throws Exception{
 		String url = "";
 		int boardNo = 0;
 	
-		if(b_description.indexOf(',') == 0) {
-			b_description = b_description.substring(1, b_description.length());
+		String[] tags = b_description.split("<p>");
+		b_description = "";
+		
+		for(String tag : tags) {
+			if(tag.contains("</p>")) {
+				b_description += "<p>" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
+			} 
 		}
+		
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
 		boardVO.setB_TITLE(b_title);
 		boardVO.setB_DESCRIPTION(b_description);
 		boardVO.setB_AUTHOR(b_author);
 		boardVO.setB_AUTHOR_NONE(b_author_none);
+		
+		if(multipartFile != null && !(multipartFile.getOriginalFilename().equals(""))) { 
+			String originalName = multipartFile.getOriginalFilename(); 
+			String originalNameExtension = originalName.substring(originalName.lastIndexOf(".") + 1).toLowerCase();
+			
+			String defaultPath = httpSession.getServletContext().getRealPath("/"); 
+			String path = defaultPath + File.separator + "upload" + File.separator + "board" + File.separator + "thumbnails" + File.separator + ""; 
+			File file = new File(path); 
+			if(!file.exists()) { 
+				file.mkdirs(); 
+			}
+			
+			String uploadPath = "/upload/board/thumbnails/";
+			
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss"); 
+			String today= formatter.format(new Date()); 
+			String modifyName = today + "-" + UUID.randomUUID().toString().substring(20) + "." + originalNameExtension; 
+			 try {
+				 multipartFile.transferTo(new File(path + modifyName)); 
+				 boardVO.setB_THUMB_PATH(uploadPath + modifyName);
+				 System.out.println("** upload 정보 **"); 
+				 System.out.println("** path : " + path + " **"); 
+				 System.out.println("** originalName : " + originalName + " **"); 
+				 System.out.println("** modifyName : " + modifyName + " **"); 
+			 } catch (Exception e) {
+				 e.printStackTrace(); 
+				 System.out.println("이미지 파일 업로드 실패"); 
+			 }
+		} else if (mode.equals("MODIFY")){
+			BoardVO temp = null;
+			switch(tab) {
+			case 1:
+				temp = nm020834Service.getYardOffice(b_no);
+				break;
+			case 2:
+				temp = nm020834Service.getYardSupport(b_no);
+				break;
+			}
+			boardVO.setB_THUMB_PATH(temp.getB_THUMB_PATH());
+		}
 		
 		if(mode.equals("WRITE")) {
 			switch(tab) {

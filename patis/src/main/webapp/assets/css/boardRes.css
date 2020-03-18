@@ -91,7 +91,7 @@
     margin-top: 100px;
   }
 
-  .board-list__box .board-btn__box {
+  .board-btn__box {
     bottom: 80px;
   }
 }
@@ -176,10 +176,6 @@
   .board-pagination {
     margin-top: 100px;
   }
-
-  .board-list__box .board-btn__box {
-    bottom: 80px;
-  }
 }
 
 /* Extra Small devices */
@@ -197,9 +193,5 @@
 
   .board-pagination {
     margin-top: 100px;
-  }
-
-  .board-list__box .board-btn__box {
-    bottom: 80px;
   }
 }

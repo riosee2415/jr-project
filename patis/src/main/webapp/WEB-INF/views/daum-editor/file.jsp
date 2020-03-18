@@ -86,7 +86,7 @@
 				beforeSubmit: function(){ }, 
 				success: function(fileInfo) { 
 					if(fileInfo.result==-1) { 
-						alert('파일이 10MB를 초과하였습니다.'); 
+						alert('파일이 1GB를 초과하였습니다.'); 
 						return false; 
 					} else { 
 						done(fileInfo); 
@@ -135,7 +135,7 @@
 		</div>
 		<div class="body">
 			<dl class=alert>
-				<dt>&nbsp;10MB이하만 가능합니다.</dt>
+				<dt>&nbsp;10GB이하만 가능합니다.</dt>
 				<dd>
 					<form id=daumOpenEditorForm encType=multipart/form-data method=post
 						action="">

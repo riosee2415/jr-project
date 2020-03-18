@@ -92,9 +92,10 @@ function boardDetailMoveHandler(b_type, b_no, rownum, type, keyword) {
 	var s_type = isEmpty(type) ? search_type : type;
 	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
 	
+	console.log('들어옴');
 	boardHitUp(b_type, b_no);
 	b_type = b_type.toLowerCase();
-	
+	console.log(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=b_no]');
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=b_no]').val(b_no);
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=rownum]').val(rownum);
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=s_type]').val(s_type);
@@ -136,7 +137,28 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		message = '입력하신 내용으로 게시글을 변경하시겠습니까 ?';
 	}
 	if(confirm(message)) {
-		$('#tx_canvas iframe').contents().find('body').find('.txc-file').remove();
+		var files = $('#tx_canvas iframe').contents().find('body').find('.txc-file');
+		$.each(files, function(index, value) {
+			var file = value.firstChild.getAttribute('ld');
+			
+			if(!isEmpty(file)) {
+				var ext = file.slice(file.lastIndexOf('.') + 1).toLowerCase();
+				var ext_array = ['mp4', 'mpg', 'mpeg', 'mpe', 'mkv', 'mov', 'wmv', 'asf', 'asx', 'flv', 'rm', 'ts', 'tp', 'dat', '3gp', 'avi']
+				
+				var isExist = false;
+				ext_array.forEach(function(item, index, array) {
+					if(item == ext) {
+						isExist = true;
+					}
+				});
+				if(isExist) {
+					var html = '<video src="' + file + '" poster="/assets/images/image/default-thumbnail.png" controls preload="none" style="display: block; margin: 0 auto; width: 70%;"></video>';
+					$('#tx_canvas iframe').contents().find('body').find('.txc-file').parent().html(html);
+				}
+				else
+					$('#tx_canvas iframe').contents().find('body').find('.txc-file').remove();
+			}
+		});
 		Editor.save();
 	}
 }
@@ -350,6 +372,27 @@ function boardCommentRemove(co_no) {
 				console.log('error');
 			}
 		});
+	}
+}
+
+function boardThumbnailCilckHandler() {
+	$('#thumbnail-file-js').click();
+}
+
+function boardThumbnailFileHandler(obj) {
+	var fileName = document.getElementById('thumbnail-file-js').value;
+	fileName = fileName.slice(fileName.indexOf('.') + 1).toLowerCase();
+	
+	if(fileName != "jpg" && fileName != "png" &&  fileName != "gif" &&  fileName != "bmp"){
+		alert('이미지만 업로드 할 수 있습니다.');
+		return;
+	}
+	if (obj.files && obj.files[0]) {
+	   var reader = new FileReader();
+	   reader.onload = function(e) {
+	       $('#thumbnail-image-js').attr('src', e.target.result);
+	   }
+	   reader.readAsDataURL(obj.files[0]);
 	}
 }
 

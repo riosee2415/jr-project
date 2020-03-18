@@ -127,7 +127,7 @@ public class DaumEditorController {
 		
 		if(multipartFile != null && !(multipartFile.getOriginalFilename().equals(""))) { 
 			long filesize = multipartFile.getSize(); 
-			long limitFileSize = 10*1024*1024; 
+			long limitFileSize = 1000*1024*1024; 
 			if(limitFileSize < filesize){ 
 				fileInfo.put("result", -1); 
 				return fileInfo; 
@@ -143,6 +143,17 @@ public class DaumEditorController {
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss"); 
 			String today = formatter.format(new Date());
 			String originalName = multipartFile.getOriginalFilename(); 
+			String originalNameExtension = originalName.substring(originalName.lastIndexOf(".") + 1).toLowerCase();
+			
+			String[] extArray = {"mp4", "mpg", "mpeg", "mpe", "mkv", "mov", "wmv", "asf", "asx", "flv", "rm", "ts", "tp", "dat", "3gp", "avi"};
+			boolean isExist = false;
+			for(String ext : extArray) {
+				if(ext.equals(originalNameExtension)) {
+					isExist = true;
+					break;
+				}
+			}
+			
 			String modifyName = today + "-" + originalName; 
 			
 			String uploadPath = "/upload/board/files/";
@@ -162,7 +173,10 @@ public class DaumEditorController {
 			 tempFileVO.setTFILE_O_PATH(uploadPath + originalName);
 			 tempFileVO.setTFILE_V_PATH(uploadPath + modifyName);
 			 tempFileVO.setTFILE_KEY(file_key);
-			 tempFileVO.setATTACH_YN(1);
+			 if(isExist)
+				 tempFileVO.setATTACH_YN(0);
+			 else
+				 tempFileVO.setATTACH_YN(1);
 			
 			 tempFileService.setTempFile(tempFileVO);
 			

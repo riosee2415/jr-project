@@ -125,38 +125,37 @@ prefix="fn" %>
         %>
       </div>
       
-      <form
-		    action="/release.do"
-		    method="get"
-		    id="frm-${fn:toLowerCase(data.b_TYPE)}"
-		  >
+      <form action="/archive.do" method="get" id="frm-${fn:toLowerCase(data.b_TYPE)}">
 		    <input type="hidden" name="parent" value="${param.parent }" />
 		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="tab" value="${tab }"/>
 		    <input type="hidden" name="s_type" />
 		    <input type="hidden" name="s_keyword" />
 		  </form>
 		
 		  <form
-		    action="/release.detail.do"
+		    action="/archive.detail.do"
 		    method="get"
 		    id="frm-${fn:toLowerCase(data.b_TYPE)}-detail"
 		  >
 		    <input type="hidden" name="parent" value="${param.parent }" />
 		    <input type="hidden" name="code" value="${param.code }" />
 		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="tab" value="${tab }"/>
 		    <input type="hidden" name="rownum" />
 		    <input type="hidden" name="s_type" />
 		    <input type="hidden" name="s_keyword" />
 		  </form>
 		
 		  <form
-		    action="/release.write.do"
+		    action="/archive.write.do"
 		    method="get"
 		    id="frm-${fn:toLowerCase(data.b_TYPE)}-write"
 		  >
 		    <input type="hidden" name="parent" value="${param.parent }" />
 		    <input type="hidden" name="code" value="${param.code }" />
 		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="tab" value="${tab }"/>
 		    <input type="hidden" name="rownum" value="${rownum}" />
 		    <input type="hidden" name="s_type" />
 		    <input type="hidden" name="s_keyword" />
@@ -164,12 +163,13 @@ prefix="fn" %>
 		  </form>
 		
 		  <form
-		    action="/release.remove.do"
+		    action="/archive.remove.do"
 		    method="post"
 		    id="frm-${fn:toLowerCase(data.b_TYPE)}-remove"
 		  >
 		    <input type="hidden" name="parent" value="${param.parent }" />
 		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="tab" value="${tab }"/>
 		    <input type="hidden" name="b_no" />
 		    <input type="hidden" name="s_type" />
 		    <input type="hidden" name="s_keyword" />

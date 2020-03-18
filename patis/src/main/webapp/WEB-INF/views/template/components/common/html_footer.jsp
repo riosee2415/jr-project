@@ -13,14 +13,14 @@
 	<script src="/assets/js/daum_editor.js"></script>
 	<script src="/assets/js/init.js"></script>
 	<script src="/assets/js/common.js"></script>
-	<script src="./assets/js/main.js"></script>
-	<script src="./assets/js/footer.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/header.js"></script>
+	<script src="/assets/js/footer.js"></script>
 	<script src="/assets/js/sub_banner.js"></script>
 	<script src="/assets/js/sub_top_menu.js"></script>
 	<script src="/assets/js/board.js"></script>
-	<script src="./assets/js/NM000000.js"></script>
-	<script src="./assets/js/NM020523.js"></script>
-	<script src="./assets/js/header.js"></script>
+	<script src="/assets/js/NM000000.js"></script>
+	<script src="/assets/js/NM020523.js"></script>
 	
 	<script>
 		var msg = '${msg}';

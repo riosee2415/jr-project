@@ -20,7 +20,6 @@ function isEmpty(value){
 
 
 function validationInputLength(e){
-	
 	var flag = false;
 	
 	if(e.length >= 30) {
