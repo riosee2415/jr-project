@@ -29,9 +29,25 @@
        <put-attribute name="content" value=""/>
     </definition> 
 
+
+
+
     <definition name="main" extends="mainLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM00/NM000000.jsp"/>
     </definition>
+    
+    <definition name="404err" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/error/error404.jsp"/>
+    </definition>
+    
+    <definition name="500err" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/error/error500.jsp"/>
+    </definition>
+    
+    
+    
+    
+    
     
     <definition name="common/*" extends="mainLayout">
        <put-attribute name="content" value="/WEB-INF/views/common/{1}.jsp"/>
@@ -285,6 +301,7 @@
     
     
     
+    
 <!-- 테스트 화면 -->
     <definition name="phone1" extends="adminLayout">
        <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup1.jsp"/>
@@ -301,6 +318,7 @@
     <definition name="phone4" extends="adminLayout">
        <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup4.jsp"/>
     </definition>
+    
     
     
     
