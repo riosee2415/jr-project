@@ -11,7 +11,7 @@ pageEncoding="UTF-8"%>
       <i class="fa fa-outdent" aria-hidden="true"></i>
     </a>
     <a
-      href="${pageContext.request.contextPath }/admin.do"
+      href="#"
       class="header-link-logo"
     ></a>
   </h1>
