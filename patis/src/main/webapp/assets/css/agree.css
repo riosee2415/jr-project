@@ -21,6 +21,7 @@
   color: #f18d00;
 }
 .agree-box-01-content {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 26px;
   width: 100%;

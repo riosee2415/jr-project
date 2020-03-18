@@ -1,169 +1,196 @@
 @charset "UTF-8";
 
 .userAdmin_aera {
-	width: 1200px;
-	height: 550px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	margin-left: 50px;
-	margin-bottom: 50px;
+  width: 1200px;
+  height: 550px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: 50px;
+  margin-bottom: 50px;
 }
 
 .userList__dataList-area {
-	height: 500px;
-	overflow-y: scroll;
+  height: 500px;
+  overflow-y: scroll;
 }
 
 .userAdmin_aera .userAdmin_aera__userList {
-	width: 350px;
-	height: 550px;
-	margin-right: 20px;
-	padding: 10px;
+  width: 350px;
+  height: 550px;
+  margin-right: 20px;
+  padding: 10px;
 }
 
 .userAdmin_aera .userAdmin_aera__userInfo {
-	width: 570px;
-	height: 550px;
-	padding: 10px;
+  width: 570px;
+  height: 550px;
+  padding: 10px;
 }
 
 .userList .userList__search {
-	display: flex;
-	flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
-.userList .userList__search select{
-	outline:none;
-	border-right:1px solid #dedede;
-	border-top:none;
-	border-left:none;
-	border-bottom:1px solid #707070;
-	height:33px;
-	width:92px
+.userList .userList__search select {
+  outline: none;
+  border-right: 1px solid #dedede;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid #707070;
+  height: 33px;
+  width: 92px;
 }
-.userList .userList__search input{
-	outline:none;
-	border-left:none;
-	border-right:none;
-	border-top:none;
-	border-bottom:1px solid #707070;
-	height:30px;
-	width:150px;
-	padding-left:4px;
+.userList .userList__search input {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #707070;
+  height: 30px;
+  width: 150px;
+  padding-left: 4px;
 }
-.userList .userList__search input[type=button]{
-	background: #6a89cc;
-	border:none;
-	cursor: pointer;
-	width:80px;
-	height:33px;
-	color : #fff;
-	border-radius: 5px;
-	font-weight: 600;
-	box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
+.userList .userList__search input[type="button"] {
+  background: #6a89cc;
+  border: none;
+  cursor: pointer;
+  width: 80px;
+  height: 33px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  -webkit-box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
 }
 .userList__dataList {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
 .userList__dataList thead {
-	font-size: 18px;
-	line-height: 2;
-	width: 100%;
-	border-top: 3px double #c7dbfe;
-	border-bottom: 3px double #c7dbfe;
+  font-size: 18px;
+  line-height: 2;
+  width: 100%;
+  border-top: 3px double #c7dbfe;
+  border-bottom: 3px double #c7dbfe;
 }
 
 .userList__dataList thead tr th {
-	width: 100px;
-	font-weight: 600;
-	font-size: 16px;
+  width: 100px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .userList__dataList tbody {
-	line-height: 2.3;
-	cursor: pointer;
-	text-align: center;
-	color: #707070;
-	font-size: 14px;
+  line-height: 2.3;
+  cursor: pointer;
+  text-align: center;
+  color: #707070;
+  font-size: 14px;
 }
-.userList__dataList tbody tr{
-	border-bottom:1px solid #dedede;
+.userList__dataList tbody tr {
+  border-bottom: 1px solid #dedede;
 }
 .userList__dataList tbody tr:hover {
-	color: black;
+  color: black;
 }
 
 .userAdmin_aera__userInfo .userAdmin_aera__userInfo__title {
-	font-size: 18px;
-	line-height: 2;
-	width: 100%;
-	border-bottom: 3px double #c7dbfe;
+  font-size: 18px;
+  line-height: 2;
+  width: 100%;
+  border-bottom: 3px double #c7dbfe;
 }
 
 .userAdmin_aera__userInfo__data {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .user_detailData_area {
-	width: 100%;
-	line-height: 2.4;
-	display: flex;
-	flex-direction: row;
+  width: 100%;
+  line-height: 2.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .user_detailData_area div:first-child {
-	width: 150px;
-	font-size: 16px;
-	border-bottom: 1px solid #dedede;
+  width: 150px;
+  font-size: 16px;
+  border-bottom: 1px solid #dedede;
 }
 
 .user_detailData_area div:nth-child(2) {
-	padding-left: 20px;
+  padding-left: 20px;
 }
-.user_detailData_area div:nth-child(2) input{
-	outline:none;
-	width:200px;
-	height:25px;
-	padding-left:4px;
+.user_detailData_area div:nth-child(2) input {
+  outline: none;
+  width: 200px;
+  height: 25px;
+  padding-left: 4px;
 }
 
 .user_detailData_area div:nth-child(3) {
-	padding-left: 20px;
+  padding-left: 20px;
 }
 
 .user_detailData_area div:nth-child(4) {
-	padding-left: 10px;
+  padding-left: 10px;
 }
-.user_detailData_area div:nth-child(4) select{
-	width:80px;
-	height:30px;
-	outline:none;
+.user_detailData_area div:nth-child(4) select {
+  width: 80px;
+  height: 30px;
+  outline: none;
 }
 .user_detailData_area:nth-child(9) div:nth-child(2) input,
-.user_detailData_area:nth-child(10) div:nth-child(2) input{
-	width:392px;
+.user_detailData_area:nth-child(10) div:nth-child(2) input {
+  width: 392px;
 }
 
 .user_detailData_area:nth-child(11) {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .user_detailData_area .detailData_saveBtn {
-	margin-top : 10px;
-	background: #1e3799;
-	border:none;
-	cursor: pointer;
-	width:80px;
-	height:33px;
-	color : #fff;
-	border-radius: 5px;
-	font-weight: 600;
-	outline: none;
-	box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);
+  margin-top: 10px;
+  background: #1e3799;
+  border: none;
+  cursor: pointer;
+  width: 80px;
+  height: 33px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  outline: none;
+  -webkit-box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
 }
-
