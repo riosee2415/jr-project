@@ -139,6 +139,10 @@
   .board-detail__box .detail-desc__box p {
     word-break: break-all;
   }
+  
+  .board-detail__box .detail-desc__box p video {
+  	width: 100% !important;
+  }
 
   .board-detail__box .detail-desc__box img {
     width: 100%;
@@ -161,8 +165,12 @@
     width: 100px;
   }
 
+	.board-detail__box .btn__box {
+		justify-content: space-between;
+	}
+	
   .board-detail__box .btn__box button {
-    width: 100px;
+    width: 108px;
   }
 
   .border-list_title {
