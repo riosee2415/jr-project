@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.error404_wrap {
+  width: 100%;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.error404_mainTitle {
+  font-size: 100px;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  letter-spacing: 0.5rem;
+}
+
+.error404_mainTitle i {
+  color: #ffca38;
+}
+
+.error404_com_1,
+.error404_com_2,
+.error404_com_3 {
+  line-height: 2rem;
+}
+
+.error404_com_1 {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.error404_com_2,
+.error404_com_3 {
+  margin-bottom: 1.5rem;
+}
+
+.goBtn_404 {
+  outline: none;
+}
