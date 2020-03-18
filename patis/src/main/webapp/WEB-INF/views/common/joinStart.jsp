@@ -95,7 +95,13 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul class="mem_btn_com">
               <li class="btn_com">
-                <a href="" class="mem_login_btn1">14세 이상 로그인</a>
+                <a
+                  href=""
+                  onclick="window.open(this.href, '_blank', 'width=500px,height=700px,toolbars=no,scrollbars=no'); return false;"
+                  class="mem_login_btn1"
+                >
+                  14세 이상 로그인
+                </a>
               </li>
             </ul>
             <ul class="gray_section">
