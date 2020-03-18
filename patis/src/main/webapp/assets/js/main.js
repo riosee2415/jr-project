@@ -90,3 +90,7 @@ function emailSelection() {
 }
 
 
+function closeMainModal(id){	
+	$("#"+id).css("display", "none");
+}
+
