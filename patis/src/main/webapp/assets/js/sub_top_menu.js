@@ -20,9 +20,9 @@ $(document).ready(function() {
 	applyTopMenuGrid();
 	
 	if($('#sub_top_subject-js').length > 0) {
-		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $("#sub_top_subject-js li").eq(0).find('span').text());
+		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $("#sub_top_subject-js li").eq(0).find('span').text().trim());
 	} else {
-		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $('.sub_title-js').text());
+		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $('.sub_title-js').text().trim());
 	}
 });
 

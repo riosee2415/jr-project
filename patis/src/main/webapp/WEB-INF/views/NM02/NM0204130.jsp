@@ -3,7 +3,7 @@ pageEncoding="UTF-8"%>
 <div class="subpage">
   <div class="sub-container">
     <!-- 도시재생 주체별 역할 -->
-    <div class="nm63-page-wrap" style="display: block;">
+    <div class="sub-content-wrap">
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
