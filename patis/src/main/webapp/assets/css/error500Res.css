@@ -1,0 +1,26 @@
+@media screen and (max-width: 767px) {
+  .error500_mainTitle {
+    width: 100%;
+    font-size: 80px;
+  }
+
+  .error500_com_1,
+  .error500_com_3 {
+    line-height: 2rem;
+  }
+
+  .error500_com_1 {
+    font-weight: 600;
+    margin-bottom: 4rem;
+  }
+
+  .goBtn_500 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media screen and (min-width: 960px) {
+}

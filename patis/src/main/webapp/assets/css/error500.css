@@ -4,6 +4,7 @@
   width: 100%;
   text-align: center;
   padding: 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -23,7 +24,6 @@
 }
 
 .error500_com_1,
-.error500_com_2,
 .error500_com_3 {
   line-height: 2rem;
 }

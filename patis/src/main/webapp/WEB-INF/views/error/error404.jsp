@@ -8,7 +8,7 @@ pageEncoding="UTF-8"%>
         4<i class="fa fa-frown-o " aria-hidden="true"></i>4
       </h3>
       <h3 class="error404_com_1">
-        죄송합니다. 현재 찾을 수 없는 페이지를 요청하셨습니다.
+        죄송합니다.<br />현재 찾을 수 없는 페이지를 요청하셨습니다.
       </h3>
       <h3 class="error404_com_2">
         존재하지 않는 주소를 입력하셨거나,<br />
