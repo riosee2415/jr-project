@@ -12,9 +12,8 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 		<p>팝업 관리</p>
 	</div>
 	
-	<div class="popup_area__desc">
-		<div class="popup_area__desc__subject">1</div>
-		<div class="popup_area__desc__content">2</div>
+	<div class="popup_area__desc" id="popupAreaDesc">
+		
 	</div>
 </div>
 

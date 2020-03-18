@@ -14,7 +14,7 @@ public class Ad0301ServiceImpl implements I_Ad0301Service{
 	
 	@Resource(name = "ad0301DAO")
 	private I_Ad0301DAO ad0301DAO;
-
+	
 
 	@Override
 	public List<Accept_typeVO> getBoardName() {

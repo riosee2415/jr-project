@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AdminPopup-Mapper">
+	
+	<select id="GET_ALL_POPUP" resultType="popupVO">
+		SELECT 	POPUP_NAME,
+				POPUP_WIDTH,
+				POPUP_HEIGHT,
+				POPUP_PATH,
+				POPUP_DESC,
+				POPUP_USE
+		  FROM 	JR_DB.POPUP
+	</select>
+	
+	<update id="MODIFY_POPUP" parameterType="hashMap">
+		UPDATE	JR_DB.POPUP
+		   SET	POPUP_WIDTH 	= #{width},
+		   		POPUP_HEIGHT 	= #{height},
+		   		POPUP_PATH		= #{path},
+		   		POPUP_DESC		= #{desc}
+		 WHERE	POPUP_NAME 		= #{name}	
+	</update>
+	
+	<update id="MODIFY_USE" parameterType="hashMap">
+		UPDATE	JR_DB.POPUP
+			    <if test="val == '1'.toString()">
+			   		SET	POPUP_USE = '0'
+			    </if>
+			    <if test="val == '0'.toString()">
+			   		SET	POPUP_USE = '1'
+			    </if>
+		 WHERE	POPUP_NAME 	= #{name}
+	</update>
+	
+</mapper>

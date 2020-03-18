@@ -2,7 +2,7 @@
 
 .popup_area{
 	width: 1200px;
-	height: 400px;
+	height: 440px;
 	margin : 0 auto;
 }
 
@@ -20,19 +20,29 @@
 .popup_area .popup_area__desc{
 	width : 1200px;
 	display: flex;
+	flex-direction: column;	
+}
+
+.popup_area .popup_area__desc .popup_area__desc__data {
+	display: flex;
 	flex-direction: row;	
 }
 
-.popup_area .popup_area__desc .popup_area__desc__subject{
+.popup_area .popup_area__desc .popup_area__desc__data .popup_area__desc__subject{
 	width : 200px;
-	height: 100px;
+	height: 150px;
 	background-color: purple;
 }
 
 
-.popup_area .popup_area__desc .popup_area__desc__content{
+.popup_area .popup_area__desc .popup_area__desc__data .popup_area__desc__content{
 	width : 1000px;
-	height: 100px;
+	height: 150px;
 	background-color: brown;
 	
+}
+
+.popup_area__desc__content__data{
+	display: flex;
+	flex-direction: row;
 }
