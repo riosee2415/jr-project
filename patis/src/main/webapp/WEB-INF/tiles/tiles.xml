@@ -157,6 +157,14 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020834.jsp"/>
     </definition>
     
+    <definition name="archive.detail" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020834_D.jsp"/>
+    </definition>
+    
+    <definition name="archive.write" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020834_W.jsp"/>
+    </definition>
+    
     <definition name="hire" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020835.jsp"/>
     </definition>

@@ -19,7 +19,9 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 			</ul>
 		</div>
 		
-		<div class="manager_area__desc__content" id="manager-content"></div>
+		<div class="manager_area__desc__content" id="manager-content">
+			<div class="manager-default">← 좌측의 게시판을 선택해주세요.</div>
+		</div>
 	</div>
 	
 	<div class="stis_one__refer">
