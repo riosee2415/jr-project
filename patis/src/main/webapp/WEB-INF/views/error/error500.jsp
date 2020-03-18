@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
         ><i class="fa fa-frown-o " aria-hidden="true"></i>
       </h3>
       <h3 class="error500_com_1">
-        죄송합니다. 요청하신 작업을 수행할 수 없습니다.
+        죄송합니다.<br />요청하신 작업을 수행할 수 없습니다.
       </h3>
       <!-- <h3 class="error500_com_2">
      자세한 사항은 중랑 <br />
