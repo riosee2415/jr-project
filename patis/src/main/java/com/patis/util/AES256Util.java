@@ -59,23 +59,6 @@ public class AES256Util {
 	 * @AUTHOR : 4LEAF.NJM
 	 * @DATE   : Mar 5, 2020
 	 * @RETURN : String
-	 * @DESC   : AES256으로 암호화된 값을 복호화
-	 */
-	public String aesDecode(String data)
-			throws java.io.UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException,
-			InvalidKeyException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
-		Cipher c = Cipher.getInstance("AES/CBC/PKCS5Padding");
-		c.init(Cipher.DECRYPT_MODE, keySpec, new IvParameterSpec(iv.getBytes("UTF-8")));
-
-		byte[] byteStr = Base64.decodeBase64(data.getBytes());
-
-		return new String(c.doFinal(byteStr), "UTF-8");
-	}
-
-	/**
-	 * @AUTHOR : 4LEAF.NJM
-	 * @DATE   : Mar 5, 2020
-	 * @RETURN : String
 	 * @DESC   : AES256으로 랜덤 키 생성
 	 */
 	public static String generateKey() throws Exception {
