@@ -100,21 +100,36 @@ public class Ad0302Controller {
 								) {
 		
 		
-		 MultipartFile mf = mre.getFile("popupFile");		
 		 
-		 String defaultPath = httpSession.getServletContext().getRealPath("/"); 
-		 String path = defaultPath + File.separator + "upload" + File.separator + "popup" + File.separator  + ""; 
+		
+		boolean fileFlag = true;
+		MultipartFile mf = mre.getFile("popupFile");
+		 
+		if(mf == null || (mf.getOriginalFilename().equals(""))) { 
+			 
+			
+			System.out.println("null check!!!!!");
+			System.out.println("null check!!!!!");
+			System.out.println("null check!!!!!");
+			System.out.println("null check!!!!!");
+			System.out.println("null check!!!!!");
+			System.out.println("null check!!!!!");
+			System.out.println("null check!!!!!");
+			System.out.println("null check!!!!!");
+			
+			
+			 fileFlag = false;
+		}
+		
+		 
+	
+		String defaultPath = httpSession.getServletContext().getRealPath("/"); 
+		String path = defaultPath + File.separator + "upload" + File.separator + "popup" + File.separator  + ""; 
 		
 		
-		 String originalName = mf.getOriginalFilename(); 
+		String originalName = mf.getOriginalFilename(); 
 		String originalNameExtension = originalName.substring(originalName.lastIndexOf(".") + 1).toLowerCase();
 		
-		System.out.println(originalName);
-		System.out.println(originalName);
-		System.out.println(originalName);
-		System.out.println(originalName);
-		System.out.println(originalName);
-		System.out.println(originalName);
 		
 		File file = new File(path); 
 		if(!file.exists()) { 
@@ -139,11 +154,21 @@ public class Ad0302Controller {
 		String uploadPath = "/upload/popup/";
 		
 		Map<String, String> params = new HashMap<String, String>();
-		params.put("width", width);
-		params.put("height", height);
-		params.put("desc", desc);
-		params.put("name", name);
-		params.put("path", (uploadPath + modifyName));
+		
+		if(fileFlag) {
+			params.put("width", width);
+			params.put("height", height);
+			params.put("desc", desc);
+			params.put("name", name);
+			params.put("path", (uploadPath + modifyName));
+		 } else {
+			 
+			params.put("width", width);
+			params.put("height", height);
+			params.put("desc", desc);
+			params.put("name", name);
+		 }
+		
 		
 		int result = ad0302Service.popupUpload(params);
 		

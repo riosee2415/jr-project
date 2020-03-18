@@ -31,7 +31,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
               maxlength="3"
               id="popup-width"
               name="popup-width"
-            />
+            /><span>px</span>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
               maxlength="3"
               id="popup-height"
               name="popup-height"
-            />
+            /><span>px</span>
           </div>
         </div>
 

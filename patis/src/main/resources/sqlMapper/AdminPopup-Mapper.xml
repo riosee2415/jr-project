@@ -16,7 +16,9 @@
 		UPDATE	JR_DB.POPUP
 		   SET	POPUP_WIDTH 	= #{width},
 		   		POPUP_HEIGHT 	= #{height},
-		   		POPUP_PATH		= #{path},
+		   		<if test="path != null">
+		   			POPUP_PATH		= #{path},
+		   		</if>
 		   		POPUP_DESC		= #{desc}
 		 WHERE	POPUP_NAME 		= #{name}	
 	</update>

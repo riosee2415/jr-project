@@ -111,3 +111,8 @@
   box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
   margin-bottom: 10px;
 }
+
+.popup_area__desc__content__data div span {
+	font-size: 10px;
+	color : #777777;
+}
