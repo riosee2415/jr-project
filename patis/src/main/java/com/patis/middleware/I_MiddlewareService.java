@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.patis.model.Accept_typeVO;
 import com.patis.model.CommonVO;
+import com.patis.model.PopupVO;
 
 public interface I_MiddlewareService {
 	/**
@@ -62,4 +63,12 @@ public interface I_MiddlewareService {
 	 * @DESC   : 콤보박스에 사용할 데이터를 가져온다.
 	 */
 	List<CommonVO> getComboData(String code) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 18.
+	 * @RETURN : List<PopupVO>
+	 * @DESC   : 사용중인 팝업 데이터를 가져온다.
+	 */
+	List<PopupVO> getUsedPopup();
 }

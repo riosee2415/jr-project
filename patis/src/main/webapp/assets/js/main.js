@@ -73,6 +73,8 @@ $(document).ready(function() {
     
     slidePlay();
   }
+  
+  
 });
 
 function emailSelection() {
@@ -86,3 +88,5 @@ function emailSelection() {
     }
   });
 }
+
+

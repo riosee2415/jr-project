@@ -55,4 +55,16 @@
 	</select>
 	
 	
+	<select id="GET_USED_POPUP" resultType="popupVO">
+		SELECT	POPUP_NAME,
+				POPUP_WIDTH,
+				POPUP_HEIGHT,
+				POPUP_PATH,
+				POPUP_DESC,
+		        POPUP_USE
+		  FROM 	JR_DB.POPUP
+		 WHERE	POPUP_USE = '1'
+	</select>
+	
+	
 </mapper>

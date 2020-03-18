@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.patis.model.Accept_typeVO;
 import com.patis.model.CommonVO;
+import com.patis.model.PopupVO;
 
 @Repository("middlewareDAO")
 public class MiddlewareDAOImpl implements I_MiddlewareDAO {
@@ -48,6 +49,11 @@ public class MiddlewareDAOImpl implements I_MiddlewareDAO {
 	@Override
 	public List<CommonVO> getComboData(String code) throws SQLException {
 		return sqlSession.selectList(COMMON_NAMESPACE + ".GET_COMBO_DATA", code);
+	}
+
+	@Override
+	public List<PopupVO> getUsedPopup() {
+		return sqlSession.selectList(COMMON_NAMESPACE + ".GET_USED_POPUP");
 	}
 
 }

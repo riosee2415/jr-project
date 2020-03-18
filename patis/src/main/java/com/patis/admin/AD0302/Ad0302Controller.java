@@ -109,6 +109,13 @@ public class Ad0302Controller {
 		 String originalName = mf.getOriginalFilename(); 
 		String originalNameExtension = originalName.substring(originalName.lastIndexOf(".") + 1).toLowerCase();
 		
+		System.out.println(originalName);
+		System.out.println(originalName);
+		System.out.println(originalName);
+		System.out.println(originalName);
+		System.out.println(originalName);
+		System.out.println(originalName);
+		
 		File file = new File(path); 
 		if(!file.exists()) { 
 			file.mkdirs(); 

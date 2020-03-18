@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.patis.model.Accept_typeVO;
 import com.patis.model.CommonVO;
+import com.patis.model.PopupVO;
 
 @Service("middlewareService")
 public class MiddlewareServiceImpl implements I_MiddlewareService {
@@ -51,6 +52,11 @@ public class MiddlewareServiceImpl implements I_MiddlewareService {
 	@Override
 	public List<CommonVO> getComboData(String code) throws SQLException {
 		return middlewareDAO.getComboData(code);
+	}
+
+	@Override
+	public List<PopupVO> getUsedPopup() {
+		return middlewareDAO.getUsedPopup();
 	}
 
 }

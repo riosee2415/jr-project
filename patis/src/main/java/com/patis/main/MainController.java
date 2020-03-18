@@ -22,6 +22,7 @@ import com.patis.admin.AD01.I_Ad010001Service;
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.BoardVO;
 import com.patis.model.CommonVO;
+import com.patis.model.PopupVO;
 
 @Controller
 public class MainController {
@@ -54,6 +55,8 @@ public class MainController {
 		List<BoardVO> boardList01 = nm020832Service.getNoticeMainList();
 		List<BoardVO> boardList02 = nm021164Service.getCollusionMainList();
 		
+		List<PopupVO> popupList = middlewareService.getUsedPopup();
+		
 		String btype01 = nm020832Service.getNoticeBoardType();
 		String btype02 = nm021164Service.getBoardType();
 		
@@ -71,6 +74,7 @@ public class MainController {
 		
 		model.addAttribute("boardData01", boardData01);
 		model.addAttribute("boardData02", boardData02);
+		model.addAttribute("popupList", popupList);
 		
 		return "main";
 	}

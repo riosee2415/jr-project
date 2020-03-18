@@ -240,4 +240,20 @@ pageEncoding="UTF-8"%>
 	    <input type="hidden" name="s_keyword" />
 	  </form>
   </div>
+  
+	  
+	  
+	<c:forEach var="pop" items="${popupList }" varStatus="status">
+		<div class="main_modal" style="width: 100vw; height: 100vh; position: fixed;">
+			<div class="main_modal__desc" style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); position: fixed; top:${status.count * 50 }px; left:${status.count * 50 }px;">
+				<div class="main_modal__desc__exit"> X </div>
+			</div>
+		</div>
+	</c:forEach>
+  
 </div>
+
+
+
+
+
