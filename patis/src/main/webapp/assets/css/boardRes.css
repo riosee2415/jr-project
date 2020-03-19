@@ -170,7 +170,7 @@
   }
 
 	.board-detail__box .btn__box {
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 	
   .board-detail__box .btn__box button {

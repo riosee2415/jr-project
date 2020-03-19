@@ -92,10 +92,8 @@ function boardDetailMoveHandler(b_type, b_no, rownum, type, keyword) {
 	var s_type = isEmpty(type) ? search_type : type;
 	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
 	
-	console.log('들어옴');
 	boardHitUp(b_type, b_no);
 	b_type = b_type.toLowerCase();
-	console.log(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=b_no]');
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=b_no]').val(b_no);
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=rownum]').val(rownum);
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-detail input[name=s_type]').val(s_type);
