@@ -31,6 +31,7 @@ h3.login-title {
 .idSearch {
   font-size: 18px;
   text-align: right;
+  cursor: pointer;
 }
 .login-button {
   display: -webkit-box;
