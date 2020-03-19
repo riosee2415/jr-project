@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+pageEncoding="UTF-8"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/core"
+prefix="c" %> <%@ taglib uri="http://java.sun.com/jsp/jstl/functions"
+prefix="fn" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -9,6 +9,10 @@ pageEncoding="UTF-8"%>
       <div class="subHead">
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
+      </div>
+
+      <div class="subTitle_wrap">
+        <div class="subTitle">도시재생아카데미_일정목록 및 신청</div>
       </div>
 
       <div class="board-search__box">
@@ -60,27 +64,35 @@ pageEncoding="UTF-8"%>
           </c:if>
         </div>
       </div>
-      
-      <form action="/academy.detail.do" method="get" id="frm-${fn:toLowerCase(b_type_1)}-detail">
-		    <input type="hidden" name="parent" value="${param.parent }" />
-		    <input type="hidden" name="code" value="${param.code }" />
-		    <input type="hidden" name="tab" value="1" />
-		    <input type="hidden" name="b_no" />
-		    <input type="hidden" name="rownum" />
-		    <input type="hidden" name="s_type" />
-		    <input type="hidden" name="s_keyword" />
-		  </form>
 
-			<form action="/academy.write.do" method="get" id="frm-${fn:toLowerCase(b_type_1)}-write">
-				<input type="hidden" name="parent" value="${param.parent }" />
-				<input type="hidden" name="code" value="${param.code }" /> 
-				<input type="hidden" name="tab" value="1" />
-				<input type="hidden" name="s_type" /> 
-				<input type="hidden" name="s_keyword" /> 
-				<input type="hidden" name="mode" value="WRITE" />
-			</form>
-		</div>
-    
+      <form
+        action="/academy.detail.do"
+        method="get"
+        id="frm-${fn:toLowerCase(b_type_1)}-detail"
+      >
+        <input type="hidden" name="parent" value="${param.parent }" />
+        <input type="hidden" name="code" value="${param.code }" />
+        <input type="hidden" name="tab" value="1" />
+        <input type="hidden" name="b_no" />
+        <input type="hidden" name="rownum" />
+        <input type="hidden" name="s_type" />
+        <input type="hidden" name="s_keyword" />
+      </form>
+
+      <form
+        action="/academy.write.do"
+        method="get"
+        id="frm-${fn:toLowerCase(b_type_1)}-write"
+      >
+        <input type="hidden" name="parent" value="${param.parent }" />
+        <input type="hidden" name="code" value="${param.code }" />
+        <input type="hidden" name="tab" value="1" />
+        <input type="hidden" name="s_type" />
+        <input type="hidden" name="s_keyword" />
+        <input type="hidden" name="mode" value="WRITE" />
+      </form>
+    </div>
+
     <div class="sub-content-wrap">
       <div class="subHead">
         <%@ include
@@ -136,32 +148,40 @@ pageEncoding="UTF-8"%>
           </c:if>
         </div>
       </div>
-      
-      <form action="/academy.detail.do" method="get" id="frm-${fn:toLowerCase(b_type_2)}-detail">
-		    <input type="hidden" name="parent" value="${param.parent }" />
-		    <input type="hidden" name="code" value="${param.code }" />
-		    <input type="hidden" name="tab" value="2" />
-		    <input type="hidden" name="b_no" />
-		    <input type="hidden" name="rownum" />
-		    <input type="hidden" name="s_type" />
-		    <input type="hidden" name="s_keyword" />
-		  </form>
 
-			<form action="/academy.write.do" method="get" id="frm-${fn:toLowerCase(b_type_2)}-write">
-				<input type="hidden" name="parent" value="${param.parent }" />
-				<input type="hidden" name="code" value="${param.code }" /> 
-				<input type="hidden" name="tab" value="2" />
-				<input type="hidden" name="s_type" /> 
-				<input type="hidden" name="s_keyword" /> 
-				<input type="hidden" name="mode" value="WRITE" />
-			</form>
+      <form
+        action="/academy.detail.do"
+        method="get"
+        id="frm-${fn:toLowerCase(b_type_2)}-detail"
+      >
+        <input type="hidden" name="parent" value="${param.parent }" />
+        <input type="hidden" name="code" value="${param.code }" />
+        <input type="hidden" name="tab" value="2" />
+        <input type="hidden" name="b_no" />
+        <input type="hidden" name="rownum" />
+        <input type="hidden" name="s_type" />
+        <input type="hidden" name="s_keyword" />
+      </form>
+
+      <form
+        action="/academy.write.do"
+        method="get"
+        id="frm-${fn:toLowerCase(b_type_2)}-write"
+      >
+        <input type="hidden" name="parent" value="${param.parent }" />
+        <input type="hidden" name="code" value="${param.code }" />
+        <input type="hidden" name="tab" value="2" />
+        <input type="hidden" name="s_type" />
+        <input type="hidden" name="s_keyword" />
+        <input type="hidden" name="mode" value="WRITE" />
+      </form>
     </div>
   </div>
-  
+
   <script>
-		window.onload = function() {
-			var tab = "${tab}";
-			_topMenuActiveInit(tab);
-		}
+    window.onload = function() {
+      var tab = "${tab}";
+      _topMenuActiveInit(tab);
+    };
   </script>
 </div>

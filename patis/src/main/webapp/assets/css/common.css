@@ -48,6 +48,9 @@ body {
   margin-top: 70px;
   margin-bottom: 70px;
 }
+.subTitle_wrap {
+  margin-top: 30px;
+}
 .subTitle {
   font-size: 36px;
   font-weight: bold;
@@ -109,8 +112,8 @@ caption {
   color: #82c63f;
 }
 .d-block {
-	display: block;
+  display: block;
 }
 .d-none {
-	display: none;
+  display: none;
 }

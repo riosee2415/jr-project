@@ -10,6 +10,10 @@ prefix="fn" %>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
 
+      <div class="subTitle_wrap">
+        <div class="subTitle">일정목록 및 신청</div>
+      </div>
+
       <div class="board-search__box">
         <%@ include file="/WEB-INF/views/template/components/board_search.jsp"
         %>
@@ -59,31 +63,31 @@ prefix="fn" %>
           </c:if>
         </div>
       </div>
-      
+
       <form
-		    action="/presentation.detail.do"
-		    method="get"
-		    id="frm-${fn:toLowerCase(b_type)}-detail"
-		  >
-		    <input type="hidden" name="parent" value="${param.parent }" />
-		    <input type="hidden" name="code" value="${param.code }" />
-		    <input type="hidden" name="b_no" />
-		    <input type="hidden" name="rownum" />
-		    <input type="hidden" name="s_type" />
-		    <input type="hidden" name="s_keyword" />
-		  </form>
-		
-		  <form
-		    action="/presentation.write.do"
-		    method="get"
-		    id="frm-${fn:toLowerCase(b_type)}-write"
-		  >
-		    <input type="hidden" name="parent" value="${param.parent }" />
-		    <input type="hidden" name="code" value="${param.code }" />
-		    <input type="hidden" name="s_type" />
-		    <input type="hidden" name="s_keyword" />
-		    <input type="hidden" name="mode" value="WRITE" />
-		  </form>
+        action="/presentation.detail.do"
+        method="get"
+        id="frm-${fn:toLowerCase(b_type)}-detail"
+      >
+        <input type="hidden" name="parent" value="${param.parent }" />
+        <input type="hidden" name="code" value="${param.code }" />
+        <input type="hidden" name="b_no" />
+        <input type="hidden" name="rownum" />
+        <input type="hidden" name="s_type" />
+        <input type="hidden" name="s_keyword" />
+      </form>
+
+      <form
+        action="/presentation.write.do"
+        method="get"
+        id="frm-${fn:toLowerCase(b_type)}-write"
+      >
+        <input type="hidden" name="parent" value="${param.parent }" />
+        <input type="hidden" name="code" value="${param.code }" />
+        <input type="hidden" name="s_type" />
+        <input type="hidden" name="s_keyword" />
+        <input type="hidden" name="mode" value="WRITE" />
+      </form>
     </div>
   </div>
 </div>
