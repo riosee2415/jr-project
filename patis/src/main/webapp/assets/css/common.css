@@ -57,6 +57,12 @@ body {
   letter-spacing: 2px;
   margin-bottom: 8px;
 }
+.subTitle_2 {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
 .bread {
   font-size: 14px;
   display: -webkit-box;

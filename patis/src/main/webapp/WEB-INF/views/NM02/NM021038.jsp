@@ -12,7 +12,7 @@ prefix="fn" %>
       </div>
 
       <div class="subTitle_wrap">
-        <div class="subTitle">도시재생아카데미_일정목록 및 신청</div>
+        <div class="subTitle_2">도시재생아카데미_일정목록 및 신청</div>
       </div>
 
       <div class="board-search__box">

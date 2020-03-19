@@ -11,7 +11,7 @@ prefix="fn" %>
       </div>
 
       <div class="subTitle_wrap">
-        <div class="subTitle">일정목록 및 신청</div>
+        <div class="subTitle_2">일정목록 및 신청</div>
       </div>
 
       <div class="board-search__box">
