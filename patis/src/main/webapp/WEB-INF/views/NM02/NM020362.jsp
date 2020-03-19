@@ -85,8 +85,8 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm020362-title-style-02">
-          <span>▪</span>묵2동 주민공동이용시설 및 거점시설
+        <h3 class="nm020362-title-style-02 ">
+          ▪묵2동 주민공동이용시설 및 거점시설
         </h3>
         <div class="nm020362-content-img__box ">
           <img
@@ -96,7 +96,7 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <h3 class="nm020362-title-style-02"><span>▪</span>주민공동이용시설</h3>
+        <h3 class="nm020362-title-style-02">▪ <span>주민공동이용시설</span></h3>
         <div class="nm020362-tbl-style-02">
           <ul>
             <li>구 분</li>
@@ -144,7 +144,7 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm020362-title-style-02"><span>▪</span>거점시설</h3>
+        <h3 class="nm020362-title-style-02">▪ <span>거점시설</span></h3>
         <div class="nm020362-tbl-style-02">
           <ul>
             <li>구 분</li>
@@ -190,7 +190,7 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm020362-title-style-02"><span>▪</span>주민협의체 구성</h3>
+        <h3 class="nm020362-title-style-02">▪ <span>주민협의체 구성</span></h3>
         <div class="nm020362-content-img__box nm020362-slideBox">
           <img
             src="/assets/images/image/sub-nm62-01-03.png"
@@ -199,9 +199,9 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
-        <h4 class="nm020362-title-style-03">
-          ·&nbsp;&nbsp;도시재생현장지원센터
-        </h4>
+        <h3 class="nm020362-title-style-02">
+          ▪<span>도시재생현장지원센터</span>
+        </h3>
         <div
           class="nm020362-tbl-style-01 nm020362-tbl-style-mobile nm020362-table-green"
         >
@@ -448,7 +448,7 @@ pageEncoding="UTF-8"%>
 
       <div class="nm020362-content">
         <h3 class="nm020362-title-style-01 nm020361-title-green">
-          ▪종합계획도
+          ▪활성화지역 위치도
         </h3>
         <div class="nm020362-content-img__box">
           <img
@@ -494,53 +494,14 @@ pageEncoding="UTF-8"%>
                   ·&nbsp;2019.11.20. &#58; 도시재생활성화계획 수립용역 착수
                 </li>
                 <li>·&nbsp;2020.01.20. &#58; 주민설명회 개최</li>
-                <li>·&nbsp;2020.02.11. &#58; 도시재생지원센터 개소식 개최</li>
+                <li>·&nbsp;2020.03. &#58; 활성화계획(안) 기본구상</li>
               </ul>
             </li>
           </ul>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>중화2동 주민공동이용시설 및 거점시설
-        </h3>
-        <div class="nm020362-content-img__box">
-          <img
-            src="/assets/images/image/sub-nm62-02-02.png"
-            alt="중화2동 주민공동이용시설 사진"
-            class="nm020362-content-img-02-02"
-          />
-        </div>
-        <div class="nm020362-tbl-style-01 nm020362-table-green">
-          <ul>
-            <li>위치</li>
-            <li>
-              중화동 327-85 &#40;면적 : 125㎡&#41;
-              <span>※ 현재 건축공사 추진중</span>
-            </li>
-          </ul>
-          <ul>
-            <li>연락처</li>
-            <li>
-              <ul class="nm020362-list-style-dot">
-                <li>개관 이후</li>
-              </ul>
-            </li>
-          </ul>
-          <ul>
-            <li>운영</li>
-            <li>
-              <ul class="nm020362-list-style-dot">
-                <li>
-                  주민협의체 분과모임&#40;공간기획단 등&#41; 구성을 통한
-                  주민주도 관리 운영
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <h3 class="nm020362-title-style-02">
-          <span>▪</span>중화2동 거점시설&#40;보담마을&#41;
+          ▪<span>중화2동 거점시설&#40;보담마을&#41;</span>
         </h3>
         <div class="nm020362-content-img__box">
           <img
@@ -587,7 +548,7 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>도시재생현장지원센터
+          ▪<span>도시재생현장지원센터</span>
         </h3>
         <div class="nm020362-content-img__box">
           <img
@@ -680,20 +641,28 @@ pageEncoding="UTF-8"%>
             <li>
               <ul class="nm020362-list-style-dot">
                 <li>
-                  ·&nbsp;2018.09.21. &#58; 관리형 주거환경개선사업 후보지 결정
+                  ·&nbsp;2017.06.08. &#58; 희망지사업 선정
                 </li>
                 <li>
-                  ·&nbsp;2019.06.03. &#58; 관리형 주거환경개선사업 대상지 결정
+                  ·&nbsp;2018.06.30. &#58; 희망지사업 종료
+                </li>
+                <li>
+                  ·&nbsp;2018.09.21. &#58; 관리형 주거환경개선사업 후보지 선정
+                </li>
+                <li>
+                  ·&nbsp;2019.05.20. &#58; 관리형 주거환경개선사업 대상지 선정
                 </li>
                 <li>·&nbsp;2019.11.01. &#58; 정비계획수립용역 계약</li>
-                <li>·&nbsp;2019.11.05. &#58; 정비계획수립용역 착수</li>
+                <li>
+                  ·&nbsp;2019.12.06. &#58; 정비계획수립용역 착수보고회 개최
+                </li>
               </ul>
             </li>
           </ul>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>&nbsp;면목3·8동 거점시설
+          ▪<span>&nbsp;면목3·8동 거점시설</span>
         </h3>
         <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
@@ -701,7 +670,7 @@ pageEncoding="UTF-8"%>
             <li>중랑구 용마산로334, 동남빌딩 4층</li>
           </ul>
           <ul>
-            <li>연락처</li>
+            <li>직원구성</li>
             <li>
               <ul class="nm020362-list-style-dot">
                 <li>총괄코디네이터1, 사무국장1, 코디4, 중랑구청파견직원1</li>
@@ -772,7 +741,7 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02 nm020362-table-green">
-          <span>▪</span>주민공동이용시설 및 거점시설
+          ▪<span>주민공동이용시설</span>
         </h3>
         <div class="nm020362-content-img__box">
           <img
@@ -818,7 +787,7 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>주민거점시설(들락날락)
+          ▪<span>주민거점시설(들락날락)</span>
         </h3>
         <div class="nm020362-content-img__box">
           <img
@@ -933,11 +902,9 @@ pageEncoding="UTF-8"%>
         </div>
 
         <h3 class="nm020362-title-style-02">
-          <span>▪</span>사가정시장 거점시설
+          ▪<span>&nbsp;주민거점시설&#40;사가정사랑방&#41;</span>
         </h3>
-        <h3 class="nm020362-title-style-04">
-          ·&nbsp;주민거점시설&#40;사가정사랑방&#41;
-        </h3>
+
         <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
@@ -989,7 +956,7 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="nm020362-content">
         <h3 class="nm020362-title-style-01 nm020361-title-green">
-          ▪종합계획도
+          ▪희망지사업 위치도
         </h3>
         <div class="nm020362-content-img__box">
           <img
@@ -1009,8 +976,7 @@ pageEncoding="UTF-8"%>
             <li>
               <ul class="nm020362-list-style-dot">
                 <li>
-                  도시재생 희망지사업 선정 및 활성화지역 선정을 위한 주민 홍보
-                  및 역량강화 추진
+                  활성화지역 선정을 위한 거버넌스 구축 및 주민역량강화 추진
                 </li>
               </ul>
             </li>
@@ -1031,6 +997,41 @@ pageEncoding="UTF-8"%>
             </li>
           </ul>
         </div>
+      </div>
+
+      <h3 class="nm020362-title-style-02">
+        ▪<span>거점시설&#40;주민사랑방&#41;</span>
+      </h3>
+      <div class="nm020362-content-img__box">
+        <img
+          src="/assets/images/image/sub-nm62-02-03.png"
+          alt="중화2동(희망지사업) 거점시설"
+          class="nm020362-content-img-02-03"
+        />
+      </div>
+      <div class="nm020362-tbl-style-01 nm020362-table-green">
+        <ul>
+          <li>위치</li>
+          <li>중랑구 동일로123길 13, 2층</li>
+        </ul>
+        <ul>
+          <li>연락처</li>
+          <li>
+            개관 이후
+          </li>
+        </ul>
+        <ul>
+          <li>직원구성</li>
+          <li>
+            공간운영활동가 2인, 코디네이터 3인
+          </li>
+        </ul>
+        <ul>
+          <li>역할</li>
+          <li>
+            주민모임 활성화, 역량강화, 소규모 환경개선사업 등 지원
+          </li>
+        </ul>
       </div>
     </div>
 
