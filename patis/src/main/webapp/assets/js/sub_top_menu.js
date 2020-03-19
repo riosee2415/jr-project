@@ -18,12 +18,6 @@ $(document).ready(function() {
 		$("#sub_top_subject-js").addClass(className);
 	}
 	applyTopMenuGrid();
-	
-	if($('#sub_top_subject-js').length > 0) {
-		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $("#sub_top_subject-js li").eq(0).find('span').text().trim());
-	} else {
-		$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + $('.sub_title-js').text().trim());
-	}
 });
 
 function _topMenuClickHandler(menuNumber, menuName) {
@@ -31,7 +25,6 @@ function _topMenuClickHandler(menuNumber, menuName) {
 	$("#sub-container-js .sub-content-wrap").eq(menuNumber-1).addClass('active');
 	$("#sub_top_subject-js li").removeClass("active");
 	$("#sub_top_subject-js li").eq(menuNumber-1).addClass("active");
-	$(CURRENT_PAGE + ' #bread-sub-js').html('&nbsp;&gt;&nbsp;' + menuName);
 
 	setTitleName(menuName);
 	boardSearchInit();
