@@ -205,10 +205,11 @@ public class Nm0204131Controller {
 										@RequestParam(value="b_type")String b_type,
 										@RequestParam(value="rownum", required=false)Integer rownum,
 										@RequestParam(value="b_no", required=false)Integer b_no,
+										@RequestParam(value="b_gubun")String b_gubun,
 										@RequestParam(value="b_title")String b_title,
 										@RequestParam(value="b_description")String b_description,
 										@RequestParam(value="b_author")String b_author,
-										@RequestParam(value="b_author_none")String b_author_none,
+										@RequestParam(value="b_author_none", defaultValue="", required=false)String b_author_none,
 										@RequestParam(value="file_key")String file_key,
 										@RequestParam(value="remove_file")String removeFile,
 										@RequestParam(value="s_type", defaultValue="")String searchType,
@@ -228,6 +229,7 @@ public class Nm0204131Controller {
 		
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
+		boardVO.setB_GUBUN(b_gubun);
 		boardVO.setB_TITLE(b_title);
 		boardVO.setB_DESCRIPTION(b_description);
 		boardVO.setB_AUTHOR(b_author);

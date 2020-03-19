@@ -299,6 +299,7 @@ public class Nm020832Controller {
 										@RequestParam(value="b_type")String b_type,
 										@RequestParam(value="rownum", required=false)Integer rownum,
 										@RequestParam(value="b_no", required=false)Integer b_no,
+										@RequestParam(value="b_gubun")String b_gubun,
 										@RequestParam(value="b_title")String b_title,
 										@RequestParam(value="b_description")String b_description,
 										@RequestParam(value="b_author")String b_author,
@@ -322,6 +323,7 @@ public class Nm020832Controller {
 		
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
+		boardVO.setB_GUBUN(b_gubun);
 		boardVO.setB_TITLE(b_title);
 		boardVO.setB_DESCRIPTION(b_description);
 		boardVO.setB_AUTHOR(b_author);

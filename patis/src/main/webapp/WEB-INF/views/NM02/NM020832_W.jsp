@@ -30,6 +30,7 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
           <input type="hidden" name="rownum" value="${rownum }" />
           <input type="hidden" name="b_type" value="${b_type }" />
           <input type="hidden" name="b_no" value="${data.b_NO }" />
+          <input type="hidden" name="b_gubun" />
           <input type="hidden" name="b_title" />
           <input type="hidden" name="b_description" />
           <input
@@ -62,6 +63,20 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
                     value="${mode eq 'WRITE' ? sessionScope.loginName : data.b_AUTHOR}"
                 /></span>
               </c:if>
+            </div>
+          </div>
+          
+          <div class="write-row__box">
+            <div class="write-col-head">
+              <span class="data-tit">구분</span>
+            </div>
+            <div class="write-col-body">
+              <select id="input-gubun-js">
+              	<option value="공지사항">공지사항</option>
+              	<option value="고시공고">고시공고</option>
+              	<option value="외부소식">외부소식</option>
+              	<option value="기타">기타</option>
+              </select>
             </div>
           </div>
 

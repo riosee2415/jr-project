@@ -13,7 +13,10 @@ prefix="fn" %>
       <div class="board-detail__box">
         <div class="detail-info__box">
           <div class="detail-tit__box">
-            <h3 class="detail-title">${data.b_TITLE }</h3>
+            <h3 class="detail-title">
+            	<c:if test="${data.b_GUBUN ne null}"><span>[${data.b_GUBUN}]</span></c:if>
+            	${data.b_TITLE }
+           	</h3>
             <ul class="detail-list">
               <li>
                 <span class="data-tit">작성자</span>
