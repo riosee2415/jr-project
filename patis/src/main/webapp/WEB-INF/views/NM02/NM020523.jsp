@@ -20,7 +20,7 @@ pageEncoding="UTF-8"%>
       <!-- 도시재생학교(2018) -->
       <div class="nm23-content nm23-content-1">
         <h3 class="nm23-title-style-01 darkBluetext">
-          도시재생학교 &#40;2018&#41;
+          ▶ 도시재생학교 &#40;2018&#41;
         </h3>
         <div class="nm23-list-content">
           <h3 class="nm23-list-title">▪&nbsp;목적</h3>
@@ -118,7 +118,7 @@ pageEncoding="UTF-8"%>
       <!-- 도시재생학교(2019) -->
       <div class="nm23-content">
         <h3 class="nm23-title-style-01 darkBluetext">
-          도시재생학교 &#40;2019&#41;
+          ▶ 도시재생학교 &#40;2019&#41;
         </h3>
         <div class="nm23-list-content">
           <h3 class="nm23-list-title">▪&nbsp;목적</h3>
@@ -534,7 +534,7 @@ pageEncoding="UTF-8"%>
         <!-- 찾아가는 주민설명회(2019) -->
         <div class="nm23-content-mt">
           <h3 class="nm23-title-style-01 nm23-title-green">
-            찾아가는 주민설명회 &#40;2019&#41;
+            ▶ 찾아가는 주민설명회 &#40;2019&#41;
           </h3>
           <div class="nm23-list-content">
             <h3 class="nm23-list-title2">▪&nbsp;목적</h3>
@@ -680,7 +680,7 @@ pageEncoding="UTF-8"%>
         <!-- 묵2동 장미학교(2019) -->
         <div class="nm23-content-2">
           <h3 class="nm23-title-style-01 nm23-title-coral">
-            묵2동 장미학교 &#40;2019&#41;
+            ▶ 묵2동 장미학교 &#40;2019&#41;
           </h3>
           <div class="nm23-list-content">
             <h3 class="nm23-list-title4">▪목적</h3>
