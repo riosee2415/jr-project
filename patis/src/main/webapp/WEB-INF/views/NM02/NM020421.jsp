@@ -230,7 +230,7 @@ pageEncoding="UTF-8"%>
         </thead>
         <tbody>
           <tr>
-            <td class="bold">일자리거점 육성형</td>
+            <td class="bold">일자리거점<br />육성형</td>
             <td colspan="2">경제기반형</td>
             <td rowspan="4">도시재생 활성화 및<br />지원에 관한 특별법</td>
             <td>
@@ -239,7 +239,7 @@ pageEncoding="UTF-8"%>
             </td>
           </tr>
           <tr>
-            <td class="bold">생활중심지 특화형</td>
+            <td class="bold">생활중심지<br />특화형</td>
             <td rowspan="3">근린<br />재생형</td>
             <td>중심시가지형</td>
             <td>
