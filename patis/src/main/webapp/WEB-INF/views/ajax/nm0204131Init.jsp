@@ -40,13 +40,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 -----
 <c:choose>
   <c:when test="${empty boardList }">
-    <div class="border-lsit_wrap">
-      <table class="border-list__table2">
-        <tr class="row-empty">
-          <td>조회된 데이터가 없습니다.</td>
-        </tr>
-      </table>
-    </div>
+    <div class="empty__box">조회된 데이터가 없습니다.</div>
   </c:when>
   <c:otherwise>
     <c:forEach var="board" items="${boardList }">
