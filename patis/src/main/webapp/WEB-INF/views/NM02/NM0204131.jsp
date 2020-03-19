@@ -28,8 +28,9 @@ prefix="fn" %>
             <thead>
               <tr>
                 <th class="header-5">번호</th>
+                <th class="header-10">구분</th>
                 <th class="header-title">제목</th>
-                <th class="header-15">작성자</th>
+                <th class="header-15 header-author">작성자</th>
                 <th class="header-15">날짜</th>
                 <th class="header-5">조회</th>
               </tr>

@@ -186,11 +186,15 @@
   width: 5%;
 }
 
+.board-list__box .board-list__table thead tr th.header-10 {
+  width: 10%;
+}
+
 .board-list__box .board-list__table thead tr th.header-15 {
   width: 15%;
 }
 
-.board-list__box .board-list__table thead tr th:nth-child(3) {
+.board-list__box .board-list__table thead tr th.header-author {
   font-weight: 800;
 }
 
@@ -226,17 +230,17 @@
   padding-bottom: 20px;
 }
 
-.board-list__box .board-list__table tbody tr td:nth-child(2) {
+.board-list__box .board-list__table tbody tr td.header-title {
   color: #777;
 }
 
-.board-list__box .board-list__table tbody tr td:nth-child(2):hover {
+.board-list__box .board-list__table tbody tr td.header-title:hover {
   color: #4c4c4c;
   text-decoration: underline;
   cursor: pointer;
 }
 
-.board-list__box .board-list__table tbody tr td:nth-child(3) {
+.board-list__box .board-list__table tbody tr td.header-author {
   font-weight: 800;
   color: #4c4c4c;
 }
@@ -314,6 +318,11 @@
   font-size: 24px;
   font-weight: 600;
   word-break: break-all;
+}
+
+.board-detail__box .detail-info__box .detail-title span {
+	padding-right: 2px;
+	color: #e8402f;
 }
 
 .board-detail__box .detail-info__box .input-title {
@@ -614,6 +623,13 @@
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+}
+
+.board-write__box .write-row__box .write-col-body select {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e6e6e6;
+  outline: none;
 }
 
 .board-write__box .btn__box {

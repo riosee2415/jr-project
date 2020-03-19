@@ -7,6 +7,7 @@
 			FROM	( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
 							B_NO, 
+							B_GUBUN,
 							B_TITLE,
 							B_DESCRIPTION,
 							(
@@ -53,6 +54,7 @@
 			FROM	( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
 							B_NO, 
+							B_GUBUN,
 							B_TITLE,
 							B_DESCRIPTION,
 							(
@@ -108,6 +110,7 @@
 	
 	<select id="GET_STATUTE" resultType="boardVO" parameterType="int">
 		SELECT  B_NO,
+						B_GUBUN,
 						B_TITLE,
 						B_DESCRIPTION,
 						(
@@ -139,6 +142,7 @@
 		  FROM  ( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
 							B_NO,
+							B_GUBUN,
 			        B_TITLE,
 			        B_TYPE
 							FROM  JR_DB.BOARD_STATUTE A,
@@ -160,6 +164,7 @@
 		  FROM  ( 
 			  			SELECT	@ROWNUM:=@ROWNUM+1 as ROWNUM,
 							B_NO,
+							B_GUBUN,
 			        B_TITLE,
 			        B_TYPE
 							FROM  JR_DB.BOARD_STATUTE A,
@@ -185,6 +190,7 @@
 	<insert id="SET_STATUTE" parameterType="boardVO" useGeneratedKeys="true" keyProperty="B_NO">
 		INSERT INTO JR_DB.BOARD_STATUTE
 		(
+			B_GUBUN,
 			B_TITLE,
 			B_DESCRIPTION,
 			B_AUTHOR,
@@ -195,6 +201,7 @@
 		)
 		VALUES
 		(
+			#{B_GUBUN},
 			#{B_TITLE},
 			#{B_DESCRIPTION},
 			${B_AUTHOR},
@@ -207,7 +214,8 @@
 	
 	<update id="MODIFY_STATUTE" parameterType="boardVO">
 		UPDATE 	JR_DB.BOARD_STATUTE
-		   SET	B_TITLE = #{B_TITLE},
+		   SET	B_GUBUN = #{B_GUBUN},
+		   			B_TITLE = #{B_TITLE},
 		   			B_DESCRIPTION = #{B_DESCRIPTION},
 		   			B_UPLOAD_TIME = SYSDATE()
 		 WHERE	B_NO = #{B_NO}

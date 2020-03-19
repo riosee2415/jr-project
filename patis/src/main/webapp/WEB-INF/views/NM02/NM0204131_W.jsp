@@ -29,6 +29,7 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
           <input type="hidden" name="rownum" value="${rownum }" />
           <input type="hidden" name="b_type" value="${b_type }" />
           <input type="hidden" name="b_no" value="${data.b_NO }" />
+          <input type="hidden" name="b_gubun" />
           <input type="hidden" name="b_title" />
           <input type="hidden" name="b_description" />
           <input
@@ -64,6 +65,19 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
             </div>
           </div>
 
+					<div class="write-row__box">
+            <div class="write-col-head">
+              <span class="data-tit">구분</span>
+            </div>
+            <div class="write-col-body">
+              <select id="input-gubun-js">
+              	<option value="법령">법령</option>
+              	<option value="조례">조례</option>
+              	<option value="지침">지침</option>
+              </select>
+            </div>
+          </div>
+          
           <div class="write-row__box">
             <div class="write-col-head">
               <span class="data-tit">제목</span>
