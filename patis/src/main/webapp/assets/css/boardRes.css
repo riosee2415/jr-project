@@ -57,6 +57,11 @@
     margin-bottom: 10px;
   }
 
+	.border-list_title span {
+    padding-right: 2px;
+		color: #e8402f;
+	}
+  
   .border-list_com {
     width: 100%;
     height: 20px;

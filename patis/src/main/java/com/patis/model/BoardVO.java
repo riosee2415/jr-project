@@ -3,6 +3,7 @@ package com.patis.model;
 public class BoardVO {
 	private String ROWNUM;
 	private int B_NO;
+	private String B_GUBUN;
 	private String B_TITLE;
 	private String B_DESCRIPTION;
 	private String B_AUTHOR;
@@ -35,6 +36,12 @@ public class BoardVO {
 	}
 	public void setB_NO(int b_NO) {
 		B_NO = b_NO;
+	}
+	public String getB_GUBUN() {
+		return B_GUBUN;
+	}
+	public void setB_GUBUN(String b_GUBUN) {
+		B_GUBUN = b_GUBUN;
 	}
 	public String getB_TITLE() {
 		return B_TITLE;

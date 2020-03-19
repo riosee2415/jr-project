@@ -118,6 +118,7 @@ function boardWriteMoveHandler(b_type, type, keyword, b_no) {
 
 var remove_file = new Array();
 function boardWriteProcessHandler(b_type, mode, b_no) {
+	var b_gubun = $(CURRENT_PAGE + ' #input-gubun-js').val();
 	var b_title = $(CURRENT_PAGE + ' #input-title-js').val();
 	
 	b_type = b_type.toLowerCase();
@@ -127,6 +128,7 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		$(CURRENT_PAGE + ' #input-title-js').focus();
 		return;
 	} 
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-write-process input[name=b_gubun]').val(b_gubun);
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-write-process input[name=b_title]').val(b_title);
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-write-process input[name=remove_file]').val(remove_file.join(','));
 	
