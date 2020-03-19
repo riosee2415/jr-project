@@ -34,8 +34,7 @@ pageEncoding="UTF-8"%>
 
             <ul>
               <li class="login_des">
-                <span>통합 ID</span>를 발급 받으시면, 한 번의 로그인 만으로 모든
-                서비스를<br />
+                한 번의 로그인 만으로 모든 서비스를<br />
                 편리하게 이용하실 수 있습니다.
               </li>
             </ul>
@@ -88,8 +87,7 @@ pageEncoding="UTF-8"%>
             </ul>
             <ul>
               <li class="login_des">
-                <span>통합 ID</span>를 발급 받으시면, 한 번의 로그인 만으로 모든
-                서비스를<br />
+                한 번의 로그인 만으로 모든 서비스를<br />
                 편리하게 이용하실 수 있습니다.
               </li>
             </ul>

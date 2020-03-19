@@ -75,11 +75,6 @@
   padding: 10px;
 }
 
-.login_des > span {
-  font-weight: 700;
-  color: #222222;
-}
-
 .mem_btn_com {
   display: -webkit-box;
   display: -ms-flexbox;
