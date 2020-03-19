@@ -13,8 +13,8 @@ pageEncoding="UTF-8"%>
             02-2094-2150(야간,공휴일/당직실) / FAX : 02-490-4449
           </p>
           <p>
-            COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGRANG URBAN REGENERATION
-            CENTER
+            COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGNANG URBAN REGENERATION
+            PORTAL
           </p>
         </div>
         <!-- <div class="family__area" id="family-area-js">
