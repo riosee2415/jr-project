@@ -312,7 +312,7 @@ public class Nm020832Controller {
 		String url = "";
 		int boardNo = 0;
 	
-		String[] tags = b_description.split("<p>");
+		String[] tags = b_description.split("<p");
 		b_description = "";
 		
 		for(String tag : tags) {

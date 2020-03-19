@@ -217,13 +217,13 @@ public class Nm0204131Controller {
 										RedirectAttributes rttr) throws Exception{
 		String url = "";
 		int boardNo = 0;
-	
-		String[] tags = b_description.split("<p>");
+		
+		String[] tags = b_description.split("<p");
 		b_description = "";
 		
 		for(String tag : tags) {
 			if(tag.contains("</p>")) {
-				b_description += "<p>" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
+				b_description += "<p" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
 			} 
 		}
 		
