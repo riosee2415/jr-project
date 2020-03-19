@@ -65,7 +65,7 @@
 .nm22-tbl-style-02 thead tr th,
 .nm22-tbl-style-02 tbody tr td {
   width: 16%;
-  padding: 30px;
+  padding: 30px 16px;
   border-bottom: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
 }
@@ -112,7 +112,7 @@
 /* 서울형 도시재생사업유형 */
 .nm22-tbl-style-03 thead tr th,
 .nm22-tbl-style-03 tbody tr td {
-  padding: 30px;
+  padding: 30px 16px;
   vertical-align: middle;
   border-bottom: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
