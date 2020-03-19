@@ -96,7 +96,8 @@ public class Ad0302Controller {
 								@RequestParam("popup-width")String width,
 								@RequestParam("popup-height")String height,
 								@RequestParam("popup-desc")String desc,
-								@RequestParam("popup-name")String name
+								@RequestParam("popup-name")String name,
+								@RequestParam("popup-link")String link
 								) {
 		
 		
@@ -107,15 +108,6 @@ public class Ad0302Controller {
 		 
 		if(mf == null || (mf.getOriginalFilename().equals(""))) { 
 			 
-			
-			System.out.println("null check!!!!!");
-			System.out.println("null check!!!!!");
-			System.out.println("null check!!!!!");
-			System.out.println("null check!!!!!");
-			System.out.println("null check!!!!!");
-			System.out.println("null check!!!!!");
-			System.out.println("null check!!!!!");
-			System.out.println("null check!!!!!");
 			
 			
 			 fileFlag = false;
@@ -161,12 +153,14 @@ public class Ad0302Controller {
 			params.put("desc", desc);
 			params.put("name", name);
 			params.put("path", (uploadPath + modifyName));
+			params.put("link", link);
 		 } else {
 			 
 			params.put("width", width);
 			params.put("height", height);
 			params.put("desc", desc);
 			params.put("name", name);
+			params.put("link", link);
 		 }
 		
 		

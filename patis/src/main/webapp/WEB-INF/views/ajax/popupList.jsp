@@ -88,6 +88,21 @@ uri="http://java.sun.com/jsp/jstl/core"%>
             />
           </div>
         </div>
+        
+        <div class="popup_area__desc__content__data">
+          <div>
+            <label>팝업링크</label>
+          </div>
+
+          <div>
+            <input
+              type="text"
+              value="${data.POPUP_LINK }"
+              id="popup-link"
+              name="popup-link"
+            />
+          </div>
+        </div>
 
         <div class="popup_area__desc__content__data">
           <div>

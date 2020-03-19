@@ -2,7 +2,7 @@
 
 .popup_area {
   width: 1200px;
-  height: 440px;
+  height: 800px;
   margin: 0 auto;
 }
 
@@ -36,7 +36,7 @@
   .popup_area__desc__data
   .popup_area__desc__subject {
   width: 200px;
-  height: 300px;
+  height: 350px;
   line-height: 300px;
   text-align: center;
   font-size: 18px;
@@ -48,7 +48,7 @@
   .popup_area__desc__data
   .popup_area__desc__content {
   width: 1000px;
-  height: 300px;
+  height: 350px;
   line-height: 2.5;
   text-indent: 20px;
   box-sizing: border-box;

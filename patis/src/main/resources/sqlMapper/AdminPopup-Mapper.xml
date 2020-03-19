@@ -8,7 +8,8 @@
 				POPUP_HEIGHT,
 				POPUP_PATH,
 				POPUP_DESC,
-				POPUP_USE
+				POPUP_USE,
+				POPUP_LINK
 		  FROM 	JR_DB.POPUP
 	</select>
 	
@@ -19,7 +20,8 @@
 		   		<if test="path != null">
 		   			POPUP_PATH		= #{path},
 		   		</if>
-		   		POPUP_DESC		= #{desc}
+		   		POPUP_DESC		= #{desc},
+		   		POPUP_LINK		= #{link}
 		 WHERE	POPUP_NAME 		= #{name}	
 	</update>
 	

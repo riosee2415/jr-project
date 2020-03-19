@@ -270,7 +270,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
             aria-hidden="true"
           ></i>
         </div>
-        <a href="" class="main_modal__desc__link">바로가기</a>
+        <a href="${pop.POPUP_LINK }" class="main_modal__desc__link" target="_blank">바로가기</a>
       </div>
     </div>
   </c:forEach>

@@ -61,7 +61,8 @@
 				POPUP_HEIGHT,
 				POPUP_PATH,
 				POPUP_DESC,
-		        POPUP_USE
+		        POPUP_USE,
+		        POPUP_LINK
 		  FROM 	JR_DB.POPUP
 		 WHERE	POPUP_USE = '1'
 	</select>

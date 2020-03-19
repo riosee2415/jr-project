@@ -8,10 +8,16 @@ public class PopupVO {
     private String POPUP_PATH;
     private String POPUP_DESC;
     private String POPUP_USE;
+    private String POPUP_LINK;
     
     
     
-    
+	public String getPOPUP_LINK() {
+		return POPUP_LINK;
+	}
+	public void setPOPUP_LINK(String pOPUP_LINK) {
+		POPUP_LINK = pOPUP_LINK;
+	}
 	public String getPOPUP_USE() {
 		return POPUP_USE;
 	}

@@ -44,6 +44,20 @@
        <put-attribute name="content" value="/WEB-INF/views/error/error500.jsp"/>
     </definition>
     
+    <definition name="join-step-1" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/joinStart.jsp"/>
+    </definition>
+    
+    <definition name="join-step-2" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/agree.jsp"/>
+    </definition>
+    
+    <definition name="join-step-3" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/join.jsp"/>
+    </definition>
+    
+    
+    
     
     
     
@@ -120,7 +134,7 @@
     <definition name="community" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524.jsp"/>
     </definition>
-    
+
     <definition name="community.detail" extends="subBannerLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524_D.jsp"/>
     </definition>
