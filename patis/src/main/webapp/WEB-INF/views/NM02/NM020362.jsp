@@ -1041,6 +1041,11 @@ pageEncoding="UTF-8"%>
         <%@ include
         file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
       </div>
+
+      <div class="subTitle_wrap">
+        <div class="subTitle_2">▪면목패션봉제 (면목2동,상봉2동 일대)</div>
+      </div>
+
       <div class="nm020362-content">
         <h3 class="nm020362-title-style-01 nm020361-title-green">
           ▪종합계획도
