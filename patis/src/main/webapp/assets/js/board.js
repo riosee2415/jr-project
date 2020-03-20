@@ -218,9 +218,13 @@ function boardSearchInit() {
 }
 
 function boardSearchEventInit() {
-	$(CURRENT_PAGE + ' #search-type-js').on('click', function() {
+	$('.board-search-type #search-type-js').removeClass('active');
+	$('.board-search-type #search-type-js').attr('onclick', '').unbind('click');
+	$(CURRENT_PAGE + ' #search-type-js').on('click', function(e) {
+		e.preventDefault();
+		
 		$(this).toggleClass('active');
-	
+		
 		if($(this).hasClass('active')) {
 			$(CURRENT_PAGE + ' #search-type-list-js').show();
 		} else {
@@ -228,7 +232,11 @@ function boardSearchEventInit() {
 		}
 	});
 	
-	$(CURRENT_PAGE + ' #search-type-list-js li').on('click', function() {
+	$('.board-search-type #search-type-list-js li').attr('onclick', '').unbind('click');
+	$(CURRENT_PAGE + ' #search-type-list-js li').on('click', function(e) {
+		e.preventDefault();
+		
+		console.log('click');
 		var selectedType = $(this).text();
 		$(CURRENT_PAGE + ' #search-type-js').removeClass('active');
 		$(CURRENT_PAGE + ' #search-type-js .search-type-text').text(selectedType);
