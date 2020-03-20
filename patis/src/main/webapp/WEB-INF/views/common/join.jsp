@@ -27,16 +27,16 @@ pageEncoding="UTF-8"%>
             <ul class="join-right">
               <li>
                 <div>
-                  <input type="text" /><button class="overlap" type="button">
+                  <input type="text" id="joinId"/><button class="overlap" type="button" onclick="javascript:idDupleCheckAjax()">
                     중복확인
                   </button>
                 </div>
-                <span>8 에서 14 사이의 값을 입력하세요.</span>
+                <span>8자리 이상 14자리 이하로 입력하세요.(공백, 특수문자 불가)</span>
               </li>
               <li><input type="text" /></li>
               <li>
                 <input type="text" />
-                <span>비밀번호 길이는 8 에서 14 사이의 값을 입력하세요. </span>
+                <span>비밀번호 길이는 8자리 이상 14자리 이하로 입력하세요. </span>
               </li>
               <li><input type="text" /></li>
               <li>
@@ -83,3 +83,6 @@ pageEncoding="UTF-8"%>
     </div>
   </div>
 </div>
+
+
+<script src="/assets/js/phoneAuth.js"></script>

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
@@ -17,6 +19,9 @@ public class EmployeeController {
 
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
+	
+	@Resource(name = "employeeService")
+	private I_EmployeeService employeeService;
 	
 	@RequestMapping(value="/join-step-1.do", method=RequestMethod.GET)
 	public String login(Model model) throws Exception {
@@ -64,6 +69,24 @@ public class EmployeeController {
 		
 		
 		return "phonePop";
+	}
+	
+	
+	
+	@RequestMapping(value="/idDupleCheckAjax.do", method=RequestMethod.POST)
+	@ResponseBody
+	public String idDupleCheckAjax(@RequestParam("joinId")String joinId ,Model model) throws Exception {
+			
+		int result = employeeService.dupleCheckId(joinId);
+		
+		System.out.println(result);
+		System.out.println(result);
+		System.out.println(result);
+		System.out.println(result);
+		System.out.println(result);
+		System.out.println(result);
+		
+		return "OK";
 	}
 	
 }

@@ -7,17 +7,23 @@
 		  FROM
 		  	 (
 		         SELECT   USER_EMAIL,
-		               		USER_RIGHT
-		           FROM   EMP
+		               	  USER_RIGHT
+		           FROM   JR_DB.EMP
 		          <![CDATA[
 		          WHERE   USER_RIGHT <=    (
 						                              SELECT    BOARD_CONTROLL_RIGHT
 						                                FROM   ACCEPT_RIGHT
-						                               WHERE   BOARD_TYPE = #{b_type}
+						                               WHERE   BOARD_TYPE = #{BOARD_TYPE}
 						                           )
               ]]>
 		      )  A
 		  WHERE  USER_RIGHT != 1;
 	</select>
 
+
+	<select id="DUPLE_CHECK_ID" resultType="int" parameterType="str">
+		SELECT	COUNT(*)
+		  FROM	JR_DB.EMP
+		 WHERE	USER_ID = #{joinId}
+	</select>
 </mapper>
