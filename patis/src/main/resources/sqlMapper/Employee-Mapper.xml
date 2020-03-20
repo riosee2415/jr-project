@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Employee-Mapper">
+
+	<select id="GET_EMP_LIST_FOR_MAIL" resultType="empVO" parameterType="str">
+		SELECT   A.USER_EMAIL
+		  FROM
+		  	 (
+		         SELECT   USER_EMAIL,
+		               		USER_RIGHT
+		           FROM   EMP
+		          <![CDATA[
+		          WHERE   USER_RIGHT <=    (
+						                              SELECT    BOARD_CONTROLL_RIGHT
+						                                FROM   ACCEPT_RIGHT
+						                               WHERE   BOARD_TYPE = #{b_type}
+						                           )
+              ]]>
+		      )  A
+		  WHERE  USER_RIGHT != 1;
+	</select>
+
+</mapper>
