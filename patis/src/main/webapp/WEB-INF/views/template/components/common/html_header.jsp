@@ -13,8 +13,8 @@ uri="http://java.sun.com/jsp/jstl/fmt"%>
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    <meta name="author" content="중랑구 도시재생지원센터" />
-    <meta name="keywords" content="중랑구 도시재생지원센터" />
+    <meta name="author" content="중랑구 도시재생지원포털" />
+    <meta name="keywords" content="중랑구 도시재생지원포털" />
     <meta
       name="description"
       content="중랑구 도시재생, 도시재생사업 소개, 주민참여, 알림마당, 도시재생 교육, 도시재생 공모사업, 도시재생 빅데이터"
@@ -22,13 +22,13 @@ uri="http://java.sun.com/jsp/jstl/fmt"%>
 
     <!-- OG tag  -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="중랑구 도시재생지원센터" />
-    <meta property="og:site_name" content="중랑구 도시재생지원센터" />
+    <meta property="og:title" content="중랑구 도시재생지원포털" />
+    <meta property="og:site_name" content="중랑구 도시재생지원포털" />
     <meta
       property="og:discription"
       content="중랑구 도시재생, 도시재생사업 소개, 주민참여, 알림마당, 도시재생 교육, 도시재생 공모사업, 도시재생 빅데이터"
     />
-    <title>중랑구 도시재생지원센터</title>
+    <title>중랑구 도시재생지원포털</title>
     <link
       rel="shortcut icon"
       type="image/x-icon"
