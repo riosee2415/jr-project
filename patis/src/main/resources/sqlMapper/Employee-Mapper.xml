@@ -26,4 +26,46 @@
 		  FROM	JR_DB.EMP
 		 WHERE	USER_ID = #{joinId}
 	</select>
+	
+	
+	<insert id="SET_EMP" parameterType="hashMap">
+		INSERT INTO JR_DB.EMP
+		(
+			USER_ID,
+			USER_PASSWORD,
+			USER_NAME,
+			USER_RIGHT,
+			USER_TEL,
+			
+			USER_MOBILE,
+			USER_EMAIL,
+			SECRET_KEY,
+			USER_ZONECODE,
+			USER_ADDR1,
+			
+			USER_ADDR2,
+			USER_REGNO1,
+			USER_REGNO2,
+			USER_GENDER
+		)
+		VALUES
+		(
+			#{joinId},
+			#{joinPassword},
+			#{joinName},
+			4,
+			#{joinTel},
+			
+			#{joinMobile},
+			#{joinEmail},
+			#{secretKey},
+			#{joinZonecode},
+			#{joinAddr1},
+			
+			#{joinAddr2},
+			'000000',
+			'0000000',
+			'1'
+		)
+	</insert>
 </mapper>

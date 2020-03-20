@@ -2,6 +2,7 @@
 var g_joinId;
 var g_dupleCheck = false;
 var g_passCheck = false;
+var g_password;
 
 var zoneCode = document.getElementById("joinZondeCode");
 var roadAddr = document.getElementById("joinRoadAddr");
@@ -96,10 +97,12 @@ function idDupleCheckAjax(){
 
 				if(data == 0 ){
 					console.log("가입 가능");
+					g_joinId = joinId;
 					g_dupleCheck = true;
 				} else {
 					console.log("가입 불가능");
 					$("#joinId").focus();
+					g_dupleCheck = false;
 					return;
 				}
 			}
@@ -134,6 +137,7 @@ function keyDownCheck(){
 	
 	if(pass === pass2){
 		$("#passCheckSpan").html("일치");
+		g_password = pass2;
 		g_passCheck = true;
 	}
 }
@@ -214,8 +218,36 @@ function joinBtnHandler(){
 	}
 	
 	
-	if(proFlag){
-		console.log("가입진행");
+	// START JOIN US
+	if(proFlag && g_dupleCheck){
+		$.ajax({
+			url 	: "/joinUs.do",
+			type	: "post",
+			data	: { 
+						"joinId" : g_joinId,
+						"joinName" : joinName.value,
+						"joinPassword" : g_password,
+						"joinZonecode" : zoneCode.value,
+						"joinAddr1" : roadAddr.value,
+						"joinAddr2" : detailAddr.value,
+						"joinEmail" : joinEmail.value,
+						"joinMobile" : joinMobile1.value + joinMobile2.value + joinMobile3.value,
+						"joinTel" : joinTel1.value + joinTel2.value + joinTel3.value
+					  },
+			success : function(data){
+				
+				var firm = confirm("가입이 완료되었습니다. 로그인 하시겠습니까?");
+				
+				if(firm){
+					$("#loginFrm").submit();
+				} else {
+					$("#mainFrm").submit();
+				}
+				
+			}
+		});
+	} else {
+		return;
 	}
 	
 }

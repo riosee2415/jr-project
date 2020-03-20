@@ -19,8 +19,46 @@ public class EmpVO {
 	private String USER_ZONECODE;
 	private String USER_ADDR1;
 	private String USER_ADDR2;
+	private String USER_REGNO1;
+	private String USER_REGNO2;
+	private String USER_GENDER;
+	private int USER_LOGIN_TRY;
+	
+
 	
 	
+	public String getUSER_REGNO1() {
+		return USER_REGNO1;
+	}
+
+	public void setUSER_REGNO1(String uSER_REGNO1) {
+		USER_REGNO1 = uSER_REGNO1;
+	}
+
+	public String getUSER_REGNO2() {
+		return USER_REGNO2;
+	}
+
+	public void setUSER_REGNO2(String uSER_REGNO2) {
+		USER_REGNO2 = uSER_REGNO2;
+	}
+
+	public String getUSER_GENDER() {
+		return USER_GENDER;
+	}
+
+	public void setUSER_GENDER(String uSER_GENDER) {
+		USER_GENDER = uSER_GENDER;
+	}
+
+	public int getUSER_LOGIN_TRY() {
+		return USER_LOGIN_TRY;
+	}
+
+	public void setUSER_LOGIN_TRY(int uSER_LOGIN_TRY) {
+		USER_LOGIN_TRY = uSER_LOGIN_TRY;
+	}
+
 
 	public String getUSER_ZONECODE() {
 		return USER_ZONECODE;

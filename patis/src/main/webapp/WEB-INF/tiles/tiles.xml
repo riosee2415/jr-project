@@ -63,7 +63,9 @@
        <put-attribute name="content" value="/WEB-INF/views/common/join.jsp"/>
     </definition>
     
-    
+    <definition name="login" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/login.jsp"/>
+    </definition>
     
     
     

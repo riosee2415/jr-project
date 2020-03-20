@@ -88,5 +88,8 @@ pageEncoding="UTF-8"%>
   </div>
 </div>
 
+<form id="mainFrm" action="${pageContext.request.contextPath }/main.do" method="get"></form>
+<form id="loginFrm" action="${pageContext.request.contextPath }/login.do" method="get"></form>
+
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="/assets/js/phoneAuth.js"></script>

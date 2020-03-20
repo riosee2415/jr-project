@@ -1,6 +1,8 @@
 package com.patis.common.employee;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -24,7 +26,7 @@ public class EmployeeController {
 	private I_EmployeeService employeeService;
 	
 	@RequestMapping(value="/join-step-1.do", method=RequestMethod.GET)
-	public String login(Model model) throws Exception {
+	public String join(Model model) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -71,6 +73,12 @@ public class EmployeeController {
 		return "phonePop";
 	}
 	
+	@RequestMapping(value="/login.do", method=RequestMethod.GET)
+	public String login(Model model) throws Exception {
+		
+		
+		return "login";
+	}
 	
 	
 	@RequestMapping(value="/idDupleCheckAjax.do", method=RequestMethod.POST)
@@ -79,14 +87,37 @@ public class EmployeeController {
 			
 		int result = employeeService.dupleCheckId(joinId);
 		
-		System.out.println(result);
-		System.out.println(result);
-		System.out.println(result);
-		System.out.println(result);
-		System.out.println(result);
-		System.out.println(result);
-		
 		return result + "";
 	}
+	
+	@RequestMapping(value="/joinUs.do", method=RequestMethod.POST)
+	public String joinUs(	@RequestParam("joinId")String joinId 
+						,	@RequestParam("joinName")String joinName 
+						,	@RequestParam("joinPassword")String joinPassword 
+						,	@RequestParam("joinZonecode")String joinZonecode 
+						,	@RequestParam("joinAddr1")String joinAddr1 
+						,	@RequestParam("joinAddr2")String joinAddr2 
+						,	@RequestParam("joinEmail")String joinEmail 
+						,	@RequestParam("joinMobile")String joinMobile 
+						,	@RequestParam("joinTel")String joinTel 
+						,	Model model) throws Exception {
+			
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("joinId", joinId);
+		params.put("joinName", joinName);
+		params.put("joinPassword", joinPassword);
+		params.put("joinZonecode", joinZonecode);
+		params.put("joinAddr1", joinAddr1);
+		params.put("joinAddr2", joinAddr2);
+		params.put("joinEmail", joinEmail);
+		params.put("joinMobile", joinMobile);
+		params.put("joinTel", joinTel);
+		
+		int result = employeeService.joinUs(params);
+		
+		return "redirect:/main.do";
+	}
+	
 	
 }
