@@ -18,7 +18,7 @@ public class EmployeeController {
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
 	
-	@RequestMapping(value="/login.do", method=RequestMethod.GET)
+	@RequestMapping(value="/join-step-1.do", method=RequestMethod.GET)
 	public String login(Model model) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
@@ -28,10 +28,11 @@ public class EmployeeController {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		return "common/login";
+		return "join-step-1";
 	}
 	
-	@RequestMapping(value="/joinStart.do", method=RequestMethod.GET)
+	
+	@RequestMapping(value="/join-step-2.do", method=RequestMethod.POST)
 	public String joinStart(Model model) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
@@ -41,10 +42,11 @@ public class EmployeeController {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		return "common/joinStart";
+		return "join-step-2";
 	}
 	
-	@RequestMapping(value="/agree.do", method=RequestMethod.GET)
+	
+	@RequestMapping(value="/join-step-3.do", method=RequestMethod.POST)
 	public String agree(Model model) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
@@ -54,20 +56,14 @@ public class EmployeeController {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		return "common/agree";
+		return "join-step-3";
 	}
 	
-	@RequestMapping(value="/join.do", method=RequestMethod.GET)
-	public String join(Model model) throws Exception {
+	@RequestMapping(value="/phonePop.do", method=RequestMethod.GET)
+	public String phonePop(Model model) throws Exception {
 		
-		List<CommonVO> menuList = middlewareService.getMenu();
-		model.addAttribute("menuList", menuList);
-		List<CommonVO> subMenuList = middlewareService.getSubMenu();
-		model.addAttribute("subMenuList", subMenuList);
-		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
-		model.addAttribute("DetailMenuList", DetailMenuList);
 		
-		return "common/join";
+		return "phonePop";
 	}
 	
 }

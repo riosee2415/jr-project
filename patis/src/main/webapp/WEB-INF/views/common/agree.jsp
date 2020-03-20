@@ -395,8 +395,8 @@ pageEncoding="UTF-8"%>
       </p>
       <p class="content">이 약관은 2020년 3월 4일부터 시행됩니다.</p>
     </div>
-    <div class="agree-check">
-      <input type="checkbox" />이용약관에 동의 합니다. (동의해야만 회원가입
+    <div class="agree-check" >
+      <input type="checkbox" id="chk-agree-1" name="chk-agree-1" />이용약관에 동의 합니다. (동의해야만 회원가입
       가능)
     </div>
   </div>
@@ -758,12 +758,18 @@ pageEncoding="UTF-8"%>
       </p>
     </div>
     <div class="agree-check">
-      <input type="checkbox" />개인정보 수집·이용에 동의합니다. (동의해야만
+      <input type="checkbox" id="chk-agree-2" name="chk-agree-2" />개인정보 수집·이용에 동의합니다. (동의해야만
       회원가입 가능)
     </div>
   </div>
   <div class="join-button">
-    <button type="button" class="join-btn-01">회원가입</button>
+    <button type="button" class="join-btn-01" onclick="javascript:agreeChecked()">회원가입</button>
     <button type="button" class="join-btn-02">취소</button>
   </div>
 </div>
+
+
+<form id="step3Frm" action="${pageContext.request.contextPath }/join-step-3.do" method="POST"></form>
+
+
+<script src="/assets/js/phoneAuth.js"></script>

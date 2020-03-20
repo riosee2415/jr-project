@@ -21,7 +21,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         </button>
       </div>
       <div class="join">
-        <button type="button" onclick="javacript:pageLink('/join.do')">
+        <button type="button" onclick="javacript:pageLink('/join-step-1.do')">
           <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
         </button>
       </div>

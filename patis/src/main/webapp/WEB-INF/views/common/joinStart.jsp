@@ -95,7 +95,7 @@ pageEncoding="UTF-8"%>
               <li class="btn_com">
                 <a
                   href=""
-                  onclick="window.open(this.href, '_blank', 'width=500px,height=700px,toolbars=no,scrollbars=no'); return false;"
+                  onclick="javascript:openPhonePop()"
                   class="mem_login_btn1"
                 >
                   14세 이상 로그인
@@ -118,4 +118,9 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
   </div>
-</div>
+</div> 
+
+<form id="step2Frm" action="${pageContext.request.contextPath }/join-step-2.do" method="POST"></form>
+
+
+<script src="/assets/js/phoneAuth.js"></script>

@@ -21,6 +21,10 @@
        <put-attribute name="sub_top_menu" value="/WEB-INF/views/template/components/sub_top_menu.jsp"/>
     </definition> 
     
+    <definition name="emptyLayout" template="/WEB-INF/views/template/layouts/empty_layout.jsp">
+       <put-attribute name="content" value=""/>
+    </definition>    
+    
 <!-- 	관리자 페이지 레이아웃 -->
     <definition name="adminLayout" template="/WEB-INF/views/template/layouts/admin_layout.jsp">
        <put-attribute name="header" value="/WEB-INF/views/template/components/admin_header.jsp"/>
@@ -28,6 +32,9 @@
        <put-attribute name="footer" value="/WEB-INF/views/template/components/admin_footer.jsp"/>
        <put-attribute name="content" value=""/>
     </definition> 
+    
+
+	
 
 
 
@@ -324,24 +331,11 @@
     
     
     
-<!-- 테스트 화면 -->
-    <definition name="phone1" extends="adminLayout">
-       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup1.jsp"/>
+<!-- 인증 팝업 화면 -->
+	<definition name="phonePop" extends="emptyLayout">
+       <put-attribute name="content" value="/WEB-INF/views/authPhone/testPhone.jsp"/>
     </definition>
-    
-    <definition name="phone2" extends="adminLayout">
-       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup2.jsp"/>
-    </definition>
-    
-    <definition name="phone3" extends="adminLayout">
-       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup3.jsp"/>
-    </definition>
-    
-    <definition name="phone4" extends="adminLayout">
-       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup4.jsp"/>
-    </definition>
-    
-    
+
     
     
     
