@@ -146,6 +146,7 @@ h3.join-title span {
   padding-left: 10px;
 }
 .postNum {
+  margin-left:6px;
   outline: none;
   border: none;
   color: #fff;
