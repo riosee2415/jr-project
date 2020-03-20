@@ -96,7 +96,7 @@
     margin-top: 70px;
     margin-bottom: 70px;
   }
-   .sub-main-title-blue {
+  .sub-main-title-blue {
     font-size: 22px;
     color: #2572ba;
     font-weight: bold;
@@ -112,5 +112,9 @@
   .sub-container {
     width: 360px;
     margin: 50px auto;
+  }
+
+  .subTitle_2 {
+    font-size: 20px;
   }
 }
