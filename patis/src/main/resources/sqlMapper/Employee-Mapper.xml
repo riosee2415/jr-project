@@ -12,7 +12,7 @@
 		          <![CDATA[
 		          WHERE   USER_RIGHT <=    (
 						                              SELECT    BOARD_CONTROLL_RIGHT
-						                                FROM   ACCEPT_RIGHT
+						                                FROM   JR_DB.ACCEPT_RIGHT
 						                               WHERE   BOARD_TYPE = #{BOARD_TYPE}
 						                           )
               ]]>

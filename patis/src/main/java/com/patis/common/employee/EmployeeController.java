@@ -86,7 +86,7 @@ public class EmployeeController {
 		System.out.println(result);
 		System.out.println(result);
 		
-		return "OK";
+		return result + "";
 	}
 	
 }

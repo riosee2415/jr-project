@@ -1,10 +1,29 @@
 // Global Variable Area
 var g_joinId;
+var g_dupleCheck = false;
+var g_passCheck = false;
 
+var zoneCode = document.getElementById("joinZondeCode");
+var roadAddr = document.getElementById("joinRoadAddr");
+var detailAddr = document.getElementById("joinDetailAddr");
+
+var joinName = document.getElementById("joinName");
+
+var joinEmail = document.getElementById("joinEmail");
+var joinEmailAddr = document.getElementById("joinEmailAddr");
+
+var joinMobile1 = document.getElementById("joinMobile-1");
+var joinMobile2 = document.getElementById("joinMobile-2");
+var joinMobile3 = document.getElementById("joinMobile-3");
+
+var joinTel1 = document.getElementById("joinTel-1");
+var joinTel2 = document.getElementById("joinTel-2");
+var joinTel3 = document.getElementById("joinTel-3");
 
 function openPhonePop() {
 	window.open("/phonePop.do", '_blank', 'width=500px,height=700px,toolbars=no,scrollbars=no');
 }
+
 
 
 function nextStep(){
@@ -74,7 +93,15 @@ function idDupleCheckAjax(){
 			type	: "post",
 			data	: { "joinId" : joinId},
 			success : function(data){
-				console.log(data);
+
+				if(data == 0 ){
+					console.log("가입 가능");
+					g_dupleCheck = true;
+				} else {
+					console.log("가입 불가능");
+					$("#joinId").focus();
+					return;
+				}
 			}
 		});
 	} else {
@@ -82,12 +109,116 @@ function idDupleCheckAjax(){
 		$("#joinId").focus();
 		return;
 	}
-	
 }
 
 
 
+function keyDownPassword(){
+	
+	var pass = $("#joinPass-1").val();
+	
+	var passwordRules = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
 
+		
+	if(passwordRules.test(pass)){
+		$(".password_validation").css("color", "blue");
+	} else {
+		$(".password_validation").css("color", "red");
+	}
+
+}
+
+function keyDownCheck(){
+	var pass = $("#joinPass-1").val();
+	var pass2 = $("#joinPass-2").val();
+	
+	if(pass === pass2){
+		$("#passCheckSpan").html("일치");
+		g_passCheck = true;
+	}
+}
+
+
+function openAddrPopup(){
+	 new daum.Postcode({
+	        oncomplete: function(data) {
+	        	zoneCode.value = data.zonecode;
+	        	roadAddr.value = data.roadAddress;
+	        	detailAddr.focus();
+	        	
+	        }
+	    }).open();
+}
+
+
+function joinBtnHandler(){
+	
+	var proFlag = false;
+	
+	// ID CHECK
+	if(g_dupleCheck) {
+		proFlag = true;
+	} else {
+		proFlag = false;
+		alert("아이디 중복검사 안됨");
+		return;
+	}
+	
+	// NAME CHECK
+	if( (joinName.value == "" || joinName.value == null) ){
+		proFlag = false;
+		alert("이름 없음");
+		joinName.focus();
+		return;
+	} else {
+		proFlag = true;
+	}
+	
+	// PASSWORD CHECK
+	if(g_passCheck) {
+		proFlag = true;
+	} else {
+		proFlag = false;
+		alert("비밀번호 안맞음");
+		return;
+	}
+	
+	// ADDRESS CHECK
+	if( (zoneCode.value == "" || zoneCode.value == null) && (roadAddr.value == "" || roadAddr.value == null)){
+		proFlag = false;
+		alert("주소 없음");
+		return;
+	} else {
+		proFlag = true;
+	}
+	
+	
+	// EMAIL CHECK
+	if( (joinEmail.value == "" || joinEmail.value == null) && (joinEmailAddr.value == "" || joinEmailAddr.value == null) ){
+		proFlag = false;
+		alert("이메일 없음");
+		joinEmail.focus();
+		return;
+	} else {
+		proFlag = true;
+	}
+	
+	// MOBILE CHECK
+	if( (joinMobile1.value == "" || joinMobile1.value == null) && (joinMobile2.value == "" || joinMobile2.value == null) && (joinMobile3.value == "" || joinMobile3.value == null)){
+		proFlag = false;
+		alert("휴대폰 번호 없음");
+		joinMobile1.focus();
+		return;
+	} else {
+		proFlag = true;
+	}
+	
+	
+	if(proFlag){
+		console.log("가입진행");
+	}
+	
+}
 
 
 

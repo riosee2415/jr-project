@@ -33,24 +33,28 @@ pageEncoding="UTF-8"%>
                 </div>
                 <span>8자리 이상 14자리 이하로 입력하세요.(공백, 특수문자 불가)</span>
               </li>
-              <li><input type="text" /></li>
+              <li><input type="text" id="joinName" maxlength="5" /></li>
               <li>
-                <input type="text" />
-                <span>비밀번호 길이는 8자리 이상 14자리 이하로 입력하세요. </span>
+                <input type="password" id="joinPass-1" onkeyup="javascript:keyDownPassword()"/>
+                <span class="password_validation">8자리 이상 영문, 숫자, 특수문자를 조합하세요. (공백( ), 콤마(,), 마침표(.), 콜론(;/:), 슬러시(/) 사용불가)</span>
               </li>
-              <li><input type="text" /></li>
+              <li>
+              	<input type="password" id="joinPass-2" onkeyup="javascript:keyDownCheck()"/>
+              		<span class="" id="passCheckSpan"></span>	
+              </li>
+              
               <li>
                 <div class="post-up">
-                  <button type="button" class="postNum">우편번호찾기</button>
-                  <input class="post-box-01" type="text" />
+                  <button type="button" class="postNum" onclick="javascript:openAddrPopup()">우편번호찾기</button>
+                  <input class="post-box-01" id="joinZondeCode" type="text" readonly />
                 </div>
                 <div class="post-down">
-                  <input class="post-box-02" type="text" />
-                  <input class="post-box-02" type="text" />
+                  <input class="post-box-02" id="joinRoadAddr" type="text" readonly/>
+                  <input class="post-box-02" id="joinDetailAddr" type="text" />
                 </div>
               </li>
               <li>
-                <input type="text" />@<input class="emailBox" type="text" />
+                <input type="text" id="joinEmail"/>@<input class="emailBox" type="text" id="joinEmailAddr"/>
                 <select
                   onclick="javascript:emailSelection()"
                   class="email"
@@ -63,19 +67,19 @@ pageEncoding="UTF-8"%>
                 </select>
               </li>
               <li>
-                <input type="text" />-<input type="text" />-<input
-                  type="text"
-                />
+                <input type="text" id="joinMobile-1" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                -<input type="text" id="joinMobile-2" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                -<input id="joinMobile-3" maxlength="4" type="text"onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
               </li>
               <li>
-                <input type="text" />-<input type="text" />-<input
-                  type="text"
-                />
+                 <input type="text" id="joinTel-1" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                -<input type="text" id="joinTel-2" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                -<input type="text" id="joinTel-3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
               </li>
             </ul>
           </div>
           <div class="join-button">
-            <button type="button" class="join-btn-01">가입</button>
+            <button type="button" class="join-btn-01" onclick="javascript:joinBtnHandler()">가입</button>
             <button type="button" class="join-btn-02">취소</button>
           </div>
         </div>
@@ -84,5 +88,5 @@ pageEncoding="UTF-8"%>
   </div>
 </div>
 
-
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="/assets/js/phoneAuth.js"></script>
