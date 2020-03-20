@@ -159,6 +159,8 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 					$('#tx_canvas iframe').contents().find('body').find('.txc-file').remove();
 			}
 		});
+		if(mode == 'WRITE')
+			sendBoardWriteMail(b_type);
 		Editor.save();
 	}
 }
@@ -415,4 +417,16 @@ function fileDownload(fileNo, filePath, fileName, obj) {
 	$("#frm-download input[name='filePath']").val(filePath);
 	$("#frm-download input[name='fileName']").val(fileName);
 	$("#frm-download").submit();
+}
+
+function sendBoardWriteMail(b_type) {
+	$.ajax({
+		url: '/sendBoardWriteMail.do',
+		type: 'post',
+		dataType: 'json',
+		data: {'b_type': b_type},
+		error: function() {
+			console.log('error');
+		}
+	});
 }

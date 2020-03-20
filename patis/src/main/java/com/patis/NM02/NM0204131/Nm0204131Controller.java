@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.patis.common.file.I_FileService;
+import com.patis.common.mail.I_MailService;
 import com.patis.common.tempFile.I_TempFileService;
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.Accept_typeVO;
@@ -240,6 +241,7 @@ public class Nm0204131Controller {
 			boardNo = boardVO.getB_NO();
 			
 			rttr.addFlashAttribute("msg", "게시글이 등록되었습니다.");
+			
 			url = "redirect:/statute.do";
 		} else {
 			boardNo = b_no;

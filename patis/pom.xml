@@ -30,16 +30,26 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<!-- spring-web-mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
 
+		<!-- spring-tx -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- spring-context-support -->
+		<dependency>
+		 <groupId>org.springframework</groupId>
+		 <artifactId>spring-context-support</artifactId>
+		 <version>${org.springframework-version}</version>
 		</dependency>
 
 		<!-- spring-jdbc -->
@@ -171,6 +181,20 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
+		
+		<!-- mail-api -->
+		<dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>javax.mail-api</artifactId>
+        <version>1.5.5</version>
+    </dependency>
+
+		<!-- mail -->
+    <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.7</version>
+    </dependency>
 
 		<!-- AspectJ -->
 		<dependency>
