@@ -16,6 +16,35 @@ public class EmpVO {
 	private String USER_AVATAR;
 	private String USER_EMAIL;
 	private String SECRET_KEY;
+	private String USER_ZONECODE;
+	private String USER_ADDR1;
+	private String USER_ADDR2;
+	
+	
+
+	public String getUSER_ZONECODE() {
+		return USER_ZONECODE;
+	}
+
+	public void setUSER_ZONECODE(String uSER_ZONECODE) {
+		USER_ZONECODE = uSER_ZONECODE;
+	}
+
+	public String getUSER_ADDR1() {
+		return USER_ADDR1;
+	}
+
+	public void setUSER_ADDR1(String uSER_ADDR1) {
+		USER_ADDR1 = uSER_ADDR1;
+	}
+
+	public String getUSER_ADDR2() {
+		return USER_ADDR2;
+	}
+
+	public void setUSER_ADDR2(String uSER_ADDR2) {
+		USER_ADDR2 = uSER_ADDR2;
+	}
 
 	public int getUSER_NO() {
 		return USER_NO;
