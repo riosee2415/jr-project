@@ -96,22 +96,6 @@ pageEncoding="UTF-8"%>
           <ul class="tbl-style-con tbl-style-numcon">
             <li>02-6951-0100</li>
           </ul>
-          <!-- <ul class="tbl-style-image1">
-            <li>
-              <img
-                src="/assets/images/image/sub-nm0363-02-02.png"
-                alt="묵2동 도시재생지원센터 이미지1"
-                class="sub-nm0363-02-02"
-              />
-            </li>
-            <li>
-              <img
-                src="/assets/images/image/sub-nm0363-02-03.png"
-                alt="묵2동 도시재생지원센터 이미지2"
-                class="sub-nm0363-02-03"
-              />
-            </li>
-          </ul> -->
         </div>
       </div>
 

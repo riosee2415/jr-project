@@ -1004,7 +1004,7 @@ pageEncoding="UTF-8"%>
       </h3>
       <div class="nm020362-content-img__box">
         <img
-          src="/assets/images/image/sub-nm62-02-03.png"
+          src="http://placehold.it/315x311?text=sample"
           alt="중화2동(희망지사업) 거점시설"
           class="nm020362-content-img-02-03"
         />
