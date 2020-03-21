@@ -98,6 +98,14 @@ h3.join-title span {
   padding-top: 10px;
   vertical-align: -webkit-baseline-middle;
 }
+.join-right li:nth-child(3) {
+	display:flex;
+	justify-content: flex-start;
+}
+.join-right li:nth-child(3) div:last-child{
+	line-height: 1;
+	padding-top:10px;
+}
 .join-left li:nth-child(5) {
   background-color: #d4e6f1;
 }

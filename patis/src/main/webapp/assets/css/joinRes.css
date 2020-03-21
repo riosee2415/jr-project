@@ -99,7 +99,7 @@
     padding-top: 4px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    height: 55px;
+    height: 70px;
   }
   .join-right li:nth-child(n + 6):nth-child(-n + 8) input,
   .join-right select {
@@ -108,10 +108,17 @@
   .join-left li {
     font-size: 12px;
   }
+  
   .join-box__infobox ul li {
+  height:70px;
+  line-height:70px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+  .join-right li:nth-child(3) div:last-child {
+    line-height: 0.5;
+    margin-top:-10px;
+}
   .join-right input,
   .join-right select {
     padding: 4px;
