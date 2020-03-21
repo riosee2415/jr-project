@@ -96,13 +96,16 @@ function idDupleCheckAjax(){
 			success : function(data){
 
 				if(data == 0 ){
-					console.log("가입 가능");
+					alert("사용 가능한 아이디입니다.");
 					g_joinId = joinId;
 					g_dupleCheck = true;
+					$("#joinId").css("border", "1.5px solid #6ab04c");
+					
 				} else {
-					console.log("가입 불가능");
+					alert("사용 불가능한 아이디 입니다.");
 					$("#joinId").focus();
 					g_dupleCheck = false;
+					$("#joinId").css("border", "1.5px solid #e74c3c");
 					return;
 				}
 			}
@@ -125,8 +128,10 @@ function keyDownPassword(){
 		
 	if(passwordRules.test(pass)){
 		$(".password_validation").css("color", "blue");
+		$("#joinPass-1").css("border", "1.5px solid #6ab04c");
 	} else {
-		$(".password_validation").css("color", "red");
+		$(".password_validation").css("color", "#e74c3c");
+		$("#joinPass-1").css("border", "1.5px solid #e74c3c");
 	}
 
 }
@@ -139,6 +144,7 @@ function keyDownCheck(){
 		$("#passCheckSpan").html("일치");
 		g_password = pass2;
 		g_passCheck = true;
+		$("#joinPass-1, #joinPass-2").css("border", "1.5px solid #6ab04c");
 	}
 }
 
