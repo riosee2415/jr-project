@@ -12,6 +12,11 @@
 </div>
 
 <div class="user_detailData_area">
+	<div><label>생년월일</label></div>
+	<div><input id="userInfo-userRegno" type="text" value="${user.USER_REGNO1 }" readonly/></div>
+</div>
+
+<div class="user_detailData_area">
 	<div><label>소속부서</label></div>
 	<div><input id="userInfo-userDept" type="text" value="${user.USER_DEPARTMENT }" /></div>
 </div>
@@ -47,14 +52,26 @@
 </div>
 
 <div class="user_detailData_area">
-	<div><label>비밀번호 힌트</label></div>
-	<div><input id="userInfo-userHint" type="text" value="${user.PASS_HINT }" readonly/></div>
+	<div><label>우편번호</label></div>
+	<div><input id="userInfo-userZonecode" type="text" value="${user.USER_ZONECODE }" readonly/></div>
 </div>
 
 <div class="user_detailData_area">
-	<div><label>비밀번호 힌트 답변</label></div>
-	<div><input id="userInfo-userAnswer" type="text" value="${user.HINT_ANSWER }" readonly/></div>
+	<div><label>도로명 주소</label></div>
+	<div><input id="userInfo-userAddr1" type="text" value="${user.USER_ADDR1 }" /></div>
 </div>
+
+<div class="user_detailData_area">
+	<div><label>상세주소</label></div>
+	<div><input id="userInfo-userAddr2" type="text" value="${user.USER_ADDR2 }" /></div>
+</div>
+
+<div class="user_detailData_area">
+	<div><label>로그인 실패 횟수</label></div>
+	<div><input id="userInfo-login-try" type="text" value="${user.USER_LOGIN_TRY }" readonly/></div>
+</div>
+
+
 
 
 <div class="user_detailData_area">

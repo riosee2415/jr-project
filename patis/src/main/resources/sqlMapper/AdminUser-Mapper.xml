@@ -37,7 +37,13 @@
 				,A.USER_TEL
 				,A.USER_MOBILE
 				,A.USER_AVATAR
-				,A.USER_EMAIL
+				,A.USER_EMAIL,
+				A.USER_ZONECODE,
+				A.USER_ADDR1,
+				A.USER_ADDR2,
+				A.USER_REGNO1,
+				A.USER_GENDER,
+				A.USER_LOGIN_TRY
 		  FROM	JR_DB.EMP	A
 		 WHERE	A.USER_ID = #{userId}
 	</select>
@@ -49,7 +55,10 @@
 		   		USER_GROUP = #{userGroup},
 		   		USER_TEL = #{userTel},
 		   		USER_MOBILE = #{userMobile},
-		   		USER_EMAIL = #{userEmail}
+		   		USER_EMAIL = #{userEmail},
+		   		USER_ZONECODE = #{userZonecode},
+		   		USER_ADDR1 = #{userAddr1},
+		   		USER_ADDR2 = #{userAddr2}
 	     WHERE	USER_ID = #{userId}
 	</update>
 	

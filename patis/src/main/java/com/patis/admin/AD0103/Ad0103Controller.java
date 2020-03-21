@@ -118,6 +118,9 @@ public class Ad0103Controller {
 								,@RequestParam("userTel")String userTel
 								,@RequestParam("userMobile")String userMobile
 								,@RequestParam("userEmail")String userEmail
+								,@RequestParam("userZonecode")String userZonecode
+								,@RequestParam("userAddr1")String userAddr1
+								,@RequestParam("userAddr2")String userAddr2
 								,RedirectAttributes redirect) {
 		
 		Map<String, Object> params = new HashMap<String, Object>();
@@ -129,6 +132,9 @@ public class Ad0103Controller {
 		params.put("userTel", userTel);
 		params.put("userMobile", userMobile);
 		params.put("userEmail", userEmail);
+		params.put("userZonecode", userZonecode);
+		params.put("userAddr1", userAddr1);
+		params.put("userAddr2", userAddr2);
 		
 		int result = ad0103Service.updateUserInfo(params);
 		

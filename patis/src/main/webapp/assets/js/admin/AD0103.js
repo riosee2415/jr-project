@@ -87,6 +87,9 @@ function saveBtnHandler(){
 		var userTel = $("#userInfo-userTel").val();
 		var userMobile = $("#userInfo-userMobile").val();
 		var userEmail = $("#userInfo-userEmail").val();
+		var userZonecode = $("#userInfo-userZonecode").val();
+		var userAddr1 = $("#userInfo-userAddr1").val();
+		var userAddr2 = $("#userInfo-userAddr2").val();
 		
 		$.ajax({
 			url 	: "/updateUserInfo.do",
@@ -98,7 +101,10 @@ function saveBtnHandler(){
 						"userRight" : userRight,
 						"userTel" : userTel,
 						"userMobile" : userMobile,
-						"userEmail" : userEmail
+						"userEmail" : userEmail,
+						"userZonecode" : userZonecode,
+						"userAddr1" : userAddr1,
+						"userAddr2" : userAddr2
 						},
 			success : function(data){
 				
