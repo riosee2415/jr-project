@@ -113,6 +113,10 @@ prefix="fn" %>
             목록
           </button>
         </div>
+        
+        <div class="share__box">
+					<%@ include file="/WEB-INF/views/template/components/sns_share.jsp" %>
+				</div>
       </div>
 
       <div
