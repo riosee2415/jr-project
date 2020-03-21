@@ -158,7 +158,7 @@ function openAddrPopup(){
 function joinBtnHandler(){
 	
 	if(g_dupleCheck && g_passCheck) {
-		
+		$(".loading").css("display", "block");
 	}
 	
 	var proFlag = false;
