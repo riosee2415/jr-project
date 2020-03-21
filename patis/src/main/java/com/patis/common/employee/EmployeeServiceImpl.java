@@ -7,6 +7,9 @@ import javax.annotation.Resource;
 import org.apache.commons.codec.net.URLCodec;
 import org.springframework.stereotype.Service;
 
+import com.patis.admin.AD01.I_Ad010001DAO;
+import com.patis.middleware.I_MiddlewareService;
+import com.patis.model.EmpVO;
 import com.patis.util.AES256Util;
 
 
@@ -15,7 +18,14 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	
 	@Resource(name="employeeDAO")
 	private I_EmployeeDAO employeeDAO;
+	
+	@Resource(name = "ad010001DAO")
+	private  I_Ad010001DAO ad010001DAO;
 
+	@Resource(name="middlewareService")
+	private I_MiddlewareService middlewareService;
+	
+	
 	@Override
 	public int dupleCheckId(String joinId) {
 		return employeeDAO.dupleCheckId(joinId);
@@ -36,6 +46,27 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 		params.put("secretKey", scKey);
 		
 		return employeeDAO.joinUs(params);
+	}
+
+	@Override
+	public EmpVO mainLogin(Map<String, String> params) throws Exception {
+		try {
+			String privateKey = ad010001DAO.getEmpSecretInfo(params).getSECRET_KEY();
+			String skey = AES256Util.getHexStringKey(privateKey);
+			AES256Util aes256 = new AES256Util(skey);
+			URLCodec codec = new URLCodec();
+		
+			String encPassword = codec.encode(aes256.aesEncode((String)params.get("input_password")));
+			
+			middlewareService.printLog("Encoding password: " + encPassword);
+			
+			params.put("input_password", encPassword);
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		
+		return employeeDAO.mainLogin(params);
 	}
 	
 	

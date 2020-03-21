@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
+import com.patis.model.EmpVO;
 
 @Controller
 public class EmployeeController {
@@ -135,5 +136,35 @@ public class EmployeeController {
 	}
 	
 	
+	@RequestMapping(value="/mainLogin.do", method=RequestMethod.POST)
+	public String mainLogin(@RequestParam("loginId")String loginId ,
+							@RequestParam("loginPass")String loginPass ,
+							Model model) throws Exception {
+		
+		
+		// loginTry 가져와서 3보다 크면 에러 발생
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("input_id", loginId);
+		params.put("input_password", loginPass);
+		
+		EmpVO vo = employeeService.mainLogin(params);
+		
+		if(vo.getUSER_LOGIN_TRY() > 3) {
+			System.out.println("LOGIN 시도 3회 이상 실패");
+			model.addAttribute("loginCode", "1");
+			return "login";
+		}  else {
+			// 로그인 성공
+			
+			// 1. loginTry -> 0으로 업데이트
+			// 2. 새션에 아이디, 이름, 권한 저장
+			// 3. 메인으로 랜더링ㄴ
+		
+		}
+				
+		
+		return "redirect:/main.do";
+	}
 	
 }

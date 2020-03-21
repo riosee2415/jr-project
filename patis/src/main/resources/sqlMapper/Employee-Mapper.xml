@@ -68,4 +68,16 @@
 			'1'
 		)
 	</insert>
+	
+	
+	<select id="LOGIN_USER"  resultType="empVO" parameterType="hashMap">
+		SELECT	USER_ID,
+				USER_NAME,
+				USER_RIGHT,
+				USER_LOGIN_TRY
+		  FROM	JR_DB.EMP
+		 WHERE	USER_ID = #{input_id}
+		   AND	USER_PASSWORD = #{input_password}
+	</select>
+	
 </mapper>
