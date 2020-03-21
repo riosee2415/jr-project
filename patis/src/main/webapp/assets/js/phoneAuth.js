@@ -141,7 +141,6 @@ function keyDownCheck(){
 	var pass2 = $("#joinPass-2").val();
 	
 	if(pass === pass2){
-		$("#passCheckSpan").html("일치");
 		g_password = pass2;
 		g_passCheck = true;
 		$("#joinPass-1, #joinPass-2").css("border", "1.5px solid #6ab04c");
