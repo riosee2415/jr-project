@@ -120,4 +120,20 @@ public class EmployeeController {
 	}
 	
 	
+	@RequestMapping(value="/findId.do", method=RequestMethod.GET)
+	public String findId(Model model) throws Exception {
+		
+		
+		return "findId";
+	}
+	
+	@RequestMapping(value="/findPass.do", method=RequestMethod.GET)
+	public String findPass(Model model) throws Exception {
+		
+		
+		return "findPass";
+	}
+	
+	
+	
 }

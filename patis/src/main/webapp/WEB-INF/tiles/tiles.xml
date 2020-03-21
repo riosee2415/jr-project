@@ -67,6 +67,14 @@
        <put-attribute name="content" value="/WEB-INF/views/common/login.jsp"/>
     </definition>
     
+    <definition name="findId" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/findID.jsp"/>
+    </definition>
+    
+    <definition name="findPass" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/findPW.jsp"/>
+    </definition>
+    
     
     
     
