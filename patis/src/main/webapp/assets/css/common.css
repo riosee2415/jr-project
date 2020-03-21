@@ -124,9 +124,9 @@ caption {
   display: none;
 }
 .empty__box {
-	height: 140px;
-	line-height: 140px;
-	text-align: center;
-	border-top: 1px solid #c2c2c2;
-	border-bottom: 1px solid #c2c2c2;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  border-top: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
 }
