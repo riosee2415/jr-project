@@ -9,7 +9,17 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     /></td>
     <td>${board.b_NO }</td>
     <td class="modal-pop" onclick="javascript:intoComments('${board.b_NO}', '${board.b_TITLE }', '${board.b_AUTHOR }')">${board.b_TITLE }</td>
-    <td>${board.b_AUTHOR }</td>
+    
+    <c:choose>
+	    <c:when test="${board.b_AUTHOR eq null }">
+	   		<td>${board.b_AUTHOR_NONE}</td>
+	    </c:when>
+	    
+	    <c:otherwise>
+	    	<td>${board.b_AUTHOR }</td>
+	    </c:otherwise>
+    </c:choose>
+    
     <td>${board.b_CREATE_TIME }</td>
     <td>${board.b_UPLOAD_TIME }</td>
     <td>${board.b_HIT }</td>

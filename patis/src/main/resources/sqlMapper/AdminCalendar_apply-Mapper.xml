@@ -25,6 +25,7 @@
 					  FROM 	JR_DB.EMP	Z
 					 WHERE  B_AUTHOR = Z.USER_NO
 				) AS B_AUTHOR, 
+				B_AUTHOR_NONE,
 				DATE_FORMAT(B_CREATE_TIME, '%Y/%m/%d/ %H:%i') AS B_CREATE_TIME,
 				DATE_FORMAT(B_UPLOAD_TIME, '%Y/%m/%d/ %H:%i') AS B_UPLOAD_TIME,
 				B_HIT,
@@ -67,7 +68,8 @@
 					SELECT	Z.USER_NAME
 					  FROM 	JR_DB.EMP	Z
 					 WHERE  B_AUTHOR = Z.USER_NO
-				) AS B_AUTHOR, 
+				) AS B_AUTHOR,
+				B_AUTHOR_NONE,
 				DATE_FORMAT(B_CREATE_TIME, '%Y/%m/%d %H:%i:%S') AS B_CREATE_TIME,
 				DATE_FORMAT(B_UPLOAD_TIME, '%Y/%m/%d %H:%i:%S') AS B_UPLOAD_TIME,
 				B_HIT,
@@ -102,7 +104,7 @@
 		        	SELECT	USER_NAME
 		        	  FROM	JR_DB.EMP
 		        	 WHERE	USER_NO = CO_AUTHOR
-		        ) AS CO_AUTHOR
+		        ) AS CO_AUTHOR,
 		  FROM	JR_DB.COMMENTS
 		 WHERE	CO_BOARD_TYPE = 'CALENDAR_APPLY'
 		   AND 	CO_PARENT_NO = #{p_no}
