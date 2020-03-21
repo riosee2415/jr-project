@@ -157,6 +157,10 @@ function openAddrPopup(){
 
 function joinBtnHandler(){
 	
+	if(g_dupleCheck && g_passCheck) {
+		
+	}
+	
 	var proFlag = false;
 	
 	// ID CHECK
