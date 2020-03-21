@@ -224,12 +224,10 @@ public class Nm0204131Controller {
 		
 		for(String tag : tags) {
 			if(tag.contains("</p>")) {
-				System.out.println(tag.substring(0, tag.indexOf("</p>")));
 				b_description += "<p" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
-				System.out.println("<p" + tag.substring(0, tag.indexOf("</p>")) + "</p>");
 			} 
 		}
-		System.out.println(b_description);
+	
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
 		boardVO.setB_GUBUN(b_gubun);

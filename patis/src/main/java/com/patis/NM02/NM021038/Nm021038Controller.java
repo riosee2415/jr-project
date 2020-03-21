@@ -287,7 +287,7 @@ public class Nm021038Controller {
 		
 		for(String tag : tags) {
 			if(tag.contains("</p>")) {
-				b_description += "<p>" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
+				b_description += "<p" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
 			} 
 		}
 		
