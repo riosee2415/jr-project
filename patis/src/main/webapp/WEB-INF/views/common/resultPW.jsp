@@ -45,7 +45,7 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="need_findId">
         ㆍ아이디를 찾으시나요?
-        <div class="go_findId" onclick="">
+        <div class="go_findId" onclick="javascript:pageLink('/findId.do')">
           아이디 찾기 <i class="fa fa-caret-right" aria-hidden="true"></i>
         </div>
       </div>

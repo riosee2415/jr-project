@@ -53,7 +53,7 @@ pageEncoding="UTF-8"%>
                   class="search_ID"
                   maxlength="30"
                   value=""
-                  placeholder="아이디를 입력해주세요."
+                  placeholder="아이디 입력 (예: ID)"
                 />
                 <br />
                 <input
@@ -63,7 +63,7 @@ pageEncoding="UTF-8"%>
                   class="search_ID_Birth"
                   maxlength="8"
                   value=""
-                  placeholder="생년월일을 8자리로 입력해주세요. (예: 19820830)"
+                  placeholder="생년월일 입력 (예: 19820830)"
                   onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                 />
                 <br />
@@ -74,7 +74,7 @@ pageEncoding="UTF-8"%>
                   name="searchEmail"
                   class="search_Email"
                   value=""
-                  placeholder="이메일을 입력해주세요. "
+                  placeholder="이메일 입력 (예: email@domain.com)"
                 />
                 <br />
               </div>
@@ -137,14 +137,14 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="need_findId">
         ㆍ아이디를 찾으시나요?
-        <div class="go_findId" onclick="">
+        <div class="go_findId" onclick="javascript:pageLink('/findId.do')">
           아이디 찾기 <i class="fa fa-caret-right" aria-hidden="true"></i>
         </div>
       </div>
     </div>
   </div>
   
-  <form action="/findPass.do" method="post" id="frm-findpw-type1">
+  <form action="/findPass.do" method="post" id="frm-find-pw-js">
   	<input type="hidden" name="id" />
   	<input type="hidden" name="birth" />
   	<input type="hidden" name="email" />

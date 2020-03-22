@@ -110,12 +110,17 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 		
 		employeeDAO.modifyEmailKey(params);
 		
-		mailService.sendFindPwMail(userId, Integer.toString(emailKey));
+		mailService.sendFindPwMail(userId);
 	}
 
 	@Override
 	public String findIdType2(Map<String, String> params) {
 		return employeeDAO.findIdType2(params);
+	}
+
+	@Override
+	public EmpVO getUserInfo(String input_id) throws Exception {
+		return employeeDAO.getUserInfo(input_id);
 	}
 	
 	

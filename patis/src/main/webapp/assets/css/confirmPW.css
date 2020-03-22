@@ -73,3 +73,8 @@
   color: #fff;
   cursor: pointer;
 }
+
+.confirmPw_error{
+	font-size: 16px;
+	color : #ff2227;
+}

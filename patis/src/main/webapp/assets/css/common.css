@@ -6,9 +6,6 @@ body {
   font-style: normal;
 }
 
-.subpage {
-	min-height: calc(100vh - 320px);
-}
 .sub-container {
   width: 1200px;
   margin: 50px auto;

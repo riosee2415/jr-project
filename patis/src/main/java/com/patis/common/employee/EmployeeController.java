@@ -150,6 +150,32 @@ public class EmployeeController {
 		return "findPass";
 	}
 	
+	@RequestMapping(value="findPass.do", method=RequestMethod.POST)
+	public String findPwProcess(  Model model
+								, RedirectAttributes rttr
+								, @RequestParam("id") String userId
+								, @RequestParam("birth") String userReg
+								, @RequestParam("email") String userEmail) throws Exception {
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("userId", userId);
+		params.put("userReg", userReg);
+		params.put("userEmail", userEmail);
+		
+		String empId = employeeService.findPwType1(params);
+		
+		String url = "";
+		if(empId == null) {
+			model.addAttribute("errorCode", "1");
+			url = "findPass";
+		} else {
+			url = "redirect:/confirmPass.do";
+			
+			rttr.addAttribute("id", empId);
+		}
+		return url;
+	}
+	
 	
 	@RequestMapping(value="/mainLogin.do", method=RequestMethod.POST)
 	public String mainLogin(@RequestParam("loginId")String loginId ,
@@ -349,7 +375,9 @@ public class EmployeeController {
 	
 	
 	@RequestMapping(value="/resultPass.do", method=RequestMethod.GET)
-	public String resultPass(Model model, HttpSession session) throws Exception {
+	public String resultPass(   Model model
+						      , HttpSession session
+						      , @RequestParam("id") String userId) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -357,12 +385,16 @@ public class EmployeeController {
 		model.addAttribute("subMenuList", subMenuList);
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		model.addAttribute("userId", userId);
 		
 		return "resultPass";
 	}
 	
 	@RequestMapping(value="/confirmPass.do", method=RequestMethod.GET)
-	public String confirmPass(Model model, HttpSession session) throws Exception {
+	public String confirmPass(   Model model
+							   , HttpSession session
+							   , @RequestParam("id") String userId) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -371,6 +403,30 @@ public class EmployeeController {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
+		model.addAttribute("userId", userId);
+		
 		return "confirmPass";
+	}
+	
+	@RequestMapping(value="confirmPass.do", method=RequestMethod.POST)
+	public String confirmPwProcess(   Model model
+									, RedirectAttributes rttr
+									, @RequestParam("userId") String userId
+									, @RequestParam("emailKey") String emailKey) throws Exception {
+		EmpVO empVO = employeeService.getUserInfo(userId);
+		
+		String url = "";
+		if(empVO.getUSER_EMAIL_KEY().equals(emailKey)) {
+			url = "redirect:/resultPass.do";
+			
+			rttr.addAttribute("id", userId);
+		} else {
+			url = "confirmPass";
+			
+			model.addAttribute("errorCode", "1");
+			model.addAttribute("userId", userId);
+		}
+		
+		return url;
 	}
 }

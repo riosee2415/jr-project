@@ -94,6 +94,12 @@ public interface I_EmployeeService {
 	 */
 	String findIdType2(Map<String, String> params);
 	
-	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 22.
+	 * @RETURN : EmpVO
+	 * @DESC   : 사용자의 정보를 조회한다.
+	 */
+	EmpVO getUserInfo(String input_id) throws Exception;
 	
 } 

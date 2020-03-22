@@ -69,13 +69,13 @@ public class MailServiceImpl implements I_MailService {
 	}
 
 	@Override
-	public void sendFindPwMail(String userId, String emailKey) throws Exception {
-		EmpVO emp = employeeDAO.getUserInfoByMypage(userId);
+	public void sendFindPwMail(String userId) throws Exception {
+		EmpVO emp = employeeDAO.getUserInfo(userId);
 		MailVO mailVO = new MailVO();
 		mailVO.setDefaultSetting();
 		mailVO.setMailTo(emp.getUSER_EMAIL());
 		mailVO.setMailSubject("중랑구청 비밀번호 찾기 인증코드");
-		mailVO.setMailContent("인증코드 [" + emailKey + "]를 입력해주세요.");
+		mailVO.setMailContent("인증코드 [" + emp.getUSER_EMAIL_KEY() + "]를 입력해주세요.");
 		sendEmail(mailVO);
 	}
 }

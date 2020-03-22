@@ -67,4 +67,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		return sqlSession.selectOne(NAMESPACE + ".GET_FIND_ID_TYPE2", params);
 	}
 
+	@Override
+	public EmpVO getUserInfo(String input_id) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + ".GET_MYPAGE_INFO", input_id);
+	}
+
 }
