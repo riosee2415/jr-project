@@ -70,7 +70,8 @@ h3.login-title {
   border: 2px solid #333971;
 }
 .topHeader .login button i,
-.topHeader .join button i {
+.topHeader .join button i,
+.topHeader .logout i {
   -webkit-transition: -webkit-transform 600ms ease-in-out 0s;
   transition: -webkit-transform 600ms ease-in-out 0s;
   -o-transition: transform 600ms ease-in-out 0s;
@@ -79,7 +80,8 @@ h3.login-title {
     -webkit-transform 600ms ease-in-out 0s;
 }
 .topHeader .login button:hover i,
-.topHeader .join button:hover i {
+.topHeader .join button:hover i,
+.topHeader .logout:hover i {
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }
