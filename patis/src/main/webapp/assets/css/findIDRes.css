@@ -10,9 +10,34 @@
     font-size: 12px;
   }
 
-  .info_form_des,
+  .info_form_des {
+    font-size: 13px;
+  }
+
+  .search_form label {
+    font-size: 13px;
+  }
+
+  .search_form input,
+  .search_form_2 input {
+    width: 65%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  .search_form input:last-child,
+  .search_form_2 input:last-child {
+    margin-bottom: 0px;
+  }
+
   .find_btn {
-    font-size: 10px;
+    font-size: 13px;
+    right: 20px;
+  }
+
+  .need_findPw,
+  .go_findPW {
+    font-size: 15px;
   }
 }
 

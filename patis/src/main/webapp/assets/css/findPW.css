@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.findPw_title {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.findPw_subtitle_wrap {
+  margin-bottom: 1.5rem;
+}
+
+.findPw_subtitle_1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.findPw_subtitle_2 {
+  font-size: 18px;
+}
+
+.findPw_com_wrap {
+  border: 1px solid #eee;
+  border-top: 3px solid #227c39;
+  padding: 30px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+.search_list li {
+  margin-bottom: 1.5rem;
+}
+
+.search_list li:last-child {
+  margin-bottom: 0rem;
+}
+
+.info_form {
+  position: relative;
+  border: 1px solid #eee;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.info_form_des {
+  font-size: 15px;
+}
+
+.search_form label {
+  font-size: 15px;
+}
+
+.search_form input,
+.search_form_2 input {
+  margin-top: 15px;
+  width: 30%;
+}
+
+.find_btn {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: #ffca38;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.need_findId {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.go_findId {
+  text-decoration: underline;
+  margin-left: 10px;
+}

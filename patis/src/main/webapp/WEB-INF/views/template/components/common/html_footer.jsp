@@ -20,6 +20,7 @@
 	<script src="/assets/js/sub_top_menu.js"></script>
 	<script src="/assets/js/board.js"></script>
 	<script src="/assets/js/sns_share.js"></script>
+	<script src="/assets/js/find_id_pw.js"></script>
 	<script src="/assets/js/NM000000.js"></script>
 	<script src="/assets/js/NM020523.js"></script>
 	

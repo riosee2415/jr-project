@@ -20,6 +20,7 @@ pageEncoding="UTF-8"%>
             <span class="choice_comm">
               <input
                 type="radio"
+                onchange="findHandler(this.value)"
                 id="find_Birth"
                 name="searchType"
                 class="how_find"
@@ -29,7 +30,7 @@ pageEncoding="UTF-8"%>
                 >이름 / 생년월일 / 핸드폰 번호로 찾기</label
               >
             </span>
-            <div class="info_form">
+            <div class="info_form" id="info-birth-js">
               <span class="info_form_des">
                 가입시 입력한 이름 / 생년월일 / 핸드폰 번호와 일치하는 아이디를
                 찾습니다.
@@ -45,7 +46,7 @@ pageEncoding="UTF-8"%>
                   value="이름을 입력해주세요."
                 />
                 <br />
-                <label for="searchBirth_day">생년월일을 입력해주세요</label>
+                <label for="searchBirth_day">생년월일을 입력해주세요.</label>
                 <input
                   type="date"
                   id="searchBirth_day"
@@ -54,7 +55,7 @@ pageEncoding="UTF-8"%>
                   value="생년월일을 입력해주세요."
                 />
                 <br />
-                <!-- <label for="searchBirth_num">gos드폰 번호를 입력해주세요</label> -->
+                <!-- <label for="searchBirth_num">핸드폰 번호를 입력해주세요</label> -->
                 <input
                   type="text"
                   id="searchBirth_num"
@@ -63,7 +64,9 @@ pageEncoding="UTF-8"%>
                   value="핸드폰 번호를 입력해주세요."
                 />
               </div>
-              <button type="button" class="find_btn">다음단계</button>
+              <button type="button" class="find_btn" onclick="">
+                다음단계
+              </button>
             </div>
           </li>
           <!-- 이름/이메일로 찾기 -->
@@ -71,6 +74,7 @@ pageEncoding="UTF-8"%>
             <span>
               <input
                 type="radio"
+                onchange="findHandler(this.value)"
                 id="find_Email"
                 name="searchType"
                 class="how_find"
@@ -78,7 +82,7 @@ pageEncoding="UTF-8"%>
               />
               <label for="find_Email">내 정보에 등록된 이메일로 찾기</label>
             </span>
-            <div class="info_form">
+            <div class="info_form" id="info-email-js">
               <span class="info_form_des">
                 가입시 입력한 이메일로 일치하는 아이디를 찾습니다.
               </span>
@@ -112,7 +116,9 @@ pageEncoding="UTF-8"%>
                   value="이메일을 입력해주세요."
                 />
               </div>
-              <button type="submit" class="find_btn">다음단계</button>
+              <button type="submit" class="find_btn" onclick="">
+                다음단계
+              </button>
             </div>
           </li>
         </ul>
