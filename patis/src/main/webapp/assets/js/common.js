@@ -55,3 +55,19 @@ function moveMypageBtn(){
 	var pageFrm = document.getElementById("moveMypageFrm");
 	pageFrm.submit();
 }
+
+
+function moveFindId(){
+	var frm = document.getElementById("moveFindIdFrm");
+	
+	frm.submit();
+}
+
+
+function moveFindPass(){
+var frm = document.getElementById("moveFindPassFrm");
+	
+	frm.submit();
+}
+
+

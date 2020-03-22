@@ -2,7 +2,8 @@
 pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
+<form id="moveFindIdFrm" action="${pageContext.request.contextPath }/findId.do" method="get"></form>
+<form id="moveFindPassFrm" action="${pageContext.request.contextPath }/findPass.do" method="get"></form>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -19,8 +20,8 @@ pageEncoding="UTF-8"%>
         <form action="${pageContext.request.contextPath }/mainLogin.do" method="post">
 	        <div class="id"><input type="text" id="loginId" name="loginId" placeholder="아이디" /></div>
 	        <div class="pass"><input type="password" id="loginPass" name="loginPass" placeholder="비밀번호" /></div>
-	        <div class="idSearch">아이디 찾기</div>
-	         <div class="passSearch">비밀번호 찾기</div>
+	        <div class="idSearch" onclick="javascript:moveFindId()">아이디 찾기</div>
+	         <div class="passSearch" onclick="javascript:moveFindPass()">비밀번호 찾기</div>
 	        <div class="login-button">
 	          <button class="login-btn" type="submit" >로그인</button>
 	          <button class="join-btn" type="button" onclick="javacript:pageLink('/join.do')">회원가입</button>
