@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -25,7 +26,7 @@ pageEncoding="UTF-8"%>
                 value="search_result_ID"
               />
               <label for="result_ID">
-                <span>나온 아이디</span>
+                <span><c:out value="${findId }"></c:out></span>
               </label>
             </span>
           </li>

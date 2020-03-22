@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
@@ -123,13 +124,15 @@ public class EmployeeController {
 	
 	
 	@RequestMapping(value="/findId.do", method=RequestMethod.GET)
-	public String findId(Model model) throws Exception {
+	public String findId(@RequestParam(value = "errorCode", defaultValue = "0")String errorCode , Model model) throws Exception {
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
 		List<CommonVO> subMenuList = middlewareService.getSubMenu();
 		model.addAttribute("subMenuList", subMenuList);
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		model.addAttribute("errorCode", errorCode);
 		
 		return "findId";
 	}
@@ -142,6 +145,7 @@ public class EmployeeController {
 		model.addAttribute("subMenuList", subMenuList);
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
+		
 		
 		return "findPass";
 	}
@@ -274,7 +278,9 @@ public class EmployeeController {
 	public String resultId(	  @RequestParam("find-name")	String findName
 							, @RequestParam("find-reg")		String findReg
 							, @RequestParam("find-mobile")	String findMobile
-							, Model model, HttpSession session) throws Exception {
+							, Model model
+							, HttpSession session
+							, RedirectAttributes ra) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -289,8 +295,19 @@ public class EmployeeController {
 		params.put("userMobile", findMobile);
 		
 		String findId = employeeService.findIdType1(params);
-		model.addAttribute("findId", findId);
 		
+		if(findId == null) {
+			ra.addAttribute("errorCode", "1");
+			return "redirect:/findId.do";
+		}
+		
+		int len = findId.length();
+		len = len - 3;
+		
+		findId = findId.substring(0, len);
+		findId += "***";
+		
+		model.addAttribute("findId", findId);
 		return "resultId";
 	}
 	

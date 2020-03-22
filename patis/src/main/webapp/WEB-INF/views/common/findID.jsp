@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 
 
 <form id="resultIdFrm" action="${pageContext.request.contextPath }/resultId.do" method="post">
@@ -16,9 +18,20 @@ pageEncoding="UTF-8"%>
       </h3>
       <div class="findId_subtitle_wrap">
         <h3 class="findId_subtitle_1">아이디를 모르시나요?</h3>
-        <h3 class="findId_subtitle_2">
-          아이디 찾기 방법 중 가능한 방법을 선택해주세요.
-        </h3>
+        
+        <c:choose>
+        	<c:when test="${errorCode eq '1'}">
+        		 <h3 class="findId_error">
+		         	아이디를 찾을 수 없습니다. 정확한 정보를 입력해주세요.
+		        </h3>
+        	</c:when>
+        	
+        	<c:otherwise>
+		        <h3 class="findId_subtitle_2">
+		         	 아이디 찾기 방법 중 가능한 방법을 선택해주세요.
+		        </h3>
+	        </c:otherwise>
+        </c:choose>
       </div>
       <div class="findId_com_wrap">
       
