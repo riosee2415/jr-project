@@ -26,3 +26,10 @@
 
 @media screen and (max-width: 767px) {
 }
+
+@media screen and (max-width: 425px) {
+  .idSearch,
+  .passSearch {
+    font-size: 11px;
+  }
+}

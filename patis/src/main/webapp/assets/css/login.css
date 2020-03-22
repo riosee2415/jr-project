@@ -6,7 +6,7 @@
 }
 .login-box {
   width: 40%;
-  height: 300px;
+  height: 320px;
   margin: 0 auto;
   -webkit-box-shadow: 0 2px 14px rgba(32, 33, 36, 0.27);
   box-shadow: 0 2px 14px rgba(32, 33, 36, 0.27);
@@ -23,17 +23,27 @@ h3.login-title {
 .pass input {
   width: 100%;
   padding: 10px 10px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   outline: none;
   border: none;
   border-bottom: 1px solid #dedede;
   margin: 10px 0px;
 }
+
 .idSearch {
-  font-size: 18px;
-  text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 13px;
   cursor: pointer;
+  text-align: right;
 }
+
+.passSearch {
+  font-size: 13px;
+  cursor: pointer;
+  text-align: right;
+}
+
 .login-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,9 +52,7 @@ h3.login-title {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -65,10 +73,12 @@ h3.login-title {
   color: #fff;
   background-color: #333971;
   margin-right: 10px;
+  border-radius: 25px;
 }
 .login-button .join-btn {
   color: #333971;
   border: 2px solid #333971;
+  border-radius: 25px;
 }
 .topHeader .login button i,
 .topHeader .join button i,
@@ -84,7 +94,7 @@ h3.login-title {
 .topHeader .login button:hover i,
 .topHeader .join button:hover i,
 .topHeader .logout:hover i,
-.topHeader .myPage:hover i  {
+.topHeader .myPage:hover i {
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }
