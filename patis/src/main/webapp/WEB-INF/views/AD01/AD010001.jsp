@@ -6,9 +6,6 @@ out.println(session.getAttribute("loginName"));
 out.println(session.getAttribute("loginRight")); */ %>
 
 <div class="admin-main-box">
-  <div class="admin-main-box__top">
-    <h2 class="admin-main-title">회원관리</h2>
-  </div>
 
   <div class="admin-main-box__content">
     <!-- <h2>btn-xs</h2>
