@@ -79,6 +79,14 @@
        <put-attribute name="content" value="/WEB-INF/views/common/myPage.jsp"/>
     </definition>
     
+    <definition name="resultId" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/resultID.jsp"/>
+    </definition>
+    
+    <definition name="resultPass" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/resultPW.jsp"/>
+    </definition>
+    
     
     
     

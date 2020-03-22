@@ -235,5 +235,31 @@ public class EmployeeController {
 		return "";
 	}
 	
+	@RequestMapping(value="/resultId.do", method=RequestMethod.GET)
+	public String resultId(Model model, HttpSession session) throws Exception {
+		
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		return "resultId";
+	}
+	
+	@RequestMapping(value="/resultPass.do", method=RequestMethod.GET)
+	public String resultPass(Model model, HttpSession session) throws Exception {
+		
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		return "resultPass";
+	}
+	
 	
 }
