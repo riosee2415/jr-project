@@ -270,8 +270,11 @@ public class EmployeeController {
 		return "myPage";
 	}
 	
-	@RequestMapping(value="/resultId.do", method=RequestMethod.GET)
-	public String resultId(Model model, HttpSession session) throws Exception {
+	@RequestMapping(value="/resultId.do", method=RequestMethod.POST)
+	public String resultId(	  @RequestParam("find-name")	String findName
+							, @RequestParam("find-reg")		String findReg
+							, @RequestParam("find-mobile")	String findMobile
+							, Model model, HttpSession session) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -279,6 +282,14 @@ public class EmployeeController {
 		model.addAttribute("subMenuList", subMenuList);
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("userName", findName);
+		params.put("userReg", findReg);
+		params.put("userMobile", findMobile);
+		
+		String findId = employeeService.findIdType1(params);
+		model.addAttribute("findId", findId);
 		
 		return "resultId";
 	}

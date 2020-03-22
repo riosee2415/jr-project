@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 
+
+<form id="resultIdFrm" action="${pageContext.request.contextPath }/resultId.do" method="post">
+	<input id="find-name" name="find-name" type="hidden" />
+	<input id="find-reg" name="find-reg" type="hidden" />
+	<input id="find-mobile" name="find-mobile" type="hidden" />
+</form>
+
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
     <div class="findId_page">
@@ -14,10 +21,12 @@ pageEncoding="UTF-8"%>
         </h3>
       </div>
       <div class="findId_com_wrap">
+      
         <ul class="search_list">
           <!-- 이름/생년월일/핸드폰 번호로 찾기 -->
           <li>
             <span class="choice_comm">
+	    
               <input
                 type="radio"
                 onchange="findHandler(this.value)"
@@ -47,15 +56,15 @@ pageEncoding="UTF-8"%>
                   placeholder="이름을 입력해주세요."
                 />
                 <br />
-                <label for="searchBirth_day">생년월일을 입력해주세요.</label>
                 <input
                   type="text"
                   id="searchBirth_day"
                   name="searchBirthDay"
                   class="search_Birth"
-                  maxlength="6"
+                  maxlength="8"
                   value=""
-                  placeholder="200322"
+                  placeholder="생년월일을 8자리로 입력해주세요. (예: 19820830)"
+                  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                 />
                 <br />
                 <!-- <label for="searchBirth_num">핸드폰 번호를 입력해주세요</label> -->
@@ -65,14 +74,17 @@ pageEncoding="UTF-8"%>
                   name="searchBirthNum"
                   class="search_Num"
                   value=""
-                  placeholder="핸드폰 번호를 입력해주세요."
+                  placeholder="핸드폰 번호를 입력해주세요. (예: 01098761234)"
+                  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+                  maxlength="12"
                 />
               </div>
-              <button type="button" class="find_btn" onclick="">
+              <button type="button" class="find_btn" onclick="javascript:findIdType1()">
                 다음단계
               </button>
             </div>
           </li>
+          
           <!-- 이름/이메일로 찾기 -->
           <li>
             <span>

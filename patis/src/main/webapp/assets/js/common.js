@@ -71,3 +71,26 @@ var frm = document.getElementById("moveFindPassFrm");
 }
 
 
+function findIdType1(){
+	
+	var name = document.getElementById("searchBirth_name").value;
+	var reg = document.getElementById("searchBirth_day").value;
+	var mobile = document.getElementById("searchBirth_num").value;
+	
+	if(name.length < 1 || (reg.length < 1 || reg.length > 8) || mobile.length < 1) {
+		alert("정확한 값을 입력해주세요");
+		return;
+	}
+	
+	
+	var frmName = document.getElementById("find-name");
+	var frmReg = document.getElementById("find-reg");
+	var frmMobile = document.getElementById("find-mobile");
+	
+	frmName.value = name;
+	frmReg.value = reg;
+	frmMobile.value = mobile;
+	
+	document.getElementById("resultIdFrm").submit();
+	
+}

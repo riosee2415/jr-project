@@ -83,6 +83,11 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	public int updateUserInfoMyPage(Map<String, String> params) {
 		return employeeDAO.updateUserInfoMyPage(params);
 	}
+
+	@Override
+	public String findIdType1(Map<String, String> params) {
+		return employeeDAO.findIdType1(params);
+	}
 	
 	
 }

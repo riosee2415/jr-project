@@ -118,4 +118,13 @@
 		 WHERE	USER_ID			= #{id}
 	</update>
 	
+	
+	<select id="GET_FIND_ID_TYPE1" parameterType="hashMap" resultType="str">
+		SELECT	USER_ID
+		  FROM	JR_DB.EMP
+		 WHERE	USER_NAME 	= #{userName}
+		   AND	USER_REGNO1 = #{userReg}
+		   AND	USER_MOBILE = #{userMobile}
+	</select>
+	
 </mapper>

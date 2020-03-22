@@ -47,4 +47,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		return sqlSession.update(NAMESPACE + ".MODIFY_USER_INFO", params);
 	}
 
+	@Override
+	public String findIdType1(Map<String, String> params) {
+		return sqlSession.selectOne(NAMESPACE + ".GET_FIND_ID_TYPE1", params);
+	}
+
 }

@@ -55,4 +55,12 @@ public interface I_EmployeeDAO {
 	 * @DESC   : 마이페이지에서 정보룰 수정한다.
 	 */
 	int updateUserInfoMyPage(Map<String, String> params);
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : String
+	 * @DESC   : 이름, 생년, 핸드폰으로 아이디를 검색한다.
+	 */
+	String findIdType1(Map<String, String> params);
 }
