@@ -8,11 +8,6 @@ out.println(session.getAttribute("loginRight")); */ %>
 <div class="admin-main-box">
   <div class="admin-main-box__top">
     <h2 class="admin-main-title">회원관리</h2>
-    <div class="admin-main-control__box">
-      <button type="button" class="btn btn-sm btn-gray">선택수정</button>
-      <button type="button" class="btn btn-sm btn-gray">선택삭제</button>
-      <button type="button" class="btn btn-sm btn-red">회원추가</button>
-    </div>
   </div>
 
   <div class="admin-main-box__content">
