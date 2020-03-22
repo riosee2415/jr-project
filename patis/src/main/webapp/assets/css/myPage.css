@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.myPageBox {
+	width : 1200px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.myPageBox .myPageBox__basic{
+	width: 500px;
+	height: 500px;
+	background-color: red;
+	margin : 20px;
+}	
+
+.myPageBox .myPageBox__option{
+	width: 500px;
+	height: 500px;
+	background-color: green;
+	margin : 20px;
+}
