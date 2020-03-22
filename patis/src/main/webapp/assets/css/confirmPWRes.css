@@ -1,0 +1,57 @@
+@media screen and (max-width: 1100px) {
+  .find_btn {
+    right: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .info_form {
+    padding-bottom: 70px;
+  }
+  .find_btn {
+    right: 50%;
+    margin-right: -42px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .confirmPw_title {
+    font-size: 25px;
+  }
+  .confirmPw_subtitle_1 {
+    font-size: 15px;
+  }
+
+  .confirmPw_subtitle_2 {
+    font-size: 12px;
+  }
+
+  .info_form_des {
+    font-size: 13px;
+  }
+
+  .search_form label {
+    font-size: 13px;
+  }
+
+  .search_form input,
+  .search_form_2 input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  .search_form input:last-child,
+  .search_form_2 input:last-child {
+    margin-bottom: 0px;
+  }
+
+  .find_btn {
+    font-size: 13px;
+  }
+
+  .need_findPw,
+  .go_findPW {
+    font-size: 15px;
+  }
+}

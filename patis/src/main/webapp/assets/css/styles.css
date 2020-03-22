@@ -30,6 +30,8 @@
 @import "./resultIDRes.css";
 @import "./resultPW.css";
 @import "./resultPWRes.css";
+@import "./confirmPW.css";
+@import "./confirmPWRes.css";
 @import "./error404.css";
 @import "./error404Res.css";
 @import "./error500.css";
