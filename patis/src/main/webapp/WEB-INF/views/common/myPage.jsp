@@ -49,7 +49,7 @@
 			<div>
 				<div>핸드폰번호</div>
 				<input type="text" value="${user.USER_MOBILE }" id="user-mobile" maxlength="12"
-                  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" readonly>
 			</div>
 
 			<div>
