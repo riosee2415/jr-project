@@ -35,7 +35,7 @@ pageEncoding="UTF-8"%>
                 가입시 입력한 이름 / 생년월일 / 핸드폰 번호와 일치하는 아이디를
                 찾습니다.
               </span>
-              <div class="search_form">
+              <div class="search_form search_ID">
                 <!-- <label for="searchBirth_name">이름을 입력해주세요</label> -->
                 <input
                   type="text"
@@ -43,16 +43,19 @@ pageEncoding="UTF-8"%>
                   name="searchBirthName"
                   class="search_Name"
                   maxlength="30"
-                  value="이름을 입력해주세요."
+                  value=""
+                  placeholder="이름을 입력해주세요."
                 />
                 <br />
                 <label for="searchBirth_day">생년월일을 입력해주세요.</label>
                 <input
-                  type="date"
+                  type="text"
                   id="searchBirth_day"
                   name="searchBirthDay"
                   class="search_Birth"
-                  value="생년월일을 입력해주세요."
+                  maxlength="6"
+                  value=""
+                  placeholder="200322"
                 />
                 <br />
                 <!-- <label for="searchBirth_num">핸드폰 번호를 입력해주세요</label> -->
@@ -61,7 +64,8 @@ pageEncoding="UTF-8"%>
                   id="searchBirth_num"
                   name="searchBirthNum"
                   class="search_Num"
-                  value="핸드폰 번호를 입력해주세요."
+                  value=""
+                  placeholder="핸드폰 번호를 입력해주세요."
                 />
               </div>
               <button type="button" class="find_btn" onclick="">
@@ -86,7 +90,7 @@ pageEncoding="UTF-8"%>
               <span class="info_form_des">
                 가입시 입력한 이메일로 일치하는 아이디를 찾습니다.
               </span>
-              <div class="search_form_2">
+              <div class="search_form_2 search_ID_2">
                 <!-- <label
                   for="searchName"
                   class="search_Name"
@@ -99,7 +103,8 @@ pageEncoding="UTF-8"%>
                   name="searchName"
                   class="search_Name_2"
                   maxlength="30"
-                  value="이름을 입력해주세요."
+                  value=""
+                  placeholder="이름을 입력해주세요."
                 />
                 <br />
                 <!-- <label
@@ -113,7 +118,8 @@ pageEncoding="UTF-8"%>
                   id="searchEmail"
                   name="searchEmail"
                   class="search_Email"
-                  value="이메일을 입력해주세요."
+                  value=""
+                  placeholder="이메일을 입력해주세요."
                 />
               </div>
               <button type="submit" class="find_btn" onclick="">

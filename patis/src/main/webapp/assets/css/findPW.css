@@ -37,6 +37,10 @@
   margin-bottom: 0rem;
 }
 
+.search_lsit label {
+  cursor: pointer;
+}
+
 .info_form {
   position: relative;
   border: 1px solid #eee;
@@ -55,10 +59,10 @@
   font-size: 15px;
 }
 
-.search_form input,
-.search_form_2 input {
+.search_PW input,
+.search_PW_2 input {
   margin-top: 15px;
-  width: 30%;
+  width: 20%;
 }
 
 .find_btn {
@@ -71,6 +75,7 @@
   border-radius: 20px;
   font-size: 15px;
   color: #fff;
+  cursor: pointer;
 }
 
 .need_findId {
@@ -89,4 +94,5 @@
 .go_findId {
   text-decoration: underline;
   margin-left: 10px;
+  cursor: pointer;
 }

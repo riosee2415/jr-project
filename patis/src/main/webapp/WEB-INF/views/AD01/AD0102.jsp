@@ -137,12 +137,14 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         </div>
       </div>
     </div>
-     <div class="stis_one__refer">
-     	<ul>
-     		<li>오늘 날짜기준 접속자 통계 데이터 입니다.</li>
-     		<li>자세히보기 버튼을 누르면 접속자 상세 데이터를 확인할 수 있습니다.</li>
-     	</ul>
-     </div>
+    <div class="stis_one__refer">
+      <ul>
+        <li>오늘 날짜기준 접속자 통계 데이터 입니다.</li>
+        <li>
+          자세히보기 버튼을 누르면 접속자 상세 데이터를 확인할 수 있습니다.
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="stis_one">
@@ -158,7 +160,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         <!-- date -->
         <div class="desc__right__dateArea">
           <label>시작일</label>
-          <input type="text" id="startDate" readonly/>
+          <input type="text" id="startDate" readonly />
           <i class="fa fa-calendar" aria-hidden="true"></i>
         </div>
 
@@ -168,7 +170,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 
         <div class="desc__right__dateArea">
           <label>종료일</label>
-          <input type="text" id="endDate" readonly/>
+          <input type="text" id="endDate" readonly />
           <i class="fa fa-calendar" aria-hidden="true"></i>
         </div>
 
@@ -202,12 +204,12 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       </div>
     </div>
     <div class="stis_one__refer">
-     	<ul>
-     		<li>시작일과 종료일을 선택하여 통계 데이터를 조회합니다.</li>
-     		<li>조회 후 자세히보기 버튼을 사용할 수 있습니다.</li>
-     		<li>종료일보다 더 큰 시작일은 선택할 수 없습니다.</li>
-     	</ul>
-     </div>
+      <ul>
+        <li>시작일과 종료일을 선택하여 통계 데이터를 조회합니다.</li>
+        <li>조회 후 자세히보기 버튼을 사용할 수 있습니다.</li>
+        <li>종료일보다 더 큰 시작일은 선택할 수 없습니다.</li>
+      </ul>
+    </div>
   </div>
 </div>
 
