@@ -30,7 +30,7 @@ pageEncoding="UTF-8"%>
               >
             </span>
             <div class="info_form">
-              <span>
+              <span class="info_form_des">
                 가입시 입력한 이름 / 생년월일 / 핸드폰 번호와 일치하는 아이디를
                 찾습니다.
               </span>
@@ -79,8 +79,8 @@ pageEncoding="UTF-8"%>
               <label for="find_Email">내 정보에 등록된 이메일로 찾기</label>
             </span>
             <div class="info_form">
-              <span>
-                가입시 입력한 이메일로 임시 비밀번호를 보내드립니다.
+              <span class="info_form_des">
+                가입시 입력한 이메일로 일치하는 아이디를 찾습니다.
               </span>
               <div class="search_form_2">
                 <!-- <label
@@ -97,8 +97,7 @@ pageEncoding="UTF-8"%>
                   maxlength="30"
                   value="이름을 입력해주세요."
                 />
-              </div>
-              <div>
+                <br />
                 <!-- <label
                   for="searchEmail"
                   class="search_Email"

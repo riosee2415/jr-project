@@ -2,6 +2,18 @@
   .findId_title {
     font-size: 25px;
   }
+  .findId_subtitle_1 {
+    font-size: 15px;
+  }
+
+  .findId_subtitle_2 {
+    font-size: 12px;
+  }
+
+  .info_form_des,
+  .find_btn {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
