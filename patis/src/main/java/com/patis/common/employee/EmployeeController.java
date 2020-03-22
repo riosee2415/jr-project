@@ -198,4 +198,14 @@ public class EmployeeController {
 		return "redirect:/main.do";
 	}
 	
+	
+	@RequestMapping(value="/logout.do", method=RequestMethod.GET)
+	public String logout(Model model, HttpSession session) throws Exception {
+		
+		session.invalidate();
+		System.out.println("새샌 초기화 : 로그아웃");
+		
+		return "redirect:/main.do";
+	}
+	
 }

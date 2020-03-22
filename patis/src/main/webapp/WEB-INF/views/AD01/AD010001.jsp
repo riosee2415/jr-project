@@ -57,8 +57,25 @@ out.println(session.getAttribute("loginRight")); */ %>
       <span>중랑구청 관리자 페이지</span>에 오신것을 환영합니다.
     </div>
     <div class="admin-main-content-box">
-      회원 <span>dummy</span>님
-      <p><span>dummy</span>권한으로 접속하였습니다.</p>
+      회원 <span><c:out value="${loginId }"></c:out>(<c:out value="${loginName }"></c:out>)</span>님
+      <p><span id="rightValue">${loginRight }</span>권한으로 접속하였습니다.</p>
     </div>
   </div>
 </div>
+
+
+<script>
+	$(document).ready(function(){
+		var value = $("#rightValue").text();
+			
+		if(value == 1) {
+			$("#rightValue").text("개발자");
+		} else if (value == 2){
+			$("#rightValue").text("관리자");
+		} else if (value == 3){
+			$("#rightValue").text("관리자(운영)");
+		} 
+	})
+		
+
+</script>

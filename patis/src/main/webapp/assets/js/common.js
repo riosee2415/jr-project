@@ -35,3 +35,16 @@ function pageLink(url) {
 	$('#frm-link').attr('action', url);
 	$('#frm-link').submit();
 }
+
+
+function adminLogoutBtn(){
+	var answer = confirm("로그아웃 하시겠습니까?");
+	
+	if(answer) {
+		var mainFrm = document.getElementById("moveMainFrm");
+		mainFrm.submit();
+	} else {
+		return;
+	}
+
+}
