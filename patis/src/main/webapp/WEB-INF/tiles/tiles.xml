@@ -87,6 +87,10 @@
        <put-attribute name="content" value="/WEB-INF/views/common/resultPW.jsp"/>
     </definition>
     
+    <definition name="confirmPass" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/confirmPW.jsp"/>
+    </definition>
+    
     
     
     

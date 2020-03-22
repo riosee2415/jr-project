@@ -323,4 +323,17 @@ public class EmployeeController {
 		
 		return "resultPass";
 	}
+	
+	@RequestMapping(value="/confirmPass.do", method=RequestMethod.GET)
+	public String confirmPass(Model model, HttpSession session) throws Exception {
+		
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		return "confirmPass";
+	}
 }
