@@ -75,7 +75,9 @@
        <put-attribute name="content" value="/WEB-INF/views/common/findPW.jsp"/>
     </definition>
     
-    
+    <definition name="myPage" extends="mainLayout">
+       <put-attribute name="content" value="/WEB-INF/views/common/myPage.jsp"/>
+    </definition>
     
     
     
