@@ -70,7 +70,6 @@
 							DATE_FORMAT(B_CREATE_TIME, '%Y-%m-%d') AS B_CREATE_TIME,
 							DATE_FORMAT(B_UPLOAD_TIME, '%Y-%m-%d') AS B_UPLOAD_TIME,
 							DATE_FORMAT(B_DELETE_TIME, '%Y-%m-%d') AS B_DELETE_TIME,
-							B_AUTHOR_NONE,
 							B_HIT,
 							B_NOTICE,
 							B_USE_YN,
