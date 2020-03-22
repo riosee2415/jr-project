@@ -19,7 +19,8 @@ pageEncoding="UTF-8"%>
         <form action="${pageContext.request.contextPath }/mainLogin.do" method="post">
 	        <div class="id"><input type="text" id="loginId" name="loginId" placeholder="아이디" /></div>
 	        <div class="pass"><input type="password" id="loginPass" name="loginPass" placeholder="비밀번호" /></div>
-	        <div class="idSearch">아이디/비밀번호 찾기</div>
+	        <div class="idSearch">아이디 찾기</div>
+	         <div class="passSearch">비밀번호 찾기</div>
 	        <div class="login-button">
 	          <button class="login-btn" type="submit" >로그인</button>
 	          <button class="join-btn" type="button" onclick="javacript:pageLink('/join.do')">회원가입</button>
