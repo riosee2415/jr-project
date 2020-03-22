@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+pageEncoding="UTF-8"%> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -18,13 +18,6 @@ pageEncoding="UTF-8"%>
         <ul class="search_result">
           <li>
             <span class="choice_result">
-              <input
-                type="radio"
-                id="result_ID"
-                name="resultID"
-                class="search_resultID"
-                value="search_result_ID"
-              />
               <label for="result_ID">
                 <span><c:out value="${findId }"></c:out></span>
               </label>
@@ -39,7 +32,7 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
       <div class="result_btn_wrap">
-        <button type="button" class="go_login_btn" onclick="">
+        <button type="button" class="go_login_btn go_ID_btn" onclick="">
           로그인 하러가기
         </button>
       </div>
