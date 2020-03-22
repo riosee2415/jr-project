@@ -66,7 +66,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                   class="search_Name"
                   maxlength="30"
                   value=""
-                  placeholder="이름을 입력해주세요."
+                  placeholder="이름 입력 (예: 홍길동)"
                 />
                 <br />
                 <input
@@ -76,7 +76,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                   class="search_Birth"
                   maxlength="8"
                   value=""
-                  placeholder="생년월일을 8자리로 입력해주세요. (예: 19820830)"
+                  placeholder="생년월일 입력 (예: 19820830)"
                   onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                 />
                 <br />
@@ -87,7 +87,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                   name="searchBirthNum"
                   class="search_Num"
                   value=""
-                  placeholder="핸드폰 번호를 입력해주세요. (예: 01098761234)"
+                  placeholder="핸드폰번호 입력 (예: 01098761234)"
                   onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                   maxlength="12"
                 />
