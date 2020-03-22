@@ -76,10 +76,7 @@
 
 <div class="user_detailData_area">
 	<input class="detailData_saveBtn" type='button' value="저장" onclick="javascript:saveBtnHandler()"/>
-</div>
-
-<div class="user_detailData_area">
-	<input class="detailData_saveBtn" type='button' value="회원탈퇴" onclick="javascript:deleteBtnHandler()"/>
+	<input class="detailData_saveBtn-red" type='button' value="회원탈퇴" onclick="javascript:deleteBtnHandler()"/>
 </div>
 
 
