@@ -1,9 +1,6 @@
 @charset "utf-8";
 
 .topHeader {
-  top: 15px;
-  position: absolute;
-  right: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,12 +20,17 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 4px solid #c7dbfe;
+}
+.topHeader-box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .topHeader_content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 4px solid #c7dbfe;
 }
 .topHeader button {
   outline: none;
@@ -46,6 +48,10 @@
 .topHeader .login button {
   background: transparent;
   margin-right: 10px;
+}
+.topHeader .join ,
+.topHeader .login{
+   border-bottom: 4px solid #c7dbfe;
 }
 .topHeader .join button,
 .topHeader .login button {

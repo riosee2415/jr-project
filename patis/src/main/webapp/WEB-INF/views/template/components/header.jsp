@@ -23,6 +23,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 </header>
 <header class="desk header">
   <div class="deskbox">
+  <div class="topHeader-box">
     <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
     <div class="topHeader">
       <c:choose>
@@ -56,6 +57,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           </div>
         </c:otherwise>
       </c:choose>
+    </div>
     </div>
     <nav id="deskmenu">
       <ul class="menu resmenu" id="resmenu-js">
