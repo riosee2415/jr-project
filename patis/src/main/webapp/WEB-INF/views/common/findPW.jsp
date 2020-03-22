@@ -30,7 +30,7 @@ pageEncoding="UTF-8"%>
             </span>
             <div class="info_form" id="info-birth-js">
               <span class="info_form_des">
-                가입시 입력한 아이디 / 이름 / 생년월일과 일치하는 비밀번호를
+                가입시 입력한 아이디 / 생년월일 / 이메일과 일치하는 비밀번호를
                 찾습니다.
                 <br />개인정보보호를 위해 비밀번호는 일부분만 보여드리며, *가
                 무작위로 표기됩니다.
@@ -47,17 +47,7 @@ pageEncoding="UTF-8"%>
                   placeholder="아이디를 입력해주세요."
                 />
                 <br />
-                <!-- <label for="searchBirth_name">이름을 입력해주세요</label> -->
-                <input
-                  type="text"
-                  id="searchId_name"
-                  name="searchIdName"
-                  class="search_Id_Name"
-                  maxlength="30"
-                  value=""
-                  placeholder="이름을 입력해주세요."
-                />
-                <br />
+
                 <label for="searchId_Birth">생년월일을 입력해주세요.</label>
                 <input
                   type="text"
@@ -68,12 +58,23 @@ pageEncoding="UTF-8"%>
                   value=""
                   placeholder="200322"
                 />
+                <br />
+                <!-- <label for="searchBirth_name">이메일을 입력해주세요</label> -->
+                <input
+                  type="email"
+                  id="searchEmail"
+                  name="searchEmail"
+                  class="search_Email"
+                  value=""
+                  placeholder="이메일을 입력해주세요."
+                />
+                <br />
               </div>
               <button type="button" class="find_btn">다음단계</button>
             </div>
           </li>
           <!-- 이름/이메일로 찾기 -->
-          <li>
+          <!-- <li>
             <span>
               <input
                 type="radio"
@@ -90,12 +91,12 @@ pageEncoding="UTF-8"%>
                 가입시 입력한 이메일로 임시비밀번호를 보내드립니다.
               </span>
               <div class="search_form_2 search_PW_2">
-                <!-- <label
+                <label
                   for="searchName"
                   class="search_Name"
                   id="searachNameLabel"
                   >아이디를 입력해주세요</label
-                > -->
+                >
                 <input
                   type="text"
                   id="searchName"
@@ -106,12 +107,12 @@ pageEncoding="UTF-8"%>
                   placeholder="아이디를 입력해주세요."
                 />
                 <br />
-                <!-- <label
+                <label
                   for="searchEmail"
                   class="search_Email"
                   id="searchEmailLabel"
                   >이메일을 입력해주세요</label
-                > -->
+                >
                 <input
                   type="email"
                   id="searchEmail"
@@ -123,7 +124,7 @@ pageEncoding="UTF-8"%>
               </div>
               <button type="submit" class="find_btn">다음단계</button>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="need_findId">
