@@ -23,7 +23,6 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <input
       type="text"
       class="search-keyword"
-      id="search-keyword-js"
       onkeydown="javascript:boardSearchEnterHandler()"
     />
     <button
