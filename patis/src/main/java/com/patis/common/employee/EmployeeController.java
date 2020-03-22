@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -139,7 +140,8 @@ public class EmployeeController {
 	@RequestMapping(value="/mainLogin.do", method=RequestMethod.POST)
 	public String mainLogin(@RequestParam("loginId")String loginId ,
 							@RequestParam("loginPass")String loginPass ,
-							Model model) throws Exception {
+							Model model ,
+							HttpSession session) throws Exception {
 		
 		
 		// loginTry 가져와서 3보다 크면 에러 발생
@@ -150,17 +152,33 @@ public class EmployeeController {
 		
 		EmpVO vo = employeeService.mainLogin(params);
 		
+		if(vo == null) {
+			System.out.println("아이디 또는 비밀번호가 맞지 않습니다.");
+			model.addAttribute("loginMsg", "2");
+			
+			// 해당아이디 로그인트라이 1 증가
+			
+			return "redirect:/login.do";
+			
+		}
+		
+		
 		if(vo.getUSER_LOGIN_TRY() > 3) {
 			System.out.println("LOGIN 시도 3회 이상 실패");
-			model.addAttribute("loginCode", "1");
-			return "login";
-		}  else {
+			model.addAttribute("loginMsg", "1");
+			return "redirect:/login.do";
+		} else {
 			// 로그인 성공
+			int loginTry = employeeService.LOGIN_TRY_TO_ZERO(params.get("input_id"));
 			
-			// 1. loginTry -> 0으로 업데이트
-			// 2. 새션에 아이디, 이름, 권한 저장
-			// 3. 메인으로 랜더링ㄴ
-		
+			if(loginTry == 0) {
+				System.out.println("로그인시도 초기화");
+				session.setMaxInactiveInterval(1800);
+				session.setAttribute("loginNo", vo.getUSER_NO());
+				session.setAttribute("loginId", vo.getUSER_ID());
+				session.setAttribute("loginName", vo.getUSER_NAME());
+				session.setAttribute("loginRight", vo.getUSER_RIGHT());
+			}
 		}
 				
 		

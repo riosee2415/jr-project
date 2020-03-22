@@ -32,4 +32,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		return sqlSession.selectOne(NAMESPACE + ".LOGIN_USER", params);
 	}
 
+	@Override
+	public int LOGIN_TRY_TO_ZERO(String input_id) throws Exception {
+		return sqlSession.update(NAMESPACE + ".LOGIN_USER", input_id);
+	}
+
 }

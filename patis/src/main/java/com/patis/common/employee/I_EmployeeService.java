@@ -31,4 +31,13 @@ public interface I_EmployeeService {
 	 * @DESC   : 로그인 진행
 	 */
 	EmpVO mainLogin(Map<String, String> params) throws Exception;
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 22.
+	 * @RETURN : int
+	 * @DESC   : 정상 로그인 시, 로그인 시도를 0으로 변경한다.
+	 */
+	int LOGIN_TRY_TO_ZERO(String input_id) throws Exception;
 } 

@@ -80,4 +80,10 @@
 		   AND	USER_PASSWORD = #{input_password}
 	</select>
 	
+	<update id="MODIFY_LOGIN_TRY" parameterType="str">
+		UPDATE 	JR_DB.EMP
+		   SET	USER_LOGIN_TRY = 0
+		 WHERE	USER_ID = #{input_id}
+	</update>
+	
 </mapper>

@@ -68,6 +68,11 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 		
 		return employeeDAO.mainLogin(params);
 	}
+
+	@Override
+	public int LOGIN_TRY_TO_ZERO(String input_id) throws Exception {
+		return employeeDAO.LOGIN_TRY_TO_ZERO(input_id);
+	}
 	
 	
 }
