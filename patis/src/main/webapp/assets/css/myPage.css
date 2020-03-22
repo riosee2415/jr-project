@@ -1,24 +1,103 @@
 @charset "UTF-8";
 
 .myPageBox {
-	width : 1200px;
+	width: 1200px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 100px auto;
 }
 
-.myPageBox .myPageBox__basic{
+.myPageBox .myPageBox__basic {
 	width: 500px;
 	height: 500px;
-	background-color: red;
-	margin : 20px;
-}	
+	box-shadow: 2px 4px 10px #9cc9f5;
+	margin: 20px;
+}
 
-.myPageBox .myPageBox__option{
+.ma__title {
+	font-size: 24px;
+	margin: 20px;
+	font-weight: 600;
+}
+
+.myPageBox .myPageBox__option {
 	width: 500px;
 	height: 500px;
-	background-color: green;
-	margin : 20px;
+	margin: 20px;
+	box-sizing: border-box;
+		box-shadow: 2px 4px 10px #dedede;
+}
+
+.ma__infoArea {
+	padding: 20px;
+}
+
+.ma-add {
+	display: flex;
+	flex-direction: column;
+	width:100%;
+}
+
+.ma__infoArea div {
+	margin: 10px 0px;
+	display: flex;
+}
+
+.ma__infoArea div:nth-child(n+1):nth-child(-n+4) div:first-child {
+	font-weight: 600;
+	width: 130px;
+}
+
+.ma__infoArea div div:nth-child(2) {
+	color: #888888;
+}
+
+.ma__infoArea div input {
+	outline: none;
+	width:80%;
+	height:30px;
+	box-sizing: border-box;
+	padding-left:10px;
+	border:none;
+	border-bottom:1px solid #2b8141;
+}
+.ma-add input[type=button]{
+	background-color: #c7dbfe;
+	cursor:pointer;
+	border:none;
+	height:30px;
+	text-align: center;
+	line-height: 30px;
+	margin-left:10px;
+}
+.ma-add input[type=text]{
+	margin-left:4px;
+	width:100%;
+}
+.ma-add div {
+	width:100%;
+}
+.ma-add-01{
+	display: flex;
+	flex-direction: row;
+}
+.ma__button{
+	text-align: end;
+	margin-right:20px;
+}
+.ma__button input{
+	outline: none;
+	background: #6a89cc;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 33px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    -webkit-box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.2);
+    margin-bottom: 10px;
 }
