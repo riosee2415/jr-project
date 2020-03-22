@@ -9,7 +9,7 @@
   height: 320px;
   margin: 0 auto;
   -webkit-box-shadow: 0 2px 14px rgba(32, 33, 36, 0.27);
-  box-shadow: 0 2px 14px rgba(32, 33, 36, 0.27);
+  box-shadow: 2px 2px 4px rgba(32, 33, 36, 0.27);
   padding: 50px 50px 70px;
 }
 h3.login-title {
