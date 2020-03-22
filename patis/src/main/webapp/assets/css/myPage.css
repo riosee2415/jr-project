@@ -6,9 +6,25 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 100px auto;
+  margin: 0px auto 100px;
 }
 
+.myPage_tit {
+  color: #222222;
+  font-size: 30px;
+  font-weight: bold;
+  text-align:center;
+  margin:100px 0px 15px;
+}
+
+.myPage_content, .myPage_content-phone{
+	text-align: center;
+	color:#999;
+}
+.myPage_content-phone{
+	font-size: 14px;
+	margin:10px;
+}
 .myPageBox .myPageBox__basic {
   width: 500px;
   height: 500px;
@@ -43,17 +59,17 @@
 }
 
 .ma__infoArea div {
-  margin: 15px 0px 0px;
+  margin: 8px 0px 0px;
   display: flex;
 }
 .ma__infoArea div:nth-child(4){
 	margin:0;
 } 
 .ma__infoArea div:nth-child(4) div:nth-child(2){
-	margin-top:25px;
+	margin-top:12px;
 }
 .ma__infoArea div:nth-child(4) div:first-child{
-	margin-top:25px;
+	margin-top:18px;
 }
 .ma__infoArea div:nth-child(n + 1):nth-child(-n + 4) div:first-child {
   font-weight: 600;
