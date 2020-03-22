@@ -62,20 +62,28 @@
 .search_PW input,
 .search_PW_2 input {
   margin-top: 15px;
-  width: 20%;
+  width: 100%;
+  max-width: 500px;
+  padding: 8px 8px;
+  outline: none;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
 }
 
 .find_btn {
-  position: absolute;
+	position: absolute;
   right: 50px;
   bottom: 20px;
-  border: none;
+  border: 2px solid #f9c32f;
   outline: none;
   background-color: #ffca38;
   border-radius: 20px;
   font-size: 15px;
   color: #fff;
   cursor: pointer;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .need_findId {

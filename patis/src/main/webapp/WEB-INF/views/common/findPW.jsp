@@ -30,10 +30,8 @@ pageEncoding="UTF-8"%>
             </span>
             <div class="info_form" id="info-birth-js">
               <span class="info_form_des">
-                가입시 입력한 아이디 / 생년월일 / 이메일과 일치하는 비밀번호를
-                찾습니다.
-                <br />개인정보보호를 위해 비밀번호는 일부분만 보여드리며, *가
-                무작위로 표기됩니다.
+                비밀번호를 찾고자 하는 아이디와 생년월일, 이메일을 입력해주세요.
+                <br />입력하신 정보가 일치하면, 등록된 이메일로 비밀번호 재설정을 위한 인증코드를 보내드립니다.
               </span>
               <div class="search_form search_PW">
                 <!-- <label for="searchId_Id">아이디를 입력해주세요</label> -->
@@ -47,16 +45,15 @@ pageEncoding="UTF-8"%>
                   placeholder="아이디를 입력해주세요."
                 />
                 <br />
-
-                <label for="searchId_Birth">생년월일을 입력해주세요.</label>
                 <input
                   type="text"
                   id="startDate"
                   name="searchId_Birth"
                   class="search_ID_Birth"
-                  maxlength="6"
+                  maxlength="8"
                   value=""
-                  placeholder="200322"
+                  placeholder="생년월일을 8자리로 입력해주세요."
+                  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                 />
                 <br />
                 <!-- <label for="searchBirth_name">이메일을 입력해주세요</label> -->
