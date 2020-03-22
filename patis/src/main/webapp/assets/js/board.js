@@ -117,10 +117,16 @@ function boardWriteMoveHandler(b_type, type, keyword, b_no) {
 var remove_file = new Array();
 function boardWriteProcessHandler(b_type, mode, b_no) {
 	var b_gubun = $(CURRENT_PAGE + ' #input-gubun-js').val();
+	var b_author = $(CURRENT_PAGE + ' #input-author-js').val();
 	var b_title = $(CURRENT_PAGE + ' #input-title-js').val();
 	
 	b_type = b_type.toLowerCase();
 	
+	if(isEmpty(b_author)) {
+		alert('작성자를 입력해주세요.');
+		$(CURRENT_PAGE + ' #input-author-js').focus();
+		return;
+	}
 	if(isEmpty(b_title)) {
 		alert('제목을 입력해주세요.');
 		$(CURRENT_PAGE + ' #input-title-js').focus();
