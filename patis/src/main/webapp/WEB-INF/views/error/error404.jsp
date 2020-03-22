@@ -1,6 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 
+<link
+  rel="shortcut icon"
+  type="image/x-icon"
+  href="/assets/images/commons/favicon.png"
+/>
+<link
+  rel="stylesheet"
+  href="/assets/plugins/font-awesome-4.7.0/font-awesome.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/styles.css?ver=${ver}" />
+
 <div class="subpage">
   <div class="sub-container">
     <div class="error404_wrap">

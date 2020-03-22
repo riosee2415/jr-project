@@ -58,6 +58,6 @@
  	
  	<error-page>
  		<error-code>404</error-code>
- 		<location>/404err.do</location> 
-	</error-page> 
+ 		<location>/WEB-INF/views/error/error404.jsp</location> 
+	</error-page>
 </web-app>

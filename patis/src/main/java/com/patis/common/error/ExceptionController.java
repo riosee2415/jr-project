@@ -12,18 +12,7 @@ public class ExceptionController {
 
 	@ExceptionHandler({Exception.class, NoHandlerFoundException.class, ResourceNotFoundException.class})
 	public String exception(Exception e) {
-		return "redirect:/500err.do";
-	}
-	  	 		
-	@RequestMapping(value = "/404err.do", method = RequestMethod.GET)
-	public String err404() {
-		
-		return "404err";
-	}
-	
-	@RequestMapping(value = "/500err.do", method = RequestMethod.GET)
-	public String err500() {
-		
 		return "500err";
 	}
+	  	 		
 }
