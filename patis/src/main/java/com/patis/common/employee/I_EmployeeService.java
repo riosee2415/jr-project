@@ -49,4 +49,13 @@ public interface I_EmployeeService {
 	 * @DESC   : 마이페이지 접속 시 현재 로그인 된 사용자의 데이터를 얻어온다.
 	 */
 	EmpVO getUserInfoByMypage(String input_id) throws Exception;
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : int
+	 * @DESC   : 마이페이지에서 정보룰 수정한다.
+	 */
+	int updateUserInfoMyPage(Map<String, String> params);
 } 

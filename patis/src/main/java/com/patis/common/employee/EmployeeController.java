@@ -221,6 +221,11 @@ public class EmployeeController {
 		
 		EmpVO vo = employeeService.getUserInfoByMypage((String) session.getAttribute("loginId"));
 		
+		if(vo == null) {
+			return "login";
+		}
+		
+		
 		model.addAttribute("user", vo);
 		
 		return "myPage";
@@ -229,10 +234,30 @@ public class EmployeeController {
 	
 	
 	@RequestMapping(value="/saveInfoInMypage.do", method=RequestMethod.GET)
-	public String saveInfoInMypage(Model model, HttpSession session) throws Exception {
+	public String saveInfoInMypage(	  @RequestParam("id")		String id
+									, @RequestParam("email")	String email
+									, @RequestParam("tel")		String tel
+									, @RequestParam("mobile")	String mobile
+									, @RequestParam("zoneCode")	String zoneCode
+									, @RequestParam("addr1")	String addr1
+									, @RequestParam("addr2")	String addr2
+									, Model model
+									, HttpSession session) throws Exception {
 		
+
+		Map<String, String> params = new HashMap<String, String>();
 		
-		return "";
+		params.put("id", id);
+		params.put("email", email);
+		params.put("tel", tel);
+		params.put("mobile", mobile);
+		params.put("zoneCode", zoneCode);
+		params.put("addr1", addr1);
+		params.put("addr2", addr2);
+		
+		int result = employeeService.updateUserInfoMyPage(params);
+		
+		return "myPage";
 	}
 	
 	@RequestMapping(value="/resultId.do", method=RequestMethod.GET)
@@ -260,6 +285,4 @@ public class EmployeeController {
 		
 		return "resultPass";
 	}
-	
-	
 }

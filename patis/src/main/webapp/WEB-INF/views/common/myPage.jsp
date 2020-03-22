@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<form id="moveMyPage" action="${pageContext.request.contextPath }/myPage.do" method="get"></form>
+
 <div class="myPageBox">
 	<div class="myPageBox__basic ma">
 		<div class="ma__title">기본정보</div>
@@ -9,7 +11,7 @@
 		<div class="ma__infoArea">
 			<div>
 				<div>아이디</div>
-				<div>${user.USER_ID }</div>
+				<div id="user-id">${user.USER_ID }</div>
 			</div>
 
 			<div>
@@ -53,7 +55,7 @@
 				<div class="ma-add">
 					<article class="ma-add-01">
 						<input type="button" value="우편번호" onclick="javascript:openPost()"> <input type="text"
-							value="${USER_ZONECODE }" id="user-zonecode" readonly>
+							value="${user.USER_ZONECODE }" id="user-zonecode" readonly>
 					</article>
 					<div>
 						<input type="text" value="${user.USER_ADDR1 }" id="user-addr1" readonly>
@@ -66,7 +68,7 @@
 		</div>
 
 		<div class="ma__button">
-			<input type="button" value="수정">
+			<input type="button" value="수정" onclick="javascript:saveInfoInMypage()">
 		</div>
 	</div>
 </div>

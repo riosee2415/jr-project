@@ -42,4 +42,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		return sqlSession.selectOne(NAMESPACE + ".GET_MYPAGE_INFO", input_id);
 	}
 
+	@Override
+	public int updateUserInfoMyPage(Map<String, String> params) {
+		return sqlSession.update(NAMESPACE + ".MODIFY_USER_INFO", params);
+	}
+
 }

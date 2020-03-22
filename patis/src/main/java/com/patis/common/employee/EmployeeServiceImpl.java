@@ -78,6 +78,11 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	public EmpVO getUserInfoByMypage(String input_id) throws Exception {
 		return employeeDAO.getUserInfoByMypage(input_id);
 	}
+
+	@Override
+	public int updateUserInfoMyPage(Map<String, String> params) {
+		return employeeDAO.updateUserInfoMyPage(params);
+	}
 	
 	
 }
