@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .findId_title {
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   margin-bottom: 5rem;
 }
@@ -17,7 +17,7 @@
 }
 
 .findId_subtitle_2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .findId_com_wrap {
@@ -35,6 +35,35 @@
 
 .search_list li:last-child {
   margin-bottom: 0rem;
+}
+
+.info_form {
+  position: relative;
+  border: 1px solid #eee;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.info_form_des {
+  font-size: 15px;
+}
+
+.search_form input,
+.search_form_2 input {
+  margin-top: 15px;
+}
+
+.find_btn {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: #ffca38;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #fff;
 }
 
 .need_findPw {
