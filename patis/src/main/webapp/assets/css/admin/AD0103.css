@@ -159,8 +159,8 @@
   height: 30px;
   outline: none;
 }
-.user_detailData_area:nth-child(9) div:nth-child(2) input,
-.user_detailData_area:nth-child(10) div:nth-child(2) input {
+.user_detailData_area:nth-child(11) div:nth-child(2) input,
+.user_detailData_area:nth-child(12) div:nth-child(2) input {
   width: 392px;
 }
 
