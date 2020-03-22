@@ -37,4 +37,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		return sqlSession.update(NAMESPACE + ".MODIFY_LOGIN_TRY", input_id);
 	}
 
+	@Override
+	public EmpVO getUserInfoByMypage(String input_id) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + ".GET_MYPAGE_INFO", input_id);
+	}
+
 }

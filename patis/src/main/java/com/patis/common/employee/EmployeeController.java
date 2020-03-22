@@ -219,6 +219,10 @@ public class EmployeeController {
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
 		
+		EmpVO vo = employeeService.getUserInfoByMypage((String) session.getAttribute("loginId"));
+		
+		model.addAttribute("user", vo);
+		
 		return "myPage";
 	}
 }

@@ -38,4 +38,12 @@ public interface I_Ad0103DAO {
 	 * @DESC   : 검색유형과 검색어를 입력받아 사용자정보를 조회한다.
 	 */
 	List<EmpVO> searchUserInfo(Map<String, String> params);
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 22.
+	 * @RETURN : int
+	 * @DESC   : 회원 탈퇴 진행
+	 */
+	int deleteUser(String userId);
 }

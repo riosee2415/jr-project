@@ -35,4 +35,9 @@ public class Ad0103ServiceImpl implements I_Ad0103Service{
 		return adDAO0103DAO.searchUserInfo(params);
 	}
 
+	@Override
+	public int deleteUser(String userId) {
+		return adDAO0103DAO.deleteUser(userId);
+	}
+
 }

@@ -38,4 +38,9 @@ public class Ad0103DAOImpl implements I_Ad0103DAO {
 		return sqlSession.selectList(NAMESPACE + ".GET_SEARCH_USER_INFO", params);
 	}
 
+	@Override
+	public int deleteUser(String userId) {
+		return sqlSession.delete(NAMESPACE + ".REMOVE_USER", userId);
+	}
+
 }

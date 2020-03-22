@@ -40,6 +40,70 @@ function trClickHandler(userId){
 }
 
 
+function deleteBtnHandler(){
+	var userRight = $("#userInfo-userRight").val();
+	var updateRight = $("#userRight_combo").val();
+	var sessionRight = $("#sessionRight").val();
+	
+	switch(userRight){
+	case '개발자' :
+		userRight = 1;
+		break;
+	case '관리자' :
+		userRight = 2;
+		break;
+	case '관리자(운영)' :
+		userRight = 3;
+		break;
+	case '일반회원' :
+		userRight = 4;
+		break;
+	case '비회원' :
+		userRight = 5;
+		break;
+	}
+	
+	// validation - 1
+	if(userRight < sessionRight){
+		alert("더 높은 권한을 가진 회원을 수정할 수 없습니다.");
+		return;
+	}
+	
+	
+	var ans1 = confirm("해당 회원을 영구탈퇴 하시겠습니까?");
+	
+	if(ans1){
+		var ans2 = confirm("탈퇴된 회원은 다시 복구할 수 없습니다. 게속 진행하시겠습니까?");
+		
+		if(ans2){
+			var userId = $("#userInfo-userId").val();
+			
+			$.ajax({
+				url 	: "/deleteUserInfo.do",
+				type	: "get",
+				data	:	{
+							"userId" : userId
+							},
+				success : function(data){
+					
+					alert("회원 탈퇴가 완료되었습니다.");
+					
+					location.reload();
+					window.location.reload();
+					
+					
+					
+				}
+			});
+		}
+	} else {
+		alert("회원 탈퇴가 취소되었습니다.");
+	}
+	
+	
+}
+
+
 function saveBtnHandler(){
 	var userRight = $("#userInfo-userRight").val();
 	var updateRight = $("#userRight_combo").val();

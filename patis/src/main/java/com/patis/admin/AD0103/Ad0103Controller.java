@@ -161,5 +161,17 @@ public class Ad0103Controller {
 	}
 	
 	
+
+	@RequestMapping(value = "/deleteUserInfo.do", method = RequestMethod.GET)
+	public String deleteUserInfo(@RequestParam("userId")String userId
+								,Model model) {
+		
+		int result = ad0103Service.deleteUser(userId);
+
+		return "useControll";
+	}
+	
+	
+	
 	
 }

@@ -39,4 +39,12 @@ public interface I_EmployeeDAO {
 	 * @DESC   : 정상 로그인 시, 로그인 시도를 0으로 변경한다.
 	 */
 	int LOGIN_TRY_TO_ZERO(String input_id) throws Exception;
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 22.
+	 * @RETURN : EmpVO
+	 * @DESC   : 마이페이지 접속 시 현재 로그인 된 사용자의 데이터를 얻어온다.
+	 */
+	EmpVO getUserInfoByMypage(String input_id) throws Exception;
 }

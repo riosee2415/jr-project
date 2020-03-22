@@ -73,6 +73,11 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	public int LOGIN_TRY_TO_ZERO(String input_id) throws Exception {
 		return employeeDAO.LOGIN_TRY_TO_ZERO(input_id);
 	}
+
+	@Override
+	public EmpVO getUserInfoByMypage(String input_id) throws Exception {
+		return employeeDAO.getUserInfoByMypage(input_id);
+	}
 	
 	
 }
