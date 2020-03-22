@@ -104,11 +104,11 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       </li>
     </c:forEach>
   </ul>
-  <div class="topHeader">
-    <c:choose>
-      <c:when test="${not empty loginId }">
-         <div class="topHeader_content">
-            <div class="loginYet"> <span>${loginId }</span>님 환영합니다.</div>
+   <div class="topHeader">
+      <c:choose>
+        <c:when test="${not empty loginId }">
+          <div class="topHeader_content">
+            <div class="loginYet"> <span>${loginName }</span>님 환영합니다.</div>
             <div class="down">
               <div class="myPage" onclick="javascript:moveMypageBtn()">
                 <i class="fa fa-address-card" aria-hidden="true"></i> 마이페이지
@@ -118,20 +118,23 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               </div>
             </div>
           </div>
-      </c:when>
+        </c:when>
 
-      <c:otherwise>
-        <div class="login">
-          <button type="button" onclick="javacript:pageLink('/login.do')">
-            <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
-          </button>
-        </div>
-        <div class="join">
-          <button type="button" onclick="javacript:pageLink('/join-step-1.do')">
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
-          </button>
-        </div>
-      </c:otherwise>
-    </c:choose>
-  </div>
+        <c:otherwise>
+          <div class="login">
+            <button type="button" onclick="javacript:pageLink('/login.do')">
+              <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
+            </button>
+          </div>
+          <div class="join">
+            <button
+              type="button"
+              onclick="javacript:pageLink('/join-step-1.do')"
+            >
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
+            </button>
+          </div>
+        </c:otherwise>
+      </c:choose>
+    </div>
 </nav>
