@@ -221,6 +221,10 @@ public class EmployeeController {
 		
 		EmpVO vo = employeeService.getUserInfoByMypage((String) session.getAttribute("loginId"));
 		
+		System.out.println(vo.getUSER_ID());
+		System.out.println(vo.getUSER_NAME());
+		System.out.println(vo.getUSER_RIGHT());
+		
 		model.addAttribute("user", vo);
 		
 		return "myPage";

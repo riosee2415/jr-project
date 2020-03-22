@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="myPageBox">
 	<div class="myPageBox__basic ma">
@@ -8,22 +9,22 @@
 		<div class="ma__infoArea">
 			<div>
 				<div>아이디</div>
-				<div>dummy</div>
+				<div>${user.USER_ID }</div>
 			</div>
 
 			<div>
 				<div>이름</div>
-				<div>dummy</div>
+				<div>${user.USER_NAME }</div>
 			</div>
 
 			<div>
 				<div>생년월일</div>
-				<div>dummy</div>
+				<div>${user.USER_REGNO1 }</div>
 			</div>
 
 			<div>
 				<div>권한</div>
-				<div>dummy</div>
+				<div>${user.USER_RIGHT }</div>
 			</div>
 
 		</div>
@@ -34,31 +35,31 @@
 		<div class="ma__infoArea">
 			<div>
 				<div>이메일</div>
-				<input type="text" value="dummy">
+				<input type="text" value="${user.USER_EMAIL }">
 			</div>
 
 			<div>
 				<div>전화번호</div>
-				<input type="text" value="dummy">
+				<input type="text" value="${user.USER_TEL }">
 			</div>
 
 			<div>
 				<div>핸드폰번호</div>
-				<input type="text" value="dummy">
+				<input type="text" value="${user.USER_MOBILE }">
 			</div>
 
 			<div>
 				<div>주소</div>
 				<div class="ma-add">
 					<article class="ma-add-01">
-						<input type="button" value="우편번호찾기"> <input type="text"
-							value="우편번호">
+						<input type="button" value="우편번호찾기" onclick="javascript:openPost()"> <input type="text"
+							value="${USER_ZONECODE }" readonly>
 					</article>
 					<div>
-						<input type="text" value="도로명주소">
+						<input type="text" value="${user.USER_ADDR1 }" readonly>
 					</div>
 					<div>
-						<input type="text" value="상세주소">
+						<input type="text" value="${user.USER_ADDR2 }">
 					</div>
 				</div>
 			</div>
@@ -69,3 +70,8 @@
 		</div>
 	</div>
 </div>
+
+
+
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="/assets/js/myPage.js"></script>
