@@ -26,7 +26,7 @@ pageEncoding="UTF-8"%>
 </div>
 
 
-<form id="moveMainFrm" action="${pageContext.request.contextPath }/logout.do "></form>
+<form id="moveMainFrm" action="${pageContext.request.contextPath }/logout.do " method="get"></form>
 
 <script src="/assets/js/jquery-1.12.4.min.js"></script>
 <script src="/assets/js/common.js"></script>

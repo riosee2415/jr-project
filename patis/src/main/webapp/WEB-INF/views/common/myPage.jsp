@@ -35,31 +35,31 @@
 		<div class="ma__infoArea">
 			<div>
 				<div>이메일</div>
-				<input type="text" value="${user.USER_EMAIL }">
+				<input type="text" value="${user.USER_EMAIL }" id="user-email">
 			</div>
 
 			<div>
 				<div>전화번호</div>
-				<input type="text" value="${user.USER_TEL }">
+				<input type="text" value="${user.USER_TEL }" id="user-tel">
 			</div>
 
 			<div>
 				<div>핸드폰번호</div>
-				<input type="text" value="${user.USER_MOBILE }">
+				<input type="text" value="${user.USER_MOBILE }" id="user-mobile">
 			</div>
 
 			<div>
 				<div>주소</div>
 				<div class="ma-add">
 					<article class="ma-add-01">
-						<input type="button" value="우편번호찾기" onclick="javascript:openPost()"> <input type="text"
-							value="${USER_ZONECODE }" readonly>
+						<input type="button" value="우편번호" onclick="javascript:openPost()"> <input type="text"
+							value="${USER_ZONECODE }" id="user-zonecode" readonly>
 					</article>
 					<div>
-						<input type="text" value="${user.USER_ADDR1 }" readonly>
+						<input type="text" value="${user.USER_ADDR1 }" id="user-addr1" readonly>
 					</div>
 					<div>
-						<input type="text" value="${user.USER_ADDR2 }">
+						<input type="text" value="${user.USER_ADDR2 }" id="user-addr2">
 					</div>
 				</div>
 			</div>

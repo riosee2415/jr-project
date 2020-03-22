@@ -221,12 +221,19 @@ public class EmployeeController {
 		
 		EmpVO vo = employeeService.getUserInfoByMypage((String) session.getAttribute("loginId"));
 		
-		System.out.println(vo.getUSER_ID());
-		System.out.println(vo.getUSER_NAME());
-		System.out.println(vo.getUSER_RIGHT());
-		
 		model.addAttribute("user", vo);
 		
 		return "myPage";
 	}
+	
+	
+	
+	@RequestMapping(value="/saveInfoInMypage.do", method=RequestMethod.GET)
+	public String saveInfoInMypage(Model model, HttpSession session) throws Exception {
+		
+		
+		return "";
+	}
+	
+	
 }
