@@ -8,15 +8,10 @@ out.println(session.getAttribute("loginRight")); */ %>
 <div class="admin-main-box">
   <div class="admin-main-box__top">
     <h2 class="admin-main-title">회원관리</h2>
-    <div class="admin-main-control__box">
-      <button type="button" class="btn btn-sm btn-gray">선택수정</button>
-      <button type="button" class="btn btn-sm btn-gray">선택삭제</button>
-      <button type="button" class="btn btn-sm btn-red">회원추가</button>
-    </div>
   </div>
 
   <div class="admin-main-box__content">
-    <h2>btn-xs</h2>
+    <!-- <h2>btn-xs</h2>
     <button type="button" class="btn btn-xs btn-white">수정</button>
     <button type="button" class="btn btn-xs btn-black">수정</button>
     <button type="button" class="btn btn-xs btn-gray">수정</button>
@@ -60,5 +55,13 @@ out.println(session.getAttribute("loginRight")); */ %>
     <button type="button" class="btn btn-xl btn-red">수정수정</button>
     <button type="button" class="btn btn-xl btn-green">수정수정</button>
     <button type="button" class="btn btn-xl btn-orange">수정수정</button>
+  </div> -->
+    <div class="admin-main-box-title">
+      <span>중랑구청 관리자 페이지</span>에 오신것을 환영합니다.
+    </div>
+    <div class="admin-main-content-box">
+      회원 <span>dummy</span>님
+      <p><span>dummy</span>권한으로 접속하였습니다.</p>
+    </div>
   </div>
 </div>

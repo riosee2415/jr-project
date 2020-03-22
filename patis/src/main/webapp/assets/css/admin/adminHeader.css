@@ -78,5 +78,19 @@
 	margin-left : 15px;
 	color : #fff;
 	font-weight: 600;
-	font-size:12px;
+	font-size:14px;
+}
+
+.admin-box__header .header-content__box ul li:nth-child(n+1):nth-child(-n+2){
+	background-color:#fff;
+	border-radius:10px 10px 0px 0px;
+    padding: 10px;
+    margin-top: 11px;
+    color:#0b62b4;
+}
+
+.admin-box__header .header-content__box ul li i{
+	font-size: 18px;
+	margin-right:5px;
+	padding-top:14px;
 }
