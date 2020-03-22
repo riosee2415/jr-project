@@ -311,6 +311,43 @@ public class EmployeeController {
 		return "resultId";
 	}
 	
+	@RequestMapping(value="/resultId2.do", method=RequestMethod.POST)
+	public String resultId2(  @RequestParam("find2-name")	String findName
+							, @RequestParam("find2-email")	String findEmail
+							, Model model
+							, HttpSession session
+							, RedirectAttributes ra) throws Exception {
+		
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("userName", findName);
+		params.put("userEmail", findEmail);
+		
+		String findId = employeeService.findIdType2(params);
+		
+		if(findId == null) {
+			ra.addAttribute("errorCode", "1");
+			return "redirect:/findId.do";
+		}
+		
+		int len = findId.length();
+		len = len - 3;
+		
+		findId = findId.substring(0, len);
+		findId += "***";
+		
+		model.addAttribute("findId", findId);
+		return "resultId";
+	}
+	
+	
+	
 	@RequestMapping(value="/resultPass.do", method=RequestMethod.GET)
 	public String resultPass(Model model, HttpSession session) throws Exception {
 		

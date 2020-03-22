@@ -7,13 +7,13 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <p>회원관리 > 로그인기록 관리(AD0101)</p>
 </div>
 <div class="admin__area">
-  <div class="board-search__area">
-    <div class="board-search-type">
-      <div class="search-type__box active" id="search-type-js">
-        <p class="search-type-text">전체</p>
-        <i class="fa fa-caret-down" aria-hidden="true"></i>
-      </div>
-      <ul
+  <!-- <div class="board-search__area"> -->
+    <!-- <div class="board-search-type"> -->
+      <!-- <div class="search-type__box active" id="search-type-js"> -->
+       <!--  <p class="search-type-text">전체</p> -->
+      <!--  <i class="fa fa-caret-down" aria-hidden="true"></i> --> 
+      <!-- </div> -->
+      <!-- <ul
         class="search-type__list"
         id="search-type-list-js"
         style="display: none;"
@@ -21,12 +21,14 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         <li class="active">전체</li>
         <li>아이디</li>
         <li>아이디주소</li>
-      </ul>
-    </div>
-  </div>
-  <input type="text" />
-  <button>검색</button>
+      </ul> -->
+   <!--  </div>  -->
+  <!-- </div> -->
+ <!--  <input type="text" />
+  <button>검색</button> -->
+ 
 </div>
+
 <div class="ad0101-content">
   <table>
     <thead>

@@ -12,6 +12,18 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   <input id="find-mobile" name="find-mobile" type="hidden" />
 </form>
 
+<form
+  id="resultId2Frm"
+  action="${pageContext.request.contextPath }/resultId2.do"
+  method="post"
+>
+  <input id="find2-name" name="find2-name" type="hidden" />
+  <input id="find2-email" name="find2-email" type="hidden" />
+</form>
+
+<form id="moveFindPassFrm" action="${pageContext.request.contextPath }/findPass.do" method="get"></form>
+
+
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
     <div class="findId_page">
@@ -133,7 +145,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                   class="search_Name_2"
                   maxlength="30"
                   value=""
-                  placeholder="이름을 입력해주세요."
+                  placeholder="이름 입력 (예: 홍길동)"
                 />
                 <br />
                 <!-- <label
@@ -148,10 +160,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                   name="searchEmail"
                   class="search_Email"
                   value=""
-                  placeholder="이메일을 입력해주세요."
+                  placeholder="이메일 입력(예: hong@gmail.com)"
                 />
               </div>
-              <button type="submit" class="find_btn" onclick="">
+              <button type="submit" class="find_btn" onclick="javascript:findIdType2()">
                 다음단계
               </button>
             </div>
@@ -160,7 +172,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       </div>
       <div class="need_findPw">
         ㆍ비밀번호를 찾으시나요?
-        <div class="go_findPw" onclick="">
+        <div class="go_findPw" onclick="javascript:moveFindPass()">
           비밀번호 찾기 <i class="fa fa-caret-right" aria-hidden="true"></i>
         </div>
       </div>

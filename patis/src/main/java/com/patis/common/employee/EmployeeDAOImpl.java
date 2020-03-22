@@ -62,4 +62,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		sqlSession.update(NAMESPACE + ".MODIFY_EMAIL_KEY", params);
 	}
 
+	@Override
+	public String findIdType2(Map<String, String> params) {
+		return sqlSession.selectOne(NAMESPACE + ".GET_FIND_ID_TYPE2", params);
+	}
+
 }

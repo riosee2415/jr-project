@@ -94,3 +94,33 @@ function findIdType1(){
 	document.getElementById("resultIdFrm").submit();
 	
 }
+
+
+function findIdType2(){
+	var name = document.getElementById("searchName").value;
+	var email = document.getElementById("searchEmail").value;
+	
+	if(name.length < 1 || email.length < 1) {
+		alert("정확한 값을 입력해주세요");
+		return;
+	}
+	
+	var frmName = document.getElementById("find2-name");
+	var frmEmail = document.getElementById("find2-email");
+	
+	frmName.value = name;
+	frmEmail.value = email;
+	
+	document.getElementById("resultId2Frm").submit();
+	
+}
+
+
+
+function moveLogin(){
+	document.getElementById("moveLoginFrm").submit();
+}
+
+function moveFindPass(){
+	document.getElementById("moveFindPassFrm").submit();
+}

@@ -141,5 +141,12 @@
 		 WHERE	USER_ID = #{userId}
 	</update>
 	
+	<select id="GET_FIND_ID_TYPE2" parameterType="hashMap" resultType="str">
+		SELECT	USER_ID
+		  FROM	JR_DB.EMP
+		 WHERE	USER_NAME 	= #{userName}
+		   AND	USER_EMAIL = #{userEmail}
+	</select>
+	
 	
 </mapper>

@@ -79,4 +79,12 @@ public interface I_EmployeeDAO {
 	 * @DESC   : 비밀번호 찾기를 위한 이메일 인증코드를 삽입한다.
 	 */
 	void modifyEmailKey(Map<String, String> params);
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : String
+	 * @DESC   : 이름과 이메일로 아이디를 검색한다.
+	 */
+	String findIdType2(Map<String, String> params);
 }
