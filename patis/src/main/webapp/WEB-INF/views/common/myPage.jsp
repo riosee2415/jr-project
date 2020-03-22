@@ -4,6 +4,10 @@
 
 <form id="moveMyPage" action="${pageContext.request.contextPath }/myPage.do" method="get"></form>
 
+        <h2 class="myPage_tit">
+          <i class="fa fa-user" aria-hidden="true"></i> 마이페이지
+        </h2>
+        <div class="myPage_content">각종 개인 정보를 수정할 수 있는 페이지 입니다.</div>
 <div class="myPageBox">
 	<div class="myPageBox__basic ma">
 		<div class="ma__title">기본정보</div>
@@ -72,8 +76,11 @@
 		<div class="ma__button">
 			<input type="button" value="수정" onclick="javascript:saveInfoInMypage()">
 		</div>
+		<div class="myPage_content-phone">핸드폰번호는 본인인증이 완료된 번호이므로 수정이 불가능 합니다.</div>
 	</div>
+	
 </div>
+
 
 
 
