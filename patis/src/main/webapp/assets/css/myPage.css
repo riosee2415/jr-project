@@ -43,10 +43,15 @@
 }
 
 .ma__infoArea div {
-  margin: 10px 0px;
+  margin: 15px 0px 0px;
   display: flex;
 }
-
+.ma__infoArea div:nth-child(4){
+	margin:0;
+} 
+.ma__infoArea div:nth-child(4) div:first-child{
+	margin-top:25px;
+}
 .ma__infoArea div:nth-child(n + 1):nth-child(-n + 4) div:first-child {
   font-weight: 600;
   width: 130px;

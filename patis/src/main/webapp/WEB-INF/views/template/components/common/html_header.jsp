@@ -11,7 +11,7 @@ uri="http://java.sun.com/jsp/jstl/fmt"%>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0,  user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0"
     />
     <meta name="naver-site-verification" content="6410fa0dc4eed7c08c14e3d0dc8e548445d160e1" />
     <meta name="title" content="중랑구 도시재생지원포털" />

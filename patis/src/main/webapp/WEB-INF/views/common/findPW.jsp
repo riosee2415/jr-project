@@ -35,7 +35,7 @@ pageEncoding="UTF-8"%>
                 <br />개인정보보호를 위해 비밀번호는 일부분만 보여드리며, *가
                 무작위로 표기됩니다.
               </span>
-              <div class="search_form">
+              <div class="search_form search_PW">
                 <!-- <label for="searchId_Id">아이디를 입력해주세요</label> -->
                 <input
                   type="text"
@@ -43,7 +43,8 @@ pageEncoding="UTF-8"%>
                   name="searchID"
                   class="search_ID"
                   maxlength="30"
-                  value="아이디를 입력해주세요."
+                  value=""
+                  placeholder="아이디를 입력해주세요."
                 />
                 <br />
                 <!-- <label for="searchBirth_name">이름을 입력해주세요</label> -->
@@ -53,16 +54,19 @@ pageEncoding="UTF-8"%>
                   name="searchIdName"
                   class="search_Id_Name"
                   maxlength="30"
-                  value="이름을 입력해주세요."
+                  value=""
+                  placeholder="이름을 입력해주세요."
                 />
                 <br />
                 <label for="searchId_Birth">생년월일을 입력해주세요.</label>
                 <input
-                  type="date"
-                  id="searchId_Birth"
-                  name="searchIdBirth"
+                  type="text"
+                  id="startDate"
+                  name="searchId_Birth"
                   class="search_ID_Birth"
-                  value="생년월일을 입력해주세요."
+                  maxlength="6"
+                  value=""
+                  placeholder="200322"
                 />
               </div>
               <button type="button" class="find_btn">다음단계</button>
@@ -85,7 +89,7 @@ pageEncoding="UTF-8"%>
               <span class="info_form_des">
                 가입시 입력한 이메일로 임시비밀번호를 보내드립니다.
               </span>
-              <div class="search_form_2">
+              <div class="search_form_2 search_PW_2">
                 <!-- <label
                   for="searchName"
                   class="search_Name"
@@ -98,7 +102,8 @@ pageEncoding="UTF-8"%>
                   name="searchName"
                   class="search_Name_2"
                   maxlength="30"
-                  value="아이디를 입력해주세요."
+                  value=""
+                  placeholder="아이디를 입력해주세요."
                 />
                 <br />
                 <!-- <label
@@ -112,7 +117,8 @@ pageEncoding="UTF-8"%>
                   id="searchEmail"
                   name="searchEmail"
                   class="search_Email"
-                  value="이메일을 입력해주세요."
+                  value=""
+                  placeholder="이메일을 입력해주세요."
                 />
               </div>
               <button type="submit" class="find_btn">다음단계</button>
