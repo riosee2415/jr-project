@@ -23,10 +23,19 @@ public class EmpVO {
 	private String USER_REGNO2;
 	private String USER_GENDER;
 	private int USER_LOGIN_TRY;
+	private String USER_EMAIL_KEY;
 	
 
 	
 	
+	public String getUSER_EMAIL_KEY() {
+		return USER_EMAIL_KEY;
+	}
+
+	public void setUSER_EMAIL_KEY(String uSER_EMAIL_KEY) {
+		USER_EMAIL_KEY = uSER_EMAIL_KEY;
+	}
+
 	public String getUSER_REGNO1() {
 		return USER_REGNO1;
 	}
