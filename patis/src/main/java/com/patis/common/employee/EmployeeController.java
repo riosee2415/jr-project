@@ -169,10 +169,23 @@ public class EmployeeController {
 			return "redirect:/login.do";
 		} else {
 			// 로그인 성공
-			int loginTry = employeeService.LOGIN_TRY_TO_ZERO(params.get("input_id"));
+			System.out.println(params.get("input_id"));
 			
-			if(loginTry == 0) {
-				System.out.println("로그인시도 초기화");
+			int loginTry = employeeService.LOGIN_TRY_TO_ZERO(params.get("input_id"));
+			System.out.println(loginTry);
+			System.out.println(loginTry);
+			System.out.println(loginTry);
+			
+			
+			if(loginTry == 1) {
+				session.setMaxInactiveInterval(1800);
+				session.setAttribute("loginNo", vo.getUSER_NO());
+				session.setAttribute("loginId", vo.getUSER_ID());
+				session.setAttribute("loginName", vo.getUSER_NAME());
+				session.setAttribute("loginRight", vo.getUSER_RIGHT());
+			} else {
+				
+				System.out.println("로그인 성공하였으나 LOGIN TRY 에러 발생");
 				session.setMaxInactiveInterval(1800);
 				session.setAttribute("loginNo", vo.getUSER_NO());
 				session.setAttribute("loginId", vo.getUSER_ID());

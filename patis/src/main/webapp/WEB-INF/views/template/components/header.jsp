@@ -15,16 +15,26 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   <div class="deskbox">
     <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
     <div class="topHeader">
-      <div class="login">
-        <button type="button" onclick="javacript:pageLink('/login.do')">
-          <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
-        </button>
-      </div>
-      <div class="join">
-        <button type="button" onclick="javacript:pageLink('/join-step-1.do')">
-          <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
-        </button>
-      </div>
+      <c:choose>
+      	<c:when test="${not empty loginId }">
+      		<div>
+      			<span>${loginId }</span>님 환영합니다.
+      		</div>
+      	</c:when>
+      
+      	<c:otherwise>
+	      <div class="login">
+	        <button type="button" onclick="javacript:pageLink('/login.do')">
+	          <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
+	        </button>
+	      </div>
+	      <div class="join">
+	        <button type="button" onclick="javacript:pageLink('/join-step-1.do')">
+	          <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
+	        </button>
+	      </div>
+	     </c:otherwise>
+      </c:choose>
     </div>
     <nav id="deskmenu">
       <ul class="menu resmenu" id="resmenu-js">

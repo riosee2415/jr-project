@@ -34,7 +34,7 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 
 	@Override
 	public int LOGIN_TRY_TO_ZERO(String input_id) throws Exception {
-		return sqlSession.update(NAMESPACE + ".LOGIN_USER", input_id);
+		return sqlSession.update(NAMESPACE + ".MODIFY_LOGIN_TRY", input_id);
 	}
 
 }
