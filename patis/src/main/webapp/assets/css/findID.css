@@ -11,29 +11,42 @@
 }
 
 .findId_subtitle_1 {
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 0.5rem;
+}
+
+.findId_subtitle_2 {
+  font-size: 20px;
 }
 
 .findId_com_wrap {
   border: 1px solid #eee;
   border-top: 3px solid #227c39;
   padding: 30px 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 1.5rem;
 }
 
-.findId_com_wrap > p {
+.search_list li {
   margin-bottom: 1.5rem;
 }
 
-.findId_com_wrap > p:last-child {
+.search_list li:last-child {
   margin-bottom: 0rem;
 }
 
 .need_findPw {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: start;
 }
 

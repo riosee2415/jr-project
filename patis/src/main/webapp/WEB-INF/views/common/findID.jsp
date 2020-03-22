@@ -14,24 +14,78 @@ pageEncoding="UTF-8"%>
         </h3>
       </div>
       <div class="findId_com_wrap">
-        <p>
-          <input
-            type="radio"
-            id="find_Birth"
-            name="searchType"
-            class="how_find"
-          />
-          <label for="find_Birth">이름 / 생년월일 / 핸드폰 번호로 찾기</label>
-        </p>
-        <p>
-          <input
-            type="radio"
-            id="find_Email"
-            name="searchType"
-            class="how_find"
-          />
-          <label for="find_Email">내 정보에 등록된 이메일로 찾기</label>
-        </p>
+        <ul class="search_list">
+          <li>
+            <span class="choice_comm">
+              <input
+                type="radio"
+                id="find_Birth"
+                name="searchType"
+                class="how_find"
+                value="myBirth"
+              />
+              <label for="find_Birth"
+                >이름 / 생년월일 / 핸드폰 번호로 찾기</label
+              >
+            </span>
+            <div class="info_form">
+              <span>
+                가입시 입력한 이름 / 생년월일 / 핸드폰 번호와 일치하는 아이디를
+                찾습니다.
+              </span>
+              <button type="button" class="find_btn">다음단계</button>
+            </div>
+          </li>
+          <li>
+            <span>
+              <input
+                type="radio"
+                id="find_Email"
+                name="searchType"
+                class="how_find"
+                value="myEmail"
+              />
+              <label for="find_Email">내 정보에 등록된 이메일로 찾기</label>
+            </span>
+            <div class="info_from">
+              <span>
+                가입시 입력한 이메일로 임시 비밀번호를 보내드립니다.
+              </span>
+              <div>
+                <label
+                  for="searchName"
+                  class="search_Name"
+                  id="searachNameLabel"
+                  >이름을 입력해주세요</label
+                >
+                <input
+                  type="text"
+                  id="searchName"
+                  name="searchName"
+                  class=""
+                  maxlength="30"
+                  value=""
+                />
+              </div>
+              <div>
+                <label
+                  for="searchEmail"
+                  class="search_Email"
+                  id="searchEmailLabel"
+                  >이메일을 입력해주세요</label
+                >
+                <input
+                  type="text"
+                  id="searchEmail"
+                  name="searchEmail"
+                  class=""
+                  value=""
+                />
+              </div>
+              <button type="submit" class="find_btn">다음단계</button>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="need_findPw">
         ㆍ비밀번호를 찾으시나요?
