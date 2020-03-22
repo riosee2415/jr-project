@@ -16,6 +16,11 @@
   margin-bottom: 0.5rem;
 }
 
+.resultPw_subtitle_2 {
+  font-size: 15px;
+  color: #888;
+}
+
 .resultPw_com_warp {
   border: 1px solid #eee;
   border-top: 3px solid #3c7bb5;
@@ -23,6 +28,20 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 1.5rem;
+}
+
+.search_result li {
+  margin-bottom: 15px;
+}
+
+.search_result li:last-child {
+  margin-bottom: 0px;
+}
+
+.search_resultPw {
+  width: 20%;
+  outline: none;
+  margin-left: 10px;
 }
 
 .result_btn_wrap {
