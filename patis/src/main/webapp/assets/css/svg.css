@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.loading-ani {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+  clear: both;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color:#ffffff;
+}
+
+svg {
+  overflow:hidden;
+  display: block;
+  width: 700px;
+  max-width: 100%;
+  margin: calc(50vh - 167px) auto 0;
+}
+
+.letter {
+  stroke: #2af7d5;
+  stroke-width: 12px;
+  -webkit-animation: draw 6s infinite ease-in-out;
+  animation: draw 6s infinite ease-in-out;
+}
+@-webkit-keyframes draw {
+  20%,
+  90% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    stroke: #111;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes draw {
+  20%,
+  90% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    stroke: #111;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.letter:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.letter:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.letter:nth-child(5) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.letter:nth-child(6) {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.letter:nth-child(7) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.letter:nth-child(8) {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+.letter:nth-child(9) {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.letter:nth-child(10) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.letter:nth-child(11) {
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+.letter--s {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+}
+.letter--u {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+}
+.letter--p1-1 {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+}
+.letter--p1-2 {
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+}
+.letter--p2-1 {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+}
+.letter--p2-2 {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+}
+.letter--l {
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+}
+.letter--e-1 {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+}
+.letter--e-2 {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 290;
+}
+.letter--e-3 {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 80;
+}

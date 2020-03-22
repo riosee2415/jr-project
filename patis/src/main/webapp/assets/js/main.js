@@ -6,6 +6,10 @@ $(document).ready(function() {
   
   if (totalSlide > 0) slidePlay();
 
+  setInterval(function() {
+	    $(".loading-ani").fadeOut();
+	  }, 2300);
+  
   $("#slide-btn-js .slide-control").on("click", function(e) {
 	e.stopImmediatePropagation();
 	  
