@@ -71,7 +71,8 @@ h3.login-title {
 }
 .topHeader .login button i,
 .topHeader .join button i,
-.topHeader .logout i {
+.topHeader .logout i,
+.topHeader .myPage i {
   -webkit-transition: -webkit-transform 600ms ease-in-out 0s;
   transition: -webkit-transform 600ms ease-in-out 0s;
   -o-transition: transform 600ms ease-in-out 0s;
@@ -81,7 +82,8 @@ h3.login-title {
 }
 .topHeader .login button:hover i,
 .topHeader .join button:hover i,
-.topHeader .logout:hover i {
+.topHeader .logout:hover i,
+.topHeader .myPage:hover i  {
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }

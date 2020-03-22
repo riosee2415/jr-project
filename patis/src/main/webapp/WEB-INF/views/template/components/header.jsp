@@ -2,7 +2,10 @@
 pageEncoding="UTF-8"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core" %>
 
-<form id="moveMainFrm" action="${pageContext.request.contextPath }/logout.do "></form>
+<form
+  id="moveMainFrm"
+  action="${pageContext.request.contextPath }/logout.do "
+></form>
 
 <input type="checkbox" id="menu_call" class="ck" />
 <header class="mobile header">
@@ -19,9 +22,16 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <div class="topHeader">
       <c:choose>
         <c:when test="${not empty loginId }">
-          <div class="loginYet"> <span>${loginName }</span>님 환영합니다. </div>
-          <div class="logout" onclick="javascript:adminLogoutBtn()">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>로그아웃
+          <div class="topHeader_content">
+            <div class="loginYet"> <span>${loginId }</span>님 환영합니다.</div>
+            <div class="down">
+              <div class="logout" onclick="javascript:adminLogoutBtn()">
+                <i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃
+              </div>
+              <div class="myPage">
+                <i class="fa fa-address-card" aria-hidden="true"></i> 마이페이지
+              </div>
+            </div>
           </div>
         </c:when>
 
