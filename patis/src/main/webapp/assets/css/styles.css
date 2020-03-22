@@ -26,6 +26,10 @@
 @import "./findIDRes.css";
 @import "./findPW.css";
 @import "./findPWRes.css";
+@import "./resultID.css";
+@import "./resultIDRes.css";
+@import "./resultPW.css";
+@import "./resultPWRes.css";
 @import "./error404.css";
 @import "./error404Res.css";
 @import "./error500.css";

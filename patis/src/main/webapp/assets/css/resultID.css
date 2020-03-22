@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.resultId_title {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.resultId_subtitle_wrap {
+  margin-bottom: 1.5rem;
+}
+
+.resultId_subtitle {
+  font-size: 18px;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.resultId_com_warp {
+  border: 1px solid #eee;
+  border-top: 3px solid #227c39;
+  padding: 30px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+.result_btn_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.go_login_btn {
+  border: none;
+  outline: none;
+  width: 15%;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #ffca38;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
