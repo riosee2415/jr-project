@@ -2,7 +2,7 @@
 
 .userAdmin_aera {
   width: 1200px;
-  height: 550px;
+  height: 690px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,7 +19,7 @@
 }
 
 .userList__dataList-area {
-  height: 500px;
+  height: 580px;
   overflow-y: scroll;
 }
 
@@ -155,7 +155,7 @@
   padding-left: 10px;
 }
 .user_detailData_area div:nth-child(4) select {
-  width: 80px;
+  width: 90px;
   height: 30px;
   outline: none;
 }
@@ -164,7 +164,7 @@
   width: 392px;
 }
 
-.user_detailData_area:nth-child(11) {
+.user_detailData_area:nth-child(14) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
