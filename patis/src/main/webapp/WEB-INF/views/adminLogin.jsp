@@ -33,6 +33,17 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       <img src="/assets/images/commons/hdlogo.png" alt="로고" />
       <div class="login-box">
         <div class="login-box__top">ADMIN LOGIN</div>
+         <c:choose>
+        	<c:when test="${errorCode eq '1'}">
+        		 <h3 class="findId_error">
+		         	접근권한이 없습니다.
+		        </h3>
+        	</c:when>
+        	
+        	<c:otherwise>
+		       
+	        </c:otherwise>
+        </c:choose>
         <div class="login-box__center">
           <form
             action="${pageContext.request.contextPath }/admin.do"

@@ -60,8 +60,12 @@ public class Ad010001Controller {
 				middlewareService.printLog("관리자 또는 운영자 권한으로 로그인 되었습니다.");
 				flag = true;
 				
+			} else {
+				model.addAttribute("errorCode", "1");
+				
 			}
 		} else { 
+			
 		}
 		
 
