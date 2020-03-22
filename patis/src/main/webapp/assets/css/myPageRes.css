@@ -6,8 +6,8 @@
   }
 
   .myPageBox .myPageBox__basic {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
   }
 
   .ma__title {
@@ -16,19 +16,19 @@
   }
 
   .myPageBox .myPageBox__option {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
   }
 }
 
 @media screen and (max-width: 1100px) {
-   .myPageBox {
+  .myPageBox {
     width: 780px;
   }
 
   .myPageBox .myPageBox__basic {
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
   }
 
   .ma__title {
@@ -37,155 +37,38 @@
   }
 
   .myPageBox .myPageBox__option {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media screen and (max-width: 959px) {
-  .header .deskbox {
-    width: 700px;
-  }
-  .mobile {
-    display: block;
-  }
-  .desk {
-    display: none;
-  }
-  #collap_menu {
-    display: block;
-  }
-  #menu_call ~ .wrap {
-    margin: 0 auto;
+    width: 450px;
+    height: 450px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .header .deskbox {
-    margin: 0 auto;
+  .myPageBox {
     width: 360px;
-  }
-  .mobile {
-    display: block;
-    width: 360px;
-    margin: 0 auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
-  .desk {
-    display: none;
+  .myPageBox .myPageBox__basic {
+    width: 340px;
+    height: 340px;
   }
-  #collap_menu {
-    display: block;
+
+  .ma__title {
+    font-size: 20px;
   }
-  #menu_call ~ .wrap {
-    margin: 0 auto;
+
+  .myPageBox .myPageBox__option {
+    width: 340px;
+    height: 450px;
+    margin: 15px;
   }
-  .logo {
-    display: block;
-    margin-top: 1rem;
-    width: 250px;
-    height: 40px;
-    background-size: cover;
-    background-image: url("/assets/images/commons/hdlogo.png");
+
+  .ma__infoArea div:nth-child(n + 1):nth-child(-n + 4) div:first-child {
+    font-weight: 600;
+    width: 100px;
   }
-  .topHeader {
-    bottom: -64%;
-    position: absolute;
-    right: 4%;
-    z-index: -1;
-  }
-  .topHeader button {
+  .ma__infoArea div {
     font-size: 14px;
-  }
-  .topHeader button {
-    width: 80px;
-    height: 30px;
-  }
-  .topHeader .login button {
-    margin-right: 0px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 959px) {
-  .header .deskbox {
-    margin: 0 auto;
-    width: 700px;
-  }
-  .mobile {
-    display: block;
-    width: 700px;
-    margin: 0 auto;
-  }
-  .desk {
-    display: none;
-  }
-  #collap_menu {
-    display: block;
-  }
-  #menu_call ~ .wrap {
-    margin: 0 auto;
-  }
-  .resmenu li a.resmenu__m::after {
-    bottom: 5px;
-  }
-  .resmenu li .sub a {
-    text-align: left;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: normal;
-  }
-  .resmenu li:nth-child(3) .sub li:first-child {
-    margin-left: 38%;
-  }
-  .resmenu li:nth-child(4) .sub li:first-child {
-    margin-left: 42%;
-  }
-  .resmenu li:nth-child(5) .sub li:first-child {
-    margin-left: 43%;
-  }
-  .resmenu li:nth-child(6) .sub li:first-child {
-    margin-left: 67%;
-  }
-  .resmenu li:last-child .sub li:first-child {
-    margin-left: 55%;
-  }
-  .topHeader {
-    bottom: -64%;
-    position: absolute;
-    right: 4%;
-    z-index: -1;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .desk {
-    display: block;
-  }
-  .mobile {
-    display: none;
-  }
-  #collap_menu {
-    display: none;
-  }
-  #menu_call ~ .wrap {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  .mobile {
-    width: 360px;
-    margin: 0 auto;
-  }
-  .logo {
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .lst {
-    text-align: right;
-    right: 0;
   }
 }
