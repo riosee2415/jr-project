@@ -15,9 +15,9 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
- 	<h2 class="login_tit">
-       <span>중랑구청 도시재생지원포털</span>에 오신것을 환영합니다.
-     </h2>
+    <h2 class="login_tit">
+      <span>중랑구청 도시재생지원포털</span>에 오신것을 환영합니다.
+    </h2>
     <div class="login-page">
       <div class="login-box">
         <h3 class="login-title">회원 로그인</h3>

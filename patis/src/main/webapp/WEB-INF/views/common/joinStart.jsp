@@ -6,7 +6,7 @@ pageEncoding="UTF-8"%>
     <div class="login_page">
       <div class="login_container">
         <h2 class="login_tit">
-          <span>중랑구청 도시재생지원포털</span>에 오신것을 환영합니다.
+          중랑구청 도시재생지원포털의 <span>회원가입</span>을 환영합니다.
         </h2>
         <p class="normal_txt">
           중랑구청 도시재생지원포털의 정보는 14세 미만, 14세 이상 모두 사용할 수
