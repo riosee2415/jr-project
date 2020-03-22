@@ -48,3 +48,10 @@ function adminLogoutBtn(){
 	}
 
 }
+
+
+
+function moveMypageBtn(){
+	var pageFrm = document.getElementById("moveMypageFrm");
+	pageFrm.submit();
+}
