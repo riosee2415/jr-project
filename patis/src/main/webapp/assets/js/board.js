@@ -63,14 +63,14 @@ function getPageContent(paging){
 }
 
 function boardSearchHandler() {
-	var flag = validationInputLength($(CURRENT_PAGE + ' #search-keyword-js').val());
+	var flag = validationInputLength($(CURRENT_PAGE + ' .search-keyword').val());
 	if(flag) {
-		$(CURRENT_PAGE + ' #search-keyword-js').val('');
-		$(CURRENT_PAGE + ' #search-keyword-js').focus();
+		$(CURRENT_PAGE + ' .search-keyword').val('');
+		$(CURRENT_PAGE + ' .search-keyword').focus();
 		return;
 	}
 	search_type = $(CURRENT_PAGE + ' #search-type-list-js li.active').data('type');
-    search_keyword = $(CURRENT_PAGE + ' #search-keyword-js').val();
+    search_keyword = $(CURRENT_PAGE + ' .search-keyword').val();
     
     getPageContent(1);
 }
@@ -220,7 +220,7 @@ function boardSearchInit() {
 	search_type = '';
 	search_keyword = '';
 	
-	$(CURRENT_PAGE + ' #search-keyword-js').val('');
+	$(CURRENT_PAGE + ' .search-keyword').val('');
 	
 	boardSearchEventInit();
 }
@@ -269,7 +269,7 @@ function boardSearchStatus() {
 				$(CURRENT_PAGE + ' #search-type-js .search-type-text').text($(this).text());
 			}
 		});
-		$(CURRENT_PAGE + ' #search-keyword-js').val(search_keyword);
+		$(CURRENT_PAGE + ' .search-keyword').val(search_keyword);
 		
 		getPageContent(1);
 		result = true;

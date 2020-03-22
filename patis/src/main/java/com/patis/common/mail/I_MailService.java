@@ -17,4 +17,6 @@ public interface I_MailService {
 	
 	public void sendBoardWriteMail(BoardVO boardVO) throws SQLException;
 	
+	public void sendFindPwMail(String userId, String emailKey) throws Exception;
+	
 }

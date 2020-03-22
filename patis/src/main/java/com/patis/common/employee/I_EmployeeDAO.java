@@ -63,4 +63,20 @@ public interface I_EmployeeDAO {
 	 * @DESC   : 이름, 생년, 핸드폰으로 아이디를 검색한다.
 	 */
 	String findIdType1(Map<String, String> params);
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : String
+	 * @DESC   : 아이디, 생년, 이메일이 일치하는 사용자가 있는지 검색한다.
+	 */
+	String findPwType1(Map<String, String> params);
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : void
+	 * @DESC   : 비밀번호 찾기를 위한 이메일 인증코드를 삽입한다.
+	 */
+	void modifyEmailKey(Map<String, String> params);
 }

@@ -104,3 +104,8 @@
   margin-left: 10px;
   cursor: pointer;
 }
+
+.findPw_error{
+	font-size: 16px;
+	color : #ff2227;
+}

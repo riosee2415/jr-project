@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
       </h3>
       <div class="confirmPw_subtitle_wrap">
         <h3 class="confirmPw_subtitle">
-          입력하진 메일로 인증번호가 전송되었습니다.<br />
+          입력하신 이메일로 인증번호가 전송되었습니다.<br />
           전송된 인증번호를 입력해주세요.
         </h3>
       </div>
@@ -26,17 +26,6 @@ pageEncoding="UTF-8"%>
               placeholder="인증번호 입력"
             />
           </li>
-          <li>
-            <label for="check_result_PW">인증번호 확인 </label>
-            <input
-              type="text"
-              id="check_result_PW"
-              name="confirmPw"
-              class="search_confirmPw"
-              value=""
-              placeholder="인증번호 확인"
-            />
-          </li>
         </ul>
       </div>
       <div class="need_findId">
@@ -46,9 +35,7 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
       <div class="result_btn_wrap">
-        <button type="button" class="go_login_btn" onclick="">
-          로그인 하러가기
-        </button>
+        <button type="button" class="go_login_btn" onclick="">확인</button>
       </div>
     </div>
   </div>
