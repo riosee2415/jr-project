@@ -6,13 +6,12 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.mail.internet.MimeMessage;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
 
+import com.patis.common.employee.I_EmployeeDAO;
 import com.patis.model.BoardVO;
 import com.patis.model.EmpVO;
 import com.patis.model.MailVO;
@@ -21,10 +20,13 @@ import com.patis.model.MailVO;
 public class MailServiceImpl implements I_MailService {
 
 	@Resource(name="mailSender")
-	JavaMailSender mailSender;
+	private JavaMailSender mailSender;
 
 	@Resource(name="mailDAO") 
-	I_MailDAO mailDAO;	
+	private I_MailDAO mailDAO;	
+	
+	@Resource(name="employeeDAO")
+	private I_EmployeeDAO employeeDAO;
 	
 	@Override
 	public void sendEmail(MailVO mailVO) {
@@ -64,5 +66,16 @@ public class MailServiceImpl implements I_MailService {
 			mailVO.setMailContent(boardName + " 게시판에 글이 등록되었습니다.");
 			sendEmail(mailVO);
 		}
+	}
+
+	@Override
+	public void sendFindPwMail(String userId, String emailKey) throws Exception {
+		EmpVO emp = employeeDAO.getUserInfoByMypage(userId);
+		MailVO mailVO = new MailVO();
+		mailVO.setDefaultSetting();
+		mailVO.setMailTo(emp.getUSER_EMAIL());
+		mailVO.setMailSubject("중랑구청 비밀번호 찾기 인증코드");
+		mailVO.setMailContent("인증코드 [" + emailKey + "]를 입력해주세요.");
+		sendEmail(mailVO);
 	}
 }

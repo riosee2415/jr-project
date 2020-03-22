@@ -52,4 +52,14 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		return sqlSession.selectOne(NAMESPACE + ".GET_FIND_ID_TYPE1", params);
 	}
 
+	@Override
+	public String findPwType1(Map<String, String> params) {
+		return sqlSession.selectOne(NAMESPACE + ".GET_FIND_PW_TYPE1", params);
+	}
+
+	@Override
+	public void modifyEmailKey(Map<String, String> params) {
+		sqlSession.update(NAMESPACE + ".MODIFY_EMAIL_KEY", params);
+	}
+
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -9,9 +10,19 @@ pageEncoding="UTF-8"%>
       </h3>
       <div class="findPw_subtitle_wrap">
         <h3 class="findPw_subtitle_1">비밀번호를 모르시나요?</h3>
-        <h3 class="findPw_subtitle_2">
-          비밀번호 찾기 방법 중 가능한 방법을 선택해주세요.
-        </h3>
+        <c:choose>
+        	<c:when test="${errorCode eq '1'}">
+        		 <h3 class="findPw_error">
+		         	일치하는 정보를 찾을 수 없습니다. 정확한 정보를 입력해주세요.
+		        </h3>
+        	</c:when>
+        	<c:otherwise>
+		        <h3 class="findPw_subtitle_2">
+         			 비밀번호 찾기 방법 중 가능한 방법을 선택해주세요.
+		        </h3>
+	        </c:otherwise>
+        </c:choose>
+        
       </div>
       <div class="findPw_com_wrap">
         <ul class="search_list">
@@ -31,7 +42,7 @@ pageEncoding="UTF-8"%>
             <div class="info_form" id="info-birth-js">
               <span class="info_form_des">
                 비밀번호를 찾고자 하는 아이디와 생년월일, 이메일을 입력해주세요.
-                <br />입력하신 정보가 일치하면, 등록된 이메일로 비밀번호 재설정을 위한 인증코드를 보내드립니다.
+                <br />입력하신 정보가 일치하면, 입력하신 이메일로 비밀번호 재설정을 위한 인증코드를 보내드립니다.
               </span>
               <div class="search_form search_PW">
                 <!-- <label for="searchId_Id">아이디를 입력해주세요</label> -->
@@ -52,7 +63,7 @@ pageEncoding="UTF-8"%>
                   class="search_ID_Birth"
                   maxlength="8"
                   value=""
-                  placeholder="생년월일을 8자리로 입력해주세요."
+                  placeholder="생년월일을 8자리로 입력해주세요. (예: 19820830)"
                   onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                 />
                 <br />
@@ -63,11 +74,11 @@ pageEncoding="UTF-8"%>
                   name="searchEmail"
                   class="search_Email"
                   value=""
-                  placeholder="이메일을 입력해주세요."
+                  placeholder="이메일을 입력해주세요. "
                 />
                 <br />
               </div>
-              <button type="button" class="find_btn">다음단계</button>
+              <button type="button" class="find_btn" onclick="goFindPwHandler()">다음단계</button>
             </div>
           </li>
           <!-- 이름/이메일로 찾기 -->
@@ -132,4 +143,10 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
   </div>
+  
+  <form action="/findPass.do" method="post" id="frm-findpw-type1">
+  	<input type="hidden" name="id" />
+  	<input type="hidden" name="birth" />
+  	<input type="hidden" name="email" />
+  </form>	
 </div>

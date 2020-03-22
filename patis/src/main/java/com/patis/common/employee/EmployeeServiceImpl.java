@@ -1,6 +1,8 @@
 package com.patis.common.employee;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import javax.annotation.Resource;
 
@@ -8,6 +10,7 @@ import org.apache.commons.codec.net.URLCodec;
 import org.springframework.stereotype.Service;
 
 import com.patis.admin.AD01.I_Ad010001DAO;
+import com.patis.common.mail.I_MailService;
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.EmpVO;
 import com.patis.util.AES256Util;
@@ -25,6 +28,8 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
 	
+	@Resource(name="mailService")
+	private I_MailService mailService;
 	
 	@Override
 	public int dupleCheckId(String joinId) {
@@ -87,6 +92,25 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	@Override
 	public String findIdType1(Map<String, String> params) {
 		return employeeDAO.findIdType1(params);
+	}
+
+	@Override
+	public String findPwType1(Map<String, String> params) {
+		return employeeDAO.findPwType1(params);
+	}
+
+	@Override
+	public void modifyEmailKey(String userId) throws Exception {
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("userId", userId);
+		
+		Random random = new Random();
+		int emailKey = random.nextInt(9000) + 1000;
+		params.put("emailKey", Integer.toString(emailKey));
+		
+		employeeDAO.modifyEmailKey(params);
+		
+		mailService.sendFindPwMail(userId, Integer.toString(emailKey));
 	}
 	
 	
