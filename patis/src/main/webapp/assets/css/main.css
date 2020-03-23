@@ -54,19 +54,19 @@
   background-position: center center;
 }
 .slideimg-01 {
-  background-image: url("/assets/images/image/main_slideimg.png");
+  background-image: url("/assets/images/image/main_slideimg-01.png");
 }
 .slideimg-02 {
   background-image: url("/assets/images/image/main_bannerimg.png");
 }
 .slideimg-03 {
-  background-image: url("/assets/images/image/main_slideimg.png");
+  background-image: url("/assets/images/image/main_slideimg-02.png");
 }
 .slideimg-04 {
-  background-image: url("/assets/images/image/main_slideimg.png");
+  background-image: url("/assets/images/image/main_slideimg-01.png");
 }
 .slideimg-05 {
-  background-image: url("/assets/images/image/main_slideimg.png");
+  background-image: url("/assets/images/image/main_slideimg-01.png");
 }
 
 .btn_box {

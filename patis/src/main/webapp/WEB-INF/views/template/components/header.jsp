@@ -23,41 +23,44 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 </header>
 <header class="desk header">
   <div class="deskbox">
-  <div class="topHeader-box">
-    <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
-    <div class="topHeader">
-      <c:choose>
-        <c:when test="${not empty loginId }">
-          <div class="topHeader_content">
-            <div class="loginYet"> <span>${loginName }</span>님 환영합니다.</div>
-            <div class="down">
-              <div class="myPage" onclick="javascript:moveMypageBtn()">
-                <i class="fa fa-address-card" aria-hidden="true"></i> 마이페이지
-              </div>
-              <div class="logout" onclick="javascript:adminLogoutBtn()">
-                <i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃
+    <div class="topHeader-box">
+      <a href="${pageContext.request.contextPath }/main.do" class="logo"> </a>
+      <div class="topHeader">
+        <c:choose>
+          <c:when test="${not empty loginId }">
+            <div class="topHeader_content">
+              <div class="loginYet">
+                <span>${loginName }</span>님 환영합니다.</div
+              >
+              <div class="down">
+                <div class="myPage" onclick="javascript:moveMypageBtn()">
+                  <i class="fa fa-address-card" aria-hidden="true"></i>
+                  마이페이지
+                </div>
+                <div class="logout" onclick="javascript:adminLogoutBtn()">
+                  <i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃
+                </div>
               </div>
             </div>
-          </div>
-        </c:when>
+          </c:when>
 
-        <c:otherwise>
-          <div class="login">
-            <button type="button" onclick="javacript:pageLink('/login.do')">
-              <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
-            </button>
-          </div>
-          <div class="join">
-            <button
-              type="button"
-              onclick="javacript:pageLink('/join-step-1.do')"
-            >
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
-            </button>
-          </div>
-        </c:otherwise>
-      </c:choose>
-    </div>
+          <c:otherwise>
+            <div class="login">
+              <button type="button" onclick="javacript:pageLink('/login.do')">
+                <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
+              </button>
+            </div>
+            <div class="join">
+              <button
+                type="button"
+                onclick="javacript:pageLink('/join-step-1.do')"
+              >
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
+              </button>
+            </div>
+          </c:otherwise>
+        </c:choose>
+      </div>
     </div>
     <nav id="deskmenu">
       <ul class="menu resmenu" id="resmenu-js">
@@ -84,6 +87,38 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   </div>
 </header>
 <nav id="collap_menu">
+  <div class="topHeader">
+    <c:choose>
+      <c:when test="${not empty loginId }">
+        <div class="topHeader_content">
+          <div class="loginYet"> <span>${loginName }</span>님 환영합니다.</div>
+          <div class="down">
+            <div class="myPage" onclick="javascript:moveMypageBtn()">
+              <i class="fa fa-address-card" aria-hidden="true"></i>
+              마이페이지
+            </div>
+            <div class="logout" onclick="javascript:adminLogoutBtn()">
+              <i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃
+            </div>
+          </div>
+        </div>
+      </c:when>
+
+      <c:otherwise>
+        <div class="login">
+          <button type="button" onclick="javacript:pageLink('/login.do')">
+            <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
+          </button>
+        </div>
+        <div class="join">
+          <button type="button" onclick="javacript:pageLink('/join-step-1.do')">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            회원가입
+          </button>
+        </div>
+      </c:otherwise>
+    </c:choose>
+  </div>
   <ul class="menu">
     <c:forEach var="menu" items="${menuList }">
       <li>
@@ -104,37 +139,5 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       </li>
     </c:forEach>
   </ul>
-   <div class="topHeader">
-      <c:choose>
-        <c:when test="${not empty loginId }">
-          <div class="topHeader_content">
-            <div class="loginYet"> <span>${loginName }</span>님 환영합니다.</div>
-            <div class="down">
-              <div class="myPage" onclick="javascript:moveMypageBtn()">
-                <i class="fa fa-address-card" aria-hidden="true"></i> 마이페이지
-              </div>
-              <div class="logout" onclick="javascript:adminLogoutBtn()">
-                <i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃
-              </div>
-            </div>
-          </div>
-        </c:when>
-
-        <c:otherwise>
-          <div class="login">
-            <button type="button" onclick="javacript:pageLink('/login.do')">
-              <i class="fa fa-user-circle" aria-hidden="true"></i> 로그인
-            </button>
-          </div>
-          <div class="join">
-            <button
-              type="button"
-              onclick="javacript:pageLink('/join-step-1.do')"
-            >
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i> 회원가입
-            </button>
-          </div>
-        </c:otherwise>
-      </c:choose>
-    </div>
+  
 </nav>

@@ -60,12 +60,6 @@
     background-size: cover;
     background-image: url("/assets/images/commons/hdlogo.png");
   }
-  .topHeader {
-    bottom: 20%;
-    position: absolute;
-    right: 4%;
-    z-index: -1;
-  }
   .topHeader button {
     font-size: 14px;
   }
@@ -76,6 +70,9 @@
   .topHeader .login button {
     margin-right: 0px;
   }
+  .topHeader .join, .topHeader .login {
+    border-bottom: 4px solid #c7eeaa;
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -120,12 +117,6 @@
   }
   .resmenu li:last-child .sub li:first-child {
     margin-left: 55%;
-  }
-  .topHeader {
-    bottom: 20%;
-    position: absolute;
-    right: 4%;
-    z-index: -1;
   }
 }
 
