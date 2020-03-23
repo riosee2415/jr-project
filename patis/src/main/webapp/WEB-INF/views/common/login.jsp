@@ -22,11 +22,11 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       <div class="login-box">
         <h3 class="login-title">회원 로그인</h3>
         <c:if test="${param.loginMsg eq '1'}">
-          <h5>로그인 3회 이상 실패로 로그인이 불가능합니다.</h5>
+          <h5><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;로그인 3회 이상 실패로 로그인이 불가능합니다.<br/>관리자에게 문의하세요.</h5>
         </c:if>
 
         <c:if test="${param.loginMsg eq '2'}">
-          <h5>아이디 또는 비밀번호가 일치하지 않습니다.</h5>
+          <h5>※&nbsp;아이디 또는 비밀번호가 올바르지 않습니다.<br/>3번이상 오류시 로그인이 불가능합니다.</h5>
         </c:if>
         <form
           id="mainLoginFrm"
