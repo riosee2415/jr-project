@@ -144,6 +144,8 @@ function keyDownCheck(){
 		g_password = pass2;
 		g_passCheck = true;
 		$("#joinPass-1, #joinPass-2").css("border", "1.5px solid #6ab04c");
+	} else {
+		g_passCheck = false;
 	}
 }
 

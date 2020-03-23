@@ -63,7 +63,7 @@ public class Ad010001Controller {
 			} else {
 				session.invalidate();
 				model.addAttribute("errorCode", "1");
-				
+				return "/adminLogin";
 			}
 		} else { 
 			
