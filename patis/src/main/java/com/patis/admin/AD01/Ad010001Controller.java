@@ -61,6 +61,7 @@ public class Ad010001Controller {
 				flag = true;
 				
 			} else {
+				session.invalidate();
 				model.addAttribute("errorCode", "1");
 				
 			}
