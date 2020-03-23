@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-.loading-ani {
+.loading-ani,
+.ex-loading {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -13,10 +14,16 @@
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  opacity: 1;
-  visibility: visible;
 }
-
+.loading-ani{
+  display:none;
+}
+.ex-loading img{
+	display:block;
+	margin:300px auto;
+	width:700px;
+	height:280px;
+}
 svg {
   overflow: hidden;
   display: block;
@@ -27,7 +34,7 @@ svg {
 
 .letter {
   stroke: #2af7d5;
-  stroke-width: 12px;
+  stroke-width: 20px;
   -webkit-animation: draw 6s infinite ease-in-out;
   animation: draw 6s infinite ease-in-out;
 }

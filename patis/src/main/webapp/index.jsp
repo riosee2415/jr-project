@@ -2,6 +2,11 @@
 pageEncoding="UTF-8"%> <%@ include
 file="/WEB-INF/views/template/components/common/html_header.jsp" %>
 
+
+
+<div class="ex-loading">
+	<img alt="로딩" src="/assets/images/commons/loading-ani.gif">
+</div>
 <div class="loading-ani">
   <svg viewBox="0 0 500 200">
     <defs>
@@ -266,9 +271,7 @@ c-0.32-0.448-0.801-0.672-1.44-0.672h-0.96v-2.4h8.64v24.24h-5.76v-9.792h-8.64v-4.
     />
   </svg>
 </div>
-
 <script>
   location.href = "${pageContext.request.contextPath }/main.do";
 </script>
-
 <%@ include file="/WEB-INF/views/template/components/common/html_footer.jsp" %>

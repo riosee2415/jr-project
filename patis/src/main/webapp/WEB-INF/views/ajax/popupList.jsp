@@ -52,7 +52,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 
         <div class="popup_area__desc__content__data">
           <div>
-            <label>현제팝업</label>
+            <label>현재팝업</label>
           </div>
 
           <div>
@@ -78,7 +78,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           <div>
             <label>팝업내용</label>
           </div>
-
+ 
           <div>
             <input
               type="text"
