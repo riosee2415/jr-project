@@ -1,28 +1,27 @@
 @media screen and (max-width: 1100px) {
-	.find_btn {
-		right: 25px;
-	}
-	
-	.search_result li {
-		display: block;
-	}
-	
-	.password_validation {
-		margin-top: 10px;
-		margin-left: 0;
-	}
+  .find_btn {
+    right: 25px;
+  }
+
+  .search_result li {
+    display: block;
+  }
+
+  .password_validation {
+    margin-top: 10px;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.info_form {
-		padding-bottom: 70px;
-	}
-	.find_btn {
+  .info_form {
+    padding-bottom: 70px;
+  }
+  .find_btn {
     right: 50%;
     margin-right: -42px;
-	}	
+  }
 }
-
 
 @media screen and (max-width: 425px) {
   .findPw_title {
@@ -64,6 +63,6 @@
 
   .need_findId,
   .go_findId {
-    font-size: 15px;
+    font-size: 13px;
   }
 }

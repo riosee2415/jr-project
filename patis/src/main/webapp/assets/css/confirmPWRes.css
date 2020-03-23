@@ -1,8 +1,4 @@
 @media screen and (max-width: 1100px) {
-  .find_btn {
-    right: 25px;
-  }
-
   .search_result li {
     display: block;
   }
@@ -64,11 +60,6 @@
   .search_confirmPw {
     margin-left: 0px;
     margin-top: 15px;
-  }
-
-  .need_findId,
-  .go_findId {
-    font-size: 15px;
   }
 
   .confirmPass_btn {
