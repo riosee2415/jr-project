@@ -109,4 +109,22 @@ public interface I_EmployeeService {
 	 * @DESC   : 사용자의 비밀번호를 변경한다.
 	 */
 	void modifyUserPassword(Map<String, String> params) throws Exception;
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : int
+	 * @DESC   : 아이디를 통해 유저 로그인 시도 횟수를 가져온다.
+	 */
+	int getOnlyLogTryById(String input_id) throws Exception;
+	
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : int
+	 * @DESC   : 로그인 시도 아이디의 로그인 시도 횟수를 증가시킨다.
+	 */
+	int addLoginTry(Map<String, Object> params) throws Exception;
 } 

@@ -184,7 +184,6 @@ public class EmployeeController {
 							HttpSession session) throws Exception {
 		
 		
-		// loginTry 가져와서 3보다 크면 에러 발생
 		
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("input_id", loginId);
@@ -193,10 +192,31 @@ public class EmployeeController {
 		EmpVO vo = employeeService.mainLogin(params);
 		
 		if(vo == null) {
+			try {
+				System.out.println("loginTry1");
+				int loginCnt = employeeService.getOnlyLogTryById(loginId);
+				
+				loginCnt++;
+				System.out.println(loginCnt);
+				
+				System.out.println("loginTry2" + loginCnt);
+				
+				Map<String, Object> params2 = new HashMap<String, Object>();
+				params2.put("input_id", loginId);
+				params2.put("addTry", loginCnt);
+				
+				int updateResult = employeeService.addLoginTry(params2);
+				System.out.println("loginTry3" + updateResult);
+				
+			}catch(Error e) {
+				System.out.println(e);
+				
+			}
+			
+			
 			System.out.println("아이디 또는 비밀번호가 맞지 않습니다.");
 			model.addAttribute("loginMsg", "2");
 			
-			// 해당아이디 로그인트라이 1 증가
 			
 			return "redirect:/login.do";
 			

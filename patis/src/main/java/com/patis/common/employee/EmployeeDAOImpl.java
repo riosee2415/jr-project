@@ -82,4 +82,14 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 	public EmpVO getUserSecretInfo(Map<String, String> params) throws SQLException {
 		return sqlSession.selectOne(NAMESPACE + ".GET_USER_SECRET_INFO", params);
 	}
+
+	@Override
+	public int getOnlyLogTryById(String input_id) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + ".GET_ONLY_USER_LOGIN_TRY", input_id);
+	}
+
+	@Override
+	public int addLoginTry(Map<String, Object> params) throws Exception {
+		return sqlSession.update(NAMESPACE + ".MODIFY_USER_LOGIN_TRY", params);
+	}
 }

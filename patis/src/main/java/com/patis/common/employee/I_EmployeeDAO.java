@@ -112,4 +112,20 @@ public interface I_EmployeeDAO {
 	 * @DESC   : 비밀번호 복호화를 위한 데이터를 데이터베이스에서 가져온다.
 	 */
 	EmpVO getUserSecretInfo(Map<String, String> params) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : int
+	 * @DESC   : 아이디를 통해 유저 로그인 시도 횟수를 가져온다.
+	 */
+	int getOnlyLogTryById(String input_id) throws Exception;
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : int
+	 * @DESC   : 로그인 시도 아이디의 로그인 시도 횟수를 증가시킨다.
+	 */
+	int addLoginTry(Map<String, Object> params) throws Exception;
 }

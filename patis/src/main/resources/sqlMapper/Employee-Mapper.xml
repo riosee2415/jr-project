@@ -162,4 +162,17 @@
 		 WHERE	USER_ID = #{userId}
 	</select>
 	
+	
+	<select id="GET_ONLY_USER_LOGIN_TRY" parameterType="str" resultType="int">
+		SELECT	USER_LOGIN_TRY
+		  FROM	JR_DB.EMP
+		 WHERE	USER_ID = #{input_id}
+	</select>
+	
+	<update id="MODIFY_USER_LOGIN_TRY" parameterType="hashMap">
+		UPDATE	JR_DB.EMP
+		   SET	USER_LOGIN_TRY = ${addTry}
+		 WHERE	USER_ID = #{input_id}
+	</update>
+	
 </mapper>

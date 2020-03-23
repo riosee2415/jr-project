@@ -137,5 +137,15 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 		
 		employeeDAO.modifyUserPassword(params);
 	}
+
+	@Override
+	public int getOnlyLogTryById(String input_id) throws Exception {
+		return employeeDAO.getOnlyLogTryById(input_id);
+	}
+
+	@Override
+	public int addLoginTry(Map<String, Object> params) throws Exception {
+		return employeeDAO.addLoginTry(params);
+	}
 	
 }
