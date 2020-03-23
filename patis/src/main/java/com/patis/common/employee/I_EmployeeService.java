@@ -1,5 +1,6 @@
 package com.patis.common.employee;
 
+import java.sql.SQLException;
 import java.util.Map;
 
 import com.patis.model.EmpVO;
@@ -127,4 +128,12 @@ public interface I_EmployeeService {
 	 * @DESC   : 로그인 시도 아이디의 로그인 시도 횟수를 증가시킨다.
 	 */
 	int addLoginTry(Map<String, Object> params) throws Exception;
+	
+	/**
+	 * @AUTHOR : 4LEAF.YSH
+	 * @DATE   : 2020. 3. 23.
+	 * @RETURN : int
+	 * @DESC   : 로그인 기록 추가
+	 */
+	int addLoginLog(Map<String, String> params) throws SQLException;
 } 

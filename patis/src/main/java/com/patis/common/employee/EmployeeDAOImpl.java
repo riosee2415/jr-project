@@ -92,4 +92,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 	public int addLoginTry(Map<String, Object> params) throws Exception {
 		return sqlSession.update(NAMESPACE + ".MODIFY_USER_LOGIN_TRY", params);
 	}
+
+	@Override
+	public int addLoginLog(Map<String, String> params) throws SQLException {
+		return sqlSession.insert(NAMESPACE + ".SET_LOGIN_LOG", params);
+	}
 }

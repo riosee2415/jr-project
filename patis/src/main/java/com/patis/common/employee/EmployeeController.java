@@ -1,5 +1,7 @@
 package com.patis.common.employee;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.patis.admin.AD01.I_Ad010001Service;
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
 import com.patis.model.EmpVO;
@@ -27,6 +30,7 @@ public class EmployeeController {
 	
 	@Resource(name = "employeeService")
 	private I_EmployeeService employeeService;
+	
 	
 	@RequestMapping(value="/join-step-1.do", method=RequestMethod.GET)
 	public String join(Model model) throws Exception {
@@ -180,10 +184,19 @@ public class EmployeeController {
 	@RequestMapping(value="/mainLogin.do", method=RequestMethod.POST)
 	public String mainLogin(@RequestParam("loginId")String loginId ,
 							@RequestParam("loginPass")String loginPass ,
+							InetAddress ip ,
 							Model model ,
 							HttpSession session) throws Exception {
 		
+		String ipAddress = "";
+		int id_check_result = 0;
 		
+		try {
+			ip = InetAddress.getLocalHost(); 
+			ipAddress = ip.getHostAddress(); 
+		} catch(UnknownHostException e) {
+			System.out.println(e);
+		}
 		
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("input_id", loginId);
@@ -193,20 +206,15 @@ public class EmployeeController {
 		
 		if(vo == null) {
 			try {
-				System.out.println("loginTry1");
 				int loginCnt = employeeService.getOnlyLogTryById(loginId);
 				
 				loginCnt++;
-				System.out.println(loginCnt);
-				
-				System.out.println("loginTry2" + loginCnt);
 				
 				Map<String, Object> params2 = new HashMap<String, Object>();
 				params2.put("input_id", loginId);
 				params2.put("addTry", loginCnt);
 				
 				int updateResult = employeeService.addLoginTry(params2);
-				System.out.println("loginTry3" + updateResult);
 				
 			}catch(Error e) {
 				System.out.println(e);
@@ -229,21 +237,36 @@ public class EmployeeController {
 			return "redirect:/login.do";
 		} else {
 			// 로그인 성공
-			System.out.println(params.get("input_id"));
 			
 			int loginTry = employeeService.LOGIN_TRY_TO_ZERO(params.get("input_id"));
-			System.out.println(loginTry);
-			System.out.println(loginTry);
-			System.out.println(loginTry);
-			
 			
 			if(loginTry == 1) {
+				
+				Map<String, String> info = new HashMap<String, String>();
+				info.put("input_id", loginId);
+				info.put("input_ip", ipAddress);
+				
+				try {
+					id_check_result = employeeService.addLoginLog(info);
+				} catch(Error e) {
+					middlewareService.printLog("로그인 시도 아이디 데이터베이스 검증 실패");
+				}
+				
 				session.setMaxInactiveInterval(1800);
 				session.setAttribute("loginNo", vo.getUSER_NO());
 				session.setAttribute("loginId", vo.getUSER_ID());
 				session.setAttribute("loginName", vo.getUSER_NAME());
 				session.setAttribute("loginRight", vo.getUSER_RIGHT());
 			} else {
+				Map<String, String> info = new HashMap<String, String>();
+				info.put("input_id", loginId);
+				info.put("input_ip", ipAddress);
+				
+				try {
+					id_check_result = employeeService.addLoginLog(info);
+				} catch(Error e) {
+					middlewareService.printLog("로그인 시도 아이디 데이터베이스 검증 실패");
+				}
 				
 				System.out.println("로그인 성공하였으나 LOGIN TRY 에러 발생");
 				session.setMaxInactiveInterval(1800);

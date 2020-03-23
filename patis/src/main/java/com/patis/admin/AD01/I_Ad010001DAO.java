@@ -63,4 +63,6 @@ public interface I_Ad010001DAO {
 	 * @DESC   : 접속기록이 없는 경우, 새로운 접속기록을 기록한다.
 	 */
 	int addConnectReport(Map<String, String> params);
+	
+	
 }

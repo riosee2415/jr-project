@@ -1,5 +1,6 @@
 package com.patis.common.employee;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -146,6 +147,11 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	@Override
 	public int addLoginTry(Map<String, Object> params) throws Exception {
 		return employeeDAO.addLoginTry(params);
+	}
+
+	@Override
+	public int addLoginLog(Map<String, String> params) throws SQLException {
+		return employeeDAO.addLoginLog(params);
 	}
 	
 }
