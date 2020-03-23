@@ -78,7 +78,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           <div>
             <label>팝업내용</label>
           </div>
-
+ 
           <div>
             <input
               type="text"
