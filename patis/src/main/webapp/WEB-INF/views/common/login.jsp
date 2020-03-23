@@ -47,6 +47,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               id="loginPass"
               name="loginPass"
               placeholder="비밀번호"
+              onkeyup="javascript:enterkeyLogin()"
             />
           </div>
           <div class="search_tag_wrap">
