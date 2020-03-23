@@ -72,3 +72,11 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     </div>
   </div>
 </div>
+<div class="loading">
+  <p class="circle">
+    <span class="ouro ouro3">
+      <span class="left"><span class="anim"></span></span>
+      <span class="right"><span class="anim"></span></span>
+    </span>
+  </p>
+</div>

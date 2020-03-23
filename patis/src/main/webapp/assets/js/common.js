@@ -138,6 +138,7 @@ function loginAni(){
 	}
 	
 	// 애니메이션 --실행--
+	$(".loading").css("display", "block");
 	
 	
 	document.getElementById("mainLoginFrm").submit();
