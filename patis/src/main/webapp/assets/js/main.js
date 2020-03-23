@@ -13,16 +13,12 @@ $(document).ready(function() {
     agent.indexOf("msie") != -1
   ) {
     $(".ex-loading").css("display", "block");
-    console.log("explorer");
   } else if (agent.indexOf("chrome") != -1) {
     $(".ex-loading").css("display", "block");
     $(".loading-ani").css("display", "block");
-    console.log("크롬");
   } else if (agent.search("edge/") > -1) {
     $(".loading-ani").css("display", "none");
     $(".ex-loading").css("display", "block");
-    alert("edge");
-    console.log("edge");
   }
 
   $("#slide-btn-js .slide-control").on("click", function(e) {
