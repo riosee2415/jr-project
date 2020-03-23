@@ -62,8 +62,8 @@
   cursor: pointer;
 }
 
-.findId_error{
-	font-size: 14px;
-	margin-bottom: 30px;
-	color : #f44448;
+.findId_error {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #f44448;
 }

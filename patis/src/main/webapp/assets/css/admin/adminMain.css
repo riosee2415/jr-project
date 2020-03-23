@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 .admin-main-box__top .admin-main-title {
   font-weight: 800;
   font-size: 25px;
@@ -13,11 +12,12 @@
 
 .admin-main-box__content {
   padding: 0 25px;
-  width:100%;
-  height:100%;
-  box-sizing:border-box;
-  background-size:cover;
-  background-image:url("/assets/images/image/admin-main.png");
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-size: cover;
+  background-image: url("/assets/images/image/admin-main.png");
 }
 
 .admin-main-box-title {
@@ -31,10 +31,10 @@
 .admin-main-content-box span {
   color: #0b62b4;
 }
-.admin-main-content-box{
-	color: #222222;
+.admin-main-content-box {
+  color: #222222;
   font-size: 24px;
   text-align: center;
   line-height: 1.5;
-  padding-bottom:298px;
+  padding-bottom: 298px;
 }

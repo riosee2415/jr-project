@@ -70,9 +70,10 @@
   .topHeader .login button {
     margin-right: 0px;
   }
-  .topHeader .join, .topHeader .login {
+  .topHeader .join,
+  .topHeader .login {
     border-bottom: 4px solid #c7eeaa;
-}
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {

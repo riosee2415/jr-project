@@ -21,14 +21,28 @@
   -ms-flex-align: center;
   align-items: center;
 }
-.topHeader-box{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.topHeader-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .topHeader_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-bottom: 4px solid #c7dbfe;
 }
@@ -49,9 +63,9 @@
   background: transparent;
   margin-right: 10px;
 }
-.topHeader .join ,
-.topHeader .login{
-   border-bottom: 4px solid #c7dbfe;
+.topHeader .join,
+.topHeader .login {
+  border-bottom: 4px solid #c7dbfe;
 }
 .topHeader .join button,
 .topHeader .login button {
@@ -273,7 +287,8 @@
   -o-transition: 0.5s;
   height: 100vh;
   width: 100vw;
-  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.8);
 }
 #collap_menu ul li {

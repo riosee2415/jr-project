@@ -18,8 +18,8 @@
   width: 60px;
   background: #ebebeb;
 }
-.left-menu-sub{
-	font-size:15px;
+.left-menu-sub {
+  font-size: 15px;
 }
 .left-menu .left-menu-icon__box ul li {
   height: 56px;
@@ -65,15 +65,12 @@
   cursor: pointer;
 }
 
-
 .left-menu .lefe-menu-list__area .left-menu-sub li:hover {
   color: #8e44ad;
 }
 
-.left-menu .lefe-menu-list__area .left-menu-sub li.active{
-	font-weight: 600;
-	color : #8e44ad;
-	text-shadow: 2px 2px 10px #95a5a6;
+.left-menu .lefe-menu-list__area .left-menu-sub li.active {
+  font-weight: 600;
+  color: #8e44ad;
+  text-shadow: 2px 2px 10px #95a5a6;
 }
-
-

@@ -6,16 +6,19 @@
   position: absolute;
   z-index: 5;
   clear: both;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  background-color:#ffffff;
-  transition:0.5s;
+  background-color: #ffffff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   opacity: 1;
   visibility: visible;
 }
 
 svg {
-  overflow:hidden;
+  overflow: hidden;
   display: block;
   width: 700px;
   max-width: 100%;
