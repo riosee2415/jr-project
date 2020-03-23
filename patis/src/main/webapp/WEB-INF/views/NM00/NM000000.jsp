@@ -76,11 +76,8 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
     </div>
   </div>
   <div class="main-container-content">
-    <div
-      class="main-regeneration"
-      onclick="javascript:pageLink('${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62')"
-    >
-      <div class="main-img-rayer"></div>
+    <div class="main-regeneration">
+      <a href="${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62" class="main-img-rayer"></a>
     </div>
     <div class="main-news">
       <ul>

@@ -54,7 +54,7 @@ out.println(session.getAttribute("loginRight")); */ %>
     <button type="button" class="btn btn-xl btn-orange">수정수정</button>
   </div> -->
     <div class="admin-main-box-title">
-      <span>중랑구청 관리자 페이지</span>에 오신것을 환영합니다.
+      <span>중랑구청 도시재생포털 관리자 페이지</span>에 오신것을 환영합니다.
     </div>
     <div class="admin-main-content-box">
       회원 <span><c:out value="${loginId }"></c:out>(<c:out value="${loginName }"></c:out>)</span>님

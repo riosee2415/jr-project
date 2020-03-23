@@ -257,7 +257,8 @@
   height: 252px;
   cursor: pointer;
 }
-.main-img-rayer {
+a.main-img-rayer {
+  display:block;
   width: 376px;
   height: 252px;
   background-image: url("/assets/images/image/main_bannerimg.png");
