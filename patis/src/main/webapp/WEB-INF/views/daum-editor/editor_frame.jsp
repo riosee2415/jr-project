@@ -55,7 +55,7 @@
 				<li class="tx-list">
 					<div unselectable="on" class="tx-switchtoggle"
 						id="tx_switchertoggle">
-						<!-- <a href="javascript:;" title="에디터 타입">에디터</a> -->
+						<a href="javascript:;" title="에디터 타입" style="display: none;">에디터</a>
 					</div>
 				</li>
 			</ul>

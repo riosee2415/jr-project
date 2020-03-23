@@ -122,7 +122,7 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 	
 	b_type = b_type.toLowerCase();
 	
-	if(isEmpty(b_author)) {
+	if($(CURRENT_PAGE + ' #input-author-js').length > 0 && isEmpty(b_author)) {
 		alert('작성자를 입력해주세요.');
 		$(CURRENT_PAGE + ' #input-author-js').focus();
 		return;
@@ -167,7 +167,7 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		});
 		if(mode == 'WRITE')
 			sendBoardWriteMail(b_type);
-		Editor.save();
+		//Editor.save();
 	}
 }
 
@@ -431,8 +431,8 @@ function sendBoardWriteMail(b_type) {
 		type: 'post',
 		dataType: 'json',
 		data: {'b_type': b_type},
-		error: function() {
-			console.log('error');
+		error: function(a, b, c) {
+			console.log(a + b + c);
 		}
 	});
 }

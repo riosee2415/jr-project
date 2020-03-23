@@ -1,0 +1,7 @@
+#parse("classpath:/velocity/components/html_header.vm")
+#parse("classpath:/velocity/components/header.vm")
+
+<div>content</div>
+
+#parse("classpath:/velocity/components/footer.vm")
+#parse("classpath:/velocity/components/html_footer.vm")

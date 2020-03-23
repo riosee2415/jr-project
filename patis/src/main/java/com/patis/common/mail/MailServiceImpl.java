@@ -1,11 +1,18 @@
 package com.patis.common.mail;
 
+import java.io.File;
+import java.io.StringWriter;
 import java.sql.SQLException;
 import java.util.List;
 
 import javax.annotation.Resource;
 import javax.mail.internet.MimeMessage;
 
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.VelocityEngine;
+import org.apache.velocity.exception.ParseErrorException;
+import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
@@ -22,6 +29,9 @@ public class MailServiceImpl implements I_MailService {
 	@Resource(name="mailSender")
 	private JavaMailSender mailSender;
 
+	@Resource(name="velocityEngine")
+	private VelocityEngine velocityEngine;
+	
 	@Resource(name="mailDAO") 
 	private I_MailDAO mailDAO;	
 	
@@ -29,16 +39,18 @@ public class MailServiceImpl implements I_MailService {
 	private I_EmployeeDAO employeeDAO;
 	
 	@Override
-	public void sendEmail(MailVO mailVO) {
+	public void sendEmail(MailVO mailVO, Template template, VelocityContext context) {
 		final MimeMessagePreparator preparator = new MimeMessagePreparator() {
 			@Override
 			public void prepare(MimeMessage mimeMessage) throws Exception {
 				final MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
-
+				StringWriter stringWriter = new StringWriter();
+				template.merge(context, stringWriter);
+				
 				helper.setFrom(mailVO.getMailFrom());
 				helper.setTo(mailVO.getMailTo());
 				helper.setSubject(mailVO.getMailSubject()); 
-				helper.setText(mailVO.getMailContent(), true);
+				helper.setText(stringWriter.toString(), true);
 			}
 		};
 		mailSender.send(preparator);
@@ -64,7 +76,12 @@ public class MailServiceImpl implements I_MailService {
 			mailVO.setMailTo(emp.getUSER_EMAIL());
 			mailVO.setMailSubject("중랑구청 도시재생과 홈페이지 알림");
 			mailVO.setMailContent(boardName + " 게시판에 글이 등록되었습니다.");
-			sendEmail(mailVO);
+			
+			VelocityContext context = new VelocityContext();
+			context.put("test", "testBoard");
+			
+			Template template = velocityEngine.getTemplate("/velocity/contents/boardWrite.vm", "UTF-8");
+			sendEmail(mailVO, template, context);
 		}
 	}
 
@@ -76,6 +93,11 @@ public class MailServiceImpl implements I_MailService {
 		mailVO.setMailTo(emp.getUSER_EMAIL());
 		mailVO.setMailSubject("중랑구청 비밀번호 찾기 인증코드");
 		mailVO.setMailContent("인증코드 [" + emp.getUSER_EMAIL_KEY() + "]를 입력해주세요.");
-		sendEmail(mailVO);
+		
+		VelocityContext context = new VelocityContext();
+		context.put("test", "testFind");
+		
+		Template template = velocityEngine.getTemplate("/velocity/contents/findPw.vm", "UTF-8");
+		sendEmail(mailVO, template, context);
 	}
 }
