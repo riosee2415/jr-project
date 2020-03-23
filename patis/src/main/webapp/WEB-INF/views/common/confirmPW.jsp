@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+pageEncoding="UTF-8"%> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -14,13 +14,13 @@ pageEncoding="UTF-8"%>
           전송된 인증번호를 입력해주세요.
         </h3>
         <c:if test="${errorCode eq '1'}">
-        	<h3 class="confirmPw_error">
-        		인증번호가 일치하지 않습니다. 다시 한번 확인해주세요.
-        	</h3>
+          <h3 class="confirmPw_error">
+            인증번호가 일치하지 않습니다. 다시 한번 확인해주세요.
+          </h3>
         </c:if>
       </div>
       <div class="confirmPw_com_warp">
-        <ul class="search_result">
+        <ul class="search_result confirmPass_result">
           <li>
             <label for="result_PW">인증번호 입력</label>
             <input
@@ -41,17 +41,21 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
       <div class="result_btn_wrap">
-        <button type="button" class="go_login_btn" onclick="javascript:goConfirmPwHandler()">확인</button>
+        <button
+          type="button"
+          class="confirmPass_btn"
+          onclick="javascript:goConfirmPwHandler()"
+        >
+          확인
+        </button>
       </div>
     </div>
   </div>
-  
+
   <form action="/confirmPass.do" method="post" id="frm-confirm-pw-js">
-  	<input type="hidden" name="userId" value="${userId}" />
-  	<input type="hidden" name="emailKey" />
+    <input type="hidden" name="userId" value="${userId}" />
+    <input type="hidden" name="emailKey" />
   </form>
-  
-  <script>
-		
- 	</script>
+
+  <script></script>
 </div>

@@ -1,0 +1,38 @@
+@media screen and (max-width: 1100px) {
+}
+
+@media screen and (max-width: 957px) {
+  .search_resultPw {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+
+  .reset_PW_btn {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .resultPw_title {
+    font-size: 25px;
+  }
+
+  .resultPw_subtitle {
+    font-size: 15px;
+  }
+
+  .resultPw_subtitle_2 {
+    font-size: 13px;
+  }
+
+  .search_resultPw {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+
+  .reset_PW_btn {
+    width: 30%;
+    font-size: 13px;
+  }
+}

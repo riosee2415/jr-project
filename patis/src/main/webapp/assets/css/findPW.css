@@ -30,8 +30,6 @@
 }
 
 .search_list li {
-	display: flex;
-  align-items: center;
   margin-bottom: 1.5rem;
 }
 
@@ -73,7 +71,7 @@
 }
 
 .find_btn {
-	position: absolute;
+  position: absolute;
   right: 50px;
   bottom: 20px;
   border: 2px solid #f9c32f;
@@ -107,7 +105,7 @@
   cursor: pointer;
 }
 
-.findPw_error{
-	font-size: 16px;
-	color : #ff2227;
+.findPw_error {
+  font-size: 16px;
+  color: #ff2227;
 }

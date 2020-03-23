@@ -2,24 +2,29 @@
   .find_btn {
     right: 25px;
   }
-  
- 	.search_result li {
-		display: block;
-	}
-	
-	.password_validation {
-		margin-top: 10px;
-		margin-left: 0;
-	}
+
+  .search_result li {
+    display: block;
+  }
+
+  .password_validation {
+    margin-top: 10px;
+    margin-left: 0;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 957px) {
   .info_form {
     padding-bottom: 70px;
   }
-  .find_btn {
-    right: 50%;
-    margin-right: -42px;
+
+  .search_confirmPw {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+
+  .confirmPass_btn {
+    width: 20%;
   }
 }
 
@@ -27,6 +32,7 @@
   .confirmPw_title {
     font-size: 25px;
   }
+
   .confirmPw_subtitle_1 {
     font-size: 15px;
   }
@@ -55,12 +61,17 @@
     margin-bottom: 0px;
   }
 
-  .find_btn {
-    font-size: 13px;
+  .search_confirmPw {
+    margin-left: 0px;
+    margin-top: 15px;
   }
 
-  .need_findPw,
-  .go_findPW {
+  .need_findId,
+  .go_findId {
     font-size: 15px;
+  }
+
+  .confirmPass_btn {
+    width: 20%;
   }
 }
