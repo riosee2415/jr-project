@@ -172,6 +172,7 @@
 
 .gray_section_14down > li:hover span {
   color: #222222;
+  font-weight: 600;
 }
 
 .gray_section_14up > li {
@@ -180,6 +181,7 @@
 
 .gray_section_14up > li:hover span {
   color: #0b62b4;
+  font-weight: 600;
 }
 
 .gray_section > li > span {
