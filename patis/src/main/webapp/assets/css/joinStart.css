@@ -162,6 +162,7 @@
 
 .gray_section > li {
   width: 25%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
