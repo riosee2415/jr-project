@@ -22,9 +22,9 @@ var joinTel2 = document.getElementById("joinTel-2");
 var joinTel3 = document.getElementById("joinTel-3");
 
 function openPhonePop() {
+	event.preventDefault();
 	window.open("/phonePop.do", '_blank', 'width=500px,height=700px,toolbars=no,scrollbars=no');
 }
-
 
 
 function nextStep(){
