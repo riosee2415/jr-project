@@ -252,10 +252,6 @@ public class EmployeeController {
 					middlewareService.printLog("로그인 시도 아이디 데이터베이스 검증 실패");
 				}
 				
-				System.out.println(vo.getUSER_NO());
-				System.out.println(vo.getUSER_NO());
-				System.out.println(vo.getUSER_NO());
-				System.out.println(vo.getUSER_NO());
 				
 				session.setMaxInactiveInterval(1800);
 				session.setAttribute("loginNo", vo.getUSER_NO());

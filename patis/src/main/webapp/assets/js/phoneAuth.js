@@ -265,4 +265,16 @@ function joinBtnHandler(){
 }
 
 
+function moveFindIdJoin(){
+	document.getElementById("findIdFrm").submit();
+
+}
+
+function moveFindPassJoin(){
+	document.getElementById("findPassFrm").submit();
+}
+
+function moveFindLoginJoin(){
+	document.getElementById("findLoginFrm").submit();
+}
 

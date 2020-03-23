@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 
+<form id="findIdFrm" action="${pageContext.request.contextPath }/findId.do" method="get" ></form>
+<form id="findPassFrm" action="${pageContext.request.contextPath }/findPass.do" method="get" ></form>
+<form id="findLoginFrm" action="${pageContext.request.contextPath }/login.do" method="get" ></form>
+
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
     <div class="login_page">
@@ -51,14 +55,14 @@ pageEncoding="UTF-8"%>
               </li>
             </ul>
             <ul class="gray_section">
-              <li>
-                <a href="">아이디 찾기</a>
+              <li onclick="javascript:moveFindIdJoin()">
+                <span>아이디 찾기</span>
               </li>
-              <li>
-                <a href="">비밀번호 찾기</a>
+              <li onclick="javascript:moveFindPassJoin()">
+                <span>비밀번호 찾기</span>
               </li>
-              <li>
-                <a href="">로그인</a>
+              <li onclick="javascript:moveFindLoginJoin()">
+                <span>로그인</span>
               </li>
             </ul>
             <!-- <ul class="gray_section">
@@ -103,14 +107,14 @@ pageEncoding="UTF-8"%>
               </li>
             </ul>
             <ul class="gray_section">
-              <li>
-                <a href="">아이디 찾기</a>
+             <li onclick="javascript:moveFindIdJoin()">
+                <span>아이디 찾기</span>
               </li>
-              <li>
-                <a href="">비밀번호 찾기</a>
+              <li onclick="javascript:moveFindPassJoin()">
+                <span>비밀번호 찾기</span>
               </li>
-              <li>
-                <a href="">로그인</a>
+              <li onclick="javascript:moveFindLoginJoin()">
+                <span>로그인</span>
               </li>
             </ul>
           </div>

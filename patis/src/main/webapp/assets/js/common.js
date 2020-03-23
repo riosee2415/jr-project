@@ -145,3 +145,15 @@ function loginAni(){
 	
 	
 }
+
+
+function enterkeyLogin() {
+	
+    if (window.event.keyCode == 13) {
+
+    	loginAni();
+    }
+}
+
+
+
