@@ -124,6 +124,20 @@
   .main-container__slide li a {
     height: 255px;
   }
+  .btn_box{
+  	margin-top:-36px;
+  }
+  .left-btn,
+  .right-btn,
+  .pause,
+  .play{
+  	width:15px;
+  	height:15px;
+  }
+  .btn_box li{
+  	width:35px;
+  	height:35px;
+  }
   .banner {
     width: 330px;
     -webkit-box-orient: vertical;
@@ -218,6 +232,20 @@
   .main-container__slide li a {
     height: 227px;
   }
+    .btn_box{
+  	margin-top:-30px;
+  }
+  .left-btn,
+  .right-btn,
+  .pause,
+  .play{
+  	width:10px;
+  	height:10px;
+  }
+  .btn_box li{
+  	width:30px;
+  	height:30px;
+  }
   .banner {
     width: 300px;
     -webkit-box-pack: center;
@@ -236,9 +264,9 @@
   .mainBotton {
     width: 700px;
   }
-  .main-img-rayer {
-    height: 148px;
-    width: 220px;
+  a.main-img-rayer {
+    height: 150px;
+    width: 226px;
   }
   .main-cooper ul {
     width: 275%;
