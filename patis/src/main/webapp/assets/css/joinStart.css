@@ -156,7 +156,7 @@
   flex-direction: row;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  background-color: #dddddd;
+  background-color: #f1f1f1;
   padding: 17px 0px;
 }
 
@@ -166,23 +166,24 @@
   box-sizing: border-box;
 }
 
-.gray_section > li:hover {
+.gray_section_14down > li {
   border-bottom: 2px solid #575c62;
 }
 
-.gray_section_14up > li:hover {
+.gray_section_14down > li:hover span {
+  color: #222222;
+}
+
+.gray_section_14up > li {
   border-bottom: 2px solid #0b62b4;
 }
 
-.gray_section > li > span {
-  color: #222222;
-  line-height: 44px;
-  cursor: pointer;
+.gray_section_14up > li:hover span {
+  color: #0b62b4;
 }
 
-.gray_section > li:hover span {
+.gray_section > li > span {
   color: #444444;
-  position: relative;
-  top: 1.5px;
-  line-height: 42px;
+  line-height: 44px;
+  cursor: pointer;
 }

@@ -66,7 +66,7 @@ pageEncoding="UTF-8"%>
                 <a href="" class="none_mem_login_btn1">14세 미만 회원가입</a>
               </li>
             </ul>
-            <ul class="gray_section">
+            <ul class="gray_section gray_section_14down">
               <li onclick="javascript:moveFindIdJoin()">
                 <span>아이디 찾기</span>
               </li>
