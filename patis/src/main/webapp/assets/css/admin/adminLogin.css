@@ -11,7 +11,7 @@
 .login-box {
   width: 300px;
   margin: 50px auto;
-  background: rgb(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.27);
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.27);
   padding: 50px 70px;
