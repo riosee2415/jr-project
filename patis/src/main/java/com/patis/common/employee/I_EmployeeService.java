@@ -102,4 +102,11 @@ public interface I_EmployeeService {
 	 */
 	EmpVO getUserInfo(String input_id) throws Exception;
 	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 22.
+	 * @RETURN : void
+	 * @DESC   : 사용자의 비밀번호를 변경한다.
+	 */
+	void modifyUserPassword(Map<String, String> params) throws Exception;
 } 

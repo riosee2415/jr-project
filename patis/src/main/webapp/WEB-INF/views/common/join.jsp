@@ -49,13 +49,11 @@ pageEncoding="UTF-8"%>
                     onkeyup="javascript:keyDownPassword()"
                   />
                 </div>
-                <div>
-                  <span class="password_validation"
-                    >8자리 이상 영문, 숫자, 특수문자를 조합하세요.<br />
-                    (공백( ), 콤마(,), 마침표(.), 콜론(;/:), 슬러시(/)
+                <span class="password_validation"
+                  >8자리 이상 영문, 숫자, 특수문자를 조합하세요.<br />
+                  (공백( ), 콤마(,), 마침표(.), 콜론(;/:), 슬러시(/)
                     사용불가)</span
                   >
-                </div>
               </li>
               <li>
                 <input

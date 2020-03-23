@@ -122,6 +122,20 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	public EmpVO getUserInfo(String input_id) throws Exception {
 		return employeeDAO.getUserInfo(input_id);
 	}
+
+	@Override
+	public void modifyUserPassword(Map<String, String> params) throws Exception {
+		EmpVO empVO = employeeDAO.getUserSecretInfo(params);
+
+		String privateKey = empVO.getSECRET_KEY();
+		String skey = AES256Util.getHexStringKey(privateKey);
+		AES256Util aes256 = new AES256Util(skey);
+		URLCodec codec = new URLCodec();
 	
+		String encPassword = codec.encode(aes256.aesEncode((String)params.get("userPw")));
+		params.put("userPw", encPassword);
+		
+		employeeDAO.modifyUserPassword(params);
+	}
 	
 }

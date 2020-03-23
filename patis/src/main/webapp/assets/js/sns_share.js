@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	var SNS = {
 		naver: function(url, title) {
-			window.open("http://share.naver.com/web/shareView.nhn?url=" + encodeURI(encodeURIComponent(url)) + "&title=" + encodeURI(title), "naver", "width=500, height=500");
+			window.open("http://share.naver.com/web/shareView.nhn?url=" + encodeURI(encodeURIComponent(url)) + "&title=" + encodeURI(title), "naver", "width=630, height=650");
 		},
 		facebook: function(url, title) {
-			window.open("http://www.facebook.com/share.php?u=" + encodeURIComponent(url) + "&t=" + encodeURIComponent(title), "facebook", "width=900, height=800")
+			window.open("http://www.facebook.com/share.php?u=" + encodeURIComponent(url) + "&t=" + encodeURIComponent(title), "facebook", "width=500, height=500")
 		},
 		twitter: function(url, text) {
 			window.open("http://twitter.com/share?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text), "twitter", "width=626, height=436");

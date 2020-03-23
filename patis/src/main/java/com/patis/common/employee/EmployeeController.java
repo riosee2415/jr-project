@@ -391,6 +391,23 @@ public class EmployeeController {
 		return "resultPass";
 	}
 	
+	@RequestMapping(value="resultPass.do", method=RequestMethod.POST)
+	public String resultPwProcess(   Model model
+								   , RedirectAttributes rttr
+								   , @RequestParam("userId") String userId
+								   , @RequestParam("userPw") String userPw) throws Exception {
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("userId", userId);
+		params.put("userPw", userPw);
+		
+		employeeService.modifyUserPassword(params);
+		
+		rttr.addFlashAttribute("msg", "비밀번호 변경이 완료되었습니다.");
+		
+		return "redirect:/login.do";
+	}
+	
 	@RequestMapping(value="/confirmPass.do", method=RequestMethod.GET)
 	public String confirmPass(   Model model
 							   , HttpSession session

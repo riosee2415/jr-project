@@ -1,5 +1,6 @@
 package com.patis.common.employee;
 
+import java.sql.SQLException;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -72,4 +73,13 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 		return sqlSession.selectOne(NAMESPACE + ".GET_MYPAGE_INFO", input_id);
 	}
 
+	@Override
+	public void modifyUserPassword(Map<String, String> params) throws Exception {
+		sqlSession.update(NAMESPACE + ".MODIFY_USER_PASSWORD", params);
+	}
+
+	@Override
+	public EmpVO getUserSecretInfo(Map<String, String> params) throws SQLException {
+		return sqlSession.selectOne(NAMESPACE + ".GET_USER_SECRET_INFO", params);
+	}
 }

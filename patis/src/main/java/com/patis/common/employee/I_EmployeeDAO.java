@@ -1,5 +1,6 @@
 package com.patis.common.employee;
 
+import java.sql.SQLException;
 import java.util.Map;
 
 import com.patis.model.EmpVO;
@@ -95,4 +96,20 @@ public interface I_EmployeeDAO {
 	 * @DESC   : 사용자의 정보를 조회한다.
 	 */
 	EmpVO getUserInfo(String input_id) throws Exception;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 22.
+	 * @RETURN : void
+	 * @DESC   : 사용자의 비밀번호를 변경한다.
+	 */
+	void modifyUserPassword(Map<String, String> params) throws Exception;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : 2020. 3. 22
+	 * @RETURN : EmpVO
+	 * @DESC   : 비밀번호 복호화를 위한 데이터를 데이터베이스에서 가져온다.
+	 */
+	EmpVO getUserSecretInfo(Map<String, String> params) throws SQLException;
 }

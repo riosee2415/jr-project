@@ -95,7 +95,6 @@ h3.join-title span {
 .join-right li:nth-child(1) span,
 .join-right li:nth-child(3) span {
   font-size: 11px;
-  padding-top: 10px;
   vertical-align: -webkit-baseline-middle;
 }
 .join-right li:nth-child(3) {

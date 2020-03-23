@@ -2,6 +2,15 @@
 	.find_btn {
 		right: 25px;
 	}
+	
+	.search_result li {
+		display: block;
+	}
+	
+	.password_validation {
+		margin-top: 10px;
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width: 767px) {
