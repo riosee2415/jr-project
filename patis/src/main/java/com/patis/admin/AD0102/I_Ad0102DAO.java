@@ -39,5 +39,7 @@ public interface I_Ad0102DAO {
 	 * @DESC   : 시작일과 종료일을 기준으로 디테일 정보를 가져온다.
 	 */
 	List<ConnectRecordVO> getSearchDetailConnectData(Map<String, String> params); 
+	
+	
 }
 

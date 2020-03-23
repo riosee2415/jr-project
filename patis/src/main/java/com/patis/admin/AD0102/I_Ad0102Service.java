@@ -42,4 +42,7 @@ public interface I_Ad0102Service {
 	 */
 	List<ConnectRecordVO> getSearchDetailConnectData(Map<String, String> params); 
 	
+	
+	
+	
 } 

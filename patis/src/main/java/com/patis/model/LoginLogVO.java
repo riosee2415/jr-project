@@ -1,10 +1,22 @@
 package com.patis.model;
 
 public class LoginLogVO {
+	
+	private String ROWNUM;
 	private String LOG_NO;
 	private String LOG_ID;
 	private String LOG_IP;
 	private String LOG_DATE;
+	
+	
+	
+	
+	public String getROWNUM() {
+		return ROWNUM;
+	}
+	public void setROWNUM(String rOWNUM) {
+		ROWNUM = rOWNUM;
+	}
 	public String getLOG_NO() {
 		return LOG_NO;
 	}

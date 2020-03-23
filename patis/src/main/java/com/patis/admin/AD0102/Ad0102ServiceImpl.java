@@ -35,5 +35,7 @@ public class Ad0102ServiceImpl implements I_Ad0102Service{
 	public List<ConnectRecordVO> getSearchDetailConnectData(Map<String, String> params) {
 		return adDAO0102DAO.getSearchDetailConnectData(params);
 	}
+
+	
 	
 }

@@ -36,6 +36,8 @@ public class Ad0102DAOImpl implements I_Ad0102DAO{
 	@Override
 	public List<ConnectRecordVO> getSearchDetailConnectData(Map<String, String> params) {
 		return sqlSession.selectList(NAMESPACE + ".GET_SEARCH_DETAIL_CONNECT_DATA_TODAY", params);
-	} 
+	}
+
+	
 
 }

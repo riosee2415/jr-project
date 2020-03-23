@@ -27,7 +27,25 @@ public class Ad0101ServiceImpl implements I_Ad0101Service{
 	}
 	
 	
-	
+	@Override
+	public String getTodayLoginData(String today) throws Exception {
+		return adDAO0101DAO.getTodayLoginData(today);
+	}
+
+	@Override
+	public List<LoginLogVO> getTodayDetailLoginData(String today) throws Exception {
+		return adDAO0101DAO.getTodayDetailLoginData(today);
+	}
+
+	@Override
+	public List<LoginLogVO> getSearchDetailLoginData(Map<String, String> params) throws Exception {
+		return adDAO0101DAO.getSearchDetailLoginData(params);
+	}
+
+	@Override
+	public String getSearchLoginData(Map<String, String> params) throws Exception {
+		return adDAO0101DAO.getSearchLoginData(params);
+	}
 	
 
 }

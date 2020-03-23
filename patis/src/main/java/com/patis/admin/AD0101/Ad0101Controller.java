@@ -1,6 +1,9 @@
 package com.patis.admin.AD0101;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -10,9 +13,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.CommonVO;
+import com.patis.model.ConnectRecordVO;
 import com.patis.model.LoginLogVO;
 
 /**
@@ -93,6 +98,87 @@ public class Ad0101Controller {
 	}
 	
 	
+	@RequestMapping(value = "/getTodayLoginData.do", method = RequestMethod.GET)
+	@ResponseBody
+	public String getTodayLoginData(@RequestParam("today")String today) {
+		
+		String result = "";
+		
+		try {
+			result = ad0101Service.getTodayLoginData(today);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return result;
+	}	
+	
+	@RequestMapping(value = "/getSearchLoginData.do", method = RequestMethod.GET)
+	@ResponseBody
+	public String getSearchLoginData( @RequestParam("start")String start
+									, @RequestParam("end")String end) {
+		
+		String result = "";
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("start", start);
+		params.put("end", end);
+		
+		try {
+			result = ad0101Service.getSearchLoginData(params);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return result;
+	}	
+	
+	
+	
+	@RequestMapping(value = "/getTodayDetailLoginData.do", method = RequestMethod.GET)
+	public String getTodayDetailLoginData(@RequestParam("today")String today, Model model) {
+		
+		List<LoginLogVO> list = new ArrayList<LoginLogVO>();
+		
+		try {
+			list = ad0101Service.getTodayDetailLoginData(today);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		model.addAttribute("list", list);
+		
+		
+		return "ajax/loginList";
+	}
+	
+	
+	@RequestMapping(value = "/getSearchDetailLoginData.do", method = RequestMethod.GET)
+	public String getSearchDetailLoginData(	  @RequestParam("start")String start
+											, @RequestParam("end")String end
+											, Model model) {
+		
+		List<LoginLogVO> list = new ArrayList<LoginLogVO>();
+		
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("start", start);
+		params.put("end", end);
+		
+		try {
+			list = ad0101Service.getSearchDetailLoginData(params);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		model.addAttribute("list", list);
+		
+		
+		return "ajax/loginList";
+	}
 	
 	
 
