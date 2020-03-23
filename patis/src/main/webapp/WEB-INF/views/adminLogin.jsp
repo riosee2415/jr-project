@@ -13,6 +13,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     />
     <link
       rel="stylesheet"
+      href="/assets/plugins/font-awesome-4.7.0/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="/assets/css/admin/adminStyles.css?ver=${ver}"
     />
   </head>
@@ -36,7 +40,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
          <c:choose>
         	<c:when test="${errorCode eq '1'}">
         		 <h3 class="findId_error">
-		         	접근권한이 없습니다.
+		         	<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;접근권한이 없습니다.
 		        </h3>
         	</c:when>
         	
