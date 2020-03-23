@@ -1,9 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 
-<form id="findIdFrm" action="${pageContext.request.contextPath }/findId.do" method="get" ></form>
-<form id="findPassFrm" action="${pageContext.request.contextPath }/findPass.do" method="get" ></form>
-<form id="findLoginFrm" action="${pageContext.request.contextPath }/login.do" method="get" ></form>
+<form
+  id="findIdFrm"
+  action="${pageContext.request.contextPath }/findId.do"
+  method="get"
+></form>
+<form
+  id="findPassFrm"
+  action="${pageContext.request.contextPath }/findPass.do"
+  method="get"
+></form>
+<form
+  id="findLoginFrm"
+  action="${pageContext.request.contextPath }/login.do"
+  method="get"
+></form>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -106,8 +118,8 @@ pageEncoding="UTF-8"%>
                 </a>
               </li>
             </ul>
-            <ul class="gray_section">
-             <li onclick="javascript:moveFindIdJoin()">
+            <ul class="gray_section gray_section_14up">
+              <li onclick="javascript:moveFindIdJoin()">
                 <span>아이디 찾기</span>
               </li>
               <li onclick="javascript:moveFindPassJoin()">
