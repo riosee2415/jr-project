@@ -124,3 +124,23 @@ function moveLogin(){
 function moveFindPass(){
 	document.getElementById("moveFindPassFrm").submit();
 }
+
+
+
+function loginAni(){
+	
+	var inputId = document.getElementById("loginId").value;
+	var inputPass = document.getElementById("loginPass").value;
+	
+	if(inputId.length < 1 || inputPass.length < 1) {
+		alert("아이디/비밀번호를 입력하세요.");
+		return;
+	}
+	
+	// 애니메이션 --실행--
+	
+	
+	document.getElementById("mainLoginFrm").submit();
+	
+	
+}

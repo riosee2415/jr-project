@@ -29,6 +29,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           <h5>아이디 또는 비밀번호가 일치하지 않습니다.</h5>
         </c:if>
         <form
+          id="mainLoginFrm"
           action="${pageContext.request.contextPath }/mainLogin.do"
           method="post"
         >
@@ -57,7 +58,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
             </div>
           </div>
           <div class="login-button">
-            <button class="login-btn" type="submit">로그인</button>
+            <button class="login-btn" type="button" onclick="javascript:loginAni()">로그인</button>
             <button
               class="join-btn"
               type="button"
