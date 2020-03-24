@@ -1,6 +1,5 @@
 package com.patis.common.mail;
 
-import java.io.File;
 import java.io.StringWriter;
 import java.sql.SQLException;
 import java.util.List;
@@ -75,12 +74,11 @@ public class MailServiceImpl implements I_MailService {
 			mailVO.setDefaultSetting();
 			mailVO.setMailTo(emp.getUSER_EMAIL());
 			mailVO.setMailSubject("중랑구청 도시재생과 홈페이지 알림");
-			mailVO.setMailContent(boardName + " 게시판에 글이 등록되었습니다.");
 			
 			VelocityContext context = new VelocityContext();
-			context.put("test", "testBoard");
+			context.put("boardName", boardName);
 			
-			Template template = velocityEngine.getTemplate("/velocity/contents/boardWrite.vm", "UTF-8");
+			Template template = velocityEngine.getTemplate("/velocity/boardWrite.vm", "UTF-8");
 			sendEmail(mailVO, template, context);
 		}
 	}
@@ -92,12 +90,11 @@ public class MailServiceImpl implements I_MailService {
 		mailVO.setDefaultSetting();
 		mailVO.setMailTo(emp.getUSER_EMAIL());
 		mailVO.setMailSubject("중랑구청 비밀번호 찾기 인증코드");
-		mailVO.setMailContent("인증코드 [" + emp.getUSER_EMAIL_KEY() + "]를 입력해주세요.");
 		
 		VelocityContext context = new VelocityContext();
-		context.put("test", "testFind");
+		context.put("emailKey", emp.getUSER_EMAIL_KEY());
 		
-		Template template = velocityEngine.getTemplate("/velocity/contents/findPw.vm", "UTF-8");
+		Template template = velocityEngine.getTemplate("/velocity/findPw.vm", "UTF-8");
 		sendEmail(mailVO, template, context);
 	}
 }

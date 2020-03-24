@@ -167,7 +167,7 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		});
 		if(mode == 'WRITE')
 			sendBoardWriteMail(b_type);
-		//Editor.save();
+		Editor.save();
 	}
 }
 
