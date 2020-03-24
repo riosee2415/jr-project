@@ -226,6 +226,9 @@ function boardSearchInit() {
 }
 
 function boardSearchEventInit() {
+	var btype = $(CURRENT_PAGE + ' #board-list-js').data('btype');
+	if(btype == 'STATUTE' || btype == 'NOTICE') 
+		$(CURRENT_PAGE + ' #search-type-gubun').show();
 	$('.board-search-type #search-type-js').removeClass('active');
 	$('.board-search-type #search-type-js').attr('onclick', '').unbind('click');
 	$(CURRENT_PAGE + ' #search-type-js').on('click', function(e) {

@@ -15,6 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     </div>
     <ul class="search-type__list" id="search-type-list-js">
       <li class="active" data-type="td">전체</li>
+      <li data-type="g" class="d-none" id="search-type-gubun">구분</li>
       <li data-type="t">제목</li>
       <li data-type="d">내용</li>
     </ul>

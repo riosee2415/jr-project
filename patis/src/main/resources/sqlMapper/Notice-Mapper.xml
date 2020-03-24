@@ -68,6 +68,9 @@
 	
 	<sql id="search">
       <if test="searchType != null and searchType != ''">
+          <if test="searchType == 'g'.toString()">
+              AND B_GUBUN LIKE CONCAT('%', #{searchKeyword}, '%')
+          </if>
           <if test="searchType == 't'.toString()">
               AND B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
           </if>
@@ -76,7 +79,8 @@
           </if>
           <if test="searchType == 'td'.toString()">
               AND ( B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
-               OR   B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%') )
+               OR   B_DESCRIPTION LIKE CONCAT('%', #{searchKeyword}, '%') 
+               OR   B_GUBUN LIKE CONCAT('%', #{searchKeyword}, '%') )
           </if>
       </if>
   </sql>
