@@ -295,6 +295,12 @@
     width: 233px;
     height: 150px;
   }
+    .ex-loading img{
+	display:block;
+	margin:250px auto;
+	width:600px;
+	height:200px;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -397,4 +403,5 @@
   .mainBotton {
     margin-top: 35px;
   }
+
 }

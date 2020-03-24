@@ -24,6 +24,14 @@
 	width:700px;
 	height:280px;
 }
+@media screen and (max-width: 767px) {
+	  .ex-loading img{
+	display:block;
+	margin:250px auto;
+	width:360px;
+	height:150px;
+}
+}
 svg {
   overflow: hidden;
   display: block;
