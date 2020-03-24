@@ -244,7 +244,6 @@ function boardSearchEventInit() {
 	$(CURRENT_PAGE + ' #search-type-list-js li').on('click', function(e) {
 		e.preventDefault();
 		
-		console.log('click');
 		var selectedType = $(this).text();
 		$(CURRENT_PAGE + ' #search-type-js').removeClass('active');
 		$(CURRENT_PAGE + ' #search-type-js .search-type-text').text(selectedType);
