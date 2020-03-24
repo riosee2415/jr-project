@@ -63,7 +63,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
             <button
               class="join-btn"
               type="button"
-              onclick="javacript:pageLink('/join.do')"
+              onclick="javacript:pageLink('/join-step-1.do')"
             >
               회원가입
             </button>
