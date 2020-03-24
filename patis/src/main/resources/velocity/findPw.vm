@@ -12,7 +12,7 @@
 				
 				<div style="padding: 40px 0;">
 					<p style="color: #333; line-height: 150%; font-size: 14px; text-align: center; box-sizing: border-box;">
-						인증코드 <style="font-weight: bold; font-size: 1.1em;">[${emailKey}]</span>를 입력해주세요.
+						인증코드 <span style="font-weight: bold; font-size: 1.1em;">[${emailKey}]</span> 를 입력해주세요.
 					</p>
 				</div>
 				
