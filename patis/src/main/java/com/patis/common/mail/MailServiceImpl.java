@@ -75,7 +75,7 @@ public class MailServiceImpl implements I_MailService {
 			mailVO.setMailSubject("중랑구청 도시재생과 홈페이지 알림");
 			
 			VelocityContext context = new VelocityContext();
-			context.put("serverName", request.getServerName().equals("localhost") ? request.getServerName() + ":" + request.getServerPort() : request.getServerName());
+			context.put("serverName", request.getServerName().equals("localhost") ? request.getServerName() + "\\:" + request.getServerPort() : request.getServerName());
 			context.put("boardName", boardName);
 			
 			Template template = velocityEngine.getTemplate("/velocity/boardWrite.vm", "UTF-8");
@@ -92,7 +92,7 @@ public class MailServiceImpl implements I_MailService {
 		mailVO.setMailSubject("중랑구청 비밀번호 찾기 인증코드");
 		
 		VelocityContext context = new VelocityContext();
-		context.put("serverName", request.getServerName().equals("localhost") ? request.getServerName() + ":" + request.getServerPort() : request.getServerName());
+		context.put("serverName", request.getServerName().equals("localhost") ? request.getServerName() + "\\:" + request.getServerPort() : request.getServerName());
 		context.put("emailKey", emp.getUSER_EMAIL_KEY());
 		
 		Template template = velocityEngine.getTemplate("/velocity/findPw.vm", "UTF-8");

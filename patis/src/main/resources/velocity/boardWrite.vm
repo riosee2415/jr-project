@@ -6,17 +6,17 @@
 	<body>
 		<div style="padding: 10px 0;>
 			<div>
-				<div style="margin: 15px 0 30px; border-bottom: 1px solid #eeeeee;">
+				<div style="margin: 15px 0 0;">
 					<h1 style="text-align: center;"><img src="${serverName}/assets/images/commons/hdlogo.png" /></h1>
 				</div>
 				
-				<div style="padding: 40px 0;">
+				<div style="padding: 40px 0; margin: 30px 0; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee;">
 					<p style="color: #333; line-height: 150%; font-size: 14px; text-align: center; box-sizing: border-box;">
 						<span style="font-weight: bold; font-size: 1.1em;">${boardName}</span> 게시판에 글이 등록되었습니다.
 					</p>
 				</div>
 				
-				<div style="margin: 30px 0 15px; text-align: center; border-top: 1px solid #eeeeee;">
+				<div style="margin: 0 0 15px; text-align: center;">
 					<p style="color: #333; line-height: 150%; font-size: 14px;">[02043] 서울 중랑구 봉화산로 179 (신내동) 중랑구청2층</p>
 					<p style="color: #333; line-height: 150%; font-size: 14px;">TEL : 02-2094-0114 (120다산콜센터로 연결) / 02-2094-2150(야간,공휴일/당직실) / FAX : 02-490-4449</p>
 					<p style="color: #333; line-height: 150%; font-size: 14px;">COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGNANG URBAN REGENERATION PORTAL</p>
