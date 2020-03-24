@@ -3,6 +3,8 @@ package com.patis.common.employee;
 import java.sql.SQLException;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import com.patis.model.EmpVO;
 
 public interface I_EmployeeService {
@@ -84,7 +86,7 @@ public interface I_EmployeeService {
 	 * @RETURN : void
 	 * @DESC   : 비밀번호 찾기를 위한 이메일 인증코드를 삽입한다.
 	 */
-	void modifyEmailKey(String userId) throws Exception;
+	void modifyEmailKey(String userId, HttpServletRequest request) throws Exception;
 	
 	
 	/**

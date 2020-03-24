@@ -3,6 +3,8 @@ package com.patis.common.mail;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 
@@ -18,8 +20,8 @@ public interface I_MailService {
 	
 	public String getBoardNameForMail(String BOARD_TYPE) throws SQLException;
 	
-	public void sendBoardWriteMail(BoardVO boardVO) throws SQLException;
+	public void sendBoardWriteMail(BoardVO boardVO, HttpServletRequest request) throws SQLException;
 	
-	public void sendFindPwMail(String userId) throws Exception;
+	public void sendFindPwMail(String userId, HttpServletRequest request) throws Exception;
 	
 }

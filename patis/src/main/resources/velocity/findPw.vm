@@ -2,30 +2,26 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		
-		<style>
-			.mail-header__box {
-			}
-			
-			.mail-content__box {
-			}
-		</style>
 	</head>
 	<body>
-		<div class="mail-wrapper__box">
-			<div class="mail-header__box">
-				<h1 class="logo"><img src="/assets/commons/hdlogo.png" /></h1>
-			</div>
-			
-			<div class="mail-content__box">
-				<p>인증코드 <span>[${emailKey}]</span>를 입력해주세요.</p>
-			</div>
-			
-			<div class="mail-footer__box">
-				<p>[02043] 서울 중랑구 봉화산로 179 (신내동) 중랑구청2층</p>
-				<p>TEL : 02-2094-0114 (120다산콜센터로 연결) / 02-2094-2150(야간,공휴일/당직실) / FAX : 02-490-4449</p>
-				<p>COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGNANG URBAN REGENERATION PORTAL</p>
-			</div>
+		<div style="padding: 10px 0;>
+			<div style="width: 95%; margin: 0 auto; border: 1.5px solid #dedede; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);">
+				<div style="margin: 10px 0 20px; border-bottom: 1px solid #eeeeee;">
+					<h1 style="text-align: center;"><img src="${serverName}/assets/images/commons/hdlogo.png" /></h1>
+				</div>
+				
+				<div style="padding: 40px 0;">
+					<p style="color: #333; line-height: 150%; font-size: 14px; text-align: center; box-sizing: border-box;">
+						인증코드 <style="font-weight: bold; font-size: 1.1em;">[${emailKey}]</span>를 입력해주세요.
+					</p>
+				</div>
+				
+				<div style="margin: 20px 0 10px; text-align: center; border-top: 1px solid #eeeeee;">
+					<p style="color: #333; line-height: 150%; font-size: 14px;">[02043] 서울 중랑구 봉화산로 179 (신내동) 중랑구청2층</p>
+					<p style="color: #333; line-height: 150%; font-size: 14px;">TEL : 02-2094-0114 (120다산콜센터로 연결) / 02-2094-2150(야간,공휴일/당직실) / FAX : 02-490-4449</p>
+					<p style="color: #333; line-height: 150%; font-size: 14px;">COPYRIGHT &copy;2020 ALL RIGHTS RESERVED JUNGNANG URBAN REGENERATION PORTAL</p>
+				</div>
+			</div>	
 		</div>
 	</body>
 </html>

@@ -2,7 +2,7 @@
 pageEncoding="UTF-8"%> <%@ include
 file="/WEB-INF/views/template/components/common/html_header.jsp" %>
 
-
+<!-- 
 
 <div class="ex-loading">
 	<img alt="로딩" src="/assets/images/commons/loading-ani.gif">
@@ -271,7 +271,11 @@ c-0.32-0.448-0.801-0.672-1.44-0.672h-0.96v-2.4h8.64v24.24h-5.76v-9.792h-8.64v-4.
     />
   </svg>
 </div>
+
+ -->
 <script>
-  location.href = "${pageContext.request.contextPath }/main.do";
+  // location.href = "${pageContext.request.contextPath }/main.do";
+  
+  alert('서비스 준비중입니다.');
 </script>
 <%@ include file="/WEB-INF/views/template/components/common/html_footer.jsp" %>

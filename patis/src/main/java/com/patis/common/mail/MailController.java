@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,17 +26,18 @@ public class MailController {
 	
 	@ResponseBody
 	@RequestMapping(value="/sendBoardWriteMail.do")
-	public void sendBoardWriteMail(@RequestParam("b_type") String b_type) throws SQLException {
+	public void sendBoardWriteMail(@RequestParam("b_type") String b_type, HttpServletRequest request) throws SQLException {
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);
-		mailService.sendBoardWriteMail(boardVO);
+		mailService.sendBoardWriteMail(boardVO, request);
 	}
 	
 	@ResponseBody
 	@RequestMapping(value="/sendFindPwMail.do")
 	public void sendFindPwMail(   @RequestParam("id") String userId
 								, @RequestParam("birth") String userReg
-								, @RequestParam("email") String userEmail) throws Exception {
+								, @RequestParam("email") String userEmail
+								, HttpServletRequest request) throws Exception {
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("userId", userId);
 		params.put("userReg", userReg);
@@ -44,7 +46,7 @@ public class MailController {
 		String empId = employeeService.findPwType1(params);
 		
 		if(empId != null) {
-			employeeService.modifyEmailKey(userId);
+			employeeService.modifyEmailKey(userId, request);
 		}
 	}
 }

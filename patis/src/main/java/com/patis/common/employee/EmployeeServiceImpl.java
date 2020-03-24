@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Random;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.codec.net.URLCodec;
 import org.springframework.stereotype.Service;
@@ -101,7 +102,7 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 	}
 
 	@Override
-	public void modifyEmailKey(String userId) throws Exception {
+	public void modifyEmailKey(String userId, HttpServletRequest request) throws Exception {
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("userId", userId);
 		
@@ -111,7 +112,7 @@ public class EmployeeServiceImpl implements I_EmployeeService{
 		
 		employeeDAO.modifyEmailKey(params);
 		
-		mailService.sendFindPwMail(userId);
+		mailService.sendFindPwMail(userId, request);
 	}
 
 	@Override
