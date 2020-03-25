@@ -14,6 +14,7 @@
   display: -ms-grid;
   border: 1px solid #d2d2d2;
   border-left: none;
+  letter-spacing:-2px;
 }
 
 .sub-top-menu .top-menu__list.menu-one {

@@ -21,6 +21,7 @@
   -ms-flex-align: center;
   align-items: center;
   background-color:#fff;
+  padding:10px;
 }
 .topHeader-box {
   display: -webkit-box;
@@ -61,17 +62,14 @@
   line-height: 30px;
 }
 .topHeader .login button {
-  background: transparent;
   margin-right: 10px;
 }
-.topHeader .join,
-.topHeader .login {
-  border-bottom: 4px solid #c7dbfe;
-}
+
 .topHeader .join button,
 .topHeader .login button {
-  background: transparent;
-  color: #333333;
+  color: #fff;
+    border-radius:10px;
+   background:#17b1aa;
 }
 .topHeader .loginYet {
   font-size: 13px;
@@ -135,12 +133,12 @@
 }
 .logo {
   display: block;
-  margin-top: 1rem;
-  width: 320px;
-  height: 60px;
-  margin-bottom: 3px;
+  margin: 18px 0;
+  width: 280px;
+  height: 50px;
   background-repeat: no-repeat;
   background-position-x: 100%;
+  background-size:cover;
   background-image: url("/assets/images/commons/hdlogo.png");
 }
 .header.mobile .logo {
@@ -151,7 +149,6 @@
   width: 100%;
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
-  margin-bottom: 30px;
 }
 .resmenu {
   display: -webkit-box;
@@ -173,6 +170,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding:8px 0;
 }
 .resmenu__m {
   font-size: 19px;
@@ -189,7 +187,7 @@
   height: 0;
   position: absolute;
   left: 0;
-  top: 120px;
+  top: 144px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -216,7 +214,8 @@
   line-height: 40px;
   font-size: 19px;
   color: black;
-  font-weight: bold;
+  font-weight:600;
+  letter-spacing: -2px;
 }
 .resmenu li .sub a {
   text-align: left;
