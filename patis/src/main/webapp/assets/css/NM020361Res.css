@@ -118,17 +118,7 @@
     height: 44px;
     border-radius: 50px;
   }
-  .sub-main-propel:after {
-    content: "";
-    z-index: -3;
-    display: block;
-    position: absolute;
-    top: 2525px;
-    width: 360px;
-    height: 170px;
-    border: 1px solid #dedede;
-    border-radius: 50px;
-  }
+
   .propel-content {
     font-size: 15px;
   }
@@ -294,17 +284,7 @@
     height: 44px;
     border-radius: 50px;
   }
-  .sub-main-propel:after {
-    content: "";
-    z-index: -3;
-    display: block;
-    position: absolute;
-    top: 2484px;
-    width: 700px;
-    height: 170px;
-    border: 1px solid #dedede;
-    border-radius: 50px;
-  }
+
   .sub-status {
     width: 70%;
     margin: 60px auto;
