@@ -176,14 +176,14 @@ function joinBtnHandler(){
 		proFlag = true;
 	} else {
 		proFlag = false;
-		alert("아이디 중복검사 안됨");
+		alert("아이디 중복검사는 필수입니다.");
 		return;
 	}
 	
 	// NAME CHECK
 	if( (joinName.value == "" || joinName.value == null) ){
 		proFlag = false;
-		alert("이름 없음");
+		alert("이름은 필수입력사항 입니다.");
 		joinName.focus();
 		return;
 	} else {
@@ -195,14 +195,14 @@ function joinBtnHandler(){
 		proFlag = true;
 	} else {
 		proFlag = false;
-		alert("비밀번호 안맞음");
+		alert("비밀번호가 일치하지 않습니다.");
 		return;
 	}
 	
 	// ADDRESS CHECK
 	if( (zoneCode.value == "" || zoneCode.value == null) && (roadAddr.value == "" || roadAddr.value == null)){
 		proFlag = false;
-		alert("주소 없음");
+		alert("주소는 필수입력사항 입니다.");
 		return;
 	} else {
 		proFlag = true;
@@ -212,7 +212,7 @@ function joinBtnHandler(){
 	// EMAIL CHECK
 	if( (joinEmail.value == "" || joinEmail.value == null) && (joinEmailAddr.value == "" || joinEmailAddr.value == null) ){
 		proFlag = false;
-		alert("이메일 없음");
+		alert("이메일은 필수입력사항 입니다.");
 		joinEmail.focus();
 		return;
 	} else {
@@ -222,7 +222,7 @@ function joinBtnHandler(){
 	// MOBILE CHECK
 	if( (joinMobile1.value == "" || joinMobile1.value == null) && (joinMobile2.value == "" || joinMobile2.value == null) && (joinMobile3.value == "" || joinMobile3.value == null)){
 		proFlag = false;
-		alert("휴대폰 번호 없음");
+		alert("휴대폰 번호는 필수입력사항 입니다.");
 		joinMobile1.focus();
 		return;
 	} else {
