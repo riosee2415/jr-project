@@ -3,6 +3,7 @@ var g_joinId;
 var g_dupleCheck = false;
 var g_passCheck = false;
 var g_password;
+var proFlag = true;
 
 var zoneCode = document.getElementById("joinZondeCode");
 var roadAddr = document.getElementById("joinRoadAddr");
@@ -165,11 +166,12 @@ function openAddrPopup(){
 
 function joinBtnHandler(){
 	
-	if(g_dupleCheck && g_passCheck) {
+	
+	if(g_dupleCheck && g_passCheck && proFlag) {
 		$(".loading").css("display", "block");
 	}
 	
-	var proFlag = false;
+
 	
 	// ID CHECK
 	if(g_dupleCheck) {
