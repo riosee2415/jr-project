@@ -106,8 +106,12 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020362.jsp"/>
     </definition>
     
-     <definition name="group" extends="subTopMenuLayout">
+    <definition name="group" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020363.jsp"/>
+    </definition>
+    
+    <definition name="regen" extends="subTopMenuLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020420.jsp"/>
     </definition>
     
     <definition name="intro" extends="subTopMenuLayout">
