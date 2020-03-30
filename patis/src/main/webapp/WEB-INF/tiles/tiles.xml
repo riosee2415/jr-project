@@ -118,10 +118,6 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020421.jsp"/>
     </definition>
     
-    <definition name="business" extends="subTopMenuLayout">
-       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020422.jsp"/>
-    </definition>
-    
     <definition name="role" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM0204130.jsp"/>
     </definition>
@@ -148,6 +144,10 @@
     
      <definition name="collusion.apply.write" extends="subBannerLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM021164_W.jsp"/>
+    </definition>
+    
+    <definition name="business" extends="subTopMenuLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM021280.jsp"/>
     </definition>
     
     <definition name="cityloc" extends="subTopMenuLayout">

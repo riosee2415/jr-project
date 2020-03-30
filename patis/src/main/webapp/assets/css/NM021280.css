@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-.nm22-title-style {
+.nm1280-title-style {
   margin: 35px 0 95px;
   font-size: 22px;
   color: #7c7c7c;
 }
-.nm22-content-img__box {
+.nm1280-content-img__box {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,7 +24,7 @@
   border: 10px solid #5ac352;
   margin-bottom: 120px;
 }
-.nm22-content {
+.nm1280-content {
   position: relative;
   bottom: 20px;
   text-align: center;
@@ -33,7 +33,7 @@
   font-size: 34px;
   font-weight: bold;
 }
-.nm22-content:before {
+.nm1280-content:before {
   content: "";
   position: absolute;
   display: block;
@@ -45,10 +45,10 @@
   background-size: cover;
   background-image: url("/assets/images/image/sub-nm0422-01-02.png");
 }
-.nm22-content span {
+.nm1280-content span {
   font-weight: normal;
 }
-a.nm22-content-button {
+a.nm1280-content-button {
   position: absolute;
   bottom:70px;
   left:36%;

@@ -1,4 +1,4 @@
-package com.patis.NM02.NM020422;
+package com.patis.NM02.NM021280;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import com.patis.model.CommonVO;
  *
  */
 @Controller
-public class Nm020422Controller {
+public class Nm021280Controller {
 
 	@Resource(name="middlewareService")
 	private I_MiddlewareService middlewareService;
