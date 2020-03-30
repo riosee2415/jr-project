@@ -8,27 +8,7 @@ pageEncoding="UTF-8"%>
           <%@ include
           file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
         </div>
-        <!-- 도시재생이란 -->
-        <div class="sub-main-title">▪도시재생이란?</div>
-        <div class="sub1-main-content">
-          <div>
-            <p>
-              인구의 감소, 산업구조의 변화, 도시의 무분별한 확장, 주거환경의
-              노후화 등으로
-            </p>
-            <p>
-              쇠퇴하는 도시를 지역역량의 강화, 새로운 기능의 도입ㆍ창출 및
-              지역자원의 활용을 통하여
-            </p>
-            <p>
-              <span class="bold">경제적ㆍ사회적ㆍ물리적ㆍ환경적으로 활성화</span
-              >시키는 것을 말합니다.
-            </p>
-            <br />
-            <p>&#40;도시재생 활성화 및 지원에 관한 특별법 제2조&#41;</p>
-          </div>
-        </div>
-        <div class="sub-illu-img"></div>
+
         <div class="sub-main-title">▪중랑구 비전/목표</div>
         <div class="goal">
           <div class="sub-goal">비전</div>
@@ -101,14 +81,7 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
 
-    <div class="sub-content-wrap">
-      <div class="sub2-main">
-        <div class="subHead">
-          <%@ include
-          file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
-        </div>
-
-        <!-- 중랑구 도시재생 -->
+    <!-- 중랑구 도시재생
         <div class="sub-main-title-blue">
           ▪중랑구 도시재생사업 추진계획&#40;안&#41;
         </div>
@@ -228,184 +201,183 @@ pageEncoding="UTF-8"%>
             2개소
           </div>
         </div>
-        <div class="sub-main-title-blue">
-          ▪중랑구 도시재생사업 추진연혁
-        </div>
+         -->
+    <div class="sub-main-title-blue">
+      ▪중랑구 도시재생사업 추진연혁
+    </div>
 
-        <div class="sub-history">
-          <div class="gray-line"></div>
-          <div class="sub-history__title">
-            <div class="sub-history__year">2017</div>
-            <div class="sub-history-line"></div>
-          </div>
+    <div class="sub-history">
+      <div class="gray-line"></div>
+      <div class="sub-history__title">
+        <div class="sub-history__year">2017</div>
+        <div class="sub-history-line"></div>
+      </div>
 
-          <div class="sub-history-content">
-            <ul>
-              <li>02. 16.</li>
-              <li>·묵2동 도시재생 활성화지역 선정</li>
-            </ul>
-          </div>
-          <div class="sub-history__title">
-            <div class="sub-history__year-green">2018</div>
-            <div class="sub-history-line-green"></div>
-          </div>
+      <div class="sub-history-content">
+        <ul>
+          <li>02. 16.</li>
+          <li>·묵2동 도시재생 활성화지역 선정</li>
+        </ul>
+      </div>
+      <div class="sub-history__title">
+        <div class="sub-history__year-green">2018</div>
+        <div class="sub-history-line-green"></div>
+      </div>
 
-          <div class="sub-history-content">
-            <ul>
-              <li>08. 31.</li>
-              <li>·묵2동 뉴딜사업구역 선정</li>
-            </ul>
-          </div>
-          <div class="sub-history__title">
-            <div class="sub-history__year-blue">2019</div>
-            <div class="sub-history-line-blue"></div>
-          </div>
+      <div class="sub-history-content">
+        <ul>
+          <li>08. 31.</li>
+          <li>·묵2동 뉴딜사업구역 선정</li>
+        </ul>
+      </div>
+      <div class="sub-history__title">
+        <div class="sub-history__year-blue">2019</div>
+        <div class="sub-history-line-blue"></div>
+      </div>
 
-          <div class="sub-history-content">
-            <ul>
-              <li>04. 11.</li>
-              <li>·중화2동 도시재생활성화지역 선정</li>
-            </ul>
-            <ul>
-              <li>05. 02.</li>
-              <li>·망우본동 희망지사업 선정</li>
-            </ul>
-            <ul>
-              <li>05. 15.</li>
-              <li>·전통시장 연계형 근린재생 희망지사업 선정</li>
-            </ul>
-            <ul>
-              <li>05. 20.</li>
-              <li>·면목3·8동 주거환경관리사업 선정</li>
-            </ul>
-            <ul>
-              <li>11. 25.</li>
-              <li>
-                ·면목동 중심지&#40;면목2,상봉2동&#41; 도시재생활성화지역 선정
-              </li>
-            </ul>
-            <ul>
-              <li>12. 17.</li>
-              <li>·중화2동 희망지사업 선정</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sub-main-title-blue">
-          <p>▪중랑구 도시재생 추진 현황</p>
-          <p></p>
-          <p class="sub-status-title">
-            중랑구 도시재생 추진현황도 &#40;8개소/220ha, 사업지4, 희망지4&#41;
-          </p>
-        </div>
-
-        <div class="sub-status">
-          <img
-            class="sub-status-img"
-            src="/assets/images/image/sub-nm0261-01.png"
-            alt="도시재생 추진현황도"
-          />
-        </div>
-        <table class="sub-status-table">
-          <caption>
-            도시재생 추진현황도
-          </caption>
-          <thead>
-            <tr>
-              <th>연번</th>
-              <th>위&nbsp;치</th>
-              <th>면적&#40;㎡&#41;</th>
-              <th>추진현황</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="table-sky table-center">1</td>
-              <td class="table-sky bluetext">묵2동</td>
-              <td>493,219</td>
-              <td>
-                <p>
-                  <span class="bluetext">활성화지역 선정 </span>&#40;’17. 2. 16.
-                  - ‘22. 12월&#41;
-                </p>
-                <p>
-                  <span class="bluetext">국토부 뉴딜사업 선정 </span>&#40;’18.
-                  8. 31. - ’22. 12월&#41;
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="table-sky">2</td>
-              <td class="table-sky bluetext">면목3·8동</td>
-              <td>18,020</td>
-              <td>
-                <span class="bluetext">주거환경관리사업 선정</span>&#40;’19. 5.
-                20. - 22. 12월&#41;
-              </td>
-            </tr>
-            <tr>
-              <td class="table-sky">3</td>
-              <td class="table-sky bluetext">(舊)중화2촉진</td>
-              <td>140,855</td>
-              <td>
-                <span class="bluetext">활성화지역 선정 </span>&#40;’19. 4. 11. -
-                ‘23. 12월&#41;
-              </td>
-            </tr>
-            <tr>
-              <td class="table-sky">4</td>
-              <td class="table-sky">망우본동</td>
-              <td>129,497</td>
-              <td>
-                <span class="greentext">희망지사업 선정 </span>&#40;’19. 5. 2. -
-                ’19. 11월&#41;
-                <span class="table-orangetext">※종료</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="table-sky">5</td>
-              <td class="table-sky bluetext">면목2, 상봉2동</td>
-              <td>292,000</td>
-              <td>
-                <span class="bluetext">활성화지역 선정 </span>&#40;’19. 11. 25.
-                - ‘24. 12월&#41;
-              </td>
-            </tr>
-            <tr>
-              <td class="table-sky">6</td>
-              <td class="table-sky">
-                <p>면목3·8동</p>
-                <p>&#40;사가정시장&#41;</p>
-              </td>
-              <td>147,998</td>
-              <td>
-                <span class="greentext">전통시장 연계형 희망지 선정 </span
-                >&#40;’19. 5. 15. - ‘20. 2월&#41;
-              </td>
-            </tr>
-            <tr>
-              <td class="table-sky">7</td>
-              <td class="table-sky">중화3존치</td>
-              <td rowspan="2">980,000</td>
-              <td rowspan="2">
-                <span class="greentext">희망지사업 선정 </span>&#40;’19. 12.
-                17.~&#41;
-              </td>
-            </tr>
-            <tr>
-              <td class="table-sky">8</td>
-              <td class="table-sky">중화2존치</td>
-            </tr>
-            <tr>
-              <td colspan="2">계</td>
-              <td class="table-lightGreen">2,201,589</td>
-              <td class="table-lightGreentext table-lightGreen">
-                ※중랑구 주거면적&#40;10.82㎢&#41; 대비 20% 차지
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="sub-history-content">
+        <ul>
+          <li>04. 11.</li>
+          <li>·중화2동 도시재생활성화지역 선정</li>
+        </ul>
+        <ul>
+          <li>05. 02.</li>
+          <li>·망우본동 희망지사업 선정</li>
+        </ul>
+        <ul>
+          <li>05. 15.</li>
+          <li>·전통시장 연계형 근린재생 희망지사업 선정</li>
+        </ul>
+        <ul>
+          <li>05. 20.</li>
+          <li>·면목3·8동 주거환경관리사업 선정</li>
+        </ul>
+        <ul>
+          <li>11. 25.</li>
+          <li>
+            ·면목동 중심지&#40;면목2,상봉2동&#41; 도시재생활성화지역 선정
+          </li>
+        </ul>
+        <ul>
+          <li>12. 17.</li>
+          <li>·중화2동 희망지사업 선정</li>
+        </ul>
       </div>
     </div>
+
+    <div class="sub-main-title-blue">
+      <p>▪중랑구 도시재생 추진 현황</p>
+      <p></p>
+      <p class="sub-status-title">
+        중랑구 도시재생 추진현황도 &#40;8개소/220ha, 사업지4, 희망지4&#41;
+      </p>
+    </div>
+
+    <div class="sub-status">
+      <img
+        class="sub-status-img"
+        src="/assets/images/image/sub-nm0261-01.png"
+        alt="도시재생 추진현황도"
+      />
+    </div>
+    <table class="sub-status-table">
+      <caption>
+        도시재생 추진현황도
+      </caption>
+      <thead>
+        <tr>
+          <th>연번</th>
+          <th>위&nbsp;치</th>
+          <th>면적&#40;㎡&#41;</th>
+          <th>추진현황</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-sky table-center">1</td>
+          <td class="table-sky bluetext">묵2동</td>
+          <td>493,219</td>
+          <td>
+            <p>
+              <span class="bluetext">활성화지역 선정 </span>&#40;’17. 2. 16. -
+              ‘22. 12월&#41;
+            </p>
+            <p>
+              <span class="bluetext">국토부 뉴딜사업 선정 </span>&#40;’18. 8.
+              31. - ’22. 12월&#41;
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-sky">2</td>
+          <td class="table-sky bluetext">면목3·8동</td>
+          <td>18,020</td>
+          <td>
+            <span class="bluetext">주거환경관리사업 선정</span>&#40;’19. 5. 20.
+            - 22. 12월&#41;
+          </td>
+        </tr>
+        <tr>
+          <td class="table-sky">3</td>
+          <td class="table-sky bluetext">(舊)중화2촉진</td>
+          <td>140,855</td>
+          <td>
+            <span class="bluetext">활성화지역 선정 </span>&#40;’19. 4. 11. -
+            ‘23. 12월&#41;
+          </td>
+        </tr>
+        <tr>
+          <td class="table-sky">4</td>
+          <td class="table-sky">망우본동</td>
+          <td>129,497</td>
+          <td>
+            <span class="greentext">희망지사업 선정 </span>&#40;’19. 5. 2. -
+            ’19. 11월&#41;
+            <span class="table-orangetext">※종료</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-sky">5</td>
+          <td class="table-sky bluetext">면목2, 상봉2동</td>
+          <td>292,000</td>
+          <td>
+            <span class="bluetext">활성화지역 선정 </span>&#40;’19. 11. 25. -
+            ‘24. 12월&#41;
+          </td>
+        </tr>
+        <tr>
+          <td class="table-sky">6</td>
+          <td class="table-sky">
+            <p>면목3·8동</p>
+            <p>&#40;사가정시장&#41;</p>
+          </td>
+          <td>147,998</td>
+          <td>
+            <span class="greentext">전통시장 연계형 희망지 선정 </span>&#40;’19.
+            5. 15. - ‘20. 3월&#41;
+          </td>
+        </tr>
+        <tr>
+          <td class="table-sky">7</td>
+          <td class="table-sky">중화3존치</td>
+          <td rowspan="2">980,000</td>
+          <td rowspan="2">
+            <span class="greentext">희망지사업 선정 </span>&#40;’19. 12.
+            17.~&#41;
+          </td>
+        </tr>
+        <tr>
+          <td class="table-sky">8</td>
+          <td class="table-sky">중화2존치</td>
+        </tr>
+        <tr>
+          <td colspan="2">계</td>
+          <td class="table-lightGreen">2,201,589</td>
+          <td class="table-lightGreentext table-lightGreen">
+            ※중랑구 주거면적&#40;10.82㎢&#41; 대비 20% 차지
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
