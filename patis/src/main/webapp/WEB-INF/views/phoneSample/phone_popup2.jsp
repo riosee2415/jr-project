@@ -65,10 +65,10 @@
     //' 라이센스 파일
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 	 // 배포용
-   //String license = "~/license/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+  String license = "~/license/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
    
-   // 로컬 테스트용
-   String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+  // 로컬 테스트용
+  // String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
    
 	
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

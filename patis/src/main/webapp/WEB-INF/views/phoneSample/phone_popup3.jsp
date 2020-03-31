@@ -26,10 +26,10 @@
     //' 라이센스 파일
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 	// 배포용
-   //String license = "~/license/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+  String license = "~/license/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
    
-   // 로컬 테스트용
-   String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+  // 로컬 테스트용
+  // String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
 	
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 서비스명 (고정값)
@@ -143,7 +143,7 @@
 		out.println("<script>alert('본인인증성공'); fncOpenerSubmit();</script>");
 	}
 	else {
-		out.println("<script>alert('본인인증실패 : " + RSLT_CD + " : " + RSLT_MSG + "'); fncOpenerSubmit();</script>");
+		out.println("<script>alert('본인인증실패 : " + RSLT_CD + " : " + RSLT_MSG + "');self.close();opener.close();</script>");
 	}
 %>
 </html>

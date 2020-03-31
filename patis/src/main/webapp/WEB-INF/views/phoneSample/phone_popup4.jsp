@@ -66,8 +66,21 @@
 	* 통신사 - 01:SKT, 02:KT, 03:LGU+, 04:SKT알뜰폰, 05:KT알뜰폰, 06:LGU+알뜰폰
 </div>
 
-<div style="text-align: center;">
-	<button type="button" style="" onclick="javascript:successPhoneAuth()">회원가입 하기</button>
+<div style="padding: 5px; text-align: center;">
+	<button type="button" 
+					style="margin-top:20px;
+								 width: 100%;
+							   height: 40px;
+							   line-height: 38px;
+							   color: #655f5f;
+							   font-weight: 600;
+							   background: #f7f7f7;
+							   border: 1.5px solid #e4e4e4;
+							   text-shadow: 0.2px 0.5px 1px rgba(0, 0, 0, 0.2);
+							   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+							   outline: none;
+							   cursor: pointer;" 
+				   onclick="javascript:successPhoneAuth()">회원가입 하기</button>
 </div>
 </body>
 <script>

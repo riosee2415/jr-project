@@ -34,7 +34,7 @@ function openPhonePop() {
     var screenHeight = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
     
     var w = 300;
-    var h = 300;
+    var h = 60;
     var l = ((screenWidth / 2) - (w / 2)) + screenLeft;
     var t = ((screenHeight / 2) - (h / 2)) + screenTop;
     
