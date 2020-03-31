@@ -12,8 +12,10 @@
 
 <script>
 
+
+	
 	function jsSubmit(){
-		window.open("", "auth_popup", "width=430,height=640,scrollbar=yes");
+		window.open("/phonePop2.do", "auth_popup", "width=10,height=10,scrollbar=yes");
 		var form1 = document.form1;
 		form1.target = "auth_popup";
 		form1.submit();
@@ -21,7 +23,7 @@
 
 </script>
 </head>
-<body>
+<body onload="javascript:jsSubmit()"  style="display: none;">
 <H1>Encoding Information</H1>
 <TABLE border="0" cellpadding="3" width="100%">
     <TR><TD class="e" width="30%">Locale Default Encoding</TD><TD class="v"><%= java.util.Locale.getDefault() %></TD></TR>
@@ -29,7 +31,7 @@
     <TR><TD class="e" width="30%">OutputStreamWriter Encoding</TD><TD class="v"><%= new java.io.OutputStreamWriter(System.out).getEncoding() %></TD></TR>
 </TABLE>
 	<div>
-		<form name="form1" action="${pageContext.request.contextPath }/phone_popup2.jsp" method="post">
+		<form name="form1" action="${pageContext.request.contextPath }/phonePop2.do" method="post">
 			<table>
 				<tr>
 					<td colspan="2"><strong> - 휴대폰 본인확인 인증</strong></td>
@@ -37,13 +39,13 @@
 				<tr>
 					<td>회원사코드</td>
 					<td>
-						<input type="text" name="CP_CD" maxlength="12" size="16" value="V06880000000">
+						<input type="text" name="CP_CD" maxlength="12" size="16" value="V44810000000">
 					</td>
 				</tr>
 				<tr>
 					<td>요청사이트명</td>
 					<td>
-						<input type="text" name="SITE_NAME" maxlength="20" size="24" value="사이트명">
+						<input type="text" name="SITE_NAME" maxlength="20" size="24" value="중랑도시재생포털">
 					</td>
 				</tr>
 				<tr>

@@ -25,7 +25,7 @@
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 라이센스 파일
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-	String license = "C:\\okcert3_license\\" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+	String license = "C:/dev-ops/license/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
 	
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 서비스명 (고정값)
@@ -123,7 +123,7 @@
 		
 		opener.document.kcbResultForm.RETURN_MSG.value = "<%=RETURN_MSG%>";
 
-		opener.document.kcbResultForm.action = "phone_popup4.jsp";
+		opener.document.kcbResultForm.action = "/phonePop4.do";
 		opener.document.kcbResultForm.submit();
 		
 		self.close();

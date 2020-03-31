@@ -24,7 +24,7 @@ var joinTel3 = document.getElementById("joinTel-3");
 
 function openPhonePop() {
 	event.preventDefault();
-	window.open("/phonePop.do", '_blank', 'width=500px,height=700px,toolbars=no,scrollbars=no');
+	window.open("/phonePop.do", '_blank', 'width=10px,height=10px,toolbars=no,scrollbars=no');
 }
 
 

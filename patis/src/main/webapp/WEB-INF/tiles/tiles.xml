@@ -361,9 +361,21 @@
     
 <!-- 인증 팝업 화면 -->
 	<definition name="phonePop" extends="emptyLayout">
-       <put-attribute name="content" value="/WEB-INF/views/authPhone/testPhone.jsp"/>
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup1.jsp"/>
     </definition>
 
+	<definition name="phonePop2" extends="emptyLayout">
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup2.jsp"/>
+    </definition>
+    
+    <definition name="phonePop3" extends="emptyLayout">
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup3.jsp"/>
+    </definition>
+    
+	<definition name="phonePop4" extends="emptyLayout">
+       <put-attribute name="content" value="/WEB-INF/views/phoneSample/phone_popup4.jsp"/>
+    </definition>
+    
     
     
     

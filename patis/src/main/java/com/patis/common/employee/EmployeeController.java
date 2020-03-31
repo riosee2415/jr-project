@@ -80,6 +80,38 @@ public class EmployeeController {
 		return "phonePop";
 	}
 	
+	@RequestMapping(value="/phonePop2.do", method=RequestMethod.POST)
+	public String phonePop2(Model model,
+							 @RequestParam("CP_CD")String CP_CD
+							,@RequestParam("SITE_NAME")String SITE_NAME) throws Exception {
+		
+		model.addAttribute("CP_CD", CP_CD);
+		model.addAttribute("SITE_NAME", SITE_NAME);
+		
+		return "phonePop2";
+	}
+	
+	@RequestMapping(value="/phonePop3.do")
+	public String phonePop3(Model model,
+							@RequestParam("mdl_tkn")String mdl_tkn) throws Exception {
+		
+		
+		model.addAttribute("mdl_tkn", mdl_tkn);
+		
+		return "phonePop3";
+	}
+	
+	@RequestMapping(value="/phonePop4.do")
+	public String phonePop4(Model model
+							) throws Exception {
+		
+		return "phonePop4";
+	}
+	
+	
+	
+	
+	
 	@RequestMapping(value="/login.do", method=RequestMethod.GET)
 	public String login(Model model) throws Exception {
 

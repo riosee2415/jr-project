@@ -9,17 +9,17 @@
 	// 휴대폰 본인확인 서비스 결과 완료 화면
 	//**************************************************************************
 	
-	//request.setCharacterEncoding("UTF-8"); // UTF-8 환경의 경우 주석 제거
+	request.setCharacterEncoding("UTF-8"); // UTF-8 환경의 경우 주석 제거
 
 	/* 공통 리턴 항목 */
 	String CP_CD		= request.getParameter("CP_CD");					// 고객사코드
 	String TX_SEQ_NO	= request.getParameter("TX_SEQ_NO");				// 거래번호
 	String RSLT_CD		= request.getParameter("RSLT_CD");					// 결과코드
-	//String RSLT_MSG	= request.getParameter("RSLT_MSG");					// 결과메세지(UTF-8)
-	String RSLT_MSG	= new String(request.getParameter("RSLT_MSG").getBytes("8859_1"));	// 결과메세지(EUC-KR)
+	String RSLT_MSG	= request.getParameter("RSLT_MSG");					// 결과메세지(UTF-8)
+	//String RSLT_MSG	= new String(request.getParameter("RSLT_MSG").getBytes("8859_1"));	// 결과메세지(EUC-KR)
 	
-	//String RSLT_NAME		= request.getParameter("RSLT_NAME");			// 성명(UTF-8)
-	String RSLT_NAME		= new String(request.getParameter("RSLT_NAME").getBytes("8859_1"));	// 성명(EUC-KR)
+	String RSLT_NAME		= request.getParameter("RSLT_NAME");			// 성명(UTF-8)
+	//String RSLT_NAME		= new String(request.getParameter("RSLT_NAME").getBytes("8859_1"));	// 성명(EUC-KR)
 	String RSLT_BIRTHDAY	= request.getParameter("RSLT_BIRTHDAY");		// 생년월일
 	String RSLT_SEX_CD 		= request.getParameter("RSLT_SEX_CD");			// 성별코드
 	String RSLT_NTV_FRNR_CD = request.getParameter("RSLT_NTV_FRNR_CD");		// 내외국인 구분
