@@ -87,7 +87,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 		      class="border-list_wrap row-reply"
 		      onclick="javascript:boardReplyMoveHandler('${board.b_TYPE}', '${board.b_NO}')"
 		    >
-		      <h3 class="border-list_title">해당 글에 대한 답변입니다.</h3>
+		      <h3 class="border-list_title">↳ 해당 글에 대한 답변입니다.</h3>
 		      <ul class="border-list_com">
 		        <li>
 		          <i class="fa fa-pencil" aria-hidden="true"></i>

@@ -44,6 +44,14 @@
      color:#777;
    }
    
+   .border-list_wrap.row-reply .border-list_title{
+     font-size:18px;
+   }
+   
+   .border-list_wrap.row-reply .border-list_com li{
+     font-size: 16px;
+   }
+   
   .border-notice {
     width: 10%;
     margin-bottom: 10px;
@@ -63,7 +71,7 @@
 
 	.border-list_title span {
     padding-right: 2px;
-		color: #e8402f;
+	color: #e8402f;
 	}
   
   .border-list_com {
