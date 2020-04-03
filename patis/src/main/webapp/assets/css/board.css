@@ -245,6 +245,10 @@
   color: #4c4c4c;
 }
 
+.board-list__box .board-list__table tbody tr.row-reply {
+	color:#666;
+}
+
 .board-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
