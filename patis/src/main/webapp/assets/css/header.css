@@ -20,8 +20,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color:#fff;
-  padding:10px;
+  background-color: #fff;
+  padding: 10px;
 }
 .topHeader-box {
   display: -webkit-box;
@@ -68,8 +68,8 @@
 .topHeader .join button,
 .topHeader .login button {
   color: #fff;
-    border-radius:10px;
-   background:#17b1aa;
+  border-radius: 10px;
+  background: #17b1aa;
 }
 .topHeader .loginYet {
   font-size: 13px;
@@ -138,7 +138,7 @@
   height: 50px;
   background-repeat: no-repeat;
   background-position-x: 100%;
-  background-size:cover;
+  background-size: cover;
   background-image: url("/assets/images/commons/hdlogo.png");
 }
 .header.mobile .logo {
@@ -170,7 +170,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding:8px 0;
+  padding: 8px 0;
 }
 .resmenu__m {
   font-size: 19px;
@@ -214,7 +214,7 @@
   line-height: 40px;
   font-size: 19px;
   color: black;
-  font-weight:600;
+  font-weight: 600;
   letter-spacing: -2px;
 }
 .resmenu li .sub a {
@@ -333,11 +333,14 @@
 }
 
 #collap_menu ul li.active .collap-menu-sub {
-  height: 150px;
+  height: 100%;
   opacity: 1;
   visibility: visible;
 }
-
+#collap_menu ul li.active .collap-menu-sub li {
+  background-color: rgb(138, 138, 138);
+  color: #fff;
+}
 #collap_menu ul li:hover a.collap-menu-main {
   border-top: 1px solid #333;
   -webkit-border-top: 1px solid #333;
@@ -369,8 +372,8 @@
   background-color: #ffffff;
 }
 #collap_menu li a.collap-menu-main:hover {
-  background-color: #227c39;
-  opacity: 90%;
+  background-color: #17b1aa;
+  opacity: 80%;
   color: #ffffff;
 }
 #collap_menu li a {
