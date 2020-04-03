@@ -63,7 +63,7 @@ pageEncoding="UTF-8"%>
             </ul> -->
             <ul class="none_btn_com">
               <li class="btn_com">
-                <a href="javascript:openPhonePop()"class="none_mem_login_btn1">14세 미만 회원가입</a>
+                <a href="#" onclick="javascript:openPhonePop()" class="none_mem_login_btn1">14세 미만 회원가입</a>
               </li>
             </ul>
             <ul class="gray_section gray_section_14down">

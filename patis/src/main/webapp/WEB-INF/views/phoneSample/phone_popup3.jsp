@@ -1,3 +1,4 @@
+<%@page import="java.io.File"%>
 <%@ page import="kcb.org.json.*" %>
 <%@ page language="java" contentType="text/html; charset=euc-kr" pageEncoding="euc-kr"%>
 <%
@@ -26,7 +27,11 @@
     //' 라이센스 파일
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 	// 배포용
-  String license = "/tomcat/webapps/license/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+  String license 	=	File.separator + "jungnangurp"
+									+ File.separator + 	"tomcat" 
+									+ File.separator + "webapps"
+									+ File.separator + "license"
+									+ File.separator + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
    
   // 로컬 테스트용
   // String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
