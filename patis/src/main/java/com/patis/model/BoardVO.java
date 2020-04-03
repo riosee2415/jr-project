@@ -18,6 +18,11 @@ public class BoardVO {
 	private String B_TYPE;
 	private String B_DELETE_TIME;
 	private String B_THUMB_PATH;
+	private String B_REPLY;
+	private String B_REPLY_STATE;
+	private String B_REPLY_DATE;
+	private String B_REPLY_AUTHOR;
+	private int B_REPLY_HIT;
 	
 	public String getROWNUM() {
 		return ROWNUM;
@@ -121,6 +126,36 @@ public class BoardVO {
 	public void setB_THUMB_PATH(String b_THUMG_PATH) {
 		B_THUMB_PATH = b_THUMG_PATH;
 	}
+	public String getB_REPLY() {
+		return B_REPLY;
+	}
+	public void setB_REPLY(String b_REPLY) {
+		B_REPLY = b_REPLY;
+	}
+	public String getB_REPLY_STATE() {
+		return B_REPLY_STATE;
+	}
+	public void setB_REPLY_STATE(String b_REPLY_STATE) {
+		B_REPLY_STATE = b_REPLY_STATE;
+	}
+	public String getB_REPLY_DATE() {
+		return B_REPLY_DATE;
+	}
+	public void setB_REPLY_DATE(String b_REPLY_DATE) {
+		B_REPLY_DATE = b_REPLY_DATE;
+	}
+	public String getB_REPLY_AUTHOR() {
+		return B_REPLY_AUTHOR;
+	}
+	public void setB_REPLY_AUTHOR(String b_REPLY_AUTHOR) {
+		B_REPLY_AUTHOR = b_REPLY_AUTHOR;
+	}
+	public int getB_REPLY_HIT() {
+		return B_REPLY_HIT;
+	}
+	public void setB_REPLY_HIT(int b_REPLY_HIT) {
+		B_REPLY_HIT = b_REPLY_HIT;
+	}
 	@Override
 	public String toString() {
 		return "BoardVO [ROWNUM=" + ROWNUM + ", B_NO=" + B_NO + ", B_GUBUN=" + B_GUBUN + ", B_TITLE=" + B_TITLE
@@ -128,7 +163,8 @@ public class BoardVO {
 				+ ", B_AUTHOR_ID=" + B_AUTHOR_ID + ", B_AUTHOR_NONE=" + B_AUTHOR_NONE + ", B_CREATE_TIME="
 				+ B_CREATE_TIME + ", B_UPLOAD_TIME=" + B_UPLOAD_TIME + ", B_HIT=" + B_HIT + ", B_NOTICE=" + B_NOTICE
 				+ ", B_USE_YN=" + B_USE_YN + ", B_TYPE=" + B_TYPE + ", B_DELETE_TIME=" + B_DELETE_TIME
-				+ ", B_THUMB_PATH=" + B_THUMB_PATH + "]";
+				+ ", B_THUMB_PATH=" + B_THUMB_PATH + ", B_REPLY=" + B_REPLY + ", B_REPLY_STATE=" + B_REPLY_STATE
+				+ ", B_REPLY_DATE=" + B_REPLY_DATE + ", B_REPLY_AUTHOR=" + B_REPLY_AUTHOR + ", B_REPLY_HIT="
+				+ B_REPLY_HIT + "]";
 	}
-	
 }

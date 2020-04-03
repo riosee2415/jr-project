@@ -178,6 +178,10 @@
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524_W.jsp"/>
     </definition>
     
+    <definition name="community.reply" extends="subBannerLayout">
+       <put-attribute name="content" value="/WEB-INF/views/NM02/NM020524_R.jsp"/>
+    </definition>
+    
     <definition name="news" extends="subTopMenuLayout">
        <put-attribute name="content" value="/WEB-INF/views/NM02/NM020832.jsp"/>
     </definition>

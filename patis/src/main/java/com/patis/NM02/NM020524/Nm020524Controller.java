@@ -294,6 +294,55 @@ public class Nm020524Controller {
 		
 		return "redirect:/community.do";
 	}
+	
+	@RequestMapping(value="/community.reply.do", method=RequestMethod.GET)
+	public String communityReply(Model model, 
+								   HttpSession session,
+								   @RequestParam(value="parent")String parent,
+								   @RequestParam(value="code")String code,
+			 					   @RequestParam(value="b_no")int b_no,
+			 					   @RequestParam(value="s_type", defaultValue="")String searchType,
+			 					   @RequestParam(value="s_keyword", defaultValue="")String searchKeyword,
+			 					   RedirectAttributes rttr) throws Exception {
+		
+		String btype = nm020524Service.getBoardType();
+		
+		Accept_typeVO AcceptRight = middlewareService.getAcceptRight(btype);
+		model.addAttribute("AcceptRight", AcceptRight);
+		
+		if(session.getAttribute("loginRight") != null) {
+			if(Integer.parseInt(session.getAttribute("loginRight").toString()) > Integer.parseInt(AcceptRight.getVIEW_RIGHT())) {
+				rttr.addAttribute("parent", parent);
+				rttr.addAttribute("code", code);
+				rttr.addAttribute("s_type", searchType);
+				rttr.addAttribute("s_keyword", searchKeyword);
+				rttr.addFlashAttribute("msg", "사용자님은 해당 답변을 볼 수 있는 권한이 없습니다.");
+				return "redirect:/community.do";
+			}
+		}
+		List<CommonVO> menuList = middlewareService.getMenu();
+		model.addAttribute("menuList", menuList);
+		List<CommonVO> subMenuList = middlewareService.getSubMenu();
+		model.addAttribute("subMenuList", subMenuList);
+		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
+		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		BoardVO data = nm020524Service.getCommunity(b_no);
+		model.addAttribute("data", data);
+		
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("BOARD_TYPE", btype);
+		params.put("BOARD_NO", b_no);
+		
+		List<BoardFileVO> fileList = fileService.getAttachFileList(params);
+		model.addAttribute("fileList", fileList);
+		
+		model.addAttribute("searchType", searchType);
+		model.addAttribute("searchKeyword", searchKeyword);
+		
+		return "community.reply";
+	}
+	
 	@RequestMapping(value = "/nm020524Init.do", method = RequestMethod.GET)
 	public String ajaxInit(Model model,
 			               @RequestParam("paging") int paging,

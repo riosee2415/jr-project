@@ -82,4 +82,19 @@ public class Nm020524DAOImpl implements I_Nm020524DAO{
 		sqlSession.delete(NAMESPACE + ".REMOVE_COMMUNITY", b_no);
 	}
 
+	@Override
+	public void setCommunityReply(BoardVO boardVO) throws SQLException {
+		sqlSession.update(NAMESPACE + ".setCommunityReply", boardVO);
+	}
+
+	@Override
+	public void modifyCommunityReply(BoardVO boardVO) throws SQLException {
+		sqlSession.update(NAMESPACE + ".modifyCommunityReply", boardVO);
+	}
+
+	@Override
+	public void removeCommunityReply(int b_no) throws SQLException {
+		sqlSession.update(NAMESPACE + ".removeCommunityReply", b_no);
+	}
+
 }

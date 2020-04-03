@@ -104,4 +104,28 @@ public interface I_Nm020524DAO {
 	 * @DESC   : 마을 커뮤니티  게시판 글 삭제
 	 */
 	void removeCommunity(int b_no) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Apr 4, 2020
+	 * @RETURN : void
+	 * @DESC   : 마을 커뮤니티  게시판 답변 등록
+	 */
+	void setCommunityReply(BoardVO boardVO) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Apr 4, 2020
+	 * @RETURN : void
+	 * @DESC   : 마을 커뮤니티  게시판 답변 수정
+	 */
+	void modifyCommunityReply(BoardVO boardVO) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Apr 4, 2020
+	 * @RETURN : void
+	 * @DESC   : 마을 커뮤니티  게시판 답변 삭제
+	 */
+	void removeCommunityReply(int b_no) throws SQLException;
 }

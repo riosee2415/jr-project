@@ -77,4 +77,19 @@ public class Nm020524ServiceImpl implements I_Nm020524Service{
 		nm020524DAO.removeCommunity(b_no);
 	}
 
+	@Override
+	public void setCommunityReply(BoardVO boardVO) throws SQLException {
+		nm020524DAO.setCommunityReply(boardVO);
+	}
+
+	@Override
+	public void modifyCommunityReply(BoardVO boardVO) throws SQLException {
+		 nm020524DAO.modifyCommunityReply(boardVO);
+	}
+
+	@Override
+	public void removeCommunityReply(int b_no) throws SQLException {
+		nm020524DAO.removeCommunityReply(b_no);
+	}
+
 }

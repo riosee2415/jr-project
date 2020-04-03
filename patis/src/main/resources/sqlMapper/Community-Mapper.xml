@@ -22,7 +22,16 @@
 							B_HIT,
 							B_NOTICE,
 							B_USE_YN,
-							B_TYPE
+							B_TYPE,
+							B_REPLY,
+							B_REPLY_STATE,
+							B_REPLY_DATE,
+							(
+								 SELECT  Z.USER_NAME
+								 FROM  JR_DB.EMP Z
+								 WHERE  B_REPLY_AUTHOR = Z.USER_NO
+							)	 AS B_REPLY_AUTHOR,
+							B_REPLY_HIT
 							FROM  JR_DB.BOARD_COMMUNITY A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
@@ -73,7 +82,16 @@
 							B_HIT,
 							B_NOTICE,
 							B_USE_YN,
-							B_TYPE
+							B_TYPE,
+							B_REPLY,
+							B_REPLY_STATE,
+							B_REPLY_DATE,
+							(
+								 SELECT  Z.USER_NAME
+								 FROM  JR_DB.EMP Z
+								 WHERE  B_REPLY_AUTHOR = Z.USER_NO
+							)	 AS B_REPLY_AUTHOR,
+							B_REPLY_HIT
 							FROM  JR_DB.BOARD_COMMUNITY A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
@@ -128,7 +146,16 @@
 						B_HIT,
 						B_NOTICE,
 						B_USE_YN,
-						B_TYPE
+						B_TYPE,
+						B_REPLY,
+						B_REPLY_STATE,
+						B_REPLY_DATE,
+						(
+								 SELECT  Z.USER_NAME
+								 FROM  JR_DB.EMP Z
+								 WHERE  B_REPLY_AUTHOR = Z.USER_NO
+							)	 AS B_REPLY_AUTHOR,
+							B_REPLY_HIT
 		  FROM  JR_DB.BOARD_COMMUNITY
 		 WHERE  B_NO = #{b_no}
 		   AND  B_USE_YN = 1
@@ -218,6 +245,38 @@
 		   SET	B_USE_YN = 0,
 		   			B_DELETE_TIME = SYSDATE()
 		 WHERE	B_NO = #{b_no}
+	</update>
+	
+	<update id="SET_COMMUNITY_REPLY" parameterType="boardVO">
+		UPDATE 	JR_DB.BOARD_COMMUNITY
+		   SET	B_REPLY = #{B_REPLY},
+		   			B_REPLY_STATE = #{B_REPLY_STATE},
+		   			B_REPLY_DATE = SYSDATE(),
+		   			B_REPLY_AUTHOR = #{B_REPLY_AUTHOR}
+		 WHERE	B_NO = #{B_NO}
+	</update>
+	
+	<update id="MODIFY_COMMUNITY_REPLY" parameterType="boardVO">
+		UPDATE 	JR_DB.BOARD_COMMUNITY
+		   SET	B_REPLY = #{B_REPLY},
+		   			B_REPLY_AUTHOR = #{B_REPLY_AUTHOR}
+		 WHERE	B_NO = #{B_NO}
+	</update>
+	
+	<update id="REMOVE_COMMUNITY_REPLY" parameterType="int">
+		UPDATE 	JR_DB.BOARD_COMMUNITY
+		   SET	B_REPLY = NULL,
+		   			B_REPLY_STATE = '답변대기',
+		   			B_REPLY_DATE = NULL,
+		   			B_REPLY_AUTHOR = NULL,
+		   			B_REPLY_HIT = 0
+		 WHERE	B_NO = #{B_NO}
+	</update>
+	
+	<update id="MODIFY_REPLY_HIT_UP" parameterType="int">
+		UPDATE  JR_DB.BOARD_COMMUNITY
+		   SET  B_REPLY_HIT = B_REPLY_HIT + 1
+		 WHERE  B_NO = #{b_no}
 	</update>
 	
 </mapper>
