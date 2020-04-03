@@ -35,13 +35,13 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         <td>${board.b_HIT }</td>
       </tr>
     	<c:if test="${not empty board.b_REPLY}">
-    	<tr class="row-reply">
-    		<td></td>
-    		<td class="header-title">해당 글에 대한 답변입니다.</td>
-    		<td>${board.b_REPLY_AUTHOR }</td>
-    		<td>${board.b_REPLY_TIME }</td>
-    		<td>${board.b_REPLY_HIT }</td>
-    	</tr>
+	    	<tr class="row-reply">
+	    		<td></td>
+	    		<td class="header-title" onclick="javascript:boardReplyMoveHandler('${board.b_TYPE}', '${board.b_NO}')">해당 글에 대한 답변입니다.</td>
+	    		<td>${board.b_REPLY_AUTHOR }</td>
+	    		<td>${board.b_REPLY_TIME }</td>
+	    		<td>${board.b_REPLY_HIT }</td>
+	    	</tr>
     	</c:if>
     </c:forEach>
   </c:otherwise>
@@ -54,7 +54,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
   <c:otherwise>
     <c:forEach var="board" items="${boardList }">
 	    <div
-	      class="border-list_wrap"
+	      class="border-list_wrap row-data"
 	      onclick="javascript:boardDetailMoveHandler('${board.b_TYPE}', '${board.b_NO}', '${board.ROWNUM}')"
 	    >
 	    	<c:if test="${board.b_NOTICE eq 1}">
@@ -82,6 +82,28 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 	        >
 	      </ul>
 	    </div>
+	    <c:if test="${not empty board.b_REPLY}">
+	    	<div
+		      class="border-list_wrap row-reply"
+		      onclick="javascript:boardReplyMoveHandler('${board.b_TYPE}', '${board.b_NO}')"
+		    >
+		      <h3 class="border-list_title">해당 글에 대한 답변입니다.</h3>
+		      <ul class="border-list_com">
+		        <li>
+		          <i class="fa fa-pencil" aria-hidden="true"></i>
+		          ${board.b_REPLY_AUTHOR }
+		        </li>
+		        <li>
+		          <i class="fa fa-calendar" aria-hidden="true"></i>
+		          ${board.b_REPLY_TIME }</li
+		        >
+		        <li>
+		          <i class="fa fa-eye" aria-hidden="true"></i>
+		          ${board.b_REPLY_HIT }</li
+		        >
+		      </ul>
+		    </div>
+    	</c:if>
     </c:forEach>
   </c:otherwise>
 </c:choose>
