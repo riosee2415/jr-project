@@ -152,8 +152,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
 <script type="text/javascript">
 	function request(){
-		document.form1.action = "<%=popupUrl%>
-	";
+		document.form1.action = "<%=popupUrl%>";
 		document.form1.method = "post";
 
 		document.form1.submit();

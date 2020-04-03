@@ -61,93 +61,6 @@ pageEncoding="UTF-8"%>
       </div>
     </div>
 
-    <!-- 현장지원센터 -->
-    <div class="sub-content-wrap">
-      <div class="subHead">
-        <%@ include
-        file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
-      </div>
-
-      <!-- 묵2동 도시재생지원센터 -->
-      <div class="nm0363-content">
-        <h3 class="nm0363-title-style-01">▪묵2동 도시재생지원센터</h3>
-        <div class="nm0363-content-img__box">
-          <a href="https://url.kr/J3Awkh" target="_blank">
-            <img class="nm0363-content-img-02-01" />
-          </a>
-        </div>
-        <div class="nm0363-tbl-style-01">
-          <ul class="tbl-style-title">
-            <li>·&nbsp;오시는길</li>
-          </ul>
-          <ul class="tbl-style-con">
-            <li>서울특별시 중랑구 동일로157길 30 한아름빌딩 2층</li>
-            <li class="tbl-style-subcon">
-              &#40;7호선 먹골역 5번, 6번출구&#8594;다이소가 보이는 골목으로
-              직진&#8594;신호등 맞은편&#41;
-            </li>
-          </ul>
-        </div>
-
-        <div class="nm0363-tbl-style-01">
-          <ul class="tbl-style-title">
-            <li>·&nbsp;대표번호</li>
-          </ul>
-          <ul class="tbl-style-con tbl-style-numcon">
-            <li>02-6951-0100</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 중화2동 도시재생지원센터 -->
-      <div class="nm0363-content">
-        <h3 class="nm0363-title-style-01">▪중화2동 도시재생지원센터</h3>
-
-        <div class="nm0363-content-img__box">
-          <a href="https://url.kr/cIsUb1" target="_blank">
-            <img class="nm0363-content-img-02-04" />
-          </a>
-        </div>
-        <div class="nm0363-tbl-style-01">
-          <ul class="tbl-style-title">
-            <li>·&nbsp;오시는길</li>
-          </ul>
-          <ul class="tbl-style-con">
-            <li>서울특별시 중랑구 중랑역로 87, 2층</li>
-            <li class="tbl-style-subcon">
-              &#40;중화역 3번출구&#8594;오른쪽으로 직진&#8594;사거리에서 대각선
-              방면&#41;
-            </li>
-          </ul>
-        </div>
-
-        <div class="nm0363-tbl-style-01">
-          <ul class="tbl-style-title">
-            <li>·&nbsp;대표번호</li>
-          </ul>
-          <ul class="tbl-style-con tbl-style-numcon">
-            <li>02-491-2201</li>
-          </ul>
-          <!-- <ul class="tbl-style-image1">
-            <li>
-              <img
-                src="/assets/images/image/sub-nm0363-02-05.png"
-                alt="중화2동 도시재생지원센터 이미지1"
-                class="sub-nm0363-02-05"
-              />
-            </li>
-            <li>
-              <img
-                src="/assets/images/image/sub-nm0363-02-06.png"
-                alt="증화2동 도시재생지원센터 이미지2"
-                class="sub-nm0363-02-06"
-              />
-            </li>
-          </ul> -->
-        </div>
-      </div>
-    </div>
-
     <!-- 조직구성 -->
     <div class="sub-content-wrap">
       <div class="subHead">
@@ -296,5 +209,93 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
     </div>
+    
+    <!-- 현장지원센터 -->
+    <div class="sub-content-wrap">
+      <div class="subHead">
+        <%@ include
+        file="/WEB-INF/views/template/components/sub_title_bread.jsp"%>
+      </div>
+
+      <!-- 묵2동 도시재생지원센터 -->
+      <div class="nm0363-content">
+        <h3 class="nm0363-title-style-01">▪묵2동 도시재생지원센터</h3>
+        <div class="nm0363-content-img__box">
+          <a href="https://url.kr/J3Awkh" target="_blank">
+            <img class="nm0363-content-img-02-01" />
+          </a>
+        </div>
+        <div class="nm0363-tbl-style-01">
+          <ul class="tbl-style-title">
+            <li>·&nbsp;오시는길</li>
+          </ul>
+          <ul class="tbl-style-con">
+            <li>서울특별시 중랑구 동일로157길 30 한아름빌딩 2층</li>
+            <li class="tbl-style-subcon">
+              &#40;7호선 먹골역 5번, 6번출구&#8594;다이소가 보이는 골목으로
+              직진&#8594;신호등 맞은편&#41;
+            </li>
+          </ul>
+        </div>
+
+        <div class="nm0363-tbl-style-01">
+          <ul class="tbl-style-title">
+            <li>·&nbsp;대표번호</li>
+          </ul>
+          <ul class="tbl-style-con tbl-style-numcon">
+            <li>02-6951-0100</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 중화2동 도시재생지원센터 -->
+      <div class="nm0363-content">
+        <h3 class="nm0363-title-style-01">▪중화2동 도시재생지원센터</h3>
+
+        <div class="nm0363-content-img__box">
+          <a href="https://url.kr/cIsUb1" target="_blank">
+            <img class="nm0363-content-img-02-04" />
+          </a>
+        </div>
+        <div class="nm0363-tbl-style-01">
+          <ul class="tbl-style-title">
+            <li>·&nbsp;오시는길</li>
+          </ul>
+          <ul class="tbl-style-con">
+            <li>서울특별시 중랑구 중랑역로 87, 2층</li>
+            <li class="tbl-style-subcon">
+              &#40;중화역 3번출구&#8594;오른쪽으로 직진&#8594;사거리에서 대각선
+              방면&#41;
+            </li>
+          </ul>
+        </div>
+
+        <div class="nm0363-tbl-style-01">
+          <ul class="tbl-style-title">
+            <li>·&nbsp;대표번호</li>
+          </ul>
+          <ul class="tbl-style-con tbl-style-numcon">
+            <li>02-491-2201</li>
+          </ul>
+          <!-- <ul class="tbl-style-image1">
+            <li>
+              <img
+                src="/assets/images/image/sub-nm0363-02-05.png"
+                alt="중화2동 도시재생지원센터 이미지1"
+                class="sub-nm0363-02-05"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/images/image/sub-nm0363-02-06.png"
+                alt="증화2동 도시재생지원센터 이미지2"
+                class="sub-nm0363-02-06"
+              />
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+    
   </div>
 </div>
