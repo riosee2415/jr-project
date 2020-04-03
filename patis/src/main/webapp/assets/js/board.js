@@ -393,6 +393,35 @@ function boardCommentRemove(co_no) {
 	}
 }
 
+function boardReplyMoveHandler(b_type, b_no, type, keyword) {
+	var s_type = isEmpty(type) ? search_type : type;
+	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
+	
+	boardReplyHitUp(b_type, b_no);
+	b_type = b_type.toLowerCase();
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply input[name=b_no]').val(b_no);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply input[name=s_type]').val(s_type);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply input[name=s_keyword]').val(s_keyword);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply').submit();
+}
+
+function boardReplyHitUp(b_type, b_no) {
+	$.ajax({
+		url: '/' + b_type.toLowerCase() + '.replyHitUp.do',
+		type: 'post',
+		dataType: 'json',
+		data: {'b_no': b_no},
+		success: function(data) {
+			if(data.result < 1) {
+				console.log('서버에 문제가 발생하여 조회수 증가 처리에 에러가 발생했습니다.');
+			}
+		},
+		error: function() {
+			console.log('error');
+		}
+	});
+}
+
 function boardThumbnailCilckHandler() {
 	$('#thumbnail-file-js').click();
 }

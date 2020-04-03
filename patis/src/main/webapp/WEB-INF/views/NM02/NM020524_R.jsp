@@ -60,19 +60,53 @@ prefix="fn" %>
         </div>
         <div class="detail-desc__box">${data.b_DESCRIPTION }</div>
         
+        <div class="reply__box">
+        	<table class="reply__table">
+        		<thead>
+        			<tr>
+       					<th>추진상황</th>
+       					<td>${data.b_REPLY_STATE }</td>
+       					<th>통지일</th>
+       					<td>${data.b_REPLY_TIME }</td>
+        			</tr>
+        		</thead>
+        		<tbody>
+        			<tr>
+        				<td colspan="4">
+        					<c:choose>
+        						<c:when test="${empty data.b_REPLY }">
+        							<textarea></textarea>
+        						</c:when>
+        						<c:otherwise>${data.b_REPLY }</c:otherwise>
+        					</c:choose>
+        				</td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+        
         <div class="btn__box">
           <c:if test="${not empty sessionScope.loginId }">
-            <c:if test="${sessionScope.loginId eq data.b_AUTHOR_ID}">
-              <button
-                type="button"
-                onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')"
-                >수정</button
-              >
-              <button
-                type="button"
-                onclick="javascript:boardRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')"
-                >삭제</button
-              >
+            <c:if test="${AcceptRight.BOARD_CONTROLL_RIGHT >= sessionScope.loginRight}">
+            	<c:if test="${empty data.b_REPLY}">
+           			<button
+	                type="button"
+	                onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')"
+	                >답변</button
+	              >
+            	</c:if>
+            	<c:if test="${not empty data.b_REPLY}">
+            		<button
+	                type="button"
+	                onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')"
+	                >수정</button
+	              >
+	              <button
+	                type="button"
+	                onclick="javascript:boardRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')"
+	                >삭제</button
+	              >
+            	</c:if>
             </c:if>
           </c:if>
           <button

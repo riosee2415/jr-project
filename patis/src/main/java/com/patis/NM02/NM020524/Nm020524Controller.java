@@ -343,6 +343,17 @@ public class Nm020524Controller {
 		return "community.reply";
 	}
 	
+	@ResponseBody
+	@RequestMapping(value = "/community.replyHitUp.do", method = RequestMethod.POST, produces="application/json")
+	public Map<String, Object> ajaxReplyHitUp(Model model,
+						 @RequestParam("b_no")int b_no) throws Exception {
+		Map<String, Object> data = new HashMap<String, Object>();
+		int result = nm020524Service.modifyReplyHitUp(b_no);
+		data.put("result", result);
+		
+		return data;
+	}
+	
 	@RequestMapping(value = "/nm020524Init.do", method = RequestMethod.GET)
 	public String ajaxInit(Model model,
 			               @RequestParam("paging") int paging,

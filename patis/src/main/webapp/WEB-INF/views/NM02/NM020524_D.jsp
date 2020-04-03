@@ -93,6 +93,13 @@ prefix="fn" %>
         </div>
         <div class="btn__box">
           <c:if test="${not empty sessionScope.loginId }">
+          	<c:if test="${AcceptRight.BOARD_CONTROLL_RIGHT >= sessionScope.loginRight}">
+            	<button
+                type="button"
+                onclick="javascript:boardReplyMoveHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')"
+                >답변</button
+              >
+            </c:if>
             <c:if test="${sessionScope.loginId eq data.b_AUTHOR_ID}">
               <button
                 type="button"
@@ -177,7 +184,19 @@ prefix="fn" %>
 		    <input type="hidden" name="b_no" />
 		    <input type="hidden" name="s_type" />
 		    <input type="hidden" name="s_keyword" />
-		  </form>      
+		  </form>   
+
+			<form
+		    action="/community.reply.do"
+		    method="get"
+		    id="frm-${fn:toLowerCase(data.b_TYPE)}-reply"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form> 
     </div>
   </div>
 </div>
