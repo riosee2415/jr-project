@@ -37,7 +37,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     	<c:if test="${not empty board.b_REPLY}">
 	    	<tr class="row-reply">
 	    		<td></td>
-	    		<td class="header-title" onclick="javascript:boardReplyMoveHandler('${board.b_TYPE}', '${board.b_NO}')">해당 글에 대한 답변입니다.</td>
+	    		<td class="header-title" onclick="javascript:boardReplyMoveHandler('${board.b_TYPE}', '${board.b_NO}')">↳ 해당 글에 대한 답변입니다.</td>
 	    		<td class="header-author">${board.b_REPLY_AUTHOR }</td>
 	    		<td>${board.b_REPLY_TIME }</td>
 	    		<td>${board.b_REPLY_HIT }</td>

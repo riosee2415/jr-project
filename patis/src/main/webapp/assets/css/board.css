@@ -255,7 +255,7 @@
 }
 
 .board-list__box .board-list__table tbody tr.row-reply td.header-title {
-  text-indent: 25px;
+  text-indent: 15px;
 }
 
 .board-list__box .board-list__table tbody tr.row-reply td.header-author{
