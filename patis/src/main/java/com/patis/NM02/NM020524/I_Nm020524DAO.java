@@ -128,4 +128,12 @@ public interface I_Nm020524DAO {
 	 * @DESC   : 마을 커뮤니티  게시판 답변 삭제
 	 */
 	void removeCommunityReply(int b_no) throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Mar 16, 2020
+	 * @RETURN : int
+	 * @DESC   : 마을 커뮤니티 게시판 답변 조회수 증가
+	 */
+	int modifyReplyHitUp(int b_no) throws SQLException;
 }

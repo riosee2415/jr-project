@@ -39,7 +39,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
     		<td></td>
     		<td class="header-title">해당 글에 대한 답변입니다.</td>
     		<td>${board.b_REPLY_AUTHOR }</td>
-    		<td>${board.b_REPLY_DATE }</td>
+    		<td>${board.b_REPLY_TIME }</td>
     		<td>${board.b_REPLY_HIT }</td>
     	</tr>
     	</c:if>

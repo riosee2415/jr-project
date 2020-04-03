@@ -25,7 +25,7 @@
 							B_TYPE,
 							B_REPLY,
 							B_REPLY_STATE,
-							B_REPLY_DATE,
+							DATE_FORMAT(B_REPLY_TIME, '%Y-%m-%d') AS B_REPLY_TIME,
 							(
 								 SELECT  Z.USER_NAME
 								 FROM  JR_DB.EMP Z
@@ -85,7 +85,7 @@
 							B_TYPE,
 							B_REPLY,
 							B_REPLY_STATE,
-							B_REPLY_DATE,
+							DATE_FORMAT(B_REPLY_TIME, '%Y-%m-%d') AS B_REPLY_TIME,
 							(
 								 SELECT  Z.USER_NAME
 								 FROM  JR_DB.EMP Z
@@ -149,7 +149,7 @@
 						B_TYPE,
 						B_REPLY,
 						B_REPLY_STATE,
-						B_REPLY_DATE,
+						DATE_FORMAT(B_REPLY_TIME, '%Y-%m-%d') AS B_REPLY_TIME,
 						(
 								 SELECT  Z.USER_NAME
 								 FROM  JR_DB.EMP Z
@@ -251,7 +251,7 @@
 		UPDATE 	JR_DB.BOARD_COMMUNITY
 		   SET	B_REPLY = #{B_REPLY},
 		   			B_REPLY_STATE = #{B_REPLY_STATE},
-		   			B_REPLY_DATE = SYSDATE(),
+		   			B_REPLY_TIME = SYSDATE(),
 		   			B_REPLY_AUTHOR = #{B_REPLY_AUTHOR}
 		 WHERE	B_NO = #{B_NO}
 	</update>

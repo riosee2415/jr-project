@@ -91,5 +91,10 @@ public class Nm020524ServiceImpl implements I_Nm020524Service{
 	public void removeCommunityReply(int b_no) throws SQLException {
 		nm020524DAO.removeCommunityReply(b_no);
 	}
+	
+	@Override
+	public int modifyReplyHitUp(int b_no) throws SQLException {
+		return nm020524DAO.modifyReplyHitUp(b_no);
+	}
 
 }

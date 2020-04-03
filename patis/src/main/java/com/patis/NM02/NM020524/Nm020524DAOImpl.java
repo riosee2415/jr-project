@@ -84,17 +84,22 @@ public class Nm020524DAOImpl implements I_Nm020524DAO{
 
 	@Override
 	public void setCommunityReply(BoardVO boardVO) throws SQLException {
-		sqlSession.update(NAMESPACE + ".setCommunityReply", boardVO);
+		sqlSession.update(NAMESPACE + ".SET_COMMUNITY_REPLY", boardVO);
 	}
 
 	@Override
 	public void modifyCommunityReply(BoardVO boardVO) throws SQLException {
-		sqlSession.update(NAMESPACE + ".modifyCommunityReply", boardVO);
+		sqlSession.update(NAMESPACE + ".MODIFY_COMMUNITY_REPLY", boardVO);
 	}
 
 	@Override
 	public void removeCommunityReply(int b_no) throws SQLException {
-		sqlSession.update(NAMESPACE + ".removeCommunityReply", b_no);
+		sqlSession.update(NAMESPACE + ".REMOVE_COMMUNITY_REPLY", b_no);
+	}
+
+	@Override
+	public int modifyReplyHitUp(int b_no) throws SQLException {
+		return sqlSession.update(NAMESPACE + ".MODIFY_REPLY_HIT_UP", b_no);
 	}
 
 }
