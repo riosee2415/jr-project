@@ -70,7 +70,7 @@
 	<button type="button" 
 					style="margin-top:20px;
 								 width: 100%;
-							   height: 40px;
+							   height: 50%;
 							   line-height: 38px;
 							   color: #655f5f;
 							   font-weight: 600;
