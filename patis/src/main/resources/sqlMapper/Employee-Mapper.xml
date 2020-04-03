@@ -63,9 +63,9 @@
 			#{joinAddr1},
 			
 			#{joinAddr2},
-			'000000',
+			#{joinRegno1},
 			'0000000',
-			'1'
+			#{joinGender}
 		)
 	</insert>
 	

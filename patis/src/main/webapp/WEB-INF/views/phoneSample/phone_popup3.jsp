@@ -25,7 +25,11 @@
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 라이센스 파일
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-	String license = "C:\\okcert3_license\\" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+	// 배포용
+  String license = "/tomcat/webapps/license/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+   
+  // 로컬 테스트용
+  // String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
 	
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 서비스명 (고정값)
@@ -123,7 +127,7 @@
 		
 		opener.document.kcbResultForm.RETURN_MSG.value = "<%=RETURN_MSG%>";
 
-		opener.document.kcbResultForm.action = "phone_popup4.jsp";
+		opener.document.kcbResultForm.action = "/phonePop4.do";
 		opener.document.kcbResultForm.submit();
 		
 		self.close();
@@ -139,7 +143,7 @@
 		out.println("<script>alert('본인인증성공'); fncOpenerSubmit();</script>");
 	}
 	else {
-		out.println("<script>alert('본인인증실패 : " + RSLT_CD + " : " + RSLT_MSG + "'); fncOpenerSubmit();</script>");
+		out.println("<script>alert('본인인증실패 : " + RSLT_CD + " : " + RSLT_MSG + "');self.close();opener.close();</script>");
 	}
 %>
 </html>

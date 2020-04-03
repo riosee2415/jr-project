@@ -9,17 +9,17 @@
 	// 휴대폰 본인확인 서비스 결과 완료 화면
 	//**************************************************************************
 	
-	//request.setCharacterEncoding("UTF-8"); // UTF-8 환경의 경우 주석 제거
+	request.setCharacterEncoding("UTF-8"); // UTF-8 환경의 경우 주석 제거
 
 	/* 공통 리턴 항목 */
 	String CP_CD		= request.getParameter("CP_CD");					// 고객사코드
 	String TX_SEQ_NO	= request.getParameter("TX_SEQ_NO");				// 거래번호
 	String RSLT_CD		= request.getParameter("RSLT_CD");					// 결과코드
-	//String RSLT_MSG	= request.getParameter("RSLT_MSG");					// 결과메세지(UTF-8)
-	String RSLT_MSG	= new String(request.getParameter("RSLT_MSG").getBytes("8859_1"));	// 결과메세지(EUC-KR)
+	String RSLT_MSG	= request.getParameter("RSLT_MSG");					// 결과메세지(UTF-8)
+	//String RSLT_MSG	= new String(request.getParameter("RSLT_MSG").getBytes("8859_1"));	// 결과메세지(EUC-KR)
 	
-	//String RSLT_NAME		= request.getParameter("RSLT_NAME");			// 성명(UTF-8)
-	String RSLT_NAME		= new String(request.getParameter("RSLT_NAME").getBytes("8859_1"));	// 성명(EUC-KR)
+	String RSLT_NAME		= request.getParameter("RSLT_NAME");			// 성명(UTF-8)
+	//String RSLT_NAME		= new String(request.getParameter("RSLT_NAME").getBytes("8859_1"));	// 성명(EUC-KR)
 	String RSLT_BIRTHDAY	= request.getParameter("RSLT_BIRTHDAY");		// 생년월일
 	String RSLT_SEX_CD 		= request.getParameter("RSLT_SEX_CD");			// 성별코드
 	String RSLT_NTV_FRNR_CD = request.getParameter("RSLT_NTV_FRNR_CD");		// 내외국인 구분
@@ -35,32 +35,62 @@
 <title>KCB 휴대폰 본인확인 서비스 샘플 4</title>
 </head>
 <body>
-<h3>인증결과</h3>
-<ul>
-  <li>고객사코드		: <%=CP_CD%> </li>
-  <li>거래번호			: <%=TX_SEQ_NO%> </li>
-  <li>결과코드			: <%=RSLT_CD%></li>
-  <li>결과메세지		: <%=RSLT_MSG%></li>
+<div style="display: none;">
+	<h3>인증결과</h3>
+	<ul>
+	  <li>고객사코드		: <%=CP_CD%> </li>
+	  <li>거래번호			: <%=TX_SEQ_NO%> </li>
+	  <li>결과코드			: <%=RSLT_CD%></li>
+	  <li>결과메세지		: <%=RSLT_MSG%></li>
+	
+	  <li>성명				: <%=RSLT_NAME%></li>
+	  <li>생년월일			: <%=RSLT_BIRTHDAY%></li>
+	  <li>성별				: <%=RSLT_SEX_CD%></li>
+	  <li>내외국인 구분		: <%=RSLT_NTV_FRNR_CD%></li>
+	  
+	  <li>DI				: <%=DI%></li>
+	  <li>CI				: <%=CI%></li>
+	  <li>CI업데이트 횟수	: <%=CI_UPDATE%></li>
+	  <li>통신사코드		: <%=TEL_COM_CD%></li>
+	  <li>휴대폰번호		: <%=TEL_NO%></li>
+	  
+	  <li>리턴메시지		: <%=RETURN_MSG%></li>
+	
+	</ul>
 
-  <li>성명				: <%=RSLT_NAME%></li>
-  <li>생년월일			: <%=RSLT_BIRTHDAY%></li>
-  <li>성별				: <%=RSLT_SEX_CD%></li>
-  <li>내외국인 구분		: <%=RSLT_NTV_FRNR_CD%></li>
-  
-  <li>DI				: <%=DI%></li>
-  <li>CI				: <%=CI%></li>
-  <li>CI업데이트 횟수	: <%=CI_UPDATE%></li>
-  <li>통신사코드		: <%=TEL_COM_CD%></li>
-  <li>휴대폰번호		: <%=TEL_NO%></li>
-  
-  <li>리턴메시지		: <%=RETURN_MSG%></li>
+	<br/>
+	* 성별 - M:남, F:여
+	<br/>
+	* 내외국인구분 - L:내국인, F:외국인
+	<br/>
+	* 통신사 - 01:SKT, 02:KT, 03:LGU+, 04:SKT알뜰폰, 05:KT알뜰폰, 06:LGU+알뜰폰
+</div>
 
-</ul>
-<br/>
-* 성별 - M:남, F:여
-<br/>
-* 내외국인구분 - L:내국인, F:외국인
-<br/>
-* 통신사 - 01:SKT, 02:KT, 03:LGU+, 04:SKT알뜰폰, 05:KT알뜰폰, 06:LGU+알뜰폰
+<div style="padding: 5px; text-align: center;">
+	<button type="button" 
+					style="margin-top:20px;
+								 width: 100%;
+							   height: 40px;
+							   line-height: 38px;
+							   color: #655f5f;
+							   font-weight: 600;
+							   background: #f7f7f7;
+							   border: 1.5px solid #e4e4e4;
+							   text-shadow: 0.2px 0.5px 1px rgba(0, 0, 0, 0.2);
+							   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+							   outline: none;
+							   cursor: pointer;" 
+				   onclick="javascript:successPhoneAuth()">회원가입 하기</button>
+</div>
 </body>
+<script>
+	function successPhoneAuth() {
+		self.close();
+		opener.parent.document.getElementById('step2Frm').children[0].value = "<%=RSLT_NAME%>";
+		opener.parent.document.getElementById('step2Frm').children[1].value = "<%=RSLT_BIRTHDAY%>";
+		opener.parent.document.getElementById('step2Frm').children[2].value = "<%=RSLT_SEX_CD%>";
+		opener.parent.document.getElementById('step2Frm').children[3].value = "<%=TEL_NO%>";
+		opener.parent.nextStep();
+	}
+</script>
 </html>

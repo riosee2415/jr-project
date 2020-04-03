@@ -183,17 +183,20 @@
 }
 .sub {
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   height: 0;
   position: absolute;
   left: 0;
-  top: 140px;
+  top: 135px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   z-index: 100;
-  display: -webkit-box;
+}
+
+.sub > ul {
+	display: -webkit-box;
   display: flex;
   -webkit-display: flex;
   -moz-display: flex;
@@ -206,7 +209,11 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
 }
+
 .resmenu li a {
   position: relative;
   display: block;
@@ -235,9 +242,7 @@
 
 .resmenu li:hover .sub,
 .resmenu__m:hover + .sub {
-  width: 100%;
   height: 55px;
-  z-index: 200;
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -246,28 +251,31 @@
 }
 
 .resmenu li:first-child .sub li:first-child {
-  margin-left: 13%;
+  margin-left: -8px;
 }
 .resmenu li:nth-child(2) .sub li:first-child {
-  margin-left: 24.5%;
+  margin-left: 184px;
 }
 .resmenu li:nth-child(3) .sub li:first-child {
-  margin-left: 37.5%;
+  margin-left: 360px;
 }
 .resmenu li:nth-child(4) .sub li:first-child {
-  margin-left: 42%;
+  margin-left: 424px;
 }
 .resmenu li:nth-child(5) .sub li:first-child {
-  margin-left: 49%;
+  margin-left: 575px;
 }
 .resmenu li:nth-child(6) .sub li:first-child {
-  margin-left: 67%;
+  margin-left: 870px;
 }
 .resmenu li:last-child .sub li:first-child {
-  margin-left: 60%;
+  margin-left: 772px;
 }
 .sub li {
   margin-right: 15px;
+}
+.sub li:last-child {
+	margin-right: 0;
 }
 .menu li {
   float: left;

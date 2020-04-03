@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -40,7 +41,7 @@ pageEncoding="UTF-8"%>
                   불가)</span
                 >
               </li>
-              <li><input type="text" id="joinName" maxlength="5" /></li>
+              <li><input type="text" id="joinName" maxlength="5" value="${sessionScope.AUTH_NAME }" readonly /></li>
               <li>
                 <div>
                   <input
@@ -113,18 +114,24 @@ pageEncoding="UTF-8"%>
                   id="joinMobile-1"
                   maxlength="3"
                   onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+                  value="${fn:substring(sessionScope.AUTH_TELNO, 0, 3)}"
+                  readonly
                 />
                 -<input
                   type="text"
                   id="joinMobile-2"
                   maxlength="4"
                   onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+              	  value="${fn:substring(sessionScope.AUTH_TELNO, 3, 7)}"
+                  readonly
                 />
                 -<input
                   id="joinMobile-3"
                   maxlength="4"
                   type="text"
                   onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+              	  value="${fn:substring(sessionScope.AUTH_TELNO, 7, 11)}"
+                  readonly
                 />
               </li>
               <li>
@@ -148,6 +155,9 @@ pageEncoding="UTF-8"%>
                 />
               </li>
             </ul>
+            
+            <input type="hidden" id="regno1" value="${sessionScope.AUTH_BIRTHDAY }" readonly />
+            <input type="hidden" id="gender" value="${sessionScope.AUTH_GENDER }" readonly />
           </div>
           <div class="join-button">
             <button

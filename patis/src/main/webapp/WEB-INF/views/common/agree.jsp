@@ -396,8 +396,8 @@ pageEncoding="UTF-8"%>
       <p class="content">이 약관은 2020년 3월 4일부터 시행됩니다.</p>
     </div>
     <div class="agree-check" >
-      <input type="checkbox" id="chk-agree-1" name="chk-agree-1" />이용약관에 동의 합니다. (동의해야만 회원가입
-      가능)
+      <label><input type="checkbox" id="chk-agree-1" name="chk-agree-1" />이용약관에 동의 합니다. (동의해야만 회원가입
+      가능)</label>
     </div>
   </div>
   <div class="agree-box-01">
@@ -758,8 +758,8 @@ pageEncoding="UTF-8"%>
       </p>
     </div>
     <div class="agree-check">
-      <input type="checkbox" id="chk-agree-2" name="chk-agree-2" />개인정보 수집·이용에 동의합니다. (동의해야만
-      회원가입 가능)
+      <label><input type="checkbox" id="chk-agree-2" name="chk-agree-2" />개인정보 수집·이용에 동의합니다. (동의해야만
+      회원가입 가능)</label>
     </div>
   </div>
   <div class="join-button">

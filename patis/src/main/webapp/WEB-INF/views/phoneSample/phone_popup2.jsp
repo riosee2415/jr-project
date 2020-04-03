@@ -1,5 +1,7 @@
 <%@ page import="kcb.org.json.*" %>
 <%@ page language="java" contentType="text/html; charset=euc-kr" pageEncoding="euc-kr"%>
+
+
 <%
     //**************************************************************************
 	// 파일명 : phone_popup2.jsp
@@ -12,7 +14,7 @@
     //**************************************************************************
 	
 	//' UTF-8 환경의 경우 주석 해제 + 전체 페이지 상단 charset, pageEncoding 및 파일인코딩 변경 필요
-	//request.setCharacterEncoding("UTF-8");
+	request.setCharacterEncoding("UTF-8");
 	
 	/**************************************************************************
 	 * okcert3 휴대폰 본인확인 서비스 파라미터
@@ -21,13 +23,13 @@
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 	//' 회원사 사이트명, URL
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-	String SITE_NAME = "사이트명"; 		// 요청사이트명 
-	String SITE_URL = "www.test.co.kr";
+	String SITE_NAME = request.getParameter("SITE_NAME");		// 요청사이트명 
+	String SITE_URL = request.getServerName();
 
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' KCB로부터 부여받은 회원사코드(아이디) 설정 (12자리) 
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-	String CP_CD = request.getParameter("CP_CD");;	// 회원사코드
+	String CP_CD = request.getParameter("CP_CD");	// 회원사코드
 	session.setAttribute("PHONE_CP_CD", CP_CD);
 
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -35,7 +37,7 @@
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 	//' opener(popup1)의 도메인과 일치하도록 설정해야 함. 
 	//' (http://www.test.co.kr과 http://test.co.kr는 다른 도메인으로 인식하며, http 및 https도 일치해야 함)
-	String RETURN_URL = "http://"+request.getServerName()+":8080/phone_popup/phone_popup3.jsp";// 인증 완료 후 리턴될 URL (도메인 포함 full path)
+	String RETURN_URL = "http://" + request.getServerName() + ":" + request.getServerPort()  +"/phonePop3.do";// 인증 완료 후 리턴될 URL (도메인 포함 full path)
 
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 인증요청사유코드 (가이드 문서 참조)
@@ -62,7 +64,12 @@
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 라이센스 파일
     //'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-	String license = "C:\\okcert3_license\\" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+	 // 배포용
+  String license = "/tomcat/webapps/license" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+   
+  // 로컬 테스트용
+  // String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
+   
 	
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     //' 서비스명 (고정값)
@@ -170,6 +177,8 @@
 		out.println("<script>alert('" + RSLT_CD + " : " + RSLT_MSG + "'); self.close(); </script>");
 	}
 %>
+
+
 </html>
 
 

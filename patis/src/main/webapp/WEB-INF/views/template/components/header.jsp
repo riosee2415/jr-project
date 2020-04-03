@@ -69,17 +69,19 @@ uri="http://java.sun.com/jsp/jstl/core" %>
             <a class="resmenu__m" href="${menu.URL }"
               ><c:out value="${menu.VAL }"></c:out
             ></a>
-            <ul class="sub">
-              <c:forEach var="subMenu" items="${subMenuList }">
-                <c:if test="${menu.DETAIL_CODE == subMenu.PARENT_CODE }">
-                  <li
-                    ><a
-                      href="${subMenu.URL }?parent=${subMenu.PARENT_CODE }&code=${subMenu.DETAIL_CODE}"
-                      ><c:out value="${subMenu.VAL }"></c:out></a
-                  ></li>
-                </c:if>
-              </c:forEach>
-            </ul>
+            <div class="sub">
+	            <ul>
+	              <c:forEach var="subMenu" items="${subMenuList }">
+	                <c:if test="${menu.DETAIL_CODE == subMenu.PARENT_CODE }">
+	                  <li
+	                    ><a
+	                      href="${subMenu.URL }?parent=${subMenu.PARENT_CODE }&code=${subMenu.DETAIL_CODE}"
+	                      ><c:out value="${subMenu.VAL }"></c:out></a
+	                  ></li>
+	                </c:if>
+	              </c:forEach>
+	            </ul>
+            </div>
           </li>
         </c:forEach>
       </ul>

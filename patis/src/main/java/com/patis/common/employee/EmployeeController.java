@@ -47,7 +47,12 @@ public class EmployeeController {
 	
 	
 	@RequestMapping(value="/join-step-2.do", method=RequestMethod.POST)
-	public String joinStart(Model model) throws Exception {
+	public String joinStart(Model model,
+							HttpSession session,
+							@RequestParam("AUTH_NAME") String AUTH_NAME,
+							@RequestParam("AUTH_BIRTHDAY") String AUTH_BIRTHDAY,
+							@RequestParam("AUTH_GENDER") String AUTH_GENDER,
+							@RequestParam("AUTH_TELNO") String AUTH_TELNO) throws Exception {
 		
 		List<CommonVO> menuList = middlewareService.getMenu();
 		model.addAttribute("menuList", menuList);
@@ -55,6 +60,11 @@ public class EmployeeController {
 		model.addAttribute("subMenuList", subMenuList);
 		List<CommonVO> DetailMenuList = middlewareService.getDetailMenu();
 		model.addAttribute("DetailMenuList", DetailMenuList);
+		
+		session.setAttribute("AUTH_NAME", AUTH_NAME);
+		session.setAttribute("AUTH_BIRTHDAY", AUTH_BIRTHDAY);
+		session.setAttribute("AUTH_GENDER", AUTH_GENDER);
+		session.setAttribute("AUTH_TELNO", AUTH_TELNO);
 		
 		return "join-step-2";
 	}
@@ -79,6 +89,38 @@ public class EmployeeController {
 		
 		return "phonePop";
 	}
+	
+	@RequestMapping(value="/phonePop2.do", method=RequestMethod.POST)
+	public String phonePop2(Model model,
+							 @RequestParam("CP_CD")String CP_CD
+							,@RequestParam("SITE_NAME")String SITE_NAME) throws Exception {
+		
+		model.addAttribute("CP_CD", CP_CD);
+		model.addAttribute("SITE_NAME", SITE_NAME);
+		
+		return "phonePop2";
+	}
+	
+	@RequestMapping(value="/phonePop3.do")
+	public String phonePop3(Model model,
+							@RequestParam("mdl_tkn")String mdl_tkn) throws Exception {
+		
+		
+		model.addAttribute("mdl_tkn", mdl_tkn);
+		
+		return "phonePop3";
+	}
+	
+	@RequestMapping(value="/phonePop4.do")
+	public String phonePop4(Model model
+							) throws Exception {
+		
+		return "phonePop4";
+	}
+	
+	
+	
+	
 	
 	@RequestMapping(value="/login.do", method=RequestMethod.GET)
 	public String login(Model model) throws Exception {
@@ -114,6 +156,8 @@ public class EmployeeController {
 						,	@RequestParam("joinEmail")String joinEmail 
 						,	@RequestParam("joinMobile")String joinMobile 
 						,	@RequestParam("joinTel")String joinTel 
+						,	@RequestParam("joinRegno1")String joinRegno1 
+						,	@RequestParam("joinGender")String joinGender 
 						,	Model model) throws Exception {
 			
 		
@@ -127,6 +171,8 @@ public class EmployeeController {
 		params.put("joinEmail", joinEmail);
 		params.put("joinMobile", joinMobile);
 		params.put("joinTel", joinTel);
+		params.put("joinRegno1", joinRegno1);
+		params.put("joinGender", joinGender);
 		
 		int result = employeeService.joinUs(params);
 		

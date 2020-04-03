@@ -22,9 +22,23 @@ var joinTel1 = document.getElementById("joinTel-1");
 var joinTel2 = document.getElementById("joinTel-2");
 var joinTel3 = document.getElementById("joinTel-3");
 
+var regno1 = document.getElementById("regno1");
+var gender = document.getElementById("gender");
+
 function openPhonePop() {
 	event.preventDefault();
-	window.open("/phonePop.do", '_blank', 'width=500px,height=700px,toolbars=no,scrollbars=no');
+	
+	var screenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var screenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+    var screenWidth = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var screenHeight = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+    
+    var w = 300;
+    var h = 60;
+    var l = ((screenWidth / 2) - (w / 2)) + screenLeft;
+    var t = ((screenHeight / 2) - (h / 2)) + screenTop;
+    
+	window.open("/phonePop.do", '_blank', 'width=' + w + ',height=' + h + 'left=' + 300 + ',top=' + t + ',toolbars=no,scrollbars=no');
 }
 
 
@@ -246,7 +260,9 @@ function joinBtnHandler(){
 						"joinAddr2" : detailAddr.value,
 						"joinEmail" : joinEmail.value,
 						"joinMobile" : joinMobile1.value + joinMobile2.value + joinMobile3.value,
-						"joinTel" : joinTel1.value + joinTel2.value + joinTel3.value
+						"joinTel" : joinTel1.value + joinTel2.value + joinTel3.value,
+						"joinRegno1" : regno1.value,
+						"joinGender" : gender.value
 					  },
 			success : function(data){
 				
@@ -279,4 +295,3 @@ function moveFindPassJoin(){
 function moveFindLoginJoin(){
 	document.getElementById("findLoginFrm").submit();
 }
-

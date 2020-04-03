@@ -140,6 +140,11 @@ pageEncoding="UTF-8"%>
   id="step2Frm"
   action="${pageContext.request.contextPath }/join-step-2.do"
   method="POST"
-></form>
+>
+	<input type="hidden" name="AUTH_NAME" />
+	<input type="hidden" name="AUTH_BIRTHDAY" />
+	<input type="hidden" name="AUTH_GENDER" />
+	<input type="hidden" name="AUTH_TELNO" />
+</form>
 
 <script src="/assets/js/phoneAuth.js"></script>

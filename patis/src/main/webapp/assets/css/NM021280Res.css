@@ -1,8 +1,8 @@
 @media screen and (max-width: 425px) {
-  .nm22-title-style {
+  .nm1280-title-style {
     font-size: 16px;
   }
-  .nm22-content-img__box {
+  .nm1280-content-img__box {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -28,16 +28,16 @@
 }
 
 @media screen and (min-width: 426px) and (max-width: 767px) {
-  .nm22-title-style {
+  .nm1280-title-style {
     font-size: 18px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
-  .nm22-title-style {
+  .nm1280-title-style {
     font-size: 18px;
   }
-  .nm22-content-img__box {
+  .nm1280-content-img__box {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
