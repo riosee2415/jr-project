@@ -458,6 +458,55 @@
   cursor: default;
 }
 
+.board-detail__box .reply__box .reply__table{
+	width:100%;
+}
+
+.board-detail__box .reply__box .reply__table thead{
+	line-height:40px;
+	border-top:1px solid #dedede;
+	border-bottom:1px solid #dedede;
+}
+
+.board-detail__box .reply__box .reply__table thead tr th{
+	width:15%;
+	font-weight:600;
+	background:#f1f1f1;
+	min-width:80px;
+}
+
+.board-detail__box .reply__box .reply__table thead tr td{
+	text-indent:10px;
+	font-size:15px;
+}
+
+.board-detail__box .reply__box .reply__table thead tr td:first-child{
+	width:50%;
+}
+
+.board-detail__box .reply__box .reply__table thead tr td:last-child{
+	width: 20%;
+    min-width: 100px;
+}
+
+.board-detail__box .reply__box .reply__table textarea{
+	border:none;
+	border-bottom:1px solid #dedede;
+	outline:none;
+	width:100%;
+	height:200px;
+	box-sizing: border-box;
+	padding:10px;
+	margin-top:10px;
+	min-height:200px;
+	font-size:18px;
+}
+
+.board-detail__box .reply__box .reply__table tbody tr td{
+	padding:10px;
+	color:#777;
+}
+
 .board-detail__box .btn__box {
   display: -webkit-box;
   display: -ms-flexbox;
