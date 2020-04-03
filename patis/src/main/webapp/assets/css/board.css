@@ -246,7 +246,7 @@
 }
 
 .board-list__box .board-list__table tbody tr.row-reply {
-  color: #888;
+  color: #777;
   background-color: #f3f4fd;
 }
 
@@ -256,6 +256,10 @@
 
 .board-list__box .board-list__table tbody tr.row-reply td.header-title {
   text-indent: 25px;
+}
+
+.board-list__box .board-list__table tbody tr.row-reply td.header-author{
+	color:#777;
 }
 
 .board-pagination {
