@@ -354,6 +354,66 @@ public class Nm020524Controller {
 		return data;
 	}
 	
+	@RequestMapping(value="/community.reply.write.do", method=RequestMethod.POST)
+	public String communityReplyWriteProcess(@RequestParam(value="parent")String parent,
+				 						@RequestParam(value="code")String code,
+										@RequestParam(value="mode")String mode,
+										@RequestParam(value="b_no", required=false)Integer b_no,
+										@RequestParam(value="b_reply")String b_reply,
+										@RequestParam(value="b_reply_state")String b_reply_state,
+										@RequestParam(value="b_reply_author")String b_reply_author,
+										@RequestParam(value="s_type", defaultValue="", required=false)String searchType,
+				 					    @RequestParam(value="s_keyword", defaultValue="", required=false)String searchKeyword,
+										RedirectAttributes rttr) throws Exception{
+		String url = "";
+
+		BoardVO boardVO = new BoardVO();
+		boardVO.setB_NO(b_no);
+		boardVO.setB_REPLY(b_reply);
+		boardVO.setB_REPLY_STATE(b_reply_state);
+		boardVO.setB_REPLY_AUTHOR(b_reply_author);
+		System.out.println(boardVO);
+		if(mode.equals("WRITE")) {
+			nm020524Service.setCommunityReply(boardVO);
+			
+			rttr.addAttribute("s_type", searchType);
+			rttr.addAttribute("s_keyword", searchKeyword);
+			rttr.addFlashAttribute("msg", "답변이 등록되었습니다.");
+			url = "redirect:/community.do";
+		} else {
+			nm020524Service.modifyCommunityReply(boardVO);
+			
+			rttr.addAttribute("s_type", searchType);
+			rttr.addAttribute("s_keyword", searchKeyword);
+			rttr.addFlashAttribute("msg", "게시글이 변경되었습니다.");
+			url = "redirect:/community.do";
+		}
+		rttr.addAttribute("parent", parent);
+		rttr.addAttribute("code", code);
+		
+		return url;
+	}
+	
+	@RequestMapping(value="/community.reply.remove.do", method=RequestMethod.POST)
+	public String communityReplyRemoveProcess(@RequestParam(value="parent")String parent,
+										 @RequestParam(value="code")String code,
+										 @RequestParam(value="b_no")Integer b_no,
+										 @RequestParam(value="s_type", defaultValue="")String searchType,
+										 @RequestParam(value="s_keyword", defaultValue="")String searchKeyword,
+										 RedirectAttributes rttr) throws Exception {
+		
+		nm020524Service.removeCommunityReply(b_no);
+		
+		rttr.addFlashAttribute("msg", "답변 글이 삭제 처리 되었습니다.");
+		
+		rttr.addAttribute("parent", parent);
+		rttr.addAttribute("code", code);
+		rttr.addAttribute("s_type", searchType);
+		rttr.addAttribute("s_keyword", searchKeyword);
+		
+		return "redirect:/community.do";
+	}
+	
 	@RequestMapping(value = "/nm020524Init.do", method = RequestMethod.GET)
 	public String ajaxInit(Model model,
 			               @RequestParam("paging") int paging,

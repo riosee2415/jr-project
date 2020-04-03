@@ -267,10 +267,10 @@
 		UPDATE 	JR_DB.BOARD_COMMUNITY
 		   SET	B_REPLY = NULL,
 		   			B_REPLY_STATE = '답변대기',
-		   			B_REPLY_DATE = NULL,
+		   			B_REPLY_TIME = NULL,
 		   			B_REPLY_AUTHOR = NULL,
 		   			B_REPLY_HIT = 0
-		 WHERE	B_NO = #{B_NO}
+		 WHERE	B_NO = #{b_no}
 	</update>
 	
 	<update id="MODIFY_REPLY_HIT_UP" parameterType="int">

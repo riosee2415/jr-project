@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/functions"
-prefix="fn" %>
+pageEncoding="UTF-8"%> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<jsp:useBean id="today" class="java.util.Date" />
+<fmt:formatDate value="${today}" pattern="yyyy-MM-dd" var="todayDate" />
 
 <div class="subpage">
   <div class="sub-container" id="sub-container-js">
@@ -67,18 +71,35 @@ prefix="fn" %>
        					<th>추진상황</th>
        					<td>${data.b_REPLY_STATE }</td>
        					<th>통지일</th>
-       					<td>${data.b_REPLY_TIME }</td>
+       					<td><c:out value="${empty data.b_REPLY_TIME ? todayDate : data.b_REPLY_TIME}" /></td>
         			</tr>
         		</thead>
         		<tbody>
         			<tr>
         				<td colspan="4">
-        					<c:choose>
-        						<c:when test="${empty data.b_REPLY }">
-        							<textarea></textarea>
-        						</c:when>
-        						<c:otherwise>${data.b_REPLY }</c:otherwise>
-        					</c:choose>
+        					<form
+					          action="/community.reply.write.do"
+					          method="post"
+					          id="frm-${fn:toLowerCase(data.b_TYPE)}-reply-write-process"
+					        >
+					        	<input type="hidden" name="parent" value="${param.parent }" />
+					        	<input type="hidden" name="code" value="${param.code }" />
+					        	<input type="hidden" name="mode" />
+					        	<input type="hidden" name="b_no" value="${data.b_NO }" />
+					        	<input type="hidden" name="b_reply_state" value="답변완료" />
+					        	<input type="hidden" name="b_reply_author" value="${sessionScope.loginNo }" />
+					        	
+					        	<div class="reply__data__box" id="reply-data-js">
+		       						<c:choose>
+		        						<c:when test="${empty data.b_REPLY }">
+			        							<textarea name="b_reply" class="init-focus" id="input-reply-js"></textarea>
+		        						</c:when>
+		        						<c:otherwise>
+			        							${data.b_REPLY }
+	        							</c:otherwise>
+		        					</c:choose>
+	        					</div>
+        					</form>
         				</td>
         			</tr>
         		</tbody>
@@ -91,22 +112,23 @@ prefix="fn" %>
             	<c:if test="${empty data.b_REPLY}">
            			<button
 	                type="button"
-	                onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')"
+	                onclick="javascript:boardReplyWriteProcessHandler('${data.b_TYPE}', 'WRITE', '${data.b_NO}', '${searchType}', '${searchKeyword}')"
 	                >답변</button
 	              >
             	</c:if>
             	<c:if test="${not empty data.b_REPLY}">
             		<button
 	                type="button"
-	                onclick="javascript:boardWriteMoveHandler('${data.b_TYPE}', '${searchType}', '${searchKeyword}', '${data.b_NO}')"
+	                onclick="javascript:boardReplyModifyHandler('${data.b_TYPE}', 'MODIFY', '${data.b_NO}', '${searchType}', '${searchKeyword}')"
+	                id="reply-modify-js"
 	                >수정</button
 	              >
 	              <button
 	                type="button"
-	                onclick="javascript:boardRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')"
+	                onclick="javascript:boardReplyRemoveProcessHandler('${data.b_TYPE}', '${data.b_NO}', '${searchType}', '${searchKeyword}')"
 	                >삭제</button
 	              >
-            	</c:if>
+            	</c:if>	
             </c:if>
           </c:if>
           <button
@@ -128,6 +150,18 @@ prefix="fn" %>
 		    <input type="hidden" name="s_type" />
 		    <input type="hidden" name="s_keyword" />
 		  </form>
+		  
+		  <form
+		    action="/community.reply.remove.do"
+		    method="post"
+		    id="frm-${fn:toLowerCase(data.b_TYPE)}-reply-remove"
+		  >
+		    <input type="hidden" name="parent" value="${param.parent }" />
+		    <input type="hidden" name="code" value="${param.code }" />
+		    <input type="hidden" name="b_no" />
+		    <input type="hidden" name="s_type" />
+		    <input type="hidden" name="s_keyword" />
+		  </form>   
     </div>
   </div>
 </div>

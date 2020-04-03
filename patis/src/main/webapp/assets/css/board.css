@@ -491,20 +491,26 @@
 
 .board-detail__box .reply__box .reply__table textarea{
 	border:none;
-	border-bottom:1px solid #dedede;
 	outline:none;
 	width:100%;
-	height:200px;
-	box-sizing: border-box;
-	padding:10px;
-	margin-top:10px;
-	min-height:200px;
+	height: 200px;
 	font-size:18px;
+	resize: none;
+	font-family: NotoSans, sans-serif;
 }
 
 .board-detail__box .reply__box .reply__table tbody tr td{
 	padding:10px;
 	color:#777;
+}
+
+.board-detail__box .reply__box .reply__data__box {
+	min-height:200px;
+	padding:10px;
+	padding:10px;
+	box-sizing: border-box;
+	font-size: 18px;
+	border-bottom:1px solid #dedede;
 }
 
 .board-detail__box .btn__box {

@@ -405,6 +405,71 @@ function boardReplyMoveHandler(b_type, b_no, type, keyword) {
 	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply').submit();
 }
 
+function boardReplyWriteProcessHandler(b_type, mode, b_no, type, keyword) {
+	var b_reply = $(CURRENT_PAGE + ' #input-reply-js').val();
+	
+	b_type = b_type.toLowerCase();
+	
+	if(isEmpty(b_reply)) {
+		alert('답변을 입력해주세요.');
+		$(CURRENT_PAGE + ' #input-reply-js').focus();
+		return;
+	} 
+	
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-write-process input[name=mode]').val(mode);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-write-process input[name=s_type]').val(type);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-write-process input[name=s_keyword]').val(keyword);
+	
+	var message = '';
+	if(mode == 'WRITE') {
+		message = '입력하신 내용으로 답변을 등록하시겠습니까 ?';
+	} else {
+		message = '입력하신 내용으로 답변을 변경하시겠습니까 ?';
+	}
+	if(confirm(message)) {
+		var txt_reply = $(CURRENT_PAGE + ' #frm-' + b_type + '-reply-write-process textarea[name=b_reply]').val();
+		$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-write-process textarea[name=b_reply]').val(txt_reply.replace(/(?:\r\n|\r|\n)/g, '<br />'));
+		$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-write-process').submit();
+		return;
+	}
+}
+
+function boardReplyModifyHandler(b_type, mode, b_no, type, keyword) {
+	var text = $(CURRENT_PAGE + " #reply-modify-js").text();
+	
+	if(text == '수정') {
+		var b_reply = $(CURRENT_PAGE + " #reply-data-js").text().trim();
+		var html = '<textarea name="b_reply" id="input-reply-js">' + b_reply + '</textarea>';
+		
+		$(CURRENT_PAGE + " #reply-modify-js").text('변경');
+		$(CURRENT_PAGE + " #reply-data-js").html(html);
+		$(CURRENT_PAGE + " #input-reply-js").focus();
+	} else {
+		var b_reply = $(CURRENT_PAGE + " #input-reply-js").text();
+		if(isEmpty(b_reply)) {
+			alert("답변을 입력해주세요.");
+			$(CURRENT_PAGE + " #reply-modify-js").focus();
+			return;
+		}
+		boardReplyWriteProcessHandler(b_type, mode, b_no, type, keyword);
+	}
+}
+
+function boardReplyRemoveProcessHandler(b_type, b_no, type, keyword) {
+	if(!confirm('해당 답변 글을 삭제하시겠습니까 ?')) {
+		return;
+	}
+	var s_type = isEmpty(type) ? search_type : type;
+	var s_keyword = isEmpty(keyword) ? search_keyword : keyword;
+	
+	b_type = b_type.toLowerCase();
+	
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-remove input[name=b_no]').val(b_no);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-remove input[name=s_type]').val(s_type);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-remove input[name=s_keyword]').val(s_keyword);
+	$(CURRENT_PAGE + ' #frm-' + b_type + '-reply-remove').submit();
+}
+
 function boardReplyHitUp(b_type, b_no) {
 	$.ajax({
 		url: '/' + b_type.toLowerCase() + '.replyHitUp.do',
