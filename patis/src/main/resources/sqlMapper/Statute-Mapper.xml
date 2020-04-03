@@ -12,7 +12,7 @@
 							B_DESCRIPTION,
 							(
 								 SELECT  Z.USER_NAME
-								 FROM  JR_DB.EMP Z
+								 FROM  jungnangurp.EMP Z
 								 WHERE  B_AUTHOR = Z.USER_NO
 							)	 AS B_AUTHOR,
 							B_AUTHOR AS B_AUTHOR_NO,
@@ -24,7 +24,7 @@
 							B_NOTICE,
 							B_USE_YN,
 							B_TYPE
-							FROM  JR_DB.BOARD_STATUTE A,
+							FROM  jungnangurp.BOARD_STATUTE A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							ORDER  BY B_NOTICE ASC,
@@ -63,12 +63,12 @@
 							B_DESCRIPTION,
 							(
 								 SELECT  Z.USER_NAME
-								 FROM  JR_DB.EMP Z
+								 FROM  jungnangurp.EMP Z
 								 WHERE  B_AUTHOR = Z.USER_NO
 							)	 AS B_AUTHOR,
 							(
 								SELECT  Z.USER_ID
-								  FROM  JR_DB.EMP Z
+								  FROM  jungnangurp.EMP Z
 								 WHERE  B_AUTHOR = Z.USER_NO
 							) AS B_AUTHOR_ID,
 							B_AUTHOR AS B_AUTHOR_NO,
@@ -80,7 +80,7 @@
 							B_NOTICE,
 							B_USE_YN,
 							B_TYPE
-							FROM  JR_DB.BOARD_STATUTE A,
+							FROM  jungnangurp.BOARD_STATUTE A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							<include refid="search"></include>
@@ -93,20 +93,20 @@
 	
 	<select id="GET_LIST_COUNT" resultType="int">
 		 SELECT  COUNT(B_NO)
-			 FROM	 JR_DB.BOARD_STATUTE
+			 FROM	 jungnangurp.BOARD_STATUTE
 			WHERE  B_USE_YN = 1
 	</select>
 	
 	<select id="GET_SEARCH_LIST_COUNT" resultType="int" parameterType="hashMap">
 		 SELECT	 COUNT(B_NO)
-		   FROM	 JR_DB.BOARD_STATUTE
+		   FROM	 jungnangurp.BOARD_STATUTE
 		  WHERE  B_USE_YN = 1
 		 <include refid="search"></include>
 	</select>
 	
 	<select id="GET_BOARD_TYPE" resultType="str">
 		 SELECT	 B_TYPE
-		   FROM	 JR_DB.BOARD_STATUTE
+		   FROM	 jungnangurp.BOARD_STATUTE
 		  WHERE  B_USE_YN = 1
 		    AND  B_TYPE IS NOT NULL
 		  LIMIT  1
@@ -119,12 +119,12 @@
 						B_DESCRIPTION,
 						(
 							SELECT  Z.USER_NAME
-							  FROM  JR_DB.EMP Z
+							  FROM  jungnangurp.EMP Z
 							 WHERE  B_AUTHOR = Z.USER_NO
 						) AS B_AUTHOR,
 						(
 							SELECT  Z.USER_ID
-							  FROM  JR_DB.EMP Z
+							  FROM  jungnangurp.EMP Z
 							 WHERE  B_AUTHOR = Z.USER_NO
 						) AS B_AUTHOR_ID,
 						B_AUTHOR AS B_AUTHOR_NO,
@@ -136,7 +136,7 @@
 						B_NOTICE,
 						B_USE_YN,
 						B_TYPE
-		  FROM  JR_DB.BOARD_STATUTE
+		  FROM  jungnangurp.BOARD_STATUTE
 		 WHERE  B_NO = #{b_no}
 		   AND  B_USE_YN = 1
 	</select>
@@ -149,7 +149,7 @@
 							B_GUBUN,
 			        B_TITLE,
 			        B_TYPE
-							FROM  JR_DB.BOARD_STATUTE A,
+							FROM  jungnangurp.BOARD_STATUTE A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							<include refid="search"></include>
@@ -171,7 +171,7 @@
 							B_GUBUN,
 			        B_TITLE,
 			        B_TYPE
-							FROM  JR_DB.BOARD_STATUTE A,
+							FROM  jungnangurp.BOARD_STATUTE A,
 							( SELECT @ROWNUM:=0 ) R
 							WHERE  B_USE_YN = 1
 							<include refid="search"></include>
@@ -186,13 +186,13 @@
 	</select>
 	
 	<update id="MODIFY_HIT_UP" parameterType="int">
-		UPDATE  JR_DB.BOARD_STATUTE
+		UPDATE  jungnangurp.BOARD_STATUTE
 		   SET  B_HIT = B_HIT + 1
 		 WHERE  B_NO = #{b_no}
 	</update>
 	
 	<insert id="SET_STATUTE" parameterType="boardVO" useGeneratedKeys="true" keyProperty="B_NO">
-		INSERT INTO JR_DB.BOARD_STATUTE
+		INSERT INTO jungnangurp.BOARD_STATUTE
 		(
 			B_GUBUN,
 			B_TITLE,
@@ -217,7 +217,7 @@
 	</insert>
 	
 	<update id="MODIFY_STATUTE" parameterType="boardVO">
-		UPDATE 	JR_DB.BOARD_STATUTE
+		UPDATE 	jungnangurp.BOARD_STATUTE
 		   SET	B_GUBUN = #{B_GUBUN},
 		   			B_TITLE = #{B_TITLE},
 		   			B_DESCRIPTION = #{B_DESCRIPTION},
@@ -226,7 +226,7 @@
 	</update>
 	
 	<update id="REMOVE_STATUTE" parameterType="int">
-		UPDATE 	JR_DB.BOARD_STATUTE
+		UPDATE 	jungnangurp.BOARD_STATUTE
 		   SET	B_USE_YN = 0,
 		   			B_DELETE_TIME = SYSDATE()
 		 WHERE	B_NO = #{b_no}

@@ -7,7 +7,7 @@
 				LOG_ID,
 		        LOG_IP,
 		        DATE_FORMAT(LOG_DATE, '%Y년 %m월 %d일  %H시%i분%S초') AS LOG_DATE
-		  FROM	JR_DB.LOGIN_LOG
+		  FROM	jungnangurp.LOGIN_LOG
 		 ORDER	BY LOG_NO DESC
 		 LIMIT  10 OFFSET #{paging}
 	</select>
@@ -15,12 +15,12 @@
 	
 	<select id="GET_COUNT" resultType="int">
 		SELECT	COUNT(LOG_NO)
-		  FROM	JR_DB.LOGIN_LOG;
+		  FROM	jungnangurp.LOGIN_LOG;
 	</select>
 	
 	<select id="GET_LOGIN_DATA_TODAY" resultType="str" parameterType="str">
 		SELECT	COUNT(*)
-		  FROM	JR_DB.LOGIN_LOG
+		  FROM	jungnangurp.LOGIN_LOG
 		 WHERE	STR_TO_DATE(LOG_DATE, '%Y-%m-%d') = STR_TO_DATE(#{today}, '%Y/%m/%d')
 	</select>
 	
@@ -29,14 +29,14 @@
 				A.LOG_ID,
 				A.LOG_IP,
 				A.LOG_DATE
-		  FROM	JR_DB.LOGIN_LOG		A, (SELECT @rownum:=0) TMP
+		  FROM	jungnangurp.LOGIN_LOG		A, (SELECT @rownum:=0) TMP
 		 WHERE	STR_TO_DATE(LOG_DATE, '%Y-%m-%d') = STR_TO_DATE(#{today}, '%Y/%m/%d')
 		 ORDER	BY	A.LOG_DATE DESC
 	</select>
 	
 	<select id="GET_LOGIN_DATA_SEARCH" resultType="str" parameterType="hashMap">
 		SELECT	COUNT(*)
-		  FROM	JR_DB.LOGIN_LOG
+		  FROM	jungnangurp.LOGIN_LOG
 		 WHERE	STR_TO_DATE(LOG_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
 		   AND	STR_TO_DATE(LOG_DATE, '%Y-%m-%d') <![CDATA[ <= ]]> STR_TO_DATE(#{end}, '%Y/%m/%d')
 	</select>
@@ -46,7 +46,7 @@
 				A.LOG_ID,
 				A.LOG_IP,
 				A.LOG_DATE
-		  FROM	JR_DB.LOGIN_LOG		A, (SELECT @rownum:=0) TMP
+		  FROM	jungnangurp.LOGIN_LOG		A, (SELECT @rownum:=0) TMP
 		 WHERE	STR_TO_DATE(LOG_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
 		   AND	STR_TO_DATE(LOG_DATE, '%Y-%m-%d') <![CDATA[ <= ]]> STR_TO_DATE(#{end}, '%Y/%m/%d')
 		 ORDER	BY	A.LOG_DATE DESC

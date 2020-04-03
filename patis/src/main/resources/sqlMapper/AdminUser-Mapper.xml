@@ -7,7 +7,7 @@
 				,A.USER_DEPARTMENT
 				,	(
 						SELECT	VAL
-						  FROM	JR_DB.COMMON
+						  FROM	jungnangurp.COMMON
 						 WHERE	CODE = 'RG_01'
 						   AND	DETAIL_CODE = A.USER_RIGHT
 					) AS USER_RIGHT
@@ -18,7 +18,7 @@
 				,A.USER_MOBILE
 				,A.USER_AVATAR
 				,A.USER_EMAIL
-		  FROM	JR_DB.EMP	A
+		  FROM	jungnangurp.EMP	A
 	</select>
 	
 	<select id="GET_ALL_USER_ID" parameterType="str" resultType="empVO">
@@ -27,7 +27,7 @@
 				,A.USER_DEPARTMENT
 				,	(
 						SELECT	VAL
-						  FROM	JR_DB.COMMON
+						  FROM	jungnangurp.COMMON
 						 WHERE	CODE = 'RG_01'
 						   AND	DETAIL_CODE = A.USER_RIGHT
 					) AS USER_RIGHT
@@ -44,12 +44,12 @@
 				A.USER_REGNO1,
 				A.USER_GENDER,
 				A.USER_LOGIN_TRY
-		  FROM	JR_DB.EMP	A
+		  FROM	jungnangurp.EMP	A
 		 WHERE	A.USER_ID = #{userId}
 	</select>
 	
 	<update id="MODIFI_USER_DATA" parameterType="hashMap">
-		UPDATE	JR_DB.EMP
+		UPDATE	jungnangurp.EMP
 		   SET	USER_DEPARTMENT = #{userDept},
 		   		USER_RIGHT = ${userRight},
 		   		USER_GROUP = #{userGroup},
@@ -69,7 +69,7 @@
 				,A.USER_DEPARTMENT
 				,	(
 						SELECT	VAL
-						  FROM	JR_DB.COMMON
+						  FROM	jungnangurp.COMMON
 						 WHERE	CODE = 'RG_01'
 						   AND	DETAIL_CODE = A.USER_RIGHT
 					) AS USER_RIGHT
@@ -80,7 +80,7 @@
 				,A.USER_MOBILE
 				,A.USER_AVATAR
 				,A.USER_EMAIL
-		  FROM	JR_DB.EMP	A
+		  FROM	jungnangurp.EMP	A
 		 WHERE	1=1
 		<if test="searchType == 'NAME'.toString()">
 		   AND	A.USER_NAME LIKE CONCAT('%', #{searchValue}, '%')
@@ -92,7 +92,7 @@
 	
 	
 	<delete id="REMOVE_USER" parameterType="str">
-		DELETE	FROM JR_DB.EMP
+		DELETE	FROM jungnangurp.EMP
 		 WHERE	USER_ID = #{userId}
 	</delete>
 	

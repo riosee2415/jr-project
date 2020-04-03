@@ -8,7 +8,7 @@
 		        WRITE_RIGHT,
 		        BOARD_NAME,
 		        BOARD_CONTROLL_RIGHT
-		FROM	JR_DB.ACCEPT_RIGHT
+		FROM	jungnangurp.ACCEPT_RIGHT
 		 WHERE	BOARD_TYPE = #{BOARD_TYPE}
 	</select>
 	
@@ -19,7 +19,7 @@
 		        WRITE_RIGHT,
 		        BOARD_NAME,
 		        BOARD_CONTROLL_RIGHT
-		  FROM 	JR_DB.ACCEPT_RIGHT
+		  FROM 	jungnangurp.ACCEPT_RIGHT
 	</select>
 	
 	<select id="GET_BOARD_BY_NAME" resultType="accept_typeVO" parameterType="str">
@@ -29,16 +29,16 @@
 		        A.BOARD_NAME,
 		        (
 		        	SELECT	VAL
-		        	  FROM	JR_DB.COMMON
+		        	  FROM	jungnangurp.COMMON
 		        	 WHERE	CODE = 'RG_01'
 		        	   AND	DETAIL_CODE = A.BOARD_CONTROLL_RIGHT
 		        ) AS BOARD_CONTROLL_RIGHT
-		FROM	JR_DB.ACCEPT_RIGHT	A
+		FROM	jungnangurp.ACCEPT_RIGHT	A
 		 WHERE	BOARD_NAME = #{name}
 	</select>
 	
 	<update id="MODIFI_BOARD_ADMIN_RIGHT" parameterType="hashMap">
-		UPDATE	JR_DB.ACCEPT_RIGHT
+		UPDATE	jungnangurp.ACCEPT_RIGHT
 		   SET	BOARD_CONTROLL_RIGHT = ${right}
 		 WHERE	BOARD_NAME = #{name}
 	</update>

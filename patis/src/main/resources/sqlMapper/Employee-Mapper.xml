@@ -8,11 +8,11 @@
 		  	 (
 		         SELECT   USER_EMAIL,
 		               	  USER_RIGHT
-		           FROM   JR_DB.EMP
+		           FROM   jungnangurp.EMP
 		          <![CDATA[
 		          WHERE   USER_RIGHT <=    (
 						                              SELECT    BOARD_CONTROLL_RIGHT
-						                                FROM   JR_DB.ACCEPT_RIGHT
+						                                FROM   jungnangurp.ACCEPT_RIGHT
 						                               WHERE   BOARD_TYPE = #{BOARD_TYPE}
 						                           )
               ]]>
@@ -23,13 +23,13 @@
 
 	<select id="DUPLE_CHECK_ID" resultType="int" parameterType="str">
 		SELECT	COUNT(*)
-		  FROM	JR_DB.EMP
+		  FROM	jungnangurp.EMP
 		 WHERE	USER_ID = #{joinId}
 	</select>
 	
 	
 	<insert id="SET_EMP" parameterType="hashMap">
-		INSERT INTO JR_DB.EMP
+		INSERT INTO jungnangurp.EMP
 		(
 			USER_ID,
 			USER_PASSWORD,
@@ -76,13 +76,13 @@
 				USER_NAME,
 				USER_RIGHT,
 				USER_LOGIN_TRY
-		  FROM	JR_DB.EMP
+		  FROM	jungnangurp.EMP
 		 WHERE	USER_ID = #{input_id}
 		   AND	USER_PASSWORD = #{input_password}
 	</select>
 	
 	<update id="MODIFY_LOGIN_TRY" parameterType="str">
-		UPDATE 	JR_DB.EMP
+		UPDATE 	jungnangurp.EMP
 		   SET	USER_LOGIN_TRY = 0
 		 WHERE	USER_ID = #{input_id}
 	</update>
@@ -93,7 +93,7 @@
 				, A.USER_REGNO1
 				, (
 					SELECT	VAL
-					  FROM	JR_DB.COMMON
+					  FROM	jungnangurp.COMMON
 					 WHERE	CODE = 'RG_01'
 					   AND	DETAIL_CODE = A.USER_RIGHT	
 				) AS USER_RIGHT
@@ -104,13 +104,13 @@
 				, A.USER_ZONECODE
 				, A.USER_ADDR1
 				, A.USER_ADDR2
-		  FROM	JR_DB.EMP	A
+		  FROM	jungnangurp.EMP	A
 		 WHERE	USER_ID = #{input_id}
 	</select>
 	
 	
 	<update id="MODIFY_USER_INFO" parameterType="hashMap">
-		UPDATE	JR_DB.EMP
+		UPDATE	jungnangurp.EMP
 		   SET	USER_TEL 		= #{tel},
 		   		USER_MOBILE 	= #{mobile},
 		   		USER_EMAIL		= #{email},
@@ -123,7 +123,7 @@
 	
 	<select id="GET_FIND_ID_TYPE1" parameterType="hashMap" resultType="str">
 		SELECT	USER_ID
-		  FROM	JR_DB.EMP
+		  FROM	jungnangurp.EMP
 		 WHERE	USER_NAME 	= #{userName}
 		   AND	USER_REGNO1 = #{userReg}
 		   AND	USER_MOBILE = #{userMobile}
@@ -131,27 +131,27 @@
 	
 	<select id="GET_FIND_PW_TYPE1" parameterType="hashMap" resultType="str">
 		SELECT	USER_ID
-		  FROM	JR_DB.EMP
+		  FROM	jungnangurp.EMP
 		 WHERE	USER_ID 	= #{userId}
 		   AND	USER_REGNO1 = #{userReg}
 		   AND	USER_EMAIL = #{userEmail}
 	</select>
 	
 	<update id="MODIFY_EMAIL_KEY" parameterType="hashMap">
-		UPDATE  JR_DB.EMP
+		UPDATE  jungnangurp.EMP
 			 SET	USER_EMAIL_KEY = #{emailKey}
 		 WHERE	USER_ID = #{userId}
 	</update>
 	
 	<select id="GET_FIND_ID_TYPE2" parameterType="hashMap" resultType="str">
 		SELECT	USER_ID
-		  FROM	JR_DB.EMP
+		  FROM	jungnangurp.EMP
 		 WHERE	USER_NAME 	= #{userName}
 		   AND	USER_EMAIL 	= #{userEmail}
 	</select>
 	
 	<update id="MODIFY_USER_PASSWORD" parameterType="hashmap">
-		UPDATE  JR_DB.EMP
+		UPDATE  jungnangurp.EMP
 			 SET	USER_PASSWORD	= #{userPw}
 		 WHERE	USER_ID 			= #{userId}
 	</update>
@@ -159,25 +159,25 @@
 	<select id="GET_USER_SECRET_INFO" resultType="empVO" parameterType="hashMap">
 		SELECT  USER_PASSWORD,
 						SECRET_KEY
-		  FROM  JR_DB.EMP
+		  FROM  jungnangurp.EMP
 		 WHERE	USER_ID = #{userId}
 	</select>
 	
 	
 	<select id="GET_ONLY_USER_LOGIN_TRY" parameterType="str" resultType="int">
 		SELECT	USER_LOGIN_TRY
-		  FROM	JR_DB.EMP
+		  FROM	jungnangurp.EMP
 		 WHERE	USER_ID = #{input_id}
 	</select>
 	
 	<update id="MODIFY_USER_LOGIN_TRY" parameterType="hashMap">
-		UPDATE	JR_DB.EMP
+		UPDATE	jungnangurp.EMP
 		   SET	USER_LOGIN_TRY = ${addTry}
 		 WHERE	USER_ID = #{input_id}
 	</update>
 	
 	<insert id="SET_LOGIN_LOG" parameterType="hashMap">
-		INSERT INTO JR_DB.LOGIN_LOG
+		INSERT INTO jungnangurp.LOGIN_LOG
 		(
 			LOG_ID,
 			LOG_IP,

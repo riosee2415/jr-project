@@ -10,11 +10,11 @@
 				POPUP_DESC,
 				POPUP_USE,
 				POPUP_LINK
-		  FROM 	JR_DB.POPUP
+		  FROM 	jungnangurp.POPUP
 	</select>
 	
 	<update id="MODIFY_POPUP" parameterType="hashMap">
-		UPDATE	JR_DB.POPUP
+		UPDATE	jungnangurp.POPUP
 		   SET	POPUP_WIDTH 	= #{width},
 		   		POPUP_HEIGHT 	= #{height},
 		   		<if test="path != null">
@@ -26,7 +26,7 @@
 	</update>
 	
 	<update id="MODIFY_USE" parameterType="hashMap">
-		UPDATE	JR_DB.POPUP
+		UPDATE	jungnangurp.POPUP
 			    <if test="val == '1'.toString()">
 			   		SET	POPUP_USE = '0'
 			    </if>

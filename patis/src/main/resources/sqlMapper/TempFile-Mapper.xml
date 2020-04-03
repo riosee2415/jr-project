@@ -8,13 +8,13 @@
 						TFILE_V_PATH,
 						TFILE_KEY,
 						ATTACH_YN
-			FROM	JR_DB.BOARD_TEMP_FILE
+			FROM	jungnangurp.BOARD_TEMP_FILE
 		 WHERE	TFILE_KEY = #{TFILE_KEY}
 	</select>
 	
 	
 	<insert id="SET_TEMP_FILE" parameterType="tempFileVO">
-		INSERT INTO JR_DB.BOARD_TEMP_FILE
+		INSERT INTO jungnangurp.BOARD_TEMP_FILE
 		(
 			TFILE_O_PATH,
 			TFILE_V_PATH,
@@ -31,7 +31,7 @@
 	</insert>
 	
 	<delete id="REMOVE_TEMP_FILE" parameterType="str">
-		DELETE	FROM JR_DB.BOARD_TEMP_FILE
+		DELETE	FROM jungnangurp.BOARD_TEMP_FILE
 		 WHERE	TFILE_KEY = #{TFILE_KEY}
 	</delete>
 

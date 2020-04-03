@@ -4,14 +4,14 @@
 	
 	<select id="GET_COUNT" resultType="int" parameterType="hashMap">
 		SELECT	COUNT(B_NO)
-		  FROM	JR_DB.BOARD_YEAR_CALENDAR
+		  FROM	jungnangurp.BOARD_YEAR_CALENDAR
 		 WHERE	B_USE_YN = 1
 		 		 <if test="searchType == '제목'.toString()">
 		   AND	B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
 		   		</if>
 		   		 <if test="searchType == '작성자'.toString()">
 		   AND	(SELECT	USER_NAME
-		           FROM	JR_DB.EMP
+		           FROM	jungnangurp.EMP
 		          WHERE USER_NO = B_AUTHOR) LIKE CONCAT('%', #{searchKeyword}, '%')
 		   		</if>
 	</select>
@@ -22,7 +22,7 @@
 				B_DESCRIPTION,
 				(
 					SELECT	Z.USER_NAME
-					  FROM 	JR_DB.EMP	Z
+					  FROM 	jungnangurp.EMP	Z
 					 WHERE  B_AUTHOR = Z.USER_NO
 				) AS B_AUTHOR, 
 				DATE_FORMAT(B_CREATE_TIME, '%Y/%m/%d/ %H:%i') AS B_CREATE_TIME,
@@ -33,26 +33,26 @@
 				B_USE_YN,
 				B_TYPE,
 				B_DELETE_TIME
-		  FROM	JR_DB.BOARD_YEAR_CALENDAR
+		  FROM	jungnangurp.BOARD_YEAR_CALENDAR
 		 ORDER	BY B_NO DESC
 		 LIMIT 	10 OFFSET #{paging}
 	</select>
 	
 	
 	<update id="MODIFY_NOTICE1" parameterType="int">
-		UPDATE	JR_DB.BOARD_YEAR_CALENDAR
+		UPDATE	jungnangurp.BOARD_YEAR_CALENDAR
 		   SET	B_NOTICE = 1
 		 WHERE  B_NO = #{no}
 	</update>
 	
 	<update id="MODIFY_NOTICE2" parameterType="int">
-		UPDATE	JR_DB.BOARD_YEAR_CALENDAR
+		UPDATE	jungnangurp.BOARD_YEAR_CALENDAR
 		   SET	B_NOTICE = 0
 		 WHERE  B_NO = #{no}
 	</update>
 	
 	<update id="REMOVE_DATA" parameterType="int">
-		UPDATE	JR_DB.BOARD_YEAR_CALENDAR
+		UPDATE	jungnangurp.BOARD_YEAR_CALENDAR
 		   SET	B_USE_YN = 0,
 		   		B_DELETE_TIME = SYSDATE()
 		 WHERE  B_NO = #{no}
@@ -66,7 +66,7 @@
 				B_DESCRIPTION,
 				 (
 					SELECT	Z.USER_NAME
-					  FROM 	JR_DB.EMP	Z
+					  FROM 	jungnangurp.EMP	Z
 					 WHERE  B_AUTHOR = Z.USER_NO
 				) AS B_AUTHOR, 
 				DATE_FORMAT(B_CREATE_TIME, '%Y/%m/%d %H:%i:%S') AS B_CREATE_TIME,
@@ -77,14 +77,14 @@
 				B_USE_YN,
 				B_TYPE,
 				B_DELETE_TIME
-		  FROM	JR_DB.BOARD_YEAR_CALENDAR
+		  FROM	jungnangurp.BOARD_YEAR_CALENDAR
 		 WHERE	1=1
 		 		 <if test="searchType == '제목'.toString()">
 		   AND	B_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
 		   		</if>
 		   		 <if test="searchType == '작성자'.toString()">
 		   AND	(SELECT	USER_NAME
-		           FROM	JR_DB.EMP
+		           FROM	jungnangurp.EMP
 		          WHERE USER_NO = B_AUTHOR) LIKE CONCAT('%', #{searchKeyword}, '%')
 		   		</if>
 		 ORDER	BY B_NO DESC
@@ -102,10 +102,10 @@
 		        CO_USE_YN,
 		        (
 		        	SELECT	USER_NAME
-		        	  FROM	JR_DB.EMP
+		        	  FROM	jungnangurp.EMP
 		        	 WHERE	USER_NO = CO_AUTHOR
 		        ) AS CO_AUTHOR
-		  FROM	JR_DB.COMMENTS
+		  FROM	jungnangurp.COMMENTS
 		 WHERE	CO_BOARD_TYPE = 'CALENDAR_APPLY'
 		   AND 	CO_PARENT_NO = #{p_no}
 		 ORDER	BY CO_CREATE_TIME ASC
@@ -113,7 +113,7 @@
 	
 	
 	<update id="REMOVE_COMMENT" parameterType="int">
-		UPDATE	JR_DB.COMMENTS
+		UPDATE	jungnangurp.COMMENTS
 		   SET	CO_USE_YN = 0
 		 WHERE	CO_NO = #{co_no}
 	</update>
@@ -122,7 +122,7 @@
 	<select id="GET_RIGHT" resultType="commonVO" parameterType="str">
 		SELECT 	DETAIL_CODE,
 				VAL
-		  FROM	JR_DB.COMMON
+		  FROM	jungnangurp.COMMON
 		 WHERE	CODE = 'RG_01'
 		 ORDER	BY	DETAIL_CODE ASC
 	</select>
@@ -130,12 +130,12 @@
 	<select id="GET_CURRENT_RIGHT" resultType="accept_typeVO">
 		SELECT  VIEW_RIGHT,
 				WRITE_RIGHT
-		  FROM	JR_DB.ACCEPT_RIGHT
+		  FROM	jungnangurp.ACCEPT_RIGHT
 		 WHERE	BOARD_TYPE = 'CALENDAR'
 	</select>
 	
 	<update id="MODIFY_RIGHT" parameterType="hashMap">
-		UPDATE	JR_DB.ACCEPT_RIGHT
+		UPDATE	jungnangurp.ACCEPT_RIGHT
 		   SET	VIEW_RIGHT = ${read},
 				WRITE_RIGHT = ${write}
 		 WHERE	BOARD_TYPE = 'CALENDAR'
@@ -143,7 +143,7 @@
 	
 	<select id="GET_ADMIN_CONTROLL_RIGHT" resultType="int">
 		SELECT	BOARD_CONTROLL_RIGHT
-		  FROM	JR_DB.ACCEPT_RIGHT
+		  FROM	jungnangurp.ACCEPT_RIGHT
 		 WHERE	BOARD_TYPE = 'CALENDAR'
 	</select>
 	

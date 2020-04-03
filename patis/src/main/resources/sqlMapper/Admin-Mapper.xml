@@ -4,20 +4,20 @@
 
 	<select id="ID_CHECK" resultType="int" parameterType="hashMap">
 		SELECT  COUNT(USER_ID)
-		  FROM  JR_DB.EMP
+		  FROM  jungnangurp.EMP
 		 WHERE  USER_ID = #{input_id}
 	</select>
 	
 	
 	<select id="ID_PASS_CHECK" resultType="int" parameterType="hashMap">
 		SELECT  COUNT(USER_ID)
-		  FROM  JR_DB.EMP
+		  FROM  jungnangurp.EMP
 		 WHERE  USER_ID 		= #{input_id}
 		   AND	USER_PASSWORD	= #{input_password}
 	</select>
 	
 	<insert id="SAVE_LOGIN_LOG" parameterType="hashMap">
-		INSERT INTO JR_DB.LOGIN_LOG
+		INSERT INTO jungnangurp.LOGIN_LOG
 		(
 			LOG_ID,
 			LOG_IP,
@@ -36,26 +36,26 @@
 						USER_ID,
 				    USER_NAME,
 				    USER_RIGHT
-		  FROM  JR_DB.EMP
+		  FROM  jungnangurp.EMP
 		 WHERE	USER_ID = #{input_id}
 	</select>
 	
 	<select id="GET_EMP_SECRET_INFO" resultType="empVO" parameterType="hashMap">
 		SELECT  USER_PASSWORD,
 				SECRET_KEY
-		  FROM  JR_DB.EMP
+		  FROM  jungnangurp.EMP
 		 WHERE	USER_ID = #{input_id}
 	</select>
 	
 	<select id="LOOKUP_CONNECT" resultType="int" parameterType="hashMap">
 		SELECT	COUNT(*)
-		  FROM	JR_DB.CONNECT_RECORD
+		  FROM	jungnangurp.CONNECT_RECORD
 		 WHERE	CONNECT_IP = #{ipAdress}
 		   AND	CONNECT_DATE = #{currentDate}
 	</select>
 	
 	<insert id="ADD_CONNECT" parameterType="hashMap">
-		INSERT INTO JR_DB.CONNECT_RECORD
+		INSERT INTO jungnangurp.CONNECT_RECORD
 		VALUES
 		(
 			#{ipAdress}, #{currentDate}, #{os}, SYSDATE()

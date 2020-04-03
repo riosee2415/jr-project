@@ -4,14 +4,14 @@
 	
 	<select id="GET_CONNECT_DATA_TODAY" resultType="str" parameterType="str">
 		SELECT	COUNT(*)
-		  FROM	JR_DB.CONNECT_RECORD
+		  FROM	jungnangurp.CONNECT_RECORD
 		 WHERE	CONNECT_DATE = #{today}
 	</select>
 	
 	
 	<select id="GET_CONNECT_DATA_SEARCH" resultType="str" parameterType="hashMap">
 		SELECT	COUNT(*)
-		  FROM	JR_DB.CONNECT_RECORD
+		  FROM	jungnangurp.CONNECT_RECORD
 		 WHERE	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
 		   AND	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ <= ]]> STR_TO_DATE(#{end}, '%Y/%m/%d')
 	</select>
@@ -22,7 +22,7 @@
 				A.CONNECT_DATE,
 				A.CONNECT_OS,
 				A.CONNECT_FULL_DATE
-		  FROM	JR_DB.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
+		  FROM	jungnangurp.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
 		 WHERE	CONNECT_DATE = #{today}
 	</select>
 	
@@ -32,7 +32,7 @@
 				A.CONNECT_DATE,
 				A.CONNECT_OS,
 				A.CONNECT_FULL_DATE
-		  FROM	JR_DB.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
+		  FROM	jungnangurp.CONNECT_RECORD	A, (SELECT @rownum:=0) TMP
 		 WHERE	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ >= ]]> STR_TO_DATE(#{start}, '%Y/%m/%d')
 		   AND	STR_TO_DATE(CONNECT_FULL_DATE, '%Y-%m-%d') <![CDATA[ <= ]]> STR_TO_DATE(#{end}, '%Y/%m/%d')
 		 ORDER	BY	A.CONNECT_FULL_DATE DESC

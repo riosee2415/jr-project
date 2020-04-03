@@ -4,7 +4,7 @@
 
 	<select id="selectCommonList" resultType="commonVO">
 		SELECT	*
-		  FROM	JR_DB.COMMON
+		  FROM	jungnangurp.COMMON
 	</select>
 	
 	<select id="GET_MENU" resultType="commonVO">
@@ -13,7 +13,7 @@
 		        PARENT_CODE,
 		        VAL,
 		        URL
-		  FROM  JR_DB.COMMON
+		  FROM  jungnangurp.COMMON
 		 WHERE  CODE 	= 'NM_01'
 		   AND	USE_YN 	= 1 
 		 ORDER	BY DETAIL_CODE ASC
@@ -26,7 +26,7 @@
 		        VAL,
 		        URL,
 		        USE_YN
-		  FROM  JR_DB.COMMON
+		  FROM  jungnangurp.COMMON
 		 WHERE  CODE = 'NM_02'
 		   AND	USE_YN 	= 1 
 		 ORDER	BY DETAIL_CODE ASC
@@ -39,7 +39,7 @@
 		        VAL,
 		        URL,
 		        USE_YN
-		  FROM  JR_DB.COMMON
+		  FROM  jungnangurp.COMMON
 		 WHERE  CODE = 'NM_03'
 		   AND	USE_YN 	= 1 
 		 ORDER	BY DETAIL_CODE ASC
@@ -48,7 +48,7 @@
 	<select id="GET_COMBO_DATA" resultType="commonVO" parameterType="str">
 		SELECT	DETAIL_CODE,
 				VAL
-		  FROM	JR_DB.COMMON
+		  FROM	jungnangurp.COMMON
 		 WHERE	CODE = #{code}
 		 ORDER	BY	DETAIL_CODE ASC
 	
@@ -63,7 +63,7 @@
 				POPUP_DESC,
 		        POPUP_USE,
 		        POPUP_LINK
-		  FROM 	JR_DB.POPUP
+		  FROM 	jungnangurp.POPUP
 		 WHERE	POPUP_USE = '1'
 	</select>
 	
