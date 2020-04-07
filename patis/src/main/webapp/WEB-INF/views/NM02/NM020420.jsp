@@ -11,12 +11,16 @@ pageEncoding="UTF-8"%>
       </div>
       <!-- 도시재생이란 -->
       <div class="sub-title">
-        <span class="bluetext">⦁도시재생이란?</span>
-        <span class="bluetext">⦁희망지사업</span>
-        <span class="bluetext">⦁활성화사업</span>
-        <span class="bluetext">⦁가꿈주택사업</span>
-        <span class="bluetext">⦁집수리지원</span>
-        <span class="bluetext">⦁집수리융자</span>
+        <div>
+          <span class="bluetext">⦁도시재생이란?</span>
+          <span class="bluetext">⦁희망지사업</span>
+          <span class="bluetext">⦁활성화사업</span>
+        </div>
+        <div>
+          <span class="bluetext">⦁가꿈주택사업</span>
+          <span class="bluetext">⦁집수리지원</span>
+          <span class="bluetext">⦁집수리융자</span>
+        </div>
       </div>
       <div class="sub-main-title">▪도시재생이란?</div>
       <div class="sub1-main-content">

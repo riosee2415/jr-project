@@ -196,7 +196,7 @@
 }
 
 .sub > ul {
-	display: -webkit-box;
+  display: -webkit-box;
   display: flex;
   -webkit-display: flex;
   -moz-display: flex;
@@ -275,7 +275,7 @@
   margin-right: 15px;
 }
 .sub li:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
 .menu li {
   float: left;
@@ -346,8 +346,7 @@
   visibility: visible;
 }
 #collap_menu ul li.active .collap-menu-sub li {
-  background-color: rgb(138, 138, 138);
-  color: #fff;
+  background-color: rgb(204, 204, 204);
 }
 #collap_menu ul li:hover a.collap-menu-main {
   border-top: 1px solid #333;

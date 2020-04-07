@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 767px) {
+  .sub-title {
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .sub-title div {
+    margin: 10px;
+  }
+  .sub1-main-content p,
+  .sub-content p,
+  .sub-apply-content .box,
+  .sub-apply-box .box,
+  .sub-step-box,
+  .sub-money-table,
+  .sub-support-table,
+  .sub-support-table-p,
+  .sub-progress-box .icon i,
+  .sub-title {
+    font-size: 13px;
+  }
+  .sub-hope-content,
+  .sub-apply-content,
+  .sub-apply-box,
+  .progress-up,
+  .progress-down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .progress-up ul,
+  .progress-down ul {
+    margin: 20px;
+    width: 200px;
+    height: 170px;
+    font-size: 16px;
+  }
+  .sub-hope-content .box,
+  .sub-apply-box .box {
+    font-size: 17px;
+  }
+  .sub-support-table-p {
+    line-height: 1.4;
+  }
+  .sub-blue-title {
+    font-size: 20px;
+  }
+  .sub-step-box ul li {
+    font-size: 13px;
+  }
+  .sub-blue-title-s,
+  .sub-step-box ul li:first-child {
+    font-size: 17px;
+  }
+  .sub-apply-content .icon i,
+  .sub-apply-box .icon i {
+    font-size: 36px;
+  }
+  .sub-hope-content .box {
+    height: 235px;
+  }
+  .sub-apply-content .box {
+    height: 200px;
+    width: 200px;
+    font-size: 15px;
+  }
+  .sub-step-box ul li:last-child {
+    line-height: 1.5;
+    padding: 20px;
+  }
+  .sub-money-table thead,
+  .sub-support-table thead,
+  .sub-money-table tbody tr td,
+  .sub-support-table tbody tr td {
+    padding: 5px;
+  }
+  .sub-money-table tr,
+  .sub-support-table tr {
+    padding: 5px;
+  }
+  .sub-illu-img {
+    display: block;
+    width: 100%;
+    height: 198px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("/assets/images/image/sub-ill-banner-mo.png");
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .sub-title {
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .sub-title div {
+    margin: 10px;
+  }
+  .sub1-main-content p,
+  .sub-content p,
+  .sub-hope-content .box,
+  .sub-apply-content .box,
+  .sub-apply-box .box,
+  .sub-step-box,
+  .sub-money-table,
+  .sub-support-table,
+  .sub-support-table-p,
+  .sub-progress-box .icon i,
+  .progress-up,
+  .progress-down,
+  .sub-title {
+    font-size: 15px;
+  }
+  .sub-progress-box ul {
+    width: 150px;
+  }
+  .sub-blue-title {
+    font-size: 24px;
+  }
+  .sub-step-box ul li {
+    font-size: 15px;
+  }
+  .sub-blue-title-s,
+  .sub-step-box ul li:first-child {
+    font-size: 20px;
+  }
+  .sub-apply-content .icon i,
+  .sub-apply-box .icon i {
+    font-size: 30px;
+  }
+  .sub-hope-content .box {
+    height: 235px;
+  }
+  .sub-apply-content .box {
+    height: 200px;
+    width: 150px;
+    font-size: 15px;
+  }
+  .sub-illu-img {
+    display: block;
+    width: 100%;
+    height: 198px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("/assets/images/image/sub-ill-banner-mo.png");
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .sub1-main-content p,
+  .sub-content p,
+  .sub-hope-content .box,
+  .sub-apply-content .box,
+  .sub-apply-box .box,
+  .sub-step-box,
+  .sub-money-table,
+  .sub-support-table,
+  .sub-support-table-p,
+  .sub-progress-box .icon i,
+  .progress-up,
+  .progress-down {
+    font-size: 16px;
+  }
+  .sub-progress-box ul {
+    width: 150px;
+  }
+  .sub-blue-title {
+    font-size: 24px;
+  }
+  .sub-blue-title-s,
+  .sub-step-box ul li:first-child {
+    font-size: 20px;
+  }
+  .sub-apply-content .icon i,
+  .sub-apply-box .icon i {
+    font-size: 30px;
+  }
+}

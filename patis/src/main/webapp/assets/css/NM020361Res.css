@@ -90,15 +90,7 @@
     text-align: center;
     font-weight: normal;
   }
-  .sub-illu-img {
-    display: block;
-    width: 100%;
-    height: 198px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("/assets/images/image/sub-ill-banner-mo.png");
-  }
+ 
   .sub-main-handimg {
     width: 150px;
     height: 150px;
@@ -256,15 +248,7 @@
     text-align: center;
     font-weight: normal;
   }
-  .sub-illu-img {
-    display: block;
-    width: 100%;
-    height: 198px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("/assets/images/image/sub-ill-banner-mo.png");
-  }
+  
   .sub-main-handimg {
     width: 150px;
     height: 150px;
