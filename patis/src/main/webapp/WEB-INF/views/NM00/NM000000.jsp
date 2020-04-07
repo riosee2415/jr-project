@@ -77,7 +77,10 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
   </div>
   <div class="main-container-content">
     <div class="main-regeneration">
-      <a href="${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62" class="main-img-rayer"></a>
+      <a
+        href="${pageContext.request.contextPath }/policy.loc.do?parent=3&code=62"
+        class="main-img-rayer"
+      ></a>
     </div>
     <div class="main-news">
       <ul>
@@ -90,9 +93,9 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
         </li>
         <c:choose>
           <c:when test="${empty boardData01.list}">
-            <li class="main-urbannews__content empty"
-              >조회된 데이터가 없습니다.</li
-            >
+            <li class="main-urbannews__content empty">
+              조회된 데이터가 없습니다.
+            </li>
           </c:when>
           <c:otherwise>
             <c:forEach var="board" items="${boardData01.list}">
@@ -118,9 +121,9 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
         </li>
         <c:choose>
           <c:when test="${empty boardData02.list}">
-            <li class="main-urbannews__content empty"
-              >조회된 데이터가 없습니다.</li
-            >
+            <li class="main-urbannews__content empty">
+              조회된 데이터가 없습니다.
+            </li>
           </c:when>
           <c:otherwise>
             <c:forEach var="board" items="${boardData02.list}">
@@ -258,21 +261,25 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
     <div class="main_modal" id="modal-popup${status.count }">
       <div
         class="main_modal__desc"
-        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 50 }px; left:${status.count * 50 }px;"
+        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 50 }px; left:${status.count * 600 }px;"
       >
-        <div class="main_modal__desc__exit"
-          ><i
+        <div class="main_modal__desc__exit">
+          <i
             onclick="javascript:closeMainModal('modal-popup${status.count}')"
             class="fa fa-times"
             aria-hidden="true"
           ></i>
         </div>
-        <a
-          href="${pop.POPUP_LINK }"
-          class="main_modal__desc__link"
-          target="_blank"
-          >바로가기</a
-        >
+        <div class="main_modal__desc__bottom">
+          <!-- <a
+            href="${pop.POPUP_LINK }"
+            class="main_modal__desc__link"
+            target="_blank"
+            >바로가기</a
+          > -->
+          <div><input type="checkbox"> 오늘 하루 열지 않음</div>
+          <div onclick="javascript:closeMainModal('modal-popup${status.count}')">닫기</div>
+        </div>
       </div>
     </div>
   </c:forEach>

@@ -10,6 +10,14 @@ pageEncoding="UTF-8"%>
         file="/WEB-INF/views/template/components/sub_title_bread.jsp" %>
       </div>
       <!-- 도시재생이란 -->
+      <div class="sub-title">
+        <span class="bluetext">⦁도시재생이란?</span>
+        <span class="bluetext">⦁희망지사업</span>
+        <span class="bluetext">⦁희망지사업</span>
+        <span class="bluetext">⦁희망지사업</span>
+        <span class="bluetext">⦁희망지사업</span>
+        <span class="bluetext">⦁희망지사업</span>
+      </div>
       <div class="sub-main-title">▪도시재생이란?</div>
       <div class="sub1-main-content">
         <div>
@@ -30,6 +38,7 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
       <div class="sub-illu-img"></div>
+      <div class="sub-main-title">▷희망지사업</div>
     </div>
   </div>
 </div>
