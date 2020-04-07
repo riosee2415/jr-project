@@ -85,10 +85,10 @@ pageEncoding="UTF-8"%>
           </ul>
         </div>
 
-        <h3 class="nm020362-title-style-02 ">
+        <h3 class="nm020362-title-style-02">
           ▪묵2동 주민공동이용시설 및 거점시설
         </h3>
-        <div class="nm020362-content-img__box ">
+        <div class="nm020362-content-img__box">
           <img
             src="/assets/images/image/sub-nm62-01-02.png"
             alt="주민공동이용시설 및 거점시설 현황 사진"
@@ -202,6 +202,13 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02">
           ▪<span>도시재생현장지원센터</span>
         </h3>
+        <div class="nm020362-content-img__box">
+          <img
+            src="/assets/images/image/sub-nm62-01-03-1.png"
+            alt="묵2동 도시재생현장지원센터"
+            class="nm020362-content-img-01-03-01"
+          />
+        </div>
         <div
           class="nm020362-tbl-style-01 nm020362-tbl-style-mobile nm020362-table-green"
         >
@@ -503,11 +510,18 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02">
           ▪<span>중화2동 거점시설&#40;보담마을&#41;</span>
         </h3>
-        <div class="nm020362-content-img__box">
+        <div
+          class="nm020362-content-img__box nm020362-content-img__box_flex nm020362-slideBox"
+        >
           <img
             src="/assets/images/image/sub-nm62-02-03.png"
             alt="중화2동 거점시설 사진"
             class="nm020362-content-img-02-03"
+          />
+          <img
+            src="/assets/images/image/sub-nm62-02-03-01.png"
+            alt="중화2동 거점시설 사진2"
+            class="nm020362-content-img-02-03-01"
           />
         </div>
         <div class="nm020362-tbl-style-01 nm020362-table-green">
@@ -550,11 +564,18 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02">
           ▪<span>도시재생현장지원센터</span>
         </h3>
-        <div class="nm020362-content-img__box">
+        <div
+          class="nm020362-content-img__box nm020362-content-img__box_flex nm020362-slideBox"
+        >
           <img
             src="/assets/images/image/sub-nm62-02-04.png"
             alt="도시재생현장지원센터 사진"
             class="nm020362-content-img-02-04"
+          />
+          <img
+            src="/assets/images/image/sub-nm62-02-04-02.png"
+            alt="도시재생현장지원센터 사진2"
+            class="nm020362-content-img-02-04-02"
           />
         </div>
         <div class="nm020362-tbl-style-01 nm020362-table-green">
@@ -660,6 +681,13 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02">
           ▪<span>&nbsp;면목3·8동 거점시설</span>
         </h3>
+        <div class="nm020362-content-img__box">
+          <img
+            src="/assets/images/image/sub-nm62-03-02.png"
+            alt="면목3ㆍ8동 거점시설"
+            class="nm020362-content-img-03-02"
+          />
+        </div>
         <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
             <li>위치</li>
@@ -739,11 +767,18 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02 nm020362-table-green">
           ▪<span>주민공동이용시설</span>
         </h3>
-        <div class="nm020362-content-img__box">
+        <div
+          class="nm020362-content-img__box .nm020362-content-img__box_flex nm020362-slideBox"
+        >
           <img
             src="/assets/images/image/sub-nm62-04-02.png"
             alt="주민공동이용시설 및 거점시설 사진"
             class="nm020362-content-img-04-02"
+          />
+          <img
+            src="/assets/images/image/sub-nm62-04-02-02.png"
+            alt="주민공동이용시설 및 거점시설 사진2"
+            class="nm020362-content-img-04-02-02"
           />
         </div>
         <div class="nm020362-tbl-style-01 nm020362-table-green">
@@ -785,11 +820,18 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02">
           ▪<span>주민거점시설(들락날락)</span>
         </h3>
-        <div class="nm020362-content-img__box">
+        <div
+          class="nm020362-content-img__box .nm020362-content-img__box_flex flex nm020362-slideBox"
+        >
           <img
             src="/assets/images/image/sub-nm62-04-03.png"
             alt="망우본동 주민공동이용시설 및 거점시설 사진"
             class="nm020362-content-img-04-03"
+          />
+          <img
+            src="/assets/images/image/sub-nm62-04-03-02.png"
+            alt="망우본동 주민공동이용시설 및 거점시설 사진2"
+            class="nm020362-content-img-04-03-02"
           />
         </div>
         <div class="nm020362-tbl-style-01 nm020362-table-green">
@@ -900,6 +942,13 @@ pageEncoding="UTF-8"%>
         <h3 class="nm020362-title-style-02">
           ▪<span>&nbsp;주민거점시설&#40;사가정사랑방&#41;</span>
         </h3>
+        <div class="nm020362-content-img__box">
+          <img
+            src="/assets/images/image/sub-nm62-05-01-02.png"
+            alt="사가정지상_주민거점시설"
+            class="nm020362-content-img-05-01-02"
+          />
+        </div>
 
         <div class="nm020362-tbl-style-01 nm020362-table-green">
           <ul>
@@ -962,6 +1011,12 @@ pageEncoding="UTF-8"%>
           />
         </div>
 
+        <div class="nm020362-tbl-caption">
+          <ul>
+            <li>※ 제외 : 재정비촉진1구역, 도시재생 활성화 지역</li>
+          </ul>
+        </div>
+
         <div class="nm020362-tbl-style-01 nm020362-tbl-bgGreen">
           <ul>
             <li>위치</li>
@@ -1000,9 +1055,9 @@ pageEncoding="UTF-8"%>
       </h3>
       <div class="nm020362-content-img__box">
         <img
-          src="http://placehold.it/315x311?text=sample"
+          src="/assets/images/image/sub-nm62-06-02.png"
           alt="중화2동(희망지사업) 거점시설"
-          class="nm020362-content-img-02-03"
+          class="nm020362-content-img-06-02"
         />
       </div>
       <div class="nm020362-tbl-style-01 nm020362-table-green">
