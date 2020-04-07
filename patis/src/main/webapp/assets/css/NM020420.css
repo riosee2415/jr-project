@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 20px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 .sub1-main-content {
   margin: 100px auto;
@@ -33,4 +33,213 @@
   font-size: 20px;
   text-align: center;
   color: #707070;
+}
+.sub-blue-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.sub-content {
+  margin-bottom: 50px;
+}
+.sub-content p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+.sub-hope-content,
+.sub-apply-content,
+.sub-apply-box {
+  margin: 50px auto 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.sub-hope-content .box {
+  box-sizing: border-box;
+  line-height: 1.5;
+  width: 300px;
+  height: 260px;
+  padding-top: 80px;
+  border: 5px solid #358791;
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.sub-hope-content .hope_plus i {
+  font-size: 40px;
+  color: #358791;
+}
+.sub-blue-title-s {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.sub-apply-content .box {
+  width: 250px;
+  height: 230px;
+  background-color: #358791;
+  color: #fff;
+  box-sizing: border-box;
+  line-height: 1.5;
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 60px;
+}
+.sub-apply-content .box:nth-child(5) {
+  padding-top: 80px;
+}
+.sub-apply-content .icon i {
+  font-size: 36px;
+  margin: 0 10px;
+}
+.sub-apply-box .box {
+  box-sizing: border-box;
+  line-height: 1.5;
+  width: 280px;
+  height: 250px;
+  padding-top: 80px;
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+  background-color: #dbe6ed;
+  border: 5px solid #0f5fa0;
+}
+.sub-apply-box .icon i {
+  font-size: 36px;
+  margin: 0 10px;
+}
+.sub-apply-box .box:first-child {
+  padding-top: 90px;
+}
+.sub-apply-box .box:first-child,
+.sub-apply-box .box:last-child {
+  border: 3px solid #a0bee0;
+  background-color: #fff;
+}
+.sub-apply-box .box p:first-child {
+  font-weight: bold;
+}
+.sub-step-box {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sub-step-box p {
+  margin: 10px;
+  text-align: left;
+}
+.sub-step-box .icon {
+  font-size: 36px;
+  margin: 10px;
+}
+.sub-step-box ul {
+  border: 1px solid #dedede;
+  text-align: center;
+}
+.sub-step-box ul li {
+  height: 70px;
+  line-height: 70px;
+}
+.sub-step-box ul li:first-child {
+  background-color: #f6e58d;
+  font-weight: bold;
+  font-size: 24px;
+}
+.sub-money-table,
+.sub-support-table {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.sub-money-table thead,
+.sub-support-table thead {
+  line-height: 1.6;
+  background-color: #b6cde7;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+}
+.sub-money-table thead tr th,
+.sub-support-table thead tr th {
+  font-weight: bold;
+  border-right: 1px solid #dedede;
+}
+.sub-money-table thead,
+.sub-support-table thead,
+.sub-money-table tbody tr td,
+.sub-support-table tbody tr td {
+  padding: 20px;
+  vertical-align: middle;
+  border-right: 1px solid #dedede;
+}
+.sub-money-table tbody tr td:last-child,
+.sub-support-table tbody tr th:last-child,
+.sub-support-table tbody tr td:last-child {
+  border: none;
+}
+.sub-money-table tr,
+.sub-support-table tr {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  padding: 15px;
+}
+.sub-money-table tr th,
+.sub-support-table tr th {
+  padding: 15px;
+  border-right: 1px solid #dedede;
+  vertical-align: middle;
+}
+.sub-support-table tbody tr {
+  line-height: 1.5;
+}
+.sub-support-table-p {
+  font-size: 20px;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+.sub-progress-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+.sub-progress-box .icon i{
+	font-size: 20px;
+}
+.progress-up,
+.progress-down {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  font-size: 20px;
+    margin:20px 0 40px;
+}
+.sub-progress-box ul {
+  width: 200px;
+  height: 190px;
+  border: 1px solid #dedede;
+  text-align: center;
+  box-sizing: border-box;
+    vertical-align: middle;
+
+}
+.sub-progress-box ul li{
+	line-height: 1.5;
+	padding:10px;
+}
+.sub-progress-box .progress-up ul:nth-child(n+1):nth-child(-n+4) li:first-child{
+	line-height: 1.6;
+}
+.sub-progress-box ul li:first-child {
+  background-color: #fbefb2;
+  height:60px;
+line-height: 60px;
 }
