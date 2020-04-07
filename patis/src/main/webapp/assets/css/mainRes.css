@@ -283,12 +283,15 @@
     width: 233px;
     height: 150px;
   }
-    .ex-loading img{
-	display:block;
-	margin:250px auto;
-	width:600px;
-	height:200px;
-}
+  .ex-loading img{
+		display:block;
+		margin:250px auto;
+		width:600px;
+		height:200px;
+	}
+	.main_modal {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 767px) {

@@ -272,7 +272,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
  		}
  		request.setAttribute("closeModalList", closeModalList);
 	%>
-	
+
   <c:forEach var="pop" items="${popupList }" varStatus="status">
   	<c:set value="modal-popup${status.count }" var="modalId" />
   	<c:set value="true" var="flagLoop" />
