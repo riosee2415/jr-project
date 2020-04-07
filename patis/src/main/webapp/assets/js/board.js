@@ -32,11 +32,6 @@ function getPageContent(paging){
 			$(CURRENT_PAGE + " #" + b_type + "-board-js").html(page[0]);
 			$(CURRENT_PAGE + " #" + b_type + "-board-m-js").html(page[1]);
 			
-			if($(CURRENT_PAGE + " #" + b_type + "-board-js tr").first().hasClass('row-empty')) {
-				$(CURRENT_PAGE + " #" + b_type + "-paging-js").hide();
-			} else {
-				$(CURRENT_PAGE + " #" + b_type + "-paging-js").show();
-			}
 			$(CURRENT_PAGE + " #" + b_type + "-button-js").show();
 		}
 	});
@@ -299,9 +294,9 @@ function boardCommentInit() {
 
 var commentMode = 'WRITE';
 
-function boardCommentWrite(loginNo, co_no) {
-	if(isEmpty(loginNo)) {
-		alert('로그인 후 이용 가능합니다.');
+function boardCommentWrite(loginNo, loginRight, co_no) {
+	if(isEmpty(loginRight) || loginRight > 2) {
+		alert('관리자만 답변을 등록할 수 있습니다.');
 		return;
 	}
 	

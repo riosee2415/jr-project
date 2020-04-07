@@ -114,4 +114,20 @@ function emailSelection() {
 
 function closeMainModal(id) {
   $("#" + id).css("display", "none");
+  
+  if($("#" + id + " #chk-close-js").hasClass('active')) {
+	  setCookie(id, "1", 1);
+  }
+}
+
+function closeCheckMainModal(id) {
+	$("#" + id + " #chk-close-js").toggleClass('active');
+	
+	if($("#" + id + " #chk-close-js").hasClass('active')) {
+		$("#" + id + " #chk-close-js").find('.fa').addClass('fa-check-square-o');
+		$("#" + id + " #chk-close-js").find('.fa').removeClass('fa-square-o');
+	} else {
+		$("#" + id + " #chk-close-js").find('.fa').removeClass('fa-check-square-o');
+		$("#" + id + " #chk-close-js").find('.fa').addClass('fa-square-o');
+	}
 }

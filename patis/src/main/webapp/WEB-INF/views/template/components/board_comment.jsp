@@ -11,7 +11,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           type="button"
           class="write-button"
           id="write-button-js"
-          onclick="javascript:boardCommentWrite('${sessionScope.loginNo}')"
+          onclick="javascript:boardCommentWrite('${sessionScope.loginNo}', '${sessionScope.loginRight}')"
         >
           등록
         </button>

@@ -7,8 +7,10 @@ function stopScroll() {
 }
 
 function mobileMenuHandler(menu) {
-	
 	var menuSelector = menu.parentNode;
 	
+	if(!$(menuSelector).hasClass("active")) {
+		$("#collap_menu .menu li").removeClass("active");
+	}
 	$(menuSelector).toggleClass("active");
 }

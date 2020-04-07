@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core" %> <%@ taglib prefix="fn"
@@ -257,30 +259,60 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
     </form>
   </div>
 
+	<%
+ 		List<String> closeModalList = new ArrayList<String>();
+ 		Cookie[] cookies = request.getCookies();
+ 		
+ 		for(Cookie cookie : cookies) {
+ 			if(cookie.getName().contains("modal-popup")) {
+ 				if(cookie.getValue().equals("1")) {
+ 					closeModalList.add(cookie.getName());
+ 				}
+ 			}
+ 		}
+ 		request.setAttribute("closeModalList", closeModalList);
+	%>
+	
   <c:forEach var="pop" items="${popupList }" varStatus="status">
-    <div class="main_modal" id="modal-popup${status.count }">
-      <div
-        class="main_modal__desc"
-        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 50 }px; left:${(status.count-1) * 600 + 30 }px;"
-      >
-        <div class="main_modal__desc__exit">
-          <i
-            onclick="javascript:closeMainModal('modal-popup${status.count}')"
-            class="fa fa-times"
-            aria-hidden="true"
-          ></i>
-        </div>
-        <div class="main_modal__desc__bottom">
-          <!-- <a
-            href="${pop.POPUP_LINK }"
-            class="main_modal__desc__link"
-            target="_blank"
-            >바로가기</a
-          > -->
-          <div><input type="checkbox"> 오늘 하루 열지 않음</div>
-          <div onclick="javascript:closeMainModal('modal-popup${status.count}')">닫기</div>
-        </div>
-      </div>
-    </div>
+  	<c:set value="modal-popup${status.count }" var="modalId" />
+  	<c:set value="true" var="flagLoop" />
+  		<c:forEach var="closeModal" items="${closeModalList }">
+  		<c:if test="${closeModal eq modalId }">
+  			<c:set value="false" var="flagLoop" />
+  		</c:if>
+  	</c:forEach>
+  	
+  	<c:if test="${flagLoop eq 'true'}">
+  		<div class="main_modal" id="modal-popup${status.count }">
+	      <div
+	        class="main_modal__desc"
+	        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 10 }px; left:${(status.count-1) * 600 + 30 }px;"
+	      >
+	        <div class="main_modal__desc__exit">
+	          <i
+	            onclick="javascript:closeMainModal('modal-popup${status.count}')"
+	            class="fa fa-times"
+	            aria-hidden="true"
+	          ></i>
+	        </div>
+	        <div class="main_modal__desc__bottom">
+	          <!-- <a
+	            href="${pop.POPUP_LINK }"
+	            class="main_modal__desc__link"
+	            target="_blank"
+	            >바로가기</a
+	          > -->
+	        </div>
+	      </div>
+        <div 
+	      	class="main_modal_btn"
+	      	style="width: ${pop.POPUP_WIDTH}px; top:${status.count * 10 }px; left:${(status.count-1) * 600 + 30 }px;">
+	      	<a id="chk-close-js" href="javascript:closeCheckMainModal('modal-popup${status.count}')">
+	      		<i class="fa fa-square-o" aria-hidden="true"></i>오늘 하루 열지 않음
+	     		</a>
+	      	<a href="javascript:closeMainModal('modal-popup${status.count}')">닫기</a>
+	      </div>
+	    </div>
+    </c:if>
   </c:forEach>
 </div>
