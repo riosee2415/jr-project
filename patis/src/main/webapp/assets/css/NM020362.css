@@ -553,6 +553,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background: -o-linear-gradient(top, white, black);
   background: -webkit-gradient(
     linear,
     left top,
@@ -560,6 +561,5 @@
     from(white),
     to(black)
   );
-  background: -o-linear-gradient(top, white, black);
   background: linear-gradient(to bottom, white, black);
 }
