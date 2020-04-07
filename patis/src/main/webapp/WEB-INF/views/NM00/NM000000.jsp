@@ -261,7 +261,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
     <div class="main_modal" id="modal-popup${status.count }">
       <div
         class="main_modal__desc"
-        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 50 }px; left:${status.count * 600 }px;"
+        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 50 }px; left:${(status.count-1) * 600 + 30 }px;"
       >
         <div class="main_modal__desc__exit">
           <i
