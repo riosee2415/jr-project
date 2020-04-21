@@ -319,8 +319,7 @@
 }
 
 #collap_menu ul li a.collap-menu-main {
-  line-height: 50px;
-  font-size: 22px;
+  font-size: 18px;
   padding: 1px 20px;
 }
 
@@ -345,9 +344,6 @@
   opacity: 1;
   visibility: visible;
 }
-#collap_menu ul li.active .collap-menu-sub li {
-  background-color: rgb(204, 204, 204);
-}
 #collap_menu ul li:hover a.collap-menu-main {
   border-top: 1px solid #333;
   -webkit-border-top: 1px solid #333;
@@ -356,10 +352,8 @@
 }
 
 #collap_menu ul li:first-child:hover a.collap-menu-main {
-  border-top: 0;
-  -webkit-border-top: 0;
-  -moz-border-top: 0;
-  -o-border-top: 0;
+  background-color: #d5fffd;
+  color: #333;
 }
 
 #collap_menu ul li .collap-menu-sub a:hover {

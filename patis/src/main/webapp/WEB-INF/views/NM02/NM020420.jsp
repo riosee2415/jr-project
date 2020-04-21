@@ -42,14 +42,14 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
       <div class="sub-illu-img"></div>
-      <div class="sub-main-title">▷희망지사업</div>
+      <div class="sub-main-title">▪희망지사업</div>
       <div class="sub-blue-title bluetext">■ 희망지사업이란</div>
       <div class="sub-content">
         <p>
           • 도시재생을 본격적으로 추진하기에 앞서 효과적으로 사업을 추진할 수
           있도록 준비하는 사전단계 사업을 말합니다.
         </p>
-        <p>
+        <p class="indent">
           주민, 행정, 전문가 등 지역의 다양한 주체가 희망지 사업을 통해
           도시재생을 이해하고, 필요성에 대해 공감대를 형성하여 자발적으로
           참여하고 협력할 수 있도록 준비하고 연습하는 단계입니다.
@@ -78,7 +78,7 @@ pageEncoding="UTF-8"%>
           <p>사업지원체계 구축</p>
         </div>
       </div>
-      <div class="sub-blue-title-s bluetext">• 희망지 사업 내용</div>
+      <div class="sub-blue-title-s">• 희망지 사업 내용</div>
       <div class="sub-content">
         <p>
           - 사업 기간 동안 주민들이 모여 다양한 활동을 할 수 있도록 현장 거점을
@@ -92,9 +92,10 @@ pageEncoding="UTF-8"%>
         <p>- 우리 마을을 더 잘 알기 위해 지역을 조사하고 의제를 발굴</p>
       </div>
       <div class="sub-blue-title bluetext">■ 신청기준</div>
-      <div class="sub-content">
+      <div class="sub-content flex">
+        <span>• </span>
         <p>
-          • 인구감소, 산업구조의 변화, 주거환경의 노후화 등으로 도시가
+          인구감소, 산업구조의 변화, 주거환경의 노후화 등으로 도시가
           쇠퇴하였으나, 지역의 역사·문화, 인적자원 등을 발굴·활용하여
           경제적·사회적·물리적·환경적 활성화의 가능성이 있는 저층
           주거밀집지역으로 도시재생 쇠퇴요건에 부합하는 행정동 (※연계사업지역은
@@ -103,13 +104,13 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="sub-blue-title bluetext">■ 공모하기</div>
       <div class="sub-content">
-        <p>
+        <p class="bold">
           • 응모자격
         </p>
         <p>
           &nbsp;&nbsp;- 10인 이상 주민모임 + 자치구 도시재생 담당부서
         </p>
-        <p>• 사업신청 제외대상</p>
+        <p class="bold">• 사업신청 제외대상</p>
         <p>
           &nbsp;&nbsp;- 특정기간, 단체의 내부사업 또는 정치, 종교적 단체 활동을
           위한 프로그램
@@ -153,7 +154,7 @@ pageEncoding="UTF-8"%>
           <p>선정발표</p>
         </div>
       </div>
-      <div class="sub-main-title">▷활성화사업</div>
+      <div class="sub-main-title">▪활성화사업</div>
       <div class="sub-blue-title bluetext">■ 활성화사업이란</div>
       <div class="sub-content">
         <p>
@@ -161,12 +162,12 @@ pageEncoding="UTF-8"%>
           희망지사업이라는 사전단계를 진행한 뒤 심사를 거쳐 활성화지역으로
           선정된 곳에 한해 진행됩니다.
         </p>
-        <p>
+        <p class="indent">
           도시재생 활성화사업은 자력기반이 없어 공공 지원이 필요한 노후된
           주거지역의 종합적 기능 개선 및 활성화를 위해 진행하는 도시재생
           사업입니다.
         </p>
-        <p>
+        <p class="indent">
           지역주민이 함께 계획하고 실행하는 과정에서 거주자 중심의 지역공동체를
           회복하고, 물리적인 생활환경 개선과 함께 사회적·경제적 재생이
           이루어지도록 합니다.
@@ -187,14 +188,14 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="sub-apply-box">
         <div class="box bluetext">
-          <p>준비단계</p>
+          <p class="bold">준비단계</p>
           <p>희망지</p>
         </div>
         <div class="icon bluetext">
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
         <div class="box">
-          <p>계획단계</p>
+          <p class="bold">계획단계</p>
           <p>활성화 지역</p>
           <p>계획단계</p>
         </div>
@@ -202,7 +203,7 @@ pageEncoding="UTF-8"%>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
         <div class="box">
-          <p>실행단계</p>
+          <p class="bold">실행단계</p>
           <p>활성화 지역</p>
           <p>실행단계</p>
         </div>
@@ -210,12 +211,12 @@ pageEncoding="UTF-8"%>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
         <div class="box bluetext">
-          <p>자력재생단계</p>
+          <p class="bold">자력재생단계</p>
           <p>지속가능한</p>
           <p>자생적 운영</p>
         </div>
       </div>
-      <div class="sub-blue-title-s bluetext">• 활성화 사업 내용</div>
+      <div class="sub-blue-title-s">• 활성화 사업 내용</div>
       <div class="sub-content">
         <p>
           - 희망지사업을 통해 도시재생 활성화사업으로 선정되면 계획단계 1년,
@@ -238,18 +239,18 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="sub-blue-title bluetext">■ 공모하기</div>
       <div class="sub-content">
-        <p>
+        <p class="bold">
           • 응모자격
         </p>
         <p>
           &nbsp;&nbsp;- 희망지사업이 선정된 지역(자치구)
         </p>
-        <p>• 신청방법</p>
+        <p class="bold">• 신청방법</p>
         <p>
           &nbsp;&nbsp;- 서울형 도시재생(근린재생일반형) 활성화지역 지정 공고 후
           접수(신청 제안서 제출)
         </p>
-        <p>• 사업내용</p>
+        <p class="bold">• 사업내용</p>
         <p>
           &nbsp;&nbsp;- 도시재생 추진을 위한 거버넌스 구축
         </p>
@@ -271,7 +272,7 @@ pageEncoding="UTF-8"%>
           마련 등 지역상황에 맞춤한 사업 진행
         </p>
       </div>
-      <div class="sub-main-title">▷가꿈주택사업</div>
+      <div class="sub-main-title">▪가꿈주택사업</div>
       <div class="sub-blue-title bluetext">■ 서울가꿈주택 사업</div>
       <div class="sub-content">
         <p>
@@ -287,13 +288,10 @@ pageEncoding="UTF-8"%>
       <div class="sub-blue-title bluetext">■ 사업개요</div>
       <div class="sub-content">
         <p>
-          • 응모자격
+          <span class="bold">• 사업내용</span> : 주택성능개선지원구역 내
+          노후주택 집수리 비용 보조
         </p>
-        <p>
-          &nbsp;&nbsp;- 희망지사업이 선정된 지역(자치구)
-        </p>
-        <p>• 사업내용 : 주택성능개선지원구역 내 노후주택 집수리 비용 보조</p>
-        <p>
+        <p class="bold">
           • 지원대상
         </p>
         <p>
@@ -307,7 +305,7 @@ pageEncoding="UTF-8"%>
         <p class="red">
           &nbsp;&nbsp;※ 대상 지역은 해당 자치구 담당부서에서 확인 가능
         </p>
-        <p>
+        <p class="bold">
           • 신청자
         </p>
         <p>
@@ -323,7 +321,7 @@ pageEncoding="UTF-8"%>
           &nbsp;&nbsp; &nbsp;&nbsp;⊙ 공용부분 : 해당 건축물 개별세대 소유자 중
           대표자 1인 (구분소유자 전원 동의서 첨부)
         </p>
-        <p>• 선정절차</p>
+        <p class="bold">• 선정절차</p>
       </div>
       <div class="sub-step-box">
         <ul>
@@ -377,12 +375,13 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="sub-content">
         <p>
-          • 접수기간 : 2020. 2. 13.(목) 09:00 ~ 2020. 9. 29.(화) 18:00
+          <span class="bold">• 접수기간</span> : 2020. 2. 13.(목) 09:00 ~ 2020.
+          9. 29.(화) 18:00
         </p>
         <p class="red">
           &nbsp;&nbsp;※ 예산 소진 시 까지
         </p>
-        <p>• 지원금액</p>
+        <p class="bold">• 지원금액</p>
         <table class="sub-money-table">
           <caption>
             지원 금액
@@ -480,14 +479,14 @@ pageEncoding="UTF-8"%>
           </tbody>
         </table>
         <p>
-          • 접수처 : 중랑구 도시재생과 ☎02-2094-2823 (묵2동 전체) ☎02-2094-2815
-          (중화동 329-38번지 일대)
+          <span class="bold">• 접수처</span> : 중랑구 도시재생과 ☎02-2094-2823
+          (묵2동 전체) ☎02-2094-2815 (중화동 329-38번지 일대)
         </p>
         <p class="red">
           &nbsp;&nbsp;※ 주택성능개선과 관련 없는 단순 공사는 지원 대상에서 제외
         </p>
       </div>
-      <div class="sub-main-title">▷집수리 지원</div>
+      <div class="sub-main-title">▪집수리 지원</div>
       <div class="sub-blue-title bluetext">■ 집수리 지원사업이란</div>
       <div class="sub-content">
         <p>
@@ -497,17 +496,18 @@ pageEncoding="UTF-8"%>
       </div>
       <div class="sub-blue-title bluetext">■ 집수리 지원센터</div>
       <div class="sub-content">
+        <p><span class="bold">• 위치</span> : 중랑구 중랑역로 87, 2층</p>
+        <p><span class="bold">• 연락처</span> : 070-4919-2918, 2919</p>
         <p>
-          • 위치 : 중랑구 중랑역로 87, 2층
+          <span class="bold">• 업무</span> : 집수리 상담, 주택진단, 지원사업
+          연계 등
         </p>
-        <p>• 연락처 : 070-4919-2918, 2919</p>
-        <p>• 업무 : 집수리 상담, 주택진단, 지원사업 연계 등</p>
         <p>
-          • 집수리지원 대상지역 : 중랑구 주택성능개선지원구역 (묵2동 전체,
-          중화2동 도시재생활성화지역)
+          <span class="bold">• 집수리지원 대상지역</span> : 중랑구
+          주택성능개선지원구역 (묵2동 전체, 중화2동 도시재생활성화지역)
         </p>
       </div>
-      <div class="sub-main-title">▷집수리융자</div>
+      <div class="sub-main-title">▪집수리융자</div>
       <div class="sub-blue-title bluetext">■ 집수리융자</div>
       <div class="sub-content">
         <p>
@@ -518,11 +518,14 @@ pageEncoding="UTF-8"%>
       <div class="sub-blue-title bluetext">■ 지원대상</div>
       <div class="sub-content">
         <p>
-          • 융자지원 대상자 : 노후·불량주택을 개량 및 신축하고자 하는
-          토지등소유자
+          <span class="bold">• 융자지원 대상자</span> : 노후·불량주택을 개량 및
+          신축하고자 하는 토지등소유자
         </p>
         <p>
-          • 대상주택 : 단독, 다가구, 다세대, 연립주택에 한함
+          <span class="bold"
+            >• 대상주택 : 단독, 다가구, 다세대, 연립주택에</span
+          >
+          한함
         </p>
         <p>
           &nbsp;&nbsp;- 사용승인일로부터 20년이 경과한 노후·불량주택
@@ -538,7 +541,7 @@ pageEncoding="UTF-8"%>
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;※ 신축은 지원불가
         </p>
-        <p>- 토지와 건물의 소유자가 다른 경우 지원불가</p>
+        <p>&nbsp;&nbsp;- 토지와 건물의 소유자가 다른 경우 지원불가</p>
       </div>
       <div class="sub-blue-title bluetext">■ 대상지역 및 지원내용</div>
       <table class="sub-support-table">
@@ -642,7 +645,7 @@ pageEncoding="UTF-8"%>
             <li>융자 신청</li>
             <li>
               <p>신청자</p>
-              <p>→시·자치구</p>
+              <p class="bold">→시·자치구</p>
             </li>
           </ul>
           <div class="icon">
@@ -651,7 +654,7 @@ pageEncoding="UTF-8"%>
           <ul>
             <li>대상자 통보</li>
             <li>
-              <p>시·자치구→</p>
+              <p class="bold">시·자치구→</p>
               <p>금융기관</p>
             </li>
           </ul>
@@ -664,7 +667,7 @@ pageEncoding="UTF-8"%>
             <li>완료 통보</li>
             <li>
               <p>신청자</p>
-              <p>→시·자치구</p>
+              <p class="bold">→시·자치구</p>
               <p>→금융기관</p>
             </li>
           </ul>

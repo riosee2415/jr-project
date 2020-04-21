@@ -52,6 +52,9 @@
     height: 170px;
     font-size: 16px;
   }
+  .sub-progress-box ul li {
+    width: 200px;
+  }
   .sub-hope-content .box,
   .sub-apply-box .box {
     font-size: 17px;
