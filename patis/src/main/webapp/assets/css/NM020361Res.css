@@ -152,17 +152,20 @@
   }
   .gray-line {
     margin-left: 44px;
-    height: 550px;
+    height: 620px;
   }
   .sub-history-content ul {
     font-size: 15px;
-    margin-left: 70px;
+    margin-left: 60px;
   }
   .sub-history-content ul li:first-child {
     margin: 0px 15px;
+    width: 84px;
   }
   .sub-history-content ul li:last-child {
     font-size: 14px;
+    width: 180px;
+    line-height: 1.2;
   }
   .sub-status-title {
     font-size: 16px;
@@ -174,6 +177,9 @@
   .sub-status-img {
     width: 100%;
   }
+  .sub-status-table thead tr, .sub-status-table tbody tr {
+    line-height: 1.2; 
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
