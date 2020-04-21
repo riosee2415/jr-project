@@ -171,9 +171,10 @@
     color: #f18d00;
   }
 
-  .nm020362-tbl-style-01-02 > ul > li:nth-child(2),
-  .nm020362-tbl-style-02 ul:first-child li,
-  .nm020362-tbl-style-02 ul li:first-child,
+  .nm020362-tbl-style-02 ul:nth-child(n + 2):nth-child(-n + 5) li:first-child {
+    font-size: 13px;
+  }
+
   .nm020362-list-style-dot {
     font-size: 14px;
   }
