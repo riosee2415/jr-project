@@ -162,6 +162,9 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		});
 		if(mode == 'WRITE')
 			sendBoardWriteMail(b_type);
+		
+		var html = $('#tx_canvas iframe').contents().find('body').html();
+		$('#tx_canvas iframe').contents().find('body').html(html.replace(/'/gi, "\\'"));
 		Editor.save();
 	}
 }

@@ -124,6 +124,7 @@ caption {
   display: none;
 }
 .empty__box {
+	width: 100%;
   height: 140px;
   line-height: 140px;
   text-align: center;

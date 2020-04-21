@@ -24,7 +24,7 @@ pageEncoding="UTF-8"%>
 	        data-parent="${param.parent}"
 	        data-code="${param.code}"
 	      >
-	      	<div class="nm34-content" id="${fn:toLowerCase(b_type_1)}-board-js"></div>
+	      	<div id="${fn:toLowerCase(b_type_1)}-board-js"></div>
 				</div>
 				
 				<div id="${fn:toLowerCase(b_type_1)}-paging-js"></div>
