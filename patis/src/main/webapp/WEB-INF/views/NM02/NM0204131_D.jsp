@@ -61,7 +61,7 @@ prefix="fn" %>
             </ul>
           </div>
         </div>
-        <div class="detail-desc__box">${data.b_DESCRIPTION }</div>
+        <div class="detail-desc__box">${fn:replace(data.b_DESCRIPTION, "\\'", "'") }</div>
         <div class="detail-paging__box">
           <table>
             <tr>

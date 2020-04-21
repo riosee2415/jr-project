@@ -236,7 +236,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
       <input type="hidden" name="s_keyword" />
     </form>
     <form
-      action="/collusion.apply.do"
+      action="/archive.do"
       method="get"
       id="frm-${fn:toLowerCase(boardData02.btype)}"
     >
@@ -246,7 +246,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
       <input type="hidden" name="s_keyword" />
     </form>
     <form
-      action="/collusion.apply.detail.do"
+      action="/archive.detail.do"
       method="get"
       id="frm-${fn:toLowerCase(boardData02.btype)}-detail"
     >

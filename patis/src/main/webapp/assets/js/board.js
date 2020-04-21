@@ -165,7 +165,11 @@ function boardWriteProcessHandler(b_type, mode, b_no) {
 		
 		var html = $('#tx_canvas iframe').contents().find('body').html();
 		$('#tx_canvas iframe').contents().find('body').html(html.replace(/'/gi, "\\'"));
-		Editor.save();
+		$('#tx_canvas iframe').contents().find('body').find('.txc-image').css("maxWidth", "100%");
+		
+		setTimeout(function() {
+			Editor.save();
+		}, 1);
 	}
 }
 

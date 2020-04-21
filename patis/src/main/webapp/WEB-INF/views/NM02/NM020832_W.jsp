@@ -193,8 +193,11 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 			setTitleName(tabName);
 
 			var mode = "${mode}";
-			if(mode == 'MODIFY') 
-				modifyEditor('${data.b_DESCRIPTION}');
+			if(mode == 'MODIFY') {
+        window.onload = function() {
+        	modifyEditor('${data.b_DESCRIPTION}');
+        }
+			}
 		}
   </script>
 </div>

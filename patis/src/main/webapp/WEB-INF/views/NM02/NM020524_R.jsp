@@ -62,7 +62,7 @@ pageEncoding="UTF-8"%>
             </ul>
           </div>
         </div>
-        <div class="detail-desc__box">${data.b_DESCRIPTION }</div>
+        <div class="detail-desc__box">${fn:replace(data.b_DESCRIPTION, "\\'", "'") }</div>
         
         <div class="reply__box">
         	<table class="reply__table">

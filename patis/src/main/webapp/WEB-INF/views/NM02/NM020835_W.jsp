@@ -86,8 +86,9 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
               <%@ include file="/WEB-INF/views/daum-editor/editor_frame.jsp" %>
               <c:if test="${mode eq 'MODIFY'}">
                 <script>
-                  window.onload = function() {
-                  modifyEditor('${data.b_DESCRIPTION}'); }
+               		 window.onload = function() {
+               			modifyEditor('${data.b_DESCRIPTION}');
+                  }
                 </script>
               </c:if>
             </div>

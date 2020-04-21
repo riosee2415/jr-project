@@ -89,7 +89,8 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
               <c:if test="${mode eq 'MODIFY'}">
                 <script>
                   window.onload = function() {
-                  modifyEditor('${data.b_DESCRIPTION}'); }
+                	  modifyEditor('${data.b_DESCRIPTION}');
+                  }
                 </script>
               </c:if>
             </div>
@@ -208,8 +209,9 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 			setTitleName(tabName);
 
 			var mode = "${mode}";
-			if(mode == 'MODIFY') 
+			if(mode == 'MODIFY') {
 				modifyEditor('${data.b_DESCRIPTION}');
+			}	
 		}
   </script>
 </div>
