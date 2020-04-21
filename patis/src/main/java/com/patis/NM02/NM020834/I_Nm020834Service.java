@@ -10,6 +10,14 @@ public interface I_Nm020834Service {
 	
 	/**
 	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Apr 21, 2020
+	 * @RETURN : List<BoardVO>
+	 * @DESC   : 구청 게시판 목록 조회(메인)
+	 */
+	List<BoardVO> getYardOfficeMainList() throws SQLException;
+	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
 	 * @DATE   : Mar 16, 2020
 	 * @RETURN : List<BoardVO>
 	 * @DESC   : 구청 게시판 목록 조회(페이징)

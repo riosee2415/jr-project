@@ -124,10 +124,10 @@ function closeCheckMainModal(id) {
 	$("#" + id + " #chk-close-js").toggleClass('active');
 	
 	if($("#" + id + " #chk-close-js").hasClass('active')) {
-		$("#" + id + " #chk-close-js").find('.fa').addClass('fa-check-square-o');
-		$("#" + id + " #chk-close-js").find('.fa').removeClass('fa-square-o');
+		$("#" + id + " #chk-close-js").find('.fa').addClass('fa-check-square');
+		$("#" + id + " #chk-close-js").find('.fa').removeClass('fa-square');
 	} else {
-		$("#" + id + " #chk-close-js").find('.fa').removeClass('fa-check-square-o');
-		$("#" + id + " #chk-close-js").find('.fa').addClass('fa-square-o');
+		$("#" + id + " #chk-close-js").find('.fa').removeClass('fa-check-square');
+		$("#" + id + " #chk-close-js").find('.fa').addClass('fa-square');
 	}
 }

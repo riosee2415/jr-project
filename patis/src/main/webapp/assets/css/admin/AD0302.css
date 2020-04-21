@@ -2,8 +2,8 @@
 
 .popup_area {
   width: 1200px;
-  height: 800px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 .popup_area .popup_area__title {

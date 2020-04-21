@@ -20,6 +20,16 @@ public class Nm020834DAOImpl implements I_Nm020834DAO{
 	private static final String YARD_OFFICE_NAMESPACE = "Yard_Office-Mapper";
 	private static final String YARD_SUPPORT_NAMESPACE = "Yard_Support-Mapper";
 
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Apr 21, 2020
+	 * @RETURN : List<BoardVO>
+	 * @DESC   : 구청 게시판 목록 조회(메인)
+	 */
+	public List<BoardVO> getYardOfficeMainList() throws SQLException {
+		return sqlSession.selectList(YARD_OFFICE_NAMESPACE + ".GET_YARD_OFFICE_MAIN_LIST");
+	}
+	
 	@Override
 	public List<BoardVO> getYardOfficeList(int paging) throws SQLException {
 		return sqlSession.selectList(YARD_OFFICE_NAMESPACE + ".GET_YARD_OFFICE_LIST", paging);

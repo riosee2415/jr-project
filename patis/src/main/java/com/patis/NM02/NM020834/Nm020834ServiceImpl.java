@@ -16,6 +16,16 @@ public class Nm020834ServiceImpl implements I_Nm020834Service{
 	@Resource(name = "nm020834DAO")
 	private  I_Nm020834DAO nm020834DAO;
 	
+	/**
+	 * @AUTHOR : 4LEAF.NJM
+	 * @DATE   : Apr 21, 2020
+	 * @RETURN : List<BoardVO>
+	 * @DESC   : 구청 게시판 목록 조회(메인)
+	 */
+	public List<BoardVO> getYardOfficeMainList() throws SQLException {
+		return nm020834DAO.getYardOfficeMainList();
+	}
+	
 	@Override
 	public List<BoardVO> getYardOfficeList(int paging) throws SQLException {
 		return nm020834DAO.getYardOfficeList(paging);

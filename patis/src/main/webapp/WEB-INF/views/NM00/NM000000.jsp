@@ -115,7 +115,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
     <div class="main-urbannews">
       <ul>
         <li class="main-urbannews__title">
-          <span class="title-text">도시재생 사업 현황</span>
+          <span class="title-text">사진 및 영상자료</span>
           <a
             href="javascript:boardListMoveHandler('${boardData02.btype}')"
             class="main-plus"
@@ -286,7 +286,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
   		<div class="main_modal" id="modal-popup${status.count }">
 	      <div
 	        class="main_modal__desc"
-	        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 10 }px; left:${(status.count-1) * 600 + 30 }px;"
+	        style="width: ${pop.POPUP_WIDTH}px; height: ${pop.POPUP_HEIGHT }px; background-image: url('${pop.POPUP_PATH }'); top:${status.count * 20 }px; left:${(status.index % 2) * 600 + ((status.count * 20) - 20)}px;"
 	      >
 	        <div class="main_modal__desc__exit">
 	          <i
@@ -306,9 +306,9 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
 	      </div>
         <div 
 	      	class="main_modal_btn"
-	      	style="width: ${pop.POPUP_WIDTH}px; top:${status.count * 10 }px; left:${(status.count-1) * 600 + 30 }px;">
+	      	style="width: ${pop.POPUP_WIDTH}px; top:${status.count * 20 }px; left:${(status.index % 2) * 600 + ((status.count * 20) - 20)}px;">
 	      	<a id="chk-close-js" href="javascript:closeCheckMainModal('modal-popup${status.count}')">
-	      		<i class="fa fa-square-o" aria-hidden="true"></i>오늘 하루 열지 않음
+	      		<i class="fa fa-square" aria-hidden="true"></i>오늘 하루 열지 않음
 	     		</a>
 	      	<a href="javascript:closeMainModal('modal-popup${status.count}')">닫기</a>
 	      </div>

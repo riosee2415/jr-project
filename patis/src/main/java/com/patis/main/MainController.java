@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.patis.NM02.NM020832.I_Nm020832Service;
-import com.patis.NM02.NM021164.I_Nm021164Service;
+import com.patis.NM02.NM020834.I_Nm020834Service;
 import com.patis.admin.AD01.I_Ad010001Service;
 import com.patis.middleware.I_MiddlewareService;
 import com.patis.model.BoardVO;
@@ -36,8 +36,8 @@ public class MainController {
 	@Resource(name = "nm020832Service")
 	private I_Nm020832Service nm020832Service;
 	
-	@Resource(name = "nm021164Service")
-	private I_Nm021164Service nm021164Service;
+	@Resource(name = "nm020834Service")
+	private I_Nm020834Service nm020834Service;
 	
 	@RequestMapping(value="/main.do", method=RequestMethod.GET)
 	public String main(Model model) throws Exception {
@@ -53,12 +53,12 @@ public class MainController {
 		Map<String, Object> boardData02 = new HashMap<String, Object>();
 		
 		List<BoardVO> boardList01 = nm020832Service.getNoticeMainList();
-		List<BoardVO> boardList02 = nm021164Service.getCollusionMainList();
+		List<BoardVO> boardList02 = nm020834Service.getYardOfficeMainList();
 		
 		List<PopupVO> popupList = middlewareService.getUsedPopup();
 		
 		String btype01 = nm020832Service.getNoticeBoardType();
-		String btype02 = nm021164Service.getBoardType();
+		String btype02 = nm020834Service.getYardOfficeBoardType();
 		
 		boardData01.put("list", boardList01);
 		boardData02.put("list", boardList02);
@@ -67,10 +67,10 @@ public class MainController {
 		boardData02.put("btype", btype02);
 		
 		boardData01.put("parent", "8");
-		boardData02.put("parent", "11");
+		boardData02.put("parent", "8");
 		
 		boardData01.put("code", "32");
-		boardData02.put("code", "64");
+		boardData02.put("code", "34");
 		
 		model.addAttribute("boardData01", boardData01);
 		model.addAttribute("boardData02", boardData02);
