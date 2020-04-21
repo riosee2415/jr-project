@@ -42,10 +42,16 @@
     height: 80px;
     font-size: 18px;
     font-weight: bold;
-    line-height: 80px;
+    line-height: 1.7;
     color: #f18d00;
     text-align: center;
     border: 5px solid #f18d00;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .sub-vision {
     -ms-writing-mode: tb-rl;
@@ -90,7 +96,7 @@
     text-align: center;
     font-weight: normal;
   }
- 
+
   .sub-main-handimg {
     width: 150px;
     height: 150px;
@@ -248,7 +254,7 @@
     text-align: center;
     font-weight: normal;
   }
-  
+
   .sub-main-handimg {
     width: 150px;
     height: 150px;
