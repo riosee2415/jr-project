@@ -194,9 +194,7 @@ prefix="fn" %> <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 			var mode = "${mode}";
 			if(mode == 'MODIFY') {
-        window.onload = function() {
-        	modifyEditor('${data.b_DESCRIPTION}');
-        }
+       	modifyEditor('${data.b_DESCRIPTION}');
 			}
 		}
   </script>
