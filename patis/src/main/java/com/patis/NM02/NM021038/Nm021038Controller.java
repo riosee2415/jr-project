@@ -282,14 +282,9 @@ public class Nm021038Controller {
 		String url = "";
 		int boardNo = 0;
 	
-		String[] tags = b_description.split("<p");
-		b_description = "";
-		
-		for(String tag : tags) {
-			if(tag.contains("</p>")) {
-				b_description += "<p" + tag.substring(0, tag.indexOf("</p>")) + "</p>";
-			} 
-		}
+		int idx = b_description.indexOf(",");
+		if(idx == 0)
+			b_description = b_description.substring(1, b_description.length());
 		
 		BoardVO boardVO = new BoardVO();
 		boardVO.setB_TYPE(b_type);

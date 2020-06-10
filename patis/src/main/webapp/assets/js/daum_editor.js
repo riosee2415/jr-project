@@ -102,10 +102,11 @@ if ($('#board-write-js').length > 0 || document.getElementById('board-write-js')
 		var i, input;
 		var form = editor.getForm();
 		var content = editor.getContent();
-
+		
 		var textarea = document.createElement('textarea');
 		textarea.style.display = 'none';
-		textarea.name = 'b_description', textarea.value = content;
+		textarea.name = 'b_description'; 
+		textarea.value = content;
 		form.createField(textarea);
 
 		return true;
