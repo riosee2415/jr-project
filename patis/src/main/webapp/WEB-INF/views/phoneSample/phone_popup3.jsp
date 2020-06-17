@@ -32,7 +32,7 @@
 									+ File.separator + "webapps"
 									+ File.separator + "license"
 									+ File.separator + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
-   
+  
   // 로컬 테스트용
   // String license = "C:/environment/Library/" + CP_CD + "_IDS_01_" + target + "_AES_license.dat";
 	

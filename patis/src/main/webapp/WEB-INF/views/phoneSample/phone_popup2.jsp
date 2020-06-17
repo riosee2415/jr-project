@@ -65,6 +65,10 @@
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 	//' 라이센스 파일
 	//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	
+	// ** /WEB-INF/lib/OkCert3.jar 추가할 것 ** 
+	// [JSON Object can not be resolved error]
+			
 	// 배포용
 	String license 	=	File.separator + "jungnangurp"
 									+ File.separator + 	"tomcat" 
