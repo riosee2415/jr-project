@@ -85,7 +85,9 @@ public class EmployeeDAOImpl implements I_EmployeeDAO{
 
 	@Override
 	public int getOnlyLogTryById(String input_id) throws Exception {
-		return sqlSession.selectOne(NAMESPACE + ".GET_ONLY_USER_LOGIN_TRY", input_id);
+		Integer loginTry = sqlSession.selectOne(NAMESPACE + ".GET_ONLY_USER_LOGIN_TRY", input_id);
+		
+		return loginTry != null ? loginTry.intValue() : 0;
 	}
 
 	@Override

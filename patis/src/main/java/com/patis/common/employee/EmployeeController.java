@@ -246,7 +246,7 @@ public class EmployeeController {
 		
 		try {
 			ip = InetAddress.getLocalHost(); 
-			ipAddress = ip.getHostAddress(); 
+			ipAddress = ip.getHostAddress();
 		} catch(UnknownHostException e) {
 			System.out.println(e);
 		}
@@ -256,24 +256,21 @@ public class EmployeeController {
 		params.put("input_password", loginPass);
 		
 		EmpVO vo = employeeService.mainLogin(params);
-		
+	
 		if(vo == null) {
 			try {
 				int loginCnt = employeeService.getOnlyLogTryById(loginId);
 				
 				loginCnt++;
-				
 				Map<String, Object> params2 = new HashMap<String, Object>();
 				params2.put("input_id", loginId);
 				params2.put("addTry", loginCnt);
 				
 				int updateResult = employeeService.addLoginTry(params2);
-				
 			}catch(Error e) {
 				System.out.println(e);
 				
 			}
-			
 			
 			System.out.println("아이디 또는 비밀번호가 맞지 않습니다.");
 			model.addAttribute("loginMsg", "2");
